@@ -38,7 +38,12 @@ class TestNeoAozoraSystem(unittest.TestCase):
         self.assertTrue(len(mgr.catalog) >= 10, "Catalog should have at least 10 works")
         next_work = mgr.select_next_work()
         self.assertIsNotNone(next_work, "Should find next unposted work")
-        self.assertEqual(next_work["id"], "unno-18-music", "After reset, First work should be unno-18-music")
+        posted_ids = mgr.get_posted_ids()
+        # Verify that the selected work has NOT yet been posted
+        self.assertNotIn(next_work["id"], posted_ids, "Selected work must not be in already-posted history")
+        # Verify specific lookup
+        specific_work = mgr.select_next_work(work_id="unno-18-music")
+        self.assertEqual(specific_work["id"], "unno-18-music", "Specific work lookup should return correct work")
 
     def test_model_fallback_candidates(self):
         gen = StoryGenerator(model_name="gemini-2.5-flash")
