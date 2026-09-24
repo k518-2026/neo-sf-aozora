@@ -219,11 +219,11 @@ CONSENSUS PROTOCOL: Neuromorphic Swarm Emergence v4.1
    DOI: [https://doi.org/10.1038/s41586-019-1424-8](https://doi.org/10.1038/s41586-019-1424-8)  
    - *（清華大学研究陣による、脳模倣スパイクニューラルネットワークと機械学習アルゴリズムを統合した超低消費電力ハイブリッド・ニューロモルフィック半導体「Tianjic」の実証）*
 
-3. **Yang, X., et al. (2022).**  
-   *Bioinspired, ultra-flexible, and stretchable mesh electronics for chronic brain-computer interfaces.*  
-   **Nature Biomedical Engineering**, 6(3), 291–302.  
-   DOI: [https://doi.org/10.1038/s41551-021-00831-2](https://doi.org/10.1038/s41551-021-00831-2)  
-   - *（生体組織の弾性率に極限まで近づけた超柔軟メッシュ構造により、免疫拒絶やグリア瘢痕を生じさせず、長期にわたり個々のニューロンと極めて安定に通信する皮質埋め込み型BCI技術）*
+3. **Liu, J., Fu, T. M., Cheng, Z., Hong, G., Zhou, T., Xie, C., & Lieber, C. M. (2015).**  
+   *Syringe-injectable electronics.*  
+   **Nature Nanotechnology**, 10(7), 629–636.  
+   DOI: [https://doi.org/10.1038/nnano.2015.115](https://doi.org/10.1038/nnano.2015.115)  
+   - *（ハーバード大学Lieber研究室による、生体脳組織に極小侵襲で注入され、免疫拒絶を起こさず長期にわたりニューロンと安定結合する超柔軟メッシュ型電極技術）*
 
 4. **Floreano, D., & Wood, R. J. (2015).**  
    *Science, technology and the future of small autonomous drones.*  

@@ -108,7 +108,7 @@ def _fallback_markdown_to_html(md_text: str) -> str:
             item = stripped[2:]
             item = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", item)
             item = re.sub(r"\*(.*?)\*", r"<em>\1</em>", item)
-            item = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2">\1</a>', item)
+            item = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', item)
             if not in_list:
                 html_lines.append('<ul style="margin: 1em 0; padding-left: 1.5em;">')
                 in_list = True
@@ -127,7 +127,7 @@ def _fallback_markdown_to_html(md_text: str) -> str:
         p_text = stripped
         p_text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", p_text)
         p_text = re.sub(r"\*(.*?)\*", r"<em>\1</em>", p_text)
-        p_text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2">\1</a>', p_text)
+        p_text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', p_text)
         html_lines.append(f"<p style='margin-bottom: 1.5em; line-height: 1.9;'>{p_text}</p>")
 
     if in_list:
@@ -235,6 +235,21 @@ def format_post_content(
 
     # 2. Avoid multiple consecutive <br>
     html_body = re.sub(r"(?:<br\s*/?>\s*){2,}", "<p></p>", html_body, flags=re.IGNORECASE)
+
+    # 3. Ensure ALL hyperlinks open in a new window/tab (target="_blank" rel="noopener noreferrer")
+    def _add_target_blank(match: re.Match) -> str:
+        tag_content = match.group(1)
+        if "target=" not in tag_content:
+            tag_content += ' target="_blank"'
+        else:
+            tag_content = re.sub(r'target=[\'"][^\'"]*[\'"]', 'target="_blank"', tag_content)
+        if "rel=" not in tag_content:
+            tag_content += ' rel="noopener noreferrer"'
+        else:
+            tag_content = re.sub(r'rel=[\'"][^\'"]*[\'"]', 'rel="noopener noreferrer"', tag_content)
+        return f"<a{tag_content}>"
+
+    html_body = re.sub(r"<a\b([^>]*)>", _add_target_blank, html_body, flags=re.IGNORECASE)
 
     # Wrap in clean, modern typography styling for WordPress email rendering
     styled_html = f"""<div class="sf-story-container" style="font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif; line-height: 1.9; font-size: 16px; color: #222;">

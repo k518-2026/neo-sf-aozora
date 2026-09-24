@@ -67,5 +67,14 @@ class TestNeoAozoraSystem(unittest.TestCase):
         self.assertTrue(result["dry_run"])
         self.assertEqual(result["to"], "secret_post@post.wordpress.com")
 
+    def test_all_links_open_in_new_window(self):
+        import re
+        formatted = format_post_content(str(self.story_path))
+        links = re.findall(r'<a\b[^>]*>', formatted.content_html)
+        self.assertTrue(len(links) > 0, "Should have at least one link")
+        for link in links:
+            self.assertIn('target="_blank"', link, f"Link {link} must contain target=\"_blank\"")
+            self.assertIn('rel="noopener noreferrer"', link, f"Link {link} must contain rel=\"noopener noreferrer\"")
+
 if __name__ == "__main__":
     unittest.main()

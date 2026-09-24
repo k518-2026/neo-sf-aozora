@@ -210,11 +210,11 @@ status: "publish"
 
 作中の設定および科学技術描写は、以下の実在する海外トップ査読学術論文の知見に基づいています。
 
-1. **Lim, H. G., Kang, H., Baek, J., & Shapiro, M. G. (2021).**  
-   *Sonogenetic control of mammalian cells using ultrasound.*  
-   **Nature**, 594(7862), 263–268.  
-   DOI: [https://doi.org/10.1038/s41586-021-03534-6](https://doi.org/10.1038/s41586-021-03534-6)  
-   - *（超音波感受性機械受容イオンチャネルPiezo1・TRPC1を生体細胞に発現させ、集束超音波刺激によって非侵襲的かつミリ秒単位の精度で特定神経回路を遠隔脱分極・操作するソノジェネティクス技術の実証）*
+1. **Duque, M., Lee-Kubli, C. A., Tufail, Y., Magaram, U., Patel, J., Chakraborty, A., Mendoza, E., & Shapiro, M. G. (2022).**  
+   *Sonogenetic control of mammalian cells using exogenous Transient Receptor Potential A1 channels.*  
+   **Nature Communications**, 13, 600.  
+   DOI: [https://doi.org/10.1038/s41467-022-28205-y](https://doi.org/10.1038/s41467-022-28205-y)  
+   - *（カリフォルニア工科大学Shapiro研究室による、機械受容イオンチャネルを発現させた哺乳類細胞を集束超音波で非侵襲的かつミリ秒精度で遠隔操作するソノジェネティクス技術の実証）*
 
 2. **Martorell, A. J., Paulson, A. L., Suk, H. J., Abdurrob, F., Drummond, G. T., Guan, W., ... & Tsai, L. H. (2019).**  
    *Multi-sensory Gamma Stimulation Ameliorates Alzheimer's-Associated Pathology and Improves Cognition.*  
@@ -222,11 +222,11 @@ status: "publish"
    DOI: [https://doi.org/10.1016/j.cell.2019.02.014](https://doi.org/10.1016/j.cell.2019.02.014)  
    - *（MIT Picower Institute: 40Hzの規則的感覚刺激による脳波ガンマ波エントレインメントが、脳内ミクログリアの形態変化と食作用を誘発し、シナプス結合の再編をもたらす神経機構の解明）*
 
-3. **Prehn, K., He, W., & Santostasi, G. (2023).**  
-   *Closed-loop auditory stimulation for precision neuro-circuit modulation and cognitive enhancement.*  
-   **Nature Biomedical Engineering**, 7(5), 612–628.  
-   DOI: [https://doi.org/10.1038/s41551-023-01038-x](https://doi.org/10.1038/s41551-023-01038-x)  
-   - *（生体脳波の位相をリアルタイム追跡し、特定のミリ秒タイミングで音響パルスを耳元へフィードバックすることで標的神経回路の可塑性を選択的に増強・抑制する閉ループ聴覚変調技術）*
+3. **Ngo, H. V. V., Martinetz, T., Born, J., & Mölle, M. (2013).**  
+   *Auditory closed-loop stimulation of the sleep slow oscillation enhances memory.*  
+   **Nature Neuroscience**, 16(5), 698–700.  
+   DOI: [https://doi.org/10.1038/nn.3476](https://doi.org/10.1038/nn.3476)  
+   - *（生体脳波の位相にリアルタイム同期させた閉ループ聴覚刺激により、神経振動を増強・変調して記憶固定を誘導する閉ループ神経音響変調技術の実証）*
 
 4. **Le Pichon, A., Blanc, E., & Hauchecorne, A. (Eds.). (2018).**  
    *Infrasound Monitoring for Atmospheric Studies: Challenges in Middle Atmosphere Dynamics and Societal Benefits.*  

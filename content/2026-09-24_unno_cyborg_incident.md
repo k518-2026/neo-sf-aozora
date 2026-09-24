@@ -207,14 +207,14 @@ status: "publish"
 
 1. **Smirnova, L., Caffo, B. S., Gracias, D. H., Huang, Q., Morales Pantoja, I. E., Tang, B., ... & Hartung, T. (2023).**  
    *Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish.*  
-   **Frontiers in Science**, 1, 1009588.  
-   DOI: [https://doi.org/10.3389/fsci.2023.1009588](https://doi.org/10.3389/fsci.2023.1009588)  
+   **Frontiers in Science**, 1, 1017235.  
+   DOI: [https://doi.org/10.3389/fsci.2023.1017235](https://doi.org/10.3389/fsci.2023.1017235)  
    - *（ジョンズ・ホプキンス大学研究陣による、ヒト脳オルガノイドを演算素子として生体バイオコンピュータを構築する「オルガノイド・インテリジェンス（OI）」の包括的宣言論文）*
 
-2. **Webster-Wood, V. A., et al. (2023).**  
-   *Biohybrid robots: Recent progress, challenges, and future perspectives.*  
-   **Science Robotics**, 8(80), eadd6386.  
-   DOI: [https://doi.org/10.1126/scirobotics.add6386](https://doi.org/10.1126/scirobotics.add6386)  
+2. **Webster-Wood, V. A., et al. (2022).**  
+   *Biohybrid robots: recent progress, challenges, and perspectives.*  
+   **Bioinspiration & Biomimetics**, 17(6), 061001.  
+   DOI: [https://doi.org/10.1088/1748-3190/ac9c3b](https://doi.org/10.1088/1748-3190/ac9c3b)  
    - *（生体筋組織と合成骨格を融合したバイオハイブリッド・ロボットの駆動制御、自己修復性、次世代義体への応用展望）*
 
 3. **Boyden, E. S., Zhang, F., Bamberg, E., Nagel, G., & Deisseroth, K. (2005).**  
