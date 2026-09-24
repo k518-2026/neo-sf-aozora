@@ -9,3 +9,4 @@
 |:---:|:---:|:---|:---|:---|:---:|
 | 1 | 2026-09-24 | 十八時の音楽浴 | 十八時の音楽浴（海野十三） | Nature/Science/Cell | Publish |
 | 2 | 2026-09-24 | 蠅男 | 蠅男（海野十三） | Nature/Science/Cell | Publish |
+| 3 | 2026-09-24 | 人造人間事件 | 人造人間事件（海野十三） | Nature/Science/Cell | Publish |
