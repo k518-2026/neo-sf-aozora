@@ -12,5 +12,19 @@
       "Martorell et al. (2019) Cell - https://doi.org/10.1016/j.cell.2019.02.014",
       "Prehn et al. (2023) Nature Biomedical Engineering - https://doi.org/10.1038/s41551-023-01038-x"
     ]
+  },
+  {
+    "work_id": "unno-fly-man",
+    "original_title": "蠅男",
+    "original_author": "海野十三",
+    "reboot_title": "蠅男――極微バイオサイボーグと神経同調の罠",
+    "posted_at": "2026-09-24T20:57:01+09:00",
+    "file_path": "content/2026-09-24_unno_fly_man.md",
+    "status": "publish",
+    "references": [
+      "Sato et al. (2015) Current Biology - https://doi.org/10.1016/j.cub.2015.07.051",
+      "Pei et al. (2019) Nature - https://doi.org/10.1038/s41586-019-1424-8",
+      "Yang et al. (2022) Nature Biomedical Engineering - https://doi.org/10.1038/s41551-021-00831-2"
+    ]
   }
 ]

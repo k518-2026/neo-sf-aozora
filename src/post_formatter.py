@@ -132,17 +132,32 @@ def _fallback_markdown_to_html(md_text: str) -> str:
     return "\n".join(html_lines)
 
 def parse_markdown_with_frontmatter(file_path: str) -> Tuple[Dict[str, Any], str]:
-    """Parses a markdown file that contains YAML frontmatter."""
+    """Parses a markdown file that contains YAML frontmatter or code blocks."""
     with open(file_path, "r", encoding="utf-8") as f:
         text = f.read()
 
-    frontmatter = {}
+    frontmatter: Dict[str, Any] = {}
     body = text
 
-    match = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", text, re.DOTALL)
-    if match:
-        yaml_text = match.group(1)
-        body = match.group(2)
+    # Case 1: Standard YAML frontmatter between --- and ---
+    match_dash = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", text, re.DOTALL)
+    # Case 2: Code fence ```yaml ... ```
+    match_fence = re.match(r"^```(?:ya?ml)?\s*\n(.*?)\n```\s*\n(.*)$", text, re.DOTALL)
+    # Case 3: Stray yaml\n ... ```
+    match_stray = re.match(r"^(?:ya?ml\s*\n)?(title:\s*.*?\n(?:status|tags|categories|author):\s*.*?)\n```\s*\n(.*)$", text, re.DOTALL)
+
+    yaml_text = None
+    if match_dash:
+        yaml_text = match_dash.group(1)
+        body = match_dash.group(2)
+    elif match_fence:
+        yaml_text = match_fence.group(1)
+        body = match_fence.group(2)
+    elif match_stray:
+        yaml_text = match_stray.group(1)
+        body = match_stray.group(2)
+
+    if yaml_text:
         if HAS_YAML:
             try:
                 frontmatter = yaml.safe_load(yaml_text) or {}
@@ -150,6 +165,12 @@ def parse_markdown_with_frontmatter(file_path: str) -> Tuple[Dict[str, Any], str
                 frontmatter = _fallback_yaml_parser(yaml_text)
         else:
             frontmatter = _fallback_yaml_parser(yaml_text)
+
+    # Fallback title if still missing
+    if "title" not in frontmatter:
+        title_m = re.search(r'^#\s+(.+)$', body, re.MULTILINE)
+        if title_m:
+            frontmatter["title"] = title_m.group(1).strip()
 
     return frontmatter, body
 
