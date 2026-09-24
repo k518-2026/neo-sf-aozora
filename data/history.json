@@ -8,5 +8,15 @@
     "file_path": "content/story.md",
     "status": "publish",
     "references": []
+  },
+  {
+    "work_id": "unno-fly-man",
+    "original_title": "蠅男",
+    "original_author": "海野十三",
+    "reboot_title": "蠅男――極微バイオサイボーグと神経同調の罠",
+    "posted_at": "2026-09-24T22:01:55.301342+09:00",
+    "file_path": "content/2026-09-24_unno_fly_man.md",
+    "status": "publish",
+    "references": []
   }
 ]
