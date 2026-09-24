@@ -73,9 +73,12 @@ def _fallback_markdown_to_html(md_text: str) -> str:
             html_lines.append(html.escape(line))
             continue
 
-        # Horizontal rule
-        if stripped in ("---", "***", "___"):
-            html_lines.append("<hr>")
+        # Horizontal rule / Scene separators
+        if stripped in ("---", "***", "___", "* * *", "- - -"):
+            if in_list:
+                html_lines.append("</ul>")
+                in_list = False
+            html_lines.append('<div style="text-align: center; margin: 2em 0; letter-spacing: 0.5em; color: #888;">* * *</div>')
             continue
 
         # Headings
