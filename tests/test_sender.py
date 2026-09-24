@@ -38,8 +38,8 @@ class TestNeoAozoraSystem(unittest.TestCase):
         self.assertTrue(len(mgr.catalog) >= 10, "Catalog should have at least 10 works")
         next_work = mgr.select_next_work()
         self.assertIsNotNone(next_work, "Should find next unposted work")
-        self.assertNotEqual(next_work["id"], "unno-fly-man", "unno-fly-man was also already posted")
-        self.assertEqual(next_work["id"], "unno-cyborg-incident", "Third work should be cyborg-incident")
+        self.assertNotEqual(next_work["id"], "unno-cyborg-incident", "cyborg-incident was already posted")
+        self.assertEqual(next_work["id"], "unno-vibration-demon", "Fourth work should be vibration-demon")
 
     def test_model_fallback_candidates(self):
         gen = StoryGenerator(model_name="gemini-2.5-flash")
