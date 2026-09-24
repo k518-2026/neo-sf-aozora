@@ -1,5 +1,6 @@
 import os
 import re
+import time
 import logging
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -25,14 +26,36 @@ SYSTEM_PROMPT = """あなたは最先端の科学技術と現代文学に精通�
    - 末尾に「【引用・参考文献（Scientific References）】」として、作中に登場した海外論文の書誌情報（著者、タイトル、ジャーナル名、DOI）を正確に記載してください。
 """
 
+# Primary model and fallback cascade for 503 / overload / unavailable errors
+DEFAULT_PRIMARY_MODEL = "gemini-2.5-flash"
+FALLBACK_MODELS = [
+    "gemini-3.5-flash",
+    "gemini-3.5",
+    "gemini-3.6-flash",
+    "gemini-3.6",
+    "gemini-3.7-flash",
+    "gemini-3.7",
+    "gemini-3.8-flash",
+    "gemini-3.8"
+]
+
 class StoryGenerator:
-    def __init__(self, api_key: Optional[str] = None, model_name: str = "gemini-2.5-flash"):
+    def __init__(self, api_key: Optional[str] = None, model_name: Optional[str] = None):
         self.api_key = api_key or os.getenv("GEMINI_API_KEY")
-        self.model_name = os.getenv("GEMINI_TEXT_MODEL", model_name)
+        self.primary_model = model_name or os.getenv("GEMINI_TEXT_MODEL", DEFAULT_PRIMARY_MODEL)
+
+    def _get_model_candidates(self) -> List[str]:
+        """Returns ordered list of models to try (primary model followed by 3.5, 3.6, 3.7, 3.8)."""
+        candidates = [self.primary_model]
+        for m in FALLBACK_MODELS:
+            if m not in candidates:
+                candidates.append(m)
+        return candidates
 
     def generate_story(self, work: Dict[str, Any]) -> Tuple[str, str, List[str]]:
         """
         Generates a reboot sci-fi story based on an Aozora Bunko work.
+        If gemini-2.5-flash returns 503 or overload errors, falls back to 3.5, 3.6, 3.7, 3.8.
         Returns: (markdown_content, reboot_title, list_of_references)
         """
         if not self.api_key:
@@ -57,30 +80,59 @@ class StoryGenerator:
 
 要件に従い、YAML Frontmatter付きのMarkdownとして出力してください。
 """
-            logger.info(f"Generating SF story reboot for '{work['title']}' using model '{self.model_name}'...")
-            response = client.models.generate_content(
-                model=self.model_name,
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    system_instruction=SYSTEM_PROMPT,
-                    temperature=0.8,
-                )
-            )
+            model_candidates = self._get_model_candidates()
+            last_error = None
 
-            content = response.text.strip()
-            # Clean possible markdown wrapping
-            if content.startswith("```markdown"):
-                content = content[len("```markdown"):].strip()
-            if content.startswith("```"):
-                content = content[3:].strip()
-            if content.endswith("```"):
-                content = content[:-3].strip()
+            for idx, current_model in enumerate(model_candidates):
+                logger.info(f"Attempting SF story generation with model '{current_model}' (Attempt {idx + 1}/{len(model_candidates)})...")
+                try:
+                    response = client.models.generate_content(
+                        model=current_model,
+                        contents=prompt,
+                        config=types.GenerateContentConfig(
+                            system_instruction=SYSTEM_PROMPT,
+                            temperature=0.8,
+                        )
+                    )
 
-            title, refs = self._extract_title_and_refs(content, work)
-            return content, title, refs
+                    content = response.text.strip()
+                    # Clean possible markdown wrapping
+                    if content.startswith("```markdown"):
+                        content = content[len("```markdown"):].strip()
+                    if content.startswith("```"):
+                        content = content[3:].strip()
+                    if content.endswith("```"):
+                        content = content[:-3].strip()
+
+                    title, refs = self._extract_title_and_refs(content, work)
+                    logger.info(f"Successfully generated story using '{current_model}'! Title: {title}")
+                    return content, title, refs
+
+                except Exception as e:
+                    last_error = e
+                    err_msg = str(e)
+                    is_503_or_overload = any(term in err_msg.lower() for term in [
+                        "503", "unavailable", "overloaded", "resource_exhausted", "rate_limit", "internal server error"
+                    ])
+
+                    if is_503_or_overload:
+                        logger.warning(
+                            f"Model '{current_model}' encountered server/capacity error (503/Unavailable/Overloaded): {err_msg}. "
+                            f"Retrying with next fallback model version in cascade..."
+                        )
+                    else:
+                        logger.warning(
+                            f"Model '{current_model}' returned error: {err_msg}. "
+                            f"Trying fallback model version..."
+                        )
+                    
+                    time.sleep(2)  # Brief backoff before next version trial
+
+            logger.error(f"All model candidates failed. Last error: {last_error}", exc_info=True)
+            return self._generate_fallback(work)
 
         except Exception as e:
-            logger.error(f"Gemini API error during story generation: {e}", exc_info=True)
+            logger.error(f"Failed to initialize Gemini Client: {e}", exc_info=True)
             return self._generate_fallback(work)
 
     def _extract_title_and_refs(self, content: str, work: Dict[str, Any]) -> Tuple[str, List[str]]:
@@ -106,7 +158,7 @@ class StoryGenerator:
         return title, refs
 
     def _generate_fallback(self, work: Dict[str, Any]) -> Tuple[str, str, List[str]]:
-        """Fallback generator when API key is missing."""
+        """Fallback generator when API key is missing or all API attempts failed."""
         now_date = datetime.now(JST).strftime("%Y-%m-%d")
         title = f"ネオ・{work['title']}――微小自律系と神経回路の共鳴"
         fallback_content = f"""---

@@ -5,6 +5,7 @@ from src.config import SMTPConfig
 from src.post_formatter import format_post_content, parse_markdown_with_frontmatter
 from src.mail_sender import WordPressMailSender
 from src.history_manager import HistoryManager
+from src.story_generator import StoryGenerator
 
 class TestNeoAozoraSystem(unittest.TestCase):
     def setUp(self):
@@ -39,6 +40,20 @@ class TestNeoAozoraSystem(unittest.TestCase):
         self.assertIsNotNone(next_work, "Should find next unposted work")
         self.assertNotEqual(next_work["id"], "unno-18-music", "unno-18-music was already posted")
         self.assertEqual(next_work["id"], "unno-fly-man", "Second work should be fly-man")
+
+    def test_model_fallback_candidates(self):
+        gen = StoryGenerator(model_name="gemini-2.5-flash")
+        candidates = gen._get_model_candidates()
+        self.assertEqual(candidates[0], "gemini-2.5-flash")
+        # Ensure 3.5, 3.6, 3.7, 3.8 are included
+        has_35 = any("3.5" in c for c in candidates)
+        has_36 = any("3.6" in c for c in candidates)
+        has_37 = any("3.7" in c for c in candidates)
+        has_38 = any("3.8" in c for c in candidates)
+        self.assertTrue(has_35, "Should include 3.5 fallback")
+        self.assertTrue(has_36, "Should include 3.6 fallback")
+        self.assertTrue(has_37, "Should include 3.7 fallback")
+        self.assertTrue(has_38, "Should include 3.8 fallback")
 
     def test_dry_run_send(self):
         formatted = format_post_content(str(self.story_path))
