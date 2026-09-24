@@ -29,7 +29,7 @@ class TestNeoAozoraSystem(unittest.TestCase):
     def test_parse_frontmatter(self):
         meta, body = parse_markdown_with_frontmatter(str(self.story_path))
         self.assertIn("title", meta)
-        self.assertTrue("十八時の音響変調" in meta["title"])
+        self.assertTrue("十八時の音楽浴" in meta["title"])
         self.assertIn("categories", meta)
         self.assertTrue(len(body) > 1000, "Body should have substantial length")
 
