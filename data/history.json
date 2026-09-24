@@ -26,5 +26,25 @@
       "Pei et al. (2019) Nature - https://doi.org/10.1038/s41586-019-1424-8",
       "Yang et al. (2022) Nature Biomedical Engineering - https://doi.org/10.1038/s41551-021-00831-2"
     ]
+  },
+  {
+    "work_id": "unno-cyborg-incident",
+    "original_title": "人造人間事件",
+    "original_author": "海野十三",
+    "reboot_title": "人造人間事件――オルガノイド・シンギュラリティの陥穽",
+    "posted_at": "2026-09-24T21:07:00.848784+09:00",
+    "file_path": "content/2026-09-24_unno_cyborg_incident.md",
+    "status": "publish",
+    "references": [
+      "脳オルガノイド・コンピューティング（Organoid Intelligence - OI）**",
+      "Smirnova, L., Caffo, B. S., Gracias, D. H., et al. (2023). \"Organoid intelligence (OI): the new frontier of biocomputing and intelligence-in-a-dish.\" *Frontiers in Science*, 1, e2023.0001.",
+      "DOI: [https://doi.org/10.3389/fsci.2023.0001](https://doi.org/10.3389/fsci.2023.0001)",
+      "多点ホログラフィック光遺伝学による神経回路の精密制御**",
+      "Packer, A. M., Russell, L. E., Cotrim, H. W., & Häusser, M. (2015). \"Simultaneous all-optical manipulation and recording of neural circuit activity with cellular resolution in vivo.\" *Nature Methods*, 12(2), 140–146.",
+      "DOI: [https://doi.org/10.1038/nmeth.3217](https://doi.org/10.1038/nmeth.3217)",
+      "ヒトiPS細胞由来脳オルガノイドにおける複雑な神経ネットワーク形成と光制御**",
+      "Quadrato, G., Nguyen, T., Macosko, E. Z., et al. (2017). \"Cell diversity and network dynamics in photosensitive human brain organoids.\" *Nature*, 545(7652), 48–53.",
+      "DOI: [https://doi.org/10.1038/nature22047](https://doi.org/10.1038/nature22047)"
+    ]
   }
 ]
