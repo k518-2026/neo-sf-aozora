@@ -213,3 +213,15 @@ status: "publish"
    *Inter-plant communication through mycorrhizal networks mediates complex adaptive behaviour in plant communities.*  
    **AoB PLANTS**, 7, plv050.  
    DOI: [https://doi.org/10.1093/aobpla/plv050](https://doi.org/10.1093/aobpla/plv050)
+
+---
+
+### 【次回作の予告】
+
+| 項目 | 内容 |
+|:---|:---|
+| **次回原典作品** | 蘭郁二郎[『夢鬼』](https://www.aozora.gr.jp/cards/000325/card2189.html)（青空文庫） |
+| **導入する現代最新科学技術** | fMRI生成AIによる視覚心象復元（Stable Diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激 |
+| **SFリブートの視点・未来像** | 他者の見る夢をスクリーンに映し出す装置。昏睡状態の患者の心象風景に潜入した技師が、最新の脳情報デコーディング技術によって心の傷を優しく解きほぐし、失われた絆を取り戻す感動のニューロSF。 |
+
+*※明朝4時（JST）自動配信予定。どうぞお楽しみに！*

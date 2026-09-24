@@ -49,21 +49,66 @@ def _fallback_yaml_parser(text: str) -> Dict[str, Any]:
                 data[key] = val
     return data
 
+def _format_inline_markdown(text: str) -> str:
+    """Formats inline bold, italic, and links."""
+    text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", text)
+    text = re.sub(r"\*(.*?)\*", r"<em>\1</em>", text)
+    text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', text)
+    return text
+
 def _fallback_markdown_to_html(md_text: str) -> str:
     """
     Lightweight fallback Markdown to HTML converter.
+    Supports headings, blockquotes, lists, tables, and scene dividers.
     NEVER produces <hr> or stray <br> tags to prevent WordPress email truncating.
     """
     lines = md_text.splitlines()
     html_lines = []
     in_code_block = False
     in_list = False
+    in_table = False
+    table_rows: List[List[str]] = []
+
+    def flush_table():
+        nonlocal in_table, table_rows
+        if not table_rows:
+            in_table = False
+            return
+        tbl_html = [
+            '<table style="width: 100%; border-collapse: collapse; margin: 1.5em 0; font-size: 14px; line-height: 1.7; background-color: #ffffff; border: 1px solid #cbd5e0;">'
+        ]
+        has_header = False
+        start_idx = 0
+        if len(table_rows) >= 2 and all(c.strip().replace(":", "").replace("-", "") == "" for c in table_rows[1]):
+            # Row 0 is header, Row 1 is divider
+            has_header = True
+            tbl_html.append('  <thead>\n    <tr style="background-color: #edf2f7;">')
+            for cell in table_rows[0]:
+                cell_fmt = _format_inline_markdown(cell.strip())
+                tbl_html.append(f'      <th style="padding: 10px 14px; border: 1px solid #cbd5e0; font-weight: bold; text-align: left; color: #2d3748;">{cell_fmt}</th>')
+            tbl_html.append('    </tr>\n  </thead>')
+            start_idx = 2
+
+        tbl_html.append('  <tbody>')
+        for r_idx, row in enumerate(table_rows[start_idx:]):
+            bg = "#ffffff" if r_idx % 2 == 0 else "#f7fafc"
+            tbl_html.append(f'    <tr style="background-color: {bg};">')
+            for cell in row:
+                cell_fmt = _format_inline_markdown(cell.strip())
+                tbl_html.append(f'      <td style="padding: 10px 14px; border: 1px solid #cbd5e0; color: #2d3748;">{cell_fmt}</td>')
+            tbl_html.append('    </tr>')
+        tbl_html.append('  </tbody>\n</table>')
+        html_lines.append("\n".join(tbl_html))
+        in_table = False
+        table_rows = []
 
     for line in lines:
         stripped = line.strip()
 
         # Code blocks
         if stripped.startswith("```"):
+            if in_table:
+                flush_table()
             if in_code_block:
                 html_lines.append("</code></pre>")
                 in_code_block = False
@@ -75,6 +120,18 @@ def _fallback_markdown_to_html(md_text: str) -> str:
         if in_code_block:
             html_lines.append(html.escape(line))
             continue
+
+        # Table rows: starts and ends with '|'
+        if stripped.startswith("|") and stripped.endswith("|") and len(stripped) > 2:
+            if in_list:
+                html_lines.append("</ul>")
+                in_list = False
+            in_table = True
+            cells = [c for c in stripped.split("|")[1:-1]]
+            table_rows.append(cells)
+            continue
+        elif in_table:
+            flush_table()
 
         # Horizontal rule / Scene separators (NEVER use <hr>)
         if stripped in ("---", "***", "___", "* * *", "- - -", "◆ ◆ ◆"):
@@ -105,10 +162,7 @@ def _fallback_markdown_to_html(md_text: str) -> str:
 
         # Unordered list
         if stripped.startswith("- ") or stripped.startswith("* "):
-            item = stripped[2:]
-            item = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", item)
-            item = re.sub(r"\*(.*?)\*", r"<em>\1</em>", item)
-            item = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', item)
+            item = _format_inline_markdown(stripped[2:])
             if not in_list:
                 html_lines.append('<ul style="margin: 1em 0; padding-left: 1.5em;">')
                 in_list = True
@@ -124,18 +178,40 @@ def _fallback_markdown_to_html(md_text: str) -> str:
             continue
 
         # Regular paragraph with inline formatting
-        p_text = stripped
-        p_text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", p_text)
-        p_text = re.sub(r"\*(.*?)\*", r"<em>\1</em>", p_text)
-        p_text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', p_text)
+        p_text = _format_inline_markdown(stripped)
         html_lines.append(f"<p style='margin-bottom: 1.5em; line-height: 1.9;'>{p_text}</p>")
 
+    if in_table:
+        flush_table()
     if in_list:
         html_lines.append("</ul>")
     if in_code_block:
         html_lines.append("</code></pre>")
 
     return "\n".join(html_lines)
+
+def build_next_work_preview(next_work: Dict[str, Any]) -> str:
+    """Generates a styled markdown preview block for the next scheduled sci-fi reboot."""
+    author = next_work.get("author", "")
+    title = next_work.get("title", "")
+    url = next_work.get("url", "")
+    tech = next_work.get("modern_tech", "")
+    summary = next_work.get("summary", "")
+
+    return f"""
+
+---
+
+### 【次回作の予告】
+
+| 項目 | 内容 |
+|:---|:---|
+| **次回原典作品** | {author}[『{title}』]({url})（青空文庫） |
+| **導入する現代最新科学技術** | {tech} |
+| **SFリブートの視点・未来像** | {summary} |
+
+*※明朝4時（JST）自動配信予定。どうぞお楽しみに！*
+"""
 
 def parse_markdown_with_frontmatter(file_path: str) -> Tuple[Dict[str, Any], str]:
     """Parses a markdown file that contains YAML frontmatter or code blocks."""
@@ -183,7 +259,8 @@ def parse_markdown_with_frontmatter(file_path: str) -> Tuple[Dict[str, Any], str
 def format_post_content(
     file_path: str,
     status_override: Optional[str] = None,
-    include_jetpack_shortcodes: bool = True
+    include_jetpack_shortcodes: bool = True,
+    next_work: Optional[Dict[str, Any]] = None
 ) -> FormattedPost:
     """
     Loads a markdown story file and prepares both HTML and plain text
@@ -206,6 +283,10 @@ def format_post_content(
 
     # Clean existing shortcodes in body if already present
     cleaned_body = re.sub(r"\[(category|tags|status|title|excerpt)[^\]]*\]", "", body).strip()
+
+    # Automatically append Next Work Preview if provided and not yet in body
+    if next_work and "次回" not in cleaned_body and "次回作の予告" not in cleaned_body:
+        cleaned_body += build_next_work_preview(next_work)
 
     # Pre-clean 1: Automatically strip any '起', '承', '転', '結' headers or markers
     cleaned_body = re.sub(r"^[ \t]*#+[ \t]*[【\[（(]?[起承転結][】\]）)]?.*$", "", cleaned_body, flags=re.MULTILINE)

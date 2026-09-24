@@ -168,11 +168,22 @@ def main():
             target_file.write_text(content, encoding="utf-8")
             logger.info(f"Generated story saved to: {target_file}")
 
+    # Determine next work for preview section
+    next_work = None
+    if target_work:
+        catalog = history_mgr.catalog
+        for idx, w in enumerate(catalog):
+            if w["id"] == target_work["id"]:
+                next_idx = (idx + 1) % len(catalog)
+                next_work = catalog[next_idx]
+                break
+
     # Format content for WordPress email
     formatted = format_post_content(
         str(target_file),
         status_override=args.status,
-        include_jetpack_shortcodes=config.use_jetpack_shortcodes
+        include_jetpack_shortcodes=config.use_jetpack_shortcodes,
+        next_work=next_work
     )
 
     logger.info(f"Ready to post: '{formatted.title}' (Status: {formatted.status})")
