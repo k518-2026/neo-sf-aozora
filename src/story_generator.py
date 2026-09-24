@@ -113,6 +113,7 @@ class StoryGenerator:
                         config=types.GenerateContentConfig(
                             system_instruction=SYSTEM_PROMPT,
                             temperature=0.8,
+                            max_output_tokens=8192,
                         )
                     )
 
@@ -125,8 +126,16 @@ class StoryGenerator:
                     if content.endswith("```"):
                         content = content[:-3].strip()
 
+                    # Quality check: ensure substantial length (at least 2,500 characters)
+                    if len(content) < 2500:
+                        logger.warning(
+                            f"Model '{current_model}' output too short ({len(content)} chars < 2500 target). "
+                            f"Trying next model candidate for a richer, more detailed narrative..."
+                        )
+                        continue
+
                     title, refs = self._extract_title_and_refs(content, work)
-                    logger.info(f"Successfully generated story using '{current_model}'! Title: {title}")
+                    logger.info(f"Successfully generated story using '{current_model}'! Title: {title}, Length: {len(content)} chars")
                     return content, title, refs
 
                 except Exception as e:
