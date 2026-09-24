@@ -207,7 +207,12 @@ def format_post_content(
     # Clean existing shortcodes in body if already present
     cleaned_body = re.sub(r"\[(category|tags|status|title|excerpt)[^\]]*\]", "", body).strip()
 
-    # Pre-clean: Replace markdown hr lines (---, ***, ___) with safe scene dividers to prevent email signature truncation
+    # Pre-clean 1: Automatically strip any '起', '承', '転', '結' headers or markers
+    cleaned_body = re.sub(r"^[ \t]*#+[ \t]*[【\[（(]?[起承転結][】\]）)]?.*$", "", cleaned_body, flags=re.MULTILINE)
+    cleaned_body = re.sub(r"[【\[（(][起承転結][】\]）)]", "", cleaned_body)
+    cleaned_body = re.sub(r"^[ \t]*[【\[（(]?[起承転結][】\]）)]?[ \t]*$", "", cleaned_body, flags=re.MULTILINE)
+
+    # Pre-clean 2: Replace markdown hr lines (---, ***, ___) with safe scene dividers to prevent email signature truncation
     cleaned_body = re.sub(r"^[ \t]*[-*_]{3,}[ \t]*$", "◆ ◆ ◆", cleaned_body, flags=re.MULTILINE)
 
     # Convert markdown to HTML
