@@ -1,0 +1,66 @@
+name: Post SF Story to WordPress via Email
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Dry run mode (validate without sending actual email)'
+        required: true
+        type: boolean
+        default: false
+      post_status:
+        description: 'Post status on WordPress (publish or draft)'
+        required: true
+        type: choice
+        options:
+          - publish
+          - draft
+        default: 'publish'
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**'
+
+jobs:
+  publish:
+    name: Dispatch Email to WordPress
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: |
+          python -m unittest discover tests
+
+      - name: Send Post via Email
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT || '587' }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          SMTP_USE_TLS: ${{ secrets.SMTP_USE_TLS || 'true' }}
+          SMTP_USE_SSL: ${{ secrets.SMTP_USE_SSL || 'false' }}
+          WP_POST_EMAIL: ${{ secrets.WP_POST_EMAIL }}
+          DEFAULT_POST_STATUS: ${{ github.event.inputs.post_status || 'publish' }}
+        run: |
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            echo "Running in Dry-Run mode..."
+            python -m src.main --dry-run --preview-html
+          else
+            echo "Dispatching live email to WordPress..."
+            python -m src.main --send --status "${{ github.event.inputs.post_status || 'publish' }}"
+          fi
