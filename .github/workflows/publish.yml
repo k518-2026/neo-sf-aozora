@@ -21,13 +21,24 @@ on:
           - publish
           - draft
         default: 'publish'
+      repost:
+        description: 'Re-post a recreated story (No.1: 音楽浴, No.2: 蠅男, No.3: 人造人間事件, or reset_all)'
+        required: false
+        type: choice
+        options:
+          - none
+          - "1"
+          - "2"
+          - "3"
+          - reset_all
+        default: 'none'
       force:
         description: 'Force run (even if already published)'
         required: false
         type: boolean
         default: false
       work_id:
-        description: 'Specific Aozora work ID (optional, e.g. unno-fly-man)'
+        description: 'Specific Aozora work ID (optional, e.g. unno-vibration-demon)'
         required: false
         type: string
         default: ''
@@ -76,6 +87,7 @@ jobs:
           INPUT_DRY_RUN: ${{ github.event.inputs.dry_run }}
           INPUT_FORCE: ${{ github.event.inputs.force }}
           INPUT_WORK_ID: ${{ github.event.inputs.work_id }}
+          INPUT_REPOST: ${{ github.event.inputs.repost }}
         run: |
           ARGS=""
           if [ "$INPUT_DRY_RUN" = "true" ]; then
@@ -88,7 +100,11 @@ jobs:
             ARGS="$ARGS --force"
           fi
 
-          if [ -n "$INPUT_WORK_ID" ]; then
+          if [ "$INPUT_REPOST" = "reset_all" ]; then
+            ARGS="$ARGS --repost all"
+          elif [ -n "$INPUT_REPOST" ] && [ "$INPUT_REPOST" != "none" ]; then
+            ARGS="$ARGS --repost $INPUT_REPOST"
+          elif [ -n "$INPUT_WORK_ID" ]; then
             ARGS="$ARGS --work-id $INPUT_WORK_ID"
           fi
 

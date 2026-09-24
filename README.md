@@ -83,7 +83,8 @@ GitHubリポジトリの **Settings > Secrets and variables > Actions** にて�
   GitHubの **Actions** タブ > **Daily Neo Aozora Sci-Fi Reboot to WordPress** を選択し、**Run workflow** をクリックします。
   - `dry_run`: `true` を選べばメール送信・履歴コミットを行わずにテストできます。
   - `post_status`: `publish`（公開）または `draft`（下書き）を選択可能。
-  - `work_id`: カタログ内の特定の青空文庫作品（例: `unno-fly-man`）を指定して生成・投稿可能。
+  - `repost`: 作り直した作品を再投稿できます（`1`: 音楽浴, `2`: 蠅男, `3`: 人造人間事件, `reset_all`: 履歴を全リセット）。
+  - `work_id`: カタログ内の特定の青空文庫作品（例: `unno-vibration-demon`）を指定して生成・投稿可能。
 
 ---
 

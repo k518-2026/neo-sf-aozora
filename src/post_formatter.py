@@ -50,7 +50,10 @@ def _fallback_yaml_parser(text: str) -> Dict[str, Any]:
     return data
 
 def _fallback_markdown_to_html(md_text: str) -> str:
-    """Lightweight fallback Markdown to HTML converter using regex."""
+    """
+    Lightweight fallback Markdown to HTML converter.
+    NEVER produces <hr> or stray <br> tags to prevent WordPress email truncating.
+    """
     lines = md_text.splitlines()
     html_lines = []
     in_code_block = False
@@ -73,31 +76,31 @@ def _fallback_markdown_to_html(md_text: str) -> str:
             html_lines.append(html.escape(line))
             continue
 
-        # Horizontal rule / Scene separators
-        if stripped in ("---", "***", "___", "* * *", "- - -"):
+        # Horizontal rule / Scene separators (NEVER use <hr>)
+        if stripped in ("---", "***", "___", "* * *", "- - -", "◆ ◆ ◆"):
             if in_list:
                 html_lines.append("</ul>")
                 in_list = False
-            html_lines.append('<div style="text-align: center; margin: 2em 0; letter-spacing: 0.5em; color: #888;">* * *</div>')
+            html_lines.append('<div style="text-align: center; margin: 2em 0; letter-spacing: 0.5em; color: #888;">◆ ◆ ◆</div>')
             continue
 
         # Headings
         if stripped.startswith("# "):
-            html_lines.append(f"<h1>{html.escape(stripped[2:])}</h1>")
+            html_lines.append(f"<h1 style='margin-top: 1.5em; margin-bottom: 0.8em;'>{html.escape(stripped[2:])}</h1>")
             continue
         if stripped.startswith("## "):
-            html_lines.append(f"<h2>{html.escape(stripped[3:])}</h2>")
+            html_lines.append(f"<h2 style='margin-top: 1.5em; margin-bottom: 0.8em;'>{html.escape(stripped[3:])}</h2>")
             continue
         if stripped.startswith("### "):
-            html_lines.append(f"<h3>{html.escape(stripped[4:])}</h3>")
+            html_lines.append(f"<h3 style='margin-top: 1.5em; margin-bottom: 0.8em;'>{html.escape(stripped[4:])}</h3>")
             continue
         if stripped.startswith("#### "):
-            html_lines.append(f"<h4>{html.escape(stripped[5:])}</h4>")
+            html_lines.append(f"<h4 style='margin-top: 1.2em; margin-bottom: 0.6em;'>{html.escape(stripped[5:])}</h4>")
             continue
 
         # Blockquote
         if stripped.startswith("> "):
-            html_lines.append(f"<blockquote><p>{html.escape(stripped[2:])}</p></blockquote>")
+            html_lines.append(f"<blockquote style='border-left: 4px solid #ccc; padding-left: 1em; margin: 1em 0; color: #666;'><p style='margin: 0;'>{html.escape(stripped[2:])}</p></blockquote>")
             continue
 
         # Unordered list
@@ -107,9 +110,9 @@ def _fallback_markdown_to_html(md_text: str) -> str:
             item = re.sub(r"\*(.*?)\*", r"<em>\1</em>", item)
             item = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2">\1</a>', item)
             if not in_list:
-                html_lines.append("<ul>")
+                html_lines.append('<ul style="margin: 1em 0; padding-left: 1.5em;">')
                 in_list = True
-            html_lines.append(f"<li>{item}</li>")
+            html_lines.append(f"<li style='margin-bottom: 0.5em;'>{item}</li>")
             continue
         else:
             if in_list:
@@ -125,7 +128,7 @@ def _fallback_markdown_to_html(md_text: str) -> str:
         p_text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", p_text)
         p_text = re.sub(r"\*(.*?)\*", r"<em>\1</em>", p_text)
         p_text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2">\1</a>', p_text)
-        html_lines.append(f"<p>{p_text}</p>")
+        html_lines.append(f"<p style='margin-bottom: 1.5em; line-height: 1.9;'>{p_text}</p>")
 
     if in_list:
         html_lines.append("</ul>")
@@ -184,7 +187,9 @@ def format_post_content(
 ) -> FormattedPost:
     """
     Loads a markdown story file and prepares both HTML and plain text
-    formatted for WordPress Post-via-Email.
+    formatted strictly for WordPress Post-via-Email.
+    CRITICAL: Completely prevents <hr> and loose --- separators which cause
+    WordPress email parsers to prematurely truncate content as an email signature.
     """
     meta, body = parse_markdown_with_frontmatter(file_path)
 
@@ -202,6 +207,9 @@ def format_post_content(
     # Clean existing shortcodes in body if already present
     cleaned_body = re.sub(r"\[(category|tags|status|title|excerpt)[^\]]*\]", "", body).strip()
 
+    # Pre-clean: Replace markdown hr lines (---, ***, ___) with safe scene dividers to prevent email signature truncation
+    cleaned_body = re.sub(r"^[ \t]*[-*_]{3,}[ \t]*$", "◆ ◆ ◆", cleaned_body, flags=re.MULTILINE)
+
     # Convert markdown to HTML
     if HAS_MARKDOWN:
         html_body = markdown.markdown(
@@ -211,12 +219,24 @@ def format_post_content(
     else:
         html_body = _fallback_markdown_to_html(cleaned_body)
 
+    # CRITICAL POST-PROCESSING FOR WORDPRESS EMAIL:
+    # 1. Replace all <hr>, <hr/>, <hr /> with safe styled div
+    html_body = re.sub(
+        r"<hr\s*/?>",
+        '<div style="text-align: center; margin: 2em 0; letter-spacing: 0.5em; color: #888;">◆ ◆ ◆</div>',
+        html_body,
+        flags=re.IGNORECASE
+    )
+
+    # 2. Avoid multiple consecutive <br>
+    html_body = re.sub(r"(?:<br\s*/?>\s*){2,}", "<p></p>", html_body, flags=re.IGNORECASE)
+
     # Wrap in clean, modern typography styling for WordPress email rendering
     styled_html = f"""<div class="sf-story-container" style="font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif; line-height: 1.9; font-size: 16px; color: #222;">
 {html_body}
 </div>"""
 
-    # If Jetpack shortcodes are requested, prepend/append them
+    # If Jetpack shortcodes are requested, append them using clean <p> tags (NO <br>)
     sc_lines = []
     if status:
         sc_lines.append(f"[status {status}]")
@@ -229,7 +249,9 @@ def format_post_content(
     if include_jetpack_shortcodes and sc_lines:
         shortcode_block = "\n".join(sc_lines)
         final_plain = f"{final_plain}\n\n{shortcode_block}"
-        final_html = f"{styled_html}\n<p style='color: #888; font-size: 12px;'>" + "<br>".join(sc_lines) + "</p>"
+        # Use individual <p> tags for each shortcode to avoid <br> issues in WordPress
+        shortcodes_html_list = [f"<p style='color: #888; font-size: 12px; margin: 0.3em 0;'>{sc}</p>" for sc in sc_lines]
+        final_html = f"{styled_html}\n<div class='wp-meta-shortcodes' style='margin-top: 2em;'>\n" + "\n".join(shortcodes_html_list) + "\n</div>"
     else:
         final_html = styled_html
 

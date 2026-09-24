@@ -59,6 +59,22 @@ class HistoryManager:
 
         return None
 
+    def reset_history(self, work_ids: Optional[List[str]] = None):
+        """
+        Resets history for specified work_ids, or resets all history if None.
+        Enables re-posting of earlier works.
+        """
+        if work_ids is None:
+            self.history = []
+        else:
+            self.history = [item for item in self.history if item.get("work_id") not in work_ids]
+
+        self.history_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(self.history_path, "w", encoding="utf-8") as f:
+            json.dump(self.history, f, ensure_ascii=False, indent=2)
+
+        self._update_markdown_table()
+
     def record_post(
         self,
         work: Dict[str, Any],
@@ -69,6 +85,10 @@ class HistoryManager:
     ):
         """Records the newly published story into history.json and POSTED_STORIES.md."""
         now_jst = datetime.now(JST).isoformat()
+        
+        # Remove old record of same work_id if it exists to prevent duplicate entries
+        self.history = [item for item in self.history if item.get("work_id") != work["id"]]
+
         record = {
             "work_id": work["id"],
             "original_title": work["title"],
@@ -94,17 +114,20 @@ class HistoryManager:
             "# 投稿済みSF作品 アーカイブ一覧\n",
             "青空文庫のSF古典作品をもとに、現代の海外査読学術論文の知見を取り入れてリブート・投稿された作品一覧です。\n",
             "毎日朝4時（JST）の自動定期実行により、重複のないよう更新されます。\n\n",
-            "| No. | 投稿日 (JST) | リブート作品タイトル | 青空文庫 原典 (著者) | 主な引用論文 | ステータス |",
+            "| No. | 投稿日 (JST) | リブート作品タイトル | 青空文庫 原典 (著者) | 主な引用論文 (DOIリンク) | ステータス |",
             "|:---:|:---:|:---|:---|:---|:---:|"
         ]
 
-        for i, item in enumerate(self.history, start=1):
-            date_str = item.get("posted_at", "")[:10]
-            reboot_title = item.get("reboot_title", "").split("――")[0]
-            original = f"{item.get('original_title')}（{item.get('original_author')}）"
-            refs = item.get("references", [])
-            ref_summary = ", ".join([r.split(" - ")[0] for r in refs[:2]]) if refs else "Nature/Science/Cell"
-            status = item.get("status", "published").capitalize()
-            lines.append(f"| {i} | {date_str} | {reboot_title} | {original} | {ref_summary} | {status} |")
+        if not self.history:
+            lines.append("| - | - | （再投稿待機中） | - | - | Ready |")
+        else:
+            for i, item in enumerate(self.history, start=1):
+                date_str = item.get("posted_at", "")[:10]
+                reboot_title = item.get("reboot_title", "").split("――")[0]
+                original = f"{item.get('original_title')}（{item.get('original_author')}）"
+                refs = item.get("references", [])
+                ref_summary = ", ".join([r.split(" - ")[0] for r in refs[:2]]) if refs else "Nature/Science/Cell"
+                status = item.get("status", "published").capitalize()
+                lines.append(f"| {i} | {date_str} | {reboot_title} | {original} | {ref_summary} | {status} |")
 
         TABLE_FILE.write_text("\n".join(lines) + "\n", encoding="utf-8")
