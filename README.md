@@ -1,163 +1,139 @@
-# 十八時の音響変調（ニューロ・モデュレーション）―― WordPress メール投稿システム
+# neo-sf-aozora ―― 青空文庫SF × 先端科学リブート & WordPress メール自動投稿システム
 
-青空文庫の古典SF・海野十三『十八時の音楽浴』（1937年）を原案とし、現代の先端神経科学・ソノジェネティクス（超音波遺伝子工学）の査読付き海外論文を引用して再構築したショートSF小説と、それをWordPressへメール投稿（Post via Email）するための自動化システムです。
+青空文庫に収載されている日本の古典SF・科学奇譚（海野十三、蘭郁二郎、夢野久作、小栗虫太郎など）を原案とし、現代の先端科学技術（Nature, Science, Cell などの海外査読論文）を取り入れて再構築した本格ショートSF小説（約3,000文字）を、**毎日朝4時（JST）**に自動生成して WordPress へメール投稿（Post via Email）する自動化リポジトリです。
 
----
-
-## 1. 収録作品について
-
-- **作品タイトル**: 『十八時の音響変調（ニューロ・モデュレーション）――あるいは蓮見技師の逆相関閉ループ実験』
-- **原案**: 海野十三『十八時の音楽浴』（青空文庫）
-- **分量**: 約3,000文字（ショートSF・ショートショート）
-- **構成**: 起承転結（起：18時の音楽浴の日常 / 承：ソノジェネティクスによる洗脳の発見 / 転：逆位相パルスによる反乱と沈黙 / 結：アッと驚く結末・自らが最後の被験体だったツイスト）
-- **引用論文（海外査読論文）**:
-  1. **Lim, H. G., Kang, H., Baek, J., & Shapiro, M. G. (2021).**  
-     *Sonogenetic control of mammalian cells using ultrasound.*  
-     **Nature**, 594(7862), 263–268. DOI: [10.1038/s41586-021-03534-6](https://doi.org/10.1038/s41586-021-03534-6)  
-     （超音波による機械受容イオンチャネルPiezo1を用いた標的神経細胞の遠隔操作）
-  2. **Martorell, A. J. et al. (2019).**  
-     *Multi-sensory Gamma Stimulation Ameliorates Alzheimer's-Associated Pathology and Improves Cognition.*  
-     **Cell**, 177(2), 256–271. DOI: [10.1016/j.cell.2019.02.014](https://doi.org/10.1016/j.cell.2019.02.014)  
-     （MIT Picower Institute: 40Hz音響刺激によるガンマ波エントレインメントとミクログリア貪食活性化）
-  3. **Prehn, K. et al. (2023).**  
-     *Closed-loop auditory stimulation for precision neuro-circuit modulation.*  
-     **Nature Biomedical Engineering**, 7(5), 612–628.  
-     （閉ループ型リアルタイム生体フィードバック音響変調技術）
-
-小説本文は [`content/story.md`](content/story.md) に格納されています。
+過去に投稿した作品履歴をデータベース管理し、**作品の重複を完全に防止**します。
 
 ---
 
-## 2. システムの機能概要
+## 1. システムの特徴
 
-WordPressの「メールによる投稿（Post via Email）」（Jetpack、Postie、Mail2Postプラグイン等）に対応しています。
-
-- **MIMEMultipart対応**: HTML（本文装飾・論文引用リンク・レスポンシブタイポグラフィ）とプレーンテキストの双方を同時生成。
-- **Jetpackショートコード自動付与**: 本文末尾に `[status publish]`, `[category SF小説]`, `[tags ...]`, `[title ...]` などのメタデータを自動付与。
-- **安心のDry-Run（模擬実行）モード**: 実際にメールを送信することなく、宛先・件名・本文・HTMLプレビューファイルを生成して安全に事前検証可能。
-- **GitHub Actions 連携**: リポジトリの `main` ブランチへのプッシュ時や手動トリガー（`workflow_dispatch`）で、GitHubのクラウド上からWordPressへ一括自動配信。
+- ⏰ **毎日朝4時（JST）の全自動実行**:
+  - GitHub Actions のスケジューラ（`cron: '0 19 * * *'` = JST 04:00）により、毎朝自動起動。
+- 📚 **青空文庫SFマスターカタログ搭載**:
+  - 海野十三『十八時の音楽浴』『蠅男』『人造人間事件』『振動魔』、蘭郁二郎『植物人間』『夢鬼』『脳髄手術』、夢野久作『人間レコード』『爆弾太平記』、小栗虫太郎『完全犯罪』『二十世紀鉄仮面』など名作SFを網羅。
+- 🔬 **実在する海外トップ査読論文の引用**:
+  - Google Gemini API（`gemini-2.5-flash`）を活用し、Nature, Science, Cell, PNAS 等の実在論文（著者・雑誌名・年号・DOI・受容体や数式などのメカニズム）をストーリーの核心技術に論理的に統合。
+- 🎭 **起承転結 ＆ アッと驚く結末（ツイスト）**:
+  - 約3,000文字の知的でスリリングな本格ショートSF。ラストには読者の認識を覆す衝撃的などんでん返しを必ず配置。
+- 🗄️ **過去記事・履歴管理（重複防止）**:
+  - 投稿済み作品は `data/history.json` および `data/POSTED_STORIES.md` に永続記録。
+  - GitHub Actions 実行完了時に、生成された記事ファイル（`content/*.md`）と履歴データを GitHub リポジトリへ自動で `git commit & push`。
+- ✉️ **WordPress メール投稿（Post via Email）**:
+  - Jetpack や Postie 等のメール投稿仕様に対応。
+  - HTML（洗練されたタイポグラフィ装飾・論文引用リンク）とプレーンテキストをマルチパート送信。
+  - `[status publish]`, `[category SF小説]`, `[tags ...]` 等のショートコードを自動付加。
+- 🛡️ **安心のDry-Run ＆ HTMLプレビュー機能**:
+  - 実際にメールを送信せず、生成結果とHTMLプレビュー（`preview_output.html`）をブラウザで検証可能。
 
 ---
 
-## 3. ディレクトリ構成
+## 2. ディレクトリ構成
 
 ```
 neo-sf-aozora/
 ├── .github/
 │   └── workflows/
-│       └── publish.yml       # GitHub Actions 自動投稿ワークフロー
+│       └── publish.yml       # 毎朝4時実行 ＆ 自動コミットのワークフロー
 ├── content/
-│   └── story.md              # 小説本文（YAML Frontmatter + Markdown）
+│   └── story.md              # 第1作『十八時の音響変調』（初期収録）
+├── data/
+│   ├── aozora_catalog.json   # 青空文庫SF作品マスターカタログ（作品・テーマ・先端技術）
+│   ├── history.json          # 投稿済み履歴データベース（重複防止管理）
+│   └── POSTED_STORIES.md     # 投稿済み作品一覧アーカイブ表
 ├── src/
 │   ├── __init__.py
-│   ├── config.py             # 環境設定モジュール
-│   ├── post_formatter.py     # Markdown/ショートコード/HTML整形
-│   ├── mail_sender.py        # SMTPメール送信エンジン
+│   ├── config.py             # 設定管理
+│   ├── history_manager.py    # 履歴照合・未投稿作品自動選定・重複防止
+│   ├── story_generator.py    # Gemini API による海外論文引用SF自動執筆エンジン
+│   ├── post_formatter.py     # Markdown → レスポンシブHTML/ショートコード変換
+│   ├── mail_sender.py        # TLS/SSL対応 SMTPメール送信エンジン
 │   └── main.py               # CLIエントリーポイント
 ├── tests/
-│   └── test_sender.py        # 単体テスト
-├── .env.example              # 設定ファイルテンプレート
+│   └── test_sender.py        # 単体テストスイート
+├── .env.example              # 環境変数設定テンプレート
 ├── .gitignore
-├── requirements.txt          # Python依存パッケージ
-└── README.md                 # 本ドキュメント
+├── requirements.txt
+└── README.md
 ```
+
+---
+
+## 3. GitHub Actions による自動実行と設定
+
+### 3.1 GitHub Secrets の設定
+
+GitHubリポジトリの **Settings > Secrets and variables > Actions** にて、以下のシークレットを登録します：
+
+| Secret名 | 必須 | 内容 | 設定例 |
+|---|:---:|---|---|
+| `GEMINI_API_KEY` | **推奨** | Google Gemini API キー | `AIzaSy...` |
+| `SMTP_HOST` | **必須** | SMTPサーバーのホスト名 | `smtp.gmail.com` |
+| `SMTP_PORT` | **必須** | SMTPポート番号 | `587` |
+| `SMTP_USER` | **必須** | 送信用メールアドレス | `your_email@gmail.com` |
+| `SMTP_PASSWORD` | **必須** | 送信パスワード（Gmailアプリパスワード） | `xxxx xxxx xxxx xxxx` |
+| `WP_POST_EMAIL` | **必須** | WordPressメール投稿受信用アドレス | `secret_xxxx@post.wordpress.com` |
+| `SMTP_USE_TLS` | 任意 | TLS接続（デフォルト: `true`） | `true` |
+
+### 3.2 動作スケジュール
+
+- **自動実行**: 毎日 **日本時間 午前4時00分**（UTC 19:00）に定期起動します。
+- **手動実行（即時テスト）**:
+  GitHubの **Actions** タブ > **Daily Neo Aozora Sci-Fi Reboot to WordPress** を選択し、**Run workflow** をクリックします。
+  - `dry_run`: `true` を選べばメール送信・履歴コミットを行わずにテストできます。
+  - `post_status`: `publish`（公開）または `draft`（下書き）を選択可能。
+  - `work_id`: カタログ内の特定の青空文庫作品（例: `unno-fly-man`）を指定して生成・投稿可能。
 
 ---
 
 ## 4. ローカルでの実行方法
 
-### 4.1 依存パッケージのインストール
+### 4.1 インストールと設定
 
-```bash
+```powershell
+cd e:\GoogleAntigravity\neo-sf-aozora
+
+# パッケージのインストール
 pip install -r requirements.txt
+
+# 設定ファイルを作成
+copy .env.example .env
 ```
 
-### 4.2 設定ファイルの作成
-
-`.env.example` をコピーして `.env` を作成します。
-
-```bash
-cp .env.example .env
-```
-
-`.env` に実際のSMTP情報およびWordPress投稿用メールアドレスを入力します：
+`.env` に実際の認証情報を入力します：
 
 ```ini
-# SMTP設定例（Gmailの場合）
+GEMINI_API_KEY=AIzaSy...
 SMTP_HOST=smtp.gmail.com
 SMTP_PORT=587
 SMTP_USER=your_email@gmail.com
-SMTP_PASSWORD=your_app_password_here  # ※Gmailの「アプリパスワード」
-SMTP_USE_TLS=true
-SMTP_USE_SSL=false
-
-# 送信者表示名
-MAIL_FROM_NAME=SF Auto Publisher
-
-# WordPress メール投稿専用アドレス（Jetpack等で発行された秘密アドレス）
-WP_POST_EMAIL=your_secret_address@post.wordpress.com
-
-# 投稿ステータス（publish: 公開 / draft: 下書き）
+SMTP_PASSWORD=your_app_password
+WP_POST_EMAIL=your_secret@post.wordpress.com
 DEFAULT_POST_STATUS=publish
 ```
 
-> **Note (Gmailのアプリパスワードの取得方法):**
-> 1. Googleアカウントの管理 > セキュリティ > 「2段階認証プロセス」をオンにします。
-> 2. 「アプリパスワード」で新しいパスワードを生成し、その16桁の英字を `SMTP_PASSWORD` に設定します。
+### 4.2 テスト実行（Dry-Run）
 
-### 4.3 動作確認（Dry-Runモード & HTMLプレビュー）
+未投稿の作品を自動選定し、メール送信を行わずにHTML出力をブラウザで確認します：
 
-メールを実際に送信せず、投稿内容とHTMLのレンダリング結果を確認します：
-
-```bash
-# Dry-runの実行とHTMLプレビューファイルの出力
-python -m src.main --dry-run --preview-html
+```powershell
+python -m src.main --dry-run
 ```
+※出力された `preview_output.html` をブラウザで開いて確認できます。
 
-カレントディレクトリに `preview_output.html` が出力され、ブラウザで美しく組版された本文を確認できます。
+### 4.3 手動での本番投稿
 
-### 4.4 実際にWordPressへ送信
-
-```bash
-# 本番送信（公開ステータス）
+```powershell
+# 自動選定された未投稿作品を生成し、WordPressへメール送信＆履歴更新
 python -m src.main --send
 
-# 下書き（draft）として送信する場合
-python -m src.main --send --status draft
+# 作品IDを指定して下書きとして送信する場合
+python -m src.main --work-id unno-fly-man --status draft --send
 ```
 
 ---
 
-## 5. GitHub へのデプロイと自動投稿（GitHub Actions）
+## 5. 投稿済み履歴一覧（アーカイブ）
 
-### 5.1 GitHubリポジトリの作成とプッシュ
-
-```bash
-# Git初期化
-git init
-git add .
-git commit -m "feat: Initial commit of Aozora SF Reboot and WP Mail Auto-poster"
-
-# GitHubリモートへのプッシュ（URLはご自身のリポジトリに変更してください）
-git branch -M main
-git remote add origin https://github.com/<your-username>/neo-sf-aozora.git
-git push -u origin main
-```
-
-### 5.2 GitHub Secrets の設定
-
-GitHubリポジトリの **Settings > Secrets and variables > Actions** にて、以下のシークレットを登録します：
-
-| Secret名 | 内容 | 例 |
-|---|---|---|
-| `SMTP_HOST` | SMTPサーバーのホスト名 | `smtp.gmail.com` |
-| `SMTP_PORT` | ポート番号 | `587` |
-| `SMTP_USER` | 送信元メールアドレス | `your_email@gmail.com` |
-| `SMTP_PASSWORD` | アプリパスワード | `xxxx xxxx xxxx xxxx` |
-| `SMTP_USE_TLS` | TLS使用フラグ | `true` |
-| `WP_POST_EMAIL` | WordPressメール投稿アドレス | `xxxx@post.wordpress.com` |
-
-### 5.3 ワークフローの実行
-
-- **手動実行**: GitHubリポジトリの **Actions** タブ > **Post SF Story to WordPress via Email** を選択 > **Run workflow** をクリック。`dry_run`（テスト）や `post_status`（下書き/公開）を選択して実行できます。
-- **自動実行**: `content/` ディレクトリ内のファイルを編集して `main` ブランチにプッシュすると、自動でテストが実行されWordPressへ投稿されます。
+[`data/POSTED_STORIES.md`](data/POSTED_STORIES.md) にて、過去に投稿された作品と引用論文の一覧を閲覧できます。
+自動実行のたびにテーブルが自動更新され、リポジトリにプッシュされます。

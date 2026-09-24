@@ -1,0 +1,137 @@
+[
+  {
+    "id": "unno-18-music",
+    "title": "十八時の音楽浴",
+    "author": "海野十三",
+    "url": "https://www.aozora.gr.jp/cards/000160/card3237.html",
+    "theme": "音響・周波数による精神感応・多幸感と大衆統制",
+    "modern_tech": "ソノジェネティクス（超音波遺伝子制御）、40Hzガンマ波音響刺激、Piezo1イオンチャネル、閉ループ脳波変調",
+    "summary": "夕方18時になると流れる音楽浴で市民が多幸感に浸るが、その背後には音響技術による精神統制が隠されていた。"
+  },
+  {
+    "id": "unno-fly-man",
+    "title": "蠅男",
+    "author": "海野十三",
+    "url": "https://www.aozora.gr.jp/cards/000160/card1240.html",
+    "theme": "小型生体センシング・極微偵察昆虫・生体サイボーグ",
+    "modern_tech": "昆虫バイオハイブリッド・サイボーグ、昆虫羽ばたき型MEMSマイクロロボット、ニューロモルフィック視覚センサ",
+    "summary": "蠅の姿をした謎の潜入者が密室の機密を盗み出す。現代では昆虫サイボーグやMEMSマイクロドローンによる究極の諜報戦。"
+  },
+  {
+    "id": "unno-cyborg-incident",
+    "title": "人造人間事件",
+    "author": "海野十三",
+    "url": "https://www.aozora.gr.jp/cards/000160/card1246.html",
+    "theme": "人造人間・有機アンドロイド・意識の複製",
+    "modern_tech": "脳オルガノイド・コンピューティング（Brain-on-a-chip）、合成生物学的ヒューマノイド、神経活動の光遺伝学的クローニング",
+    "summary": "人間そっくりの人造人間が起こす事件。生体組織と半導体の融合バイオコンピュータが自我を持つ。"
+  },
+  {
+    "id": "unno-vibration-demon",
+    "title": "振動魔",
+    "author": "海野十三",
+    "url": "https://www.aozora.gr.jp/cards/000160/card872.html",
+    "theme": "共振破壊・超音波・指向性エネルギー兵器",
+    "modern_tech": "メタマテリアル音響レンズ、フォノニック結晶、テラヘルツ共振破壊、レーザー励起超音波",
+    "summary": "物体の固有振動数に合わせた不可視の波を照射し、遠隔から建築物や生体を共振破壊する狂気の科学者。"
+  },
+  {
+    "id": "ran-plant-man",
+    "title": "植物人間",
+    "author": "蘭郁二郎",
+    "url": "https://www.aozora.gr.jp/cards/000325/card2186.html",
+    "theme": "植物と動物のキメラ・葉緑体共生・代謝工学",
+    "modern_tech": "動物細胞における葉緑体人工共生（Planimal）、CRISPR光合成代謝経路移植、クロロフィル生体蛍光",
+    "summary": "日光と水だけで生存する人間を作ろうとする研究。植物と融合した被験体は驚くべき生態変化を遂げる。"
+  },
+  {
+    "id": "ran-dream-demon",
+    "title": "夢鬼",
+    "author": "蘭郁二郎",
+    "url": "https://www.aozora.gr.jp/cards/000325/card2189.html",
+    "theme": "夢の可視化・記憶介入・ニューロデコーディング",
+    "modern_tech": "fMRI生成AIによる視覚心象復元（Stable Diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激",
+    "summary": "他人の見る夢をスクリーンに映し出す装置。他者の深層心理に侵入した技師が恐怖の悪夢に囚われる。"
+  },
+  {
+    "id": "ran-brain-surgery",
+    "title": "脳髄手術",
+    "author": "蘭郁二郎",
+    "url": "https://www.aozora.gr.jp/cards/000325/card2187.html",
+    "theme": "外科的性格改変・シナプス刈り込み・倫理変調",
+    "modern_tech": "深部脳刺激（DBS）、光遺伝学的情動回路切除、ナノロボットによる標的シナプス精密切断",
+    "summary": "凶悪犯の脳を外科的に手術して温厚な人格に作り変える試み。だが善悪の反転には予期せぬ代償があった。"
+  },
+  {
+    "id": "yumeno-human-record",
+    "title": "人間レコード",
+    "author": "夢野久作",
+    "url": "https://www.aozora.gr.jp/cards/000096/card1071.html",
+    "theme": "人体記憶媒体・DNAストレージ・神経情報記録",
+    "modern_tech": "DNAデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印",
+    "summary": "人間の肉体や骨格に極秘情報を音響溝のように刻印するスパイ。現代ではDNA配列やエピゲノムへの暗号化記憶。"
+  },
+  {
+    "id": "yumeno-bomb-peace",
+    "title": "爆弾太平記",
+    "author": "夢野久作",
+    "url": "https://www.aozora.gr.jp/cards/000096/card2134.html",
+    "theme": "究極爆弾・抑止力・連鎖反応兵器",
+    "modern_tech": "反物質トラップ、レーザー核融合、量子エンタングルメント起爆装置、自律致死型AI兵站",
+    "summary": "世界を瞬時に滅ぼす究極兵器の完成がもたらす逆説的平和と狂気。"
+  },
+  {
+    "id": "oguri-complete-crime",
+    "title": "完全犯罪",
+    "author": "小栗虫太郎",
+    "url": "https://www.aozora.gr.jp/cards/000125/card668.html",
+    "theme": "不可視物理トリック・暗殺・因果論の錯乱",
+    "modern_tech": "量子もつれ暗号撹乱、超短パルスフェムト秒レーザー熱音響暗殺、環境ゲノム偽装",
+    "summary": "科学の死角を突いた完璧な密室殺人トリック。現代の量子・ナノ物理による観測不可能な犯罪工学。"
+  },
+  {
+    "id": "oguri-20th-century-iron-mask",
+    "title": "二十世紀鉄仮面",
+    "author": "小栗虫太郎",
+    "url": "https://www.aozora.gr.jp/cards/000125/card1683.html",
+    "theme": "生体認証偽装・顔面再構築・デジタル身元強奪",
+    "modern_tech": "バイオ3Dプリンティング人工皮膚、DNAフェイシャルプロファイリング、生体電子マスク、ディープフェイク生体侵食",
+    "summary": "顔を完全に偽装し他人に成り代わる鉄仮面の怪人。生体認証社会を崩壊させるバイオ・ハッキング。"
+  },
+  {
+    "id": "unno-floating-island",
+    "title": "浮かぶ飛行島",
+    "author": "海野十三",
+    "url": "https://www.aozora.gr.jp/cards/000160/card1245.html",
+    "theme": "反重力・磁気浮上メガストラクチャー・成層圏要塞",
+    "modern_tech": "常温高圧超伝導（LK-99後継磁気浮上）、プラズマMHD推進、カーボンナノチューブテザーメガ構造体",
+    "summary": "天空に浮かぶ巨大人工浮遊要塞。成層圏で自給自足する超伝導空中都市の独立と墜落の危機。"
+  },
+  {
+    "id": "unno-captive",
+    "title": "俘囚",
+    "author": "海野十三",
+    "url": "https://www.aozora.gr.jp/cards/000160/card3238.html",
+    "theme": "四次元空間・超幾何拘束・空間歪曲",
+    "modern_tech": "AdS/CFT対応ホログラフィック原理、ワームホール量子シミュレーション、トポロジカル空間位相格子",
+    "summary": "三次元の密室から忽然と消失した囚人。四次元ポケット空間に迷い込んだ男の孤独と生還の試み。"
+  },
+  {
+    "id": "unno-metal-man",
+    "title": "金属人間",
+    "author": "海野十三",
+    "url": "https://www.aozora.gr.jp/cards/000160/card1242.html",
+    "theme": "生体金属化・自己修復ナノマシン・シリコン生命",
+    "modern_tech": "液体金属ガリウムナノ合金生体回路、自己組織化モジュラーロボット、生体内バイオミネラリゼーション",
+    "summary": "肉体が徐々に金属へと置換されていく奇病。ナノマシンによる生体鉱物化の脅威と進化の選択。"
+  },
+  {
+    "id": "hisao-insect-catalog",
+    "title": "昆虫図",
+    "author": "久生十蘭",
+    "url": "https://www.aozora.gr.jp/cards/001224/card46083.html",
+    "theme": "遺伝子組み換え昆虫・フェロモン遠隔操作・集団知能",
+    "modern_tech": "CRISPRジンドライブ、合成集合知フェロモン、マイクロ流体フェロモン放出バイオチップ",
+    "summary": "昆虫の生態を狂わせるフェロモンの研究が生み出した、人間をも誘導する恐るべき群れ制御技術。"
+  }
+]

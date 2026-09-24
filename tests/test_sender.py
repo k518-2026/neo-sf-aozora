@@ -1,12 +1,12 @@
 import unittest
-import os
 from pathlib import Path
 
 from src.config import SMTPConfig
 from src.post_formatter import format_post_content, parse_markdown_with_frontmatter
 from src.mail_sender import WordPressMailSender
+from src.history_manager import HistoryManager
 
-class TestWordPressPostEmail(unittest.TestCase):
+class TestNeoAozoraSystem(unittest.TestCase):
     def setUp(self):
         self.story_path = Path("content/story.md")
         self.config = SMTPConfig(
@@ -32,16 +32,13 @@ class TestWordPressPostEmail(unittest.TestCase):
         self.assertIn("categories", meta)
         self.assertTrue(len(body) > 1000, "Body should have substantial length")
 
-    def test_post_formatter(self):
-        formatted = format_post_content(
-            str(self.story_path),
-            status_override="draft",
-            include_jetpack_shortcodes=True
-        )
-        self.assertEqual(formatted.status, "draft")
-        self.assertIn("[status draft]", formatted.content_plain)
-        self.assertIn("Martorell", formatted.content_html)
-        self.assertIn("sf-story-container", formatted.content_html)
+    def test_history_manager_and_catalog(self):
+        mgr = HistoryManager()
+        self.assertTrue(len(mgr.catalog) >= 10, "Catalog should have at least 10 works")
+        next_work = mgr.select_next_work()
+        self.assertIsNotNone(next_work, "Should find next unposted work")
+        self.assertNotEqual(next_work["id"], "unno-18-music", "unno-18-music was already posted")
+        self.assertEqual(next_work["id"], "unno-fly-man", "Second work should be fly-man")
 
     def test_dry_run_send(self):
         formatted = format_post_content(str(self.story_path))

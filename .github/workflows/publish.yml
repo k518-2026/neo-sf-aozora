@@ -1,10 +1,15 @@
-name: Post SF Story to WordPress via Email
+name: Daily Neo Aozora Sci-Fi Reboot to WordPress
 
 on:
+  # Daily scheduled run (19:00 UTC = 04:00 JST / 毎朝4時)
+  schedule:
+    - cron: '0 19 * * *'
+
+  # Manual execution from GitHub Actions UI
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run mode (validate without sending actual email)'
+        description: 'Dry run mode (Simulate without sending email or committing history)'
         required: true
         type: boolean
         default: false
@@ -16,20 +21,30 @@ on:
           - publish
           - draft
         default: 'publish'
-  push:
-    branches:
-      - main
-    paths:
-      - 'content/**'
+      force:
+        description: 'Force run (even if already published)'
+        required: false
+        type: boolean
+        default: false
+      work_id:
+        description: 'Specific Aozora work ID (optional, e.g. unno-fly-man)'
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: write
 
 jobs:
-  publish:
-    name: Dispatch Email to WordPress
+  daily-publish:
+    name: Generate & Dispatch Sci-Fi Post via Email
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -46,9 +61,11 @@ jobs:
         run: |
           python -m unittest discover tests
 
-      - name: Send Post via Email
+      - name: Execute Daily Generation and WordPress Mail Dispatch
         env:
-          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL || 'gemini-2.5-flash' }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST || 'smtp.gmail.com' }}
           SMTP_PORT: ${{ secrets.SMTP_PORT || '587' }}
           SMTP_USER: ${{ secrets.SMTP_USER }}
           SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
@@ -56,11 +73,50 @@ jobs:
           SMTP_USE_SSL: ${{ secrets.SMTP_USE_SSL || 'false' }}
           WP_POST_EMAIL: ${{ secrets.WP_POST_EMAIL }}
           DEFAULT_POST_STATUS: ${{ github.event.inputs.post_status || 'publish' }}
+          INPUT_DRY_RUN: ${{ github.event.inputs.dry_run }}
+          INPUT_FORCE: ${{ github.event.inputs.force }}
+          INPUT_WORK_ID: ${{ github.event.inputs.work_id }}
         run: |
-          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
-            echo "Running in Dry-Run mode..."
-            python -m src.main --dry-run --preview-html
+          ARGS=""
+          if [ "$INPUT_DRY_RUN" = "true" ]; then
+            ARGS="$ARGS --dry-run"
           else
-            echo "Dispatching live email to WordPress..."
-            python -m src.main --send --status "${{ github.event.inputs.post_status || 'publish' }}"
+            ARGS="$ARGS --send"
+          fi
+
+          if [ "$INPUT_FORCE" = "true" ]; then
+            ARGS="$ARGS --force"
+          fi
+
+          if [ -n "$INPUT_WORK_ID" ]; then
+            ARGS="$ARGS --work-id $INPUT_WORK_ID"
+          fi
+
+          if [ -n "${{ github.event.inputs.post_status }}" ]; then
+            ARGS="$ARGS --status ${{ github.event.inputs.post_status }}"
+          fi
+
+          echo "Running: python -m src.main $ARGS"
+          python -m src.main $ARGS
+
+      - name: Upload HTML Preview Artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-preview-html
+          path: preview_output.html
+          if-no-files-found: ignore
+
+      - name: Commit & Push Updated History and Generated Content
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history.json data/POSTED_STORIES.md content/
+          if git diff --staged --quiet; then
+            echo "No state or content updates to commit."
+          else
+            git commit -m "chore: Auto-update posted stories history and content [skip ci]"
+            git pull --rebase origin main
+            git push origin HEAD:main
           fi

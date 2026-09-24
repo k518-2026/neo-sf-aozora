@@ -1,0 +1,16 @@
+[
+  {
+    "work_id": "unno-18-music",
+    "original_title": "十八時の音楽浴",
+    "original_author": "海野十三",
+    "reboot_title": "十八時の音響変調（ニューロ・モデュレーション）――あるいは蓮見技師の逆相関閉ループ実験",
+    "posted_at": "2026-09-24T20:31:00+09:00",
+    "file_path": "content/story.md",
+    "status": "published",
+    "references": [
+      "Martorell et al. (2019) Cell - Multi-sensory Gamma Stimulation Ameliorates Alzheimer's-Associated Pathology",
+      "Lim et al. (2021) Nature - Sonogenetic control of mammalian cells using ultrasound",
+      "Prehn et al. (2023) Nature Biomedical Engineering - Closed-loop auditory stimulation for precision neuro-circuit modulation"
+    ]
+  }
+]
