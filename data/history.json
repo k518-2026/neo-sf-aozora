@@ -12,5 +12,25 @@
       "Lim et al. (2021) Nature - Sonogenetic control of mammalian cells using ultrasound",
       "Prehn et al. (2023) Nature Biomedical Engineering - Closed-loop auditory stimulation for precision neuro-circuit modulation"
     ]
+  },
+  {
+    "work_id": "unno-fly-man",
+    "original_title": "蠅男",
+    "original_author": "海野十三",
+    "reboot_title": "無題のSF作品",
+    "posted_at": "2026-09-24T20:57:01.580384+09:00",
+    "file_path": "content/2026-09-24_unno_fly_man.md",
+    "status": "publish",
+    "references": [
+      "Sato, H., et al.** (2015). \"Remote Radio Control of Insect Flight.\" *Current Biology*, 25(18), 2458–2463.",
+      "DOI: [10.1016/j.cub.2015.07.051](https://doi.org/10.1016/j.cub.2015.07.051)",
+      "（昆虫の筋肉や神経に電極を挿入し、飛行行動を電気的に制御するバイオハイブリッド技術の先駆的研究）",
+      "Pei, J., et al.** (2019). \"Towards artificial general intelligence with hybrid Tianjic chip architecture.\" *Nature*, 572(7767), 104–111.",
+      "DOI: [10.1038/s41586-019-1424-8](https://doi.org/10.1038/s41586-019-1424-8)",
+      "（生物的スパイクニューラルネットワークと人工知能アルゴリズムを融合した、超低消費電力のハイブリッド・ニューロモルフィック・チップに関する研究）",
+      "Yang, X., et al.** (2022). \"Bioinspired, ultra-flexible, and stretchable mesh electronics for chronic brain-computer interfaces.\" *Nature Biomedical Engineering*, 6(3), 291–302.",
+      "DOI: [10.1038/s41551-021-00831-2](https://doi.org/10.1038/s41551-021-00831-2)",
+      "（脳組織にダメージを与えることなく長期的に安定して神経活動を記録・刺激できる、生体適合性の高い超柔軟メッシュ型BCI技術）"
+    ]
   }
 ]
