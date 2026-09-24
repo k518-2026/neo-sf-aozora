@@ -42,7 +42,7 @@ WordPressの「メールによる投稿（Post via Email）」（Jetpack、Posti
 ## 3. ディレクトリ構成
 
 ```
-aozora-sf-neuro-autoposter/
+neo-sf-aozora/
 ├── .github/
 │   └── workflows/
 │       └── publish.yml       # GitHub Actions 自動投稿ワークフロー
@@ -140,7 +140,7 @@ git commit -m "feat: Initial commit of Aozora SF Reboot and WP Mail Auto-poster"
 
 # GitHubリモートへのプッシュ（URLはご自身のリポジトリに変更してください）
 git branch -M main
-git remote add origin https://github.com/<your-username>/aozora-sf-neuro-autoposter.git
+git remote add origin https://github.com/<your-username>/neo-sf-aozora.git
 git push -u origin main
 ```
 
