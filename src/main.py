@@ -23,6 +23,9 @@ RECREATED_WORKS = {
     "3": ("unno-cyborg-incident", Path("content/2026-09-24_unno_cyborg_incident.md")),
     "no3": ("unno-cyborg-incident", Path("content/2026-09-24_unno_cyborg_incident.md")),
     "unno-cyborg-incident": ("unno-cyborg-incident", Path("content/2026-09-24_unno_cyborg_incident.md")),
+    "4": ("unno-vibration-demon", Path("content/2026-09-25_unno_vibration_demon.md")),
+    "no4": ("unno-vibration-demon", Path("content/2026-09-25_unno_vibration_demon.md")),
+    "unno-vibration-demon": ("unno-vibration-demon", Path("content/2026-09-25_unno_vibration_demon.md")),
 }
 
 def setup_logging(verbose: bool = False):
@@ -49,9 +52,9 @@ def main():
     )
     parser.add_argument(
         "--repost",
-        choices=["1", "2", "3", "no1", "no2", "no3", "unno-18-music", "unno-fly-man", "unno-cyborg-incident", "all"],
+        choices=["1", "2", "3", "4", "no1", "no2", "no3", "no4", "unno-18-music", "unno-fly-man", "unno-cyborg-incident", "unno-vibration-demon", "all"],
         default=None,
-        help="Re-post a recreated story (1: 音楽浴, 2: 蠅男, 3: 人造人間事件, or all to reset history)"
+        help="Re-post a recreated story (1: 音楽浴, 2: 蠅男, 3: 人造人間事件, 4: 振動魔, or all to reset history)"
     )
     parser.add_argument(
         "--reset-history",
