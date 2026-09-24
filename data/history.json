@@ -38,5 +38,19 @@
     "file_path": "content/2026-09-25_unno_vibration_demon.md",
     "status": "publish",
     "references": []
+  },
+  {
+    "work_id": "ran-plant-man",
+    "original_title": "植物人間",
+    "original_author": "蘭郁二郎",
+    "reboot_title": "植物人間――地殻共振遮断と能動音響防壁",
+    "posted_at": "2026-09-25T04:06:35.487962+09:00",
+    "file_path": "content/2026-09-25_ran_plant_man.md",
+    "status": "publish",
+    "references": [
+      "Lim et al. (2021) Nature - https://doi.org/10.1038/s41586-021-03534-6",
+      "Martorell et al. (2019) Cell - https://doi.org/10.1016/j.cell.2019.02.014",
+      "Le Pichon et al. (2018) Springer - https://doi.org/10.1007/978-3-319-75140-5"
+    ]
   }
 ]
