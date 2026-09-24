@@ -11,4 +11,4 @@
 | 2 | 2026-09-24 | 蠅男 | 蠅男（海野十三） | Nature/Science/Cell | Publish |
 | 3 | 2026-09-24 | 人造人間事件 | 人造人間事件（海野十三） | Nature/Science/Cell | Publish |
 | 4 | 2026-09-25 | 振動魔 | 振動魔（海野十三） | Nature/Science/Cell | Publish |
-| 5 | 2026-09-25 | 植物人間――葉緑体人工共生と光合成代謝の臨界 | 植物人間（蘭郁二郎） | Chen et al. (2022) Nature, Matsunaga et al. (2024) | Publish |
+| 5 | 2026-09-25 | 植物人間 | 植物人間（蘭郁二郎） | Nature/Science/Cell | Publish |
