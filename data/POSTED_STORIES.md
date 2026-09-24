@@ -10,3 +10,4 @@
 | 1 | 2026-09-24 | 十八時の音楽浴 | 十八時の音楽浴（海野十三） | Nature/Science/Cell | Publish |
 | 2 | 2026-09-24 | 蠅男 | 蠅男（海野十三） | Nature/Science/Cell | Publish |
 | 3 | 2026-09-24 | 人造人間事件 | 人造人間事件（海野十三） | Nature/Science/Cell | Publish |
+| 4 | 2026-09-25 | 振動魔 | 振動魔（海野十三） | Lim et al. (2021) Nature, Martorell et al. (2019) Cell | Publish |
