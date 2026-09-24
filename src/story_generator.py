@@ -91,6 +91,7 @@ class StoryGenerator:
 3. 本文は約4,000文字のスケールにし、二重三重の読者を驚かせる「強烈などんでん返しの結末（オチ）」を用意してください。
 4. 本文の後に必ず【作中技術のやさしい解説（Technical Commentary）】を設け、専門用語やバイオリアクター等の概念を一般読者向けにわかりやすく解説してください。
 5. 最後に【引用・参考文献（Scientific References）】を設け、実在する海外査読論文（Nature, Science等）へのDOIハイパーリンク `[https://doi.org/...](https://doi.org/...)` を正確に記載してください。
+6. タイトルの直下に、必ず青空文庫へのハイパーリンクを含めた原案表記『**原案：{work['author']}[『{work['title']}』]({work['url']})（青空文庫）**』を記載してください。
 
 要件に従い、冒頭にYAML Frontmatterを配置したMarkdown形式で出力してください。
 """
@@ -185,7 +186,7 @@ status: "publish"
 # {work['title']}
 ### ――生体恒常性維持と閉ループ変調
 
-**原案：{work['author']}『{work['title']}』（青空文庫）**
+**原案：{work['author']}[『{work['title']}』]({work['url']})（青空文庫）**
 
 ---
 
