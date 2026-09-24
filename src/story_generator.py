@@ -35,9 +35,14 @@ SYSTEM_PROMPT = """あなたは最先端の科学技術と現代日本文学の�
      （実在する海外トップ査読論文の著者、論文タイトル、ジャーナル名、発表年、およびクリック可能なDOIリンク `[https://doi.org/...](https://doi.org/...)`）
 """
 
-# Primary model and fallback cascade for 503 / overload / unavailable errors
+# Primary model and fallback cascade for quota/overload errors
 DEFAULT_PRIMARY_MODEL = "gemini-2.5-flash"
 FALLBACK_MODELS = [
+    "gemini-2.5-flash",
+    "gemini-2.5-flash-lite",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash",
+    "gemini-1.5-pro",
     "gemini-3.5-flash",
     "gemini-3.5",
     "gemini-3.6-flash",
@@ -54,7 +59,7 @@ class StoryGenerator:
         self.primary_model = model_name or os.getenv("GEMINI_TEXT_MODEL", DEFAULT_PRIMARY_MODEL)
 
     def _get_model_candidates(self) -> List[str]:
-        """Returns ordered list of models to try (primary model followed by 3.5, 3.6, 3.7, 3.8)."""
+        """Returns ordered list of real, valid Gemini models to try."""
         candidates = [self.primary_model]
         for m in FALLBACK_MODELS:
             if m not in candidates:
@@ -64,11 +69,11 @@ class StoryGenerator:
     def generate_story(self, work: Dict[str, Any]) -> Tuple[str, str, List[str]]:
         """
         Generates a reboot sci-fi story based on an Aozora Bunko work.
-        If gemini-2.5-flash returns 503 or overload errors, falls back to 3.5, 3.6, 3.7, 3.8.
+        If primary model returns 503 or overload errors, falls back to other valid Gemini models.
         Returns: (markdown_content, reboot_title, list_of_references)
         """
         if not self.api_key:
-            logger.warning("GEMINI_API_KEY is not set. Generating fallback template story.")
+            logger.error("GEMINI_API_KEY is not set. Refusing to generate a low-quality short fallback.")
             return self._generate_fallback(work)
 
         try:
@@ -186,110 +191,32 @@ class StoryGenerator:
         return title, refs
 
     def _generate_fallback(self, work: Dict[str, Any]) -> Tuple[str, str, List[str]]:
-        """Fallback generator when API key is missing or all API attempts failed."""
-        now_date = datetime.now(JST).strftime("%Y-%m-%d")
-        title = f"{work['title']}――地殻共振遮断と能動音響防壁"
-        fallback_content = f"""---
-title: "{title}"
-author: "AI × {work['author']} 原案"
-date: "{now_date}"
-categories: ["SF小説", "短編小説"]
-tags: ["SF", "青空文庫", "{work['author']}", "最先端科学", "ソノジェネティクス"]
-status: "publish"
----
+        """
+        Fallback handler: Looks for an existing pre-crafted high-quality story file in content/.
+        If none exists, raises RuntimeError to prevent publishing an unintended duplicate or low-quality template.
+        """
+        content_dir = Path("content")
+        work_id = work.get("id", "")
+        clean_id = work_id.replace("-", "_")
 
-# {work['title']}
-### ――地殻共振遮断と能動音響防壁
+        # Check content directory for matching pre-crafted files
+        matched_file = None
+        if content_dir.exists():
+            for f in sorted(content_dir.glob("*.md")):
+                if work_id in f.name or clean_id in f.name:
+                    matched_file = f
+                    break
 
-**原案：{work['author']}[『{work['title']}』]({work['url']})（青空文庫）**
+        if matched_file and matched_file.exists():
+            logger.info(f"Using pre-crafted high-quality story from {matched_file} for '{work['title']}'")
+            content = matched_file.read_text(encoding="utf-8")
+            title, refs = self._extract_title_and_refs(content, work)
+            return content, title, refs
 
----
-
-黄昏に沈む新都の片隅、生体音響防衛局の観測室で、上級音響技師の霧島は静かに端末の周波数スペクトラムを見つめていた。
-街角のあらゆるスピーカー、全家庭の音響端末から、毎日夕刻十八時きっかりに流れる無機質な合成交響曲――『十八時の音楽浴』。
-「国家は音楽という美名のもとに、市民の脳波を40ヘルツのガンマ帯域へ強制同期させ、猜疑心や反抗心を根こそぎ奪っている」
-霧島はそう確信していた。一世紀前、海野十三が警告したディストピアの予言は、いまや最先端の超音波音響工学によって現実のものとなっていたのだ。
-
-* * *
-
-霧島はモニターに表示された海外論文のデータを指でなぞる。
-低強度集束超音波による機械受容イオンチャネル（Piezo1）の遠隔変調（Lim et al., *Nature*, 2021）。
-そして、感覚刺激の同調によってシナプス可塑性と認知状態を書き換える閉ループ脳波制御（Martorell et al., *Cell*, 2019）。
-「この二つを全都市網で連動させれば、市民の自由意志など容易に消去できる。こんな非人道的な統制を許してはならない」
-霧島は三年を費やして自作した位相反転キャンセラー回路を、都市音響グリッドの中枢ノードへと直結させた。
-カウントダウンがゼロに達し、十八時の時報とともに、街のスピーカーから逆位相パルスが一斉に解き放たれる。
-
-都市を覆っていた音楽が、プツリと途絶えた。
-絶対の静寂。
-「やった……勝ったぞ！　音楽浴の呪縛は消滅した。人間は、思考の自由を取り戻したんだ！」
-霧島は立ち上がり、歓喜の叫びをあげた。
-
-* * *
-
-だが、静寂が訪れたのは、ほんの数秒に過ぎなかった。
-
-突如として、建物の床が、壁が、窓ガラスが、目に見えない強烈な「重低音の唸り」によって小刻みに共振し始めた。
-窓の外を見下ろすと、街頭を歩いていた市民たちが一斉に激痛で頭を抱え、耳を押さえて路上に昏倒していく。
-鼓膜を突き破らんばかりの、だが耳には聴こえない、内臓を激しく揺さぶる「地球の呻き」。
-
-「な……んだ、これは……？　なぜ市民が倒れる！？」
-
-室内のドアが開き、上席監理官の佐伯が防音マスクを装着した姿で入ってきた。その目には冷たい憐憫の色が浮かんでいた。
-「愚かなことをしてくれましたね、霧島技師。……『洗脳』などという子供じみた陰謀論のために、都市の防壁を打ち破ってしまうとは」
-
-「佐伯……？　何を言っている！　あの音楽は市民の脳を操るための――」
-
-「音楽浴は統制プログラムなどではありません」佐伯は端末の地殻変動モニターを突きつけた。
-「現在、プレート境界の超深部断層で発生している、周波数1.8ヘルツの極超低周波・地殻共振波（インフラサウンド）です。大陸規模で進行するマントルの摩擦エネルギーが、都市の地盤を通じて全住民の頭蓋骨と前頭葉に破壊的な共鳴微振動を引き起こしているのです。放置すれば、三十分で全市民の毛細血管と血液脳関門が物理的に破壊され、脳内出血で全滅する」
-
-「……な、に……？」
-
-「毎夕十八時、気圧と地殻応力が急変する薄暮の時間帯に合わせて、国家はこのインフラサウンドを中和・相殺する『全都市能動的音響キャンセリング波』を音楽浴として放射していたのです。なぜなら、真実を公表すれば全土がパニックに陥り、避難もままならず経済が崩壊するからだ。……だが、あなたが放った逆位相パルスによって、防御シールドは完全に破壊された」
-
-霧島の視界が赤く染まり始める。
-耳から生ぬるい液体が滴り落ち、思考がバラバラに砕け散っていく。
-窓の向こう、夕暮れに染まる巨大都市の摩天楼が、大地の深底から湧き上がる音なき唸りによって、音を立てて共振破壊を起こし始めていた。
-自由を求めた自分の正義が、都市を丸ごと破滅へと突き落としたのだという戦慄の事実を胸に刻みながら、霧島は崩れ落ちる床へと沈んでいった。
-
-（了）
-
----
-
-### 【作中技術のやさしい解説（Technical Commentary）】
-
-本作に登場する先進的な音響工学および神経科学の概念について、一般の読者向けにわかりやすく解説します。
-
-#### 1. 能動的音響制御（アクティブ・ノイズキャンセリング / ANC）
-逆位相の音波をぶつけることで不要な音を打ち消す技術。ヘッドホン等でおなじみですが、本作ではこれを都市規模に拡大し、地殻変動に伴う有害な極超低周波（インフラサウンド）から市民を守る巨大な音響防壁として描かれています。
-
-#### 2. インフラサウンド（超低周波音）の生体影響
-人間の耳には聞こえない20Hz以下の超低周波音は、大気中を減衰せずに長距離伝播し、内臓や頭蓋骨と共振して激しい頭痛、平衡感覚の喪失、組織損傷を引き起こす物理的性質を持ちます。
-
-#### 3. ソノジェネティクス（超音波遺伝子工学）
-光ではなく「超音波」を用いて、機械受容チャネル（Piezo1等）を通じて生体細胞や神経回路を遠隔刺激する最先端の非侵襲医療技術です。
-
----
-
-### 【引用・参考文献（Scientific References）】
-
-1. **Lim, H. G., Kang, H., Baek, J., & Shapiro, M. G. (2021).**  
-   *Sonogenetic control of mammalian cells using ultrasound.*  
-   **Nature**, 594(7862), 263–268.  
-   DOI: [https://doi.org/10.1038/s41586-021-03534-6](https://doi.org/10.1038/s41586-021-03534-6)
-
-2. **Martorell, A. J. et al. (2019).**  
-   *Multi-sensory Gamma Stimulation Ameliorates Alzheimer's-Associated Pathology and Improves Cognition.*  
-   **Cell**, 177(2), 256–271.  
-   DOI: [https://doi.org/10.1016/j.cell.2019.02.014](https://doi.org/10.1016/j.cell.2019.02.014)
-
-3. **Le Pichon, A., Blanc, E., & Hauchecorne, A. (Eds.). (2018).**  
-   *Infrasound Monitoring for Atmospheric Studies: Challenges in Middle Atmosphere Dynamics and Societal Benefits.*  
-   **Springer Nature**.  
-   DOI: [https://doi.org/10.1007/978-3-319-75140-5](https://doi.org/10.1007/978-3-319-75140-5)
-"""
-        refs = [
-            "Lim et al. (2021) Nature - https://doi.org/10.1038/s41586-021-03534-6",
-            "Martorell et al. (2019) Cell - https://doi.org/10.1016/j.cell.2019.02.014",
-            "Le Pichon et al. (2018) Springer - https://doi.org/10.1007/978-3-319-75140-5"
-        ]
-        return fallback_content, title, refs
+        err_msg = (
+            f"Cannot generate story for '{work['title']}' ({work['id']}): "
+            f"Gemini API generation failed/unavailable and no pre-crafted file found in content/. "
+            f"Aborting to prevent publishing low-quality template."
+        )
+        logger.error(err_msg)
+        raise RuntimeError(err_msg)

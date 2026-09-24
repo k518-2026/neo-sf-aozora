@@ -22,7 +22,7 @@ on:
           - draft
         default: 'publish'
       repost:
-        description: 'Re-post a recreated story (No.1: 音楽浴, No.2: 蠅男, No.3: 人造人間事件, No.4: 振動魔, or reset_all)'
+        description: 'Re-post a recreated story (No.1: 音楽浴, No.2: 蠅男, No.3: 人造人間事件, No.4: 振動魔, No.5: 植物人間, or reset_all)'
         required: false
         type: choice
         options:
@@ -31,6 +31,7 @@ on:
           - "2"
           - "3"
           - "4"
+          - "5"
           - reset_all
         default: 'none'
       force:
