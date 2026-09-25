@@ -2,7 +2,7 @@
 
 青空文庫のSF古典作品をもとに、現代の海外査読学術論文の知見を取り入れてリブート・投稿された作品一覧です。
 
-毎日朝4時と夕方16時（JST）の1日2回自動定期実行により、重複のないよう更新されます。
+毎日朝4時（JST）の自動定期実行により、重複のないよう更新されます。
 
 
 | No. | 投稿日 (JST) | リブート作品タイトル | 青空文庫 原典 (著者) | 主な引用論文 (DOIリンク) | ステータス |
@@ -12,3 +12,4 @@
 | 3 | 2026-09-24 | 人造人間事件 | 人造人間事件（海野十三） | Nature/Science/Cell | Publish |
 | 4 | 2026-09-25 | 振動魔 | 振動魔（海野十三） | Nature/Science/Cell | Publish |
 | 5 | 2026-09-25 | 植物人間 | 植物人間（蘭郁二郎） | Nature/Science/Cell | Publish |
+| 6 | 2026-09-25 | 無題のSF作品 | 夢鬼（蘭郁二郎） | fMRIを用いた潜在視覚復元（Stable Diffusionによるデコーディング）**, Takagi, Y., & Nishimoto, S. (2023). "High-resolution image reconstruction with latent diffusion models from human brain activity." *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 14453-14463. | Publish |

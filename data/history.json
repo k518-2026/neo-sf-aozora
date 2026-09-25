@@ -48,5 +48,25 @@
     "file_path": "content/2026-09-25_ran_plant_man.md",
     "status": "publish",
     "references": []
+  },
+  {
+    "work_id": "ran-dream-demon",
+    "original_title": "夢鬼",
+    "original_author": "蘭郁二郎",
+    "reboot_title": "無題のSF作品",
+    "posted_at": "2026-09-25T16:18:47.318350+09:00",
+    "file_path": "content/2026-09-25_ran_dream_demon.md",
+    "status": "publish",
+    "references": [
+      "fMRIを用いた潜在視覚復元（Stable Diffusionによるデコーディング）**",
+      "Takagi, Y., & Nishimoto, S. (2023). \"High-resolution image reconstruction with latent diffusion models from human brain activity.\" *Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)*, 14453-14463.",
+      "DOI: [https://doi.org/10.1109/CVPR52729.2023.01389](https://doi.org/10.1109/CVPR52729.2023.01389)",
+      "睡眠中の記憶固定化とシナプス可塑性の制御**",
+      "Rasch, B., & Born, J. (2013). \"About sleep's role in memory.\" *Physiological Reviews*, 93(2), 681-766.",
+      "DOI: [https://doi.org/10.1152/physrev.00032.2012](https://doi.org/10.1152/physrev.00032.2012)",
+      "明晰夢の誘発とtACS（経頭蓋交流電気刺激）**",
+      "Voss, U., Holzmann, R., Hobson, A., Paulus, W., Koppehele-Gossel, J., Klimke, A., & Nitsche, M. A. (2014). \"Induction of self awareness in dreams through frontal low current stimulation of gamma activity.\" *Nature Neuroscience*, 17(6), 810-812.",
+      "DOI: [https://doi.org/10.1038/nn.3719](https://doi.org/10.1038/nn.3719)"
+    ]
   }
 ]

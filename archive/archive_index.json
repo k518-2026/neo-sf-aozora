@@ -78,5 +78,21 @@
     "narration_file": "05_植物人間_narration.txt",
     "full_file": "05_植物人間_full.txt",
     "original_md_file": "05_植物人間.md"
+  },
+  {
+    "work_no": 6,
+    "work_id": "ran-dream-demon",
+    "title": "無題",
+    "subtitle": "",
+    "attribution": "蘭郁二郎『夢鬼』（青空文庫）",
+    "original_author": "蘭郁二郎",
+    "original_title": "夢鬼",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000325/card2189.html",
+    "modern_tech": "fMRI生成AIによる視覚心象復元（Stable Diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激",
+    "summary": "他人の見る夢をスクリーンに映し出す装置。他者の深層心理に侵入した技師が恐怖の悪夢に囚われる。",
+    "char_count": 4060,
+    "narration_file": "06_無題_narration.txt",
+    "full_file": "06_無題_full.txt",
+    "original_md_file": "06_無題.md"
   }
 ]
