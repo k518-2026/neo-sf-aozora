@@ -1,9 +1,11 @@
-name: Daily Neo Aozora Sci-Fi Reboot to WordPress
+name: Twice-Daily Neo Aozora Sci-Fi Reboot to WordPress
 
 on:
-  # Daily scheduled run (19:00 UTC = 04:00 JST / 毎朝4時)
+  # Twice-daily scheduled runs:
+  # 1) 07:00 UTC = 16:00 JST (夕方4時 - 米国深夜でGemini APIが最も空いている時間帯)
+  # 2) 19:00 UTC = 04:00 JST (毎朝4時)
   schedule:
-    - cron: '0 19 * * *'
+    - cron: '0 7,19 * * *'
 
   # Manual execution from GitHub Actions UI
   workflow_dispatch:

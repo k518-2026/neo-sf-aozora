@@ -210,7 +210,7 @@ def build_next_work_preview(next_work: Dict[str, Any]) -> str:
 | **導入する現代最新科学技術** | {tech} |
 | **SFリブートの視点・未来像** | {summary} |
 
-*※明朝4時（JST）自動配信予定。どうぞお楽しみに！*
+*※1日2回（朝4時・夕方16時 JST）定期配信中。次回作もどうぞお楽しみに！*
 """
 
 def parse_markdown_with_frontmatter(file_path: str) -> Tuple[Dict[str, Any], str]:
