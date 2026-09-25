@@ -213,6 +213,13 @@ def main():
         )
         logger.info(f"Recorded '{formatted.title}' in data/history.json and data/POSTED_STORIES.md")
 
+    # Automatically keep local and MakeMP3FromAozora archives up to date
+    try:
+        from src.archiver import update_archive_all
+        update_archive_all()
+    except Exception as e:
+        logger.warning(f"Failed to update story archive: {e}")
+
     if is_dry_run:
         logger.info("Dry-run finished. To post for real and update history, run with '--send'.")
     else:

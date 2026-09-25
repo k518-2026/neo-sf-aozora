@@ -130,7 +130,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/history.json data/POSTED_STORIES.md content/
+          git add data/history.json data/POSTED_STORIES.md content/ archive/
           if git diff --staged --quiet; then
             echo "No state or content updates to commit."
           else
