@@ -68,5 +68,20 @@
       "Voss, U., Holzmann, R., Hobson, A., Paulus, W., Koppehele-Gossel, J., Klimke, A., & Nitsche, M. A. (2014). \"Induction of self awareness in dreams through frontal low current stimulation of gamma activity.\" *Nature Neuroscience*, 17(6), 810-812.",
       "DOI: [https://doi.org/10.1038/nn.3719](https://doi.org/10.1038/nn.3719)"
     ]
+  },
+  {
+    "work_id": "ran-brain-surgery",
+    "original_title": "脳髄手術",
+    "original_author": "蘭郁二郎",
+    "reboot_title": "脳髄手術",
+    "posted_at": "2026-09-26T16:17:23.096238+09:00",
+    "file_path": "content/2026-09-26_ran_brain_surgery.md",
+    "status": "publish",
+    "references": [
+      "Chen, S., Weitemier, A. Z., Zeng, X., He, L., Wang, X., Tao, Y., Huang, A. J. Y., Hashimotodani, Y., Kano, M., Iwasaki, H., Parajuli, L. K., Okabe, S., Teh, D. B. L., All, A. H., Tsutsui-Kimura, I., Tanaka, K. F., Liu, X., & McHugh, T. J. (2018). Near-infrared deep brain stimulation via upconversion nanoparticles. *Science*, 359(6376), 679–684.",
+      "Deisseroth, K. (2015). Optogenetics: 10 years of microbial opsins in neuroscience. *Nature Neuroscience*, 18(9), 1213–1225.",
+      "Schafer, D. P., Lehrman, E. K., Kautzman, A. G., Koyama, R., Mardinly, A. R., Yamasaki, R., Ransohoff, R. M., Greenberg, M. E., Barres, B. A., & Stevens, B. (2012). Microglia sculpt postnatal neural circuits in an activity-dependent manner. *Neuron*, 74(4), 691–705.",
+      "Scangos, K. W., Khambhati, A. N., Daly, P. M., Makhoul, G. S., Sugrue, L. P., Zamanian, H., Liu, T. X., Rao, V. R., Sellers, K. K., Dawes, H. E., Starr, P. A., Krystal, A. D., & Chang, E. F. (2021). Closed-loop neurostimulation for treatment-resistant depression. *Nature Medicine*, 27(10), 1696–1700."
+    ]
   }
 ]

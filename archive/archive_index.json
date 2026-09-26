@@ -94,5 +94,21 @@
     "narration_file": "06_無題_narration.txt",
     "full_file": "06_無題_full.txt",
     "original_md_file": "06_無題.md"
+  },
+  {
+    "work_no": 7,
+    "work_id": "ran-brain-surgery",
+    "title": "脳髄手術――微細構造再編回路",
+    "subtitle": "",
+    "attribution": "蘭郁二郎『脳髄手術』（青空文庫）",
+    "original_author": "蘭郁二郎",
+    "original_title": "脳髄手術",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000325/card2187.html",
+    "modern_tech": "深部脳刺激（DBS）、光遺伝学的情動回路切除、ナノロボットによる標的シナプス精密切断",
+    "summary": "凶悪犯の脳を外科的に手術して温厚な人格に作り変える試み。だが善悪の反転には予期せぬ代償があった。",
+    "char_count": 4987,
+    "narration_file": "07_脳髄手術――微細構造再編回路_narration.txt",
+    "full_file": "07_脳髄手術――微細構造再編回路_full.txt",
+    "original_md_file": "07_脳髄手術――微細構造再編回路.md"
   }
 ]
