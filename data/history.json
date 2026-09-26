@@ -83,5 +83,28 @@
       "Schafer, D. P., Lehrman, E. K., Kautzman, A. G., Koyama, R., Mardinly, A. R., Yamasaki, R., Ransohoff, R. M., Greenberg, M. E., Barres, B. A., & Stevens, B. (2012). Microglia sculpt postnatal neural circuits in an activity-dependent manner. *Neuron*, 74(4), 691–705.",
       "Scangos, K. W., Khambhati, A. N., Daly, P. M., Makhoul, G. S., Sugrue, L. P., Zamanian, H., Liu, T. X., Rao, V. R., Sellers, K. K., Dawes, H. E., Starr, P. A., Krystal, A. D., & Chang, E. F. (2021). Closed-loop neurostimulation for treatment-resistant depression. *Nature Medicine*, 27(10), 1696–1700."
     ]
+  },
+  {
+    "work_id": "yumeno-human-record",
+    "original_title": "人間レコード",
+    "original_author": "夢野久作",
+    "reboot_title": "『人間レコード――ゲノム・シンフォニーの目覚め』",
+    "posted_at": "2026-09-27T04:14:54.988900+09:00",
+    "file_path": "content/2026-09-27_yumeno_human_record.md",
+    "status": "publish",
+    "references": [
+      "DNAデータストレージの限界と容量に関する基礎研究**",
+      "Erlich, Y., & Zielinski, D. (2017). \"DNA Fountain enables a robust and efficient storage architecture.\" *Science*, 355(6328), 950-954.",
+      "DOI: [https://doi.org/10.1126/science.aaj2038](https://doi.org/10.1126/science.aaj2038)",
+      "解説*: DNAを情報媒体として使用し、限界に近い高密度（1グラムあたり215PB）でデータを保存・復元することに成功した画期的論文。",
+      "生体内でのCRISPRを用いたDNAデータ書き込み（生体レコーダー）**",
+      "Shipman, S. L., Nivala, J., Cobb, J. D., & Church, G. M. (2017). \"Multiplex recording of temporal information into cellular genomes using CRISPR.\" *Nature*, 547(7663), 345-349.",
+      "DOI: [https://doi.org/10.1038/nature23017](https://doi.org/10.1038/nature23017)",
+      "解説*: 著名なゲノム学者ジョージ・チャーチらのグループによる、生きた細菌のゲノム内にCRISPR-Casシステムを用いて、動画データ（映画の1コマ）を直接エンコードし、再現することに成功した研究。",
+      "エピジェネティックな記憶固定化と神経系への応用**",
+      "Halder, R., et al. (2016). \"DNA methylation changes in plasticity genes accompany the formation and maintenance of memory.\" *Nature Neuroscience*, 19(1), 102-110.",
+      "DOI: [https://doi.org/10.1038/nn.4194](https://doi.org/10.1038/nn.4194)",
+      "解説*: 学習や記憶の形成過程において、脳内ニューロンのDNAメチル化（エピゲノム）がどのように変化し、長期記憶として固定化されるかを明らかにした論文。本作の「脳内エピゲノムへの記憶刻印」の科学的根拠となっています。"
+    ]
   }
 ]

@@ -110,5 +110,21 @@
     "narration_file": "07_脳髄手術――微細構造再編回路_narration.txt",
     "full_file": "07_脳髄手術――微細構造再編回路_full.txt",
     "original_md_file": "07_脳髄手術――微細構造再編回路.md"
+  },
+  {
+    "work_no": 8,
+    "work_id": "yumeno-human-record",
+    "title": "無題",
+    "subtitle": "",
+    "attribution": "夢野久作『人間レコード』（青空文庫）",
+    "original_author": "夢野久作",
+    "original_title": "人間レコード",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000096/card1071.html",
+    "modern_tech": "DNAデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印",
+    "summary": "人間の肉体や骨格に極秘情報を音響溝のように刻印するスパイ。現代ではDNA配列やエピゲノムへの暗号化記憶。",
+    "char_count": 3848,
+    "narration_file": "08_無題_narration.txt",
+    "full_file": "08_無題_full.txt",
+    "original_md_file": "08_無題.md"
   }
 ]
