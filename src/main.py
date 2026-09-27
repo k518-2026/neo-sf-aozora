@@ -91,6 +91,12 @@ def main():
         help="Override post status (publish or draft)"
     )
     parser.add_argument(
+        "--ending",
+        choices=["random", "bright", "dystopia", "romance", "mystery"],
+        default="random",
+        help="Optional: Ending theme ('random', 'bright' (明るい未来), 'dystopia' (ディストピア), 'romance' (ラブロマンス), 'mystery' (ミステリー). Default: random with 3:2:3:2 ratio)"
+    )
+    parser.add_argument(
         "--verbose", "-v",
         action="store_true",
         help="Enable debug logging"
@@ -158,7 +164,10 @@ def main():
         else:
             # Generate new story via Gemini
             generator = StoryGenerator()
-            content, reboot_title, target_refs = generator.generate_story(target_work)
+            content, reboot_title, target_refs = generator.generate_story(
+                target_work,
+                ending_theme=args.ending
+            )
 
             # Save to content directory
             today_str = datetime.now(JST).strftime("%Y-%m-%d")

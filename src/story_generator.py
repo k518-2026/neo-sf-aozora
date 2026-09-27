@@ -1,6 +1,7 @@
 import os
 import re
 import time
+import random
 import logging
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
@@ -8,6 +9,61 @@ from typing import Dict, Any, Tuple, List, Optional
 
 logger = logging.getLogger(__name__)
 JST = timezone(timedelta(hours=9))
+
+# Ending themes and weighted random ratio (明るい未来:ディストピア:ラブロマンス:ミステリー = 3:2:3:2)
+ENDING_THEMES = [
+    {
+        "id": "bright",
+        "name": "明るい未来",
+        "weight": 3,
+        "description": (
+            "【結末テーマ：明るい未来（ユートピア・進化・共生・希望）】\n"
+            "最先端科学技術のブレイクスルーが、人類や地球の未曾有の課題を克服する。\n"
+            "驚きとともに温かな希望、人類の精神的・肉体的進化、あるいは自然や生態系との美しく調和のとれた明るい未来（センス・オブ・ワンダーに満ちた前向きなエンディング）を描いてください。"
+        )
+    },
+    {
+        "id": "dystopia",
+        "name": "ディストピア",
+        "weight": 2,
+        "description": (
+            "【結末テーマ：ディストピア（科学的警鐘・冷徹な結末・皮肉な運命）】\n"
+            "最先端科学技術の過剰な適応や予期せぬ代償がもたらす、冷酷な現実や社会の暗部、逃れられない皮肉な運命を描く。\n"
+            "読者の背筋を凍らせるような強烈な科学的警鐘と、論理的に研ぎ澄まされた不条理な破滅的結末を描いてください。"
+        )
+    },
+    {
+        "id": "romance",
+        "name": "ラブロマンス",
+        "weight": 3,
+        "description": (
+            "【結末テーマ：ラブロマンス（純愛・絆・切ない想い・永遠の愛）】\n"
+            "最先端科学技術の彼方に浮かび上がる、登場人物同士の切実な愛や深い絆、時空や生死を超えた想い。\n"
+            "科学の冷徹な論理と人間の温かな情動が激しく交錯し、読者の胸を強く打つ至純の純愛や切なくも美しいロマンスを物語の結末に据えてください。"
+        )
+    },
+    {
+        "id": "mystery",
+        "name": "ミステリー",
+        "weight": 2,
+        "description": (
+            "【結末テーマ：ミステリー（心理戦・科学トリック・驚愕のどんでん返し）】\n"
+            "最先端科学の盲点を突いた緻密なトリック、予期せぬ真犯人や隠された衝撃の動機。\n"
+            "散りばめられた伏線が一気に回収され、論理的推論によって驚愕の真相が白日の下に晒される、本格探偵小説の美学に満ちた鮮やかな結末を描いてください。"
+        )
+    },
+]
+
+def select_ending_theme(preferred: Optional[str] = None) -> Dict[str, Any]:
+    """Selects an ending theme based on weights (3:2:3:2) or user preference."""
+    if preferred and preferred.lower() not in ("random", "none", ""):
+        pref = preferred.lower()
+        for t in ENDING_THEMES:
+            if t["id"] == pref or t["name"] == preferred:
+                return t
+    weights = [t["weight"] for t in ENDING_THEMES]
+    chosen = random.choices(ENDING_THEMES, weights=weights, k=1)[0]
+    return chosen
 
 SYSTEM_PROMPT = """あなたは最先端の科学技術と現代日本文学の粋を極めた一流のハードSF作家です。
 青空文庫に収載されている日本の古典SF・科学奇譚・探偵小説・幻想文学の名作（海野十三、蘭郁二郎、江戸川乱歩、夢野久作、小栗虫太郎、久生十蘭等）を原案とし、現代の最新科学技術（実在する海外トップ査読論文：Nature, Science, Cell, PNAS等）を取り入れた、重厚でスリリングな本格ショートSF小説（約4,000文字）を執筆してください。
@@ -19,11 +75,10 @@ SYSTEM_PROMPT = """あなたは最先端の科学技術と現代日本文学の�
 2. **【起】【承】【転】【結】などの記号・見出しは本文中に入れないこと**:
    - 物語の途中に「【起】」「【承】」といった記号や見出しを絶対に入れないでください。
    - シーンの転換には、空行または「* * *」を用いて、自然な文学的流れを作ってください。
-3. **オチ（結末）の多様性と独自性（同一オチ・夢オチの完全厳禁、明るい未来の視点）**:
-   - 作品ごとに、その作品が扱う科学技術（音響、昆虫、アンドロイド、宇宙、量子、遺伝子工学等）に立脚した**完全に固有の未来予測と科学的どんでん返し**を考案してください。
-   - **破滅的・悲惨な終焉（ディストピア）ばかりに偏らないこと。** 最新科学技術が人類や地球の未曾有の課題を克服し、驚きとともに温かな希望や人類の進化、美しく調和のとれた明るい未来を切り拓く結末（センス・オブ・ワンダーに満ちた前向きなエンディング）も積極的に描いてください。
-   - **「培養脳バイオリアクター内の夢だった」「シミュレーション仮説だった」「VRゲームだった」といったオチの安易な使い回し・パターン化を固く禁じます。**
-   - **たとえ原典作品が夢オチやノイローゼの妄想で終わる作品であっても、本作では絶対に安易な夢オチにしてはなりません。現代の先端科学を極限まで論理的に外挿（未来推測）し、息を呑むような驚愕の客観的現実を結末に据えてください。**
+3. **指定された結末テーマの厳格な遵守**:
+   - 今回指定された結末テーマ（明るい未来、ディストピア、ラブロマンス、ミステリーのいずれか）の意図を十二分に汲み取り、読後感に鮮やかな余韻を残すエンディングを構築してください。
+   - 「培養脳バイオリアクター内の夢だった」「シミュレーション仮説だった」「VRゲームだった」といった安易なオチの使い回し・パターン化を固く禁じます。
+   - たとえ原典作品が夢オチやノイローゼの妄想で終わる作品であっても、本作では絶対に安易な夢オチにしてはなりません。現代の先端科学を極限まで論理的に外挿（未来推測）し、息を呑むような驚愕の客観的現実を結末に据えてください。
 4. **生き生きとした会話劇と発言者の明示（対話の充実）**:
    - 説明的な地の文ばかりに偏らず、登場人物同士の緊迫した対話や人間味あふれる掛け合い（会話文）を積極的に増やしてください。
    - 「誰がそのセリフを言っているのか」が読者にひと目で分かるよう、発言者の名前や仕草、表情、心理描写を伴うト書き（例：「〜と草野は眉をひそめた」「〜と沢村は穏やかに微笑んだ」など）を必ず自然に添えてください。
@@ -71,9 +126,14 @@ class StoryGenerator:
                 candidates.append(m)
         return candidates
 
-    def generate_story(self, work: Dict[str, Any]) -> Tuple[str, str, List[str]]:
+    def generate_story(
+        self,
+        work: Dict[str, Any],
+        ending_theme: Optional[str] = None
+    ) -> Tuple[str, str, List[str]]:
         """
         Generates a reboot sci-fi story based on an Aozora Bunko work.
+        Randomly selects ending theme among 明るい未来:ディストピア:ラブロマンス:ミステリー (3:2:3:2 ratio).
         If primary model returns 503 or overload errors, falls back to other valid Gemini models.
         Returns: (markdown_content, reboot_title, list_of_references)
         """
@@ -81,13 +141,19 @@ class StoryGenerator:
             logger.error("GEMINI_API_KEY is not set. Refusing to generate a low-quality short fallback.")
             return self._generate_fallback(work)
 
+        theme_info = select_ending_theme(ending_theme)
+        logger.info(
+            f"Selected ending theme for '{work['title']}': ★{theme_info['name']}★ "
+            f"(Weight ratio 3:2:3:2: 明るい未来3, ディストピア2, ラブロマンス3, ミステリー2)"
+        )
+
         try:
             from google import genai
             from google.genai import types
 
             client = genai.Client(api_key=self.api_key)
             prompt = f"""
-以下の青空文庫SF作品をもとに、現代の先端技術・海外査読論文を引用したリブート短編SF小説（本文約4,000文字＋技術解説＋DOI参考文献）を執筆してください。
+以下の青空文庫作品をもとに、現代の先端技術・海外査読論文を引用した本格リブート短編SF小説（本文約4,000文字＋技術解説＋DOI参考文献）を執筆してください。
 
 【対象の原典作品】
 - 原典タイトル: {work['title']}
@@ -97,14 +163,19 @@ class StoryGenerator:
 - 原典のあらすじ: {work['summary']}
 - 青空文庫URL: {work['url']}
 
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+【今回の結末テーマ指定：★{theme_info['name']}★】
+{theme_info['description']}
+必ずこの指定された結末テーマ（{theme_info['name']}）に沿って、物語全体のトーン、クライマックス、結末（オチ）を構成してください。
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
 【必須ルール】
 1. タイトルは必ず『{work['title']}――（副題）』のように、原題を明確に引き継いだものにしてください。
 2. 文章の最初や途中に【起】【承】【転】【結】などの記号や見出しを絶対に入れないでください（アスタリスク '* * *' 等でシーン転換）。
-3. **【オチの独自性と未来推測（明るい未来の視点）】**:
-   - オチ（結末）は必ず作品ごとに全く異なるものにしてください。
-   - **破滅的・悲惨な終焉（ディストピア）ばかりに偏らないこと。** 現代科学技術の発展が人類や地球の課題を解決し、希望や感動、美しく調和のとれた明るい未来をもたらす結末も積極的に描いてください。
-   - **「培養脳の夢だった」「シミュレーションだった」「仮想現実だった」といった安易なオチの使い回しを完全に禁止します。**
-   - **たとえ原典が夢オチや妄想オチであっても、現代の最先端科学・海外査読論文（{work['modern_tech']}）から導き出される、息を呑むような驚異の客観的未来予測や科学的真実を結末に据えてください。**
+3. **【指定された結末テーマ（★{theme_info['name']}★）の徹底】**:
+   - 上記の指定された結末テーマ（{theme_info['name']}）を核心に据えて、読者を驚嘆・感動させる唯一無二の結末を執筆してください。
+   - 「培養脳の夢だった」「シミュレーションだった」「仮想現実だった」といった安易なオチの使い回しを完全に禁止します。
+   - たとえ原典が夢オチや妄想オチであっても、現代の最先端科学・海外査読論文（{work['modern_tech']}）から導き出される、息を呑むような驚異の客観的未来予測や科学的真実を結末に据えてください。
 4. 本文は約4,000文字のスケールにし、二重三重の読者を驚かせる論理的な「強烈などんでん返しの結末（オチ）」を用意してください。
 5. **【生き生きとした会話劇と発言者の明示】**:
    - 地の文の説明だけに偏らず、登場人物同士の対話・会話を多めに盛り込んでドラマチックに描いてください。
@@ -112,6 +183,8 @@ class StoryGenerator:
 6. 本文の後に必ず【作中技術のやさしい解説（Technical Commentary）】を設け、作中に登場した先端科学技術（その作品固有の技術）を一般読者向けにわかりやすく解説してください。
 7. 最後に【引用・参考文献（Scientific References）】を設け、実在する海外査読論文（Nature, Science等）へのDOIハイパーリンク `[https://doi.org/...](https://doi.org/...)` を正確に記載してください。
 8. タイトルの直下に、必ず青空文庫へのハイパーリンクを含めた原案表記『**原案：{work['author']}[『{work['title']}』]({work['url']})（青空文庫）**』を記載してください。
+9. 冒頭のYAML Frontmatterの tags には、必ず "{theme_info['name']}" を含めてください。
+   例: tags: ["SF", "青空文庫", "{work['author']}", "最先端科学", "{theme_info['name']}"]
 
 要件に従い、冒頭にYAML Frontmatterを配置したMarkdown形式で出力してください。
 """

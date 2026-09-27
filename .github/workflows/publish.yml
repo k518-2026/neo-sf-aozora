@@ -46,6 +46,17 @@ on:
         required: false
         type: string
         default: ''
+      ending_theme:
+        description: 'Ending theme (random [3:2:3:2], bright, dystopia, romance, mystery)'
+        required: false
+        type: choice
+        options:
+          - random
+          - bright
+          - dystopia
+          - romance
+          - mystery
+        default: 'random'
 
 permissions:
   contents: write
@@ -92,6 +103,7 @@ jobs:
           INPUT_FORCE: ${{ github.event.inputs.force }}
           INPUT_WORK_ID: ${{ github.event.inputs.work_id }}
           INPUT_REPOST: ${{ github.event.inputs.repost }}
+          INPUT_ENDING_THEME: ${{ github.event.inputs.ending_theme }}
         run: |
           ARGS=""
           if [ "$INPUT_DRY_RUN" = "true" ]; then
@@ -110,6 +122,10 @@ jobs:
             ARGS="$ARGS --repost $INPUT_REPOST"
           elif [ -n "$INPUT_WORK_ID" ]; then
             ARGS="$ARGS --work-id $INPUT_WORK_ID"
+          fi
+
+          if [ -n "$INPUT_ENDING_THEME" ] && [ "$INPUT_ENDING_THEME" != "random" ]; then
+            ARGS="$ARGS --ending $INPUT_ENDING_THEME"
           fi
 
           if [ -n "${{ github.event.inputs.post_status }}" ]; then
