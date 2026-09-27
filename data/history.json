@@ -106,5 +106,28 @@
       "DOI: [https://doi.org/10.1038/nn.4194](https://doi.org/10.1038/nn.4194)",
       "解説*: 学習や記憶の形成過程において、脳内ニューロンのDNAメチル化（エピゲノム）がどのように変化し、長期記憶として固定化されるかを明らかにした論文。本作の「脳内エピゲノムへの記憶刻印」の科学的根拠となっています。"
     ]
+  },
+  {
+    "work_id": "yumeno-bomb-peace",
+    "original_title": "爆弾太平記",
+    "original_author": "夢野久作",
+    "reboot_title": "爆弾太平記――連鎖量子点火の特異点",
+    "posted_at": "2026-09-27T16:17:24.215979+09:00",
+    "file_path": "content/2026-09-27_yumeno_bomb_peace.md",
+    "status": "publish",
+    "references": [
+      "レーザー冷却による反水素の閉じ込めと制御（反物質トラップ）**",
+      "Baker, C.A., et al. \"Laser cooling of antihydrogen atoms.\" *Nature* 592, 35–42 (2021).",
+      "DOI: [https://doi.org/10.1038/s41586-021-03371-y](https://doi.org/10.1038/s41586-021-03371-y)",
+      "レーザー慣性閉じ込め核融合における点火の達成**",
+      "Abu-Shawareb, H., et al. \"Lawson Criterion for Ignition Exceeded in an Inertial Fusion Experiment.\" *Physical Review Letters* 129, 075001 (2022).",
+      "DOI: [https://doi.org/10.1103/PhysRevLett.129.075001](https://doi.org/10.1103/PhysRevLett.129.075001)",
+      "量子ネットワークにおける非隣接ノード間テレポートと量子エンタングルメント**",
+      "Hermans, S.L.N., et al. \"Qubit teleportation between non-neighbouring nodes in a quantum network.\" *Nature Physics* 18, 597–600 (2022).",
+      "DOI: [https://doi.org/10.1038/s41567-022-01582-7](https://doi.org/10.1038/s41567-022-01582-7)",
+      "高度自律型AIシステムの安全性制御と目的関数の整合性**",
+      "Russell, S. \"How to ensure tools remain useful rather than dangerous.\" *Nature Machine Intelligence* 1, 380–381 (2019).",
+      "DOI: [https://doi.org/10.1038/s42256-019-0091-y](https://doi.org/10.1038/s42256-019-0091-y)"
+    ]
   }
 ]

@@ -113,6 +113,22 @@
   },
   {
     "work_no": 8,
+    "work_id": "yumeno-bomb-peace",
+    "title": "無題",
+    "subtitle": "",
+    "attribution": "夢野久作『爆弾太平記』（青空文庫）",
+    "original_author": "夢野久作",
+    "original_title": "爆弾太平記",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000096/card2134.html",
+    "modern_tech": "反物質トラップ、レーザー核融合、量子エンタングルメント起爆装置、自律致死型AI兵站",
+    "summary": "世界を瞬時に滅ぼす究極兵器の完成がもたらす逆説的平和と狂気。",
+    "char_count": 5005,
+    "narration_file": "08_無題_narration.txt",
+    "full_file": "08_無題_full.txt",
+    "original_md_file": "08_無題.md"
+  },
+  {
+    "work_no": 9,
     "work_id": "yumeno-human-record",
     "title": "無題",
     "subtitle": "",
@@ -123,8 +139,8 @@
     "modern_tech": "DNAデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印",
     "summary": "人間の肉体や骨格に極秘情報を音響溝のように刻印するスパイ。現代ではDNA配列やエピゲノムへの暗号化記憶。",
     "char_count": 3848,
-    "narration_file": "08_無題_narration.txt",
-    "full_file": "08_無題_full.txt",
-    "original_md_file": "08_無題.md"
+    "narration_file": "09_無題_narration.txt",
+    "full_file": "09_無題_full.txt",
+    "original_md_file": "09_無題.md"
   }
 ]
