@@ -12,28 +12,58 @@ PROJECT_ARCHIVE_DIR = Path("archive")
 # External tool archive directory (MakeMP3FromAozora)
 EXTERNAL_TOOL_ARCHIVE_DIR = Path(r"E:\GoogleAntigravity\tools\MakeMP3FromAozora\data\neo_sf_archive")
 
-def extract_story_parts(raw_md: str) -> Dict[str, str]:
+def extract_story_parts(raw_md: str, fallback_title: str = "") -> Dict[str, str]:
     """
     Extracts title, subtitle, author, narration body, technical commentary,
     references, and next preview from a full story markdown.
     """
-    # Remove frontmatter
+    # 1. Extract title and subtitle from YAML frontmatter if present
+    extracted_title = ""
+    extracted_subtitle = ""
+
+    # Look for title: ... in frontmatter or yaml header
+    fm_title_match = re.search(r"^\s*title\s*:\s*[\"']?『?([^\"'\n]+?)』?[\"']?\s*$", raw_md, re.MULTILINE)
+    if fm_title_match:
+        full_fm_title = fm_title_match.group(1).strip()
+        # Handle '――' or '―' subtitle separation in title field
+        if "――" in full_fm_title:
+            parts = full_fm_title.split("――", 1)
+            extracted_title = parts[0].strip().strip("『』\"'")
+            extracted_subtitle = parts[1].strip().strip("『』\"'")
+        elif "―" in full_fm_title:
+            parts = full_fm_title.split("―", 1)
+            extracted_title = parts[0].strip().strip("『』\"'")
+            extracted_subtitle = parts[1].strip().strip("『』\"'")
+        else:
+            extracted_title = full_fm_title.strip().strip("『』\"'")
+
+    # Remove frontmatter block (supporting ---, ```yaml, or yaml)
     body = raw_md
-    fm_match = re.match(r"^---\s*\n(.*?)\n---\s*\n(.*)$", raw_md, re.DOTALL)
+    fm_match = re.match(r"^(?:---|```yaml|yaml)\s*\n(.*?)\n(?:---|```)\s*\n(.*)$", raw_md, re.DOTALL)
     if fm_match:
         body = fm_match.group(2).strip()
 
-    # Extract title
-    title = "無題"
-    h1_match = re.search(r"^#\s+(.+)$", body, re.MULTILINE)
-    if h1_match:
-        title = h1_match.group(1).strip()
+    # If no title from frontmatter, try H1 header
+    if not extracted_title:
+        h1_match = re.search(r"^#\s+(.+)$", body, re.MULTILINE)
+        if h1_match:
+            raw_h1 = h1_match.group(1).strip().strip("『』\"'")
+            if "――" in raw_h1:
+                parts = raw_h1.split("――", 1)
+                extracted_title = parts[0].strip()
+                if not extracted_subtitle:
+                    extracted_subtitle = parts[1].strip()
+            else:
+                extracted_title = raw_h1
 
-    # Extract subtitle
-    subtitle = ""
-    sub_match = re.search(r"^###?\s+――?(.+)$", body, re.MULTILINE)
-    if sub_match:
-        subtitle = sub_match.group(1).strip()
+    # Extract subtitle if not already found
+    if not extracted_subtitle:
+        sub_match = re.search(r"^###?\s+――?(.+)$", body, re.MULTILINE)
+        if sub_match:
+            extracted_subtitle = sub_match.group(1).strip().strip("『』\"'")
+
+    title = extracted_title if extracted_title else (fallback_title if fallback_title else "無題")
+    subtitle = extracted_subtitle
 
     # Extract original work attribution
     attribution = ""
@@ -108,9 +138,13 @@ def archive_single_story(
 ) -> Dict[str, Any]:
     """Archives a single story to both local archive/ and MakeMP3FromAozora/."""
     raw_md = file_path.read_text(encoding="utf-8")
-    parts = extract_story_parts(raw_md)
+    fallback = catalog_info.get("title", "") if catalog_info else ""
+    parts = extract_story_parts(raw_md, fallback_title=fallback)
 
-    safe_title = re.sub(r'[\\/*?:"<>|]', "", parts["title"]).replace(" ", "_")
+    safe_title = re.sub(r'[\\/*?:"<>|]', "", parts["title"]).replace(" ", "_").strip()
+    if not safe_title or safe_title == "無題":
+        if fallback:
+            safe_title = re.sub(r'[\\/*?:"<>|]', "", fallback).replace(" ", "_").strip()
     prefix = f"{work_no:02d}_{safe_title}"
 
     meta = {
@@ -183,6 +217,20 @@ def update_archive_all() -> List[Dict[str, Any]]:
                 works_order.append((next_no, w_id, f))
                 existing_paths.add(f.resolve())
 
+    # Clean up obsolete '無題' files from target directories if they exist
+    target_dirs = [PROJECT_ARCHIVE_DIR]
+    if EXTERNAL_TOOL_ARCHIVE_DIR.parent.exists():
+        target_dirs.append(EXTERNAL_TOOL_ARCHIVE_DIR)
+
+    for out_dir in target_dirs:
+        if out_dir.exists():
+            for bad_file in out_dir.glob("*_無題*"):
+                try:
+                    bad_file.unlink()
+                    logger.info(f"Removed invalid archive file: {bad_file}")
+                except Exception as e:
+                    logger.warning(f"Failed to remove {bad_file}: {e}")
+
     archive_records = []
     for no, w_id, path in works_order:
         if path.exists():
@@ -192,9 +240,6 @@ def update_archive_all() -> List[Dict[str, Any]]:
 
     # Write index JSON
     index_json = json.dumps(archive_records, ensure_ascii=False, indent=2)
-    target_dirs = [PROJECT_ARCHIVE_DIR]
-    if EXTERNAL_TOOL_ARCHIVE_DIR.parent.exists():
-        target_dirs.append(EXTERNAL_TOOL_ARCHIVE_DIR)
 
     for out_dir in target_dirs:
         out_dir.mkdir(parents=True, exist_ok=True)
