@@ -129,5 +129,34 @@
       "Russell, S. \"How to ensure tools remain useful rather than dangerous.\" *Nature Machine Intelligence* 1, 380–381 (2019).",
       "DOI: [https://doi.org/10.1038/s42256-019-0091-y](https://doi.org/10.1038/s42256-019-0091-y)"
     ]
+  },
+  {
+    "work_id": "oguri-complete-crime",
+    "original_title": "完全犯罪",
+    "original_author": "小栗虫太郎",
+    "reboot_title": "『完全犯罪――量子消滅の熱音響（サーモアコースティック）』",
+    "posted_at": "2026-09-28T04:15:10.264527+09:00",
+    "file_path": "content/2026-09-28_oguri_complete_crime.md",
+    "status": "publish",
+    "references": [
+      "超短パルスフェムト秒レーザーと光音響効果に関する文献**",
+      "著者: Lihong V. Wang (王立宏)",
+      "論文タイトル: *Photoacoustic Imaging and Spectroscopy*",
+      "ジャーナル: **Nature Photonics** (2009)",
+      "DOI: [https://doi.org/10.1038/nphoton.2009.72](https://doi.org/10.1038/nphoton.2009.72)",
+      "概要: 生体深部のイメージングを可能にする光音響効果（光声効果）の物理的基盤と、レーザー誘起による音響波発生のメカニズムを確立した金字塔的論文。",
+      "量子もつれの制御とデヒーレンス（量子暗号の脆弱性と制御）に関する文献**",
+      "著者: Wojciech H. Zurek",
+      "論文タイトル: *Decoherence, einselection, and the quantum origins of the classical*",
+      "ジャーナル: **Reviews of Modern Physics** (2003)",
+      "DOI: [https://doi.org/10.1103/RevModPhys.75.715](https://doi.org/10.1103/RevModPhys.75.715)",
+      "概要: 量子コヒーレンスがどのように失われるか（デヒーレンス）を論理的に解明し、量子情報の制御や、量子測定問題における古典的現実への移行を論じた重要文献。",
+      "環境DNA（eDNA）の空中回収と解析に関する最新文献**",
+      "著者: Elizabeth Clare, et al.",
+      "論文タイトル: *Measuring biology from the air: eDNA from mammals in the atmosphere*",
+      "ジャーナル: **Current Biology** (2021)",
+      "DOI: [https://doi.org/10.1016/j.cub.2021.02.045](https://doi.org/10.1016/j.cub.2021.02.045)",
+      "概要: 空気中から哺乳類の環境DNAを回収・特定することに初めて成功した革新的研究。監視社会における個人のゲノム追跡技術の現実性を示唆する。"
+    ]
   }
 ]

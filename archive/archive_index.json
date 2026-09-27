@@ -142,5 +142,21 @@
     "narration_file": "09_無題_narration.txt",
     "full_file": "09_無題_full.txt",
     "original_md_file": "09_無題.md"
+  },
+  {
+    "work_no": 10,
+    "work_id": "oguri-complete-crime",
+    "title": "無題",
+    "subtitle": "",
+    "attribution": "小栗虫太郎『完全犯罪』（青空文庫）",
+    "original_author": "小栗虫太郎",
+    "original_title": "完全犯罪",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000125/card668.html",
+    "modern_tech": "量子もつれ暗号撹乱、超短パルスフェムト秒レーザー熱音響暗殺、環境ゲノム偽装",
+    "summary": "科学の死角を突いた完璧な密室殺人トリック。現代の量子・ナノ物理による観測不可能な犯罪工学。",
+    "char_count": 3817,
+    "narration_file": "10_無題_narration.txt",
+    "full_file": "10_無題_full.txt",
+    "original_md_file": "10_無題.md"
   }
 ]
