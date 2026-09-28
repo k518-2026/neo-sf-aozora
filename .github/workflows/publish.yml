@@ -6,7 +6,9 @@ on:
   # 2) 夕方の通勤前: 08:30 UTC = 17:30 JST (帰宅通勤前に届くよう夕方5時半に配信)
   # 3) 夜寝る前: 13:30 UTC = 22:30 JST (就寝前のリラックスタイム夜10時半に配信)
   schedule:
-    - cron: '30 8,13,21 * * *'
+    - cron: '30 21 * * *'
+    - cron: '30 8 * * *'
+    - cron: '30 13 * * *'
 
   # Manual execution from GitHub Actions UI
   workflow_dispatch:
@@ -91,7 +93,7 @@ jobs:
       - name: Execute Daily Generation and WordPress Mail Dispatch
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL || 'gemini-2.5-flash' }}
+          GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL || 'gemini-3.8-flash' }}
           SMTP_HOST: ${{ secrets.SMTP_HOST || 'smtp.gmail.com' }}
           SMTP_PORT: ${{ secrets.SMTP_PORT || '587' }}
           SMTP_USER: ${{ secrets.SMTP_USER }}

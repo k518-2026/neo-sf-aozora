@@ -96,21 +96,17 @@ SYSTEM_PROMPT = """あなたは最先端の科学技術と現代日本文学の�
 """
 
 # Primary model and fallback cascade for quota/overload errors
-DEFAULT_PRIMARY_MODEL = "gemini-2.5-flash"
+DEFAULT_PRIMARY_MODEL = "gemini-3.8-flash"
 FALLBACK_MODELS = [
-    "gemini-2.5-flash",
-    "gemini-2.5-flash-lite",
-    "gemini-2.0-flash",
-    "gemini-1.5-flash",
-    "gemini-1.5-pro",
-    "gemini-3.5-flash",
-    "gemini-3.5",
-    "gemini-3.6-flash",
-    "gemini-3.6",
-    "gemini-3.7-flash",
-    "gemini-3.7",
     "gemini-3.8-flash",
-    "gemini-3.8"
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-2.5-pro",
+    "gemini-2.5-flash",
+    "gemini-2.0-flash",
+    "gemini-2.0-flash-lite",
 ]
 
 class StoryGenerator:
@@ -191,59 +187,78 @@ class StoryGenerator:
             model_candidates = self._get_model_candidates()
             last_error = None
 
-            for idx, current_model in enumerate(model_candidates):
-                logger.info(f"Attempting SF story generation with model '{current_model}' (Attempt {idx + 1}/{len(model_candidates)})...")
-                try:
-                    response = client.models.generate_content(
-                        model=current_model,
-                        contents=prompt,
-                        config=types.GenerateContentConfig(
-                            system_instruction=SYSTEM_PROMPT,
-                            temperature=0.8,
-                            max_output_tokens=8192,
+            # Attempt generation across models with backoff retry
+            max_rounds = 2
+            for round_num in range(1, max_rounds + 1):
+                if round_num > 1:
+                    logger.info(f"Round {round_num - 1} hit temporary server demand spikes. Pausing 10s before Round {round_num}...")
+                    time.sleep(10)
+
+                for idx, current_model in enumerate(model_candidates):
+                    # For each candidate, try up to 2 attempts if 503/high demand occurs
+                    for attempt in range(1, 3):
+                        logger.info(
+                            f"Attempting SF story generation with model '{current_model}' "
+                            f"(Round {round_num}, Candidate {idx + 1}/{len(model_candidates)}, Try {attempt}/2)..."
                         )
-                    )
+                        try:
+                            response = client.models.generate_content(
+                                model=current_model,
+                                contents=prompt,
+                                config=types.GenerateContentConfig(
+                                    system_instruction=SYSTEM_PROMPT,
+                                    temperature=0.8,
+                                    max_output_tokens=8192,
+                                    http_options=types.HttpOptions(timeout=120000)
+                                )
+                            )
 
-                    content = response.text.strip()
-                    # Clean possible markdown wrapping
-                    if content.startswith("```markdown"):
-                        content = content[len("```markdown"):].strip()
-                    if content.startswith("```"):
-                        content = content[3:].strip()
-                    if content.endswith("```"):
-                        content = content[:-3].strip()
+                            content = response.text.strip()
+                            # Clean possible markdown wrapping
+                            if content.startswith("```markdown"):
+                                content = content[len("```markdown"):].strip()
+                            if content.startswith("```"):
+                                content = content[3:].strip()
+                            if content.endswith("```"):
+                                content = content[:-3].strip()
 
-                    # Quality check: ensure substantial length (at least 2,500 characters)
-                    if len(content) < 2500:
-                        logger.warning(
-                            f"Model '{current_model}' output too short ({len(content)} chars < 2500 target). "
-                            f"Trying next model candidate for a richer, more detailed narrative..."
-                        )
-                        continue
+                            # Quality check: ensure substantial length (at least 2,500 characters)
+                            if len(content) < 2500:
+                                logger.warning(
+                                    f"Model '{current_model}' output too short ({len(content)} chars < 2500 target). "
+                                    f"Trying next model candidate for a richer, more detailed narrative..."
+                                )
+                                break
 
-                    title, refs = self._extract_title_and_refs(content, work)
-                    logger.info(f"Successfully generated story using '{current_model}'! Title: {title}, Length: {len(content)} chars")
-                    return content, title, refs
+                            title, refs = self._extract_title_and_refs(content, work)
+                            logger.info(f"Successfully generated story using '{current_model}'! Title: {title}, Length: {len(content)} chars")
+                            return content, title, refs
 
-                except Exception as e:
-                    last_error = e
-                    err_msg = str(e)
-                    is_503_or_overload = any(term in err_msg.lower() for term in [
-                        "503", "unavailable", "overloaded", "resource_exhausted", "rate_limit", "internal server error"
-                    ])
+                        except Exception as e:
+                            last_error = e
+                            err_msg = str(e)
+                            is_503_or_overload = any(term in err_msg.lower() for term in [
+                                "503", "unavailable", "overloaded", "resource_exhausted", "rate_limit", "high demand", "temporary"
+                            ])
+                            is_not_found = "404" in err_msg or "not found" in err_msg.lower()
 
-                    if is_503_or_overload:
-                        logger.warning(
-                            f"Model '{current_model}' encountered server/capacity error (503/Unavailable/Overloaded): {err_msg}. "
-                            f"Retrying with next fallback model version in cascade..."
-                        )
-                    else:
-                        logger.warning(
-                            f"Model '{current_model}' returned error: {err_msg}. "
-                            f"Trying fallback model version..."
-                        )
-                    
-                    time.sleep(2)
+                            if is_not_found:
+                                # Skip immediately if model name is completely invalid/retired
+                                logger.warning(f"Model '{current_model}' is not available (404/Retired). Skipping.")
+                                break
+
+                            if is_503_or_overload and attempt == 1:
+                                backoff_sec = 6 * round_num
+                                logger.warning(
+                                    f"Model '{current_model}' encountered temporary capacity error ({err_msg}). "
+                                    f"Backing off for {backoff_sec}s before retry..."
+                                )
+                                time.sleep(backoff_sec)
+                                continue
+                            else:
+                                logger.warning(f"Model '{current_model}' failed: {err_msg}. Moving to next candidate.")
+                                time.sleep(2)
+                                break
 
             logger.error(f"All model candidates failed. Last error: {last_error}", exc_info=True)
             return self._generate_fallback(work)
