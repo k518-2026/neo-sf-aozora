@@ -190,5 +190,21 @@
     "narration_file": "12_浮かぶ飛行島_narration.txt",
     "full_file": "12_浮かぶ飛行島_full.txt",
     "original_md_file": "12_浮かぶ飛行島.md"
+  },
+  {
+    "work_no": 13,
+    "work_id": "unno-captive",
+    "title": "俘囚",
+    "subtitle": "AdS/CFTホログラフィック監獄の反響",
+    "attribution": "海野十三『俘囚』（青空文庫）",
+    "original_author": "海野十三",
+    "original_title": "俘囚",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000160/card3238.html",
+    "modern_tech": "AdS/CFT対応ホログラフィック原理、ワームホール量子シミュレーション、トポロジカル空間位相格子",
+    "summary": "三次元の密室から忽然と消失した囚人。四次元ポケット空間に迷い込んだ男の孤独と生還の試み。",
+    "char_count": 2712,
+    "narration_file": "13_俘囚_narration.txt",
+    "full_file": "13_俘囚_full.txt",
+    "original_md_file": "13_俘囚.md"
   }
 ]

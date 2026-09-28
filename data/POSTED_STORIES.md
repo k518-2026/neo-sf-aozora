@@ -19,3 +19,4 @@
 | 10 | 2026-09-28 | 『完全犯罪 | 完全犯罪（小栗虫太郎） | 超短パルスフェムト秒レーザーと光音響効果に関する文献**, 著者: Lihong V. Wang (王立宏) | Publish |
 | 11 | 2026-09-28 | 二十世紀鉄仮面 | 二十世紀鉄仮面（小栗虫太郎） | DNAフェイシャルプロファイリングについて**, Claes, P., et al. (2014). "Modeling 3D Facial Shape from DNA." *PLOS Genetics*, 10(3), e1004224. | Publish |
 | 12 | 2026-09-28 | 浮かぶ飛行島 | 浮かぶ飛行島（海野十三） | Room-temperature superconductivity:*, Magnetohydrodynamic (Mhd) Propulsion & Atmospheric Interaction:* | Publish |
+| 13 | 2026-09-29 | 俘囚 | 俘囚（海野十三） | Juan Maldacena. "The Large N Limit of Superconformal Field Theories and Supergravity." *Advances in Theoretical and Mathematical Physics*, vol. 2, no. 2, 1998, pp. 231-252., Daniel Jafferis, Alexander Zlokapa, Maria Spiropulu, et al. "Traversable wormhole dynamics on a quantum processor." *Nature*, vol. 612, 2022, pp. 51–55. | Publish |
