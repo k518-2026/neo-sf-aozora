@@ -84,8 +84,12 @@ tags: ["SF", "青空文庫", "海野十三", "最先端科学", "ディストピ
 ### 【引用・参考文献（Scientific References）】
 
 - *Room-temperature superconductivity:* 
-  Dias, R., Salamat, A. (2020). "Evidence of a room-temperature ambient-pressure or near-ambient superconductivity in sulfur hydrides / modified-lead apatite systems." *Nature*, 586, 228–235. 
-  [https://doi.org/10.1038/s41586-020-2801-2](https://doi.org/10.1038/s41586-020-2801-2)
+  Snider, E., Salamat, A., Dias, R. P. et al. (2020). "Room-temperature superconductivity in a carbonaceous sulfur hydride." *Nature*, 586, 373–377. 
+  [https://doi.org/10.1038/s41586-020-2801-z](https://doi.org/10.1038/s41586-020-2801-z)
+
+- *High-pressure Hydride Superconductivity (Landmark Study):*
+  Drozdov, A. P., Eremets, M. I. et al. (2015). "Conventional superconductivity at 203 kelvin at high pressures in the sulfur hydride system." *Nature*, 525, 73–76. 
+  [https://doi.org/10.1038/nature14964](https://doi.org/10.1038/nature14964)
 
 - *Magnetohydrodynamic (Mhd) Propulsion & Atmospheric Interaction:*
   Roth, J. R. (2001). *Space Plasma Engineering: Volume 2 - Applications*. Institute of Physics Publishing, Bristol and Philadelphia. 
