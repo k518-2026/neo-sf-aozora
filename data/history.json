@@ -184,5 +184,20 @@
       "Marcel, S., et al. (2021). \"Biometric Spoofing and Anti-Spoofing: A Survey.\" *IEEE Transactions on Biometrics, Behavior, and Identity Science*, 3(1), 2-23.",
       "DOI: [https://doi.org/10.1109/TBIOM.2020.3045678](https"
     ]
+  },
+  {
+    "work_id": "unno-floating-island",
+    "original_title": "浮かぶ飛行島",
+    "original_author": "海野十三",
+    "reboot_title": "浮かぶ飛行島――成層圏メガストラクチャーの崩壊",
+    "posted_at": "2026-09-28T22:51:20.944161+09:00",
+    "file_path": "content/2026-09-28_unno_floating_island.md",
+    "status": "publish",
+    "references": [
+      "Room-temperature superconductivity:*",
+      "Magnetohydrodynamic (Mhd) Propulsion & Atmospheric Interaction:*",
+      "Carbon Nanotube Tethers & Megastructure Physics:*",
+      "Stratospheric Dynamo Effects and Geomagnetic Feedback:*"
+    ]
   }
 ]

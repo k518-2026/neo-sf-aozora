@@ -174,5 +174,21 @@
     "narration_file": "11_完全犯罪_narration.txt",
     "full_file": "11_完全犯罪_full.txt",
     "original_md_file": "11_完全犯罪.md"
+  },
+  {
+    "work_no": 12,
+    "work_id": "unno-floating-island",
+    "title": "浮かぶ飛行島",
+    "subtitle": "成層圏メガストラクチャーの崩壊",
+    "attribution": "海野十三『浮かぶ飛行島』（青空文庫）",
+    "original_author": "海野十三",
+    "original_title": "浮かぶ飛行島",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000160/card1245.html",
+    "modern_tech": "常温高圧超伝導（LK-99後継磁気浮上）、プラズマMHD推進、カーボンナノチューブテザーメガ構造体",
+    "summary": "天空に浮かぶ巨大人工浮遊要塞。成層圏で自給自足する超伝導空中都市の独立と墜落の危機。",
+    "char_count": 3082,
+    "narration_file": "12_浮かぶ飛行島_narration.txt",
+    "full_file": "12_浮かぶ飛行島_full.txt",
+    "original_md_file": "12_浮かぶ飛行島.md"
   }
 ]
