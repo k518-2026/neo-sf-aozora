@@ -17,3 +17,4 @@
 | 8 | 2026-09-27 | 『人間レコード | 人間レコード（夢野久作） | DNAデータストレージの限界と容量に関する基礎研究**, Erlich, Y., & Zielinski, D. (2017). "DNA Fountain enables a robust and efficient storage architecture." *Science*, 355(6328), 950-954. | Publish |
 | 9 | 2026-09-27 | 爆弾太平記 | 爆弾太平記（夢野久作） | レーザー冷却による反水素の閉じ込めと制御（反物質トラップ）**, Baker, C.A., et al. "Laser cooling of antihydrogen atoms." *Nature* 592, 35–42 (2021). | Publish |
 | 10 | 2026-09-28 | 『完全犯罪 | 完全犯罪（小栗虫太郎） | 超短パルスフェムト秒レーザーと光音響効果に関する文献**, 著者: Lihong V. Wang (王立宏) | Publish |
+| 11 | 2026-09-28 | 二十世紀鉄仮面 | 二十世紀鉄仮面（小栗虫太郎） | DNAフェイシャルプロファイリングについて**, Claes, P., et al. (2014). "Modeling 3D Facial Shape from DNA." *PLOS Genetics*, 10(3), e1004224. | Publish |

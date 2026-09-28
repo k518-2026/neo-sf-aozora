@@ -158,5 +158,31 @@
       "DOI: [https://doi.org/10.1016/j.cub.2021.02.045](https://doi.org/10.1016/j.cub.2021.02.045)",
       "概要: 空気中から哺乳類の環境DNAを回収・特定することに初めて成功した革新的研究。監視社会における個人のゲノム追跡技術の現実性を示唆する。"
     ]
+  },
+  {
+    "work_id": "oguri-20th-century-iron-mask",
+    "original_title": "二十世紀鉄仮面",
+    "original_author": "小栗虫太郎",
+    "reboot_title": "二十世紀鉄仮面――ネオ・フィジオノミーの覚醒",
+    "posted_at": "2026-09-28T16:20:45.407219+09:00",
+    "file_path": "content/2026-09-28_oguri_20th_century_iron_mask.md",
+    "status": "publish",
+    "references": [
+      "DNAフェイシャルプロファイリングについて**",
+      "Claes, P., et al. (2014). \"Modeling 3D Facial Shape from DNA.\" *PLOS Genetics*, 10(3), e1004224.",
+      "DOI: [https://doi.org/10.1371/journal.pgen.1004224](https://doi.org/10.1371/journal.pgen.1004224)",
+      "解説：DNA情報のみから人間の3D顔面形状を予測・モデル化する先駆的な研究です。*",
+      "バイオ3Dプリンティング人工皮膚について**",
+      "Baltazar, T., et al. (2020). \"3D Bioprinting of a Vascularized and Perfusable Skin Graft Using Human Microvascular Endothelial Cells, Dermal Fibroblasts, and Keratinocytes.\" *Tissue Engineering Part A*, 26(5-6), 227-238.",
+      "DOI: [https://doi.org/10.1089/ten.tea.2019.0201](https://doi.org/10.1089/ten.tea.2019.0201)",
+      "解説：複数の人間の皮膚細胞を用い、血管網を備えた「生きて機能する皮膚」を3Dプリンティングする技術に関する論文です。*",
+      "生体電子マスク・伸縮性電子皮膚について**",
+      "Wang, S., et al. (2018). \"Skin-electronics-mediated robot mimicry of human facial expressions.\" *Nature Electronics*, 1, 124–132.",
+      "DOI: [https://doi.org/10.1038/s41928-018-0019-9](https://doi.org/10.1038/s41928-018-0019-9)",
+      "解説：人間の皮膚に貼り付けた伸縮性電子デバイスにより、表情の動きを電気信号として捉え、リアルタイムで模倣・同期させる技術の研究です。*",
+      "生体認証（顔認証）の脆弱性と偽装防止について**",
+      "Marcel, S., et al. (2021). \"Biometric Spoofing and Anti-Spoofing: A Survey.\" *IEEE Transactions on Biometrics, Behavior, and Identity Science*, 3(1), 2-23.",
+      "DOI: [https://doi.org/10.1109/TBIOM.2020.3045678](https"
+    ]
   }
 ]
