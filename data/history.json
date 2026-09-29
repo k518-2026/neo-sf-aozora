@@ -324,5 +324,27 @@
       "Vicsek, T., et al. (1995). Novel type of phase transition in a system of self-driven particles. *Physical Review Letters*, 75(6), 1226–1229.",
       "Wu, Z., et al. (2020). A comprehensive survey on graph neural networks. *IEEE Transactions on Neural Networks and Learning Systems*, 32(1), 4–24."
     ]
+  },
+  {
+    "work_id": "edogawa-human-chair",
+    "original_title": "人間椅子",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "『人間椅子――ハプティクス多様体における愛の幾何学』",
+    "posted_at": "2026-09-30T06:44:13.221645+09:00",
+    "file_path": "content/2026-09-30_edogawa_human_chair.md",
+    "status": "publish",
+    "references": [
+      "柔軟触覚センサアレイ（E-skin）およびバイオハプティクス関連**:",
+      "Wang, S., Oh, J. Y., Xu, J., Harold, H., To, J. W., Masurkar, N., ... & Bao, Z. (2018). \"Skin-inspired electronics: An emerging paradigm for soft robotics and personal healthcare.\" *Nature*, 555(7694), 83-88.",
+      "DOI: [https://doi.org/10.1038/nature25494](https://doi.org/10.1038/nature25494)",
+      "自己組織化液晶エラストマー（スマートマテリアル）関連**:",
+      "White, T. J., & Broer, D. J. (2015). \"Programmable sheets: Liquid crystalline elastomers and networks.\" *Nature Materials*, 14(11), 1087-1098.",
+      "DOI: [https://doi.org/10.1038/nmat4433](https://doi.org/10.1038/nmat4433)",
+      "情報幾何学と脳の予測符号化（ニューロモルフィック）関連**:",
+      "Amari, S. (2016). *Information Geometry and Its Applications*. Applied Mathematical Sciences, Springer.",
+      "DOI: [https://doi.org/10.1007/978-4-431-55978-8](https://doi.org/10.1007/978-4-431-55978-8)",
+      "Friston, K. (2010). \"The free-energy principle: a unified brain theory?.\" *Nature Reviews Neuroscience*, 11(2), 127-138.",
+      "DOI: [https://doi.org/10.1038/nrn2787](https://doi.org/10.1038/nrn2787)"
+    ]
   }
 ]

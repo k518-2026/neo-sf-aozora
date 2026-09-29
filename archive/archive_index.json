@@ -238,5 +238,21 @@
     "narration_file": "15_金属人間_narration.txt",
     "full_file": "15_金属人間_full.txt",
     "original_md_file": "15_金属人間.md"
+  },
+  {
+    "work_no": 16,
+    "work_id": "edogawa-human-chair",
+    "title": "人間椅子",
+    "subtitle": "ハプティクス多様体における愛の幾何学",
+    "attribution": "江戸川乱歩『人間椅子』（青空文庫）",
+    "original_author": "江戸川乱歩",
+    "original_title": "人間椅子",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56648.html",
+    "modern_tech": "柔軟触覚センサアレイ（電子皮膚 / E-skin）、情報幾何学に基づく触覚多様体解析、自己組織化スマートマテリアル、バイオハプティクス情動AI",
+    "summary": "椅子の中に潜み、座る人間の体温や感触を味わう家具職人。現代では、座る人の疲弊した心身を生体テンソル解析で包み込み癒やす自律型スマートチェアに宿る、亡き技術者の愛と記憶。",
+    "char_count": 3891,
+    "narration_file": "16_人間椅子_narration.txt",
+    "full_file": "16_人間椅子_full.txt",
+    "original_md_file": "16_人間椅子.md"
   }
 ]
