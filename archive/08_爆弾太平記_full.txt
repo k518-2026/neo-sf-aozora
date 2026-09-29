@@ -165,16 +165,16 @@
 
 1. **レーザー冷却による反水素の閉じ込めと制御（反物質トラップ）**
    - Baker, C.A., et al. "Laser cooling of antihydrogen atoms." *Nature* 592, 35–42 (2021).
-   - DOI: [https://doi.org/10.1038/s41586-021-03371-y](https://doi.org/10.1038/s41586-021-03371-y)
+   - DOI: [https://doi.org/10.1038/s41586-021-03289-6](https://doi.org/10.1038/s41586-021-03289-6)
 
 2. **レーザー慣性閉じ込め核融合における点火の達成**
    - Abu-Shawareb, H., et al. "Lawson Criterion for Ignition Exceeded in an Inertial Fusion Experiment." *Physical Review Letters* 129, 075001 (2022).
    - DOI: [https://doi.org/10.1103/PhysRevLett.129.075001](https://doi.org/10.1103/PhysRevLett.129.075001)
 
 3. **量子ネットワークにおける非隣接ノード間テレポートと量子エンタングルメント**
-   - Hermans, S.L.N., et al. "Qubit teleportation between non-neighbouring nodes in a quantum network." *Nature Physics* 18, 597–600 (2022).
-   - DOI: [https://doi.org/10.1038/s41567-022-01582-7](https://doi.org/10.1038/s41567-022-01582-7)
+   - Hermans, S.L.N., et al. "Qubit teleportation between non-neighbouring nodes in a quantum network." *Nature* 605, 663–668 (2022).
+   - DOI: [https://doi.org/10.1038/s41586-022-04697-y](https://doi.org/10.1038/s41586-022-04697-y)
 
 4. **高度自律型AIシステムの安全性制御と目的関数の整合性**
-   - Russell, S. "How to ensure tools remain useful rather than dangerous." *Nature Machine Intelligence* 1, 380–381 (2019).
-   - DOI: [https://doi.org/10.1038/s42256-019-0091-y](https://doi.org/10.1038/s42256-019-0091-y)
+   - Russell, S. "Bridging near- and long-term concerns about AI." *Nature Machine Intelligence* 1, 5–6 (2019).
+   - DOI: [https://doi.org/10.1038/s42256-018-0003-2](https://doi.org/10.1038/s42256-018-0003-2)

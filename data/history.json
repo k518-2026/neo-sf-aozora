@@ -310,5 +310,19 @@
       "Jie Zhang, Yao Yao, Liu Sheng, Jing Liu. \"Self-fueled biomimetic liquid metal mollusk.\" *Advanced Materials*, vol. 27, no. 16, pp. 2648–2655, 2015.",
       "Yue Lu, et al. \"Transformable liquid-metal nanomedicine.\" *Nature Communications*, vol. 6, Article number: 10066, 2015."
     ]
+  },
+  {
+    "work_id": "hisao-insect-catalog",
+    "original_title": "昆虫図",
+    "original_author": "久生十蘭",
+    "reboot_title": "昆虫図――フェロモン・グラフと遺伝子駆動の恋文",
+    "posted_at": "2026-09-29T22:45:29.364599+09:00",
+    "file_path": "content/2026-09-29_hisao_insect_catalog.md",
+    "status": "publish",
+    "references": [
+      "Esvelt, K. M., et al. (2014). Concerning RNA-guided gene drives for the alteration of wild populations. *eLife*, 3, e03401.",
+      "Vicsek, T., et al. (1995). Novel type of phase transition in a system of self-driven particles. *Physical Review Letters*, 75(6), 1226–1229.",
+      "Wu, Z., et al. (2020). A comprehensive survey on graph neural networks. *IEEE Transactions on Neural Networks and Learning Systems*, 32(1), 4–24."
+    ]
   }
 ]
