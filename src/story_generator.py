@@ -1,14 +1,40 @@
 import os
 import re
+import json
 import time
 import random
 import logging
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone, timedelta
 from pathlib import Path
 from typing import Dict, Any, Tuple, List, Optional
 
 logger = logging.getLogger(__name__)
 JST = timezone(timedelta(hours=9))
+
+def check_doi_validity(doi_str: str) -> bool:
+    """Checks if a DOI exists using the official DOI Handle REST API."""
+    doi_match = re.search(r'10\.\d{4,9}/[-._;()/:A-Za-z0-9]+', doi_str)
+    if not doi_match:
+        return False
+    clean_doi = doi_match.group(0).rstrip(".)],>")
+    url = f"https://doi.org/api/handles/{clean_doi}"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": "AozoraSciFiBot/1.0"})
+        with urllib.request.urlopen(req, timeout=5) as res:
+            if res.getcode() == 200:
+                data = json.loads(res.read().decode())
+                return data.get("responseCode") == 1
+    except urllib.error.HTTPError as e:
+        if e.code == 404:
+            return False
+        # For non-404 network or server errors, do not falsely reject
+        return True
+    except Exception:
+        # Network timeout or intermittent error, do not block
+        return True
+    return False
 
 # Ending themes and weighted random ratio (明るい未来:ディストピア:ラブロマンス:ミステリー = 3:2:3:2)
 ENDING_THEMES = [
@@ -240,6 +266,23 @@ class StoryGenerator:
                                     f"Model '{current_model}' output too short ({len(content)} chars < 2500 target). "
                                     f"Trying next model candidate for a richer, more detailed narrative..."
                                 )
+                                break
+
+                            # DOI Verification check: ensure references have real, reachable DOIs
+                            dois = re.findall(r'https?://doi\.org/([^\s\)\]\>]+)', content)
+                            invalid_dois = []
+                            for d in dois:
+                                d_clean = d.rstrip(".)],>")
+                                if not check_doi_validity(d_clean):
+                                    invalid_dois.append(d_clean)
+
+                            if invalid_dois:
+                                logger.warning(
+                                    f"Model '{current_model}' generated hallucinated/broken DOI(s): {invalid_dois}. "
+                                    f"Retrying generation for authentic citations..."
+                                )
+                                if attempt == 1:
+                                    continue
                                 break
 
                             title, refs = self._extract_title_and_refs(content, work)
