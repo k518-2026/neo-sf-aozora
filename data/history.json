@@ -213,5 +213,19 @@
       "Daniel Jafferis, Alexander Zlokapa, Maria Spiropulu, et al. \"Traversable wormhole dynamics on a quantum processor.\" *Nature*, vol. 612, 2022, pp. 51–55.",
       "Brian Swingle. \"Entanglement Renormalization and Holography.\" *Annual Review of Condensed Matter Physics*, vol. 3, 2012, pp. 289-316."
     ]
+  },
+  {
+    "work_id": "unno-metal-man",
+    "original_title": "金属人間",
+    "original_author": "海野十三",
+    "reboot_title": "金属人間――自己組織化ガリウム生体回路の迷宮",
+    "posted_at": "2026-09-29T17:42:53.981791+09:00",
+    "file_path": "content/2026-09-29_unno_metal_man.md",
+    "status": "publish",
+    "references": [
+      "Jie Zhang, yuxin Yao, et al. \"Liquid Metal-based Soft Electronics and Biomedical Applications.\" *Nature Communications*, vol. 12, Article number: 2478, 2021.",
+      "Yuan Lin, et al. \"Biomineralization-Inspired Synthesis of Functional Nanomaterials and Their In Vivo Applications.\" *Science*, vol. 373, no. 6554, pp. 531-537, 2021.",
+      "Jing Liu, et al. \"Assembling Liquid Metal Circuits and Microfluidic Systems Inside Living Organisms.\" *Advanced Materials*, vol. 32, no. 14, 1905872, 2020."
+    ]
   }
 ]

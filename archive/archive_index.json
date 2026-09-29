@@ -206,5 +206,21 @@
     "narration_file": "13_俘囚_narration.txt",
     "full_file": "13_俘囚_full.txt",
     "original_md_file": "13_俘囚.md"
+  },
+  {
+    "work_no": 14,
+    "work_id": "unno-metal-man",
+    "title": "金属人間",
+    "subtitle": "自己組織化ガリウム生体回路の迷宮",
+    "attribution": "海野十三『金属人間』（青空文庫）",
+    "original_author": "海野十三",
+    "original_title": "金属人間",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000160/card1242.html",
+    "modern_tech": "液体金属ガリウムナノ合金生体回路、自己組織化モジュラーロボット、生体内バイオミネラリゼーション",
+    "summary": "肉体が徐々に金属へと置換されていく奇病。ナノマシンによる生体鉱物化の脅威と進化の選択。",
+    "char_count": 2940,
+    "narration_file": "14_金属人間_narration.txt",
+    "full_file": "14_金属人間_full.txt",
+    "original_md_file": "14_金属人間.md"
   }
 ]
