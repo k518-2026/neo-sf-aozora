@@ -63,7 +63,7 @@ tags: ["SF", "青空文庫", "海野十三", "最先端科学", "ディストピ
 ### 【引用・参考文献（Scientific References）】
 
 1. Juan Maldacena. "The Large N Limit of Superconformal Field Theories and Supergravity." *Advances in Theoretical and Mathematical Physics*, vol. 2, no. 2, 1998, pp. 231-252. 
-   DOI: [https://doi.org/10.4310/ATMP.1998.v2.n2.1](https://doi.org/10.4310/ATMP.1998.v2.n2.1)
+   DOI: [https://doi.org/10.4310/atmp.1998.v2.n2.a1](https://doi.org/10.4310/atmp.1998.v2.n2.a1)
 
 2. Daniel Jafferis, Alexander Zlokapa, Maria Spiropulu, et al. "Traversable wormhole dynamics on a quantum processor." *Nature*, vol. 612, 2022, pp. 51–55.
    DOI: [https://doi.org/10.1038/s41586-022-05424-3](https://doi.org/10.1038/s41586-022-05424-3)

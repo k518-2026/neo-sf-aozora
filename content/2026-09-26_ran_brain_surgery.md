@@ -175,7 +175,7 @@ frontmatter:
 ## 【引用・参考文献（Scientific References）】
 
 1. Chen, S., Weitemier, A. Z., Zeng, X., He, L., Wang, X., Tao, Y., Huang, A. J. Y., Hashimotodani, Y., Kano, M., Iwasaki, H., Parajuli, L. K., Okabe, S., Teh, D. B. L., All, A. H., Tsutsui-Kimura, I., Tanaka, K. F., Liu, X., & McHugh, T. J. (2018). Near-infrared deep brain stimulation via upconversion nanoparticles. *Science*, 359(6376), 679–684.  
-   [https://doi.org/10.1126/science.aar3925](https://doi.org/10.1126/science.aar3925)
+   [https://doi.org/10.1126/science.aaq1144](https://doi.org/10.1126/science.aaq1144)
 
 2. Deisseroth, K. (2015). Optogenetics: 10 years of microbial opsins in neuroscience. *Nature Neuroscience*, 18(9), 1213–1225.  
    [https://doi.org/10.1038/nn.4091](https://doi.org/10.1038/nn.4091)

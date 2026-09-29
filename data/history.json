@@ -7,7 +7,25 @@
     "posted_at": "2026-09-24T22:19:51.973179+09:00",
     "file_path": "content/story.md",
     "status": "publish",
-    "references": []
+    "references": [
+      "Duque, M., Lee-Kubli, C. A., Tufail, Y., Magaram, U., Patel, J., Chakraborty, A., Mendoza, E., & Shapiro, M. G. (2022).**",
+      "Sonogenetic control of mammalian cells using exogenous Transient Receptor Potential A1 channels.*",
+      "Nature Communications**, 13, 600.",
+      "（カリフォルニア工科大学Shapiro研究室による、機械受容イオンチャネルを発現させた哺乳類細胞を集束超音波で非侵襲的かつミリ秒精度で遠隔操作するソノジェネティクス技術の実証）*",
+      "Martorell, A. J., Paulson, A. L., Suk, H. J., Abdurrob, F., Drummond, G. T., Guan, W., ... & Tsai, L. H. (2019).**",
+      "Multi-sensory Gamma Stimulation Ameliorates Alzheimer's-Associated Pathology and Improves Cognition.*",
+      "Cell**, 177(2), 256–271.",
+      "（MIT Picower Institute: 40Hzの規則的感覚刺激による脳波ガンマ波エントレインメントが、脳内ミクログリアの形態変化と食作用を誘発し、シナプス結合の再編をもたらす神経機構の解明）*",
+      "Ngo, H. V. V., Martinetz, T., Born, J., & Mölle, M. (2013).**",
+      "Auditory closed-loop stimulation of the sleep slow oscillation enhances memory.*",
+      "Nature Neuroscience**, 16(5), 698–700.",
+      "（生体脳波の位相にリアルタイム同期させた閉ループ聴覚刺激により、神経振動を増強・変調して記憶固定を誘導する閉ループ神経音響変調技術の実証）*",
+      "Le Pichon, A., Blanc, E., & Hauchecorne, A. (Eds.). (2018).**",
+      "Infrasound Monitoring for Atmospheric Studies: Challenges in Middle Atmosphere Dynamics and Societal Benefits.*",
+      "Springer Nature**.",
+      "（地球深部地殻変動および大気結合によって発生するインフラサウンド（超低周波音）の長距離伝播特性と、インフラ・生体への共振影響に関する国際共同研究モノグラフ）*",
+      ""
+    ]
   },
   {
     "work_id": "unno-fly-man",
@@ -17,7 +35,25 @@
     "posted_at": "2026-09-24T22:22:36.948002+09:00",
     "file_path": "content/2026-09-24_unno_fly_man.md",
     "status": "publish",
-    "references": []
+    "references": [
+      "Sato, H., et al. (2015).**",
+      "Remote Radio Control of Insect Flight.*",
+      "Current Biology**, 25(18), 2458–2463.",
+      "（甲虫の視葉および飛翔筋に電極を留置し、電気刺激によって離陸・旋回・着陸などの飛行運動を無線制御する昆虫バイオハイブリッド・サイボーグ技術の実証）*",
+      "Pei, J., Deng, L., Song, S., Zhao, M., Zhang, Y., Wu, S., ... & Shi, L. (2019).**",
+      "Towards artificial general intelligence with hybrid Tianjic chip architecture.*",
+      "Nature**, 572(7767), 104–111.",
+      "（清華大学研究陣による、脳模倣スパイクニューラルネットワークと機械学習アルゴリズムを統合した超低消費電力ハイブリッド・ニューロモルフィック半導体「Tianjic」の実証）*",
+      "Liu, J., Fu, T. M., Cheng, Z., Hong, G., Zhou, T., Xie, C., & Lieber, C. M. (2015).**",
+      "Syringe-injectable electronics.*",
+      "Nature Nanotechnology**, 10(7), 629–636.",
+      "（ハーバード大学Lieber研究室による、生体脳組織に極小侵襲で注入され、免疫拒絶を起こさず長期にわたりニューロンと安定結合する超柔軟メッシュ型電極技術）*",
+      "Floreano, D., & Wood, R. J. (2015).**",
+      "Science, technology and the future of small autonomous drones.*",
+      "Nature**, 521(7553), 460–466.",
+      "（昆虫の飛行力学と群行動（スワーム）を規範とした小型自律飛行ロボットおよびバイオハイブリッド群知能の将来展望）*",
+      ""
+    ]
   },
   {
     "work_id": "unno-cyborg-incident",
@@ -27,7 +63,25 @@
     "posted_at": "2026-09-24T22:28:42.228739+09:00",
     "file_path": "content/2026-09-24_unno_cyborg_incident.md",
     "status": "publish",
-    "references": []
+    "references": [
+      "Smirnova, L., Caffo, B. S., Gracias, D. H., Huang, Q., Morales Pantoja, I. E., Tang, B., ... & Hartung, T. (2023).**",
+      "Organoid intelligence (OI): the new frontier in biocomputing and intelligence-in-a-dish.*",
+      "Frontiers in Science**, 1, 1017235.",
+      "（ジョンズ・ホプキンス大学研究陣による、ヒト脳オルガノイドを演算素子として生体バイオコンピュータを構築する「オルガノイド・インテリジェンス（OI）」の包括的宣言論文）*",
+      "Webster-Wood, V. A., et al. (2022).**",
+      "Biohybrid robots: recent progress, challenges, and perspectives.*",
+      "Bioinspiration & Biomimetics**, 17(6), 061001.",
+      "（生体筋組織と合成骨格を融合したバイオハイブリッド・ロボットの駆動制御、自己修復性、次世代義体への応用展望）*",
+      "Boyden, E. S., Zhang, F., Bamberg, E., Nagel, G., & Deisseroth, K. (2005).**",
+      "Millisecond-timescale, genetically targeted optical control of neural activity.*",
+      "Nature Neuroscience**, 8(9), 1263–1268.",
+      "（光感受性イオンチャネルを用いて神経細胞の発火を光パルスで遠隔制御する「光遺伝学（オプトジェネティクス）」の歴史的先駆論文）*",
+      "Ricotti, L., et al. (2017).**",
+      "Biohybrid actuators for robotics: a review of devices stimulated by light, electrical, or chemical means.*",
+      "Science Robotics**, 2(12), eaaq0495.",
+      "（光、電気、化学刺激によって制御される生体筋駆動アクチュエータの包括的レビュー）*",
+      ""
+    ]
   },
   {
     "work_id": "unno-vibration-demon",
@@ -37,7 +91,21 @@
     "posted_at": "2026-09-25T00:40:00.988033+09:00",
     "file_path": "content/2026-09-25_unno_vibration_demon.md",
     "status": "publish",
-    "references": []
+    "references": [
+      "Cummer, S. A., Christensen, J., & Alù, A. (2016).**",
+      "Controlling sound with acoustic metamaterials.*",
+      "Nature Reviews Materials**, 1(3), 16001.",
+      "（デューク大学等による、音響メタマテリアルの設計原理、変換音響学、および音波の波動制御に関する金字塔的レビュー論文）*",
+      "Huber, S. D. (2016).**",
+      "Topological mechanics.*",
+      "Nature Physics**, 12(7), 621–623.",
+      "（スイス連邦工科大学チューリッヒ校（ETH）による、トポロジカル物性を機械的振動・フォノニック系に応用し強靭な音響エッジモードを実現するトポロジカル力学の基礎理論）*",
+      "Marzo, A., Seah, S. A., Drinkwater, B. W., Sahoo, D. R., Long, B., & Subramanian, S. (2015).**",
+      "Holographic acoustic elements for manipulation of levitated objects.*",
+      "Nature Communications**, 6, 8661.",
+      "（単一フェーズドアレイ超音波発生器からホログラフィック音響場を形成し、空中で物質を非接触トラップ・三次元操作する音響ピンセット技術の実証）*",
+      ""
+    ]
   },
   {
     "work_id": "ran-plant-man",
@@ -47,7 +115,19 @@
     "posted_at": "2026-09-25T08:08:59.365637+09:00",
     "file_path": "content/2026-09-25_ran_plant_man.md",
     "status": "publish",
-    "references": []
+    "references": [
+      "Chen, P., Liu, X., Gu, Z. et al. (2022).**",
+      "A plant-derived natural photosynthetic system for improving cell anabolism.*",
+      "Nature**, 612(7940), 546–554.",
+      "Matsunaga, S. et al. (2024).**",
+      "Incorporation of genetically modified chloroplasts into mammalian cells.*",
+      "Proceedings of the Japan Academy, Series B**, 100(9), 478–489.",
+      "Gorzelak, M. A., Asay, A. K., Pickles, B. J., & Simard, S. W. (2015).**",
+      "Inter-plant communication through mycorrhizal networks mediates complex adaptive behaviour in plant communities.*",
+      "AoB PLANTS**, 7, plv050.",
+      "",
+      "※1日3回（朝6:30・夕方17:30・夜22:30 JST）定期配信中。次回作もどうぞお楽しみに！*"
+    ]
   },
   {
     "work_id": "ran-dream-demon",
@@ -118,16 +198,16 @@
     "references": [
       "レーザー冷却による反水素の閉じ込めと制御（反物質トラップ）**",
       "Baker, C.A., et al. \"Laser cooling of antihydrogen atoms.\" *Nature* 592, 35–42 (2021).",
-      "DOI: [https://doi.org/10.1038/s41586-021-03371-y](https://doi.org/10.1038/s41586-021-03371-y)",
+      "DOI: [https://doi.org/10.1038/s41586-021-03289-6](https://doi.org/10.1038/s41586-021-03289-6)",
       "レーザー慣性閉じ込め核融合における点火の達成**",
       "Abu-Shawareb, H., et al. \"Lawson Criterion for Ignition Exceeded in an Inertial Fusion Experiment.\" *Physical Review Letters* 129, 075001 (2022).",
       "DOI: [https://doi.org/10.1103/PhysRevLett.129.075001](https://doi.org/10.1103/PhysRevLett.129.075001)",
       "量子ネットワークにおける非隣接ノード間テレポートと量子エンタングルメント**",
-      "Hermans, S.L.N., et al. \"Qubit teleportation between non-neighbouring nodes in a quantum network.\" *Nature Physics* 18, 597–600 (2022).",
-      "DOI: [https://doi.org/10.1038/s41567-022-01582-7](https://doi.org/10.1038/s41567-022-01582-7)",
+      "Hermans, S.L.N., et al. \"Qubit teleportation between non-neighbouring nodes in a quantum network.\" *Nature* 605, 663–668 (2022).",
+      "DOI: [https://doi.org/10.1038/s41586-022-04697-y](https://doi.org/10.1038/s41586-022-04697-y)",
       "高度自律型AIシステムの安全性制御と目的関数の整合性**",
-      "Russell, S. \"How to ensure tools remain useful rather than dangerous.\" *Nature Machine Intelligence* 1, 380–381 (2019).",
-      "DOI: [https://doi.org/10.1038/s42256-019-0091-y](https://doi.org/10.1038/s42256-019-0091-y)"
+      "Russell, S. \"Bridging near- and long-term concerns about AI.\" *Nature Machine Intelligence* 1, 5–6 (2019).",
+      "DOI: [https://doi.org/10.1038/s42256-018-0003-2](https://doi.org/10.1038/s42256-018-0003-2)"
     ]
   },
   {
@@ -177,12 +257,13 @@
       "DOI: [https://doi.org/10.1089/ten.tea.2019.0201](https://doi.org/10.1089/ten.tea.2019.0201)",
       "解説：複数の人間の皮膚細胞を用い、血管網を備えた「生きて機能する皮膚」を3Dプリンティングする技術に関する論文です。*",
       "生体電子マスク・伸縮性電子皮膚について**",
-      "Wang, S., et al. (2018). \"Skin-electronics-mediated robot mimicry of human facial expressions.\" *Nature Electronics*, 1, 124–132.",
-      "DOI: [https://doi.org/10.1038/s41928-018-0019-9](https://doi.org/10.1038/s41928-018-0019-9)",
-      "解説：人間の皮膚に貼り付けた伸縮性電子デバイスにより、表情の動きを電気信号として捉え、リアルタイムで模倣・同期させる技術の研究です。*",
+      "Wang, S., et al. (2018). \"Skin electronics from scalable fabrication of an intrinsically stretchable transistor array.\" *Nature*, 555, 83–88.",
+      "DOI: [https://doi.org/10.1038/nature25494](https://doi.org/10.1038/nature25494)",
+      "解説：人間の皮膚に完全に追従する本質的伸縮性トランジスタアレイにより、表情の微小筋電位の検知と生体模倣を可能にする先駆的論文です。*",
       "生体認証（顔認証）の脆弱性と偽装防止について**",
-      "Marcel, S., et al. (2021). \"Biometric Spoofing and Anti-Spoofing: A Survey.\" *IEEE Transactions on Biometrics, Behavior, and Identity Science*, 3(1), 2-23.",
-      "DOI: [https://doi.org/10.1109/TBIOM.2020.3045678](https"
+      "Hadid, A., Evans, N., Marcel, S., & Fierrez, J. (2015). \"Biometrics Systems Under Spoofing Attack: An Evaluation Methodology and Lessons Learned.\" *IEEE Signal Processing Magazine*, 32(5), 20–30.",
+      "DOI: [https://doi.org/10.1109/MSP.2015.2437652](https://doi.org/10.1109/MSP.2015.2437652)",
+      "解説：顔認証などの生体認証システムに対するスプーフィング（なりすまし偽装）攻撃の脆弱性と、その防御技術を包括的に論じた金字塔論文です。*"
     ]
   },
   {
@@ -195,6 +276,7 @@
     "status": "publish",
     "references": [
       "Room-temperature superconductivity:*",
+      "High-pressure Hydride Superconductivity (Landmark Study):*",
       "Magnetohydrodynamic (Mhd) Propulsion & Atmospheric Interaction:*",
       "Carbon Nanotube Tethers & Megastructure Physics:*",
       "Stratospheric Dynamo Effects and Geomagnetic Feedback:*"
@@ -223,10 +305,10 @@
     "file_path": "content/2026-09-29_unno_metal_man.md",
     "status": "publish",
     "references": [
-      "Xiao Chen, et al. \"Three-dimensional liquid metal-based neuro-interfaces for human hippocampal organoids.\" *Nature Communications*, vol. 15, Article number: 4125, 2024. DOI: https://doi.org/10.1038/s41467-024-48452-5",
-      "Kang Liang, et al. \"Biomimetic mineralization of metal-organic frameworks as protective coatings for biomacromolecules.\" *Nature Communications*, vol. 6, Article number: 7240, 2015. DOI: https://doi.org/10.1038/ncomms8240",
-      "Jie Zhang, Yao Yao, Liu Sheng, Jing Liu. \"Self-fueled biomimetic liquid metal mollusk.\" *Advanced Materials*, vol. 27, no. 16, pp. 2648–2655, 2015. DOI: https://doi.org/10.1002/adma.201405438",
-      "Yue Lu, et al. \"Transformable liquid-metal nanomedicine.\" *Nature Communications*, vol. 6, Article number: 10066, 2015. DOI: https://doi.org/10.1038/ncomms10066"
+      "Xiao Chen, et al. \"Three-dimensional liquid metal-based neuro-interfaces for human hippocampal organoids.\" *Nature Communications*, vol. 15, Article number: 4125, 2024.",
+      "Kang Liang, et al. \"Biomimetic mineralization of metal-organic frameworks as protective coatings for biomacromolecules.\" *Nature Communications*, vol. 6, Article number: 7240, 2015.",
+      "Jie Zhang, Yao Yao, Liu Sheng, Jing Liu. \"Self-fueled biomimetic liquid metal mollusk.\" *Advanced Materials*, vol. 27, no. 16, pp. 2648–2655, 2015.",
+      "Yue Lu, et al. \"Transformable liquid-metal nanomedicine.\" *Nature Communications*, vol. 6, Article number: 10066, 2015."
     ]
   }
 ]

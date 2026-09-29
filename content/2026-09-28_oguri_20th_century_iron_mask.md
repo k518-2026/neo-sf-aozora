@@ -218,10 +218,11 @@ tags: ["SF", "青空文庫", "小栗虫太郎", "最先端科学", "明るい未
    - *解説：複数の人間の皮膚細胞を用い、血管網を備えた「生きて機能する皮膚」を3Dプリンティングする技術に関する論文です。*
 
 3. **生体電子マスク・伸縮性電子皮膚について**
-   - Wang, S., et al. (2018). "Skin-electronics-mediated robot mimicry of human facial expressions." *Nature Electronics*, 1, 124–132.
-   - DOI: [https://doi.org/10.1038/s41928-018-0019-9](https://doi.org/10.1038/s41928-018-0019-9)
-   - *解説：人間の皮膚に貼り付けた伸縮性電子デバイスにより、表情の動きを電気信号として捉え、リアルタイムで模倣・同期させる技術の研究です。*
+   - Wang, S., et al. (2018). "Skin electronics from scalable fabrication of an intrinsically stretchable transistor array." *Nature*, 555, 83–88.
+   - DOI: [https://doi.org/10.1038/nature25494](https://doi.org/10.1038/nature25494)
+   - *解説：人間の皮膚に完全に追従する本質的伸縮性トランジスタアレイにより、表情の微小筋電位の検知と生体模倣を可能にする先駆的論文です。*
 
 4. **生体認証（顔認証）の脆弱性と偽装防止について**
-   - Marcel, S., et al. (2021). "Biometric Spoofing and Anti-Spoofing: A Survey." *IEEE Transactions on Biometrics, Behavior, and Identity Science*, 3(1), 2-23.
-   - DOI: [https://doi.org/10.1109/TBIOM.2020.3045678](https
+   - Hadid, A., Evans, N., Marcel, S., & Fierrez, J. (2015). "Biometrics Systems Under Spoofing Attack: An Evaluation Methodology and Lessons Learned." *IEEE Signal Processing Magazine*, 32(5), 20–30.
+   - DOI: [https://doi.org/10.1109/MSP.2015.2437652](https://doi.org/10.1109/MSP.2015.2437652)
+   - *解説：顔認証などの生体認証システムに対するスプーフィング（なりすまし偽装）攻撃の脆弱性と、その防御技術を包括的に論じた金字塔論文です。*
