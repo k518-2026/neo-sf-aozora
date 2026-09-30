@@ -346,5 +346,20 @@
       "Friston, K. (2010). \"The free-energy principle: a unified brain theory?.\" *Nature Reviews Neuroscience*, 11(2), 127-138.",
       "DOI: [https://doi.org/10.1038/nrn2787](https://doi.org/10.1038/nrn2787)"
     ]
+  },
+  {
+    "work_id": "edogawa-mirror-hell",
+    "original_title": "鏡地獄",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "鏡地獄――トポロジカル量子共振器による意識拡張と宇宙背景放射の合一",
+    "posted_at": "2026-09-30T17:40:56.090691+09:00",
+    "file_path": "content/2026-09-30_edogawa_mirror_hell.md",
+    "status": "publish",
+    "references": [
+      "Pendry, J. B. (2000). Negative Refraction Makes a Perfect Lens. *Physical Review Letters*, 85(18), 3966–3969. [https://doi.org/10.1103/PhysRevLett.85.3966](https://doi.org/10.1103/PhysRevLett.85.3966)",
+      "Ozawa, T., Price, H. M., Amo, A., Goldman, N., Hafezi, M., Lu, L., Rechtsman, M. C., Schuster, D., Simon, J., Zilberberg, O., & Carusotto, I. (2019). Topological photonics. *Reviews of Modern Physics*, 91(1), 015006. [https://doi.org/10.1103/RevModPhys.91.015006](https://doi.org/10.1103/RevModPhys.91.015006)",
+      "Aspelmans, M., Kippenberg, T. J., & Marquardt, F. (2014). Cavity optomechanics. *Reviews of Modern Physics*, 86(4), 1391–1452. [https://doi.org/10.1103/RevModPhys.86.1391](https://doi.org/10.1103/RevModPhys.86.1391)",
+      "Haffner, H., Roos, C. F., & Blatt, R. (2008). Quantum computing with trapped ions. *Physics Reports*, 469(4), 155–203. [https://doi.org/10.1016/j.physrep.2008.09.003](https://doi.org/10.1016/j.physrep.2008.09.003)"
+    ]
   }
 ]

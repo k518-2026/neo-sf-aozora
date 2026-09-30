@@ -254,5 +254,21 @@
     "narration_file": "16_人間椅子_narration.txt",
     "full_file": "16_人間椅子_full.txt",
     "original_md_file": "16_人間椅子.md"
+  },
+  {
+    "work_no": 17,
+    "work_id": "edogawa-mirror-hell",
+    "title": "鏡地獄",
+    "subtitle": "トポロジカル量子共振器による意識拡張と宇宙背景放射の合一",
+    "attribution": "江戸川乱歩『鏡地獄』（青空文庫）",
+    "original_author": "江戸川乱歩",
+    "original_title": "鏡地獄",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card57343.html",
+    "modern_tech": "光学メタマテリアル、負屈折率フォトニック結晶キャビティ、トポロジカル位相幾何学、量子もつれ光子イマーシブ観測",
+    "summary": "全方位完全反射の球体鏡に身を投じた男の狂気。現代では、光子の無限反復反射による非ユークリッド量子コヒーレンス空間で、宇宙背景放射と意識が調和する究極のワンダー体験。",
+    "char_count": 2905,
+    "narration_file": "17_鏡地獄_narration.txt",
+    "full_file": "17_鏡地獄_full.txt",
+    "original_md_file": "17_鏡地獄.md"
   }
 ]
