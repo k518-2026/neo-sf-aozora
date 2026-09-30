@@ -384,5 +384,20 @@
       "Nash, J. F. (1950). \"Equilibrium points in n-person games.\" *Proceedings of the National Academy of Sciences (PNAS)*, 36(1), 48–49.",
       "DOI: [https://doi.org/10.1073/pnas.36.1.48](https://doi.org/10.1073/pnas.36.1.48)"
     ]
+  },
+  {
+    "work_id": "edogawa-attic-stroller",
+    "original_title": "屋根裏の散歩者",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "屋根裏の散歩者――不可視の散乱場における位相共鳴",
+    "posted_at": "2026-10-01T06:08:00.458972+09:00",
+    "file_path": "content/2026-10-01_edogawa_attic_stroller.md",
+    "status": "publish",
+    "references": [
+      "Zhao, M., Li, T., Abu Alsheikh, O., Tian, Y., Zhao, H., Torralba, A., & Katabi, D.** (2018). *Through-Wall Human Pose Estimation Using Radio Signals*. Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition (CVPR), 7356-7365.",
+      "Adib, F., & Katabi, D.** (2013). *See through walls with Wi-Fi!* ACM SIGCOMM Computer Communication Review, 43(4), 75-86.",
+      "Tonouchi, M.** (2007). *Cutting-edge terahertz technology*. Nature Photonics, 1(2), 97-105.",
+      "Candès, E. J., & Wakin, M. B.** (2008). *An Introduction To Compressive Sampling*. IEEE Signal Processing Magazine, 25(2), 21-30."
+    ]
   }
 ]

@@ -286,5 +286,21 @@
     "narration_file": "18_心理試験_narration.txt",
     "full_file": "18_心理試験_full.txt",
     "original_md_file": "18_心理試験.md"
+  },
+  {
+    "work_no": 19,
+    "work_id": "edogawa-attic-stroller",
+    "title": "屋根裏の散歩者",
+    "subtitle": "不可視の散乱場における位相共鳴",
+    "attribution": "江戸川乱歩『屋根裏の散歩者』（青空文庫）",
+    "original_author": "江戸川乱歩",
+    "original_title": "屋根裏の散歩者",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56649.html",
+    "modern_tech": "Wi-Fi電波反射による壁透過ポーズ推定（Through-wall RF sensing）、スパースモデリング・圧縮センシング逆問題解析、テラヘルツ非破壊スキャン",
+    "summary": "下宿の屋根裏から他人の生活を覗き見る男。現代では、壁の向こうの不可視の電波散乱行列から数理逆問題解析で生体信号を復元し、突発事故から命を救う遠隔共感テクノロジー。",
+    "char_count": 4320,
+    "narration_file": "19_屋根裏の散歩者_narration.txt",
+    "full_file": "19_屋根裏の散歩者_full.txt",
+    "original_md_file": "19_屋根裏の散歩者.md"
   }
 ]
