@@ -1,14 +1,19 @@
 name: Thrice-Daily Neo Aozora Sci-Fi Reboot to WordPress
 
+# Prevent overlapping runs (e.g., if manual dispatch and delayed schedule trigger near the same time)
+concurrency:
+  group: neo-sf-aozora-publish
+  cancel-in-progress: false
+
 on:
-  # Thrice-daily scheduled runs:
-  # 1) 朝の通勤前: 21:30 UTC = 06:30 JST (通勤前に届くよう朝6時半に配信)
-  # 2) 夕方の通勤前: 08:30 UTC = 17:30 JST (帰宅通勤前に届くよう夕方5時半に配信)
-  # 3) 夜寝る前: 13:30 UTC = 22:30 JST (就寝前のリラックスタイム夜10時半に配信)
+  # Thrice-daily scheduled runs (triggered at :15 to avoid GitHub Actions :30 queue congestion, completing right around 06:30, 17:30, 22:30 JST):
+  # 1) 朝の通勤前: 21:15 UTC = 06:15 JST 起動 -> 06:30 JST 頃までに配信完了
+  # 2) 夕方の通勤前: 08:15 UTC = 17:15 JST 起動 -> 17:30 JST 頃までに配信完了
+  # 3) 夜寝る前: 13:15 UTC = 22:15 JST 起動 -> 22:30 JST 頃までに配信完了
   schedule:
-    - cron: '30 21 * * *'
-    - cron: '30 8 * * *'
-    - cron: '30 13 * * *'
+    - cron: '15 21 * * *'
+    - cron: '15 8 * * *'
+    - cron: '15 13 * * *'
 
   # Manual execution from GitHub Actions UI
   workflow_dispatch:
@@ -108,6 +113,7 @@ jobs:
           INPUT_REPOST: ${{ github.event.inputs.repost }}
           INPUT_ENDING_THEME: ${{ github.event.inputs.ending_theme }}
         run: |
+          git pull --rebase origin main || true
           ARGS=""
           if [ "$INPUT_DRY_RUN" = "true" ]; then
             ARGS="$ARGS --dry-run"

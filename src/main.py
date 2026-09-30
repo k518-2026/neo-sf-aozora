@@ -1,4 +1,5 @@
 import argparse
+import os
 import sys
 import logging
 from datetime import datetime, timezone, timedelta
@@ -144,6 +145,23 @@ def main():
 
     # Case 3: Automated selection/generation from Aozora catalog
     else:
+        # Prevent duplicate consecutive posts when manual dispatch and delayed cron overlap
+        if os.getenv("GITHUB_EVENT_NAME") == "schedule" and not args.force and history_mgr.history:
+            last_entry = history_mgr.history[-1]
+            last_posted_str = last_entry.get("posted_at", "")
+            if last_posted_str:
+                try:
+                    last_dt = datetime.fromisoformat(last_posted_str)
+                    elapsed_minutes = (datetime.now(JST) - last_dt).total_seconds() / 60.0
+                    if 0 <= elapsed_minutes < 120:
+                        logger.info(
+                            f"A story ('{last_entry.get('reboot_title')}') was already published "
+                            f"{elapsed_minutes:.1f} minutes ago. Skipping scheduled run to avoid duplicate posting."
+                        )
+                        return
+                except Exception as e:
+                    logger.warning(f"Could not parse last posted_at timestamp: {e}")
+
         target_work = history_mgr.select_next_work(work_id=args.work_id, force=args.force)
         if not target_work:
             logger.error("No unposted works found in catalog! Use --force to reboot an earlier work.")
