@@ -240,13 +240,14 @@ class StoryGenerator:
                             f"(Round {round_num}, Candidate {idx + 1}/{len(model_candidates)}, Try {attempt}/2)..."
                         )
                         try:
+                            max_tokens = 8192 if "2.0" in current_model else 16384
                             response = client.models.generate_content(
                                 model=current_model,
                                 contents=prompt,
                                 config=types.GenerateContentConfig(
                                     system_instruction=SYSTEM_PROMPT,
                                     temperature=0.8,
-                                    max_output_tokens=8192,
+                                    max_output_tokens=max_tokens,
                                     http_options=types.HttpOptions(timeout=120000)
                                 )
                             )
@@ -268,8 +269,17 @@ class StoryGenerator:
                                 )
                                 break
 
-                            # DOI Verification check: ensure references have real, reachable DOIs
+                            # Completeness & DOI Verification check: ensure references section and real DOIs exist
                             dois = re.findall(r'https?://doi\.org/([^\s\)\]\>]+)', content)
+                            if "引用・参考文献" not in content or not dois:
+                                logger.warning(
+                                    f"Model '{current_model}' output was truncated or missing DOI references. "
+                                    f"Retrying generation..."
+                                )
+                                if attempt == 1:
+                                    continue
+                                break
+
                             invalid_dois = []
                             for d in dois:
                                 d_clean = d.rstrip(".)],>")

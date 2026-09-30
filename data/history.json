@@ -370,6 +370,19 @@
     "posted_at": "2026-09-30T22:34:18.008429+09:00",
     "file_path": "content/2026-09-30_edogawa_psychological_test.md",
     "status": "publish",
-    "references": []
+    "references": [
+      "ゼロ知識証明と対話型証明システムの計算複雑性（チューリング賞受賞・金字塔論文）**",
+      "Goldwasser, S., Micali, S., & Rackoff, C. (1989). \"The knowledge complexity of interactive proof systems.\" *SIAM Journal on Computing*, 18(1), 186–208.",
+      "DOI: [https://doi.org/10.1137/0218012](https://doi.org/10.1137/0218012)",
+      "マイクロサッカード（微小眼球運動）と潜在的注意・視覚認知の神経科学**",
+      "Martinez-Conde, S., Macknik, S. L., & Hubel, D. H. (2004). \"The role of fixational eye movements in visual perception.\" *Nature Reviews Neuroscience*, 5(3), 229–240.",
+      "DOI: [https://doi.org/10.1038/nrn1348](https://doi.org/10.1038/nrn1348)",
+      "fNIRS（機能的近赤外分光法）によるヒト脳機能イメージングの基礎と応用**",
+      "Ferrari, M., & Quaresima, V. (2012). \"A brief review on the history of human functional near-infrared spectroscopy (fNIRS) development and fields of application.\" *NeuroImage*, 63(2), 921–935.",
+      "DOI: [https://doi.org/10.1016/j.neuroimage.2012.03.049](https://doi.org/10.1016/j.neuroimage.2012.03.049)",
+      "非協力ゲームにおけるナッシュ均衡点の存在証明**",
+      "Nash, J. F. (1950). \"Equilibrium points in n-person games.\" *Proceedings of the National Academy of Sciences (PNAS)*, 36(1), 48–49.",
+      "DOI: [https://doi.org/10.1073/pnas.36.1.48](https://doi.org/10.1073/pnas.36.1.48)"
+    ]
   }
 ]
