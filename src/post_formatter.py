@@ -288,10 +288,12 @@ def format_post_content(
     if next_work and "次回" not in cleaned_body and "次回作の予告" not in cleaned_body:
         cleaned_body += build_next_work_preview(next_work)
 
-    # Pre-clean 1: Automatically strip any '起', '承', '転', '結' headers or markers
+    # Pre-clean 1: Automatically strip any '起', '承', '転', '結' headers or meta part labels ('第一部：小説本文', '第二部：', '第三部：')
     cleaned_body = re.sub(r"^[ \t]*#+[ \t]*[【\[（(]?[起承転結][】\]）)]?.*$", "", cleaned_body, flags=re.MULTILINE)
     cleaned_body = re.sub(r"[【\[（(][起承転結][】\]）)]", "", cleaned_body)
     cleaned_body = re.sub(r"^[ \t]*[【\[（(]?[起承転結][】\]）)]?[ \t]*$", "", cleaned_body, flags=re.MULTILINE)
+    cleaned_body = re.sub(r"^[ \t]*#+[ \t]*第[一二三123]部[：:\s]*小説本文.*$", "", cleaned_body, flags=re.MULTILINE)
+    cleaned_body = re.sub(r"^(#+[ \t]*)第[一二三123]部[：:\s]*", r"\1", cleaned_body, flags=re.MULTILINE)
 
     # Pre-clean 2: Replace markdown hr lines (---, ***, ___) with safe scene dividers to prevent email signature truncation
     cleaned_body = re.sub(r"^[ \t]*[-*_]{3,}[ \t]*$", "◆ ◆ ◆", cleaned_body, flags=re.MULTILINE)
