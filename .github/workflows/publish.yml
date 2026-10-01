@@ -65,6 +65,11 @@ on:
           - romance
           - mystery
         default: 'random'
+      x_only:
+        description: 'X (Twitter) test/repost only (post latest published work to X without sending WordPress email)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -118,6 +123,7 @@ jobs:
           INPUT_WORK_ID: ${{ github.event.inputs.work_id }}
           INPUT_REPOST: ${{ github.event.inputs.repost }}
           INPUT_ENDING_THEME: ${{ github.event.inputs.ending_theme }}
+          INPUT_X_ONLY: ${{ github.event.inputs.x_only }}
         run: |
           git pull --rebase origin main || true
           ARGS=""
@@ -125,6 +131,10 @@ jobs:
             ARGS="$ARGS --dry-run"
           else
             ARGS="$ARGS --send"
+          fi
+
+          if [ "$INPUT_X_ONLY" = "true" ]; then
+            ARGS="$ARGS --x-only"
           fi
 
           if [ "$INPUT_FORCE" = "true" ]; then

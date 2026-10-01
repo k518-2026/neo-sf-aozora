@@ -99,6 +99,11 @@ def main():
         help="Optional: Ending theme ('random', 'bright' (明るい未来), 'dystopia' (ディストピア), 'romance' (ラブロマンス), 'mystery' (ミステリー). Default: random with 3:2:3:2 ratio)"
     )
     parser.add_argument(
+        "--x-only",
+        action="store_true",
+        help="Post only to X (Twitter) for the latest published work (or specified --work-id / --file) without sending WordPress email"
+    )
+    parser.add_argument(
         "--verbose", "-v",
         action="store_true",
         help="Enable debug logging"
@@ -121,6 +126,30 @@ def main():
     is_dry_run = True
     if args.send and not args.dry_run:
         is_dry_run = False
+
+    if args.x_only:
+        target_work = None
+        reboot_title = ""
+        if args.work_id:
+            target_work = next((w for w in history_mgr.catalog if w["id"] == args.work_id), None)
+            matching_hist = [h for h in history_mgr.history if h.get("work_id") == args.work_id]
+            if matching_hist:
+                reboot_title = matching_hist[-1].get("reboot_title", "")
+        elif history_mgr.history:
+            last_entry = history_mgr.history[-1]
+            w_id = last_entry.get("work_id", "")
+            reboot_title = last_entry.get("reboot_title", "")
+            target_work = next((w for w in history_mgr.catalog if w["id"] == w_id), None)
+        if not target_work:
+            logger.error("Could not find target work for --x-only.")
+            sys.exit(1)
+        if not reboot_title:
+            reboot_title = target_work.get("title", "")
+        x_poster = XPoster(config)
+        res = x_poster.post_update(work=target_work, reboot_title=reboot_title, dry_run=is_dry_run)
+        if not res.get("success") and not is_dry_run:
+            sys.exit(1)
+        return
 
     target_file = None
     target_work = None
