@@ -10,6 +10,7 @@ from src.history_manager import HistoryManager
 from src.story_generator import StoryGenerator
 from src.post_formatter import format_post_content
 from src.mail_sender import WordPressMailSender
+from src.x_poster import XPoster
 
 JST = timezone(timedelta(hours=9))
 
@@ -142,6 +143,12 @@ def main():
             logger.error(f"Story file not found: {target_file}")
             sys.exit(1)
         logger.info(f"Using direct file: {target_file}")
+        file_text = target_file.read_text(encoding="utf-8", errors="ignore")
+        stem_norm = target_file.stem.replace("_", "-")
+        for w in history_mgr.catalog:
+            if w["id"] in stem_norm or f"『{w['title']}』" in file_text:
+                target_work = w
+                break
 
     # Case 3: Automated selection/generation from Aozora catalog
     else:
@@ -221,13 +228,22 @@ def main():
         preview_file.write_text(formatted.content_html, encoding="utf-8")
         logger.info(f"Rendered HTML saved to: {preview_file.resolve()}")
 
-    # Dispatch via SMTP
+    # Dispatch via SMTP to WordPress
     sender = WordPressMailSender(config)
     result = sender.send_post(formatted, dry_run=is_dry_run)
 
     if not result.get("success"):
         logger.error(f"Dispatch failed: {result.get('error')}")
         sys.exit(1)
+
+    # Simultaneously post original work name and SF reboot perspective to X (Twitter)
+    if formatted.status == "publish" or is_dry_run:
+        x_poster = XPoster(config)
+        x_poster.post_update(
+            work=target_work,
+            reboot_title=formatted.title,
+            dry_run=is_dry_run
+        )
 
     # If live dispatch was successful, record in history
     if not is_dry_run and target_work:

@@ -32,6 +32,12 @@ class SMTPConfig:
     wp_post_email: str
     default_status: str
     use_jetpack_shortcodes: bool
+    x_api_key: str = ""
+    x_api_secret: str = ""
+    x_access_token: str = ""
+    x_access_token_secret: str = ""
+    x_webhook_url: str = ""
+    wp_site_url: str = ""
 
 def get_config() -> SMTPConfig:
     """Retrieve and parse configuration from environment variables."""
@@ -46,6 +52,13 @@ def get_config() -> SMTPConfig:
     default_status = os.getenv("DEFAULT_POST_STATUS", "publish")
     use_jetpack_shortcodes = os.getenv("USE_JETPACK_SHORTCODES", "true").lower() in ("true", "1", "yes")
 
+    x_api_key = os.getenv("X_API_KEY") or os.getenv("TWITTER_API_KEY", "")
+    x_api_secret = os.getenv("X_API_SECRET") or os.getenv("TWITTER_API_SECRET", "")
+    x_access_token = os.getenv("X_ACCESS_TOKEN") or os.getenv("TWITTER_ACCESS_TOKEN", "")
+    x_access_token_secret = os.getenv("X_ACCESS_TOKEN_SECRET") or os.getenv("TWITTER_ACCESS_TOKEN_SECRET", "")
+    x_webhook_url = os.getenv("X_WEBHOOK_URL", "")
+    wp_site_url = os.getenv("WP_SITE_URL", "")
+
     return SMTPConfig(
         host=host,
         port=port,
@@ -57,4 +70,10 @@ def get_config() -> SMTPConfig:
         wp_post_email=wp_post_email,
         default_status=default_status,
         use_jetpack_shortcodes=use_jetpack_shortcodes,
+        x_api_key=x_api_key,
+        x_api_secret=x_api_secret,
+        x_access_token=x_access_token,
+        x_access_token_secret=x_access_token_secret,
+        x_webhook_url=x_webhook_url,
+        wp_site_url=wp_site_url,
     )

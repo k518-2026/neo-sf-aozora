@@ -106,6 +106,12 @@ jobs:
           SMTP_USE_TLS: ${{ secrets.SMTP_USE_TLS || 'true' }}
           SMTP_USE_SSL: ${{ secrets.SMTP_USE_SSL || 'false' }}
           WP_POST_EMAIL: ${{ secrets.WP_POST_EMAIL }}
+          WP_SITE_URL: ${{ secrets.WP_SITE_URL || vars.WP_SITE_URL || '' }}
+          X_API_KEY: ${{ secrets.X_API_KEY || secrets.TWITTER_API_KEY || '' }}
+          X_API_SECRET: ${{ secrets.X_API_SECRET || secrets.TWITTER_API_SECRET || '' }}
+          X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN || secrets.TWITTER_ACCESS_TOKEN || '' }}
+          X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET || secrets.TWITTER_ACCESS_TOKEN_SECRET || '' }}
+          X_WEBHOOK_URL: ${{ secrets.X_WEBHOOK_URL || '' }}
           DEFAULT_POST_STATUS: ${{ github.event.inputs.post_status || 'publish' }}
           INPUT_DRY_RUN: ${{ github.event.inputs.dry_run }}
           INPUT_FORCE: ${{ github.event.inputs.force }}

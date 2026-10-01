@@ -6,6 +6,7 @@ from src.post_formatter import format_post_content, parse_markdown_with_frontmat
 from src.mail_sender import WordPressMailSender
 from src.history_manager import HistoryManager
 from src.story_generator import StoryGenerator
+from src.x_poster import XPoster, build_x_post_text, calc_x_weight, build_oauth1_header
 
 class TestNeoAozoraSystem(unittest.TestCase):
     def setUp(self):
@@ -75,6 +76,40 @@ class TestNeoAozoraSystem(unittest.TestCase):
         for link in links:
             self.assertIn('target="_blank"', link, f"Link {link} must contain target=\"_blank\"")
             self.assertIn('rel="noopener noreferrer"', link, f"Link {link} must contain rel=\"noopener noreferrer\"")
+
+    def test_x_post_formatting_all_catalog_works(self):
+        mgr = HistoryManager()
+        for work in mgr.catalog:
+            reboot_title = f"{work['title']}――現代先端科学によるハードSFリブート"
+            for url in ("", "https://example.wordpress.com"):
+                post_text = build_x_post_text(work, reboot_title=reboot_title, site_url=url)
+                weight = calc_x_weight(post_text)
+                self.assertLessEqual(weight, 280, f"X post weight exceeded 280 for {work['id']}: {weight}")
+                self.assertIn(f"📖原典：{work['author']}『{work['title']}』", post_text)
+                self.assertIn("🔬SFリブートの視点：", post_text)
+
+    def test_x_poster_dry_run_and_oauth_header(self):
+        mgr = HistoryManager()
+        work = mgr.catalog[0]
+        poster = XPoster(self.config)
+        res = poster.post_update(work=work, reboot_title="十八時の音楽浴――ソノジェネティクス・シンフォニー", dry_run=True)
+        self.assertTrue(res["success"])
+        self.assertTrue(res["dry_run"])
+        self.assertLessEqual(res["weight"], 280)
+
+        header = build_oauth1_header(
+            method="POST",
+            url="https://api.x.com/2/tweets",
+            api_key="key123",
+            api_secret="sec456",
+            access_token="tok789",
+            access_token_secret="toksec012",
+            nonce="fixednonce",
+            timestamp="1700000000"
+        )
+        self.assertTrue(header.startswith("OAuth "))
+        self.assertIn('oauth_consumer_key="key123"', header)
+        self.assertIn('oauth_signature=', header)
 
 if __name__ == "__main__":
     unittest.main()
