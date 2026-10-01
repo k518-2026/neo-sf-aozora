@@ -399,5 +399,20 @@
       "Tonouchi, M.** (2007). *Cutting-edge terahertz technology*. Nature Photonics, 1(2), 97-105.",
       "Candès, E. J., & Wakin, M. B.** (2008). *An Introduction To Compressive Sampling*. IEEE Signal Processing Magazine, 25(2), 21-30."
     ]
+  },
+  {
+    "work_id": "edogawa-picture-traveler",
+    "original_title": "押絵と旅する男",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "押絵と旅する男――超伝導量子トポロジーと永遠の恋人",
+    "posted_at": "2026-10-01T17:10:33.811420+09:00",
+    "file_path": "content/2026-10-01_edogawa_picture_traveler.md",
+    "status": "publish",
+    "references": [
+      "Katori, H. (2011). Optical lattice clocks. *Nature Photonics*, 5(4), 203–210.",
+      "Arute, F., et al. (2019). Quantum supremacy using a programmable superconducting processor. *Nature*, 574(7779), 505–510.",
+      "Amari, S. (2016). *Information Geometry and Its Applications*. Springer Applied Mathematical Sciences, Vol. 194.",
+      "Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Das Sarma, S. (2008). Non-Abelian anyons and topological quantum computation. *Rev. Mod. Phys.*, 80(3), 1083."
+    ]
   }
 ]

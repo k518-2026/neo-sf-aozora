@@ -302,5 +302,21 @@
     "narration_file": "19_屋根裏の散歩者_narration.txt",
     "full_file": "19_屋根裏の散歩者_full.txt",
     "original_md_file": "19_屋根裏の散歩者.md"
+  },
+  {
+    "work_no": 20,
+    "work_id": "edogawa-picture-traveler",
+    "title": "押絵と旅する男",
+    "subtitle": "超伝導量子トポロジーと永遠の恋人",
+    "attribution": "江戸川乱歩『押絵と旅する男』（青空文庫）",
+    "original_author": "江戸川乱歩",
+    "original_title": "押絵と旅する男",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56645.html",
+    "modern_tech": "光格子時計による超精密時間操作、超並列量子チューリング完全回路、ニューロモルフィック・エピジェネティック・ホログラム",
+    "summary": "望遠鏡を逆さにして絵の中の美女と永遠を共にする老人。現代では、光速度限界で動作する超伝導量子チップの内部世界へとダイブし、計算論的時間の果てに愛する人と旅する至純のSF。",
+    "char_count": 2788,
+    "narration_file": "20_押絵と旅する男_narration.txt",
+    "full_file": "20_押絵と旅する男_full.txt",
+    "original_md_file": "20_押絵と旅する男.md"
   }
 ]
