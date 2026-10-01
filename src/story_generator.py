@@ -13,18 +13,51 @@ from typing import Dict, Any, Tuple, List, Optional
 logger = logging.getLogger(__name__)
 JST = timezone(timedelta(hours=9))
 
+import urllib.parse
+
+def clean_doi_string(raw_doi: str) -> str:
+    """
+    Cleans trailing punctuation from a DOI string while preserving balanced
+    parentheses inside valid DOIs (e.g., '10.1016/0031-9201(81)90046-7').
+    """
+    m = re.search(r'10\.\d{4,9}/[^\s\]\>\"\']+', raw_doi)
+    if not m:
+        return ""
+    d = m.group(0)
+    while d and d[-1] in ".,;]>":
+        d = d[:-1]
+    while d.endswith(")") and d.count(")") > d.count("("):
+        d = d[:-1]
+    while d and d[-1] in ".,;]>":
+        d = d[:-1]
+    return d
+
+
+def extract_dois_from_text(text: str) -> List[str]:
+    """
+    Extracts all unique DOI strings from markdown/text, properly handling
+    parentheses in Elsevier/SII DOIs inside markdown links [url](url).
+    """
+    raw_matches = re.findall(r'https?://doi\.org/(10\.\d{4,9}/[^\s\]\>\"\']+)', text)
+    seen = []
+    for raw in raw_matches:
+        cleaned = clean_doi_string(raw)
+        if cleaned and cleaned not in seen:
+            seen.append(cleaned)
+    return seen
+
+
 def check_doi_validity(doi_str: str) -> bool:
     """Checks if a DOI exists using the official DOI Handle REST API."""
-    doi_match = re.search(r'10\.\d{4,9}/[-._;()/:A-Za-z0-9]+', doi_str)
-    if not doi_match:
+    clean_doi = clean_doi_string(doi_str)
+    if not clean_doi:
         return False
-    clean_doi = doi_match.group(0).rstrip(".)],>")
-    url = f"https://doi.org/api/handles/{clean_doi}"
+    url = f"https://doi.org/api/handles/{urllib.parse.quote(clean_doi, safe='/:()-._;')}"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "AozoraSciFiBot/1.0"})
-        with urllib.request.urlopen(req, timeout=5) as res:
+        with urllib.request.urlopen(req, timeout=6) as res:
             if res.getcode() == 200:
-                data = json.loads(res.read().decode())
+                data = json.loads(res.read().decode("utf-8", errors="ignore"))
                 return data.get("responseCode") == 1
     except urllib.error.HTTPError as e:
         if e.code == 404:
@@ -35,6 +68,92 @@ def check_doi_validity(doi_str: str) -> bool:
         # Network timeout or intermittent error, do not block
         return True
     return False
+
+
+def resolve_doi_via_crossref(citation_text: str) -> Optional[str]:
+    """
+    Queries the official Crossref REST API using bibliographic citation text
+    to find the authentic, resolvable DOI when an LLM misremembers DOI digits.
+    """
+    # Strip markdown links, URLs, and formatting symbols to get clean bibliographic text
+    clean_query = re.sub(r'\[https?://[^\]]+\]\([^\)]+\)', '', citation_text)
+    clean_query = re.sub(r'https?://\S+', '', clean_query)
+    clean_query = re.sub(r'[*_`#>-]', ' ', clean_query)
+    clean_query = re.sub(r'^\s*\d+[\.\)]\s*', '', clean_query).strip()
+    if len(clean_query) < 12:
+        return None
+
+    params = urllib.parse.urlencode({
+        "query.bibliographic": clean_query[:300],
+        "rows": 3,
+        "select": "DOI,title,author,published-print,published-online,score"
+    })
+    url = f"https://api.crossref.org/works?{params}"
+    try:
+        req = urllib.request.Request(
+            url,
+            headers={"User-Agent": "AozoraSciFiBot/1.0 (https://github.com/k518-2026/neo-sf-aozora)"}
+        )
+        with urllib.request.urlopen(req, timeout=8) as res:
+            if res.getcode() == 200:
+                payload = json.loads(res.read().decode("utf-8", errors="ignore"))
+                items = payload.get("message", {}).get("items", [])
+                for item in items:
+                    cand_doi = item.get("DOI", "")
+                    if cand_doi and check_doi_validity(cand_doi):
+                        return cand_doi
+    except Exception as e:
+        logger.debug(f"Crossref lookup error for '{clean_query[:60]}': {e}")
+    return None
+
+
+def repair_references_in_content(content: str) -> Tuple[str, List[str], List[str]]:
+    """
+    Validates all DOIs in content. For any broken/hallucinated DOI:
+    1) Attempts to resolve the authentic DOI via Crossref from the citation line and replaces it in-place.
+    2) If Crossref cannot resolve it, removes the broken DOI link from that line so no 404 links are published.
+    Returns: (repaired_content, valid_dois, unresolved_dois)
+    """
+    dois = extract_dois_from_text(content)
+    valid_dois: List[str] = []
+    unresolved_dois: List[str] = []
+    repaired_content = content
+
+    for d in dois:
+        if check_doi_validity(d):
+            valid_dois.append(d)
+            continue
+
+        # Find the line containing this broken DOI to query Crossref
+        target_line = ""
+        for line in repaired_content.splitlines():
+            if d in line:
+                target_line = line
+                break
+
+        replacement_doi = resolve_doi_via_crossref(target_line) if target_line else None
+        if replacement_doi:
+            logger.info(f"Auto-repaired broken DOI '{d}' -> authentic Crossref DOI '{replacement_doi}'")
+            repaired_content = repaired_content.replace(d, replacement_doi)
+            if replacement_doi not in valid_dois:
+                valid_dois.append(replacement_doi)
+        else:
+            logger.warning(f"Could not resolve broken DOI '{d}' via Crossref; stripping broken link.")
+            unresolved_dois.append(d)
+            # Remove markdown link [https://doi.org/<d>](https://doi.org/<d>) or bare URL
+            escaped_d = re.escape(d)
+            repaired_content = re.sub(
+                rf'\s*\[https?://doi\.org/{escaped_d}\]\(https?://doi\.org/{escaped_d}\)\.?',
+                '',
+                repaired_content
+            )
+            repaired_content = re.sub(
+                rf'\s*https?://doi\.org/{escaped_d}\.?',
+                '',
+                repaired_content
+            )
+
+    return repaired_content, valid_dois, unresolved_dois
 
 # Ending themes and weighted random ratio (明るい未来:ディストピア:ラブロマンス:ミステリー = 3:2:3:2)
 ENDING_THEMES = [
@@ -226,15 +345,20 @@ class StoryGenerator:
 """
             model_candidates = self._get_model_candidates()
             last_error = None
+            retired_models = set()
+            best_story_candidate: Optional[Tuple[str, str, List[str]]] = None
 
             # Attempt generation across models with backoff retry
-            max_rounds = 2
+            max_rounds = 3
             for round_num in range(1, max_rounds + 1):
                 if round_num > 1:
                     logger.info(f"Round {round_num - 1} hit temporary server demand spikes. Pausing 10s before Round {round_num}...")
                     time.sleep(10)
 
                 for idx, current_model in enumerate(model_candidates):
+                    if current_model in retired_models:
+                        continue
+
                     # For each candidate, try up to 2 attempts if 503/high demand occurs
                     for attempt in range(1, 3):
                         logger.info(
@@ -272,7 +396,7 @@ class StoryGenerator:
                                 break
 
                             # Completeness & DOI Verification check: ensure references section and real DOIs exist
-                            dois = re.findall(r'https?://doi\.org/([^\s\)\]\>]+)', content)
+                            dois = extract_dois_from_text(content)
                             if "引用・参考文献" not in content or not dois:
                                 logger.warning(
                                     f"Model '{current_model}' output was truncated or missing DOI references. "
@@ -282,24 +406,30 @@ class StoryGenerator:
                                     continue
                                 break
 
-                            invalid_dois = []
-                            for d in dois:
-                                d_clean = d.rstrip(".)],>")
-                                if not check_doi_validity(d_clean):
-                                    invalid_dois.append(d_clean)
+                            repaired_content, valid_dois, unresolved_dois = repair_references_in_content(content)
+                            title, refs = self._extract_title_and_refs(repaired_content, work)
 
-                            if invalid_dois:
+                            # Save as backup candidate in case all subsequent retries hit 503
+                            if best_story_candidate is None or len(valid_dois) > 0:
+                                best_story_candidate = (repaired_content, title, refs)
+
+                            if not valid_dois:
                                 logger.warning(
-                                    f"Model '{current_model}' generated hallucinated/broken DOI(s): {invalid_dois}. "
-                                    f"Retrying generation for authentic citations..."
+                                    f"Model '{current_model}' had no valid DOIs even after Crossref repair "
+                                    f"(unresolved: {unresolved_dois}). Retrying generation..."
                                 )
                                 if attempt == 1:
                                     continue
                                 break
 
-                            title, refs = self._extract_title_and_refs(content, work)
-                            logger.info(f"Successfully generated story using '{current_model}'! Title: {title}, Length: {len(content)} chars")
-                            return content, title, refs
+                            if unresolved_dois:
+                                logger.info(
+                                    f"Cleaned {len(unresolved_dois)} unresolvable DOI(s); "
+                                    f"proceeding with {len(valid_dois)} verified authentic DOI(s)."
+                                )
+
+                            logger.info(f"Successfully generated story using '{current_model}'! Title: {title}, Length: {len(repaired_content)} chars")
+                            return repaired_content, title, refs
 
                         except Exception as e:
                             last_error = e
@@ -310,7 +440,8 @@ class StoryGenerator:
                             is_not_found = "404" in err_msg or "not found" in err_msg.lower()
 
                             if is_not_found:
-                                # Skip immediately if model name is completely invalid/retired
+                                # Skip immediately and remember retired model across rounds
+                                retired_models.add(current_model)
                                 logger.warning(f"Model '{current_model}' is not available (404/Retired). Skipping.")
                                 break
 
@@ -326,6 +457,10 @@ class StoryGenerator:
                                 logger.warning(f"Model '{current_model}' failed: {err_msg}. Moving to next candidate.")
                                 time.sleep(2)
                                 break
+
+            if best_story_candidate is not None:
+                logger.info("Returning best generated story candidate after model retries.")
+                return best_story_candidate
 
             logger.error(f"All model candidates failed. Last error: {last_error}", exc_info=True)
             return self._generate_fallback(work)

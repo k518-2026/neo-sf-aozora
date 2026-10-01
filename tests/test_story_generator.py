@@ -1,6 +1,11 @@
 import unittest
 from collections import Counter
-from src.story_generator import ENDING_THEMES, select_ending_theme
+from src.story_generator import (
+    ENDING_THEMES,
+    select_ending_theme,
+    clean_doi_string,
+    extract_dois_from_text,
+)
 
 class TestEndingThemeSelection(unittest.TestCase):
     def test_ending_themes_structure(self):
@@ -55,6 +60,20 @@ class TestEndingThemeSelection(unittest.TestCase):
         self.assertAlmostEqual(dystopia_ratio, 0.20, delta=0.04)
         self.assertAlmostEqual(romance_ratio, 0.30, delta=0.04)
         self.assertAlmostEqual(mystery_ratio, 0.20, delta=0.04)
+
+    def test_doi_extraction_with_parentheses(self):
+        """Ensure DOIs containing parentheses like 10.1016/0031-9201(81)90046-7 are extracted intact."""
+        md = (
+            "1. Dziewonski, A. M., & Anderson, D. L. (1981). Preliminary reference Earth model. "
+            "[https://doi.org/10.1016/0031-9201(81)90046-7](https://doi.org/10.1016/0031-9201(81)90046-7).\n"
+            "2. Tromp, J. (2005). [https://doi.org/10.1111/j.1365-246X.2004.02453.x](https://doi.org/10.1111/j.1365-246X.2004.02453.x)"
+        )
+        dois = extract_dois_from_text(md)
+        self.assertEqual(
+            dois,
+            ["10.1016/0031-9201(81)90046-7", "10.1111/j.1365-246X.2004.02453.x"]
+        )
+        self.assertEqual(clean_doi_string("10.1016/0031-9201(81)90046-7)."), "10.1016/0031-9201(81)90046-7")
 
 if __name__ == "__main__":
     unittest.main()
