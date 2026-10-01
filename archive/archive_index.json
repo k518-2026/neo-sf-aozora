@@ -334,5 +334,21 @@
     "narration_file": "21_押絵と旅する男_narration.txt",
     "full_file": "21_押絵と旅する男_full.txt",
     "original_md_file": "21_押絵と旅する男.md"
+  },
+  {
+    "work_no": 22,
+    "work_id": "unno-subterranean-battleship",
+    "title": "地底戦艦",
+    "subtitle": "地球核境界の密室殺人",
+    "attribution": "海野十三『地底戦艦』（青空文庫）",
+    "original_author": "海野十三",
+    "original_title": "地底戦艦",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000160/card873.html",
+    "modern_tech": "地震波トモグラフィーの境界要素逆問題解析、マントル対流超並列流体シミュレーション、超高圧ダイヤモンドアンビル極限物性、超耐熱タングステンナノ合金",
+    "summary": "地球内部のマントル層を突破し地底を進む地底戦艦。地球物理学と数理逆問題解析が解き明かす、地球コアに秘められた驚愕の真実。",
+    "char_count": 4266,
+    "narration_file": "22_地底戦艦_narration.txt",
+    "full_file": "22_地底戦艦_full.txt",
+    "original_md_file": "22_地底戦艦.md"
   }
 ]
