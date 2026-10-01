@@ -305,6 +305,22 @@
   },
   {
     "work_no": 20,
+    "work_id": "edogawa-panorama-island",
+    "title": "パノラマ島綺譚",
+    "subtitle": "非線形アトラクターの人工地獄",
+    "attribution": "江戸川乱歩『パノラマ島綺譚』（青空文庫）",
+    "original_author": "江戸川乱歩",
+    "original_title": "パノラマ島綺譚",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56651.html",
+    "modern_tech": "非線形カオスアトラクター制御、複雑系ネットワーク理論、合成生物学による発光植物、バイオジオエンジニアリング（地球惑星環境工学）",
+    "summary": "孤島を改造して地上の理想郷を築こうとした男の狂熱。現代では、島全体を数理複雑系の安定アトラクターとして設計・再構築した地球惑星環境工学の極致。",
+    "char_count": 4443,
+    "narration_file": "20_パノラマ島綺譚_narration.txt",
+    "full_file": "20_パノラマ島綺譚_full.txt",
+    "original_md_file": "20_パノラマ島綺譚.md"
+  },
+  {
+    "work_no": 21,
     "work_id": "edogawa-picture-traveler",
     "title": "押絵と旅する男",
     "subtitle": "超伝導量子トポロジーと永遠の恋人",
@@ -315,8 +331,8 @@
     "modern_tech": "光格子時計による超精密時間操作、超並列量子チューリング完全回路、ニューロモルフィック・エピジェネティック・ホログラム",
     "summary": "望遠鏡を逆さにして絵の中の美女と永遠を共にする老人。現代では、光速度限界で動作する超伝導量子チップの内部世界へとダイブし、計算論的時間の果てに愛する人と旅する至純のSF。",
     "char_count": 2788,
-    "narration_file": "20_押絵と旅する男_narration.txt",
-    "full_file": "20_押絵と旅する男_full.txt",
-    "original_md_file": "20_押絵と旅する男.md"
+    "narration_file": "21_押絵と旅する男_narration.txt",
+    "full_file": "21_押絵と旅する男_full.txt",
+    "original_md_file": "21_押絵と旅する男.md"
   }
 ]

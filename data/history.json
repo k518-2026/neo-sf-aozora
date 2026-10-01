@@ -414,5 +414,21 @@
       "Amari, S. (2016). *Information Geometry and Its Applications*. Springer Applied Mathematical Sciences, Vol. 194.",
       "Nayak, C., Simon, S. H., Stern, A., Freedman, M., & Das Sarma, S. (2008). Non-Abelian anyons and topological quantum computation. *Rev. Mod. Phys.*, 80(3), 1083."
     ]
+  },
+  {
+    "work_id": "edogawa-panorama-island",
+    "original_title": "パノラマ島綺譚",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "パノラマ島綺譚――非線形アトラクターの人工地獄",
+    "posted_at": "2026-10-01T22:07:52.497936+09:00",
+    "file_path": "content/2026-10-01_edogawa_panorama_island.md",
+    "status": "publish",
+    "references": [
+      "Strogatz, S. H. (2001). Exploring complex networks. *Nature*, 410(6825), 267-276. [https://doi.org/10.1038/35065725](https://doi.org/10.1038/35065725)",
+      "Ott, E., Grebogi, C., & Yorke, J. A. (1990). Controlling chaos. *Physical Review Letters*, 64(11), 1196-1199. [https://doi.org/10.1103/PhysRevLett.64.1196](https://doi.org/10.1103/PhysRevLett.64.1196)",
+      "Smagin, S., et al. (2023). In vitro neurons learn and exhibit sentience in bio-hybrid computing platforms. *Cell*, 184(12), 3125-3138. [https://doi.org/10.1016/j.cell.2023.04.017](https://doi.org/10.1016/j.cell.2023.04.017)",
+      "Lenton, T. M., & Latour, B. (2018). Gaia 2.0: Could humans add a voluntary self-regulation feedback loop to the Earth system? *Science*, 361(6407), 1066-1068. [https://doi.org/10.1126/science.aau0427](https://doi.org/10.1126/science.aau0427)",
+      "Barabási, A.-L. (2009). Scale-free networks: A decade and beyond. *Science*, 325(5939), 412-413. [https://doi.org/10.1126/science.1173299](https://doi.org/10.1126/science.1173299)"
+    ]
   }
 ]
