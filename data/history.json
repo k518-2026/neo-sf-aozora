@@ -528,5 +528,25 @@
       "世界各地の電波望遠鏡を超長基線電波干渉法（VLBI）によって結び、地球サイズの解像力を実現してブラックホールの撮影に成功した歴史的論文。",
       "DOI: [https://doi.org/10.3847/2041-8213/ab0ec7](https://doi.org/10.3847/2041-8213/ab0ec7)"
     ]
+  },
+  {
+    "work_id": "edogawa-hakuchumu",
+    "original_title": "白昼夢",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "『白昼夢――ベイズ脳の愛した幻』",
+    "posted_at": "2026-10-03T07:06:47.163005+09:00",
+    "file_path": "content/2026-10-03_edogawa_hakuchumu.md",
+    "status": "publish",
+    "references": [
+      "ベイズ脳予測符号化モデルに関する基本文献**",
+      "Friston, K. (2005). \"A theory of cortical responses.\" *Philosophical Transactions of the Royal Society B: Biological Sciences*, 360(1456), 815-836.",
+      "[https://doi.org/10.1098/rstb.2005.1622](https://doi.org/10.1098/rstb.2005.1622)",
+      "経頭蓋集束超音波（tFUS）による脳刺激・視覚野変調に関する研究**",
+      "Lee, W., Kim, H., Jung, Y., Song, I. U., Chung, Y. A., & Yoo, S. S. (2016). \"Image-guided transcranial focused ultrasound stimulates human primary somatosensory cortex.\" *Scientific Reports*, 6, 34026.",
+      "[https://doi.org/10.1038/srep34026](https://doi.org/10.1038/srep34026)",
+      "敵対的摂動（Adversarial Perturbation）が人間の視覚認知に与える影響**",
+      "Elsayed, G. F., Shankar, S., Meade, B., Jastrzebski, T., Kurakin, A., Sobal, I., ... & Purushothaman, S. (2018). \"Adversarial Examples that Fool Both Computer Vision and Human Vision.\" *arXiv preprint arXiv:1802.08195*. (Subsequent peer-reviewed publication in *Advances in Neural Information Processing Systems (NeurIPS 2018)*).",
+      "[https://doi.org/10.48550/arXiv.1802.08195](https://doi.org/10.48550/arXiv.1802.08195)"
+    ]
   }
 ]

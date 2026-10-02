@@ -414,5 +414,21 @@
     "narration_file": "26_火星兵団_narration.txt",
     "full_file": "26_火星兵団_full.txt",
     "original_md_file": "26_火星兵団.md"
+  },
+  {
+    "work_no": 27,
+    "work_id": "edogawa-hakuchumu",
+    "title": "白昼夢",
+    "subtitle": "ベイズ脳の愛した幻",
+    "attribution": "江戸川乱歩『白昼夢』（青空文庫）",
+    "original_author": "江戸川乱歩",
+    "original_title": "白昼夢",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56647.html",
+    "modern_tech": "経頭蓋集束超音波（tFUS）視覚野変調、敵対的摂動（Adversarial Perturbation）光音響パッチ、ベイズ脳予測符号化モデル",
+    "summary": "白昼の街頭で男が語る凄惨な殺人の告白は現実か幻覚か。現代では、脳のベイズ予測符号化モデルの死角を突く敵対的感覚パッチが引き起こす集団白昼夢。",
+    "char_count": 4508,
+    "narration_file": "27_白昼夢_narration.txt",
+    "full_file": "27_白昼夢_full.txt",
+    "original_md_file": "27_白昼夢.md"
   }
 ]

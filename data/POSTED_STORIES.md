@@ -33,3 +33,4 @@
 | 24 | 2026-10-02 | 電気風呂の怪死 | 電気風呂の怪死（海野十三） | トポロジカル絶縁体の基礎理論と物性**, M. Z. Hasan and C. L. Kane, "Colloquium: Topological insulators," *Reviews of Modern Physics*, vol. 82, no. 4, pp. 3045–3067, 2010. | Publish |
 | 25 | 2026-10-02 | 潜航艇「鷹の巣」 | 潜航艇「鷹の巣」（小栗虫太郎） | Ocean Acoustic Tomography:**, Munk, W., & Wunsch, C. (1979). "Ocean acoustic tomography: a scheme for large scale monitoring." *Deep Sea Research Part A. Oceanographic Research Papers*, 26(2), 123-161. | Publish |
 | 26 | 2026-10-03 | 火星兵団 | 火星兵団（海野十三） | Freitas, R. A., & Merkle, R. C.** (2004). *Kinematic Self-Replicating Machines*. Landes Bioscience., 自己複製機械（フォン・ノイマン・マシン）の工学的・数理的基礎理論と、宇宙探査への応用可能性を体系化した金字塔的著作。 | Publish |
+| 27 | 2026-10-03 | 『白昼夢 | 白昼夢（江戸川乱歩） | ベイズ脳予測符号化モデルに関する基本文献**, Friston, K. (2005). "A theory of cortical responses." *Philosophical Transactions of the Royal Society B: Biological Sciences*, 360(1456), 815-836. | Publish |
