@@ -445,5 +445,22 @@
       "Dubrovinsky, L., Dubrovinskaia, N., Prakapenka, V. B., & Abakumov, A. M. (2012). Implementation of micro-ball nanodiamond anvils for high-pressure studies above 6 Mbar. *Nature Communications*, 3, 1163.",
       "Lu, K., Lu, L., & Suresh, S. (2009). Strengthening Materials by Engineering Coherent Internal Boundaries at the Nanoscale. *Science*, 324(5925), 349–352."
     ]
+  },
+  {
+    "work_id": "unno-earth-theft",
+    "original_title": "地球盗難",
+    "original_author": "海野十三",
+    "reboot_title": "地球盗難――不変多様体のラプソディ",
+    "posted_at": "2026-10-02T17:10:24.315381+09:00",
+    "file_path": "content/2026-10-02_unno_earth_theft.md",
+    "status": "publish",
+    "references": [
+      "Yoshida, H. (1990).**",
+      "(解説: ハミルトン系の長期数値積分においてエネルギー不変量を厳密に保持する高次シンプレクティック積分法の基礎を確立した金字塔的論文。)*",
+      "Koon, W. S., Lo, M. W., Marsden, J. E., & Ross, S. D. (2000).**",
+      "(解説: 三体問題における不変多様体（Invariant Manifolds）とヘテロクリニック接続を利用した、低エネルギー宇宙飛翔体の軌道設計理論を提示した論文。)*",
+      "Abbott, B. P., et al. (LIGO Scientific Collaboration and Virgo Collaboration). (2016).**",
+      "(解説: 二体ブラックホール連星の合体から生じた重力波を直接検出した歴史的論文。本作品の重力波センシングと時空幾何学の現実的基盤。)*"
+    ]
   }
 ]
