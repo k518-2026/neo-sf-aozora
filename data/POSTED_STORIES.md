@@ -31,3 +31,4 @@
 | 22 | 2026-10-02 | 地底戦艦 | 地底戦艦（海野十三） | Garnero, E. J., & McNamara, A. K. (2008). Structure and Dynamics of Earth's Lower Mantle. *Science*, 320(5876), 626–628., Oganov, A. R., & Ono, S. (2004). Theoretical and experimental evidence for a post-perovskite phase of $\text{MgSiO}_3$ in Earth's D″ layer. *Nature*, 430(6998), 445–448. | Publish |
 | 23 | 2026-10-02 | 地球盗難 | 地球盗難（海野十三） | Yoshida, H. (1990).**, (解説: ハミルトン系の長期数値積分においてエネルギー不変量を厳密に保持する高次シンプレクティック積分法の基礎を確立した金字塔的論文。)* | Publish |
 | 24 | 2026-10-02 | 電気風呂の怪死 | 電気風呂の怪死（海野十三） | トポロジカル絶縁体の基礎理論と物性**, M. Z. Hasan and C. L. Kane, "Colloquium: Topological insulators," *Reviews of Modern Physics*, vol. 82, no. 4, pp. 3045–3067, 2010. | Publish |
+| 25 | 2026-10-02 | 潜航艇「鷹の巣」 | 潜航艇「鷹の巣」（小栗虫太郎） | Ocean Acoustic Tomography:**, Munk, W., & Wunsch, C. (1979). "Ocean acoustic tomography: a scheme for large scale monitoring." *Deep Sea Research Part A. Oceanographic Research Papers*, 26(2), 123-161. | Publish |

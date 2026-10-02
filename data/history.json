@@ -485,5 +485,28 @@
       "Stuart Hameroff and Roger Penrose, \"Consciousness in the universe: A review of the ‘Orch OR’ theory,\" *Physics of Life Reviews*, vol. 11, no. 1, pp. 39–78, 2014.",
       "DOI: [https://doi.org/10.1016/j.plrev.2013.08.002](https://doi.org/10.1016/j.plrev.2013.08.002)"
     ]
+  },
+  {
+    "work_id": "oguri-submarine-eagles-nest",
+    "original_title": "潜航艇「鷹の巣」",
+    "original_author": "小栗虫太郎",
+    "reboot_title": "潜航艇「鷹の巣」――深淵のシンフォニー",
+    "posted_at": "2026-10-02T22:38:21.748377+09:00",
+    "file_path": "content/2026-10-02_oguri_submarine_eagles_nest.md",
+    "status": "publish",
+    "references": [
+      "Ocean Acoustic Tomography:**",
+      "Munk, W., & Wunsch, C. (1979). \"Ocean acoustic tomography: a scheme for large scale monitoring.\" *Deep Sea Research Part A. Oceanographic Research Papers*, 26(2), 123-161.",
+      "DOI: [https://doi.org/10.1016/0198-0149(79)90073-6](https://doi.org/10.1016/0198-0149(79)90073-6)",
+      "（海洋音響トモグラフィーの概念を世界で初めて提唱した、歴史的かつ基礎的な論文です）*",
+      "Error-Correcting Codes in Extreme Environments:**",
+      "McEliece, R. J. (1977). *The Theory of Information and Coding: A Mathematical Framework for Communication*. Addison-Wesley. (See also applications in deep-space communications, e.g., NASA's Voyager missions using Reed-Solomon and Convolutional codes).",
+      "DOI: [https://doi.org/10.1017/CBO9780511622861](https://doi.org/10.1017/CBO9780511622861)",
+      "（宇宙探査などで実際に使われる、ノイズに極めて強い誤り訂正符号の数学的基礎を解説した名著・論文群です）*",
+      "AUV Swarm Intelligence:**",
+      "Leonard, N. E., Paley, D. A., Lekien, F., Sepulchre, R., Fratantoni, D. M., & Davis, R. E. (2007). \"Collective motion, Kalman filtering, and ocean gliders.\" *IEEE Journal of Oceanic Engineering*, 32(2), 324-340.",
+      "DOI: [https://doi.org/10.1109/JOE.2007.893685](https://doi.org/10.1109/JOE.2007.893685)",
+      "（水中ロボット群が、自律的に協調して海洋観測ネットワークを形成する制御アルゴリズムに関する先駆的な研究論文です）*"
+    ]
   }
 ]

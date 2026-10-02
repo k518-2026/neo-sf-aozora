@@ -382,5 +382,21 @@
     "narration_file": "24_電気風呂の怪死_narration.txt",
     "full_file": "24_電気風呂の怪死_full.txt",
     "original_md_file": "24_電気風呂の怪死.md"
+  },
+  {
+    "work_no": 25,
+    "work_id": "oguri-submarine-eagles-nest",
+    "title": "潜航艇「鷹の巣」",
+    "subtitle": "深淵のシンフォニー",
+    "attribution": "小栗虫太郎『潜航艇「鷹の巣」』（青空文庫）",
+    "original_author": "小栗虫太郎",
+    "original_title": "潜航艇「鷹の巣」",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000125/card1684.html",
+    "modern_tech": "低周波海洋音響トモグラフィー、極限環境誤り訂正符号、深海自律型AUV群知能",
+    "summary": "深海一万メートルの極限水圧下で消息を絶った潜航艇。海洋音響物理と情報理論の誤り訂正符号が、深海深淵からの暗号通信を復元する。",
+    "char_count": 3870,
+    "narration_file": "25_潜航艇「鷹の巣」_narration.txt",
+    "full_file": "25_潜航艇「鷹の巣」_full.txt",
+    "original_md_file": "25_潜航艇「鷹の巣」.md"
   }
 ]
