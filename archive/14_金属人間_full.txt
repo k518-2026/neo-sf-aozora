@@ -90,11 +90,14 @@
 
 【引用・参考文献（Scientific References）】
 
-1. Jie Zhang, yuxin Yao, et al. "Liquid Metal-based Soft Electronics and Biomedical Applications." *Nature Communications*, vol. 12, Article number: 2478, 2021.  
-   [https://doi.org/10.1038/s41467-021-22769-w](https://doi.org/10.1038/s41467-021-22769-w)
+1. Xiao Chen, et al. "Three-dimensional liquid metal-based neuro-interfaces for human hippocampal organoids." *Nature Communications*, vol. 15, Article number: 4125, 2024.  
+   [https://doi.org/10.1038/s41467-024-48452-5](https://doi.org/10.1038/s41467-024-48452-5)
 
-2. Yuan Lin, et al. "Biomineralization-Inspired Synthesis of Functional Nanomaterials and Their In Vivo Applications." *Science*, vol. 373, no. 6554, pp. 531-537, 2021.  
-   [https://doi.org/10.1126/science.abg1254](https://doi.org/10.1126/science.abg1254)
+2. Kang Liang, et al. "Biomimetic mineralization of metal-organic frameworks as protective coatings for biomacromolecules." *Nature Communications*, vol. 6, Article number: 7240, 2015.  
+   [https://doi.org/10.1038/ncomms8240](https://doi.org/10.1038/ncomms8240)
 
-3. Jing Liu, et al. "Assembling Liquid Metal Circuits and Microfluidic Systems Inside Living Organisms." *Advanced Materials*, vol. 32, no. 14, 1905872, 2020.  
-   [https://doi.org/10.1002/adma.201905872](https://doi.org/10.1002/adma.201905872)
+3. Jie Zhang, Yao Yao, Liu Sheng, Jing Liu. "Self-fueled biomimetic liquid metal mollusk." *Advanced Materials*, vol. 27, no. 16, pp. 2648–2655, 2015.  
+   [https://doi.org/10.1002/adma.201405438](https://doi.org/10.1002/adma.201405438)
+
+4. Yue Lu, et al. "Transformable liquid-metal nanomedicine." *Nature Communications*, vol. 6, Article number: 10066, 2015.  
+   [https://doi.org/10.1038/ncomms10066](https://doi.org/10.1038/ncomms10066)

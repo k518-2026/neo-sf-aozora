@@ -190,53 +190,73 @@ def update_archive_all() -> List[Dict[str, Any]]:
 
     catalog_map = {w["id"]: w for w in catalog}
 
-    # Mapping of known works
-    works_order = [
-        (1, "unno-18-music", Path("content/story.md")),
-        (2, "unno-fly-man", Path("content/2026-09-24_unno_fly_man.md")),
-        (3, "unno-cyborg-incident", Path("content/2026-09-24_unno_cyborg_incident.md")),
-        (4, "unno-vibration-demon", Path("content/2026-09-25_unno_vibration_demon.md")),
-        (5, "ran-plant-man", Path("content/2026-09-25_ran_plant_man.md")),
-    ]
+    # Mapping of known works: prioritize chronological order from data/history.json
+    works_order = []
+    existing_paths = set()
+    seen_work_ids = set()
 
-    # Also detect other markdown files in content/
-    existing_paths = {p.resolve() for _, _, p in works_order}
+    history_path = Path("data/history.json")
+    if history_path.exists():
+        try:
+            history_entries = json.loads(history_path.read_text(encoding="utf-8"))
+            for entry in history_entries:
+                w_id = entry.get("work_id", "")
+                fp_str = entry.get("file_path", "")
+                if fp_str:
+                    fp = Path(fp_str)
+                    if fp.exists() and fp.resolve() not in existing_paths and w_id not in seen_work_ids:
+                        next_no = len(works_order) + 1
+                        works_order.append((next_no, w_id, fp))
+                        existing_paths.add(fp.resolve())
+                        if w_id:
+                            seen_work_ids.add(w_id)
+        except Exception as e:
+            logger.warning(f"Could not read data/history.json for archive ordering: {e}")
+
+    # Fallback for any markdown files in content/ not yet in history.json
     content_dir = Path("content")
     if content_dir.exists():
         for f in sorted(content_dir.glob("*.md")):
             if f.resolve() not in existing_paths:
-                # determine work_id from name
                 name = f.stem
                 matched_w = None
                 for w in catalog:
                     if w["id"] in name or w["id"].replace("-", "_") in name:
                         matched_w = w
                         break
-                next_no = len(works_order) + 1
                 w_id = matched_w["id"] if matched_w else name
+                if w_id in seen_work_ids:
+                    continue
+                next_no = len(works_order) + 1
                 works_order.append((next_no, w_id, f))
                 existing_paths.add(f.resolve())
+                seen_work_ids.add(w_id)
 
-    # Clean up obsolete '無題' files from target directories if they exist
+    # Clean up obsolete or shifted numbered files from target directories
     target_dirs = [PROJECT_ARCHIVE_DIR]
     if EXTERNAL_TOOL_ARCHIVE_DIR.parent.exists():
         target_dirs.append(EXTERNAL_TOOL_ARCHIVE_DIR)
 
-    for out_dir in target_dirs:
-        if out_dir.exists():
-            for bad_file in out_dir.glob("*_無題*"):
-                try:
-                    bad_file.unlink()
-                    logger.info(f"Removed invalid archive file: {bad_file}")
-                except Exception as e:
-                    logger.warning(f"Failed to remove {bad_file}: {e}")
-
     archive_records = []
+    valid_filenames = {"README.md", "archive_index.json"}
     for no, w_id, path in works_order:
         if path.exists():
             cat_info = catalog_map.get(w_id, {})
             meta = archive_single_story(no, w_id, path, cat_info)
             archive_records.append(meta)
+            valid_filenames.add(meta["narration_file"])
+            valid_filenames.add(meta["full_file"])
+            valid_filenames.add(meta["original_md_file"])
+
+    for out_dir in target_dirs:
+        if out_dir.exists():
+            for existing_f in out_dir.iterdir():
+                if existing_f.is_file() and existing_f.name not in valid_filenames:
+                    try:
+                        existing_f.unlink()
+                        logger.info(f"Removed stale archive file: {existing_f}")
+                    except Exception as e:
+                        logger.warning(f"Failed to remove {existing_f}: {e}")
 
     # Write index JSON
     index_json = json.dumps(archive_records, ensure_ascii=False, indent=2)
