@@ -21,7 +21,8 @@ class TestNeoAozoraSystem(unittest.TestCase):
             from_name="SF Test Publisher",
             wp_post_email="secret_post@post.wordpress.com",
             default_status="publish",
-            use_jetpack_shortcodes=True
+            use_jetpack_shortcodes=True,
+            blogger_post_email="testuser.secret@blogger.com"
         )
 
     def test_story_file_exists(self):
@@ -60,13 +61,26 @@ class TestNeoAozoraSystem(unittest.TestCase):
         self.assertTrue(has_37, "Should include 3.7 fallback")
         self.assertTrue(has_38, "Should include 3.8 fallback")
 
-    def test_dry_run_send(self):
+    def test_dry_run_send_and_blogger_clean_format(self):
         formatted = format_post_content(str(self.story_path))
+        # WordPress version has Jetpack shortcodes
+        self.assertIn("[status publish]", formatted.content_html)
+        # Blogger clean version omits Jetpack shortcodes so Blogger doesn't print them literally
+        self.assertNotIn("[status publish]", formatted.content_html_clean)
+        self.assertNotIn("[category ", formatted.content_html_clean)
+        self.assertNotIn("[tags ", formatted.content_html_clean)
+
         sender = WordPressMailSender(self.config)
+        wp_msg = sender.create_mime_message(formatted, for_blogger=False)
+        blogger_msg = sender.create_mime_message(formatted, for_blogger=True)
+        self.assertEqual(wp_msg["To"], "secret_post@post.wordpress.com")
+        self.assertEqual(blogger_msg["To"], "testuser.secret@blogger.com")
+
         result = sender.send_post(formatted, dry_run=True)
         self.assertTrue(result["success"])
         self.assertTrue(result["dry_run"])
         self.assertEqual(result["to"], "secret_post@post.wordpress.com")
+        self.assertEqual(result["blogger_to"], ["testuser.secret@blogger.com"])
 
     def test_all_links_open_in_new_window(self):
         import re

@@ -13,73 +13,125 @@ logger = logging.getLogger(__name__)
 
 class WordPressMailSender:
     """
-    Sends posts to WordPress via Email using standard SMTP.
-    Supports Jetpack Post by Email, Postie, and standard WP mail receivers.
+    Sends posts to WordPress and Google Blogger via Email using standard SMTP.
+    Supports Jetpack Post by Email, Postie, standard WP mail receivers, and Blogger Post using Email.
     """
 
     def __init__(self, config: SMTPConfig):
         self.config = config
 
-    def create_mime_message(self, post: FormattedPost) -> MIMEMultipart:
-        """Constructs a MIMEMultipart email message with text and HTML parts."""
+    def create_mime_message(
+        self,
+        post: FormattedPost,
+        to_email: Optional[str] = None,
+        for_blogger: bool = False
+    ) -> MIMEMultipart:
+        """
+        Constructs a MIMEMultipart email message with text and HTML parts.
+        When for_blogger=True, omits WordPress Jetpack shortcodes ([status], [category], [tags])
+        so they do not appear as literal text at the bottom of Blogger posts.
+        """
         msg = MIMEMultipart("alternative")
         
-        # Subject becomes the WordPress Post Title
+        # Subject becomes the Post Title on both WordPress and Blogger
         msg["Subject"] = Header(post.title, "utf-8")
         
         # From header
         from_display = Header(self.config.from_name, "utf-8").encode()
         msg["From"] = f"{from_display} <{self.config.user}>"
         
-        # Destination: WordPress Post by Email secret inbox
-        msg["To"] = self.config.wp_post_email
+        # Destination inbox
+        recipient = to_email if to_email is not None else (
+            self.config.blogger_post_email if for_blogger else self.config.wp_post_email
+        )
+        msg["To"] = recipient
+
+        if for_blogger:
+            plain_body = post.content_plain_clean or post.content_plain
+            html_body = post.content_html_clean or post.content_html
+        else:
+            plain_body = post.content_plain
+            html_body = post.content_html
 
         # Attach text part and HTML part
-        part_text = MIMEText(post.content_plain, "plain", "utf-8")
-        part_html = MIMEText(post.content_html, "html", "utf-8")
+        part_text = MIMEText(plain_body, "plain", "utf-8")
+        part_html = MIMEText(html_body, "html", "utf-8")
         
         msg.attach(part_text)
         msg.attach(part_html)
 
         return msg
 
+    def _get_blogger_recipients(self) -> list[str]:
+        if not self.config.blogger_post_email:
+            return []
+        return [addr.strip() for addr in self.config.blogger_post_email.split(",") if addr.strip()]
+
     def send_post(
         self,
         post: FormattedPost,
-        dry_run: bool = False
+        dry_run: bool = False,
+        blogger_only: bool = False
     ) -> Dict[str, Any]:
         """
-        Sends the formatted post to the WordPress mail receiver.
+        Sends the formatted post to the WordPress mail receiver and (if configured) simultaneously to Blogger.
+        If blogger_only is True, sends only to Blogger.
         If dry_run is True, skips actual network dispatch and logs details.
         """
-        msg = self.create_mime_message(post)
+        blogger_recipients = self._get_blogger_recipients()
+        wp_recipient = "" if blogger_only else self.config.wp_post_email
 
-        if dry_run or not self.config.wp_post_email or not self.config.user:
+        if dry_run or not self.config.user or (not wp_recipient and not blogger_recipients):
             logger.info("================ [DRY RUN / MOCK MODE] ================")
-            logger.info(f"Target WP Email: {self.config.wp_post_email or '(Not Set - WP_POST_EMAIL)'}")
-            logger.info(f"Subject (WP Title): {post.title}")
+            if not blogger_only:
+                logger.info(f"Target WP Email: {self.config.wp_post_email or '(Not Set - WP_POST_EMAIL)'}")
+            logger.info(f"Target Blogger Email: {self.config.blogger_post_email or '(Not Set - BLOGGER_POST_EMAIL)'}")
+            logger.info(f"Subject (Post Title): {post.title}")
             logger.info(f"From: {self.config.user or '(Not Set - SMTP_USER)'}")
             logger.info(f"Status: {post.status}")
             logger.info(f"Categories: {', '.join(post.categories)}")
             logger.info(f"Tags: {', '.join(post.tags)}")
-            logger.info(f"HTML Content Length: {len(post.content_html)} chars")
+            logger.info(f"WP HTML Content Length: {len(post.content_html)} chars")
+            logger.info(f"Blogger Clean HTML Content Length: {len(post.content_html_clean or post.content_html)} chars")
             logger.info("========================================================")
             return {
                 "success": True,
                 "dry_run": True,
                 "title": post.title,
-                "to": self.config.wp_post_email,
+                "to": self.config.blogger_post_email if blogger_only else self.config.wp_post_email,
+                "blogger_to": blogger_recipients,
                 "message": "Dry run completed successfully. No actual email sent."
             }
 
         logger.info(f"Connecting to SMTP server {self.config.host}:{self.config.port}...")
         
         try:
+            def _dispatch_all(server: smtplib.SMTP) -> list[str]:
+                sent_blogger = []
+                # 1. Send to WordPress (if not blogger_only and wp_post_email is configured)
+                if wp_recipient:
+                    wp_msg = self.create_mime_message(post, to_email=wp_recipient, for_blogger=False)
+                    server.sendmail(self.config.user, [wp_recipient], wp_msg.as_string())
+                    logger.info(f"Successfully posted to WordPress via email! Recipient: {wp_recipient}")
+
+                # 2. Simultaneously send to Blogger (if blogger_post_email is configured)
+                for b_addr in blogger_recipients:
+                    try:
+                        b_msg = self.create_mime_message(post, to_email=b_addr, for_blogger=True)
+                        server.sendmail(self.config.user, [b_addr], b_msg.as_string())
+                        sent_blogger.append(b_addr)
+                        logger.info(f"Successfully posted to Blogger via email! Recipient: {b_addr}")
+                    except Exception as b_err:
+                        if blogger_only:
+                            raise
+                        logger.error(f"Failed to send email to Blogger ({b_addr}): {b_err}", exc_info=True)
+                return sent_blogger
+
             if self.config.use_ssl:
                 context = ssl.create_default_context()
                 with smtplib.SMTP_SSL(self.config.host, self.config.port, context=context) as server:
                     server.login(self.config.user, self.config.password)
-                    server.sendmail(self.config.user, [self.config.wp_post_email], msg.as_string())
+                    sent_blogger = _dispatch_all(server)
             else:
                 with smtplib.SMTP(self.config.host, self.config.port) as server:
                     server.ehlo()
@@ -88,22 +140,24 @@ class WordPressMailSender:
                         server.starttls(context=context)
                         server.ehlo()
                     server.login(self.config.user, self.config.password)
-                    server.sendmail(self.config.user, [self.config.wp_post_email], msg.as_string())
+                    sent_blogger = _dispatch_all(server)
 
-            logger.info(f"Successfully posted to WordPress via email! Recipient: {self.config.wp_post_email}")
             return {
                 "success": True,
                 "dry_run": False,
                 "title": post.title,
-                "to": self.config.wp_post_email,
-                "message": f"Post '{post.title}' successfully emailed to WordPress."
+                "to": self.config.blogger_post_email if blogger_only else self.config.wp_post_email,
+                "blogger_to": sent_blogger,
+                "message": f"Post '{post.title}' successfully emailed."
             }
         except Exception as e:
-            logger.error(f"Failed to send email to WordPress: {e}", exc_info=True)
+            target_label = "Blogger" if blogger_only else "WordPress/Blogger"
+            logger.error(f"Failed to send email to {target_label}: {e}", exc_info=True)
             return {
                 "success": False,
                 "dry_run": False,
                 "title": post.title,
-                "to": self.config.wp_post_email,
+                "to": self.config.blogger_post_email if blogger_only else self.config.wp_post_email,
+                "blogger_to": [],
                 "error": str(e)
             }

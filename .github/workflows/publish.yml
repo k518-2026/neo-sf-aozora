@@ -70,6 +70,11 @@ on:
         required: false
         type: boolean
         default: false
+      blogger_only:
+        description: 'Blogger test/repost only (send latest published work to Blogger without sending to WordPress or X)'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -100,7 +105,7 @@ jobs:
         run: |
           python -m unittest discover tests
 
-      - name: Execute Daily Generation and WordPress Mail Dispatch
+      - name: Execute Daily Generation and WordPress / Blogger Mail Dispatch
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL || 'gemini-3.8-flash' }}
@@ -111,6 +116,7 @@ jobs:
           SMTP_USE_TLS: ${{ secrets.SMTP_USE_TLS || 'true' }}
           SMTP_USE_SSL: ${{ secrets.SMTP_USE_SSL || 'false' }}
           WP_POST_EMAIL: ${{ secrets.WP_POST_EMAIL }}
+          BLOGGER_POST_EMAIL: ${{ secrets.BLOGGER_POST_EMAIL || '' }}
           WP_SITE_URL: ${{ secrets.WP_SITE_URL || vars.WP_SITE_URL || '' }}
           X_API_KEY: ${{ secrets.X_API_KEY || secrets.TWITTER_API_KEY || '' }}
           X_API_SECRET: ${{ secrets.X_API_SECRET || secrets.TWITTER_API_SECRET || '' }}
@@ -124,6 +130,7 @@ jobs:
           INPUT_REPOST: ${{ github.event.inputs.repost }}
           INPUT_ENDING_THEME: ${{ github.event.inputs.ending_theme }}
           INPUT_X_ONLY: ${{ github.event.inputs.x_only }}
+          INPUT_BLOGGER_ONLY: ${{ github.event.inputs.blogger_only }}
         run: |
           git pull --rebase origin main || true
           ARGS=""
@@ -135,6 +142,10 @@ jobs:
 
           if [ "$INPUT_X_ONLY" = "true" ]; then
             ARGS="$ARGS --x-only"
+          fi
+
+          if [ "$INPUT_BLOGGER_ONLY" = "true" ]; then
+            ARGS="$ARGS --blogger-only"
           fi
 
           if [ "$INPUT_FORCE" = "true" ]; then

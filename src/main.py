@@ -104,6 +104,11 @@ def main():
         help="Post only to X (Twitter) for the latest published work (or specified --work-id / --file) without sending WordPress email"
     )
     parser.add_argument(
+        "--blogger-only",
+        action="store_true",
+        help="Send email only to Blogger for the latest published work (or specified --work-id / --file) without sending to WordPress or X"
+    )
+    parser.add_argument(
         "--verbose", "-v",
         action="store_true",
         help="Enable debug logging"
@@ -147,6 +152,43 @@ def main():
             reboot_title = target_work.get("title", "")
         x_poster = XPoster(config)
         res = x_poster.post_update(work=target_work, reboot_title=reboot_title, dry_run=is_dry_run)
+        if not res.get("success") and not is_dry_run:
+            sys.exit(1)
+        return
+
+    if args.blogger_only:
+        target_file = None
+        target_work = None
+        if args.file:
+            target_file = Path(args.file)
+        elif args.work_id:
+            matching_hist = [h for h in history_mgr.history if h.get("work_id") == args.work_id]
+            if matching_hist:
+                target_file = Path(matching_hist[-1].get("file_path", "").replace("\\", "/"))
+            target_work = next((w for w in history_mgr.catalog if w["id"] == args.work_id), None)
+        elif history_mgr.history:
+            last_entry = history_mgr.history[-1]
+            target_file = Path(last_entry.get("file_path", "").replace("\\", "/"))
+            w_id = last_entry.get("work_id", "")
+            target_work = next((w for w in history_mgr.catalog if w["id"] == w_id), None)
+        if not target_file or not target_file.exists():
+            logger.error(f"Could not find target story file for --blogger-only: {target_file}")
+            sys.exit(1)
+        next_work = None
+        if target_work:
+            catalog = history_mgr.catalog
+            for idx, w in enumerate(catalog):
+                if w["id"] == target_work["id"]:
+                    next_work = catalog[(idx + 1) % len(catalog)]
+                    break
+        formatted = format_post_content(
+            str(target_file),
+            status_override=args.status,
+            include_jetpack_shortcodes=config.use_jetpack_shortcodes,
+            next_work=next_work
+        )
+        sender = WordPressMailSender(config)
+        res = sender.send_post(formatted, dry_run=is_dry_run, blogger_only=True)
         if not res.get("success") and not is_dry_run:
             sys.exit(1)
         return
