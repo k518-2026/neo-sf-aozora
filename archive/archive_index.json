@@ -353,6 +353,22 @@
   },
   {
     "work_no": 23,
+    "work_id": "unno-electric-bath-death",
+    "title": "電気風呂の怪死",
+    "subtitle": "トポロジカル量子コヒーレンスの導出",
+    "attribution": "海野十三『電気風呂の怪死』（青空文庫）",
+    "original_author": "海野十三",
+    "original_title": "電気風呂の怪死",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000160/card1241.html",
+    "modern_tech": "トポロジカル絶縁体・量子ホール効果、ジョセフソン接合SQUID磁束量子センサ、複素ポテンシャル論・等角写像による漏洩電流逆解析",
+    "summary": "電撃死した被害者の謎を追う探偵。不可視の微小漏洩電流の経路をトポロジーと複素解析の数学的証明で暴き出す理詰めの科学サスペンス。",
+    "char_count": 4822,
+    "narration_file": "23_電気風呂の怪死_narration.txt",
+    "full_file": "23_電気風呂の怪死_full.txt",
+    "original_md_file": "23_電気風呂の怪死.md"
+  },
+  {
+    "work_no": 24,
     "work_id": "unno-subterranean-battleship",
     "title": "地底戦艦",
     "subtitle": "地球核境界の密室殺人",
@@ -363,8 +379,8 @@
     "modern_tech": "地震波トモグラフィーの境界要素逆問題解析、マントル対流超並列流体シミュレーション、超高圧ダイヤモンドアンビル極限物性、超耐熱タングステンナノ合金",
     "summary": "地球内部のマントル層を突破し地底を進む地底戦艦。地球物理学と数理逆問題解析が解き明かす、地球コアに秘められた驚愕の真実。",
     "char_count": 4266,
-    "narration_file": "23_地底戦艦_narration.txt",
-    "full_file": "23_地底戦艦_full.txt",
-    "original_md_file": "23_地底戦艦.md"
+    "narration_file": "24_地底戦艦_narration.txt",
+    "full_file": "24_地底戦艦_full.txt",
+    "original_md_file": "24_地底戦艦.md"
   }
 ]

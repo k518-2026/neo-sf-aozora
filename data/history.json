@@ -462,5 +462,28 @@
       "Abbott, B. P., et al. (LIGO Scientific Collaboration and Virgo Collaboration). (2016).**",
       "(解説: 二体ブラックホール連星の合体から生じた重力波を直接検出した歴史的論文。本作品の重力波センシングと時空幾何学の現実的基盤。)*"
     ]
+  },
+  {
+    "work_id": "unno-electric-bath-death",
+    "original_title": "電気風呂の怪死",
+    "original_author": "海野十三",
+    "reboot_title": "電気風呂の怪死――トポロジカル量子コヒーレンスの導出",
+    "posted_at": "2026-10-02T22:05:51.028587+09:00",
+    "file_path": "content/2026-10-02_unno_electric_bath_death.md",
+    "status": "publish",
+    "references": [
+      "トポロジカル絶縁体の基礎理論と物性**",
+      "M. Z. Hasan and C. L. Kane, \"Colloquium: Topological insulators,\" *Reviews of Modern Physics*, vol. 82, no. 4, pp. 3045–3067, 2010.",
+      "DOI: [https://doi.org/10.1103/RevModPhys.82.3045](https://doi.org/10.1103/RevModPhys.82.3045)",
+      "三次元トポロジカル絶縁体（$\\text{Bi}_2\\text{Se}_3$ 等）の実証**",
+      "Haijun Zhang, Chao-Xing Liu, Xiao-Liang Qi, Xi Dai, Zhong Fang, and Shou-Cheng Zhang, \"Topological insulators in $\\text{Bi}_2\\text{Se}_3$, $\\text{Bi}_2\\text{Te}_3$ and $\\text{Sb}_2\\text{Te}_3$ with a single Dirac cone on the surface,\" *Nature Physics*, vol. 5, pp. 438–442, 2009.",
+      "DOI: [https://doi.org/10.1038/nphys1270](https://doi.org/10.1038/nphys1270)",
+      "等角写像（シュワルツ＝クリストッフェル変換）による物理現象の解析**",
+      "T. A. Driscoll and L. N. Trefethen, *Schwarz-Christoffel Mapping*, Cambridge University Press, 2002.",
+      "DOI: [https://doi.org/10.1017/CBO9780511546808](https://doi.org/10.1017/CBO9780511546808)",
+      "脳内微小管における量子コヒーレンス理論（Orch-OR仮説）**",
+      "Stuart Hameroff and Roger Penrose, \"Consciousness in the universe: A review of the ‘Orch OR’ theory,\" *Physics of Life Reviews*, vol. 11, no. 1, pp. 39–78, 2014.",
+      "DOI: [https://doi.org/10.1016/j.plrev.2013.08.002](https://doi.org/10.1016/j.plrev.2013.08.002)"
+    ]
   }
 ]
