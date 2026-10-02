@@ -32,3 +32,4 @@
 | 23 | 2026-10-02 | 地球盗難 | 地球盗難（海野十三） | Yoshida, H. (1990).**, (解説: ハミルトン系の長期数値積分においてエネルギー不変量を厳密に保持する高次シンプレクティック積分法の基礎を確立した金字塔的論文。)* | Publish |
 | 24 | 2026-10-02 | 電気風呂の怪死 | 電気風呂の怪死（海野十三） | トポロジカル絶縁体の基礎理論と物性**, M. Z. Hasan and C. L. Kane, "Colloquium: Topological insulators," *Reviews of Modern Physics*, vol. 82, no. 4, pp. 3045–3067, 2010. | Publish |
 | 25 | 2026-10-02 | 潜航艇「鷹の巣」 | 潜航艇「鷹の巣」（小栗虫太郎） | Ocean Acoustic Tomography:**, Munk, W., & Wunsch, C. (1979). "Ocean acoustic tomography: a scheme for large scale monitoring." *Deep Sea Research Part A. Oceanographic Research Papers*, 26(2), 123-161. | Publish |
+| 26 | 2026-10-03 | 火星兵団 | 火星兵団（海野十三） | Freitas, R. A., & Merkle, R. C.** (2004). *Kinematic Self-Replicating Machines*. Landes Bioscience., 自己複製機械（フォン・ノイマン・マシン）の工学的・数理的基礎理論と、宇宙探査への応用可能性を体系化した金字塔的著作。 | Publish |

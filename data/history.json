@@ -508,5 +508,25 @@
       "DOI: [https://doi.org/10.1109/JOE.2007.893685](https://doi.org/10.1109/JOE.2007.893685)",
       "（水中ロボット群が、自律的に協調して海洋観測ネットワークを形成する制御アルゴリズムに関する先駆的な研究論文です）*"
     ]
+  },
+  {
+    "work_id": "unno-mars-corps",
+    "original_title": "火星兵団",
+    "original_author": "海野十三",
+    "reboot_title": "火星兵団――星を継ぐ庭師たち",
+    "posted_at": "2026-10-03T06:05:14.879112+09:00",
+    "file_path": "content/2026-10-03_unno_mars_corps.md",
+    "status": "publish",
+    "references": [
+      "Freitas, R. A., & Merkle, R. C.** (2004). *Kinematic Self-Replicating Machines*. Landes Bioscience.",
+      "自己複製機械（フォン・ノイマン・マシン）の工学的・数理的基礎理論と、宇宙探査への応用可能性を体系化した金字塔的著作。",
+      "DOI:",
+      "Rubenstein, M., Cornejo, A., & Nagpal, R.** (2014). Programmable self-assembly in a thousand-robot swarm. *Science*, 345(6198), 795–799.",
+      ",000台以上の小型自律ロボット（キロボット）が、中央集権的な指示なしに局所的な相互作用のみで自律的に複雑な形状へと集団変形するスウォーム・ロボティクスの実証論文。",
+      "DOI: [https://doi.org/10.1126/science.1254295](https://doi.org/10.1126/science.1254295)",
+      "Event Horizon Telescope Collaboration.** (2019). First M87 Event Horizon Telescope Results. I. The Shadow of the Supermassive Black Hole. *The Astrophysical Journal Letters*, 875(1), L1.",
+      "世界各地の電波望遠鏡を超長基線電波干渉法（VLBI）によって結び、地球サイズの解像力を実現してブラックホールの撮影に成功した歴史的論文。",
+      "DOI: [https://doi.org/10.3847/2041-8213/ab0ec7](https://doi.org/10.3847/2041-8213/ab0ec7)"
+    ]
   }
 ]

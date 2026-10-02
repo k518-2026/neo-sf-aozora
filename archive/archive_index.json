@@ -398,5 +398,21 @@
     "narration_file": "25_潜航艇「鷹の巣」_narration.txt",
     "full_file": "25_潜航艇「鷹の巣」_full.txt",
     "original_md_file": "25_潜航艇「鷹の巣」.md"
+  },
+  {
+    "work_no": 26,
+    "work_id": "unno-mars-corps",
+    "title": "火星兵団",
+    "subtitle": "星を継ぐ庭師たち",
+    "attribution": "海野十三『火星兵団』（青空文庫）",
+    "original_author": "海野十三",
+    "original_title": "火星兵団",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000160/card877.html",
+    "modern_tech": "フォン・ノイマン型自己複製オートマトン、超長基線電波干渉計（VLBI）、自律分散スウォーム制御",
+    "summary": "火星から飛来する謎の無人機団。自己複製オートマトン理論によって幾何級数的に増殖する未知の知性と、地球防衛を賭けたアルゴリズムの激突。",
+    "char_count": 4087,
+    "narration_file": "26_火星兵団_narration.txt",
+    "full_file": "26_火星兵団_full.txt",
+    "original_md_file": "26_火星兵団.md"
   }
 ]
