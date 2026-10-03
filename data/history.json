@@ -576,5 +576,18 @@
       "Zheng, W., Wang, Y. (2020). Spacecraft Autonomous Navigation Using the X-Ray Pulsar Time Difference of Arrival. *Navigation: Science and Technology*, 175-202.",
       "Awschalom, D. D., Samarth, N. (1998). Electron precession and coherence in magnetic quantum structures: Room-temperature spin memory. *Solid State Communications*, 107(11), 663-672."
     ]
+  },
+  {
+    "work_id": "akutagawa-haguruma",
+    "original_title": "歯車",
+    "original_author": "芥川龍之介",
+    "reboot_title": "歯車――幻影の歯輪",
+    "posted_at": "2026-10-04T02:52:31.305830+09:00",
+    "file_path": "content/2026-10-03_akutagawa_haguruma.md",
+    "status": "publish",
+    "references": [
+      "Ermentrout, G. B., Cowan, J. D. (1979). A mathematical theory of visual hallucination patterns. *Biological Cybernetics*, 34(3), 137-150.",
+      "Cardin, J. A., Carlén, M., Meletis, K., Knoblich, U., Zhang, F., Deisseroth, K., et al. (2009). Driving fast-spiking cells induces gamma rhythm and controls sensory responses. *Nature*, 459(7247), 663-667."
+    ]
   }
 ]
