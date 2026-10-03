@@ -31,4 +31,10 @@ if (-not $NoPush) {
 }
 
 Write-Host "Running Local LLM Stock Generator: python $($argsList -join ' ')" -ForegroundColor Green
-python @argsList
+try {
+    python @argsList
+} finally {
+    Write-Host "Stopping Ollama server to free memory..." -ForegroundColor Cyan
+    Get-Process -Name "ollama", "ollama_llama_server", "llama-server" -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+}
+

@@ -81,9 +81,12 @@ class HistoryManager:
 
         posted_ids = self.get_posted_ids()
 
-        # Find unposted work
+        # Find unposted work (prioritize any unposted work that already has a pre-generated stock file in content/)
         unposted = [w for w in self.catalog if w["id"] not in posted_ids]
         if unposted:
+            for w in unposted:
+                if self.find_stock_file_for_work(w["id"]) is not None:
+                    return w
             return unposted[0]
 
         # If all posted

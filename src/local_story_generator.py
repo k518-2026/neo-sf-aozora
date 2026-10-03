@@ -640,8 +640,9 @@ class LocalStoryGenerator:
                 {"role": "user", "content": part2_prompt},
             ],
             temperature=0.78,
-            num_predict=3500,
+            num_predict=2400,
             num_ctx=8192,
+            timeout=1800,
         )
         cleaned_part2 = self._clean_llm_output(raw_part2)
         p2_lines = []
