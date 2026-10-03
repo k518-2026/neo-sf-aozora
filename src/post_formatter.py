@@ -338,6 +338,14 @@ def format_post_content(
 
     html_body = re.sub(r"<a\b([^>]*)>", _add_target_blank, html_body, flags=re.IGNORECASE)
 
+    # 4. Replace raw 'https://doi.org/10.xxxx' anchor text with 'DOI: 10.xxxx' to avoid email anti-phishing filters
+    html_body = re.sub(
+        r'(<a\b[^>]*href=["\']https?://(?:dx\.)?doi\.org/(10\.[^"\']+)["\'][^>]*>)\s*https?://(?:dx\.)?doi\.org/[^<]+\s*(</a>)',
+        r'\1DOI: \2\3',
+        html_body,
+        flags=re.IGNORECASE
+    )
+
     # Wrap in clean, modern typography styling for WordPress email rendering
     styled_html = f"""<div class="sf-story-container" style="font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif; line-height: 1.9; font-size: 16px; color: #222;">
 {html_body}

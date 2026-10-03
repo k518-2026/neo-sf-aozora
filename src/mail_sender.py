@@ -1,3 +1,4 @@
+import re
 import smtplib
 import ssl
 import time
@@ -38,8 +39,12 @@ class WordPressMailSender:
         # Subject becomes the Post Title on both WordPress and Blogger
         msg["Subject"] = Header(post.title, "utf-8")
         
-        # From header
-        from_display = Header(self.config.from_name, "utf-8").encode()
+        # From header (avoid RFC 2047 encoding if display name is pure ASCII to prevent spam filter penalties)
+        try:
+            self.config.from_name.encode("ascii")
+            from_display = self.config.from_name
+        except UnicodeEncodeError:
+            from_display = Header(self.config.from_name, "utf-8").encode()
         msg["From"] = f"{from_display} <{self.config.user}>"
         
         # Destination inbox
@@ -54,7 +59,11 @@ class WordPressMailSender:
         msg["Message-ID"] = make_msgid(domain=domain)
 
         if for_blogger:
-            plain_body = post.content_plain_clean or post.content_plain
+            raw_plain = post.content_plain_clean or post.content_plain
+            # Strip duplicate raw Markdown URLs from the plain-text part so outbound/inbound spam filters
+            # do not count every URL twice across text/plain and text/html
+            plain_body = re.sub(r"\[([^\]]+)\]\(https?://[^\)]+\)", r"\1", raw_plain)
+            plain_body = re.sub(r"https?://(?:dx\.)?doi\.org/(10\.\S+)", r"DOI: \1", plain_body)
             html_body = post.content_html_clean or post.content_html
         else:
             plain_body = post.content_plain
@@ -137,11 +146,11 @@ class WordPressMailSender:
                 self._send_single_message(wp_recipient, wp_msg)
                 logger.info(f"Successfully posted to WordPress via email! Recipient: {wp_recipient}")
 
-            # 2. Send to Blogger over a separate SMTP session (after a short pause if WP was just sent)
+            # 2. Send to Blogger over a separate SMTP session (after a 10s pause if WP was just sent)
             for b_addr in blogger_recipients:
                 try:
                     if wp_recipient:
-                        time.sleep(3)
+                        time.sleep(10)
                     b_msg = self.create_mime_message(post, to_email=b_addr, for_blogger=True)
                     self._send_single_message(b_addr, b_msg)
                     sent_blogger.append(b_addr)
