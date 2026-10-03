@@ -378,6 +378,6 @@ def format_post_content(
         content_raw=cleaned_body,
         content_html=final_html,
         content_plain=final_plain,
-        content_html_clean=styled_html,
+        content_html_clean=html_body,
         content_plain_clean=cleaned_body
     )
