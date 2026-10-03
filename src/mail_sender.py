@@ -1,8 +1,10 @@
 import smtplib
 import ssl
+import time
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.header import Header
+from email.utils import formatdate, make_msgid
 from typing import Dict, Any, Optional
 import logging
 
@@ -46,6 +48,11 @@ class WordPressMailSender:
         )
         msg["To"] = recipient
 
+        # Standard RFC 5322 headers to prevent Gmail/Blogger deduplication or spam filtering
+        msg["Date"] = formatdate(localtime=True)
+        domain = self.config.user.split("@")[-1] if "@" in self.config.user else "neo-sf-aozora.local"
+        msg["Message-ID"] = make_msgid(domain=domain)
+
         if for_blogger:
             plain_body = post.content_plain_clean or post.content_plain
             html_body = post.content_html_clean or post.content_html
@@ -66,6 +73,23 @@ class WordPressMailSender:
         if not self.config.blogger_post_email:
             return []
         return [addr.strip() for addr in self.config.blogger_post_email.split(",") if addr.strip()]
+
+    def _send_single_message(self, recipient: str, msg: MIMEMultipart):
+        """Sends a single MIME message over a clean SMTP connection."""
+        if self.config.use_ssl:
+            context = ssl.create_default_context()
+            with smtplib.SMTP_SSL(self.config.host, self.config.port, context=context) as server:
+                server.login(self.config.user, self.config.password)
+                server.sendmail(self.config.user, [recipient], msg.as_string())
+        else:
+            with smtplib.SMTP(self.config.host, self.config.port) as server:
+                server.ehlo()
+                if self.config.use_tls:
+                    context = ssl.create_default_context()
+                    server.starttls(context=context)
+                    server.ehlo()
+                server.login(self.config.user, self.config.password)
+                server.sendmail(self.config.user, [recipient], msg.as_string())
 
     def send_post(
         self,
@@ -106,41 +130,26 @@ class WordPressMailSender:
         logger.info(f"Connecting to SMTP server {self.config.host}:{self.config.port}...")
         
         try:
-            def _dispatch_all(server: smtplib.SMTP) -> list[str]:
-                sent_blogger = []
-                # 1. Send to WordPress (if not blogger_only and wp_post_email is configured)
-                if wp_recipient:
-                    wp_msg = self.create_mime_message(post, to_email=wp_recipient, for_blogger=False)
-                    server.sendmail(self.config.user, [wp_recipient], wp_msg.as_string())
-                    logger.info(f"Successfully posted to WordPress via email! Recipient: {wp_recipient}")
+            sent_blogger = []
+            # 1. Send to WordPress (if not blogger_only and wp_post_email is configured)
+            if wp_recipient:
+                wp_msg = self.create_mime_message(post, to_email=wp_recipient, for_blogger=False)
+                self._send_single_message(wp_recipient, wp_msg)
+                logger.info(f"Successfully posted to WordPress via email! Recipient: {wp_recipient}")
 
-                # 2. Simultaneously send to Blogger (if blogger_post_email is configured)
-                for b_addr in blogger_recipients:
-                    try:
-                        b_msg = self.create_mime_message(post, to_email=b_addr, for_blogger=True)
-                        server.sendmail(self.config.user, [b_addr], b_msg.as_string())
-                        sent_blogger.append(b_addr)
-                        logger.info(f"Successfully posted to Blogger via email! Recipient: {b_addr}")
-                    except Exception as b_err:
-                        if blogger_only:
-                            raise
-                        logger.error(f"Failed to send email to Blogger ({b_addr}): {b_err}", exc_info=True)
-                return sent_blogger
-
-            if self.config.use_ssl:
-                context = ssl.create_default_context()
-                with smtplib.SMTP_SSL(self.config.host, self.config.port, context=context) as server:
-                    server.login(self.config.user, self.config.password)
-                    sent_blogger = _dispatch_all(server)
-            else:
-                with smtplib.SMTP(self.config.host, self.config.port) as server:
-                    server.ehlo()
-                    if self.config.use_tls:
-                        context = ssl.create_default_context()
-                        server.starttls(context=context)
-                        server.ehlo()
-                    server.login(self.config.user, self.config.password)
-                    sent_blogger = _dispatch_all(server)
+            # 2. Send to Blogger over a separate SMTP session (after a short pause if WP was just sent)
+            for b_addr in blogger_recipients:
+                try:
+                    if wp_recipient:
+                        time.sleep(3)
+                    b_msg = self.create_mime_message(post, to_email=b_addr, for_blogger=True)
+                    self._send_single_message(b_addr, b_msg)
+                    sent_blogger.append(b_addr)
+                    logger.info(f"Successfully posted to Blogger via email! Recipient: {b_addr}")
+                except Exception as b_err:
+                    if blogger_only:
+                        raise
+                    logger.error(f"Failed to send email to Blogger ({b_addr}): {b_err}", exc_info=True)
 
             return {
                 "success": True,
