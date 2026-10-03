@@ -562,5 +562,19 @@
       "Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.",
       "Organick, L., Ang, S. D., Chen, Y. J., Lopez, R., Yekhanin, S., Makarychev, K., Racz, M. Z., Kamath, G., Gopalan, P., Nguyen, B., Takahashi, C. N., Newman, S., Parker, H. Y., Rashtchian, C., Stewart, K., Gupta, G., Carlson, R., Mulligan, J., Carmean, D., Seelig, G., Ceze, L., & Strauss, K. (2018). Random access read and write operations in a large-scale DNA data storage system. *Nature Biotechnology*, 36(3), 242–248."
     ]
+  },
+  {
+    "work_id": "miyazawa-ginga",
+    "original_title": "銀河鉄道の夜",
+    "original_author": "宮沢賢治",
+    "reboot_title": "銀河鉄道の夜――量子の迷宮",
+    "posted_at": "2026-10-03T21:52:29.307821+09:00",
+    "file_path": "content/2026-10-03_miyazawa_ginga.md",
+    "status": "publish",
+    "references": [
+      "Maldacena, J., Susskind, L. (2013). Cool horizons for entangled black holes. *Fortschritte der Physik*, 61(9), 781-811.",
+      "Zheng, W., Wang, Y. (2020). Spacecraft Autonomous Navigation Using the X-Ray Pulsar Time Difference of Arrival. *Navigation: Science and Technology*, 175-202.",
+      "Awschalom, D. D., Samarth, N. (1998). Electron precession and coherence in magnetic quantum structures: Room-temperature spin memory. *Solid State Communications*, 107(11), 663-672."
+    ]
   }
 ]
