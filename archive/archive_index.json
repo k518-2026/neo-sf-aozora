@@ -430,5 +430,21 @@
     "narration_file": "27_白昼夢_narration.txt",
     "full_file": "27_白昼夢_full.txt",
     "original_md_file": "27_白昼夢.md"
+  },
+  {
+    "work_no": 28,
+    "work_id": "yumeno-binzume-jigoku",
+    "title": "瓶詰地獄",
+    "subtitle": "未来からの福音",
+    "attribution": "",
+    "original_author": "夢野久作",
+    "original_title": "瓶詰地獄",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000096/card938.html",
+    "modern_tech": "シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化DNAタイムスタンプ解析",
+    "summary": "無人島から流れ着いた三通の瓶詰の手紙。どの順序で読んでも矛盾する記述の謎を、分子分解時計と情報理論のベイズ逆推論が解き明かす。",
+    "char_count": 3432,
+    "narration_file": "28_瓶詰地獄_narration.txt",
+    "full_file": "28_瓶詰地獄_full.txt",
+    "original_md_file": "28_瓶詰地獄.md"
   }
 ]

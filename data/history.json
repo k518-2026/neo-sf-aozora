@@ -548,5 +548,19 @@
       "Elsayed, G. F., Shankar, S., Meade, B., Jastrzebski, T., Kurakin, A., Sobal, I., ... & Purushothaman, S. (2018). \"Adversarial Examples that Fool Both Computer Vision and Human Vision.\" *arXiv preprint arXiv:1802.08195*. (Subsequent peer-reviewed publication in *Advances in Neural Information Processing Systems (NeurIPS 2018)*).",
       "[https://doi.org/10.48550/arXiv.1802.08195](https://doi.org/10.48550/arXiv.1802.08195)"
     ]
+  },
+  {
+    "work_id": "yumeno-binzume-jigoku",
+    "original_title": "瓶詰地獄",
+    "original_author": "夢野久作",
+    "reboot_title": "瓶詰地獄――未来からの福音",
+    "posted_at": "2026-10-03T17:09:16.176308+09:00",
+    "file_path": "content/2026-10-03_yumeno_binzume_jigoku.md",
+    "status": "publish",
+    "references": [
+      "Grass, R. N., Heckel, R., Puddu, M., Paunescu, D., & Stark, W. J. (2015). Robust Chemical Preservation of Digital Information on DNA in Silica with Error-Correcting Codes. *Angewandte Chemie International Edition*, 54(8), 2552-2555.",
+      "Pearl, J. (2009). *Causality: Models, Reasoning, and Inference* (2nd ed.). Cambridge University Press.",
+      "Organick, L., Ang, S. D., Chen, Y. J., Lopez, R., Yekhanin, S., Makarychev, K., Racz, M. Z., Kamath, G., Gopalan, P., Nguyen, B., Takahashi, C. N., Newman, S., Parker, H. Y., Rashtchian, C., Stewart, K., Gupta, G., Carlson, R., Mulligan, J., Carmean, D., Seelig, G., Ceze, L., & Strauss, K. (2018). Random access read and write operations in a large-scale DNA data storage system. *Nature Biotechnology*, 36(3), 242–248."
+    ]
   }
 ]
