@@ -446,5 +446,21 @@
     "narration_file": "28_瓶詰地獄_narration.txt",
     "full_file": "28_瓶詰地獄_full.txt",
     "original_md_file": "28_瓶詰地獄.md"
+  },
+  {
+    "work_no": 29,
+    "work_id": "miyazawa-ginga",
+    "title": "銀河鉄道の夜",
+    "subtitle": "量子の迷宮",
+    "attribution": "",
+    "original_author": "宮沢賢治",
+    "original_title": "銀河鉄道の夜",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000081/card456.html",
+    "modern_tech": "量子もつれテンソルネットワーク（ER=EPR仮説）、ミリ秒パルサー時空測位ナビゲーション、超流動ヘリウム冷却量子メモリ",
+    "summary": "夜空の星々を巡る銀河鉄道の旅。量子もつれネットワークで結ばれた深宇宙中継列車の中で、親友と交わす永遠の別れと宇宙の真理。",
+    "char_count": 2794,
+    "narration_file": "29_銀河鉄道の夜_narration.txt",
+    "full_file": "29_銀河鉄道の夜_full.txt",
+    "original_md_file": "29_銀河鉄道の夜.md"
   }
 ]
