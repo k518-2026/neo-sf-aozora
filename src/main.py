@@ -345,6 +345,31 @@ def main():
         )
         logger.info(f"Recorded '{formatted.title}' in data/history.json and data/POSTED_STORIES.md")
 
+        # Keep 6 stories stocked on GitHub even when the local PC is powered off (e.g. during a 1-week business trip)
+        try:
+            posted_ids = history_mgr.get_posted_ids()
+            current_stocked = [
+                w for w in history_mgr.catalog
+                if w["id"] not in posted_ids and history_mgr.find_stock_file_for_work(w["id"]) is not None
+            ]
+            unstocked_candidates = history_mgr.select_unstocked_works(count=1)
+            if len(current_stocked) < 6 and unstocked_candidates and os.getenv("GEMINI_API_KEY"):
+                replenish_work = unstocked_candidates[0]
+                logger.info(
+                    f"Current GitHub stock is {len(current_stocked)}/6. "
+                    f"Auto-replenishing stock for '{replenish_work['title']}' ({replenish_work['id']})..."
+                )
+                rep_gen = StoryGenerator()
+                rep_content, rep_title, _ = rep_gen.generate_story(replenish_work, ending_theme="random")
+                today_str = datetime.now(JST).strftime("%Y-%m-%d")
+                rep_safe_id = replenish_work["id"].replace("-", "_")
+                rep_path = Path(f"content/{today_str}_{rep_safe_id}.md")
+                rep_path.parent.mkdir(parents=True, exist_ok=True)
+                rep_path.write_text(rep_content, encoding="utf-8")
+                logger.info(f"Replenished GitHub stock saved to: {rep_path} ('{rep_title}')")
+        except Exception as rep_err:
+            logger.warning(f"Optional stock replenishment skipped: {rep_err}")
+
     # Automatically keep local and MakeMP3FromAozora archives up to date
     try:
         from src.archiver import update_archive_all

@@ -104,8 +104,8 @@ def main():
     parser.add_argument(
         "--count", "-n",
         type=int,
-        default=3,
-        help="Number of unstocked works to generate in this batch (default: 3 = 1 day of posts)"
+        default=6,
+        help="Number of unstocked works to generate in this batch (default: 6)"
     )
     parser.add_argument(
         "--work-id",
