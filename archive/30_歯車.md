@@ -120,3 +120,5 @@ tags: ["SF", "青空文庫", "芥川龍之介", "最先端科学", "ラブロマ
    DOI: [https://doi.org/10.1007/bf00336965](https://doi.org/10.1007/bf00336965)
 2. Cardin, J. A., Carlén, M., Meletis, K., Knoblich, U., Zhang, F., Deisseroth, K., et al. (2009). Driving fast-spiking cells induces gamma rhythm and controls sensory responses. *Nature*, 459(7247), 663-667.
    DOI: [https://doi.org/10.1038/nature08002](https://doi.org/10.1038/nature08002)
+3. Schankin, C. J., Maniyar, F. H., Digre, K. B., & Goadsby, P. J. (2014). 'Visual snow' – a disorder distinct from persistent migraine aura. *Brain*, 137(5), 1419-1428.
+   DOI: [https://doi.org/10.1093/brain/awu050](https://doi.org/10.1093/brain/awu050)

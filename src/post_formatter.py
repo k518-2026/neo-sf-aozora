@@ -286,18 +286,25 @@ def format_post_content(
     # Clean existing shortcodes in body if already present
     cleaned_body = re.sub(r"\[(category|tags|status|title|excerpt)[^\]]*\]", "", body).strip()
 
-    # Automatically append Next Work Preview if provided and not yet in body
-    if next_work and "次回" not in cleaned_body and "次回作の予告" not in cleaned_body:
-        cleaned_body += build_next_work_preview(next_work)
-
-    # Pre-clean 1: Automatically strip any '起', '承', '転', '結' headers or meta part/scene labels
+    # Pre-clean 1: Automatically strip any '起', '承', '転', '結' headers or meta part/scene labels (even without '#')
     cleaned_body = re.sub(r"^[ \t]*#+[ \t]*(\*\s*\*\s*\*)[ \t]*$", r"\1", cleaned_body, flags=re.MULTILINE)
-    cleaned_body = re.sub(r"^[ \t]*#+[ \t]*(?:第\s*[0-9一二三四五六]+\s*(?:シーン|幕|章|部)|シーン\s*[0-9一二三四五六]+).*$", "", cleaned_body, flags=re.MULTILINE)
+    cleaned_body = re.sub(r"^[ \t]*#+[ \t]*\*+[ \t]*$", "* * *", cleaned_body, flags=re.MULTILINE)
+    cleaned_body = re.sub(
+        r"^[ \t]*(?:#+[ \t]*)?[【\[（(]?(?:第\s*[0-9一二三四五六七八九十]+\s*(?:シーン|幕|章|部|節)|シーン\s*[0-9一二三四五六七八九十]+)[】\]）)]?(?:[：:\s—―-].*)?$",
+        "",
+        cleaned_body,
+        flags=re.MULTILINE
+    )
     cleaned_body = re.sub(r"^[ \t]*#+[ \t]*[【\[（(]?[起承転結][】\]）)]?.*$", "", cleaned_body, flags=re.MULTILINE)
     cleaned_body = re.sub(r"[【\[（(][起承転結][】\]）)]", "", cleaned_body)
     cleaned_body = re.sub(r"^[ \t]*[【\[（(]?[起承転結][】\]）)]?[ \t]*$", "", cleaned_body, flags=re.MULTILINE)
     cleaned_body = re.sub(r"^[ \t]*#+[ \t]*第[一二三123]部[：:\s]*小説本文.*$", "", cleaned_body, flags=re.MULTILINE)
     cleaned_body = re.sub(r"^(#+[ \t]*)第[一二三123]部[：:\s]*", r"\1", cleaned_body, flags=re.MULTILINE)
+
+    # Automatically append Next Work Preview if provided and not yet in body
+    # Check specifically for '【次回作の予告】' or '次回原典作品' so dialogue containing '次回' never suppresses the preview!
+    if next_work and "【次回作の予告】" not in cleaned_body and "次回原典作品" not in cleaned_body:
+        cleaned_body += build_next_work_preview(next_work)
 
     # Pre-clean 2: Replace markdown hr lines (---, ***, ___) with safe scene dividers to prevent email signature truncation
     cleaned_body = re.sub(r"^[ \t]*[-*_]{3,}[ \t]*$", "◆ ◆ ◆", cleaned_body, flags=re.MULTILINE)
@@ -338,10 +345,10 @@ def format_post_content(
 
     html_body = re.sub(r"<a\b([^>]*)>", _add_target_blank, html_body, flags=re.IGNORECASE)
 
-    # 4. Replace raw 'https://doi.org/10.xxxx' anchor text with 'DOI: 10.xxxx' to avoid email anti-phishing filters
+    # 4. Replace raw 'https://doi.org/10.xxxx' anchor text with '10.xxxx' (with 'DOI: ' prefix if not already present) to avoid email anti-phishing filters
     html_body = re.sub(
-        r'(<a\b[^>]*href=["\']https?://(?:dx\.)?doi\.org/(10\.[^"\']+)["\'][^>]*>)\s*https?://(?:dx\.)?doi\.org/[^<]+\s*(</a>)',
-        r'\1DOI: \2\3',
+        r'(?:DOI:\s*)?(<a\b[^>]*href=["\']https?://(?:dx\.)?doi\.org/(10\.[^"\']+)["\'][^>]*>)\s*https?://(?:dx\.)?doi\.org/[^<]+\s*(</a>)',
+        r'DOI: \1\2\3',
         html_body,
         flags=re.IGNORECASE
     )

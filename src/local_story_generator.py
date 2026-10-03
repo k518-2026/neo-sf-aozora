@@ -507,7 +507,7 @@ class LocalStoryGenerator:
         return verified_papers
 
     def _clean_llm_output(self, text: str) -> str:
-        """Removes <think>...</think> blocks, markdown fences, scene meta-headers, and stray URLs."""
+        """Removes <think>...</think> blocks, markdown fences, scene meta-headers, repetition loops, and stray URLs."""
         text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
         if text.startswith("```markdown"):
             text = text[len("```markdown"):].strip()
@@ -515,11 +515,26 @@ class LocalStoryGenerator:
             text = text[3:].strip()
         if text.endswith("```"):
             text = text[:-3].strip()
-        # Strip meta scene headings like '### 第1シーン', '## シーン2', '### * * *'
+        # Strip meta scene headings like '### 第1シーン', '第1シーン', '## シーン2', '### * * *', '### *'
         text = re.sub(r"^[ \t]*#+[ \t]*(\*\s*\*\s*\*)[ \t]*$", r"\1", text, flags=re.MULTILINE)
-        text = re.sub(r"^[ \t]*#+[ \t]*(?:第\s*[0-9一二三四五六]+\s*(?:シーン|幕|章|部)|シーン\s*[0-9一二三四五六]+).*$", "", text, flags=re.MULTILINE)
-        text = re.sub(r"^[ \t]*(?:【第\s*[0-9一二三四五六]+\s*(?:シーン|幕|章|部).*?】)[ \t]*$", "", text, flags=re.MULTILINE)
-        return text.strip()
+        text = re.sub(r"^[ \t]*#+[ \t]*\*+[ \t]*$", "* * *", text, flags=re.MULTILINE)
+        text = re.sub(
+            r"^[ \t]*(?:#+[ \t]*)?[【\[（(]?(?:第\s*[0-9一二三四五六七八九十]+\s*(?:シーン|幕|章|部|節)|シーン\s*[0-9一二三四五六七八九十]+)[】\]）)]?(?:[：:\s—―-].*)?$",
+            "",
+            text,
+            flags=re.MULTILINE,
+        )
+        # Remove any repeated long paragraphs/lines (prevents local LLM repetition loops)
+        seen_long_lines = set()
+        deduped_lines = []
+        for line in text.splitlines():
+            s = line.strip()
+            if len(s) >= 35 and s not in ("* * *", "---"):
+                if s in seen_long_lines:
+                    continue
+                seen_long_lines.add(s)
+            deduped_lines.append(line)
+        return "\n".join(deduped_lines).strip()
 
     def generate_story(
         self,
