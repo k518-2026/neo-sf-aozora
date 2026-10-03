@@ -17,7 +17,7 @@ from src.story_generator import (
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_OLLAMA_HOST = "http://localhost:11434"
+DEFAULT_OLLAMA_HOST = "http://192.168.128.59:11434"
 DEFAULT_LOCAL_MODEL = "qwen2.5:14b"
 
 # Preferred local models in priority order if user hasn't explicitly forced one
@@ -26,7 +26,10 @@ PREFERRED_LOCAL_MODELS = [
     "qwen2.5:32b",
     "qwen3:14b",
     "qwen2.5:14b",
+    "gemma4:12b",
     "gemma3:12b",
+    "qwen3.5:9b",
+    "gemma2:9b",
     "llama3.1:8b",
     "qwen2.5:7b",
 ]
@@ -334,46 +337,14 @@ class LocalStoryGenerator:
         self.ollama_host = (ollama_host or os.getenv("OLLAMA_HOST", DEFAULT_OLLAMA_HOST)).rstrip("/")
         self.model_name = model_name or os.getenv("OLLAMA_MODEL", "")
 
-    def is_ollama_running(self, auto_start: bool = True) -> bool:
+    def is_ollama_running(self, auto_start: bool = False) -> bool:
         try:
             req = urllib.request.Request(f"{self.ollama_host}/api/tags")
-            with urllib.request.urlopen(req, timeout=4) as res:
+            with urllib.request.urlopen(req, timeout=5) as res:
                 if res.getcode() == 200:
                     return True
-        except Exception:
-            pass
-
-        if not auto_start:
-            return False
-
-        # Try auto-starting local ollama.exe serve
-        import shutil
-        import subprocess
-        from pathlib import Path
-
-        ollama_bin = shutil.which("ollama")
-        if not ollama_bin:
-            default_win = Path(os.getenv("LOCALAPPDATA", "")) / "Programs" / "Ollama" / "ollama.exe"
-            if default_win.exists():
-                ollama_bin = str(default_win)
-
-        if ollama_bin:
-            logger.info(f"Ollama server not running. Auto-starting '{ollama_bin} serve' in background...")
-            try:
-                creationflags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
-                subprocess.Popen(
-                    [ollama_bin, "serve"],
-                    stdout=subprocess.DEVNULL,
-                    stderr=subprocess.DEVNULL,
-                    creationflags=creationflags,
-                )
-                for _ in range(8):
-                    time.sleep(1)
-                    if self.is_ollama_running(auto_start=False):
-                        logger.info("Ollama server started successfully!")
-                        return True
-            except Exception as e:
-                logger.warning(f"Failed to auto-start Ollama server: {e}")
+        except Exception as e:
+            logger.debug(f"Ollama server check failed ({self.ollama_host}): {e}")
 
         return False
 
@@ -414,7 +385,7 @@ class LocalStoryGenerator:
     ) -> str:
         model = self.resolve_model_name()
         url = f"{self.ollama_host}/api/chat"
-        payload = {
+        payload: Dict[str, Any] = {
             "model": model,
             "messages": messages,
             "stream": False,
@@ -425,6 +396,8 @@ class LocalStoryGenerator:
                 "repeat_penalty": 1.12,
             },
         }
+        if any(k in model.lower() for k in ("qwen3", "gemma4", "deepseek-r1")):
+            payload["think"] = False
         data = json.dumps(payload).encode("utf-8")
         req = urllib.request.Request(
             url,

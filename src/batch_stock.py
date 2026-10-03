@@ -113,9 +113,14 @@ def main():
         help="Generate a specific work ID from catalog"
     )
     parser.add_argument(
+        "--host",
+        default=None,
+        help="Ollama server URL (default: http://192.168.128.59:11434 on Mac mini M4)"
+    )
+    parser.add_argument(
         "--model", "-m",
         default=None,
-        help="Ollama model name (e.g., qwen2.5:14b, gemma3:27b)"
+        help="Ollama model name (e.g., qwen2.5:14b, gemma4:12b, qwen3.5:9b)"
     )
     parser.add_argument(
         "--ending",
@@ -157,24 +162,26 @@ def main():
         print_stock_status(history_mgr)
         return
 
-    local_gen = LocalStoryGenerator(model_name=args.model)
+    local_gen = LocalStoryGenerator(ollama_host=args.host, model_name=args.model)
     if not local_gen.is_ollama_running():
         logger.error(
-            "Ollama server is not reachable at http://localhost:11434. "
-            "Please make sure Ollama is running (`ollama serve`)."
+            f"Ollama server on Mac mini M4 is not reachable at {local_gen.ollama_host}. "
+            "Please make sure Ollama is running on Mac mini M4 (`OLLAMA_HOST=0.0.0.0:11434 ollama serve`)."
         )
         sys.exit(1)
 
     installed_models = local_gen.get_installed_models()
     if not installed_models:
         logger.error(
-            "No models are installed in Ollama yet. "
-            "Run e.g. `ollama pull qwen2.5:14b` first."
+            f"No models are installed in Ollama at {local_gen.ollama_host} yet."
         )
         sys.exit(1)
 
     resolved_model = local_gen.resolve_model_name()
-    logger.info(f"Using Local LLM model: '{resolved_model}' (Available: {', '.join(installed_models)})")
+    logger.info(
+        f"Using Mac mini M4 Ollama ({local_gen.ollama_host}) | "
+        f"Model: '{resolved_model}' (Available: {', '.join(installed_models)})"
+    )
 
     if args.work_id:
         target_work = next((w for w in history_mgr.catalog if w["id"] == args.work_id), None)
