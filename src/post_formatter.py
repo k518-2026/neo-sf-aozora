@@ -290,7 +290,9 @@ def format_post_content(
     if next_work and "次回" not in cleaned_body and "次回作の予告" not in cleaned_body:
         cleaned_body += build_next_work_preview(next_work)
 
-    # Pre-clean 1: Automatically strip any '起', '承', '転', '結' headers or meta part labels ('第一部：小説本文', '第二部：', '第三部：')
+    # Pre-clean 1: Automatically strip any '起', '承', '転', '結' headers or meta part/scene labels
+    cleaned_body = re.sub(r"^[ \t]*#+[ \t]*(\*\s*\*\s*\*)[ \t]*$", r"\1", cleaned_body, flags=re.MULTILINE)
+    cleaned_body = re.sub(r"^[ \t]*#+[ \t]*(?:第\s*[0-9一二三四五六]+\s*(?:シーン|幕|章|部)|シーン\s*[0-9一二三四五六]+).*$", "", cleaned_body, flags=re.MULTILINE)
     cleaned_body = re.sub(r"^[ \t]*#+[ \t]*[【\[（(]?[起承転結][】\]）)]?.*$", "", cleaned_body, flags=re.MULTILINE)
     cleaned_body = re.sub(r"[【\[（(][起承転結][】\]）)]", "", cleaned_body)
     cleaned_body = re.sub(r"^[ \t]*[【\[（(]?[起承転結][】\]）)]?[ \t]*$", "", cleaned_body, flags=re.MULTILINE)

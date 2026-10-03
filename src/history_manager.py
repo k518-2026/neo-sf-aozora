@@ -29,6 +29,40 @@ class HistoryManager:
     def get_posted_ids(self) -> set:
         return {item["work_id"] for item in self.history if "work_id" in item}
 
+    def find_stock_file_for_work(self, work_id: str, content_dir: Path = Path("content")) -> Optional[Path]:
+        """
+        Checks if a pre-generated markdown story file already exists in content/ for the given work_id.
+        Matches exact work_id or underscore-normalized safe_id (e.g., 'content/2026-10-03_miyazawa_ginga.md').
+        """
+        if not work_id or not content_dir.exists():
+            return None
+        if work_id == "unno-18-music" and (content_dir / "story.md").exists():
+            return content_dir / "story.md"
+        safe_id = work_id.replace("-", "_")
+        # Sort reverse so newest pre-generated file is picked if multiple exist
+        for f in sorted(content_dir.glob("*.md"), reverse=True):
+            if f.name.endswith(f"_{safe_id}.md") or f.name == f"{safe_id}.md" or f.name.endswith(f"_{work_id}.md") or f.name == f"{work_id}.md":
+                return f
+        return None
+
+    def select_unstocked_works(self, count: int = 3, content_dir: Path = Path("content")) -> List[Dict[str, Any]]:
+        """
+        Returns up to `count` catalog works that are NEITHER posted in history.json
+        NOR already pre-generated (stocked) in content/.
+        """
+        posted_ids = self.get_posted_ids()
+        candidates: List[Dict[str, Any]] = []
+        for w in self.catalog:
+            wid = w["id"]
+            if wid in posted_ids:
+                continue
+            if self.find_stock_file_for_work(wid, content_dir=content_dir) is not None:
+                continue
+            candidates.append(w)
+            if len(candidates) >= count:
+                break
+        return candidates
+
     def select_next_work(self, work_id: Optional[str] = None, force: bool = False) -> Optional[Dict[str, Any]]:
         """
         Selects the next unposted Aozora Bunko work to reboot.

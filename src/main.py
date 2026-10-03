@@ -109,6 +109,11 @@ def main():
         help="Send email only to Blogger for the latest published work (or specified --work-id / --file) without sending to WordPress or X"
     )
     parser.add_argument(
+        "--local-llm",
+        action="store_true",
+        help="Use Local LLM (Ollama) with Crossref pre-verified DOIs instead of Gemini API"
+    )
+    parser.add_argument(
         "--verbose", "-v",
         action="store_true",
         help="Enable debug logging"
@@ -247,19 +252,32 @@ def main():
 
         logger.info(f"Selected Aozora work: '{target_work['title']}' by {target_work['author']} (ID: {target_work['id']})")
         
-        # Check if pre-created high-quality reboot file already exists for this work
-        existing_file = None
-        for key, (w_id, p) in RECREATED_WORKS.items():
-            if w_id == target_work['id'] and p.exists():
-                existing_file = p
-                break
+        # Check if pre-created / pre-stocked high-quality reboot file already exists in content/ for this work
+        existing_file = history_mgr.find_stock_file_for_work(target_work["id"])
+        if not existing_file:
+            for key, (w_id, p) in RECREATED_WORKS.items():
+                if w_id == target_work["id"] and p.exists():
+                    existing_file = p
+                    break
 
         if existing_file and not args.force:
             target_file = existing_file
-            logger.info(f"Using prepared high-quality reboot file: {target_file}")
+            logger.info(
+                f"Using pre-stocked story file from content/: {target_file} "
+                f"(skipping live LLM API call)"
+            )
+            _, target_refs = StoryGenerator()._extract_title_and_refs(
+                target_file.read_text(encoding="utf-8", errors="ignore"),
+                target_work
+            )
         else:
-            # Generate new story via Gemini
-            generator = StoryGenerator()
+            use_local = args.local_llm or os.getenv("USE_LOCAL_LLM", "").lower() in ("1", "true", "yes")
+            if use_local:
+                from src.local_story_generator import LocalStoryGenerator
+                generator = LocalStoryGenerator()
+            else:
+                generator = StoryGenerator()
+
             content, reboot_title, target_refs = generator.generate_story(
                 target_work,
                 ending_theme=args.ending

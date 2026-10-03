@@ -125,5 +125,17 @@ class TestNeoAozoraSystem(unittest.TestCase):
         self.assertIn('oauth_consumer_key="key123"', header)
         self.assertIn('oauth_signature=', header)
 
+    def test_stock_file_detection_and_unstocked_selection(self):
+        mgr = HistoryManager()
+        # 'unno-18-music' has content/story.md
+        stock_1 = mgr.find_stock_file_for_work("unno-18-music")
+        self.assertIsNotNone(stock_1)
+        self.assertTrue(stock_1.exists())
+        # Verify unstocked works returns a list of dicts
+        unstocked = mgr.select_unstocked_works(count=2)
+        self.assertIsInstance(unstocked, list)
+        for w in unstocked:
+            self.assertNotIn(w["id"], mgr.get_posted_ids())
+
 if __name__ == "__main__":
     unittest.main()

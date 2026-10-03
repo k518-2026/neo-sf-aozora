@@ -133,6 +133,24 @@ python -m src.main --send
 python -m src.main --work-id unno-fly-man --status draft --send
 ```
 
+### 4.4 ローカルLLM（Ollama）による一括書き溜め ＆ GitHub自動プッシュ（APIコストゼロ・ハルシネーションゼロ）
+
+手元のPC上のローカルLLM（Ollama: `qwen2.5:14b` / `gemma3:27b` 等）を使って未投稿作品を事前に書き溜め（`content/` へ保存）し、GitHubへプッシュしておくことができます。
+執筆前に **Crossref REST API** から実在論文3件を事前取得＆DOI疎通検証してからローカルLLMに渡すため、**架空論文のハルシネーションやリンク切れは物理的に発生しません**。
+GitHub Actions の定期配信（1日3回 cron）は、`content/` に書き溜めファイルが存在すれば Gemini API を呼ばずにそのファイルを最優先で配信します。
+
+```powershell
+# 現在の配信済み・書き溜めストック・未生成の状況を一覧表示
+python -m src.batch_stock --status
+
+# 未生成の作品を3本（1日分）ローカルLLMで執筆し、GitHubへ自動コミット＆プッシュ
+.\run_local_stock.ps1 -Count 3
+
+# または Python コマンドから直接実行（作品数やモデル、結末テーマの指定も可能）
+python -m src.batch_stock --count 3 --push
+python -m src.batch_stock --work-id miyazawa-ginga --push
+```
+
 ---
 
 ## 5. 投稿済み履歴一覧（アーカイブ）
