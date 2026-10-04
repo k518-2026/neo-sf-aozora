@@ -54,7 +54,8 @@ def print_stock_status(history_mgr: HistoryManager):
     if stocked_list:
         print("\n[OK] 【書き溜め済み・GitHub Actions 定期配信待ちリスト】")
         for idx, w, sf in stocked_list:
-            print(f"  [{idx:02d}] {w['title']}（{w['author']}） -> {sf}")
+            img_mark = "🎨[挿絵あり]" if sf.with_suffix(".png").exists() else "  [挿絵なし]"
+            print(f"  [{idx:02d}] {img_mark} {w['title']}（{w['author']}） -> {sf}")
     else:
         print("\n[!] 現在、未配信の書き溜めストックは 0 本です。")
 
@@ -86,11 +87,11 @@ def git_sync_and_push(generated_files: List[Path]) -> bool:
             logger.info("No new changes in content/ or archive/ to commit.")
             return True
 
-        msg = f"feat(stock): Add {len(generated_files)} pre-generated SF stories via Local LLM [skip ci]"
+        msg = f"feat(stock): Add {len(generated_files)} SF story/illustration asset(s) via Mac mini M4 [skip ci]"
         subprocess.run(["git", "commit", "-m", msg], check=True)
-        logger.info(f"Committed {len(generated_files)} stocked stories. Pushing to origin/main...")
+        logger.info(f"Committed {len(generated_files)} stocked asset(s). Pushing to origin/main...")
         subprocess.run(["git", "push", "origin", "HEAD:main"], check=True)
-        logger.info("Successfully pushed stocked stories to GitHub!")
+        logger.info("Successfully pushed stocked stories & illustrations to GitHub!")
         return True
     except Exception as e:
         logger.error(f"Git push failed: {e}")
@@ -99,7 +100,7 @@ def git_sync_and_push(generated_files: List[Path]) -> bool:
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Local LLM Batch Story Stock Generator (Zero-Hallucination Crossref + Ollama)"
+        description="Local LLM Batch Story & Illustration Stock Generator (Crossref + Ollama + Draw Things FLUX.2)"
     )
     parser.add_argument(
         "--count", "-n",
@@ -118,6 +119,11 @@ def main():
         help="Ollama server URL (default: http://192.168.128.59:11434 on Mac mini M4)"
     )
     parser.add_argument(
+        "--draw-things-host",
+        default=None,
+        help="Draw Things HTTP API URL (default: http://192.168.128.59:7860 on Mac mini M4)"
+    )
+    parser.add_argument(
         "--model", "-m",
         default=None,
         help="Ollama model name (e.g., qwen2.5:14b, gemma4:12b, qwen3.5:9b)"
@@ -127,6 +133,11 @@ def main():
         choices=["random", "bright", "dystopia", "romance", "mystery"],
         default="random",
         help="Ending theme (default: random 3:2:3:2 weighted)"
+    )
+    parser.add_argument(
+        "--generate-images",
+        action="store_true",
+        help="Generate missing .png illustrations for existing stocked stories in content/ via Draw Things FLUX.2"
     )
     parser.add_argument(
         "--push",
@@ -141,7 +152,7 @@ def main():
     parser.add_argument(
         "--force",
         action="store_true",
-        help="Overwrite even if a stock file already exists for the specified --work-id"
+        help="Overwrite even if a stock file or illustration already exists"
     )
     parser.add_argument(
         "--verbose", "-v",
@@ -162,7 +173,11 @@ def main():
         print_stock_status(history_mgr)
         return
 
-    local_gen = LocalStoryGenerator(ollama_host=args.host, model_name=args.model)
+    local_gen = LocalStoryGenerator(
+        ollama_host=args.host,
+        model_name=args.model,
+        draw_things_host=args.draw_things_host,
+    )
     if not local_gen.is_ollama_running():
         logger.error(
             f"Ollama server on Mac mini M4 is not reachable at {local_gen.ollama_host}. "
@@ -182,6 +197,45 @@ def main():
         f"Using Mac mini M4 Ollama ({local_gen.ollama_host}) | "
         f"Model: '{resolved_model}' (Available: {', '.join(installed_models)})"
     )
+
+    # Generate missing illustrations for existing stocked stories
+    if args.generate_images:
+        dt_conn = local_gen.check_draw_things_connection()
+        if not dt_conn.get("online"):
+            logger.error(
+                f"Cannot reach Draw Things HTTP API at {local_gen.draw_things_host}: {dt_conn.get('error')}. "
+                "Please enable HTTP Server (port 7860) in Draw Things on Mac mini M4."
+            )
+            sys.exit(1)
+
+        posted_ids = history_mgr.get_posted_ids()
+        generated_imgs: List[Path] = []
+        for w in history_mgr.catalog:
+            if args.work_id and w["id"] != args.work_id:
+                continue
+            if w["id"] in posted_ids and not args.force and not args.work_id:
+                continue
+            sf = history_mgr.find_stock_file_for_work(w["id"])
+            if sf is None:
+                continue
+            img_path = sf.with_suffix(".png")
+            if img_path.exists() and not args.force:
+                logger.info(f"Illustration already exists for {w['id']}: {img_path}")
+                continue
+            md_text = sf.read_text(encoding="utf-8", errors="ignore")
+            saved_img, _ = local_gen.generate_illustration(
+                work=w,
+                output_image_path=img_path,
+                story_body=md_text,
+                reboot_title=w["title"],
+            )
+            if saved_img:
+                generated_imgs.append(saved_img)
+
+        if args.push and generated_imgs:
+            git_sync_and_push(generated_imgs)
+        print_stock_status(history_mgr)
+        return
 
     if args.work_id:
         target_work = next((w for w in history_mgr.catalog if w["id"] == args.work_id), None)
@@ -218,6 +272,16 @@ def main():
             out_path.write_text(content, encoding="utf-8")
             generated_files.append(out_path)
             logger.info(f"Saved stocked story [{idx}/{len(targets)}]: {out_path} ('{reboot_title}')")
+
+            img_out_path = out_path.with_suffix(".png")
+            saved_img, _ = local_gen.generate_illustration(
+                work=work,
+                output_image_path=img_out_path,
+                story_body=content,
+                reboot_title=reboot_title,
+            )
+            if saved_img:
+                generated_files.append(saved_img)
         except Exception as e:
             logger.error(f"Failed to generate story for '{work['title']}' ({work['id']}): {e}", exc_info=True)
 

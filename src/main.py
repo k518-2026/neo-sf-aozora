@@ -114,6 +114,16 @@ def main():
         help="Use Local LLM (Ollama) with Crossref pre-verified DOIs instead of Gemini API"
     )
     parser.add_argument(
+        "--generate-images",
+        action="store_true",
+        help="Generate missing .png illustrations for existing stocked stories via Draw Things FLUX.2"
+    )
+    parser.add_argument(
+        "--push",
+        action="store_true",
+        help="Git commit & push after generating illustrations with --generate-images"
+    )
+    parser.add_argument(
         "--verbose", "-v",
         action="store_true",
         help="Enable debug logging"
@@ -132,6 +142,46 @@ def main():
         logger.info("History has been completely reset. All works from No.1 can now be reposted.")
         if args.reset_history and not args.repost:
             return
+
+    if args.generate_images:
+        from src.local_story_generator import LocalStoryGenerator
+        from src.batch_stock import git_sync_and_push, print_stock_status
+        local_gen = LocalStoryGenerator(
+            ollama_host=config.ollama_host,
+            writer_model=config.writer_model,
+            draw_things_host=config.draw_things_host,
+        )
+        dt_conn = local_gen.check_draw_things_connection()
+        if not dt_conn.get("online"):
+            logger.error(f"Cannot reach Draw Things HTTP API at {config.draw_things_host}: {dt_conn.get('error')}")
+            sys.exit(1)
+        posted_ids = history_mgr.get_posted_ids()
+        generated_imgs = []
+        for w in history_mgr.catalog:
+            if args.work_id and w["id"] != args.work_id:
+                continue
+            if w["id"] in posted_ids and not args.force and not args.work_id:
+                continue
+            sf = history_mgr.find_stock_file_for_work(w["id"])
+            if sf is None:
+                continue
+            img_path = sf.with_suffix(".png")
+            if img_path.exists() and not args.force:
+                logger.info(f"Illustration already exists for {w['id']}: {img_path}")
+                continue
+            md_text = sf.read_text(encoding="utf-8", errors="ignore")
+            saved_img, _ = local_gen.generate_illustration(
+                work=w,
+                output_image_path=img_path,
+                story_body=md_text,
+                reboot_title=w["title"],
+            )
+            if saved_img:
+                generated_imgs.append(saved_img)
+        if args.push and generated_imgs:
+            git_sync_and_push(generated_imgs)
+        print_stock_status(history_mgr)
+        return
 
     is_dry_run = True
     if args.send and not args.dry_run:
@@ -290,6 +340,29 @@ def main():
             target_file.parent.mkdir(parents=True, exist_ok=True)
             target_file.write_text(content, encoding="utf-8")
             logger.info(f"Generated story saved to: {target_file}")
+
+    # Ensure sidecar illustration .png exists if Draw Things is reachable on local LAN
+    if target_file and target_work and not os.getenv("GITHUB_ACTIONS"):
+        sidecar_png = target_file.with_suffix(".png")
+        if not sidecar_png.exists():
+            try:
+                from src.local_story_generator import LocalStoryGenerator
+                local_img_gen = LocalStoryGenerator(
+                    ollama_host=config.ollama_host,
+                    writer_model=config.writer_model,
+                    draw_things_host=config.draw_things_host,
+                )
+                dt_conn = local_img_gen.check_draw_things_connection()
+                if dt_conn.get("online"):
+                    md_text = target_file.read_text(encoding="utf-8", errors="ignore")
+                    local_img_gen.generate_illustration(
+                        work=target_work,
+                        output_image_path=sidecar_png,
+                        story_body=md_text,
+                        reboot_title=target_work.get("title", ""),
+                    )
+            except Exception as img_err:
+                logger.debug(f"Optional sidecar image generation skipped: {img_err}")
 
     # Determine next work for preview section
     next_work = None

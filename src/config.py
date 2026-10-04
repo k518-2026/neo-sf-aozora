@@ -39,6 +39,9 @@ class SMTPConfig:
     x_access_token_secret: str = ""
     x_webhook_url: str = ""
     wp_site_url: str = ""
+    ollama_host: str = "http://192.168.128.59:11434"
+    writer_model: str = "gemma4:12b"
+    draw_things_host: str = "http://192.168.128.59:7860"
 
 def get_config() -> SMTPConfig:
     """Retrieve and parse configuration from environment variables."""
@@ -61,6 +64,10 @@ def get_config() -> SMTPConfig:
     x_webhook_url = os.getenv("X_WEBHOOK_URL", "")
     wp_site_url = os.getenv("WP_SITE_URL", "")
 
+    ollama_host = os.getenv("OLLAMA_HOST", "http://192.168.128.59:11434").strip()
+    writer_model = os.getenv("OLLAMA_WRITER_MODEL", "gemma4:12b").strip()
+    draw_things_host = os.getenv("DRAW_THINGS_HOST", "http://192.168.128.59:7860").strip()
+
     return SMTPConfig(
         host=host,
         port=port,
@@ -79,4 +86,7 @@ def get_config() -> SMTPConfig:
         x_access_token_secret=x_access_token_secret,
         x_webhook_url=x_webhook_url,
         wp_site_url=wp_site_url,
+        ollama_host=ollama_host,
+        writer_model=writer_model,
+        draw_things_host=draw_things_host,
     )

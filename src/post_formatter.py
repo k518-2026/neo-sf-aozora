@@ -1,6 +1,7 @@
 import re
 import html
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import List, Optional, Tuple, Dict, Any
 
 # Try importing yaml, with fallback to built-in parser
@@ -28,6 +29,7 @@ class FormattedPost:
     content_plain: str = ""
     content_html_clean: str = ""
     content_plain_clean: str = ""
+    image_path: Optional[str] = None
 
 def _fallback_yaml_parser(text: str) -> Dict[str, Any]:
     """Lightweight fallback YAML parser for simple frontmatter dictionaries."""
@@ -262,7 +264,8 @@ def format_post_content(
     file_path: str,
     status_override: Optional[str] = None,
     include_jetpack_shortcodes: bool = True,
-    next_work: Optional[Dict[str, Any]] = None
+    next_work: Optional[Dict[str, Any]] = None,
+    image_path: Optional[str] = None,
 ) -> FormattedPost:
     """
     Loads a markdown story file and prepares both HTML and plain text
@@ -271,6 +274,12 @@ def format_post_content(
     WordPress email parsers to prematurely truncate content as an email signature.
     """
     meta, body = parse_markdown_with_frontmatter(file_path)
+
+    resolved_image_path = image_path
+    if not resolved_image_path:
+        sidecar_png = Path(file_path).with_suffix(".png")
+        if sidecar_png.exists():
+            resolved_image_path = str(sidecar_png)
 
     title = meta.get("title", "無題のSF作品")
     categories = meta.get("categories", ["SF小説"])
@@ -386,5 +395,6 @@ def format_post_content(
         content_html=final_html,
         content_plain=final_plain,
         content_html_clean=html_body,
-        content_plain_clean=cleaned_body
+        content_plain_clean=cleaned_body,
+        image_path=resolved_image_path,
     )

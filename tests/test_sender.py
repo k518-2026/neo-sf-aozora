@@ -137,5 +137,31 @@ class TestNeoAozoraSystem(unittest.TestCase):
         for w in unstocked:
             self.assertNotIn(w["id"], mgr.get_posted_ids())
 
+    def test_image_attachment_in_mime_message(self):
+        import tempfile
+        import base64
+        # 1x1 valid transparent PNG
+        tiny_png = base64.b64decode(
+            "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
+        )
+        with tempfile.TemporaryDirectory() as tmpdir:
+            md_path = Path(tmpdir) / "test_story.md"
+            png_path = Path(tmpdir) / "test_story.png"
+            md_path.write_text("---\ntitle: \"テストSF作品\"\n---\n本文テスト", encoding="utf-8")
+            png_path.write_bytes(tiny_png)
+
+            formatted = format_post_content(str(md_path))
+            self.assertEqual(formatted.image_path, str(png_path))
+
+            sender = WordPressMailSender(self.config)
+            wp_msg = sender.create_mime_message(formatted, for_blogger=False)
+            blogger_msg = sender.create_mime_message(formatted, for_blogger=True)
+
+            self.assertEqual(wp_msg.get_content_Type() if hasattr(wp_msg, "get_content_Type") else wp_msg.get_content_type(), "multipart/mixed")
+            self.assertEqual(blogger_msg.get_content_type(), "multipart/mixed")
+            payloads = wp_msg.get_payload()
+            self.assertEqual(len(payloads), 2)
+            self.assertEqual(payloads[1].get_content_type(), "image/png")
+
 if __name__ == "__main__":
     unittest.main()

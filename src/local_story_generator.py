@@ -2,11 +2,13 @@ import os
 import re
 import json
 import time
+import base64
 import logging
 import urllib.request
 import urllib.parse
 import urllib.error
-from typing import Dict, Any, List, Optional, Tuple
+from pathlib import Path
+from typing import Dict, Any, List, Optional, Tuple, Callable
 
 from src.story_generator import (
     select_ending_theme,
@@ -19,6 +21,8 @@ logger = logging.getLogger(__name__)
 
 DEFAULT_OLLAMA_HOST = "http://192.168.128.59:11434"
 DEFAULT_LOCAL_MODEL = "qwen2.5:14b"
+DEFAULT_WRITER_MODEL = "gemma4:12b"
+DEFAULT_DRAW_THINGS_HOST = "http://192.168.128.59:7860"
 
 # Preferred local models in priority order if user hasn't explicitly forced one
 PREFERRED_LOCAL_MODELS = [
@@ -333,9 +337,33 @@ class LocalStoryGenerator:
         self,
         ollama_host: Optional[str] = None,
         model_name: Optional[str] = None,
+        writer_model: Optional[str] = None,
+        draw_things_host: Optional[str] = None,
     ):
         self.ollama_host = (ollama_host or os.getenv("OLLAMA_HOST", DEFAULT_OLLAMA_HOST)).rstrip("/")
         self.model_name = model_name or os.getenv("OLLAMA_MODEL", "")
+        self.writer_model = writer_model or os.getenv("OLLAMA_WRITER_MODEL", DEFAULT_WRITER_MODEL)
+        self.draw_things_host = (draw_things_host or os.getenv("DRAW_THINGS_HOST", DEFAULT_DRAW_THINGS_HOST)).rstrip("/")
+
+    def check_draw_things_connection(self) -> Dict[str, Any]:
+        """Checks connection to Mac mini Draw Things HTTP API server (/sdapi/v1/options)."""
+        try:
+            req = urllib.request.Request(f"{self.draw_things_host}/sdapi/v1/options")
+            with urllib.request.urlopen(req, timeout=5) as res:
+                if res.getcode() == 200:
+                    data = json.loads(res.read().decode("utf-8", errors="ignore"))
+                    return {
+                        "online": True,
+                        "host": self.draw_things_host,
+                        "model": data.get("model", "flux_2_klein_base_4b_i8x.ckpt"),
+                    }
+        except Exception as e:
+            return {
+                "online": False,
+                "host": self.draw_things_host,
+                "error": str(e),
+            }
+        return {"online": False, "host": self.draw_things_host}
 
     def is_ollama_running(self, auto_start: bool = False) -> bool:
         try:
@@ -375,6 +403,16 @@ class LocalStoryGenerator:
             return installed[0]
         return DEFAULT_LOCAL_MODEL
 
+    def resolve_writer_model_name(self) -> str:
+        """Resolves the optimal installed model for English visual prompt generation (`gemma4:12b` preferred)."""
+        installed = self.get_installed_models()
+        if self.writer_model and self.writer_model in installed:
+            return self.writer_model
+        for cand in ("gemma4:12b", "gemma2:9b", "qwen3.5:9b", "qwen2.5:14b"):
+            if cand in installed:
+                return cand
+        return self.resolve_model_name()
+
     def _call_ollama_chat(
         self,
         messages: List[Dict[str, str]],
@@ -382,8 +420,9 @@ class LocalStoryGenerator:
         num_predict: int = 8192,
         num_ctx: int = 8192,
         timeout: int = 1200,
+        model_override: Optional[str] = None,
     ) -> str:
-        model = self.resolve_model_name()
+        model = model_override or self.resolve_model_name()
         url = f"{self.ollama_host}/api/chat"
         payload: Dict[str, Any] = {
             "model": model,
@@ -728,3 +767,149 @@ tags: ["SF", "青空文庫", "{work['author']}", "最先端科学", "{theme_info
             f"Verified Crossref DOIs: {len(verified_papers)}"
         )
         return full_markdown, reboot_title, short_refs
+
+    def generate_english_image_prompt(
+        self,
+        work: Dict[str, Any],
+        story_body: str = "",
+        reboot_title: str = "",
+    ) -> str:
+        """
+        Uses `gemma4:12b` (Writer) on Mac mini M4 Ollama to translate the sci-fi reboot novel's
+        most visually iconic scene into a concise, descriptive English image generation prompt
+        for FLUX.2 [klein] 4B.
+        """
+        writer_model = self.resolve_writer_model_name()
+        story_excerpt = story_body[:1600] if story_body else work.get("summary", "")
+
+        prompt = f"""You are an expert sci-fi novel and cinematic anime art director.
+Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko literary classics and cutting-edge modern science), write a single, vivid, highly descriptive **English image generation prompt** (60-95 words) for the FLUX.2 image model to depict the most iconic, atmospheric scene of the story.
+
+[Story Info]
+- Reboot Title: {reboot_title or work.get('title', '')}
+- Original Classic Work: {work.get('title', '')} by {work.get('author', '')}
+- Core Theme: {work.get('theme', '')}
+- Modern Scientific Technology: {work.get('modern_tech', '')}
+- Story Concept: {work.get('summary', '')}
+
+[Story Excerpt]
+{story_excerpt}
+
+[Rules for Output]
+1. Output ONLY the raw English prompt paragraph. Do NOT include explanations, markdown formatting, quotes, or Japanese text.
+2. Start with: "Cinematic sci-fi anime illustration of ..."
+3. Visually describe the characters, setting, lighting, and the specific scientific/literary visual motif (e.g., holographic quantum patterns, glowing bioluminescent laboratory, retro-futuristic Meiji/Taisho literary atmosphere fused with futuristic technology, starry cosmos, or surreal cybernetic phenomena).
+4. End with: "masterpiece sci-fi anime art style, Makoto Shinkai and Ghost in the Shell inspired atmospheric lighting, dramatic shadows, rich details, vibrant contrast."
+"""
+        try:
+            logger.info(f"[Writer: {writer_model}] Generating English illustration prompt for FLUX.2...")
+            raw_en = self._call_ollama_chat(
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "You are a professional prompt engineer for FLUX.2 sci-fi anime illustrations. Output ONLY the English prompt text.",
+                    },
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.65,
+                num_predict=250,
+                num_ctx=4096,
+                timeout=120,
+                model_override=writer_model,
+            )
+            cleaned_en = self._clean_llm_output(raw_en).strip(" \"'`\n")
+            cleaned_en = re.sub(r"^(?:Prompt|English Prompt)\s*[:：]\s*", "", cleaned_en, flags=re.IGNORECASE).strip()
+            cleaned_en = " ".join(cleaned_en.splitlines()).strip()
+            if len(cleaned_en) >= 30 and re.search(r"[a-zA-Z]{4,}", cleaned_en):
+                logger.info(f"  -> Generated English prompt: {cleaned_en[:120]}...")
+                return cleaned_en
+        except Exception as e:
+            logger.warning(f"Failed to generate English prompt via Ollama ({e}), using fallback English prompt.")
+
+        return (
+            f"Cinematic sci-fi anime illustration inspired by {work.get('id', 'futuristic science').replace('-', ' ')}, "
+            f"a mysterious protagonist in a futuristic laboratory where classical Japanese literary aesthetics meet "
+            f"glowing quantum holograms and advanced bio-photonic instruments, "
+            f"masterpiece sci-fi anime art style, atmospheric lighting, dramatic shadows, rich details, vibrant contrast."
+        )
+
+    def generate_illustration(
+        self,
+        work: Dict[str, Any],
+        output_image_path: Path,
+        story_body: str = "",
+        reboot_title: str = "",
+        custom_english_prompt: Optional[str] = None,
+        progress_callback: Optional[Callable[[str], None]] = None,
+    ) -> Tuple[Optional[Path], str]:
+        """
+        Generates a 512x512 sci-fi illustration using Draw Things HTTP API
+        (`http://192.168.128.59:7860/sdapi/v1/txt2img`, model `flux_2_klein_base_4b_i8x.ckpt`)
+        with an English prompt created by `gemma4:12b`.
+        Returns (saved_image_path_or_None, english_prompt_used).
+        """
+        dt_conn = self.check_draw_things_connection()
+        if not dt_conn.get("online"):
+            logger.warning(
+                f"Draw Things HTTP API server ({self.draw_things_host}) is not reachable: {dt_conn.get('error')}. Skipping image generation."
+            )
+            return None, ""
+
+        if custom_english_prompt and custom_english_prompt.strip():
+            en_prompt = custom_english_prompt.strip()
+        else:
+            if progress_callback:
+                progress_callback(f"執筆モデル ({self.resolve_writer_model_name()}) が小説本文から英語の挿絵プロンプトを作成中...")
+            en_prompt = self.generate_english_image_prompt(
+                work=work,
+                story_body=story_body,
+                reboot_title=reboot_title,
+            )
+
+        if progress_callback:
+            progress_callback(f"Draw Things ({self.draw_things_host}) で挿絵画像を生成中 (FLUX.2 [klein] 4B)...")
+        logger.info(
+            f"[Draw Things: {self.draw_things_host}] Generating 512x512 illustration "
+            f"(steps=12, guidance=4.0, sampler='Euler A Trailing')..."
+        )
+
+        url = f"{self.draw_things_host}/sdapi/v1/txt2img"
+        payload = {
+            "prompt": en_prompt,
+            "negative_prompt": "",
+            "width": 512,
+            "height": 512,
+            "steps": 12,
+            "guidance_scale": 4.0,
+            "sampler": "Euler A Trailing",
+        }
+        try:
+            data = json.dumps(payload).encode("utf-8")
+            req = urllib.request.Request(
+                url,
+                data=data,
+                headers={"Content-Type": "application/json"},
+                method="POST",
+            )
+            start_t = time.time()
+            with urllib.request.urlopen(req, timeout=600) as res:
+                body = json.loads(res.read().decode("utf-8", errors="ignore"))
+                images = body.get("images", [])
+                if images and images[0]:
+                    b64_str = re.sub(r"^data:image/[^;]+;base64,", "", images[0])
+                    img_bytes = base64.b64decode(b64_str)
+                    output_image_path.parent.mkdir(parents=True, exist_ok=True)
+                    output_image_path.write_bytes(img_bytes)
+                    elapsed = time.time() - start_t
+                    logger.info(
+                        f"[Draw Things Complete] Saved illustration to {output_image_path} "
+                        f"({len(img_bytes)} bytes in {elapsed:.1f}s)"
+                    )
+                    return output_image_path, en_prompt
+                else:
+                    logger.warning("Draw Things returned empty images list.")
+        except Exception as e:
+            logger.error(f"Draw Things image generation failed: {e}")
+
+        return None, en_prompt
+

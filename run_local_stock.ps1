@@ -1,7 +1,9 @@
 param(
     [int]$Count = 3,
     [string]$HostUrl = "http://192.168.128.59:11434",
+    [string]$DrawThingsHost = "http://192.168.128.59:7860",
     [string]$Model = "",
+    [switch]$GenerateImages,
     [switch]$NoPush
 )
 
@@ -9,6 +11,7 @@ $ErrorActionPreference = "Stop"
 Set-Location -Path $PSScriptRoot
 
 $env:OLLAMA_HOST = $HostUrl
+$env:DRAW_THINGS_HOST = $DrawThingsHost
 
 Write-Host "Checking Mac mini M4 Ollama server at $HostUrl ..." -ForegroundColor Cyan
 try {
@@ -20,15 +23,18 @@ try {
     exit 0
 }
 
-$argsList = @("-m", "src.batch_stock", "--host", $HostUrl, "--count", "$Count")
+$argsList = @("-m", "src.batch_stock", "--host", $HostUrl, "--draw-things-host", $DrawThingsHost, "--count", "$Count")
 if ($Model -ne "") {
     $argsList += @("--model", $Model)
+}
+if ($GenerateImages) {
+    $argsList += "--generate-images"
 }
 if (-not $NoPush) {
     $argsList += "--push"
 }
 
-Write-Host "Running Local LLM Stock Generator via Mac mini M4: python $($argsList -join ' ')" -ForegroundColor Green
+Write-Host "Running Local LLM & FLUX.2 Stock Generator via Mac mini M4: python $($argsList -join ' ')" -ForegroundColor Green
 python @argsList
 
 
