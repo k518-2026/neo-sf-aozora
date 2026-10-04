@@ -814,7 +814,7 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
                 temperature=0.65,
                 num_predict=250,
                 num_ctx=4096,
-                timeout=120,
+                timeout=300,
                 model_override=writer_model,
             )
             cleaned_en = self._clean_llm_output(raw_en).strip(" \"'`\n")
