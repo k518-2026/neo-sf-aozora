@@ -513,6 +513,22 @@
   },
   {
     "work_no": 33,
+    "work_id": "ango-sakura-no-mori",
+    "title": "桜の森の満開の下",
+    "subtitle": "静寂が導く絶望と希望",
+    "attribution": "",
+    "original_author": "坂口安吾",
+    "original_title": "桜の森の満開の下",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001095/card42618.html",
+    "modern_tech": "無響・無反射メタマテリアル空間、扁桃体―前頭前野情動結合デコーディング、ボリュメトリック・ライトフィールド投影",
+    "summary": "満開の桜の森の下で人を襲う圧倒的な孤独と狂気。究極の仮想美空間を作り上げた技術者が、花吹雪のホログラムの果てに見出した絶対的静寂と愛。",
+    "char_count": 2413,
+    "narration_file": "33_桜の森の満開の下_narration.txt",
+    "full_file": "33_桜の森の満開の下_full.txt",
+    "original_md_file": "33_桜の森の満開の下.md"
+  },
+  {
+    "work_no": 34,
     "work_id": "kajii-lemon",
     "title": "檸檬",
     "subtitle": "丸善の棚に置かれた黄金の特異点",
@@ -523,12 +539,12 @@
     "modern_tech": "嗅覚受容体の量子トンネル効果理論、超集積トポロジカル光メモリ結晶、マルチモーダル共感覚ニューロフィードバック",
     "summary": "憂鬱な青年の心を救った一顆の檸檬。人類の全芸術アーカイブを封じ込めた檸檬型の光量子結晶が、灰色の管理都市に色彩と感動の連鎖反応を巻き起こす。",
     "char_count": 2956,
-    "narration_file": "33_檸檬_narration.txt",
-    "full_file": "33_檸檬_full.txt",
-    "original_md_file": "33_檸檬.md"
+    "narration_file": "34_檸檬_narration.txt",
+    "full_file": "34_檸檬_full.txt",
+    "original_md_file": "34_檸檬.md"
   },
   {
-    "work_no": 34,
+    "work_no": 35,
     "work_id": "kajii-sakuranoki",
     "title": "桜の樹の下には",
     "subtitle": "根圏菌糸網が記憶する美の屍体",
@@ -539,12 +555,12 @@
     "modern_tech": "共通菌根ネットワーク（Wood Wide Web）電気電位信号解析、環境DNA（eDNA）メタバーコーディング、エピジェネティック花芽分化制御",
     "summary": "咲き誇る桜の樹の下に埋められた秘密。根系と共生菌類が織りなす地下の巨大バイオ通信網が、失われた記憶を花弁の分光スペクトルとして再生する。",
     "char_count": 3772,
-    "narration_file": "34_桜の樹の下には_narration.txt",
-    "full_file": "34_桜の樹の下には_full.txt",
-    "original_md_file": "34_桜の樹の下には.md"
+    "narration_file": "35_桜の樹の下には_narration.txt",
+    "full_file": "35_桜の樹の下には_full.txt",
+    "original_md_file": "35_桜の樹の下には.md"
   },
   {
-    "work_no": 35,
+    "work_no": 36,
     "work_id": "miyazawa-gusukobudori",
     "title": "グスコーブドリの伝記",
     "subtitle": "カルボナード島の第三の解",
@@ -555,12 +571,12 @@
     "modern_tech": "成層圏エアロゾル・インジェクション制御、マグマ溜まり熱流体連成シミュレーション、非線形気候力学系の分岐理論",
     "summary": "冷害から人々を救うため火山を人工噴火させようとする青年技師。地球気候モデルの非線形分岐点を計算し、誰一人犠牲にせず気候危機を救う数学的逆転劇。",
     "char_count": 2793,
-    "narration_file": "35_グスコーブドリの伝記_narration.txt",
-    "full_file": "35_グスコーブドリの伝記_full.txt",
-    "original_md_file": "35_グスコーブドリの伝記.md"
+    "narration_file": "36_グスコーブドリの伝記_narration.txt",
+    "full_file": "36_グスコーブドリの伝記_full.txt",
+    "original_md_file": "36_グスコーブドリの伝記.md"
   },
   {
-    "work_no": 36,
+    "work_no": 37,
     "work_id": "nakajima-sangetsuki",
     "title": "山月記",
     "subtitle": "月下に吼えるコネクトーム",
@@ -571,12 +587,28 @@
     "modern_tech": "種間キメラ胚補完法、コネクトーム（全神経回路網）転移エミュレーション、ゲーデルの自己言及不完全性とAI意識変容",
     "summary": "詩人としての自尊心と羞恥心から虎へと変貌した李徴。野生捕食獣のバイオハイブリッド義体へ神経回路を転移した孤高の数学者が、旧友に託す最後の定理。",
     "char_count": 3158,
-    "narration_file": "36_山月記_narration.txt",
-    "full_file": "36_山月記_full.txt",
-    "original_md_file": "36_山月記.md"
+    "narration_file": "37_山月記_narration.txt",
+    "full_file": "37_山月記_full.txt",
+    "original_md_file": "37_山月記.md"
   },
   {
-    "work_no": 37,
+    "work_no": 38,
+    "work_id": "oguri-kokushikan",
+    "title": "黒死館殺人事件",
+    "subtitle": "超スマート建築の謎",
+    "attribution": "",
+    "original_author": "小栗虫太郎",
+    "original_title": "黒死館殺人事件",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000125/card1317.html",
+    "modern_tech": "形式手法による自動定理証明（Lean/Coq）、超分子ホスト・ゲスト化学の遅延放出カプセル、スマート建築センサー網のビザンチン障害解析",
+    "summary": "中世の城館を模した超スマート建築で起きる連続密室殺人。膨大な科学知識の迷宮を、形式論理の自動定理証明と物理化学解析で切り裂く本格推理。",
+    "char_count": 4203,
+    "narration_file": "38_黒死館殺人事件_narration.txt",
+    "full_file": "38_黒死館殺人事件_full.txt",
+    "original_md_file": "38_黒死館殺人事件.md"
+  },
+  {
+    "work_no": 39,
     "work_id": "soseki-yume-juuya",
     "title": "夢十夜",
     "subtitle": "百合の檻",
@@ -587,8 +619,24 @@
     "modern_tech": "クリプトビオシス誘導ガラス化凍結保存、量子ゼノン効果による生体時間制御、深層睡眠時空間シミュレーション",
     "summary": "「百年待っていて下さい」と言い残して眠りについた女性。極低温ガラス化睡眠と量子時間制御の果てに、百年の時を超えて咲く白百合の真実。",
     "char_count": 5516,
-    "narration_file": "37_夢十夜_narration.txt",
-    "full_file": "37_夢十夜_full.txt",
-    "original_md_file": "37_夢十夜.md"
+    "narration_file": "39_夢十夜_narration.txt",
+    "full_file": "39_夢十夜_full.txt",
+    "original_md_file": "39_夢十夜.md"
+  },
+  {
+    "work_no": 40,
+    "work_id": "yumeno-dogra-magra",
+    "title": "ドグラ・マグラ",
+    "subtitle": "遺伝する記憶",
+    "attribution": "",
+    "original_author": "夢野久作",
+    "original_title": "ドグラ・マグラ",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000096/card2093.html",
+    "modern_tech": "経世代エピジェネティック継承（小分子非コードRNA）、不動点コンビネータと自己言及アルゴリズム、全脳オルガノイド再帰ループ",
+    "summary": "記憶を失った青年が精神病棟で目覚め、自らの正体を追う究極の迷宮。世代を超えてRNAに刻まれた記憶と再帰関数が導く驚愕の真相。",
+    "char_count": 3894,
+    "narration_file": "40_ドグラ・マグラ_narration.txt",
+    "full_file": "40_ドグラ・マグラ_full.txt",
+    "original_md_file": "40_ドグラ・マグラ.md"
   }
 ]
