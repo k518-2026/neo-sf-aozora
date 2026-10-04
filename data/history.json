@@ -618,5 +618,19 @@
       "Nowak, M. A. (2006). Five Rules for the Evolution of Cooperation. *Science*, 314(5805), 1560-1563.",
       "Pearson, J. (1975). The orbital tower: A spacecraft launcher using the Earth's rotational energy. *Acta Astronautica*, 2(9-10), 785-799."
     ]
+  },
+  {
+    "work_id": "nakajima-sangetsuki",
+    "original_title": "山月記",
+    "original_author": "中島敦",
+    "reboot_title": "山月記――月下に吼えるコネクトーム",
+    "posted_at": "2026-10-05T08:42:45.397338+09:00",
+    "file_path": "content/2026-10-04_nakajima_sangetsuki.md",
+    "status": "publish",
+    "references": [
+      "Kobayashi, T., Yamaguchi, T., Hamanaka, S., Kato-Itoh, M., Yamazaki, Y., Ibata, M., et al. (2010). Generation of Rat Pancreas in Mouse by Interspecific Blastocyst Injection of Pluripotent Stem Cells. *Cell*, 142(5), 787-799.",
+      "Winding, M., Pedigo, B. D., Barnes, C. L., Patsolic, H. G., Park, Y., Kazimiers, T., et al. (2023). The connectome of an insect brain. *Science*, 379(6636), eadd9330.",
+      "Koch, C., Massimini, M., Boly, M., & Tononi, G. (2016). Neural correlates of consciousness: progress and problems. *Nature Reviews Neuroscience*, 17(5), 307-321."
+    ]
   }
 ]
