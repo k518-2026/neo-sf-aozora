@@ -574,5 +574,21 @@
     "narration_file": "36_山月記_narration.txt",
     "full_file": "36_山月記_full.txt",
     "original_md_file": "36_山月記.md"
+  },
+  {
+    "work_no": 37,
+    "work_id": "soseki-yume-juuya",
+    "title": "夢十夜",
+    "subtitle": "百合の檻",
+    "attribution": "夏目漱石『夢十夜』（青空文庫）",
+    "original_author": "夏目漱石",
+    "original_title": "夢十夜",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000148/card799.html",
+    "modern_tech": "クリプトビオシス誘導ガラス化凍結保存、量子ゼノン効果による生体時間制御、深層睡眠時空間シミュレーション",
+    "summary": "「百年待っていて下さい」と言い残して眠りについた女性。極低温ガラス化睡眠と量子時間制御の果てに、百年の時を超えて咲く白百合の真実。",
+    "char_count": 5516,
+    "narration_file": "37_夢十夜_narration.txt",
+    "full_file": "37_夢十夜_full.txt",
+    "original_md_file": "37_夢十夜.md"
   }
 ]
