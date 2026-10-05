@@ -306,9 +306,9 @@
     "original_title": "地底戦艦",
     "original_author": "海野十三",
     "modern_tech": "地震波トモグラフィーの境界要素逆問題解析、マントル対流超並列流体シミュレーション、超高圧ダイヤモンドアンビル極限物性、超耐熱タングステンナノ合金",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-subterranean-battleship.html",
-    "image": "",
+    "image": "assets/images/unno-subterranean-battleship.png",
     "char_count": 6462
   },
   {
