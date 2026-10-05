@@ -414,9 +414,9 @@
     "original_title": "俘囚",
     "original_author": "海野十三",
     "modern_tech": "AdS/CFT対応ホログラフィック原理、ワームホール量子シミュレーション、トポロジカル空間位相格子",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-captive.html",
-    "image": "",
+    "image": "assets/images/unno-captive.png",
     "char_count": 4109
   },
   {
