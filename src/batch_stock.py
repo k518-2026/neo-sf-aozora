@@ -278,6 +278,7 @@ def main():
 
     for idx, work in enumerate(targets, start=1):
         logger.info(f"\n--- [{idx}/{len(targets)}] Generating '{work['title']}' ({work['author']}) ---")
+        work_files: List[Path] = []
         try:
             content, reboot_title, refs = local_gen.generate_story(
                 work=work,
@@ -289,6 +290,7 @@ def main():
             out_path.parent.mkdir(parents=True, exist_ok=True)
             out_path.write_text(content, encoding="utf-8")
             generated_files.append(out_path)
+            work_files.append(out_path)
             logger.info(f"Saved stocked story [{idx}/{len(targets)}]: {out_path} ('{reboot_title}')")
 
             img_out_path = out_path.with_suffix(".png")
@@ -300,24 +302,25 @@ def main():
             )
             if saved_img:
                 generated_files.append(saved_img)
+                work_files.append(saved_img)
+
+            # Immediately update archive, GitHub Pages (docs/), and README.md after each work
+            try:
+                from src.archiver import update_archive_all
+                update_archive_all()
+            except Exception as e:
+                logger.warning(f"Archive update warning: {e}")
+
+            try:
+                from src.site_builder import build_github_pages
+                build_github_pages(history_mgr)
+            except Exception as e:
+                logger.warning(f"GitHub Pages build warning: {e}")
+
+            if args.push and work_files:
+                git_sync_and_push(work_files)
         except Exception as e:
             logger.error(f"Failed to generate story for '{work['title']}' ({work['id']}): {e}", exc_info=True)
-
-    if generated_files:
-        try:
-            from src.archiver import update_archive_all
-            update_archive_all()
-        except Exception as e:
-            logger.warning(f"Archive update warning: {e}")
-
-        try:
-            from src.site_builder import build_github_pages
-            build_github_pages(history_mgr)
-        except Exception as e:
-            logger.warning(f"GitHub Pages build warning: {e}")
-
-        if args.push:
-            git_sync_and_push(generated_files)
 
     print_stock_status(history_mgr)
 
