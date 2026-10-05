@@ -222,9 +222,9 @@
     "original_title": "銀河鉄道の夜",
     "original_author": "宮沢賢治",
     "modern_tech": "量子もつれテンソルネットワーク（ER=EPR仮説）、ミリ秒パルサー時空測位ナビゲーション、超流動ヘリウム冷却量子メモリ",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/miyazawa-ginga.html",
-    "image": "",
+    "image": "assets/images/miyazawa-ginga.png",
     "char_count": 4587
   },
   {

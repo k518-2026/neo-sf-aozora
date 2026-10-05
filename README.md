@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **47** 作品（うち挿絵付き **45** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 02:44 JST）
+- **収録作品数**: 全 **47** 作品（うち挿絵付き **46** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 02:46 JST）
 
 ---
 
@@ -32,7 +32,7 @@
 | 32 | **[蜘蛛の糸――天頂から垂れる一本の均衡](content/2026-10-04_akutagawa_kumonoito.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-kumonoito.html) | [📄原稿](content/2026-10-04_akutagawa_kumonoito.md) | [🎨挿絵](content/2026-10-04_akutagawa_kumonoito.png) | 芥川龍之介[『蜘蛛の糸』](https://www.aozora.gr.jp/cards/000879/card92.html) | 超長尺カーボンナノチューブ（CNT）マクロファイバー、非協力ゲーム理論（ナッシュ均衡と利他的協調）、軌道力学テザー共振制御 | 4,739字 |
 | 31 | **[河童――遺伝子の謎](content/2026-10-03_akutagawa_kappa.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-kappa.html) | [📄原稿](content/2026-10-03_akutagawa_kappa.md) | [🎨挿絵](content/2026-10-03_akutagawa_kappa.png) | 芥川龍之介[『河童』](https://www.aozora.gr.jp/cards/000879/card69.html) | 全ゲノム人工合成（GP-write）、胎内BCI意思確認プロトコル、メカニズムデザイン（数理経済学・社会的選択理論） | 4,491字 |
 | 30 | **[歯車――幻影の歯輪](content/2026-10-03_akutagawa_haguruma.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-haguruma.html) | [📄原稿](content/2026-10-03_akutagawa_haguruma.md) | — | 芥川龍之介[『歯車』](https://www.aozora.gr.jp/cards/000879/card42.html) | 大脳視覚野の反応拡散方程式（エルメントラウト・コーワン数理モデル）、光遺伝学フェーズロック制御、神経雪（Visual Snow）位相解析 | 4,702字 |
-| 29 | **[銀河鉄道の夜――量子の迷宮](content/2026-10-03_miyazawa_ginga.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-ginga.html) | [📄原稿](content/2026-10-03_miyazawa_ginga.md) | — | 宮沢賢治[『銀河鉄道の夜』](https://www.aozora.gr.jp/cards/000081/card456.html) | 量子もつれテンソルネットワーク（ER=EPR仮説）、ミリ秒パルサー時空測位ナビゲーション、超流動ヘリウム冷却量子メモリ | 4,587字 |
+| 29 | **[銀河鉄道の夜――量子の迷宮](content/2026-10-03_miyazawa_ginga.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-ginga.html) | [📄原稿](content/2026-10-03_miyazawa_ginga.md) | [🎨挿絵](content/2026-10-03_miyazawa_ginga.png) | 宮沢賢治[『銀河鉄道の夜』](https://www.aozora.gr.jp/cards/000081/card456.html) | 量子もつれテンソルネットワーク（ER=EPR仮説）、ミリ秒パルサー時空測位ナビゲーション、超流動ヘリウム冷却量子メモリ | 4,587字 |
 | 28 | **[瓶詰地獄――未来からの福音](content/2026-10-03_yumeno_binzume_jigoku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-binzume-jigoku.html) | [📄原稿](content/2026-10-03_yumeno_binzume_jigoku.md) | [🎨挿絵](content/2026-10-03_yumeno_binzume_jigoku.png) | 夢野久作[『瓶詰地獄』](https://www.aozora.gr.jp/cards/000096/card938.html) | シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化DNAタイムスタンプ解析 | 5,380字 |
 | 27 | **[白昼夢――ベイズ脳の愛した幻](content/2026-10-03_edogawa_hakuchumu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-hakuchumu.html) | [📄原稿](content/2026-10-03_edogawa_hakuchumu.md) | [🎨挿絵](content/2026-10-03_edogawa_hakuchumu.png) | 江戸川乱歩[『白昼夢』](https://www.aozora.gr.jp/cards/001779/card56647.html) | 経頭蓋集束超音波（tFUS）視覚野変調、敵対的摂動（Adversarial Perturbation）光音響パッチ、ベイズ脳予測符号化モデル | 6,460字 |
 | 26 | **[火星兵団――星を継ぐ庭師たち](content/2026-10-03_unno_mars_corps.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-mars-corps.html) | [📄原稿](content/2026-10-03_unno_mars_corps.md) | [🎨挿絵](content/2026-10-03_unno_mars_corps.png) | 海野十三[『火星兵団』](https://www.aozora.gr.jp/cards/000160/card877.html) | フォン・ノイマン型自己複製オートマトン、超長基線電波干渉計（VLBI）、自律分散スウォーム制御 | 5,992字 |
