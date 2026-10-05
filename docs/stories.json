@@ -258,9 +258,9 @@
     "original_title": "火星兵団",
     "original_author": "海野十三",
     "modern_tech": "フォン・ノイマン型自己複製オートマトン、超長基線電波干渉計（VLBI）、自律分散スウォーム制御",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-mars-corps.html",
-    "image": "",
+    "image": "assets/images/unno-mars-corps.png",
     "char_count": 5992
   },
   {

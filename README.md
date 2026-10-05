@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **47** 作品（うち挿絵付き **42** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 02:35 JST）
+- **収録作品数**: 全 **47** 作品（うち挿絵付き **43** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 02:39 JST）
 
 ---
 
@@ -35,7 +35,7 @@
 | 29 | **[銀河鉄道の夜――量子の迷宮](content/2026-10-03_miyazawa_ginga.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-ginga.html) | [📄原稿](content/2026-10-03_miyazawa_ginga.md) | — | 宮沢賢治[『銀河鉄道の夜』](https://www.aozora.gr.jp/cards/000081/card456.html) | 量子もつれテンソルネットワーク（ER=EPR仮説）、ミリ秒パルサー時空測位ナビゲーション、超流動ヘリウム冷却量子メモリ | 4,587字 |
 | 28 | **[瓶詰地獄――未来からの福音](content/2026-10-03_yumeno_binzume_jigoku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-binzume-jigoku.html) | [📄原稿](content/2026-10-03_yumeno_binzume_jigoku.md) | — | 夢野久作[『瓶詰地獄』](https://www.aozora.gr.jp/cards/000096/card938.html) | シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化DNAタイムスタンプ解析 | 5,380字 |
 | 27 | **[白昼夢――ベイズ脳の愛した幻](content/2026-10-03_edogawa_hakuchumu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-hakuchumu.html) | [📄原稿](content/2026-10-03_edogawa_hakuchumu.md) | — | 江戸川乱歩[『白昼夢』](https://www.aozora.gr.jp/cards/001779/card56647.html) | 経頭蓋集束超音波（tFUS）視覚野変調、敵対的摂動（Adversarial Perturbation）光音響パッチ、ベイズ脳予測符号化モデル | 6,460字 |
-| 26 | **[火星兵団――星を継ぐ庭師たち](content/2026-10-03_unno_mars_corps.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-mars-corps.html) | [📄原稿](content/2026-10-03_unno_mars_corps.md) | — | 海野十三[『火星兵団』](https://www.aozora.gr.jp/cards/000160/card877.html) | フォン・ノイマン型自己複製オートマトン、超長基線電波干渉計（VLBI）、自律分散スウォーム制御 | 5,992字 |
+| 26 | **[火星兵団――星を継ぐ庭師たち](content/2026-10-03_unno_mars_corps.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-mars-corps.html) | [📄原稿](content/2026-10-03_unno_mars_corps.md) | [🎨挿絵](content/2026-10-03_unno_mars_corps.png) | 海野十三[『火星兵団』](https://www.aozora.gr.jp/cards/000160/card877.html) | フォン・ノイマン型自己複製オートマトン、超長基線電波干渉計（VLBI）、自律分散スウォーム制御 | 5,992字 |
 | 25 | **[潜航艇「鷹の巣」――深淵のシンフォニー](content/2026-10-02_oguri_submarine_eagles_nest.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-submarine-eagles-nest.html) | [📄原稿](content/2026-10-02_oguri_submarine_eagles_nest.md) | [🎨挿絵](content/2026-10-02_oguri_submarine_eagles_nest.png) | 小栗虫太郎[『潜航艇「鷹の巣」』](https://www.aozora.gr.jp/cards/000125/card1684.html) | 低周波海洋音響トモグラフィー、極限環境誤り訂正符号、深海自律型AUV群知能 | 6,063字 |
 | 24 | **[電気風呂の怪死――トポロジカル量子コヒーレンスの導出](content/2026-10-02_unno_electric_bath_death.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-electric-bath-death.html) | [📄原稿](content/2026-10-02_unno_electric_bath_death.md) | [🎨挿絵](content/2026-10-02_unno_electric_bath_death.png) | 海野十三[『電気風呂の怪死』](https://www.aozora.gr.jp/cards/000160/card1241.html) | トポロジカル絶縁体・量子ホール効果、ジョセフソン接合SQUID磁束量子センサ、複素ポテンシャル論・等角写像による漏洩電流逆解析 | 7,292字 |
 | 23 | **[地球盗難――不変多様体のラプソディ](content/2026-10-02_unno_earth_theft.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-earth-theft.html) | [📄原稿](content/2026-10-02_unno_earth_theft.md) | [🎨挿絵](content/2026-10-02_unno_earth_theft.png) | 海野十三[『地球盗難』](https://www.aozora.gr.jp/cards/000160/card874.html) | ハミルトン系シンプレクティック幾何学的数値積分、ラグランジュ点不変多様体カオス軌道計算、重力波干渉センシング、惑星スイングバイ最適化 | 7,165字 |
