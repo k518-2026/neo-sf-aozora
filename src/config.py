@@ -42,6 +42,7 @@ class SMTPConfig:
     ollama_host: str = "http://192.168.128.59:11434"
     writer_model: str = "gemma4:12b"
     draw_things_host: str = "http://192.168.128.59:7860"
+    pause_wp: bool = False
 
 def get_config() -> SMTPConfig:
     """Retrieve and parse configuration from environment variables."""
@@ -56,6 +57,7 @@ def get_config() -> SMTPConfig:
     blogger_post_email = os.getenv("BLOGGER_POST_EMAIL", "").strip()
     default_status = os.getenv("DEFAULT_POST_STATUS", "publish")
     use_jetpack_shortcodes = os.getenv("USE_JETPACK_SHORTCODES", "true").lower() in ("true", "1", "yes")
+    pause_wp = os.getenv("PAUSE_WP", "true").lower() in ("true", "1", "yes")
 
     x_api_key = os.getenv("X_API_KEY") or os.getenv("TWITTER_API_KEY", "")
     x_api_secret = os.getenv("X_API_SECRET") or os.getenv("TWITTER_API_SECRET", "")
@@ -63,6 +65,8 @@ def get_config() -> SMTPConfig:
     x_access_token_secret = os.getenv("X_ACCESS_TOKEN_SECRET") or os.getenv("TWITTER_ACCESS_TOKEN_SECRET", "")
     x_webhook_url = os.getenv("X_WEBHOOK_URL", "")
     wp_site_url = os.getenv("WP_SITE_URL", "")
+    if pause_wp and ("wordpress.com" in wp_site_url or not wp_site_url):
+        wp_site_url = os.getenv("BLOGGER_SITE_URL", "https://hardsf2026.blogspot.com/")
 
     ollama_host = os.getenv("OLLAMA_HOST", "http://192.168.128.59:11434").strip()
     writer_model = os.getenv("OLLAMA_WRITER_MODEL", "gemma4:12b").strip()
@@ -89,4 +93,5 @@ def get_config() -> SMTPConfig:
         ollama_host=ollama_host,
         writer_model=writer_model,
         draw_things_host=draw_things_host,
+        pause_wp=pause_wp,
     )

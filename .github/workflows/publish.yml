@@ -117,6 +117,8 @@ jobs:
           SMTP_USE_SSL: ${{ secrets.SMTP_USE_SSL || 'false' }}
           WP_POST_EMAIL: ${{ secrets.WP_POST_EMAIL }}
           BLOGGER_POST_EMAIL: ${{ secrets.BLOGGER_POST_EMAIL || '' }}
+          PAUSE_WP: 'true'
+          BLOGGER_SITE_URL: 'https://hardsf2026.blogspot.com/'
           WP_SITE_URL: ${{ secrets.WP_SITE_URL || vars.WP_SITE_URL || '' }}
           X_API_KEY: ${{ secrets.X_API_KEY || secrets.TWITTER_API_KEY || '' }}
           X_API_SECRET: ${{ secrets.X_API_SECRET || secrets.TWITTER_API_SECRET || '' }}

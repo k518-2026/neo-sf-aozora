@@ -390,9 +390,11 @@ def main():
         preview_file.write_text(formatted.content_html, encoding="utf-8")
         logger.info(f"Rendered HTML saved to: {preview_file.resolve()}")
 
-    # Dispatch via SMTP to WordPress
+    # Dispatch via SMTP (Blogger-only while WordPress is paused via config.pause_wp)
     sender = WordPressMailSender(config)
-    result = sender.send_post(formatted, dry_run=is_dry_run)
+    if config.pause_wp:
+        logger.info("PAUSE_WP is active: skipping WordPress email dispatch and posting to Blogger only.")
+    result = sender.send_post(formatted, dry_run=is_dry_run, blogger_only=config.pause_wp)
 
     if not result.get("success"):
         logger.error(f"Dispatch failed: {result.get('error')}")
