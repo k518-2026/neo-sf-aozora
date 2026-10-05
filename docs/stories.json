@@ -546,9 +546,9 @@
     "original_title": "蠅男",
     "original_author": "海野十三",
     "modern_tech": "昆虫バイオハイブリッド・サイボーグ、昆虫羽ばたき型MEMSマイクロロボット、ニューロモルフィック視覚センサ",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-fly-man.html",
-    "image": "",
+    "image": "assets/images/unno-fly-man.png",
     "char_count": 7299
   },
   {
