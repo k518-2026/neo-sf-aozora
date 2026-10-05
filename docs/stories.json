@@ -486,9 +486,9 @@
     "original_title": "脳髄手術",
     "original_author": "蘭郁二郎",
     "modern_tech": "深部脳刺激（DBS）、光遺伝学的情動回路切除、ナノロボットによる標的シナプス精密切断",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/ran-brain-surgery.html",
-    "image": "",
+    "image": "assets/images/ran-brain-surgery.png",
     "char_count": 7013
   },
   {
