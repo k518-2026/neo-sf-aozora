@@ -510,9 +510,9 @@
     "original_title": "植物人間",
     "original_author": "蘭郁二郎",
     "modern_tech": "動物細胞における葉緑体人工共生（Planimal）、CRISPR光合成代謝経路移植、クロロフィル生体蛍光",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/ran-plant-man.html",
-    "image": "",
+    "image": "assets/images/ran-plant-man.png",
     "char_count": 7202
   },
   {
