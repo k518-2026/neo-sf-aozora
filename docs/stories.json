@@ -534,9 +534,9 @@
     "original_title": "人造人間事件",
     "original_author": "海野十三",
     "modern_tech": "脳オルガノイド・コンピューティング（Brain-on-a-chip）、合成生物学的ヒューマノイド、神経活動の光遺伝学的クローニング",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-cyborg-incident.html",
-    "image": "",
+    "image": "assets/images/unno-cyborg-incident.png",
     "char_count": 8026
   },
   {

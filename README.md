@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **47** 作品（うち挿絵付き **19** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 00:56 JST）
+- **収録作品数**: 全 **47** 作品（うち挿絵付き **20** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 01:01 JST）
 
 ---
 
@@ -58,7 +58,7 @@
 | 06 | **[夢鬼](content/2026-09-25_ran_dream_demon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ran-dream-demon.html) | [📄原稿](content/2026-09-25_ran_dream_demon.md) | — | 蘭郁二郎[『夢鬼』](https://www.aozora.gr.jp/cards/000325/card2189.html) | fMRI生成AIによる視覚心象復元（Stable Diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激 | 5,907字 |
 | 05 | **[植物人間――葉緑体人工共生と光合成代謝の臨界](content/2026-09-25_ran_plant_man.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ran-plant-man.html) | [📄原稿](content/2026-09-25_ran_plant_man.md) | — | 蘭郁二郎[『植物人間』](https://www.aozora.gr.jp/cards/000325/card2186.html) | 動物細胞における葉緑体人工共生（Planimal）、CRISPR光合成代謝経路移植、クロロフィル生体蛍光 | 7,202字 |
 | 04 | **[振動魔――フォノニック結晶とテラヘルツ共鳴破壊](content/2026-09-25_unno_vibration_demon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-vibration-demon.html) | [📄原稿](content/2026-09-25_unno_vibration_demon.md) | — | 海野十三[『振動魔』](https://www.aozora.gr.jp/cards/000160/card872.html) | メタマテリアル音響レンズ、フォノニック結晶、テラヘルツ共振破壊、レーザー励起超音波 | 6,446字 |
-| 03 | **[人造人間事件――オルガノイド・インテリジェンスの陥穽](content/2026-09-24_unno_cyborg_incident.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-cyborg-incident.html) | [📄原稿](content/2026-09-24_unno_cyborg_incident.md) | — | 海野十三[『人造人間事件』](https://www.aozora.gr.jp/cards/000160/card1246.html) | 脳オルガノイド・コンピューティング（Brain-on-a-chip）、合成生物学的ヒューマノイド、神経活動の光遺伝学的クローニング | 8,026字 |
+| 03 | **[人造人間事件――オルガノイド・インテリジェンスの陥穽](content/2026-09-24_unno_cyborg_incident.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-cyborg-incident.html) | [📄原稿](content/2026-09-24_unno_cyborg_incident.md) | [🎨挿絵](content/2026-09-24_unno_cyborg_incident.png) | 海野十三[『人造人間事件』](https://www.aozora.gr.jp/cards/000160/card1246.html) | 脳オルガノイド・コンピューティング（Brain-on-a-chip）、合成生物学的ヒューマノイド、神経活動の光遺伝学的クローニング | 8,026字 |
 | 02 | **[蠅男――極微バイオサイボーグと神経同調の罠](content/2026-09-24_unno_fly_man.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-fly-man.html) | [📄原稿](content/2026-09-24_unno_fly_man.md) | [🎨挿絵](content/2026-09-24_unno_fly_man.png) | 海野十三[『蠅男』](https://www.aozora.gr.jp/cards/000160/card1240.html) | 昆虫バイオハイブリッド・サイボーグ、昆虫羽ばたき型MEMSマイクロロボット、ニューロモルフィック視覚センサ | 7,299字 |
 | 01 | **[十八時の音楽浴――超音波閉ループ神経変調に関する一考察](content/story.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-18-music.html) | [📄原稿](content/story.md) | [🎨挿絵](content/story.png) | 海野十三[『十八時の音楽浴』](https://www.aozora.gr.jp/cards/000160/card3237.html) | ソノジェネティクス（超音波遺伝子制御）、40Hzガンマ波音響刺激、Piezo1イオンチャネル、閉ループ脳波変調 | 7,733字 |
 
