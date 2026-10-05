@@ -78,7 +78,7 @@ def git_sync_and_push(generated_files: List[Path]) -> bool:
         logger.info("Syncing with remote GitHub repository (git pull --rebase origin main)...")
         subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=False)
 
-        cmd_add = ["git", "add", "content/", "archive/", "docs/"]
+        cmd_add = ["git", "add", "README.md", "content/", "archive/", "docs/"]
         subprocess.run(cmd_add, check=True)
 
         # Check if there are staged changes

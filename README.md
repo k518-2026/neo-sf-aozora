@@ -1,159 +1,75 @@
-# neo-sf-aozora ―― 青空文庫SF × 先端科学リブート & WordPress メール自動投稿システム
+# 青空文庫 ✕ 最先端科学 ハードSFリブート図書館（Neo Aozora Sci-Fi Library）
 
-青空文庫に収載されている日本の古典SF・科学奇譚・探偵幻想文学（海野十三、蘭郁二郎、夢野久作、小栗虫太郎、江戸川乱歩など）を原案とし、現代の先端科学技術（Nature, Science, Cell などの海外査読論文）を取り入れて再構築した本格ショートSF小説（約4,000文字）を、**1日3回（朝の通勤前 06:30、夕方の通勤前 17:30、夜寝る前 22:30 JST）**に自動生成して WordPress へメール投稿（Post via Email）する自動化リポジトリです。
+🌐 **Webサイト（GitHub Pages）で読む**: **[https://k518-2026.github.io/neo-sf-aozora/](https://k518-2026.github.io/neo-sf-aozora/)**
 
-過去に投稿した作品履歴をデータベース管理し、**作品の重複を完全に防止**します。
+日本文学の不朽の名作（青空文庫）をモチーフに、実在する査読付き先端科学論文（*Nature* / *Science* / *Cell* / *PNAS* 等）の知見を取り入れて再構築した本格SF短編小説コレクションです。
 
----
-
-## 1. システムの特徴
-
-- ⏰ **1日3回（朝・夕・夜）の全自動配信**:
-  - GitHub Actions のスケジューラ（`cron: '30 8,13,21 * * *'`）により、朝の通勤前（06:30 JST）、夕方の通勤前（17:30 JST）、夜寝る前（22:30 JST）に自動起動・配信。
-- 📚 **青空文庫SFマスターカタログ搭載**:
-  - 海野十三『十八時の音楽浴』『蠅男』『人造人間事件』『振動魔』、蘭郁二郎『植物人間』『夢鬼』『脳髄手術』、夢野久作『人間レコード』『爆弾太平記』、小栗虫太郎『完全犯罪』『二十世紀鉄仮面』など名作SFを網羅。
-- 🔬 **実在する海外トップ査読論文の引用**:
-  - Google Gemini API（プライマリ: `gemini-2.5-flash`）を活用し、Nature, Science, Cell, PNAS 等の実在論文（著者・雑誌名・年号・DOI・受容体や数式などのメカニズム）をストーリーの核心技術に論理的に統合。
-  - **堅牢な自動フォールバック機能**: APIが混雑して `gemini-2.5-flash` が 503 (Service Unavailable) やキャパシティ超過を返した場合は、自動的に他のバージョン（**3.5, 3.6, 3.7, 3.8**）へと順次リトライ・カスケード切り替えを行い、毎日の配信停止を確実に防ぎます。
-- 🎭 **起承転結 ＆ アッと驚く結末（ツイスト）**:
-  - 約3,000文字の知的でスリリングな本格ショートSF。ラストには読者の認識を覆す衝撃的などんでん返しを必ず配置。
-- 🗄️ **過去記事・履歴管理（重複防止）**:
-  - 投稿済み作品は `data/history.json` および `data/POSTED_STORIES.md` に永続記録。
-  - GitHub Actions 実行完了時に、生成された記事ファイル（`content/*.md`）と履歴データを GitHub リポジトリへ自動で `git commit & push`。
-- ✉️ **WordPress メール投稿（Post via Email）**:
-  - Jetpack や Postie 等のメール投稿仕様に対応。
-  - HTML（洗練されたタイポグラフィ装飾・論文引用リンク）とプレーンテキストをマルチパート送信。
-  - `[status publish]`, `[category SF小説]`, `[tags ...]` 等のショートコードを自動付加。
-- 🛡️ **安心のDry-Run ＆ HTMLプレビュー機能**:
-  - 実際にメールを送信せず、生成結果とHTMLプレビュー（`preview_output.html`）をブラウザで検証可能。
+- **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
+- **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
+- **収録作品数**: 全 **44** 作品（うち挿絵付き **14** 作品 / 原典文豪 **12** 名 / 最終更新: 2026-10-06 00:11 JST）
 
 ---
 
-## 2. ディレクトリ構成
+## 📚 収録SF小説一覧（リンク集）
 
-```
-neo-sf-aozora/
-├── .github/
-│   └── workflows/
-│       └── publish.yml       # 毎朝4時実行 ＆ 自動コミットのワークフロー
-├── content/
-│   └── story.md              # 第1作『十八時の音響変調』（初期収録）
-├── data/
-│   ├── aozora_catalog.json   # 青空文庫SF作品マスターカタログ（作品・テーマ・先端技術）
-│   ├── history.json          # 投稿済み履歴データベース（重複防止管理）
-│   └── POSTED_STORIES.md     # 投稿済み作品一覧アーカイブ表
-├── src/
-│   ├── __init__.py
-│   ├── config.py             # 設定管理
-│   ├── history_manager.py    # 履歴照合・未投稿作品自動選定・重複防止
-│   ├── story_generator.py    # Gemini API による海外論文引用SF自動執筆エンジン
-│   ├── post_formatter.py     # Markdown → レスポンシブHTML/ショートコード変換
-│   ├── mail_sender.py        # TLS/SSL対応 SMTPメール送信エンジン
-│   └── main.py               # CLIエントリーポイント
-├── tests/
-│   └── test_sender.py        # 単体テストスイート
-├── .env.example              # 環境変数設定テンプレート
-├── .gitignore
-├── requirements.txt
-└── README.md
-```
-
----
-
-## 3. GitHub Actions による自動実行と設定
-
-### 3.1 GitHub Secrets の設定
-
-GitHubリポジトリの **Settings > Secrets and variables > Actions** にて、以下のシークレットを登録します：
-
-| Secret名 | 必須 | 内容 | 設定例 |
-|---|:---:|---|---|
-| `GEMINI_API_KEY` | **推奨** | Google Gemini API キー | `AIzaSy...` |
-| `SMTP_HOST` | **必須** | SMTPサーバーのホスト名 | `smtp.gmail.com` |
-| `SMTP_PORT` | **必須** | SMTPポート番号 | `587` |
-| `SMTP_USER` | **必須** | 送信用メールアドレス | `your_email@gmail.com` |
-| `SMTP_PASSWORD` | **必須** | 送信パスワード（Gmailアプリパスワード） | `xxxx xxxx xxxx xxxx` |
-| `WP_POST_EMAIL` | **必須** | WordPressメール投稿受信用アドレス | `secret_xxxx@post.wordpress.com` |
-| `SMTP_USE_TLS` | 任意 | TLS接続（デフォルト: `true`） | `true` |
-
-### 3.2 動作スケジュール
-
-- **自動実行**: 毎日 **日本時間 午前4時00分**（UTC 19:00）に定期起動します。
-- **手動実行（即時テスト）**:
-  GitHubの **Actions** タブ > **Daily Neo Aozora Sci-Fi Reboot to WordPress** を選択し、**Run workflow** をクリックします。
-  - `dry_run`: `true` を選べばメール送信・履歴コミットを行わずにテストできます。
-  - `post_status`: `publish`（公開）または `draft`（下書き）を選択可能。
-  - `repost`: 作り直した作品を再投稿できます（`1`: 音楽浴, `2`: 蠅男, `3`: 人造人間事件, `reset_all`: 履歴を全リセット）。
-  - `work_id`: カタログ内の特定の青空文庫作品（例: `unno-vibration-demon`）を指定して生成・投稿可能。
+| No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
+|:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 01 | **[十八時の音楽浴――超音波閉ループ神経変調に関する一考察](content/story.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-18-music.html) | [📄原稿](content/story.md) | — | 海野十三[『十八時の音楽浴』](https://www.aozora.gr.jp/cards/000160/card3237.html) | ソノジェネティクス（超音波遺伝子制御）、40Hzガンマ波音響刺激、Piezo1イオンチャネル、閉ループ脳波変調 | 7,733字 |
+| 02 | **[蠅男――極微バイオサイボーグと神経同調の罠](content/2026-09-24_unno_fly_man.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-fly-man.html) | [📄原稿](content/2026-09-24_unno_fly_man.md) | — | 海野十三[『蠅男』](https://www.aozora.gr.jp/cards/000160/card1240.html) | 昆虫バイオハイブリッド・サイボーグ、昆虫羽ばたき型MEMSマイクロロボット、ニューロモルフィック視覚センサ | 7,299字 |
+| 03 | **[人造人間事件――オルガノイド・インテリジェンスの陥穽](content/2026-09-24_unno_cyborg_incident.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-cyborg-incident.html) | [📄原稿](content/2026-09-24_unno_cyborg_incident.md) | — | 海野十三[『人造人間事件』](https://www.aozora.gr.jp/cards/000160/card1246.html) | 脳オルガノイド・コンピューティング（Brain-on-a-chip）、合成生物学的ヒューマノイド、神経活動の光遺伝学的クローニング | 8,026字 |
+| 04 | **[振動魔――フォノニック結晶とテラヘルツ共鳴破壊](content/2026-09-25_unno_vibration_demon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-vibration-demon.html) | [📄原稿](content/2026-09-25_unno_vibration_demon.md) | — | 海野十三[『振動魔』](https://www.aozora.gr.jp/cards/000160/card872.html) | メタマテリアル音響レンズ、フォノニック結晶、テラヘルツ共振破壊、レーザー励起超音波 | 6,446字 |
+| 05 | **[植物人間――葉緑体人工共生と光合成代謝の臨界](content/2026-09-25_ran_plant_man.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ran-plant-man.html) | [📄原稿](content/2026-09-25_ran_plant_man.md) | — | 蘭郁二郎[『植物人間』](https://www.aozora.gr.jp/cards/000325/card2186.html) | 動物細胞における葉緑体人工共生（Planimal）、CRISPR光合成代謝経路移植、クロロフィル生体蛍光 | 7,202字 |
+| 06 | **[夢鬼](content/2026-09-25_ran_dream_demon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ran-dream-demon.html) | [📄原稿](content/2026-09-25_ran_dream_demon.md) | — | 蘭郁二郎[『夢鬼』](https://www.aozora.gr.jp/cards/000325/card2189.html) | fMRI生成AIによる視覚心象復元（Stable Diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激 | 5,907字 |
+| 07 | **[脳髄手術](content/2026-09-26_ran_brain_surgery.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ran-brain-surgery.html) | [📄原稿](content/2026-09-26_ran_brain_surgery.md) | — | 蘭郁二郎[『脳髄手術』](https://www.aozora.gr.jp/cards/000325/card2187.html) | 深部脳刺激（DBS）、光遺伝学的情動回路切除、ナノロボットによる標的シナプス精密切断 | 7,013字 |
+| 08 | **[人間レコード――ゲノム・シンフォニーの目覚め](content/2026-09-27_yumeno_human_record.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-human-record.html) | [📄原稿](content/2026-09-27_yumeno_human_record.md) | — | 夢野久作[『人間レコード』](https://www.aozora.gr.jp/cards/000096/card1071.html) | DNAデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印 | 5,832字 |
+| 09 | **[爆弾太平記――連鎖量子点火の特異点](content/2026-09-27_yumeno_bomb_peace.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-bomb-peace.html) | [📄原稿](content/2026-09-27_yumeno_bomb_peace.md) | — | 夢野久作[『爆弾太平記』](https://www.aozora.gr.jp/cards/000096/card2134.html) | 反物質トラップ、レーザー核融合、量子エンタングルメント起爆装置、自律致死型AI兵站 | 6,844字 |
+| 10 | **[完全犯罪――量子消滅の熱音響（サーモアコースティック）](content/2026-09-28_oguri_complete_crime.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-complete-crime.html) | [📄原稿](content/2026-09-28_oguri_complete_crime.md) | — | 小栗虫太郎[『完全犯罪』](https://www.aozora.gr.jp/cards/000125/card668.html) | 量子もつれ暗号撹乱、超短パルスフェムト秒レーザー熱音響暗殺、環境ゲノム偽装 | 6,016字 |
+| 11 | **[二十世紀鉄仮面――ネオ・フィジオノミーの覚醒](content/2026-09-28_oguri_20th_century_iron_mask.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-20th-century-iron-mask.html) | [📄原稿](content/2026-09-28_oguri_20th_century_iron_mask.md) | — | 小栗虫太郎[『二十世紀鉄仮面』](https://www.aozora.gr.jp/cards/000125/card1683.html) | バイオ3Dプリンティング人工皮膚、DNAフェイシャルプロファイリング、生体電子マスク、ディープフェイク生体侵食 | 7,521字 |
+| 12 | **[浮かぶ飛行島――成層圏メガストラクチャーの崩壊](content/2026-09-28_unno_floating_island.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-floating-island.html) | [📄原稿](content/2026-09-28_unno_floating_island.md) | — | 海野十三[『浮かぶ飛行島』](https://www.aozora.gr.jp/cards/000160/card1245.html) | 常温高圧超伝導（LK-99後継磁気浮上）、プラズマMHD推進、カーボンナノチューブテザーメガ構造体 | 5,031字 |
+| 13 | **[俘囚――AdS/CFTホログラフィック監獄の反響](content/2026-09-29_unno_captive.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-captive.html) | [📄原稿](content/2026-09-29_unno_captive.md) | — | 海野十三[『俘囚』](https://www.aozora.gr.jp/cards/000160/card3238.html) | AdS/CFT対応ホログラフィック原理、ワームホール量子シミュレーション、トポロジカル空間位相格子 | 4,109字 |
+| 14 | **[金属人間――自己組織化ガリウム生体回路の迷宮](content/2026-09-29_unno_metal_man.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-metal-man.html) | [📄原稿](content/2026-09-29_unno_metal_man.md) | — | 海野十三[『金属人間』](https://www.aozora.gr.jp/cards/000160/card1242.html) | 液体金属ガリウムナノ合金生体回路、自己組織化モジュラーロボット、生体内バイオミネラリゼーション | 4,453字 |
+| 15 | **[昆虫図――フェロモン・グラフと遺伝子駆動の恋文](content/2026-09-29_hisao_insect_catalog.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/hisao-insect-catalog.html) | [📄原稿](content/2026-09-29_hisao_insect_catalog.md) | — | 久生十蘭[『昆虫図』](https://www.aozora.gr.jp/cards/001224/card46083.html) | CRISPRジンドライブ、分散合意アルゴリズム、グラフ理論に基づく自己組織化フェロモンネットワーク、マイクロ流体バイオチップ | 5,028字 |
+| 16 | **[人間椅子――ハプティクス多様体における愛の幾何学](content/2026-09-30_edogawa_human_chair.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-human-chair.html) | [📄原稿](content/2026-09-30_edogawa_human_chair.md) | — | 江戸川乱歩[『人間椅子』](https://www.aozora.gr.jp/cards/001779/card56648.html) | 柔軟触覚センサアレイ（電子皮膚 / E-skin）、情報幾何学に基づく触覚多様体解析、自己組織化スマートマテリアル、バイオハプティクス情動AI | 6,139字 |
+| 17 | **[鏡地獄――トポロジカル量子共振器による意識拡張と宇宙背景放射の合一](content/2026-09-30_edogawa_mirror_hell.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-mirror-hell.html) | [📄原稿](content/2026-09-30_edogawa_mirror_hell.md) | — | 江戸川乱歩[『鏡地獄』](https://www.aozora.gr.jp/cards/001779/card57343.html) | 光学メタマテリアル、負屈折率フォトニック結晶キャビティ、トポロジカル位相幾何学、量子もつれ光子イマーシブ観測 | 4,770字 |
+| 18 | **[心理試験――ゼロ知識証明と計算複雑性の迷宮](content/2026-09-30_edogawa_psychological_test.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-psychological-test.html) | [📄原稿](content/2026-09-30_edogawa_psychological_test.md) | — | 江戸川乱歩[『心理試験』](https://www.aozora.gr.jp/cards/001779/card56646.html) | fNIRS（機能的近赤外分光法）、計算複雑性理論（欺瞞アルゴリズムのNP困難性）、ゼロ知識証明暗号プロトコル、マイクロサッカードAI解析 | 8,218字 |
+| 19 | **[屋根裏の散歩者――不可視の散乱場における位相共鳴](content/2026-10-01_edogawa_attic_stroller.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-attic-stroller.html) | [📄原稿](content/2026-10-01_edogawa_attic_stroller.md) | — | 江戸川乱歩[『屋根裏の散歩者』](https://www.aozora.gr.jp/cards/001779/card56649.html) | Wi-Fi電波反射による壁透過ポーズ推定（Through-wall RF sensing）、スパースモデリング・圧縮センシング逆問題解析、テラヘルツ非破壊スキャン | 6,338字 |
+| 20 | **[押絵と旅する男――超伝導量子トポロジーと永遠の恋人](content/2026-10-01_edogawa_picture_traveler.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-picture-traveler.html) | [📄原稿](content/2026-10-01_edogawa_picture_traveler.md) | — | 江戸川乱歩[『押絵と旅する男』](https://www.aozora.gr.jp/cards/001779/card56645.html) | 光格子時計による超精密時間操作、超並列量子チューリング完全回路、ニューロモルフィック・エピジェネティック・ホログラム | 4,520字 |
+| 21 | **[パノラマ島綺譚――非線形アトラクターの人工地獄](content/2026-10-01_edogawa_panorama_island.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-panorama-island.html) | [📄原稿](content/2026-10-01_edogawa_panorama_island.md) | — | 江戸川乱歩[『パノラマ島綺譚』](https://www.aozora.gr.jp/cards/001779/card56651.html) | 非線形カオスアトラクター制御、複雑系ネットワーク理論、合成生物学による発光植物、バイオジオエンジニアリング（地球惑星環境工学） | 6,617字 |
+| 22 | **[地底戦艦――地球核境界の密室殺人](content/2026-10-02_unno_subterranean_battleship.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-subterranean-battleship.html) | [📄原稿](content/2026-10-02_unno_subterranean_battleship.md) | — | 海野十三[『地底戦艦』](https://www.aozora.gr.jp/cards/000160/card873.html) | 地震波トモグラフィーの境界要素逆問題解析、マントル対流超並列流体シミュレーション、超高圧ダイヤモンドアンビル極限物性、超耐熱タングステンナノ合金 | 6,462字 |
+| 23 | **[地球盗難――不変多様体のラプソディ](content/2026-10-02_unno_earth_theft.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-earth-theft.html) | [📄原稿](content/2026-10-02_unno_earth_theft.md) | — | 海野十三[『地球盗難』](https://www.aozora.gr.jp/cards/000160/card874.html) | ハミルトン系シンプレクティック幾何学的数値積分、ラグランジュ点不変多様体カオス軌道計算、重力波干渉センシング、惑星スイングバイ最適化 | 7,165字 |
+| 24 | **[電気風呂の怪死――トポロジカル量子コヒーレンスの導出](content/2026-10-02_unno_electric_bath_death.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-electric-bath-death.html) | [📄原稿](content/2026-10-02_unno_electric_bath_death.md) | — | 海野十三[『電気風呂の怪死』](https://www.aozora.gr.jp/cards/000160/card1241.html) | トポロジカル絶縁体・量子ホール効果、ジョセフソン接合SQUID磁束量子センサ、複素ポテンシャル論・等角写像による漏洩電流逆解析 | 7,292字 |
+| 25 | **[潜航艇「鷹の巣」――深淵のシンフォニー](content/2026-10-02_oguri_submarine_eagles_nest.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-submarine-eagles-nest.html) | [📄原稿](content/2026-10-02_oguri_submarine_eagles_nest.md) | — | 小栗虫太郎[『潜航艇「鷹の巣」』](https://www.aozora.gr.jp/cards/000125/card1684.html) | 低周波海洋音響トモグラフィー、極限環境誤り訂正符号、深海自律型AUV群知能 | 6,063字 |
+| 26 | **[火星兵団――星を継ぐ庭師たち](content/2026-10-03_unno_mars_corps.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-mars-corps.html) | [📄原稿](content/2026-10-03_unno_mars_corps.md) | — | 海野十三[『火星兵団』](https://www.aozora.gr.jp/cards/000160/card877.html) | フォン・ノイマン型自己複製オートマトン、超長基線電波干渉計（VLBI）、自律分散スウォーム制御 | 5,992字 |
+| 27 | **[白昼夢――ベイズ脳の愛した幻](content/2026-10-03_edogawa_hakuchumu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-hakuchumu.html) | [📄原稿](content/2026-10-03_edogawa_hakuchumu.md) | — | 江戸川乱歩[『白昼夢』](https://www.aozora.gr.jp/cards/001779/card56647.html) | 経頭蓋集束超音波（tFUS）視覚野変調、敵対的摂動（Adversarial Perturbation）光音響パッチ、ベイズ脳予測符号化モデル | 6,460字 |
+| 28 | **[瓶詰地獄――未来からの福音](content/2026-10-03_yumeno_binzume_jigoku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-binzume-jigoku.html) | [📄原稿](content/2026-10-03_yumeno_binzume_jigoku.md) | — | 夢野久作[『瓶詰地獄』](https://www.aozora.gr.jp/cards/000096/card938.html) | シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化DNAタイムスタンプ解析 | 5,380字 |
+| 29 | **[銀河鉄道の夜――量子の迷宮](content/2026-10-03_miyazawa_ginga.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-ginga.html) | [📄原稿](content/2026-10-03_miyazawa_ginga.md) | — | 宮沢賢治[『銀河鉄道の夜』](https://www.aozora.gr.jp/cards/000081/card456.html) | 量子もつれテンソルネットワーク（ER=EPR仮説）、ミリ秒パルサー時空測位ナビゲーション、超流動ヘリウム冷却量子メモリ | 4,587字 |
+| 30 | **[歯車――幻影の歯輪](content/2026-10-03_akutagawa_haguruma.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-haguruma.html) | [📄原稿](content/2026-10-03_akutagawa_haguruma.md) | — | 芥川龍之介[『歯車』](https://www.aozora.gr.jp/cards/000879/card42.html) | 大脳視覚野の反応拡散方程式（エルメントラウト・コーワン数理モデル）、光遺伝学フェーズロック制御、神経雪（Visual Snow）位相解析 | 4,702字 |
+| 31 | **[河童――遺伝子の謎](content/2026-10-03_akutagawa_kappa.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-kappa.html) | [📄原稿](content/2026-10-03_akutagawa_kappa.md) | [🎨挿絵](content/2026-10-03_akutagawa_kappa.png) | 芥川龍之介[『河童』](https://www.aozora.gr.jp/cards/000879/card69.html) | 全ゲノム人工合成（GP-write）、胎内BCI意思確認プロトコル、メカニズムデザイン（数理経済学・社会的選択理論） | 4,491字 |
+| 32 | **[蜘蛛の糸――天頂から垂れる一本の均衡](content/2026-10-04_akutagawa_kumonoito.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-kumonoito.html) | [📄原稿](content/2026-10-04_akutagawa_kumonoito.md) | [🎨挿絵](content/2026-10-04_akutagawa_kumonoito.png) | 芥川龍之介[『蜘蛛の糸』](https://www.aozora.gr.jp/cards/000879/card92.html) | 超長尺カーボンナノチューブ（CNT）マクロファイバー、非協力ゲーム理論（ナッシュ均衡と利他的協調）、軌道力学テザー共振制御 | 4,739字 |
+| 33 | **[山月記――月下に吼えるコネクトーム](content/2026-10-04_nakajima_sangetsuki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-sangetsuki.html) | [📄原稿](content/2026-10-04_nakajima_sangetsuki.md) | [🎨挿絵](content/2026-10-04_nakajima_sangetsuki.png) | 中島敦[『山月記』](https://www.aozora.gr.jp/cards/000119/card624.html) | 種間キメラ胚補完法、コネクトーム（全神経回路網）転移エミュレーション、ゲーデルの自己言及不完全性とAI意識変容 | 5,022字 |
+| 34 | **[檸檬――丸善の棚に置かれた黄金の特異点](content/2026-10-04_kajii_lemon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kajii-lemon.html) | [📄原稿](content/2026-10-04_kajii_lemon.md) | [🎨挿絵](content/2026-10-04_kajii_lemon.png) | 梶井基次郎[『檸檬』](https://www.aozora.gr.jp/cards/000074/card424.html) | 嗅覚受容体の量子トンネル効果理論、超集積トポロジカル光メモリ結晶、マルチモーダル共感覚ニューロフィードバック | 4,891字 |
+| 35 | **[グスコーブドリの伝記――カルボナード島の第三の解](content/2026-10-04_miyazawa_gusukobudori.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-gusukobudori.html) | [📄原稿](content/2026-10-04_miyazawa_gusukobudori.md) | [🎨挿絵](content/2026-10-04_miyazawa_gusukobudori.png) | 宮沢賢治[『グスコーブドリの伝記』](https://www.aozora.gr.jp/cards/000081/card1924.html) | 成層圏エアロゾル・インジェクション制御、マグマ溜まり熱流体連成シミュレーション、非線形気候力学系の分岐理論 | 4,731字 |
+| 36 | **[桜の樹の下には――根圏菌糸網が記憶する美の屍体](content/2026-10-04_kajii_sakuranoki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kajii-sakuranoki.html) | [📄原稿](content/2026-10-04_kajii_sakuranoki.md) | [🎨挿絵](content/2026-10-04_kajii_sakuranoki.png) | 梶井基次郎[『桜の樹の下には』](https://www.aozora.gr.jp/cards/000074/card427.html) | 共通菌根ネットワーク（Wood Wide Web）電気電位信号解析、環境DNA（eDNA）メタバーコーディング、エピジェネティック花芽分化制御 | 3,826字 |
+| 37 | **[夢十夜――百合の檻](content/2026-10-04_soseki_yume_juuya.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-yume-juuya.html) | [📄原稿](content/2026-10-04_soseki_yume_juuya.md) | [🎨挿絵](content/2026-10-04_soseki_yume_juuya.png) | 夏目漱石[『夢十夜』](https://www.aozora.gr.jp/cards/000148/card799.html) | クリプトビオシス誘導ガラス化凍結保存、量子ゼノン効果による生体時間制御、深層睡眠時空間シミュレーション | 7,323字 |
+| 38 | **[桜の森の満開の下――静寂が導く絶望と希望](content/2026-10-04_ango_sakura_no_mori.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ango-sakura-no-mori.html) | [📄原稿](content/2026-10-04_ango_sakura_no_mori.md) | [🎨挿絵](content/2026-10-04_ango_sakura_no_mori.png) | 坂口安吾[『桜の森の満開の下』](https://www.aozora.gr.jp/cards/001095/card42618.html) | 無響・無反射メタマテリアル空間、扁桃体―前頭前野情動結合デコーディング、ボリュメトリック・ライトフィールド投影 | 4,080字 |
+| 39 | **[ドグラ・マグラ――遺伝する記憶](content/2026-10-04_yumeno_dogra_magra.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-dogra-magra.html) | [📄原稿](content/2026-10-04_yumeno_dogra_magra.md) | [🎨挿絵](content/2026-10-04_yumeno_dogra_magra.png) | 夢野久作[『ドグラ・マグラ』](https://www.aozora.gr.jp/cards/000096/card2093.html) | 経世代エピジェネティック継承（小分子非コードRNA）、不動点コンビネータと自己言及アルゴリズム、全脳オルガノイド再帰ループ | 5,614字 |
+| 40 | **[黒死館殺人事件――超スマート建築の謎](content/2026-10-04_oguri_kokushikan.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-kokushikan.html) | [📄原稿](content/2026-10-04_oguri_kokushikan.md) | [🎨挿絵](content/2026-10-04_oguri_kokushikan.png) | 小栗虫太郎[『黒死館殺人事件』](https://www.aozora.gr.jp/cards/000125/card1317.html) | 形式手法による自動定理証明（Lean/Coq）、超分子ホスト・ゲスト化学の遅延放出カプセル、スマート建築センサー網のビザンチン障害解析 | 5,704字 |
+| 41 | **[羅生門――進化的生存ゲーム](content/2026-10-04_akutagawa_rashomon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-rashomon.html) | [📄原稿](content/2026-10-04_akutagawa_rashomon.md) | [🎨挿絵](content/2026-10-04_akutagawa_rashomon.png) | 芥川龍之介[『羅生門』](https://www.aozora.gr.jp/cards/000879/card127.html) | 進化ゲーム理論（ESS：進化的に安定な戦略）、ケラチン生体高分子の酵素分解リサイクル、行動神経経済学の道徳意思決定モデル | 4,389字 |
+| 42 | **[杜子春――虚構時間圧縮VRの謎](content/2026-10-04_akutagawa_toshishun.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-toshishun.html) | [📄原稿](content/2026-10-04_akutagawa_toshishun.md) | [🎨挿絵](content/2026-10-04_akutagawa_toshishun.png) | 芥川龍之介[『杜子春』](https://www.aozora.gr.jp/cards/000879/card43016.html) | フルダイブ型時間圧縮VRシミュレーション、前帯状皮質（ACC）の共感・ミラーニューロン回路、強化学習における報酬関数と利他愛 | 5,883字 |
+| 43 | **[注文の多い料理店――秘密のスマートレストラン](content/2026-10-05_miyazawa_chumon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-chumon.html) | [📄原稿](content/2026-10-05_miyazawa_chumon.md) | [🎨挿絵](content/2026-10-05_miyazawa_chumon.png) | 宮沢賢治[『注文の多い料理店』](https://www.aozora.gr.jp/cards/000081/card43754.html) | 行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション | 5,528字 |
+| 44 | **[風の又三郎――風の秘密を解く少年](content/2026-10-05_miyazawa_kaze_no_matasaburo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-kaze-no-matasaburo.html) | [📄原稿](content/2026-10-05_miyazawa_kaze_no_matasaburo.md) | [🎨挿絵](content/2026-10-05_miyazawa_kaze_no_matasaburo.png) | 宮沢賢治[『風の又三郎』](https://www.aozora.gr.jp/cards/000081/card462.html) | ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電 | 4,339字 |
 
 ---
 
-## 4. ローカルでの実行方法
-
-### 4.1 インストールと設定
+## 🛠️ ローカル執筆＆GitHub Pages更新コマンド（Mac mini M4連携）
 
 ```powershell
-cd e:\GoogleAntigravity\neo-sf-aozora
-
-# パッケージのインストール
-pip install -r requirements.txt
-
-# 設定ファイルを作成
-copy .env.example .env
-```
-
-`.env` に実際の認証情報を入力します：
-
-```ini
-GEMINI_API_KEY=AIzaSy...
-SMTP_HOST=smtp.gmail.com
-SMTP_PORT=587
-SMTP_USER=your_email@gmail.com
-SMTP_PASSWORD=your_app_password
-WP_POST_EMAIL=your_secret@post.wordpress.com
-DEFAULT_POST_STATUS=publish
-```
-
-### 4.2 テスト実行（Dry-Run）
-
-未投稿の作品を自動選定し、メール送信を行わずにHTML出力をブラウザで確認します：
-
-```powershell
-python -m src.main --dry-run
-```
-※出力された `preview_output.html` をブラウザで開いて確認できます。
-
-### 4.3 手動での本番投稿
-
-```powershell
-# 自動選定された未投稿作品を生成し、WordPressへメール送信＆履歴更新
-python -m src.main --send
-
-# 作品IDを指定して下書きとして送信する場合
-python -m src.main --work-id unno-fly-man --status draft --send
-```
-
-### 4.4 ローカルLLM（Ollama）による一括書き溜め ＆ GitHub自動プッシュ（APIコストゼロ・ハルシネーションゼロ）
-
-手元のPC上のローカルLLM（Ollama: `qwen2.5:14b` / `gemma3:27b` 等）を使って未投稿作品を事前に書き溜め（`content/` へ保存）し、GitHubへプッシュしておくことができます。
-執筆前に **Crossref REST API** から実在論文3件を事前取得＆DOI疎通検証してからローカルLLMに渡すため、**架空論文のハルシネーションやリンク切れは物理的に発生しません**。
-GitHub Actions の定期配信（1日3回 cron）は、`content/` に書き溜めファイルが存在すれば Gemini API を呼ばずにそのファイルを最優先で配信します。
-
-```powershell
-# 現在の配信済み・書き溜めストック・未生成の状況を一覧表示
-python -m src.batch_stock --status
-
-# 未生成の作品を3本（1日分）ローカルLLMで執筆し、GitHubへ自動コミット＆プッシュ
+# 未生成の小説と挿絵をMac mini M4 (Ollama + Draw Things) でバッチ生成してGitHub Pagesへ反映
 .\run_local_stock.ps1 -Count 3
 
-# または Python コマンドから直接実行（作品数やモデル、結末テーマの指定も可能）
-python -m src.batch_stock --count 3 --push
-python -m src.batch_stock --work-id miyazawa-ginga --push
+# 既存小説のうち未生成の挿絵 (.png) を生成してGitHub Pagesへ反映
+python -m src.batch_stock --generate-images --push
+
+# Webサイト (docs/) と README.md のリンク一覧を再ビルド
+python -m src.site_builder
 ```
-
----
-
-## 5. 投稿済み履歴一覧（アーカイブ）
-
-[`data/POSTED_STORIES.md`](data/POSTED_STORIES.md) にて、過去に投稿された作品と引用論文の一覧を閲覧できます。
-自動実行のたびにテーブルが自動更新され、リポジトリにプッシュされます。

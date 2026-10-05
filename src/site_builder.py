@@ -769,9 +769,74 @@ def _build_index_page(stories: List[Dict[str, Any]]) -> str:
 """
 
 
+def _write_root_readme(stories: List[Dict[str, Any]], target_readme: Path = Path("README.md")):
+    """
+    Generates the root README.md containing links to the GitHub Pages web library
+    and a complete index table with direct links to every novel (Web Reader + Markdown + Illustration).
+    """
+    pages_base = "https://k518-2026.github.io/neo-sf-aozora"
+    illustrated_count = sum(1 for s in stories if s["has_image"])
+    authors = sorted({s["original_author"] for s in stories if s["original_author"]})
+    updated_str = datetime.now(JST).strftime("%Y-%m-%d %H:%M JST")
+
+    lines = [
+        "# 青空文庫 ✕ 最先端科学 ハードSFリブート図書館（Neo Aozora Sci-Fi Library）",
+        "",
+        f"🌐 **Webサイト（GitHub Pages）で読む**: **[{pages_base}/]({pages_base}/)**",
+        "",
+        "日本文学の不朽の名作（青空文庫）をモチーフに、実在する査読付き先端科学論文（*Nature* / *Science* / *Cell* / *PNAS* 等）の知見を取り入れて再構築した本格SF短編小説コレクションです。",
+        "",
+        "- **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）",
+        "- **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。",
+        f"- **収録作品数**: 全 **{len(stories)}** 作品（うち挿絵付き **{illustrated_count}** 作品 / 原典文豪 **{len(authors)}** 名 / 最終更新: {updated_str}）",
+        "",
+        "---",
+        "",
+        "## 📚 収録SF小説一覧（リンク集）",
+        "",
+        "| No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |",
+        "|:---:|:---|:---:|:---:|:---:|:---|:---|---:|",
+    ]
+
+    for s in stories:
+        md_rel = s["md_path"].as_posix()
+        web_url = f"{pages_base}/{s['page_rel']}"
+        img_cell = f"[🎨挿絵]({s['png_path'].as_posix()})" if s["has_image"] and s["png_path"] else "—"
+        orig_cell = (
+            f"{s['original_author']}[『{s['original_title']}』]({s['aozora_url']})"
+            if s["aozora_url"]
+            else f"{s['original_author']}『{s['original_title']}』"
+        )
+        lines.append(
+            f"| {s['no']:02d} | **[{s['full_title']}]({md_rel})** | [🌐Web版]({web_url}) | [📄原稿]({md_rel}) | {img_cell} | {orig_cell} | {s['modern_tech']} | {s['char_count']:,}字 |"
+        )
+
+    lines.extend([
+        "",
+        "---",
+        "",
+        "## 🛠️ ローカル執筆＆GitHub Pages更新コマンド（Mac mini M4連携）",
+        "",
+        "```powershell",
+        "# 未生成の小説と挿絵をMac mini M4 (Ollama + Draw Things) でバッチ生成してGitHub Pagesへ反映",
+        ".\\run_local_stock.ps1 -Count 3",
+        "",
+        "# 既存小説のうち未生成の挿絵 (.png) を生成してGitHub Pagesへ反映",
+        "python -m src.batch_stock --generate-images --push",
+        "",
+        "# Webサイト (docs/) と README.md のリンク一覧を再ビルド",
+        "python -m src.site_builder",
+        "```",
+        "",
+    ])
+
+    target_readme.write_text("\n".join(lines), encoding="utf-8")
+
+
 def build_github_pages(history_mgr: Optional[HistoryManager] = None) -> Dict[str, Any]:
     """
-    Generates the static GitHub Pages site in `docs/` from all Markdown stories and PNG illustrations in `content/`.
+    Generates the static GitHub Pages site in `docs/` and updates root `README.md`
+    from all Markdown stories and PNG illustrations in `content/`.
     """
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     STORIES_DIR.mkdir(parents=True, exist_ok=True)
@@ -819,9 +884,12 @@ def build_github_pages(history_mgr: Optional[HistoryManager] = None) -> Dict[str
         encoding="utf-8",
     )
 
+    # Update root README.md with links to all novels
+    _write_root_readme(stories, Path("README.md"))
+
     illustrated = sum(1 for s in stories if s["has_image"])
     logger.info(
-        f"GitHub Pages site built in docs/: {len(stories)} stories ({illustrated} with illustrations)"
+        f"GitHub Pages site built in docs/ and README.md updated: {len(stories)} stories ({illustrated} with illustrations)"
     )
     return {
         "total_stories": len(stories),
@@ -833,3 +901,4 @@ def build_github_pages(history_mgr: Optional[HistoryManager] = None) -> Dict[str
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="[%(asctime)s] [%(levelname)s] %(message)s", datefmt="%H:%M:%S")
     build_github_pages()
+
