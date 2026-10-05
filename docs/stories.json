@@ -294,9 +294,9 @@
     "original_title": "地球盗難",
     "original_author": "海野十三",
     "modern_tech": "ハミルトン系シンプレクティック幾何学的数値積分、ラグランジュ点不変多様体カオス軌道計算、重力波干渉センシング、惑星スイングバイ最適化",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-earth-theft.html",
-    "image": "",
+    "image": "assets/images/unno-earth-theft.png",
     "char_count": 7165
   },
   {
