@@ -734,5 +734,21 @@
     "narration_file": "46_高野聖_narration.txt",
     "full_file": "46_高野聖_full.txt",
     "original_md_file": "46_高野聖.md"
+  },
+  {
+    "work_no": 47,
+    "work_id": "soseki-kokoro",
+    "title": "こころ",
+    "subtitle": "失われた記憶の謎",
+    "attribution": "",
+    "original_author": "夏目漱石",
+    "original_title": "こころ",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000148/card773.html",
+    "modern_tech": "死後起動型タイムロック暗号（Time-Lock Puzzle）、エピソード記憶の神経ホログラフィック再生、罪悪感と自己処罰の認知神経科学",
+    "summary": "「先生」から届いた長大な暗号化メモリ遺書。百年前のKとの悲劇的な記憶を追体験した「私」が、先生が最後に遺した本当の希望のメッセージに辿り着く。",
+    "char_count": 5255,
+    "narration_file": "47_こころ_narration.txt",
+    "full_file": "47_こころ_full.txt",
+    "original_md_file": "47_こころ.md"
   }
 ]

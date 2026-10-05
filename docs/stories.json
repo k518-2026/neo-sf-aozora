@@ -550,5 +550,17 @@
     "url": "stories/izumi-koya-hijiri.html",
     "image": "assets/images/izumi-koya-hijiri.png",
     "char_count": 4226
+  },
+  {
+    "no": 47,
+    "work_id": "soseki-kokoro",
+    "title": "こころ――失われた記憶の謎",
+    "original_title": "こころ",
+    "original_author": "夏目漱石",
+    "modern_tech": "死後起動型タイムロック暗号（Time-Lock Puzzle）、エピソード記憶の神経ホログラフィック再生、罪悪感と自己処罰の認知神経科学",
+    "has_image": true,
+    "url": "stories/soseki-kokoro.html",
+    "image": "assets/images/soseki-kokoro.png",
+    "char_count": 6811
   }
 ]

@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **46** 作品（うち挿絵付き **16** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 00:32 JST）
+- **収録作品数**: 全 **47** 作品（うち挿絵付き **17** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 00:44 JST）
 
 ---
 
@@ -60,6 +60,7 @@
 | 44 | **[注文の多い料理店――秘密のスマートレストラン](content/2026-10-05_miyazawa_chumon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-chumon.html) | [📄原稿](content/2026-10-05_miyazawa_chumon.md) | [🎨挿絵](content/2026-10-05_miyazawa_chumon.png) | 宮沢賢治[『注文の多い料理店』](https://www.aozora.gr.jp/cards/000081/card43754.html) | 行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション | 5,528字 |
 | 45 | **[風の又三郎――風の秘密を解く少年](content/2026-10-05_miyazawa_kaze_no_matasaburo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-kaze-no-matasaburo.html) | [📄原稿](content/2026-10-05_miyazawa_kaze_no_matasaburo.md) | [🎨挿絵](content/2026-10-05_miyazawa_kaze_no_matasaburo.png) | 宮沢賢治[『風の又三郎』](https://www.aozora.gr.jp/cards/000081/card462.html) | ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電 | 4,339字 |
 | 46 | **[高野聖――遺伝子の呪縛](content/2026-10-06_izumi_koya_hijiri.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-koya-hijiri.html) | [📄原稿](content/2026-10-06_izumi_koya_hijiri.md) | [🎨挿絵](content/2026-10-06_izumi_koya_hijiri.png) | 泉鏡花[『高野聖』](https://www.aozora.gr.jp/cards/000050/card521.html) | CRISPRウイルスベクターによる体細胞エピゲノム書き換え、犁鼻器・扁桃体フェロモン神経回路、未知の共生微生物による生体再生 | 4,226字 |
+| 47 | **[こころ――失われた記憶の謎](content/2026-10-06_soseki_kokoro.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-kokoro.html) | [📄原稿](content/2026-10-06_soseki_kokoro.md) | [🎨挿絵](content/2026-10-06_soseki_kokoro.png) | 夏目漱石[『こころ』](https://www.aozora.gr.jp/cards/000148/card773.html) | 死後起動型タイムロック暗号（Time-Lock Puzzle）、エピソード記憶の神経ホログラフィック再生、罪悪感と自己処罰の認知神経科学 | 6,811字 |
 
 ---
 
