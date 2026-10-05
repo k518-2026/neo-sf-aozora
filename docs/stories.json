@@ -342,9 +342,9 @@
     "original_title": "屋根裏の散歩者",
     "original_author": "江戸川乱歩",
     "modern_tech": "Wi-Fi電波反射による壁透過ポーズ推定（Through-wall RF sensing）、スパースモデリング・圧縮センシング逆問題解析、テラヘルツ非破壊スキャン",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/edogawa-attic-stroller.html",
-    "image": "",
+    "image": "assets/images/edogawa-attic-stroller.png",
     "char_count": 6338
   },
   {
