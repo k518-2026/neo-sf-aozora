@@ -270,9 +270,9 @@
     "original_title": "潜航艇「鷹の巣」",
     "original_author": "小栗虫太郎",
     "modern_tech": "低周波海洋音響トモグラフィー、極限環境誤り訂正符号、深海自律型AUV群知能",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/oguri-submarine-eagles-nest.html",
-    "image": "",
+    "image": "assets/images/oguri-submarine-eagles-nest.png",
     "char_count": 6063
   },
   {
