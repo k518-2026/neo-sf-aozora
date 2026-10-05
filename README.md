@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **47** 作品（うち挿絵付き **28** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 01:38 JST）
+- **収録作品数**: 全 **47** 作品（うち挿絵付き **29** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 01:42 JST）
 
 ---
 
@@ -49,7 +49,7 @@
 | 15 | **[昆虫図――フェロモン・グラフと遺伝子駆動の恋文](content/2026-09-29_hisao_insect_catalog.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/hisao-insect-catalog.html) | [📄原稿](content/2026-09-29_hisao_insect_catalog.md) | — | 久生十蘭[『昆虫図』](https://www.aozora.gr.jp/cards/001224/card46083.html) | CRISPRジンドライブ、分散合意アルゴリズム、グラフ理論に基づく自己組織化フェロモンネットワーク、マイクロ流体バイオチップ | 5,028字 |
 | 14 | **[金属人間――自己組織化ガリウム生体回路の迷宮](content/2026-09-29_unno_metal_man.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-metal-man.html) | [📄原稿](content/2026-09-29_unno_metal_man.md) | — | 海野十三[『金属人間』](https://www.aozora.gr.jp/cards/000160/card1242.html) | 液体金属ガリウムナノ合金生体回路、自己組織化モジュラーロボット、生体内バイオミネラリゼーション | 4,453字 |
 | 13 | **[俘囚――AdS/CFTホログラフィック監獄の反響](content/2026-09-29_unno_captive.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-captive.html) | [📄原稿](content/2026-09-29_unno_captive.md) | — | 海野十三[『俘囚』](https://www.aozora.gr.jp/cards/000160/card3238.html) | AdS/CFT対応ホログラフィック原理、ワームホール量子シミュレーション、トポロジカル空間位相格子 | 4,109字 |
-| 12 | **[浮かぶ飛行島――成層圏メガストラクチャーの崩壊](content/2026-09-28_unno_floating_island.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-floating-island.html) | [📄原稿](content/2026-09-28_unno_floating_island.md) | — | 海野十三[『浮かぶ飛行島』](https://www.aozora.gr.jp/cards/000160/card1245.html) | 常温高圧超伝導（LK-99後継磁気浮上）、プラズマMHD推進、カーボンナノチューブテザーメガ構造体 | 5,031字 |
+| 12 | **[浮かぶ飛行島――成層圏メガストラクチャーの崩壊](content/2026-09-28_unno_floating_island.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-floating-island.html) | [📄原稿](content/2026-09-28_unno_floating_island.md) | [🎨挿絵](content/2026-09-28_unno_floating_island.png) | 海野十三[『浮かぶ飛行島』](https://www.aozora.gr.jp/cards/000160/card1245.html) | 常温高圧超伝導（LK-99後継磁気浮上）、プラズマMHD推進、カーボンナノチューブテザーメガ構造体 | 5,031字 |
 | 11 | **[二十世紀鉄仮面――ネオ・フィジオノミーの覚醒](content/2026-09-28_oguri_20th_century_iron_mask.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-20th-century-iron-mask.html) | [📄原稿](content/2026-09-28_oguri_20th_century_iron_mask.md) | [🎨挿絵](content/2026-09-28_oguri_20th_century_iron_mask.png) | 小栗虫太郎[『二十世紀鉄仮面』](https://www.aozora.gr.jp/cards/000125/card1683.html) | バイオ3Dプリンティング人工皮膚、DNAフェイシャルプロファイリング、生体電子マスク、ディープフェイク生体侵食 | 7,521字 |
 | 10 | **[完全犯罪――量子消滅の熱音響（サーモアコースティック）](content/2026-09-28_oguri_complete_crime.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-complete-crime.html) | [📄原稿](content/2026-09-28_oguri_complete_crime.md) | [🎨挿絵](content/2026-09-28_oguri_complete_crime.png) | 小栗虫太郎[『完全犯罪』](https://www.aozora.gr.jp/cards/000125/card668.html) | 量子もつれ暗号撹乱、超短パルスフェムト秒レーザー熱音響暗殺、環境ゲノム偽装 | 6,016字 |
 | 09 | **[爆弾太平記――連鎖量子点火の特異点](content/2026-09-27_yumeno_bomb_peace.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-bomb-peace.html) | [📄原稿](content/2026-09-27_yumeno_bomb_peace.md) | [🎨挿絵](content/2026-09-27_yumeno_bomb_peace.png) | 夢野久作[『爆弾太平記』](https://www.aozora.gr.jp/cards/000096/card2134.html) | 反物質トラップ、レーザー核融合、量子エンタングルメント起爆装置、自律致死型AI兵站 | 6,844字 |

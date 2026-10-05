@@ -426,9 +426,9 @@
     "original_title": "浮かぶ飛行島",
     "original_author": "海野十三",
     "modern_tech": "常温高圧超伝導（LK-99後継磁気浮上）、プラズマMHD推進、カーボンナノチューブテザーメガ構造体",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-floating-island.html",
-    "image": "",
+    "image": "assets/images/unno-floating-island.png",
     "char_count": 5031
   },
   {
