@@ -718,5 +718,21 @@
     "narration_file": "45_走れメロス_narration.txt",
     "full_file": "45_走れメロス_full.txt",
     "original_md_file": "45_走れメロス.md"
+  },
+  {
+    "work_no": 46,
+    "work_id": "izumi-koya-hijiri",
+    "title": "高野聖",
+    "subtitle": "遺伝子の呪縛",
+    "attribution": "",
+    "original_author": "泉鏡花",
+    "original_title": "高野聖",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000050/card521.html",
+    "modern_tech": "CRISPRウイルスベクターによる体細胞エピゲノム書き換え、犁鼻器・扁桃体フェロモン神経回路、未知の共生微生物による生体再生",
+    "summary": "飛騨の深山に迷い込んだ旅の青年が出会った、輝くばかりに美しい孤屋の女性。周囲の動物たちが持つ「人間と同じ瞳」の謎と、森の生態系が秘めた真実。",
+    "char_count": 2478,
+    "narration_file": "46_高野聖_narration.txt",
+    "full_file": "46_高野聖_full.txt",
+    "original_md_file": "46_高野聖.md"
   }
 ]
