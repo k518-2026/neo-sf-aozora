@@ -438,9 +438,9 @@
     "original_title": "二十世紀鉄仮面",
     "original_author": "小栗虫太郎",
     "modern_tech": "バイオ3Dプリンティング人工皮膚、DNAフェイシャルプロファイリング、生体電子マスク、ディープフェイク生体侵食",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/oguri-20th-century-iron-mask.html",
-    "image": "",
+    "image": "assets/images/oguri-20th-century-iron-mask.png",
     "char_count": 7521
   },
   {
