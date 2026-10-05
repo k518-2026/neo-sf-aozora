@@ -282,9 +282,9 @@
     "original_title": "電気風呂の怪死",
     "original_author": "海野十三",
     "modern_tech": "トポロジカル絶縁体・量子ホール効果、ジョセフソン接合SQUID磁束量子センサ、複素ポテンシャル論・等角写像による漏洩電流逆解析",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-electric-bath-death.html",
-    "image": "",
+    "image": "assets/images/unno-electric-bath-death.png",
     "char_count": 7292
   },
   {
