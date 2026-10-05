@@ -474,9 +474,9 @@
     "original_title": "人間レコード",
     "original_author": "夢野久作",
     "modern_tech": "DNAデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/yumeno-human-record.html",
-    "image": "",
+    "image": "assets/images/yumeno-human-record.png",
     "char_count": 5832
   },
   {

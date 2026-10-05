@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **47** 作品（うち挿絵付き **24** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 01:19 JST）
+- **収録作品数**: 全 **47** 作品（うち挿絵付き **25** 作品 / 原典文豪 **14** 名 / 最終更新: 2026-10-06 01:23 JST）
 
 ---
 
@@ -53,7 +53,7 @@
 | 11 | **[二十世紀鉄仮面――ネオ・フィジオノミーの覚醒](content/2026-09-28_oguri_20th_century_iron_mask.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-20th-century-iron-mask.html) | [📄原稿](content/2026-09-28_oguri_20th_century_iron_mask.md) | — | 小栗虫太郎[『二十世紀鉄仮面』](https://www.aozora.gr.jp/cards/000125/card1683.html) | バイオ3Dプリンティング人工皮膚、DNAフェイシャルプロファイリング、生体電子マスク、ディープフェイク生体侵食 | 7,521字 |
 | 10 | **[完全犯罪――量子消滅の熱音響（サーモアコースティック）](content/2026-09-28_oguri_complete_crime.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-complete-crime.html) | [📄原稿](content/2026-09-28_oguri_complete_crime.md) | — | 小栗虫太郎[『完全犯罪』](https://www.aozora.gr.jp/cards/000125/card668.html) | 量子もつれ暗号撹乱、超短パルスフェムト秒レーザー熱音響暗殺、環境ゲノム偽装 | 6,016字 |
 | 09 | **[爆弾太平記――連鎖量子点火の特異点](content/2026-09-27_yumeno_bomb_peace.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-bomb-peace.html) | [📄原稿](content/2026-09-27_yumeno_bomb_peace.md) | — | 夢野久作[『爆弾太平記』](https://www.aozora.gr.jp/cards/000096/card2134.html) | 反物質トラップ、レーザー核融合、量子エンタングルメント起爆装置、自律致死型AI兵站 | 6,844字 |
-| 08 | **[人間レコード――ゲノム・シンフォニーの目覚め](content/2026-09-27_yumeno_human_record.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-human-record.html) | [📄原稿](content/2026-09-27_yumeno_human_record.md) | — | 夢野久作[『人間レコード』](https://www.aozora.gr.jp/cards/000096/card1071.html) | DNAデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印 | 5,832字 |
+| 08 | **[人間レコード――ゲノム・シンフォニーの目覚め](content/2026-09-27_yumeno_human_record.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-human-record.html) | [📄原稿](content/2026-09-27_yumeno_human_record.md) | [🎨挿絵](content/2026-09-27_yumeno_human_record.png) | 夢野久作[『人間レコード』](https://www.aozora.gr.jp/cards/000096/card1071.html) | DNAデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印 | 5,832字 |
 | 07 | **[脳髄手術](content/2026-09-26_ran_brain_surgery.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ran-brain-surgery.html) | [📄原稿](content/2026-09-26_ran_brain_surgery.md) | [🎨挿絵](content/2026-09-26_ran_brain_surgery.png) | 蘭郁二郎[『脳髄手術』](https://www.aozora.gr.jp/cards/000325/card2187.html) | 深部脳刺激（DBS）、光遺伝学的情動回路切除、ナノロボットによる標的シナプス精密切断 | 7,013字 |
 | 06 | **[夢鬼](content/2026-09-25_ran_dream_demon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ran-dream-demon.html) | [📄原稿](content/2026-09-25_ran_dream_demon.md) | [🎨挿絵](content/2026-09-25_ran_dream_demon.png) | 蘭郁二郎[『夢鬼』](https://www.aozora.gr.jp/cards/000325/card2189.html) | fMRI生成AIによる視覚心象復元（Stable Diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激 | 5,907字 |
 | 05 | **[植物人間――葉緑体人工共生と光合成代謝の臨界](content/2026-09-25_ran_plant_man.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ran-plant-man.html) | [📄原稿](content/2026-09-25_ran_plant_man.md) | [🎨挿絵](content/2026-09-25_ran_plant_man.png) | 蘭郁二郎[『植物人間』](https://www.aozora.gr.jp/cards/000325/card2186.html) | 動物細胞における葉緑体人工共生（Planimal）、CRISPR光合成代謝経路移植、クロロフィル生体蛍光 | 7,202字 |
