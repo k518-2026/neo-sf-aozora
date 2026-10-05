@@ -670,5 +670,37 @@
     "narration_file": "42_ドグラ・マグラ_narration.txt",
     "full_file": "42_ドグラ・マグラ_full.txt",
     "original_md_file": "42_ドグラ・マグラ.md"
+  },
+  {
+    "work_no": 43,
+    "work_id": "miyazawa-chumon",
+    "title": "注文の多い料理店",
+    "subtitle": "秘密のスマートレストラン",
+    "attribution": "",
+    "original_author": "宮沢賢治",
+    "original_title": "注文の多い料理店",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000081/card43754.html",
+    "modern_tech": "行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション",
+    "summary": "深山に佇む最新鋭の無人スマートレストラン「山猫軒」。次々と提示される快適な指示（ナッジ）に従ううちに、人間自身が「食材」へと誘導されていくブラックユーモアSF。",
+    "char_count": 3749,
+    "narration_file": "43_注文の多い料理店_narration.txt",
+    "full_file": "43_注文の多い料理店_full.txt",
+    "original_md_file": "43_注文の多い料理店.md"
+  },
+  {
+    "work_no": 44,
+    "work_id": "miyazawa-kaze-no-matasaburo",
+    "title": "風の又三郎",
+    "subtitle": "風の秘密を解く少年",
+    "attribution": "",
+    "original_author": "宮沢賢治",
+    "original_title": "風の又三郎",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000081/card462.html",
+    "modern_tech": "ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電",
+    "summary": "九月一日の風と共に過疎の村の分校へやってきた謎の転校生。大気の渦と風の流れを自在に読み解く少年との十日間の交流と、嵐の朝の別れ。",
+    "char_count": 2633,
+    "narration_file": "44_風の又三郎_narration.txt",
+    "full_file": "44_風の又三郎_full.txt",
+    "original_md_file": "44_風の又三郎.md"
   }
 ]
