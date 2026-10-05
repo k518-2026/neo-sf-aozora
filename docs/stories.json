@@ -234,9 +234,9 @@
     "original_title": "瓶詰地獄",
     "original_author": "夢野久作",
     "modern_tech": "シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化DNAタイムスタンプ解析",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/yumeno-binzume-jigoku.html",
-    "image": "",
+    "image": "assets/images/yumeno-binzume-jigoku.png",
     "char_count": 5380
   },
   {
