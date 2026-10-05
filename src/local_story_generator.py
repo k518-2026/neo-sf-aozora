@@ -3,6 +3,7 @@ import re
 import json
 import time
 import base64
+import difflib
 import logging
 import urllib.request
 import urllib.parse
@@ -20,7 +21,7 @@ from src.story_generator import (
 logger = logging.getLogger(__name__)
 
 DEFAULT_OLLAMA_HOST = "http://192.168.128.59:11434"
-DEFAULT_LOCAL_MODEL = "qwen2.5:14b"
+DEFAULT_LOCAL_MODEL = "gemma4:12b"
 DEFAULT_WRITER_MODEL = "gemma4:12b"
 DEFAULT_DRAW_THINGS_HOST = "http://192.168.128.59:7860"
 
@@ -28,9 +29,9 @@ DEFAULT_DRAW_THINGS_HOST = "http://192.168.128.59:7860"
 PREFERRED_LOCAL_MODELS = [
     "gemma3:27b",
     "qwen2.5:32b",
+    "gemma4:12b",
     "qwen3:14b",
     "qwen2.5:14b",
-    "gemma4:12b",
     "gemma3:12b",
     "qwen3.5:9b",
     "gemma2:9b",
@@ -518,6 +519,266 @@ class LocalStoryGenerator:
 
         return verified_papers
 
+    def _normalize_japanese_typos(self, text: str) -> str:
+        """Fixes common Simplified Chinese character leaks or archaic typos emitted by local LLMs."""
+        replacements = {
+            "无反射": "無反射",
+            "无響": "無響",
+            "前头前野": "前頭前野",
+            "前头葉": "前頭葉",
+            "神经活动": "神経活動",
+            "神经": "神経",
+            "実騐": "実験",
+            "验証": "検証",
+            "脑内": "脳内",
+            "计測": "計測",
+            "连成": "連成",
+            "电気": "電気",
+            "电子": "電子",
+            "结构": "構造",
+            "记忆": "記憶",
+            "选択": "選択",
+            "观测": "観測",
+        }
+        for wrong, right in replacements.items():
+            text = text.replace(wrong, right)
+        return text
+
+    def _remove_fuzzy_repetitions(
+        self,
+        text: str,
+        para_threshold: float = 0.52,
+        sent_threshold: float = 0.56,
+    ) -> Tuple[str, int]:
+        """
+        Detects and removes near-duplicate paragraphs and sentences (including repeated
+        dialogue lines with slight wording variations) across the entire story text.
+        Also removes meta-transition markers like '【次回へ続く】' or '次のページでは…'
+        and trims trailing incomplete sentence cutoffs before '* * *' or '（了）'.
+        Returns (cleaned_text, removed_count).
+        """
+        text = self._normalize_japanese_typos(text)
+        removed_count = 0
+
+        # 1. Remove meta-continuation lines
+        meta_patterns = [
+            r"^.*【次回へ続く】.*$",
+            r"^.*（次回へ続く）.*$",
+            r"^.*次のページでは.*$",
+            r"^.*後半へ続く.*$",
+            r"^.*第[1-4一二三四]シーン.*$",
+        ]
+        for pat in meta_patterns:
+            text, n_sub = re.subn(pat, "", text, flags=re.MULTILINE)
+            removed_count += n_sub
+
+        raw_paragraphs = [p.strip() for p in re.split(r"\n\s*\n", text) if p.strip()]
+        kept_paragraphs: List[str] = []
+        seen_Normalized_paras: List[str] = []
+        seen_normalized_sents: List[str] = []
+
+        for p in raw_paragraphs:
+            if p in ("* * *", "---", "（了）", "(了)"):
+                if p == "* * *" and kept_paragraphs and kept_paragraphs[-1] == "* * *":
+                    continue
+                kept_paragraphs.append(p)
+                continue
+
+            norm_p = re.sub(r"[\s「」『』、。！？…―—・]", "", p)
+            if len(norm_p) >= 22:
+                is_dup_para = False
+                for prev_p in seen_Normalized_paras:
+                    ratio = difflib.SequenceMatcher(None, norm_p, prev_p).ratio()
+                    if ratio >= para_threshold or (len(norm_p) >= 28 and (norm_p in prev_p or prev_p in norm_p)):
+                        is_dup_para = True
+                        removed_count += 1
+                        break
+                if is_dup_para:
+                    continue
+
+            # Split paragraph into sentence units (preserving punctuation and closing quotes)
+            sent_tokens = re.findall(r"[^。！？\n]+(?:[。！？]+(?:」|』|）|\))?|$)", p)
+            if not sent_tokens:
+                sent_tokens = [p]
+
+            kept_sents: List[str] = []
+            for s in sent_tokens:
+                s_clean = s.strip()
+                if not s_clean:
+                    continue
+                norm_s = re.sub(r"[\s「」『』、。！？…―—・]", "", s_clean)
+                if len(norm_s) >= 16:
+                    is_dup_sent = False
+                    for prev_s in seen_normalized_sents:
+                        ratio = difflib.SequenceMatcher(None, norm_s, prev_s).ratio()
+                        if ratio >= sent_threshold or (len(norm_s) >= 20 and (norm_s in prev_s or prev_s in norm_s)):
+                            is_dup_sent = True
+                            removed_count += 1
+                            break
+                    if is_dup_sent:
+                        continue
+                    seen_normalized_sents.append(norm_s)
+                kept_sents.append(s_clean)
+
+            if not kept_sents:
+                continue
+
+            reconstructed_p = "".join(kept_sents).strip()
+            # Check if the paragraph ends with an abrupt mid-sentence cutoff (not ending with valid punctuation)
+            if reconstructed_p and not re.search(r"[。！？!?」』）\)\*了]$", reconstructed_p):
+                # If paragraph has earlier complete sentences, keep only up to the last complete sentence
+                last_punct = max(
+                    reconstructed_p.rfind("。"),
+                    reconstructed_p.rfind("！"),
+                    reconstructed_p.rfind("？"),
+                    reconstructed_p.rfind("」"),
+                    reconstructed_p.rfind("』"),
+                )
+                if last_punct > 10:
+                    reconstructed_p = reconstructed_p[: last_punct + 1].strip()
+                    removed_count += 1
+                else:
+                    # Entire short fragment was cut off mid-sentence
+                    removed_count += 1
+                    continue
+
+            norm_reconstructed = re.sub(r"[\s「」『』、。！？…―—・]", "", reconstructed_p)
+            if len(norm_reconstructed) >= 22:
+                seen_Normalized_paras.append(norm_reconstructed)
+            kept_paragraphs.append(reconstructed_p)
+
+        cleaned = "\n\n".join(kept_paragraphs).strip()
+        cleaned = re.sub(r"(\*\s*\*\s*\*\s*\n+){2,}", "* * *\n\n", cleaned)
+        return cleaned, removed_count
+
+    def audit_story_quality(self, story_body: str) -> Dict[str, Any]:
+        """
+        Audits a story body for sentence/paragraph repetitions, mid-sentence cutoffs,
+        or meta-markers. Returns a report dict with 'issues_count' and details.
+        """
+        paragraphs = [
+            p.strip()
+            for p in re.split(r"\n\s*\n", story_body)
+            if p.strip() and p.strip() not in ("* * *", "---", "（了）")
+        ]
+        dup_paras = 0
+        norm_paras = [re.sub(r"[\s「」『』、。！？…―—・]", "", p) for p in paragraphs if len(p) >= 22]
+        for i in range(len(norm_paras)):
+            for j in range(i + 1, len(norm_paras)):
+                if difflib.SequenceMatcher(None, norm_paras[i], norm_paras[j]).ratio() >= 0.52:
+                    dup_paras += 1
+
+        sents = [
+            s.strip()
+            for s in re.split(r"[。！？\n]+", story_body)
+            if len(s.strip()) >= 18 and s.strip() not in ("* * *", "---", "（了）")
+        ]
+        dup_sents = 0
+        norm_sents = [re.sub(r"[\s「」『』、。！？…―—・]", "", s) for s in sents]
+        for i in range(len(norm_sents)):
+            for j in range(i + 1, len(norm_sents)):
+                if len(norm_sents[i]) >= 16 and len(norm_sents[j]) >= 16:
+                    if difflib.SequenceMatcher(None, norm_sents[i], norm_sents[j]).ratio() >= 0.56:
+                        dup_sents += 1
+
+        cutoffs = 0
+        for p in paragraphs:
+            if not re.search(r"[。！？!?」』）\)\*了]$", p):
+                cutoffs += 1
+
+        return {
+            "dup_paras": dup_paras,
+            "dup_sents": dup_sents,
+            "cutoffs": cutoffs,
+            "issues_count": dup_paras + dup_sents + cutoffs,
+        }
+
+    def proofread_and_polish_story(
+        self,
+        story_body: str,
+        work: Dict[str, Any],
+        reboot_title: str,
+    ) -> str:
+        """
+        Performs a dedicated multi-stage verification & proofreading pass on the generated story:
+        1) Runs deterministic fuzzy deduplication (`_remove_fuzzy_repetitions`) to strip repeated
+           sentences/paragraphs/dialogue and mid-sentence cutoffs.
+        2) Audits the story and runs a Local LLM proofreading pass to verify natural flow,
+           eliminate any remaining semantic redundancy, and ensure a clean ending (`（了）`).
+        3) Re-applies deterministic deduplication on the proofread output and keeps the
+           highest-quality version.
+        """
+        # Stage 1: Deterministic fuzzy deduplication & typo cleanup
+        deduped_body, removed_count = self._remove_fuzzy_repetitions(story_body)
+        audit_before = self.audit_story_quality(deduped_body)
+        logger.info(
+            f"[Proofread Pass] Deterministic cleanup removed {removed_count} repetitive/cutoff segments "
+            f"(remaining issues: {audit_before['issues_count']}, length: {len(deduped_body)} chars)."
+        )
+
+        # Stage 2: Local LLM editorial proofreading pass to ensure smooth transitions and zero semantic repetition
+        proofread_prompt = f"""あなたは熟練のSF文芸編集者・校閲者です。
+以下の短編SF小説『{reboot_title}』（原案：{work['author']}『{work['title']}』）の本文を読み直し、**文章の繰り返しや不自然な途切れを完全に修正した決定稿**を出力してください。
+
+【校閲・推敲の絶対ルール】
+1. **繰り返しの完全除去**:
+   - 同じ意味のセリフ、同じ情景描写、同じ科学設定の説明が複数回繰り返されている箇所があれば、最も鮮やかで効果的な1箇所だけを残し、重複箇所は削除または自然な展開へ書き換えてください。
+2. **文脈の自然な接続と完結**:
+   - シーン区切り（`* * *`）の前後で文章が途中で切れていたり、同じやり取りがループしていたりする場合は、滑らかに繋がるように整えてください。
+   - 簡体字（无、头、实など）や不自然な文字が混入していれば正しい日本語の漢字に直してください。
+3. **構成と分量の維持**:
+   - 物語の登場人物、魅力的な描写、科学要素、そして結末のどんでん返しは削らずに活かし、本文の最後は必ず `（了）` で締めくくってください。
+   - タイトルや解説は出力せず、**校閲済みの小説本文のみ**を出力してください。
+
+【校閲対象の小説本文】
+{deduped_body}
+"""
+        try:
+            logger.info("[Proofread Pass] Running Local LLM full-text verification & proofreading pass...")
+            raw_proofread = self._call_ollama_chat(
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": proofread_prompt},
+                ],
+                temperature=0.45,
+                num_predict=4500,
+                num_ctx=8192,
+                timeout=1800,
+            )
+            cleaned_proofread = self._clean_llm_output(raw_proofread)
+            pr_lines = []
+            for line in cleaned_proofread.splitlines():
+                stripped = line.strip()
+                if "【作中技術のやさしい解説" in stripped or "【引用・参考文献" in stripped:
+                    break
+                if stripped.startswith("TITLE:") or stripped.startswith("# "):
+                    continue
+                pr_lines.append(line)
+            candidate_body = "\n".join(pr_lines).strip()
+            candidate_body, _ = self._remove_fuzzy_repetitions(candidate_body)
+            if not candidate_body.endswith("（了）"):
+                candidate_body = candidate_body.rstrip() + "\n\n（了）"
+
+            audit_after = self.audit_story_quality(candidate_body)
+            # Accept the LLM-polished version if it preserves at least 70% of the story length and has 0 issues
+            if len(candidate_body) >= int(len(deduped_body) * 0.70) and audit_after["issues_count"] <= audit_before["issues_count"]:
+                logger.info(
+                    f"[Proofread Pass] LLM proofreading succeeded ({len(candidate_body)} chars, "
+                    f"issues: {audit_after['issues_count']})."
+                )
+                deduped_body = candidate_body
+            else:
+                logger.info(
+                    f"[Proofread Pass] Keeping deterministic deduplicated version "
+                    f"(LLM candidate len={len(candidate_body)} vs {len(deduped_body)})."
+                )
+        except Exception as e:
+            logger.warning(f"[Proofread Pass] LLM proofreading step skipped due to error: {e}")
+
+        if not deduped_body.endswith("（了）"):
+            deduped_body = deduped_body.rstrip() + "\n\n（了）"
+        return deduped_body
+
     def _clean_llm_output(self, text: str) -> str:
         """Removes <think>...</think> blocks, markdown fences, scene meta-headers, repetition loops, and stray URLs."""
         text = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
@@ -527,6 +788,7 @@ class LocalStoryGenerator:
             text = text[3:].strip()
         if text.endswith("```"):
             text = text[:-3].strip()
+        text = self._normalize_japanese_typos(text)
         # Strip meta scene headings like '### 第1シーン', '第1シーン', '## シーン2', '### * * *', '### *'
         text = re.sub(r"^[ \t]*#+[ \t]*(\*\s*\*\s*\*)[ \t]*$", r"\1", text, flags=re.MULTILINE)
         text = re.sub(r"^[ \t]*#+[ \t]*\*+[ \t]*$", "* * *", text, flags=re.MULTILINE)
@@ -557,8 +819,10 @@ class LocalStoryGenerator:
         Generates a complete, publication-ready Aozora Bunko sci-fi reboot markdown document:
         1) Pre-fetches 3 authentic, DOI-verified scientific papers via Crossref API.
         2) Generates a 3,500-4,500 char story body via Local LLM (Ollama).
-        3) Generates the accessible 3-point Technical Commentary via Local LLM grounded in the 3 verified papers.
-        4) Deterministically attaches the YAML frontmatter, original work header, and verified Scientific References.
+        3) Runs a multi-stage verification & proofreading pass (`proofread_and_polish_story`)
+           to eliminate any sentence/paragraph repetitions, Chinese character leaks, or cutoffs.
+        4) Generates the accessible 3-point Technical Commentary via Local LLM grounded in the 3 verified papers.
+        5) Deterministically attaches the YAML frontmatter, original work header, and verified Scientific References.
         Returns: (full_markdown, reboot_title, list_of_short_references)
         """
         model = self.resolve_model_name()
@@ -581,7 +845,7 @@ class LocalStoryGenerator:
         # Step 2A: Generate Part 1 of the Story (Title + Scene 1 & Scene 2: Setup, Mystery & Investigation)
         part1_prompt = f"""以下の青空文庫の名作を原案とし、指定された3つの現代科学要素を取り入れた短編SF小説の**【前半パート（第1シーン・第2シーン：目標1,800〜2,200文字）】**を執筆してください。
 
-※重要：物語全体を前半・後半の2回に分けて執筆します。今回の出力では**絶対に物語を完結させず（『（了）』と書かず）**、謎が深まり決定的な局面へ突入する緊迫した場面（クリフハンガー）で後半へバトンを渡してください。
+※重要：物語全体を前半・後半の2回に分けて執筆します。今回の出力では**絶対に物語を完結させず（『（了）』や『【次回へ続く】』と書かず）**、謎が深まり決定的な局面へ突入する緊迫した場面（クリフハンガー）で後半へバトンを渡してください。
 
 【対象の原典作品】
 - 原典タイトル: {work['title']}
@@ -606,17 +870,17 @@ class LocalStoryGenerator:
 4. **第2シーン（対話・調査と深まる謎：約900〜1,100文字）**:
    - 登場人物同士の人間味あふれる会話劇と心理の駆け引きを通じて、技術要素2を用いた調査・実験を描いてください。
    - 後半の「あっと驚くどんでん返し」につながる重要な伏線を自然に張り、予想外の異常データや危機が浮かび上がった瞬間の緊迫した場面で前半を終えてください（まだ結末や真相は明かさないこと）。
-5. **表現の注意**:
-   - 同じセリフや同じ説明の繰り返しを厳禁とします。五感（光、音、手触り、温度、匂い）と人物の感情を丁寧に描写してください。
+5. **表現の注意（最重要）**:
+   - **同じセリフ、同じ情景描写、同じ科学説明の繰り返しを厳禁**とします。一度述べた事柄は別の角度・新しい展開へと進めてください。
 """
 
-        logger.info(f"[Local LLM: {model}] Step 1/3: Generating Story Part 1 (Setup & Mystery)...")
+        logger.info(f"[Local LLM: {model}] Step 1/4: Generating Story Part 1 (Setup & Mystery)...")
         raw_part1 = self._call_ollama_chat(
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": part1_prompt},
             ],
-            temperature=0.78,
+            temperature=0.75,
             num_predict=3500,
             num_ctx=8192,
         )
@@ -640,6 +904,7 @@ class LocalStoryGenerator:
         part1_body = "\n".join(p1_body_lines).strip()
         part1_body = re.sub(r"^---\s*\n.*?\n---\s*\n", "", part1_body, flags=re.DOTALL).strip()
         part1_body = re.sub(r"^『?\*\*原案：.*?\*\*』?\s*\n*", "", part1_body).strip()
+        part1_body, _ = self._remove_fuzzy_repetitions(part1_body)
 
         # Step 2B: Generate Part 2 of the Story (Scene 3 & Scene 4: Turning Point, Twist & Resolution)
         part2_prompt = f"""素晴らしい前半パートです！続けて、この小説『{reboot_title}』の**【後半パート（第3シーン・第4シーン：目標1,800〜2,200文字）】**を執筆し、物語を完結させてください。
@@ -647,7 +912,8 @@ class LocalStoryGenerator:
 【後半パートの構成と絶対ルール】
 1. **直前の続きから自然に書き始めること**:
    - タイトルは書かず、前半パートの直後に続く本文（第3シーン）から書き始めてください。
-   - 前半に登場した人物の名前・性別・一人称・口調を100%そのまま維持してください。前半と同じセリフの繰り返しは避け、事態を大きく動かしてください。
+   - 前半に登場した人物の名前・性別・一人称・口調を100%そのまま維持してください。
+   - **前半ですでに書いたセリフ・説明・描写の繰り返しは厳禁**です。事態を大きく前進させてください。
 2. **第3シーン（核心への突入と危機・転機：約900〜1,100文字）**:
    - 技術要素3（{verified_papers[min(2, len(verified_papers)-1)]['tech_label']}）が決定的な役割を果たし、前半の謎が一気に核心へと迫るスリリングな展開を描いてください。
 3. **シーン区切り**:
@@ -655,10 +921,10 @@ class LocalStoryGenerator:
 4. **第4シーン（驚愕のどんでん返しと深い気づきの結末：約900〜1,100文字）**:
    - 結末テーマ【★{theme_info['name']}★】に沿って、前半の伏線が一気に回収される**「そういうことだったのか！」と膝を打つ意外な真相（どんでん返し）**と、**人間や世界に対する見方が変わる深い気づき（センス・オブ・ワンダー）**を鮮やかに描いてください。
    - 「すべては夢・シミュレーションだった」という安易な夢オチは厳禁です。
-   - 小説本文の最後は必ず `（了）` で締めくくってください（技術解説や参考文献はまだ書かないでください）。
+   - 同じやり取りをループさせず、小説本文の最後は必ず `（了）` で完結させてください（技術解説や参考文献はまだ書かないでください）。
 """
 
-        logger.info(f"[Local LLM: {model}] Step 2/3: Generating Story Part 2 (Climax, Twist & Ending)...")
+        logger.info(f"[Local LLM: {model}] Step 2/4: Generating Story Part 2 (Climax, Twist & Ending)...")
         raw_part2 = self._call_ollama_chat(
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
@@ -666,8 +932,8 @@ class LocalStoryGenerator:
                 {"role": "assistant", "content": f"TITLE: {reboot_title}\n\n{part1_body}"},
                 {"role": "user", "content": part2_prompt},
             ],
-            temperature=0.78,
-            num_predict=2400,
+            temperature=0.75,
+            num_predict=3200,
             num_ctx=8192,
             timeout=1800,
         )
@@ -688,10 +954,11 @@ class LocalStoryGenerator:
         # Remove any stray URLs inside the novel body
         story_body = re.sub(r"https?://\S+", "", story_body)
 
-        if not story_body.endswith("（了）"):
-            story_body = story_body.rstrip() + "\n\n（了）"
+        # Step 3: Dedicated Verification, Deduplication & Proofreading Pass
+        logger.info(f"[Local LLM: {model}] Step 3/4: Verifying & proofreading story to eliminate repetitions...")
+        story_body = self.proofread_and_polish_story(story_body, work=work, reboot_title=reboot_title)
 
-        # Step 3: Generate Technical Commentary grounded strictly in the 3 verified papers
+        # Step 4: Generate Technical Commentary grounded strictly in the 3 verified papers
         commentary_prompt = f"""先ほど執筆した短編SF小説『{reboot_title}』（原案：{work['author']}『{work['title']}』）の読者向けに、作中に登場した以下の**3つの最新科学技術**についての**【作中技術のやさしい解説】**を執筆してください。
 
 【解説する3つの最新科学技術と実在根拠論文】
@@ -713,7 +980,7 @@ class LocalStoryGenerator:
    - **本作でのSF的飛躍**: （本作でのSF的アイデアの解説）
 """
 
-        logger.info(f"[Local LLM: {model}] Step 2/2: Generating accessible Technical Commentary...")
+        logger.info(f"[Local LLM: {model}] Step 4/4: Generating accessible Technical Commentary...")
         raw_commentary = self._call_ollama_chat(
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
@@ -724,6 +991,7 @@ class LocalStoryGenerator:
             num_ctx=8192,
         )
         commentary_body = self._clean_llm_output(raw_commentary)
+        commentary_body, _ = self._remove_fuzzy_repetitions(commentary_body)
         # Strip heading if the model repeated it, and strip any stray URLs so only our verified DOIs appear
         commentary_body = re.sub(r"^#+.*作中技術のやさしい解説.*?\n", "", commentary_body).strip()
         commentary_body = re.sub(r"###\s*【引用・参考文献.*", "", commentary_body, flags=re.DOTALL).strip()

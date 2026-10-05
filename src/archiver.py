@@ -216,6 +216,8 @@ def update_archive_all() -> List[Dict[str, Any]]:
     # Fallback for any markdown files in content/ not yet in history.json
     content_dir = Path("content")
     if content_dir.exists():
+        catalog_idx_map = {w["id"]: i for i, w in enumerate(catalog, start=1)}
+        unposted_items = []
         for f in sorted(content_dir.glob("*.md")):
             if f.resolve() not in existing_paths:
                 name = f.stem
@@ -227,10 +229,16 @@ def update_archive_all() -> List[Dict[str, Any]]:
                 w_id = matched_w["id"] if matched_w else name
                 if w_id in seen_work_ids:
                     continue
-                next_no = len(works_order) + 1
-                works_order.append((next_no, w_id, f))
+                date_prefix = f.name[:10] if re.match(r"^\d{4}-\d{2}-\d{2}", f.name) else "0000-00-00"
+                cat_idx = catalog_idx_map.get(w_id, 9999)
+                unposted_items.append((date_prefix, cat_idx, w_id, f))
                 existing_paths.add(f.resolve())
                 seen_work_ids.add(w_id)
+
+        unposted_items.sort(key=lambda x: (x[0], x[1], x[3].name))
+        for _, _, w_id, f in unposted_items:
+            next_no = len(works_order) + 1
+            works_order.append((next_no, w_id, f))
 
     # Clean up obsolete or shifted numbered files from target directories
     target_dirs = [PROJECT_ARCHIVE_DIR]

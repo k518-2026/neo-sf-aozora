@@ -90,8 +90,8 @@ def collect_all_stories(history_mgr: Optional[HistoryManager] = None) -> List[Di
             seen_work_ids.add(wid)
             seen_paths.add(md_path.resolve())
 
-    # 2. Remaining stocked files in content/, ordered chronologically by filename date prefix & mtime
-    unposted_candidates: List[tuple[str, float, str, Path]] = []
+    # 2. Remaining stocked files in content/, ordered chronologically by filename date prefix & catalog order
+    unposted_candidates: List[tuple[str, int, str, Path]] = []
     for idx, work in enumerate(history_mgr.catalog, start=1):
         wid = work["id"]
         if wid in seen_work_ids:
@@ -100,8 +100,7 @@ def collect_all_stories(history_mgr: Optional[HistoryManager] = None) -> List[Di
         if md_path is None or not md_path.exists():
             continue
         date_prefix = md_path.name[:10] if re.match(r"^\d{4}-\d{2}-\d{2}", md_path.name) else "0000-00-00"
-        mtime = md_path.stat().st_mtime
-        unposted_candidates.append((date_prefix, mtime, wid, md_path))
+        unposted_candidates.append((date_prefix, idx, wid, md_path))
 
     unposted_candidates.sort(key=lambda item: (item[0], item[1], item[3].name))
     for _, _, wid, md_path in unposted_candidates:

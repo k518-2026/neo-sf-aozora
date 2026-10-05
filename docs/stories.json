@@ -9,7 +9,7 @@
     "has_image": true,
     "url": "stories/soseki-kokoro.html",
     "image": "assets/images/soseki-kokoro.png",
-    "char_count": 6811
+    "char_count": 4930
   },
   {
     "no": 46,
@@ -21,7 +21,7 @@
     "has_image": true,
     "url": "stories/izumi-koya-hijiri.html",
     "image": "assets/images/izumi-koya-hijiri.png",
-    "char_count": 4226
+    "char_count": 4959
   },
   {
     "no": 45,
@@ -33,7 +33,7 @@
     "has_image": true,
     "url": "stories/dazai-hashire-melos.html",
     "image": "assets/images/dazai-hashire-melos.png",
-    "char_count": 6852
+    "char_count": 4686
   },
   {
     "no": 44,
@@ -45,7 +45,7 @@
     "has_image": true,
     "url": "stories/miyazawa-kaze-no-matasaburo.html",
     "image": "assets/images/miyazawa-kaze-no-matasaburo.png",
-    "char_count": 4339
+    "char_count": 4387
   },
   {
     "no": 43,
@@ -57,7 +57,7 @@
     "has_image": true,
     "url": "stories/miyazawa-chumon.html",
     "image": "assets/images/miyazawa-chumon.png",
-    "char_count": 5528
+    "char_count": 4611
   },
   {
     "no": 42,
@@ -69,7 +69,7 @@
     "has_image": true,
     "url": "stories/akutagawa-toshishun.html",
     "image": "assets/images/akutagawa-toshishun.png",
-    "char_count": 5883
+    "char_count": 4660
   },
   {
     "no": 41,
@@ -81,7 +81,7 @@
     "has_image": true,
     "url": "stories/akutagawa-rashomon.html",
     "image": "assets/images/akutagawa-rashomon.png",
-    "char_count": 4389
+    "char_count": 4262
   },
   {
     "no": 40,
@@ -93,7 +93,7 @@
     "has_image": true,
     "url": "stories/oguri-kokushikan.html",
     "image": "assets/images/oguri-kokushikan.png",
-    "char_count": 5704
+    "char_count": 4366
   },
   {
     "no": 39,
@@ -105,7 +105,7 @@
     "has_image": true,
     "url": "stories/yumeno-dogra-magra.html",
     "image": "assets/images/yumeno-dogra-magra.png",
-    "char_count": 5614
+    "char_count": 4264
   },
   {
     "no": 38,
@@ -117,7 +117,7 @@
     "has_image": true,
     "url": "stories/ango-sakura-no-mori.html",
     "image": "assets/images/ango-sakura-no-mori.png",
-    "char_count": 4080
+    "char_count": 4329
   },
   {
     "no": 37,
@@ -561,6 +561,6 @@
     "has_image": true,
     "url": "stories/unno-18-music.html",
     "image": "assets/images/unno-18-music.png",
-    "char_count": 7733
+    "char_count": 7661
   }
 ]
