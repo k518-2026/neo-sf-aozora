@@ -318,9 +318,9 @@
     "original_title": "パノラマ島綺譚",
     "original_author": "江戸川乱歩",
     "modern_tech": "非線形カオスアトラクター制御、複雑系ネットワーク理論、合成生物学による発光植物、バイオジオエンジニアリング（地球惑星環境工学）",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/edogawa-panorama-island.html",
-    "image": "",
+    "image": "assets/images/edogawa-panorama-island.png",
     "char_count": 6617
   },
   {
