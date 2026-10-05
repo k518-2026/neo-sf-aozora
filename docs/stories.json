@@ -402,9 +402,9 @@
     "original_title": "金属人間",
     "original_author": "海野十三",
     "modern_tech": "液体金属ガリウムナノ合金生体回路、自己組織化モジュラーロボット、生体内バイオミネラリゼーション",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/unno-metal-man.html",
-    "image": "",
+    "image": "assets/images/unno-metal-man.png",
     "char_count": 4453
   },
   {
