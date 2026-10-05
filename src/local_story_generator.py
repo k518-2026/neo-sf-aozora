@@ -799,7 +799,8 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
 1. Output ONLY the raw English prompt paragraph. Do NOT include explanations, markdown formatting, quotes, or Japanese text.
 2. Start with: "Cinematic sci-fi anime illustration of ..."
 3. Visually describe the characters, setting, lighting, and the specific scientific/literary visual motif (e.g., holographic quantum patterns, glowing bioluminescent laboratory, retro-futuristic Meiji/Taisho literary atmosphere fused with futuristic technology, starry cosmos, or surreal cybernetic phenomena).
-4. End with: "masterpiece sci-fi anime art style, Makoto Shinkai and Ghost in the Shell inspired atmospheric lighting, dramatic shadows, rich details, vibrant contrast."
+4. NEVER mention words, text, letters, book covers, titles, labels, or writing/equations on screens. The image must contain ZERO text or characters.
+5. End with: "masterpiece sci-fi anime novel illustration style, Makoto Shinkai and Ghost in the Shell inspired cinematic lighting, calm and composed atmosphere, strong contrast, rich deep colors, crisp details, no text, no letters."
 """
         try:
             logger.info(f"[Writer: {writer_model}] Generating English illustration prompt for FLUX.2...")
@@ -807,11 +808,11 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
                 messages=[
                     {
                         "role": "system",
-                        "content": "You are a professional prompt engineer for FLUX.2 sci-fi anime illustrations. Output ONLY the English prompt text.",
+                        "content": "You are a professional prompt engineer for FLUX.2 sci-fi anime illustrations. Output ONLY the English prompt text. Never include text, letters, writing, equations, or book cover elements in the prompt.",
                     },
                     {"role": "user", "content": prompt},
                 ],
-                temperature=0.65,
+                temperature=0.6,
                 num_predict=250,
                 num_ctx=4096,
                 timeout=300,
@@ -820,6 +821,7 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
             cleaned_en = self._clean_llm_output(raw_en).strip(" \"'`\n")
             cleaned_en = re.sub(r"^(?:Prompt|English Prompt)\s*[:：]\s*", "", cleaned_en, flags=re.IGNORECASE).strip()
             cleaned_en = " ".join(cleaned_en.splitlines()).strip()
+            cleaned_en = re.sub(r"\b(?:book cover|book illustration|equations|formulas|chalk writing|written|labeled|text)\b", "diagram", cleaned_en, flags=re.IGNORECASE)
             if len(cleaned_en) >= 30 and re.search(r"[a-zA-Z]{4,}", cleaned_en):
                 logger.info(f"  -> Generated English prompt: {cleaned_en[:120]}...")
                 return cleaned_en
@@ -830,7 +832,7 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
             f"Cinematic sci-fi anime illustration inspired by {work.get('id', 'futuristic science').replace('-', ' ')}, "
             f"a mysterious protagonist in a futuristic laboratory where classical Japanese literary aesthetics meet "
             f"glowing quantum holograms and advanced bio-photonic instruments, "
-            f"masterpiece sci-fi anime art style, atmospheric lighting, dramatic shadows, rich details, vibrant contrast."
+            f"masterpiece sci-fi anime novel illustration style, atmospheric lighting, dramatic shadows, rich deep colors, strong contrast, no text, no letters."
         )
 
     def generate_illustration(
@@ -873,10 +875,21 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
             f"(steps=12, guidance=4.0, sampler='Euler A Trailing')..."
         )
 
+        style_suffix = (
+            "calm and composed atmosphere, strong contrast, rich deep colors, balanced lighting, "
+            "distinct shadows and highlights, crisp clean artwork, pure illustration without any text or letters"
+        )
+        if "strong contrast" not in en_prompt.lower() or "no text" not in en_prompt.lower():
+            en_prompt = f"{en_prompt.rstrip(' .')}, {style_suffix}."
+
         url = f"{self.draw_things_host}/sdapi/v1/txt2img"
         payload = {
             "prompt": en_prompt,
-            "negative_prompt": "",
+            "negative_prompt": (
+                "text, letters, words, kanji, chinese characters, japanese text, english text, typography, title, "
+                "book cover, watermark, signature, logo, caption, writing, chalk equations, numbers, "
+                "overexposed, washed out, faded, blown-out highlights, whiteout, pastel haze, low contrast"
+            ),
             "width": 512,
             "height": 512,
             "steps": 12,

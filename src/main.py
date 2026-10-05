@@ -321,12 +321,12 @@ def main():
                 target_work
             )
         else:
-            use_local = args.local_llm or os.getenv("USE_LOCAL_LLM", "").lower() in ("1", "true", "yes")
-            if use_local:
-                from src.local_story_generator import LocalStoryGenerator
-                generator = LocalStoryGenerator()
-            else:
-                generator = StoryGenerator()
+            from src.local_story_generator import LocalStoryGenerator
+            generator = LocalStoryGenerator(
+                ollama_host=config.ollama_host,
+                writer_model=config.writer_model,
+                draw_things_host=config.draw_things_host,
+            )
 
             content, reboot_title, target_refs = generator.generate_story(
                 target_work,
@@ -374,7 +374,7 @@ def main():
                 next_work = catalog[next_idx]
                 break
 
-    # Format content for WordPress email
+    # Format content
     formatted = format_post_content(
         str(target_file),
         status_override=args.status,
@@ -382,7 +382,7 @@ def main():
         next_work=next_work
     )
 
-    logger.info(f"Ready to post: '{formatted.title}' (Status: {formatted.status})")
+    logger.info(f"Ready: '{formatted.title}' (Status: {formatted.status})")
 
     # HTML Preview
     if args.preview_html or is_dry_run:
@@ -390,67 +390,18 @@ def main():
         preview_file.write_text(formatted.content_html, encoding="utf-8")
         logger.info(f"Rendered HTML saved to: {preview_file.resolve()}")
 
-    # Dispatch via SMTP (Blogger-only while WordPress is paused via config.pause_wp)
-    sender = WordPressMailSender(config)
-    if config.pause_wp:
-        logger.info("PAUSE_WP is active: skipping WordPress email dispatch and posting to Blogger only.")
-    result = sender.send_post(formatted, dry_run=is_dry_run, blogger_only=config.pause_wp)
-
-    if not result.get("success"):
-        logger.error(f"Dispatch failed: {result.get('error')}")
-        sys.exit(1)
-
-    # Simultaneously post original work name and SF reboot perspective to X (Twitter)
-    if formatted.status == "publish" or is_dry_run:
-        x_poster = XPoster(config)
-        x_poster.post_update(
-            work=target_work,
-            reboot_title=formatted.title,
-            dry_run=is_dry_run
-        )
-
-    # If live dispatch was successful, record in history
-    if not is_dry_run and target_work:
-        history_mgr.record_post(
-            work=target_work,
-            reboot_title=formatted.title,
-            file_path=str(target_file),
-            references=target_refs,
-            status=formatted.status
-        )
-        logger.info(f"Recorded '{formatted.title}' in data/history.json and data/POSTED_STORIES.md")
-
-        # Keep 6 stories stocked on GitHub even when the local PC is powered off (e.g. during a 1-week business trip)
-        try:
-            posted_ids = history_mgr.get_posted_ids()
-            current_stocked = [
-                w for w in history_mgr.catalog
-                if w["id"] not in posted_ids and history_mgr.find_stock_file_for_work(w["id"]) is not None
-            ]
-            unstocked_candidates = history_mgr.select_unstocked_works(count=1)
-            if len(current_stocked) < 6 and unstocked_candidates and os.getenv("GEMINI_API_KEY"):
-                replenish_work = unstocked_candidates[0]
-                logger.info(
-                    f"Current GitHub stock is {len(current_stocked)}/6. "
-                    f"Auto-replenishing stock for '{replenish_work['title']}' ({replenish_work['id']})..."
-                )
-                rep_gen = StoryGenerator()
-                rep_content, rep_title, _ = rep_gen.generate_story(replenish_work, ending_theme="random")
-                today_str = datetime.now(JST).strftime("%Y-%m-%d")
-                rep_safe_id = replenish_work["id"].replace("-", "_")
-                rep_path = Path(f"content/{today_str}_{rep_safe_id}.md")
-                rep_path.parent.mkdir(parents=True, exist_ok=True)
-                rep_path.write_text(rep_content, encoding="utf-8")
-                logger.info(f"Replenished GitHub stock saved to: {rep_path} ('{rep_title}')")
-        except Exception as rep_err:
-            logger.warning(f"Optional stock replenishment skipped: {rep_err}")
-
-    # Automatically keep local and MakeMP3FromAozora archives up to date
+    # Automatically keep local, MakeMP3FromAozora archives, and GitHub Pages (docs/) up to date
     try:
         from src.archiver import update_archive_all
         update_archive_all()
     except Exception as e:
         logger.warning(f"Failed to update story archive: {e}")
+
+    try:
+        from src.site_builder import build_github_pages
+        build_github_pages(history_mgr)
+    except Exception as e:
+        logger.warning(f"Failed to update GitHub Pages site (docs/): {e}")
 
     if is_dry_run:
         logger.info("Dry-run finished. To post for real and update history, run with '--send'.")

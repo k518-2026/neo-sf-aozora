@@ -68,8 +68,8 @@ def print_stock_status(history_mgr: HistoryManager):
 
 def git_sync_and_push(generated_files: List[Path]) -> bool:
     """
-    Pulls latest history from GitHub, stages newly generated content/ and archive/ files,
-    commits, and pushes to origin/main so GitHub Actions cron can publish them.
+    Pulls latest history from GitHub, stages newly generated content/, archive/, and docs/ (GitHub Pages) files,
+    commits, and pushes to origin/main so GitHub Pages updates automatically.
     """
     if not generated_files:
         return True
@@ -78,20 +78,20 @@ def git_sync_and_push(generated_files: List[Path]) -> bool:
         logger.info("Syncing with remote GitHub repository (git pull --rebase origin main)...")
         subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=False)
 
-        cmd_add = ["git", "add", "content/", "archive/"]
+        cmd_add = ["git", "add", "content/", "archive/", "docs/"]
         subprocess.run(cmd_add, check=True)
 
         # Check if there are staged changes
         diff_res = subprocess.run(["git", "diff", "--staged", "--quiet"])
         if diff_res.returncode == 0:
-            logger.info("No new changes in content/ or archive/ to commit.")
+            logger.info("No new changes in content/, archive/, or docs/ to commit.")
             return True
 
-        msg = f"feat(stock): Add {len(generated_files)} SF story/illustration asset(s) via Mac mini M4 [skip ci]"
+        msg = f"feat(pages): Add {len(generated_files)} SF story/illustration asset(s) via Mac mini M4 & update GitHub Pages"
         subprocess.run(["git", "commit", "-m", msg], check=True)
-        logger.info(f"Committed {len(generated_files)} stocked asset(s). Pushing to origin/main...")
+        logger.info(f"Committed {len(generated_files)} stocked asset(s) and docs/. Pushing to origin/main...")
         subprocess.run(["git", "push", "origin", "HEAD:main"], check=True)
-        logger.info("Successfully pushed stocked stories & illustrations to GitHub!")
+        logger.info("Successfully pushed stocked stories, illustrations & GitHub Pages to GitHub!")
         return True
     except Exception as e:
         logger.error(f"Git push failed: {e}")
@@ -140,9 +140,14 @@ def main():
         help="Generate missing .png illustrations for existing stocked stories in content/ via Draw Things FLUX.2"
     )
     parser.add_argument(
+        "--build-pages",
+        action="store_true",
+        help="Rebuild GitHub Pages static site (docs/) from existing content/ without generating new stories"
+    )
+    parser.add_argument(
         "--push",
         action="store_true",
-        help="Automatically git commit & push generated stock files to GitHub after generation"
+        help="Automatically git commit & push generated stock files and docs/ to GitHub after generation"
     )
     parser.add_argument(
         "--status",
@@ -171,6 +176,13 @@ def main():
 
     if args.status:
         print_stock_status(history_mgr)
+        return
+
+    if args.build_pages:
+        from src.site_builder import build_github_pages
+        build_github_pages(history_mgr)
+        if args.push:
+            git_sync_and_push([Path("docs/index.html")])
         return
 
     local_gen = LocalStoryGenerator(
@@ -232,6 +244,12 @@ def main():
             if saved_img:
                 generated_imgs.append(saved_img)
 
+        if generated_imgs:
+            try:
+                from src.site_builder import build_github_pages
+                build_github_pages(history_mgr)
+            except Exception as e:
+                logger.warning(f"GitHub Pages build warning: {e}")
         if args.push and generated_imgs:
             git_sync_and_push(generated_imgs)
         print_stock_status(history_mgr)
@@ -291,6 +309,12 @@ def main():
             update_archive_all()
         except Exception as e:
             logger.warning(f"Archive update warning: {e}")
+
+        try:
+            from src.site_builder import build_github_pages
+            build_github_pages(history_mgr)
+        except Exception as e:
+            logger.warning(f"GitHub Pages build warning: {e}")
 
         if args.push:
             git_sync_and_push(generated_files)

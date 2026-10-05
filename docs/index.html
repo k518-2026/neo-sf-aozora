@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青空文庫 ✕ 最先端科学 ハードSFリブート図書館</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-badge">NEO AOZORA SCI-FI ARCHIVE</div>
+    <h1 class="site-title">青空文庫 ✕ 最先端科学 ハードSFリブート図書館</h1>
+    <p class="site-subtitle">
+      日本文学の不朽の名作（青空文庫）を、実在する査読付き先端科学論文（Nature / Science / Cell 等）の知見で再構築した本格SF小説アーカイブ。<br/>
+      Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
+    </p>
+    <div class="stats-bar">
+      <div class="stat-pill"><strong>44</strong> 収録作品</div>
+      <div class="stat-pill"><strong>11</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>12</strong> 原典文豪</div>
+      <div class="stat-pill">最終更新: 2026-10-06 00:03 JST</div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <div class="filter-group">
+        <input type="search" id="searchInput" class="search-input" placeholder="作品名・原典・科学技術キーワードで検索..." oninput="filterCards()" />
+        <select id="authorFilter" class="select-filter" onchange="filterCards()">
+          <option value="">すべての原典作家（12名）</option>
+          <option value="中島敦">中島敦</option>
+          <option value="久生十蘭">久生十蘭</option>
+          <option value="坂口安吾">坂口安吾</option>
+          <option value="夏目漱石">夏目漱石</option>
+          <option value="夢野久作">夢野久作</option>
+          <option value="宮沢賢治">宮沢賢治</option>
+          <option value="小栗虫太郎">小栗虫太郎</option>
+          <option value="梶井基次郎">梶井基次郎</option>
+          <option value="江戸川乱歩">江戸川乱歩</option>
+          <option value="海野十三">海野十三</option>
+          <option value="芥川龍之介">芥川龍之介</option>
+          <option value="蘭郁二郎">蘭郁二郎</option>
+        </select>
+        <select id="imageFilter" class="select-filter" onchange="filterCards()">
+          <option value="">すべて表示</option>
+          <option value="yes">🎨 挿絵ありのみ (11)</option>
+        </select>
+        <select id="sortOrder" class="select-filter" onchange="sortCards()">
+          <option value="desc">新しい順（#大 → #01）</option>
+          <option value="asc">作品番号順（#01 → #大）</option>
+        </select>
+      </div>
+      <button class="btn-toggle" onclick="toggleTheme()" id="themeBtn">☀️ ライト表示</button>
+    </div>
+
+    <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-no="44" data-author="宮沢賢治" data-illustrated="no" data-search="風の又三郎――風の秘密を解く少年 風の又三郎 宮沢賢治 ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電 九月一日の風と共に過疎の村の分校へやってきた謎の転校生。大気の渦と風の流れを自在に読み解く少年との十日間の交流と、嵐の朝の別れ。">
+        <a href="stories/miyazawa-kaze-no-matasaburo.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『風の又三郎』</div><div style="font-size:0.82rem;">宮沢賢治 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#44</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：宮沢賢治『風の又三郎』</div>
+          <h2 class="card-title"><a href="stories/miyazawa-kaze-no-matasaburo.html">風の又三郎――風の秘密を解く少年</a></h2>
+          <div class="card-tech">🔬 ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電</div>
+          <p class="card-summary">九月一日の風と共に過疎の村の分校へやってきた謎の転校生。大気の渦と風の流れを自在に読み解く少年との十日間の交流と、嵐の朝の別れ。</p>
+          <div class="card-footer">
+            <span>約 4,339 文字 </span>
+            <a class="read-link" href="stories/miyazawa-kaze-no-matasaburo.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="43" data-author="宮沢賢治" data-illustrated="no" data-search="注文の多い料理店――秘密のスマートレストラン 注文の多い料理店 宮沢賢治 行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション 深山に佇む最新鋭の無人スマートレストラン「山猫軒」。次々と提示される快適な指示（ナッジ）に従ううちに、人間自身が「食材」へと誘導されていくブラックユーモアsf。">
+        <a href="stories/miyazawa-chumon.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『注文の多い料理店』</div><div style="font-size:0.82rem;">宮沢賢治 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#43</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：宮沢賢治『注文の多い料理店』</div>
+          <h2 class="card-title"><a href="stories/miyazawa-chumon.html">注文の多い料理店――秘密のスマートレストラン</a></h2>
+          <div class="card-tech">🔬 行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション</div>
+          <p class="card-summary">深山に佇む最新鋭の無人スマートレストラン「山猫軒」。次々と提示される快適な指示（ナッジ）に従ううちに、人間自身が「食材」へと誘導されていくブラックユーモアSF。</p>
+          <div class="card-footer">
+            <span>約 5,528 文字 </span>
+            <a class="read-link" href="stories/miyazawa-chumon.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="42" data-author="芥川龍之介" data-illustrated="yes" data-search="杜子春――虚構時間圧縮vrの謎 杜子春 芥川龍之介 フルダイブ型時間圧縮vrシミュレーション、前帯状皮質（acc）の共感・ミラーニューロン回路、強化学習における報酬関数と利他愛 莫大な富と引き換えに「どんな幻を見ても決して声を出してはならない」という時間圧縮vr試験に挑む青年。完全な無感情を超えた先に見出す人間らしさの証明。">
+        <a href="stories/akutagawa-toshishun.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/akutagawa-toshishun.png" alt="杜子春――虚構時間圧縮VRの謎" loading="lazy" />
+          <span class="card-no-badge">#42</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：芥川龍之介『杜子春』</div>
+          <h2 class="card-title"><a href="stories/akutagawa-toshishun.html">杜子春――虚構時間圧縮VRの謎</a></h2>
+          <div class="card-tech">🔬 フルダイブ型時間圧縮VRシミュレーション、前帯状皮質（ACC）の共感・ミラーニューロン回路、強化学習における報酬関数と利他愛</div>
+          <p class="card-summary">莫大な富と引き換えに「どんな幻を見ても決して声を出してはならない」という時間圧縮VR試験に挑む青年。完全な無感情を超えた先に見出す人間らしさの証明。</p>
+          <div class="card-footer">
+            <span>約 5,883 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/akutagawa-toshishun.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="41" data-author="芥川龍之介" data-illustrated="yes" data-search="羅生門――進化的生存ゲーム 羅生門 芥川龍之介 進化ゲーム理論（ess：進化的に安定な戦略）、ケラチン生体高分子の酵素分解リサイクル、行動神経経済学の道徳意思決定モデル 荒廃した巨大都市の境界ゲート「羅生門」で生きるために死者の資源を回収する老婆と下人。極限の生存環境で人間の道徳が反転する瞬間を数理的に描く。">
+        <a href="stories/akutagawa-rashomon.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/akutagawa-rashomon.png" alt="羅生門――進化的生存ゲーム" loading="lazy" />
+          <span class="card-no-badge">#41</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：芥川龍之介『羅生門』</div>
+          <h2 class="card-title"><a href="stories/akutagawa-rashomon.html">羅生門――進化的生存ゲーム</a></h2>
+          <div class="card-tech">🔬 進化ゲーム理論（ESS：進化的に安定な戦略）、ケラチン生体高分子の酵素分解リサイクル、行動神経経済学の道徳意思決定モデル</div>
+          <p class="card-summary">荒廃した巨大都市の境界ゲート「羅生門」で生きるために死者の資源を回収する老婆と下人。極限の生存環境で人間の道徳が反転する瞬間を数理的に描く。</p>
+          <div class="card-footer">
+            <span>約 4,389 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/akutagawa-rashomon.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="40" data-author="小栗虫太郎" data-illustrated="yes" data-search="黒死館殺人事件――超スマート建築の謎 黒死館殺人事件 小栗虫太郎 形式手法による自動定理証明（lean/coq）、超分子ホスト・ゲスト化学の遅延放出カプセル、スマート建築センサー網のビザンチン障害解析 中世の城館を模した超スマート建築で起きる連続密室殺人。膨大な科学知識の迷宮を、形式論理の自動定理証明と物理化学解析で切り裂く本格推理。">
+        <a href="stories/oguri-kokushikan.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/oguri-kokushikan.png" alt="黒死館殺人事件――超スマート建築の謎" loading="lazy" />
+          <span class="card-no-badge">#40</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：小栗虫太郎『黒死館殺人事件』</div>
+          <h2 class="card-title"><a href="stories/oguri-kokushikan.html">黒死館殺人事件――超スマート建築の謎</a></h2>
+          <div class="card-tech">🔬 形式手法による自動定理証明（Lean/Coq）、超分子ホスト・ゲスト化学の遅延放出カプセル、スマート建築センサー網のビザンチン障害解析</div>
+          <p class="card-summary">中世の城館を模した超スマート建築で起きる連続密室殺人。膨大な科学知識の迷宮を、形式論理の自動定理証明と物理化学解析で切り裂く本格推理。</p>
+          <div class="card-footer">
+            <span>約 5,704 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/oguri-kokushikan.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="39" data-author="夢野久作" data-illustrated="yes" data-search="ドグラ・マグラ――遺伝する記憶 ドグラ・マグラ 夢野久作 経世代エピジェネティック継承（小分子非コードrna）、不動点コンビネータと自己言及アルゴリズム、全脳オルガノイド再帰ループ 記憶を失った青年が精神病棟で目覚め、自らの正体を追う究極の迷宮。世代を超えてrnaに刻まれた記憶と再帰関数が導く驚愕の真相。">
+        <a href="stories/yumeno-dogra-magra.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/yumeno-dogra-magra.png" alt="ドグラ・マグラ――遺伝する記憶" loading="lazy" />
+          <span class="card-no-badge">#39</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：夢野久作『ドグラ・マグラ』</div>
+          <h2 class="card-title"><a href="stories/yumeno-dogra-magra.html">ドグラ・マグラ――遺伝する記憶</a></h2>
+          <div class="card-tech">🔬 経世代エピジェネティック継承（小分子非コードRNA）、不動点コンビネータと自己言及アルゴリズム、全脳オルガノイド再帰ループ</div>
+          <p class="card-summary">記憶を失った青年が精神病棟で目覚め、自らの正体を追う究極の迷宮。世代を超えてRNAに刻まれた記憶と再帰関数が導く驚愕の真相。</p>
+          <div class="card-footer">
+            <span>約 5,614 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/yumeno-dogra-magra.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="38" data-author="坂口安吾" data-illustrated="yes" data-search="桜の森の満開の下――静寂が導く絶望と希望 桜の森の満開の下 坂口安吾 無響・無反射メタマテリアル空間、扁桃体―前頭前野情動結合デコーディング、ボリュメトリック・ライトフィールド投影 満開の桜の森の下で人を襲う圧倒的な孤独と狂気。究極の仮想美空間を作り上げた技術者が、花吹雪のホログラムの果てに見出した絶対的静寂と愛。">
+        <a href="stories/ango-sakura-no-mori.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/ango-sakura-no-mori.png" alt="桜の森の満開の下――静寂が導く絶望と希望" loading="lazy" />
+          <span class="card-no-badge">#38</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：坂口安吾『桜の森の満開の下』</div>
+          <h2 class="card-title"><a href="stories/ango-sakura-no-mori.html">桜の森の満開の下――静寂が導く絶望と希望</a></h2>
+          <div class="card-tech">🔬 無響・無反射メタマテリアル空間、扁桃体―前頭前野情動結合デコーディング、ボリュメトリック・ライトフィールド投影</div>
+          <p class="card-summary">満開の桜の森の下で人を襲う圧倒的な孤独と狂気。究極の仮想美空間を作り上げた技術者が、花吹雪のホログラムの果てに見出した絶対的静寂と愛。</p>
+          <div class="card-footer">
+            <span>約 4,080 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/ango-sakura-no-mori.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="37" data-author="夏目漱石" data-illustrated="no" data-search="夢十夜――百合の檻 夢十夜 夏目漱石 クリプトビオシス誘導ガラス化凍結保存、量子ゼノン効果による生体時間制御、深層睡眠時空間シミュレーション 「百年待っていて下さい」と言い残して眠りについた女性。極低温ガラス化睡眠と量子時間制御の果てに、百年の時を超えて咲く白百合の真実。">
+        <a href="stories/soseki-yume-juuya.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『夢十夜』</div><div style="font-size:0.82rem;">夏目漱石 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#37</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：夏目漱石『夢十夜』</div>
+          <h2 class="card-title"><a href="stories/soseki-yume-juuya.html">夢十夜――百合の檻</a></h2>
+          <div class="card-tech">🔬 クリプトビオシス誘導ガラス化凍結保存、量子ゼノン効果による生体時間制御、深層睡眠時空間シミュレーション</div>
+          <p class="card-summary">「百年待っていて下さい」と言い残して眠りについた女性。極低温ガラス化睡眠と量子時間制御の果てに、百年の時を超えて咲く白百合の真実。</p>
+          <div class="card-footer">
+            <span>約 7,323 文字 </span>
+            <a class="read-link" href="stories/soseki-yume-juuya.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="36" data-author="梶井基次郎" data-illustrated="yes" data-search="桜の樹の下には――根圏菌糸網が記憶する美の屍体 桜の樹の下には 梶井基次郎 共通菌根ネットワーク（wood wide web）電気電位信号解析、環境dna（edna）メタバーコーディング、エピジェネティック花芽分化制御 咲き誇る桜の樹の下に埋められた秘密。根系と共生菌類が織りなす地下の巨大バイオ通信網が、失われた記憶を花弁の分光スペクトルとして再生する。">
+        <a href="stories/kajii-sakuranoki.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/kajii-sakuranoki.png" alt="桜の樹の下には――根圏菌糸網が記憶する美の屍体" loading="lazy" />
+          <span class="card-no-badge">#36</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：梶井基次郎『桜の樹の下には』</div>
+          <h2 class="card-title"><a href="stories/kajii-sakuranoki.html">桜の樹の下には――根圏菌糸網が記憶する美の屍体</a></h2>
+          <div class="card-tech">🔬 共通菌根ネットワーク（Wood Wide Web）電気電位信号解析、環境DNA（eDNA）メタバーコーディング、エピジェネティック花芽分化制御</div>
+          <p class="card-summary">咲き誇る桜の樹の下に埋められた秘密。根系と共生菌類が織りなす地下の巨大バイオ通信網が、失われた記憶を花弁の分光スペクトルとして再生する。</p>
+          <div class="card-footer">
+            <span>約 3,826 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/kajii-sakuranoki.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="35" data-author="宮沢賢治" data-illustrated="yes" data-search="グスコーブドリの伝記――カルボナード島の第三の解 グスコーブドリの伝記 宮沢賢治 成層圏エアロゾル・インジェクション制御、マグマ溜まり熱流体連成シミュレーション、非線形気候力学系の分岐理論 冷害から人々を救うため火山を人工噴火させようとする青年技師。地球気候モデルの非線形分岐点を計算し、誰一人犠牲にせず気候危機を救う数学的逆転劇。">
+        <a href="stories/miyazawa-gusukobudori.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/miyazawa-gusukobudori.png" alt="グスコーブドリの伝記――カルボナード島の第三の解" loading="lazy" />
+          <span class="card-no-badge">#35</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：宮沢賢治『グスコーブドリの伝記』</div>
+          <h2 class="card-title"><a href="stories/miyazawa-gusukobudori.html">グスコーブドリの伝記――カルボナード島の第三の解</a></h2>
+          <div class="card-tech">🔬 成層圏エアロゾル・インジェクション制御、マグマ溜まり熱流体連成シミュレーション、非線形気候力学系の分岐理論</div>
+          <p class="card-summary">冷害から人々を救うため火山を人工噴火させようとする青年技師。地球気候モデルの非線形分岐点を計算し、誰一人犠牲にせず気候危機を救う数学的逆転劇。</p>
+          <div class="card-footer">
+            <span>約 4,731 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/miyazawa-gusukobudori.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="34" data-author="梶井基次郎" data-illustrated="yes" data-search="檸檬――丸善の棚に置かれた黄金の特異点 檸檬 梶井基次郎 嗅覚受容体の量子トンネル効果理論、超集積トポロジカル光メモリ結晶、マルチモーダル共感覚ニューロフィードバック 憂鬱な青年の心を救った一顆の檸檬。人類の全芸術アーカイブを封じ込めた檸檬型の光量子結晶が、灰色の管理都市に色彩と感動の連鎖反応を巻き起こす。">
+        <a href="stories/kajii-lemon.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/kajii-lemon.png" alt="檸檬――丸善の棚に置かれた黄金の特異点" loading="lazy" />
+          <span class="card-no-badge">#34</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：梶井基次郎『檸檬』</div>
+          <h2 class="card-title"><a href="stories/kajii-lemon.html">檸檬――丸善の棚に置かれた黄金の特異点</a></h2>
+          <div class="card-tech">🔬 嗅覚受容体の量子トンネル効果理論、超集積トポロジカル光メモリ結晶、マルチモーダル共感覚ニューロフィードバック</div>
+          <p class="card-summary">憂鬱な青年の心を救った一顆の檸檬。人類の全芸術アーカイブを封じ込めた檸檬型の光量子結晶が、灰色の管理都市に色彩と感動の連鎖反応を巻き起こす。</p>
+          <div class="card-footer">
+            <span>約 4,891 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/kajii-lemon.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="33" data-author="中島敦" data-illustrated="yes" data-search="山月記――月下に吼えるコネクトーム 山月記 中島敦 種間キメラ胚補完法、コネクトーム（全神経回路網）転移エミュレーション、ゲーデルの自己言及不完全性とai意識変容 詩人としての自尊心と羞恥心から虎へと変貌した李徴。野生捕食獣のバイオハイブリッド義体へ神経回路を転移した孤高の数学者が、旧友に託す最後の定理。">
+        <a href="stories/nakajima-sangetsuki.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/nakajima-sangetsuki.png" alt="山月記――月下に吼えるコネクトーム" loading="lazy" />
+          <span class="card-no-badge">#33</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：中島敦『山月記』</div>
+          <h2 class="card-title"><a href="stories/nakajima-sangetsuki.html">山月記――月下に吼えるコネクトーム</a></h2>
+          <div class="card-tech">🔬 種間キメラ胚補完法、コネクトーム（全神経回路網）転移エミュレーション、ゲーデルの自己言及不完全性とAI意識変容</div>
+          <p class="card-summary">詩人としての自尊心と羞恥心から虎へと変貌した李徴。野生捕食獣のバイオハイブリッド義体へ神経回路を転移した孤高の数学者が、旧友に託す最後の定理。</p>
+          <div class="card-footer">
+            <span>約 5,022 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/nakajima-sangetsuki.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="32" data-author="芥川龍之介" data-illustrated="yes" data-search="蜘蛛の糸――天頂から垂れる一本の均衡 蜘蛛の糸 芥川龍之介 超長尺カーボンナノチューブ（cnt）マクロファイバー、非協力ゲーム理論（ナッシュ均衡と利他的協調）、軌道力学テザー共振制御 地獄の底へ垂らされた一本の蜘蛛の糸。崩壊する地下シェルターから地上へ伸びる極細ナノチューブ・テザーを巡り、ゲーム理論の極限で試される人間の利他心。">
+        <a href="stories/akutagawa-kumonoito.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/akutagawa-kumonoito.png" alt="蜘蛛の糸――天頂から垂れる一本の均衡" loading="lazy" />
+          <span class="card-no-badge">#32</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：芥川龍之介『蜘蛛の糸』</div>
+          <h2 class="card-title"><a href="stories/akutagawa-kumonoito.html">蜘蛛の糸――天頂から垂れる一本の均衡</a></h2>
+          <div class="card-tech">🔬 超長尺カーボンナノチューブ（CNT）マクロファイバー、非協力ゲーム理論（ナッシュ均衡と利他的協調）、軌道力学テザー共振制御</div>
+          <p class="card-summary">地獄の底へ垂らされた一本の蜘蛛の糸。崩壊する地下シェルターから地上へ伸びる極細ナノチューブ・テザーを巡り、ゲーム理論の極限で試される人間の利他心。</p>
+          <div class="card-footer">
+            <span>約 4,739 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/akutagawa-kumonoito.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="31" data-author="芥川龍之介" data-illustrated="yes" data-search="河童――遺伝子の謎 河童 芥川龍之介 全ゲノム人工合成（gp-write）、胎内bci意思確認プロトコル、メカニズムデザイン（数理経済学・社会的選択理論） 人間社会の価値観が反転した河童の国。出生前に遺伝子と社会契約を自己決定するアルゴリズム社会が突きつける、自由意志と幸福の数理的ジレンマ。">
+        <a href="stories/akutagawa-kappa.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/akutagawa-kappa.png" alt="河童――遺伝子の謎" loading="lazy" />
+          <span class="card-no-badge">#31</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：芥川龍之介『河童』</div>
+          <h2 class="card-title"><a href="stories/akutagawa-kappa.html">河童――遺伝子の謎</a></h2>
+          <div class="card-tech">🔬 全ゲノム人工合成（GP-write）、胎内BCI意思確認プロトコル、メカニズムデザイン（数理経済学・社会的選択理論）</div>
+          <p class="card-summary">人間社会の価値観が反転した河童の国。出生前に遺伝子と社会契約を自己決定するアルゴリズム社会が突きつける、自由意志と幸福の数理的ジレンマ。</p>
+          <div class="card-footer">
+            <span>約 4,491 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/akutagawa-kappa.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="30" data-author="芥川龍之介" data-illustrated="no" data-search="歯車――幻影の歯輪 歯車 芥川龍之介 大脳視覚野の反応拡散方程式（エルメントラウト・コーワン数理モデル）、光遺伝学フェーズロック制御、神経雪（visual snow）位相解析 視野の中で回り続ける半透明の歯車と迫りくる狂気。視覚野の神経ネットワークに生じた数学的対称性の破れから、未知の高次元情報信号を解読する。">
+        <a href="stories/akutagawa-haguruma.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『歯車』</div><div style="font-size:0.82rem;">芥川龍之介 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#30</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：芥川龍之介『歯車』</div>
+          <h2 class="card-title"><a href="stories/akutagawa-haguruma.html">歯車――幻影の歯輪</a></h2>
+          <div class="card-tech">🔬 大脳視覚野の反応拡散方程式（エルメントラウト・コーワン数理モデル）、光遺伝学フェーズロック制御、神経雪（Visual Snow）位相解析</div>
+          <p class="card-summary">視野の中で回り続ける半透明の歯車と迫りくる狂気。視覚野の神経ネットワークに生じた数学的対称性の破れから、未知の高次元情報信号を解読する。</p>
+          <div class="card-footer">
+            <span>約 4,702 文字 </span>
+            <a class="read-link" href="stories/akutagawa-haguruma.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="29" data-author="宮沢賢治" data-illustrated="no" data-search="銀河鉄道の夜――量子の迷宮 銀河鉄道の夜 宮沢賢治 量子もつれテンソルネットワーク（er=epr仮説）、ミリ秒パルサー時空測位ナビゲーション、超流動ヘリウム冷却量子メモリ 夜空の星々を巡る銀河鉄道の旅。量子もつれネットワークで結ばれた深宇宙中継列車の中で、親友と交わす永遠の別れと宇宙の真理。">
+        <a href="stories/miyazawa-ginga.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『銀河鉄道の夜』</div><div style="font-size:0.82rem;">宮沢賢治 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#29</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：宮沢賢治『銀河鉄道の夜』</div>
+          <h2 class="card-title"><a href="stories/miyazawa-ginga.html">銀河鉄道の夜――量子の迷宮</a></h2>
+          <div class="card-tech">🔬 量子もつれテンソルネットワーク（ER=EPR仮説）、ミリ秒パルサー時空測位ナビゲーション、超流動ヘリウム冷却量子メモリ</div>
+          <p class="card-summary">夜空の星々を巡る銀河鉄道の旅。量子もつれネットワークで結ばれた深宇宙中継列車の中で、親友と交わす永遠の別れと宇宙の真理。</p>
+          <div class="card-footer">
+            <span>約 4,587 文字 </span>
+            <a class="read-link" href="stories/miyazawa-ginga.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="28" data-author="夢野久作" data-illustrated="no" data-search="瓶詰地獄――未来からの福音 瓶詰地獄 夢野久作 シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化dnaタイムスタンプ解析 無人島から流れ着いた三通の瓶詰の手紙。どの順序で読んでも矛盾する記述の謎を、分子分解時計と情報理論のベイズ逆推論が解き明かす。">
+        <a href="stories/yumeno-binzume-jigoku.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『瓶詰地獄』</div><div style="font-size:0.82rem;">夢野久作 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#28</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：夢野久作『瓶詰地獄』</div>
+          <h2 class="card-title"><a href="stories/yumeno-binzume-jigoku.html">瓶詰地獄――未来からの福音</a></h2>
+          <div class="card-tech">🔬 シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化DNAタイムスタンプ解析</div>
+          <p class="card-summary">無人島から流れ着いた三通の瓶詰の手紙。どの順序で読んでも矛盾する記述の謎を、分子分解時計と情報理論のベイズ逆推論が解き明かす。</p>
+          <div class="card-footer">
+            <span>約 5,380 文字 </span>
+            <a class="read-link" href="stories/yumeno-binzume-jigoku.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="27" data-author="江戸川乱歩" data-illustrated="no" data-search="白昼夢――ベイズ脳の愛した幻 白昼夢 江戸川乱歩 経頭蓋集束超音波（tfus）視覚野変調、敵対的摂動（adversarial perturbation）光音響パッチ、ベイズ脳予測符号化モデル 白昼の街頭で男が語る凄惨な殺人の告白は現実か幻覚か。現代では、脳のベイズ予測符号化モデルの死角を突く敵対的感覚パッチが引き起こす集団白昼夢。">
+        <a href="stories/edogawa-hakuchumu.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『白昼夢』</div><div style="font-size:0.82rem;">江戸川乱歩 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#27</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：江戸川乱歩『白昼夢』</div>
+          <h2 class="card-title"><a href="stories/edogawa-hakuchumu.html">白昼夢――ベイズ脳の愛した幻</a></h2>
+          <div class="card-tech">🔬 経頭蓋集束超音波（tFUS）視覚野変調、敵対的摂動（Adversarial Perturbation）光音響パッチ、ベイズ脳予測符号化モデル</div>
+          <p class="card-summary">白昼の街頭で男が語る凄惨な殺人の告白は現実か幻覚か。現代では、脳のベイズ予測符号化モデルの死角を突く敵対的感覚パッチが引き起こす集団白昼夢。</p>
+          <div class="card-footer">
+            <span>約 6,460 文字 </span>
+            <a class="read-link" href="stories/edogawa-hakuchumu.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="26" data-author="海野十三" data-illustrated="no" data-search="火星兵団――星を継ぐ庭師たち 火星兵団 海野十三 フォン・ノイマン型自己複製オートマトン、超長基線電波干渉計（vlbi）、自律分散スウォーム制御 火星から飛来する謎の無人機団。自己複製オートマトン理論によって幾何級数的に増殖する未知の知性と、地球防衛を賭けたアルゴリズムの激突。">
+        <a href="stories/unno-mars-corps.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『火星兵団』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#26</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『火星兵団』</div>
+          <h2 class="card-title"><a href="stories/unno-mars-corps.html">火星兵団――星を継ぐ庭師たち</a></h2>
+          <div class="card-tech">🔬 フォン・ノイマン型自己複製オートマトン、超長基線電波干渉計（VLBI）、自律分散スウォーム制御</div>
+          <p class="card-summary">火星から飛来する謎の無人機団。自己複製オートマトン理論によって幾何級数的に増殖する未知の知性と、地球防衛を賭けたアルゴリズムの激突。</p>
+          <div class="card-footer">
+            <span>約 5,992 文字 </span>
+            <a class="read-link" href="stories/unno-mars-corps.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="25" data-author="小栗虫太郎" data-illustrated="no" data-search="潜航艇「鷹の巣」――深淵のシンフォニー 潜航艇「鷹の巣」 小栗虫太郎 低周波海洋音響トモグラフィー、極限環境誤り訂正符号、深海自律型auv群知能 深海一万メートルの極限水圧下で消息を絶った潜航艇。海洋音響物理と情報理論の誤り訂正符号が、深海深淵からの暗号通信を復元する。">
+        <a href="stories/oguri-submarine-eagles-nest.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『潜航艇「鷹の巣」』</div><div style="font-size:0.82rem;">小栗虫太郎 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#25</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：小栗虫太郎『潜航艇「鷹の巣」』</div>
+          <h2 class="card-title"><a href="stories/oguri-submarine-eagles-nest.html">潜航艇「鷹の巣」――深淵のシンフォニー</a></h2>
+          <div class="card-tech">🔬 低周波海洋音響トモグラフィー、極限環境誤り訂正符号、深海自律型AUV群知能</div>
+          <p class="card-summary">深海一万メートルの極限水圧下で消息を絶った潜航艇。海洋音響物理と情報理論の誤り訂正符号が、深海深淵からの暗号通信を復元する。</p>
+          <div class="card-footer">
+            <span>約 6,063 文字 </span>
+            <a class="read-link" href="stories/oguri-submarine-eagles-nest.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="24" data-author="海野十三" data-illustrated="no" data-search="電気風呂の怪死――トポロジカル量子コヒーレンスの導出 電気風呂の怪死 海野十三 トポロジカル絶縁体・量子ホール効果、ジョセフソン接合squid磁束量子センサ、複素ポテンシャル論・等角写像による漏洩電流逆解析 電撃死した被害者の謎を追う探偵。不可視の微小漏洩電流の経路をトポロジーと複素解析の数学的証明で暴き出す理詰めの科学サスペンス。">
+        <a href="stories/unno-electric-bath-death.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『電気風呂の怪死』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#24</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『電気風呂の怪死』</div>
+          <h2 class="card-title"><a href="stories/unno-electric-bath-death.html">電気風呂の怪死――トポロジカル量子コヒーレンスの導出</a></h2>
+          <div class="card-tech">🔬 トポロジカル絶縁体・量子ホール効果、ジョセフソン接合SQUID磁束量子センサ、複素ポテンシャル論・等角写像による漏洩電流逆解析</div>
+          <p class="card-summary">電撃死した被害者の謎を追う探偵。不可視の微小漏洩電流の経路をトポロジーと複素解析の数学的証明で暴き出す理詰めの科学サスペンス。</p>
+          <div class="card-footer">
+            <span>約 7,292 文字 </span>
+            <a class="read-link" href="stories/unno-electric-bath-death.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="23" data-author="海野十三" data-illustrated="no" data-search="地球盗難――不変多様体のラプソディ 地球盗難 海野十三 ハミルトン系シンプレクティック幾何学的数値積分、ラグランジュ点不変多様体カオス軌道計算、重力波干渉センシング、惑星スイングバイ最適化 地球の公転軌道が突如狂い、全球凍結の危機が迫る。天体力学の三体問題とシンプレクティック幾何学計算が導き出す軌道奪還の決死行。">
+        <a href="stories/unno-earth-theft.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『地球盗難』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#23</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『地球盗難』</div>
+          <h2 class="card-title"><a href="stories/unno-earth-theft.html">地球盗難――不変多様体のラプソディ</a></h2>
+          <div class="card-tech">🔬 ハミルトン系シンプレクティック幾何学的数値積分、ラグランジュ点不変多様体カオス軌道計算、重力波干渉センシング、惑星スイングバイ最適化</div>
+          <p class="card-summary">地球の公転軌道が突如狂い、全球凍結の危機が迫る。天体力学の三体問題とシンプレクティック幾何学計算が導き出す軌道奪還の決死行。</p>
+          <div class="card-footer">
+            <span>約 7,165 文字 </span>
+            <a class="read-link" href="stories/unno-earth-theft.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="22" data-author="海野十三" data-illustrated="no" data-search="地底戦艦――地球核境界の密室殺人 地底戦艦 海野十三 地震波トモグラフィーの境界要素逆問題解析、マントル対流超並列流体シミュレーション、超高圧ダイヤモンドアンビル極限物性、超耐熱タングステンナノ合金 地球内部のマントル層を突破し地底を進む地底戦艦。地球物理学と数理逆問題解析が解き明かす、地球コアに秘められた驚愕の真実。">
+        <a href="stories/unno-subterranean-battleship.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『地底戦艦』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#22</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『地底戦艦』</div>
+          <h2 class="card-title"><a href="stories/unno-subterranean-battleship.html">地底戦艦――地球核境界の密室殺人</a></h2>
+          <div class="card-tech">🔬 地震波トモグラフィーの境界要素逆問題解析、マントル対流超並列流体シミュレーション、超高圧ダイヤモンドアンビル極限物性、超耐熱タングステンナノ合金</div>
+          <p class="card-summary">地球内部のマントル層を突破し地底を進む地底戦艦。地球物理学と数理逆問題解析が解き明かす、地球コアに秘められた驚愕の真実。</p>
+          <div class="card-footer">
+            <span>約 6,462 文字 </span>
+            <a class="read-link" href="stories/unno-subterranean-battleship.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="21" data-author="江戸川乱歩" data-illustrated="no" data-search="パノラマ島綺譚――非線形アトラクターの人工地獄 パノラマ島綺譚 江戸川乱歩 非線形カオスアトラクター制御、複雑系ネットワーク理論、合成生物学による発光植物、バイオジオエンジニアリング（地球惑星環境工学） 孤島を改造して地上の理想郷を築こうとした男の狂熱。現代では、島全体を数理複雑系の安定アトラクターとして設計・再構築した地球惑星環境工学の極致。">
+        <a href="stories/edogawa-panorama-island.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『パノラマ島綺譚』</div><div style="font-size:0.82rem;">江戸川乱歩 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#21</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：江戸川乱歩『パノラマ島綺譚』</div>
+          <h2 class="card-title"><a href="stories/edogawa-panorama-island.html">パノラマ島綺譚――非線形アトラクターの人工地獄</a></h2>
+          <div class="card-tech">🔬 非線形カオスアトラクター制御、複雑系ネットワーク理論、合成生物学による発光植物、バイオジオエンジニアリング（地球惑星環境工学）</div>
+          <p class="card-summary">孤島を改造して地上の理想郷を築こうとした男の狂熱。現代では、島全体を数理複雑系の安定アトラクターとして設計・再構築した地球惑星環境工学の極致。</p>
+          <div class="card-footer">
+            <span>約 6,617 文字 </span>
+            <a class="read-link" href="stories/edogawa-panorama-island.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="20" data-author="江戸川乱歩" data-illustrated="no" data-search="押絵と旅する男――超伝導量子トポロジーと永遠の恋人 押絵と旅する男 江戸川乱歩 光格子時計による超精密時間操作、超並列量子チューリング完全回路、ニューロモルフィック・エピジェネティック・ホログラム 望遠鏡を逆さにして絵の中の美女と永遠を共にする老人。現代では、光速度限界で動作する超伝導量子チップの内部世界へとダイブし、計算論的時間の果てに愛する人と旅する至純のsf。">
+        <a href="stories/edogawa-picture-traveler.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『押絵と旅する男』</div><div style="font-size:0.82rem;">江戸川乱歩 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#20</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：江戸川乱歩『押絵と旅する男』</div>
+          <h2 class="card-title"><a href="stories/edogawa-picture-traveler.html">押絵と旅する男――超伝導量子トポロジーと永遠の恋人</a></h2>
+          <div class="card-tech">🔬 光格子時計による超精密時間操作、超並列量子チューリング完全回路、ニューロモルフィック・エピジェネティック・ホログラム</div>
+          <p class="card-summary">望遠鏡を逆さにして絵の中の美女と永遠を共にする老人。現代では、光速度限界で動作する超伝導量子チップの内部世界へとダイブし、計算論的時間の果てに愛する人と旅する至純のSF。</p>
+          <div class="card-footer">
+            <span>約 4,520 文字 </span>
+            <a class="read-link" href="stories/edogawa-picture-traveler.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="19" data-author="江戸川乱歩" data-illustrated="no" data-search="屋根裏の散歩者――不可視の散乱場における位相共鳴 屋根裏の散歩者 江戸川乱歩 wi-fi電波反射による壁透過ポーズ推定（through-wall rf sensing）、スパースモデリング・圧縮センシング逆問題解析、テラヘルツ非破壊スキャン 下宿の屋根裏から他人の生活を覗き見る男。現代では、壁の向こうの不可視の電波散乱行列から数理逆問題解析で生体信号を復元し、突発事故から命を救う遠隔共感テクノロジー。">
+        <a href="stories/edogawa-attic-stroller.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『屋根裏の散歩者』</div><div style="font-size:0.82rem;">江戸川乱歩 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#19</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：江戸川乱歩『屋根裏の散歩者』</div>
+          <h2 class="card-title"><a href="stories/edogawa-attic-stroller.html">屋根裏の散歩者――不可視の散乱場における位相共鳴</a></h2>
+          <div class="card-tech">🔬 Wi-Fi電波反射による壁透過ポーズ推定（Through-wall RF sensing）、スパースモデリング・圧縮センシング逆問題解析、テラヘルツ非破壊スキャン</div>
+          <p class="card-summary">下宿の屋根裏から他人の生活を覗き見る男。現代では、壁の向こうの不可視の電波散乱行列から数理逆問題解析で生体信号を復元し、突発事故から命を救う遠隔共感テクノロジー。</p>
+          <div class="card-footer">
+            <span>約 6,338 文字 </span>
+            <a class="read-link" href="stories/edogawa-attic-stroller.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="18" data-author="江戸川乱歩" data-illustrated="no" data-search="心理試験――ゼロ知識証明と計算複雑性の迷宮 心理試験 江戸川乱歩 fnirs（機能的近赤外分光法）、計算複雑性理論（欺瞞アルゴリズムのnp困難性）、ゼロ知識証明暗号プロトコル、マイクロサッカードai解析 完璧な論理で心理試験を欺こうとする犯人と明智の対決。現代では、脳血流を完全に制御する天才と、ゲーム理論・計算複雑性の死角から真実を暴くニューロai。">
+        <a href="stories/edogawa-psychological-test.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『心理試験』</div><div style="font-size:0.82rem;">江戸川乱歩 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#18</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：江戸川乱歩『心理試験』</div>
+          <h2 class="card-title"><a href="stories/edogawa-psychological-test.html">心理試験――ゼロ知識証明と計算複雑性の迷宮</a></h2>
+          <div class="card-tech">🔬 fNIRS（機能的近赤外分光法）、計算複雑性理論（欺瞞アルゴリズムのNP困難性）、ゼロ知識証明暗号プロトコル、マイクロサッカードAI解析</div>
+          <p class="card-summary">完璧な論理で心理試験を欺こうとする犯人と明智の対決。現代では、脳血流を完全に制御する天才と、ゲーム理論・計算複雑性の死角から真実を暴くニューロAI。</p>
+          <div class="card-footer">
+            <span>約 8,218 文字 </span>
+            <a class="read-link" href="stories/edogawa-psychological-test.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="17" data-author="江戸川乱歩" data-illustrated="no" data-search="鏡地獄――トポロジカル量子共振器による意識拡張と宇宙背景放射の合一 鏡地獄 江戸川乱歩 光学メタマテリアル、負屈折率フォトニック結晶キャビティ、トポロジカル位相幾何学、量子もつれ光子イマーシブ観測 全方位完全反射の球体鏡に身を投じた男の狂気。現代では、光子の無限反復反射による非ユークリッド量子コヒーレンス空間で、宇宙背景放射と意識が調和する究極のワンダー体験。">
+        <a href="stories/edogawa-mirror-hell.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『鏡地獄』</div><div style="font-size:0.82rem;">江戸川乱歩 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#17</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：江戸川乱歩『鏡地獄』</div>
+          <h2 class="card-title"><a href="stories/edogawa-mirror-hell.html">鏡地獄――トポロジカル量子共振器による意識拡張と宇宙背景放射の合一</a></h2>
+          <div class="card-tech">🔬 光学メタマテリアル、負屈折率フォトニック結晶キャビティ、トポロジカル位相幾何学、量子もつれ光子イマーシブ観測</div>
+          <p class="card-summary">全方位完全反射の球体鏡に身を投じた男の狂気。現代では、光子の無限反復反射による非ユークリッド量子コヒーレンス空間で、宇宙背景放射と意識が調和する究極のワンダー体験。</p>
+          <div class="card-footer">
+            <span>約 4,770 文字 </span>
+            <a class="read-link" href="stories/edogawa-mirror-hell.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="16" data-author="江戸川乱歩" data-illustrated="no" data-search="人間椅子――ハプティクス多様体における愛の幾何学 人間椅子 江戸川乱歩 柔軟触覚センサアレイ（電子皮膚 / e-skin）、情報幾何学に基づく触覚多様体解析、自己組織化スマートマテリアル、バイオハプティクス情動ai 椅子の中に潜み、座る人間の体温や感触を味わう家具職人。現代では、座る人の疲弊した心身を生体テンソル解析で包み込み癒やす自律型スマートチェアに宿る、亡き技術者の愛と記憶。">
+        <a href="stories/edogawa-human-chair.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『人間椅子』</div><div style="font-size:0.82rem;">江戸川乱歩 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#16</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：江戸川乱歩『人間椅子』</div>
+          <h2 class="card-title"><a href="stories/edogawa-human-chair.html">人間椅子――ハプティクス多様体における愛の幾何学</a></h2>
+          <div class="card-tech">🔬 柔軟触覚センサアレイ（電子皮膚 / E-skin）、情報幾何学に基づく触覚多様体解析、自己組織化スマートマテリアル、バイオハプティクス情動AI</div>
+          <p class="card-summary">椅子の中に潜み、座る人間の体温や感触を味わう家具職人。現代では、座る人の疲弊した心身を生体テンソル解析で包み込み癒やす自律型スマートチェアに宿る、亡き技術者の愛と記憶。</p>
+          <div class="card-footer">
+            <span>約 6,139 文字 </span>
+            <a class="read-link" href="stories/edogawa-human-chair.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="15" data-author="久生十蘭" data-illustrated="no" data-search="昆虫図――フェロモン・グラフと遺伝子駆動の恋文 昆虫図 久生十蘭 crisprジンドライブ、分散合意アルゴリズム、グラフ理論に基づく自己組織化フェロモンネットワーク、マイクロ流体バイオチップ 昆虫の生態を狂わせるフェロモンの研究が生み出した、人間をも誘導する恐るべき群れ制御技術。分散コンピューティングとグラフ理論が暴く集団心理の創発。">
+        <a href="stories/hisao-insect-catalog.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『昆虫図』</div><div style="font-size:0.82rem;">久生十蘭 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#15</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：久生十蘭『昆虫図』</div>
+          <h2 class="card-title"><a href="stories/hisao-insect-catalog.html">昆虫図――フェロモン・グラフと遺伝子駆動の恋文</a></h2>
+          <div class="card-tech">🔬 CRISPRジンドライブ、分散合意アルゴリズム、グラフ理論に基づく自己組織化フェロモンネットワーク、マイクロ流体バイオチップ</div>
+          <p class="card-summary">昆虫の生態を狂わせるフェロモンの研究が生み出した、人間をも誘導する恐るべき群れ制御技術。分散コンピューティングとグラフ理論が暴く集団心理の創発。</p>
+          <div class="card-footer">
+            <span>約 5,028 文字 </span>
+            <a class="read-link" href="stories/hisao-insect-catalog.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="14" data-author="海野十三" data-illustrated="no" data-search="金属人間――自己組織化ガリウム生体回路の迷宮 金属人間 海野十三 液体金属ガリウムナノ合金生体回路、自己組織化モジュラーロボット、生体内バイオミネラリゼーション 肉体が徐々に金属へと置換されていく奇病。ナノマシンによる生体鉱物化の脅威と進化の選択。">
+        <a href="stories/unno-metal-man.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『金属人間』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#14</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『金属人間』</div>
+          <h2 class="card-title"><a href="stories/unno-metal-man.html">金属人間――自己組織化ガリウム生体回路の迷宮</a></h2>
+          <div class="card-tech">🔬 液体金属ガリウムナノ合金生体回路、自己組織化モジュラーロボット、生体内バイオミネラリゼーション</div>
+          <p class="card-summary">肉体が徐々に金属へと置換されていく奇病。ナノマシンによる生体鉱物化の脅威と進化の選択。</p>
+          <div class="card-footer">
+            <span>約 4,453 文字 </span>
+            <a class="read-link" href="stories/unno-metal-man.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="13" data-author="海野十三" data-illustrated="no" data-search="俘囚――ads/cftホログラフィック監獄の反響 俘囚 海野十三 ads/cft対応ホログラフィック原理、ワームホール量子シミュレーション、トポロジカル空間位相格子 三次元の密室から忽然と消失した囚人。四次元ポケット空間に迷い込んだ男の孤独と生還の試み。">
+        <a href="stories/unno-captive.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『俘囚』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#13</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『俘囚』</div>
+          <h2 class="card-title"><a href="stories/unno-captive.html">俘囚――AdS/CFTホログラフィック監獄の反響</a></h2>
+          <div class="card-tech">🔬 AdS/CFT対応ホログラフィック原理、ワームホール量子シミュレーション、トポロジカル空間位相格子</div>
+          <p class="card-summary">三次元の密室から忽然と消失した囚人。四次元ポケット空間に迷い込んだ男の孤独と生還の試み。</p>
+          <div class="card-footer">
+            <span>約 4,109 文字 </span>
+            <a class="read-link" href="stories/unno-captive.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="12" data-author="海野十三" data-illustrated="no" data-search="浮かぶ飛行島――成層圏メガストラクチャーの崩壊 浮かぶ飛行島 海野十三 常温高圧超伝導（lk-99後継磁気浮上）、プラズマmhd推進、カーボンナノチューブテザーメガ構造体 天空に浮かぶ巨大人工浮遊要塞。成層圏で自給自足する超伝導空中都市の独立と墜落の危機。">
+        <a href="stories/unno-floating-island.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『浮かぶ飛行島』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#12</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『浮かぶ飛行島』</div>
+          <h2 class="card-title"><a href="stories/unno-floating-island.html">浮かぶ飛行島――成層圏メガストラクチャーの崩壊</a></h2>
+          <div class="card-tech">🔬 常温高圧超伝導（LK-99後継磁気浮上）、プラズマMHD推進、カーボンナノチューブテザーメガ構造体</div>
+          <p class="card-summary">天空に浮かぶ巨大人工浮遊要塞。成層圏で自給自足する超伝導空中都市の独立と墜落の危機。</p>
+          <div class="card-footer">
+            <span>約 5,031 文字 </span>
+            <a class="read-link" href="stories/unno-floating-island.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="11" data-author="小栗虫太郎" data-illustrated="no" data-search="二十世紀鉄仮面――ネオ・フィジオノミーの覚醒 二十世紀鉄仮面 小栗虫太郎 バイオ3dプリンティング人工皮膚、dnaフェイシャルプロファイリング、生体電子マスク、ディープフェイク生体侵食 顔を完全に偽装し他人に成り代わる鉄仮面の怪人。生体認証社会を崩壊させるバイオ・ハッキング。">
+        <a href="stories/oguri-20th-century-iron-mask.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『二十世紀鉄仮面』</div><div style="font-size:0.82rem;">小栗虫太郎 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#11</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：小栗虫太郎『二十世紀鉄仮面』</div>
+          <h2 class="card-title"><a href="stories/oguri-20th-century-iron-mask.html">二十世紀鉄仮面――ネオ・フィジオノミーの覚醒</a></h2>
+          <div class="card-tech">🔬 バイオ3Dプリンティング人工皮膚、DNAフェイシャルプロファイリング、生体電子マスク、ディープフェイク生体侵食</div>
+          <p class="card-summary">顔を完全に偽装し他人に成り代わる鉄仮面の怪人。生体認証社会を崩壊させるバイオ・ハッキング。</p>
+          <div class="card-footer">
+            <span>約 7,521 文字 </span>
+            <a class="read-link" href="stories/oguri-20th-century-iron-mask.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="10" data-author="小栗虫太郎" data-illustrated="no" data-search="完全犯罪――量子消滅の熱音響（サーモアコースティック） 完全犯罪 小栗虫太郎 量子もつれ暗号撹乱、超短パルスフェムト秒レーザー熱音響暗殺、環境ゲノム偽装 科学の死角を突いた完璧な密室殺人トリック。現代の量子・ナノ物理による観測不可能な犯罪工学。">
+        <a href="stories/oguri-complete-crime.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『完全犯罪』</div><div style="font-size:0.82rem;">小栗虫太郎 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#10</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：小栗虫太郎『完全犯罪』</div>
+          <h2 class="card-title"><a href="stories/oguri-complete-crime.html">完全犯罪――量子消滅の熱音響（サーモアコースティック）</a></h2>
+          <div class="card-tech">🔬 量子もつれ暗号撹乱、超短パルスフェムト秒レーザー熱音響暗殺、環境ゲノム偽装</div>
+          <p class="card-summary">科学の死角を突いた完璧な密室殺人トリック。現代の量子・ナノ物理による観測不可能な犯罪工学。</p>
+          <div class="card-footer">
+            <span>約 6,016 文字 </span>
+            <a class="read-link" href="stories/oguri-complete-crime.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="9" data-author="夢野久作" data-illustrated="no" data-search="爆弾太平記――連鎖量子点火の特異点 爆弾太平記 夢野久作 反物質トラップ、レーザー核融合、量子エンタングルメント起爆装置、自律致死型ai兵站 世界を瞬時に滅ぼす究極兵器の完成がもたらす逆説的平和と狂気。">
+        <a href="stories/yumeno-bomb-peace.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『爆弾太平記』</div><div style="font-size:0.82rem;">夢野久作 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#09</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：夢野久作『爆弾太平記』</div>
+          <h2 class="card-title"><a href="stories/yumeno-bomb-peace.html">爆弾太平記――連鎖量子点火の特異点</a></h2>
+          <div class="card-tech">🔬 反物質トラップ、レーザー核融合、量子エンタングルメント起爆装置、自律致死型AI兵站</div>
+          <p class="card-summary">世界を瞬時に滅ぼす究極兵器の完成がもたらす逆説的平和と狂気。</p>
+          <div class="card-footer">
+            <span>約 6,844 文字 </span>
+            <a class="read-link" href="stories/yumeno-bomb-peace.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="8" data-author="夢野久作" data-illustrated="no" data-search="人間レコード――ゲノム・シンフォニーの目覚め 人間レコード 夢野久作 dnaデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印 人間の肉体や骨格に極秘情報を音響溝のように刻印するスパイ。現代ではdna配列やエピゲノムへの暗号化記憶。">
+        <a href="stories/yumeno-human-record.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『人間レコード』</div><div style="font-size:0.82rem;">夢野久作 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#08</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：夢野久作『人間レコード』</div>
+          <h2 class="card-title"><a href="stories/yumeno-human-record.html">人間レコード――ゲノム・シンフォニーの目覚め</a></h2>
+          <div class="card-tech">🔬 DNAデータストレージ、生体シナプス重み書き込み、エピジェネティック記憶刻印</div>
+          <p class="card-summary">人間の肉体や骨格に極秘情報を音響溝のように刻印するスパイ。現代ではDNA配列やエピゲノムへの暗号化記憶。</p>
+          <div class="card-footer">
+            <span>約 5,832 文字 </span>
+            <a class="read-link" href="stories/yumeno-human-record.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="7" data-author="蘭郁二郎" data-illustrated="no" data-search="脳髄手術 脳髄手術 蘭郁二郎 深部脳刺激（dbs）、光遺伝学的情動回路切除、ナノロボットによる標的シナプス精密切断 凶悪犯の脳を外科的に手術して温厚な人格に作り変える試み。だが善悪の反転には予期せぬ代償があった。">
+        <a href="stories/ran-brain-surgery.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『脳髄手術』</div><div style="font-size:0.82rem;">蘭郁二郎 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#07</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：蘭郁二郎『脳髄手術』</div>
+          <h2 class="card-title"><a href="stories/ran-brain-surgery.html">脳髄手術</a></h2>
+          <div class="card-tech">🔬 深部脳刺激（DBS）、光遺伝学的情動回路切除、ナノロボットによる標的シナプス精密切断</div>
+          <p class="card-summary">凶悪犯の脳を外科的に手術して温厚な人格に作り変える試み。だが善悪の反転には予期せぬ代償があった。</p>
+          <div class="card-footer">
+            <span>約 7,013 文字 </span>
+            <a class="read-link" href="stories/ran-brain-surgery.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="6" data-author="蘭郁二郎" data-illustrated="no" data-search="夢鬼 夢鬼 蘭郁二郎 fmri生成aiによる視覚心象復元（stable diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激 他人の見る夢をスクリーンに映し出す装置。他者の深層心理に侵入した技師が恐怖の悪夢に囚われる。">
+        <a href="stories/ran-dream-demon.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『夢鬼』</div><div style="font-size:0.82rem;">蘭郁二郎 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#06</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：蘭郁二郎『夢鬼』</div>
+          <h2 class="card-title"><a href="stories/ran-dream-demon.html">夢鬼</a></h2>
+          <div class="card-tech">🔬 fMRI生成AIによる視覚心象復元（Stable Diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激</div>
+          <p class="card-summary">他人の見る夢をスクリーンに映し出す装置。他者の深層心理に侵入した技師が恐怖の悪夢に囚われる。</p>
+          <div class="card-footer">
+            <span>約 5,907 文字 </span>
+            <a class="read-link" href="stories/ran-dream-demon.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="5" data-author="蘭郁二郎" data-illustrated="no" data-search="植物人間――葉緑体人工共生と光合成代謝の臨界 植物人間 蘭郁二郎 動物細胞における葉緑体人工共生（planimal）、crispr光合成代謝経路移植、クロロフィル生体蛍光 日光と水だけで生存する人間を作ろうとする研究。植物と融合した被験体は驚くべき生態変化を遂げる。">
+        <a href="stories/ran-plant-man.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『植物人間』</div><div style="font-size:0.82rem;">蘭郁二郎 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#05</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：蘭郁二郎『植物人間』</div>
+          <h2 class="card-title"><a href="stories/ran-plant-man.html">植物人間――葉緑体人工共生と光合成代謝の臨界</a></h2>
+          <div class="card-tech">🔬 動物細胞における葉緑体人工共生（Planimal）、CRISPR光合成代謝経路移植、クロロフィル生体蛍光</div>
+          <p class="card-summary">日光と水だけで生存する人間を作ろうとする研究。植物と融合した被験体は驚くべき生態変化を遂げる。</p>
+          <div class="card-footer">
+            <span>約 7,202 文字 </span>
+            <a class="read-link" href="stories/ran-plant-man.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="4" data-author="海野十三" data-illustrated="no" data-search="振動魔――フォノニック結晶とテラヘルツ共鳴破壊 振動魔 海野十三 メタマテリアル音響レンズ、フォノニック結晶、テラヘルツ共振破壊、レーザー励起超音波 物体の固有振動数に合わせた不可視の波を照射し、遠隔から建築物や生体を共振破壊する狂気の科学者。">
+        <a href="stories/unno-vibration-demon.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『振動魔』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#04</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『振動魔』</div>
+          <h2 class="card-title"><a href="stories/unno-vibration-demon.html">振動魔――フォノニック結晶とテラヘルツ共鳴破壊</a></h2>
+          <div class="card-tech">🔬 メタマテリアル音響レンズ、フォノニック結晶、テラヘルツ共振破壊、レーザー励起超音波</div>
+          <p class="card-summary">物体の固有振動数に合わせた不可視の波を照射し、遠隔から建築物や生体を共振破壊する狂気の科学者。</p>
+          <div class="card-footer">
+            <span>約 6,446 文字 </span>
+            <a class="read-link" href="stories/unno-vibration-demon.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="3" data-author="海野十三" data-illustrated="no" data-search="人造人間事件――オルガノイド・インテリジェンスの陥穽 人造人間事件 海野十三 脳オルガノイド・コンピューティング（brain-on-a-chip）、合成生物学的ヒューマノイド、神経活動の光遺伝学的クローニング 人間そっくりの人造人間が起こす事件。生体組織と半導体の融合バイオコンピュータが自我を持つ。">
+        <a href="stories/unno-cyborg-incident.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『人造人間事件』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#03</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『人造人間事件』</div>
+          <h2 class="card-title"><a href="stories/unno-cyborg-incident.html">人造人間事件――オルガノイド・インテリジェンスの陥穽</a></h2>
+          <div class="card-tech">🔬 脳オルガノイド・コンピューティング（Brain-on-a-chip）、合成生物学的ヒューマノイド、神経活動の光遺伝学的クローニング</div>
+          <p class="card-summary">人間そっくりの人造人間が起こす事件。生体組織と半導体の融合バイオコンピュータが自我を持つ。</p>
+          <div class="card-footer">
+            <span>約 8,026 文字 </span>
+            <a class="read-link" href="stories/unno-cyborg-incident.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="2" data-author="海野十三" data-illustrated="no" data-search="蠅男――極微バイオサイボーグと神経同調の罠 蠅男 海野十三 昆虫バイオハイブリッド・サイボーグ、昆虫羽ばたき型memsマイクロロボット、ニューロモルフィック視覚センサ 蠅の姿をした謎の潜入者が密室の機密を盗み出す。現代では昆虫サイボーグやmemsマイクロドローンによる究極の諜報戦。">
+        <a href="stories/unno-fly-man.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『蠅男』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#02</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『蠅男』</div>
+          <h2 class="card-title"><a href="stories/unno-fly-man.html">蠅男――極微バイオサイボーグと神経同調の罠</a></h2>
+          <div class="card-tech">🔬 昆虫バイオハイブリッド・サイボーグ、昆虫羽ばたき型MEMSマイクロロボット、ニューロモルフィック視覚センサ</div>
+          <p class="card-summary">蠅の姿をした謎の潜入者が密室の機密を盗み出す。現代では昆虫サイボーグやMEMSマイクロドローンによる究極の諜報戦。</p>
+          <div class="card-footer">
+            <span>約 7,299 文字 </span>
+            <a class="read-link" href="stories/unno-fly-man.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="1" data-author="海野十三" data-illustrated="no" data-search="十八時の音楽浴――超音波閉ループ神経変調に関する一考察 十八時の音楽浴 海野十三 ソノジェネティクス（超音波遺伝子制御）、40hzガンマ波音響刺激、piezo1イオンチャネル、閉ループ脳波変調 夕方18時になると流れる音楽浴で市民が多幸感に浸るが、その背後には音響技術による精神統制が隠されていた。">
+        <a href="stories/unno-18-music.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『十八時の音楽浴』</div><div style="font-size:0.82rem;">海野十三 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#01</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：海野十三『十八時の音楽浴』</div>
+          <h2 class="card-title"><a href="stories/unno-18-music.html">十八時の音楽浴――超音波閉ループ神経変調に関する一考察</a></h2>
+          <div class="card-tech">🔬 ソノジェネティクス（超音波遺伝子制御）、40Hzガンマ波音響刺激、Piezo1イオンチャネル、閉ループ脳波変調</div>
+          <p class="card-summary">夕方18時になると流れる音楽浴で市民が多幸感に浸るが、その背後には音響技術による精神統制が隠されていた。</p>
+          <div class="card-footer">
+            <span>約 7,733 文字 </span>
+            <a class="read-link" href="stories/unno-18-music.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>青空文庫 ✕ 最先端科学 ハードSFリブート図書館 — Generated locally on Mac mini M4 &amp; Published on GitHub Pages</p>
+  </footer>
+
+  <script>
+    function filterCards() {
+      const q = (document.getElementById('searchInput').value || '').trim().toLowerCase();
+      const author = document.getElementById('authorFilter').value;
+      const imgOnly = document.getElementById('imageFilter').value;
+      const cards = document.querySelectorAll('.story-card');
+      cards.forEach(card => {
+        const matchQ = !q || (card.getAttribute('data-search') || '').includes(q);
+        const matchAuthor = !author || card.getAttribute('data-author') === author;
+        const matchImg = !imgOnly || card.getAttribute('data-illustrated') === imgOnly;
+        card.style.display = (matchQ && matchAuthor && matchImg) ? '' : 'none';
+      });
+    }
+    function sortCards() {
+      const order = document.getElementById('sortOrder').value;
+      const grid = document.getElementById('storyGrid');
+      const cards = Array.from(grid.querySelectorAll('.story-card'));
+      cards.sort((a, b) => {
+        const na = parseInt(a.getAttribute('data-no'), 10);
+        const nb = parseInt(b.getAttribute('data-no'), 10);
+        return order === 'asc' ? na - nb : nb - na;
+      });
+      cards.forEach(c => grid.appendChild(c));
+    }
+    function toggleTheme() {
+      const root = document.documentElement;
+      const curr = root.getAttribute('data-theme') || 'dark';
+      const next = curr === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('sf_theme', next);
+      document.getElementById('themeBtn').textContent = next === 'dark' ? '☀️ ライト表示' : '🌙 ダーク表示';
+    }
+    (function initPrefs() {
+      const savedTheme = localStorage.getItem('sf_theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        document.getElementById('themeBtn').textContent = savedTheme === 'dark' ? '☀️ ライト表示' : '🌙 ダーク表示';
+      }
+    })();
+  </script>
+</body>
+</html>
