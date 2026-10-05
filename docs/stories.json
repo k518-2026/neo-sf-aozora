@@ -354,9 +354,9 @@
     "original_title": "心理試験",
     "original_author": "江戸川乱歩",
     "modern_tech": "fNIRS（機能的近赤外分光法）、計算複雑性理論（欺瞞アルゴリズムのNP困難性）、ゼロ知識証明暗号プロトコル、マイクロサッカードAI解析",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/edogawa-psychological-test.html",
-    "image": "",
+    "image": "assets/images/edogawa-psychological-test.png",
     "char_count": 8218
   },
   {
