@@ -246,9 +246,9 @@
     "original_title": "白昼夢",
     "original_author": "江戸川乱歩",
     "modern_tech": "経頭蓋集束超音波（tFUS）視覚野変調、敵対的摂動（Adversarial Perturbation）光音響パッチ、ベイズ脳予測符号化モデル",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/edogawa-hakuchumu.html",
-    "image": "",
+    "image": "assets/images/edogawa-hakuchumu.png",
     "char_count": 6460
   },
   {
