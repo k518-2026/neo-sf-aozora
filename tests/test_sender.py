@@ -82,14 +82,17 @@ class TestNeoAozoraSystem(unittest.TestCase):
         self.assertEqual(result["to"], "secret_post@post.wordpress.com")
         self.assertEqual(result["blogger_to"], ["testuser.secret@blogger.com"])
 
-    def test_all_links_open_in_new_window(self):
+    def test_links_stripped_and_plain_doi_preserved(self):
         import re
         formatted = format_post_content(str(self.story_path))
         links = re.findall(r'<a\b[^>]*>', formatted.content_html)
-        self.assertTrue(len(links) > 0, "Should have at least one link")
-        for link in links:
-            self.assertIn('target="_blank"', link, f"Link {link} must contain target=\"_blank\"")
-            self.assertIn('rel="noopener noreferrer"', link, f"Link {link} must contain rel=\"noopener noreferrer\"")
+        self.assertEqual(len(links), 0, "All <a href='...'> tags should be stripped for anti-spam safety")
+        self.assertNotIn("http://", formatted.content_html)
+        self.assertNotIn("https://", formatted.content_html)
+        self.assertNotIn("http://", formatted.content_plain)
+        self.assertNotIn("https://", formatted.content_plain)
+        self.assertIn("DOI: 10.1038/s41467-022-28205-y", formatted.content_html)
+        self.assertIn("DOI: 10.1038/s41467-022-28205-y", formatted.content_plain)
 
     def test_x_post_formatting_all_catalog_works(self):
         mgr = HistoryManager()

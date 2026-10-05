@@ -54,10 +54,38 @@ def _fallback_yaml_parser(text: str) -> Dict[str, Any]:
     return data
 
 def _format_inline_markdown(text: str) -> str:
-    """Formats inline bold, italic, and links."""
+    """Formats inline bold and italic, stripping external links while keeping plain-text DOIs."""
     text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", text)
     text = re.sub(r"\*(.*?)\*", r"<em>\1</em>", text)
-    text = re.sub(r"\[(.*?)\]\((.*?)\)", r'<a href="\2" target="_blank" rel="noopener noreferrer">\1</a>', text)
+    text = _strip_markdown_links_keep_doi(text)
+    return text
+
+
+def _strip_markdown_links_keep_doi(text: str) -> str:
+    """
+    Removes Markdown links and bare URLs to prevent WordPress.com / SMTP spam-filter blocks,
+    converting DOI links into plain text 'DOI: 10.xxxx/...'.
+    """
+    # 1. Markdown links pointing to doi.org -> 'DOI: 10.xxxx/...'
+    text = re.sub(
+        r"(?:DOI:\s*)?\[\s*(?:DOI:\s*)?(?:https?://(?:dx\.)?doi\.org/)?(10\.[^\]\s]+)\s*\]\(\s*https?://(?:dx\.)?doi\.org/[^\)]+\)",
+        r"DOI: \1",
+        text,
+        flags=re.IGNORECASE,
+    )
+    # 2. Other Markdown links [text](url) -> text
+    text = re.sub(r"\[([^\]]+)\]\(https?://[^\)]+\)", r"\1", text)
+    # 3. Bare doi.org URLs -> 'DOI: 10.xxxx/...'
+    text = re.sub(
+        r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.\S+)",
+        r"DOI: \1",
+        text,
+        flags=re.IGNORECASE,
+    )
+    # 4. Any other bare http/https URLs
+    text = re.sub(r"https?://\S+", "", text)
+    # Deduplicate accidental 'DOI: DOI: '
+    text = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", text, flags=re.IGNORECASE)
     return text
 
 def _fallback_markdown_to_html(md_text: str) -> str:
@@ -194,11 +222,40 @@ def _fallback_markdown_to_html(md_text: str) -> str:
 
     return "\n".join(html_lines)
 
+def _strip_html_links_keep_doi(html_text: str) -> str:
+    """
+    Removes all <a href="..."> hyperlinks and bare external URLs from HTML while preserving
+    plain-text 'DOI: 10.xxxx/...' notation and anchor text (such as '『作品名』').
+    Prevents WordPress.com and outbound SMTP anti-spam filters from flagging posts.
+    """
+    cleaned = html_text
+    # 1. Convert <a href="https://doi.org/10.xxxx">...</a> into plain 'DOI: 10.xxxx'
+    cleaned = re.sub(
+        r'(?:DOI:\s*)?<a\b[^>]*href=["\']https?://(?:dx\.)?doi\.org/(10\.[^"\']+)["\'][^>]*>.*?</a>',
+        r"DOI: \1",
+        cleaned,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    # 2. Strip all other <a ...>inner</a> tags, keeping only inner text
+    cleaned = re.sub(r"<a\b[^>]*>(.*?)</a>", r"\1", cleaned, flags=re.IGNORECASE | re.DOTALL)
+    # 3. Convert any remaining bare doi.org URLs into 'DOI: 10.xxxx'
+    cleaned = re.sub(
+        r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<\"']+)",
+        r"DOI: \1",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    # 4. Strip any remaining bare http/https URLs
+    cleaned = re.sub(r"https?://[^\s<\"']+", "", cleaned)
+    # Deduplicate accidental 'DOI: DOI: '
+    cleaned = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", cleaned, flags=re.IGNORECASE)
+    return cleaned
+
+
 def build_next_work_preview(next_work: Dict[str, Any]) -> str:
-    """Generates a styled markdown preview block for the next scheduled sci-fi reboot."""
+    """Generates a styled markdown preview block for the next scheduled sci-fi reboot (without external URLs)."""
     author = next_work.get("author", "")
     title = next_work.get("title", "")
-    url = next_work.get("url", "")
     tech = next_work.get("modern_tech", "")
     summary = next_work.get("summary", "")
 
@@ -210,7 +267,7 @@ def build_next_work_preview(next_work: Dict[str, Any]) -> str:
 
 | 項目 | 内容 |
 |:---|:---|
-| **次回原典作品** | {author}[『{title}』]({url})（青空文庫） |
+| **次回原典作品** | {author}『{title}』（青空文庫） |
 | **導入する現代最新科学技術** | {tech} |
 | **SFリブートの視点・未来像** | {summary} |
 
@@ -271,7 +328,9 @@ def format_post_content(
     Loads a markdown story file and prepares both HTML and plain text
     formatted strictly for WordPress Post-via-Email.
     CRITICAL: Completely prevents <hr> and loose --- separators which cause
-    WordPress email parsers to prematurely truncate content as an email signature.
+    WordPress email parsers to prematurely truncate content as an email signature,
+    and strips all <a href="..."> links (converting DOIs to plain 'DOI: 10.xxxx/...')
+    to prevent WordPress.com / SMTP anti-spam filters from flagging posts.
     """
     meta, body = parse_markdown_with_frontmatter(file_path)
 
@@ -318,6 +377,9 @@ def format_post_content(
     # Pre-clean 2: Replace markdown hr lines (---, ***, ___) with safe scene dividers to prevent email signature truncation
     cleaned_body = re.sub(r"^[ \t]*[-*_]{3,}[ \t]*$", "◆ ◆ ◆", cleaned_body, flags=re.MULTILINE)
 
+    # Pre-clean 3: Strip Markdown hyperlinks and bare URLs, keeping plain-text 'DOI: 10.xxxx/...'
+    cleaned_body = _strip_markdown_links_keep_doi(cleaned_body)
+
     # Convert markdown to HTML
     if HAS_MARKDOWN:
         html_body = markdown.markdown(
@@ -339,28 +401,8 @@ def format_post_content(
     # 2. Avoid multiple consecutive <br>
     html_body = re.sub(r"(?:<br\s*/?>\s*){2,}", "<p></p>", html_body, flags=re.IGNORECASE)
 
-    # 3. Ensure ALL hyperlinks open in a new window/tab (target="_blank" rel="noopener noreferrer")
-    def _add_target_blank(match: re.Match) -> str:
-        tag_content = match.group(1)
-        if "target=" not in tag_content:
-            tag_content += ' target="_blank"'
-        else:
-            tag_content = re.sub(r'target=[\'"][^\'"]*[\'"]', 'target="_blank"', tag_content)
-        if "rel=" not in tag_content:
-            tag_content += ' rel="noopener noreferrer"'
-        else:
-            tag_content = re.sub(r'rel=[\'"][^\'"]*[\'"]', 'rel="noopener noreferrer"', tag_content)
-        return f"<a{tag_content}>"
-
-    html_body = re.sub(r"<a\b([^>]*)>", _add_target_blank, html_body, flags=re.IGNORECASE)
-
-    # 4. Replace raw 'https://doi.org/10.xxxx' anchor text with '10.xxxx' (with 'DOI: ' prefix if not already present) to avoid email anti-phishing filters
-    html_body = re.sub(
-        r'(?:DOI:\s*)?(<a\b[^>]*href=["\']https?://(?:dx\.)?doi\.org/(10\.[^"\']+)["\'][^>]*>)\s*https?://(?:dx\.)?doi\.org/[^<]+\s*(</a>)',
-        r'DOI: \1\2\3',
-        html_body,
-        flags=re.IGNORECASE
-    )
+    # 3. Strip any <a href="..."> tags and raw URLs while preserving plain-text 'DOI: 10.xxxx/...'
+    html_body = _strip_html_links_keep_doi(html_body)
 
     # Wrap in clean, modern typography styling for WordPress email rendering
     styled_html = f"""<div class="sf-story-container" style="font-family: 'Hiragino Mincho ProN', 'Yu Mincho', serif; line-height: 1.9; font-size: 16px; color: #222;">

@@ -35,11 +35,18 @@ class WordPressMailSender:
         3. Strips inline style="..." and class="..." attributes so only lightweight semantic tags remain.
         """
         cleaned = html_text
-        # 1. Strip <a> tags, keeping inner text (e.g. '『作品名』' or 'DOI: 10.xxxx/...')
+        # 1. Strip <a> tags, keeping inner text or 'DOI: 10.xxxx/...'
+        cleaned = re.sub(
+            r'(?:DOI:\s*)?<a\b[^>]*href=["\']https?://(?:dx\.)?doi\.org/(10\.[^"\']+)["\'][^>]*>.*?</a>',
+            r"DOI: \1",
+            cleaned,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
         cleaned = re.sub(r"<a\b[^>]*>(.*?)</a>", r"\1", cleaned, flags=re.IGNORECASE | re.DOTALL)
         # Remove any remaining bare http/https URLs
-        cleaned = re.sub(r"https?://(?:dx\.)?doi\.org/(10\.\S+)", r"DOI: \1", cleaned)
-        cleaned = re.sub(r"https?://\S+", "", cleaned)
+        cleaned = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<\"']+)", r"DOI: \1", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"https?://[^\s<\"']+", "", cleaned)
+        cleaned = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", cleaned, flags=re.IGNORECASE)
 
         # 2. Convert <table> blocks into simple paragraphs
         def _table_to_paragraphs(match: re.Match) -> str:
@@ -115,15 +122,34 @@ class WordPressMailSender:
 
         if for_blogger:
             raw_plain = post.content_plain_clean or post.content_plain
-            # Strip all raw URLs from the plain-text part
-            plain_body = re.sub(r"\[([^\]]+)\]\(https?://[^\)]+\)", r"\1", raw_plain)
-            plain_body = re.sub(r"https?://(?:dx\.)?doi\.org/(10\.\S+)", r"DOI: \1", plain_body)
-            plain_body = re.sub(r"https?://\S+", "", plain_body)
             raw_html = post.content_html_clean or post.content_html
             html_body = self._sanitize_html_for_blogger(raw_html)
         else:
-            plain_body = post.content_plain
-            html_body = post.content_html
+            raw_plain = post.content_plain
+            raw_html = post.content_html
+            # Strip <a href="..."> and bare URLs for WordPress email safety while preserving DOI: 10.xxxx/...
+            html_body = re.sub(
+                r'(?:DOI:\s*)?<a\b[^>]*href=["\']https?://(?:dx\.)?doi\.org/(10\.[^"\']+)["\'][^>]*>.*?</a>',
+                r"DOI: \1",
+                raw_html,
+                flags=re.IGNORECASE | re.DOTALL,
+            )
+            html_body = re.sub(r"<a\b[^>]*>(.*?)</a>", r"\1", html_body, flags=re.IGNORECASE | re.DOTALL)
+            html_body = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<\"']+)", r"DOI: \1", html_body, flags=re.IGNORECASE)
+            html_body = re.sub(r"https?://[^\s<\"']+", "", html_body)
+            html_body = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", html_body, flags=re.IGNORECASE)
+
+        # Strip all raw URLs from the plain-text part for both WordPress and Blogger
+        plain_body = re.sub(
+            r"(?:DOI:\s*)?\[\s*(?:DOI:\s*)?(?:https?://(?:dx\.)?doi\.org/)?(10\.[^\]\s]+)\s*\]\(\s*https?://(?:dx\.)?doi\.org/[^\)]+\)",
+            r"DOI: \1",
+            raw_plain,
+            flags=re.IGNORECASE,
+        )
+        plain_body = re.sub(r"\[([^\]]+)\]\(https?://[^\)]+\)", r"\1", plain_body)
+        plain_body = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.\S+)", r"DOI: \1", plain_body, flags=re.IGNORECASE)
+        plain_body = re.sub(r"https?://\S+", "", plain_body)
+        plain_body = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", plain_body, flags=re.IGNORECASE)
 
         # Attach text part and HTML part
         part_text = MIMEText(plain_body, "plain", "utf-8")
