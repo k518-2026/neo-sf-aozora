@@ -330,9 +330,9 @@
     "original_title": "押絵と旅する男",
     "original_author": "江戸川乱歩",
     "modern_tech": "光格子時計による超精密時間操作、超並列量子チューリング完全回路、ニューロモルフィック・エピジェネティック・ホログラム",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/edogawa-picture-traveler.html",
-    "image": "",
+    "image": "assets/images/edogawa-picture-traveler.png",
     "char_count": 4520
   },
   {
