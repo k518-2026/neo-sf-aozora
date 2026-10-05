@@ -462,9 +462,9 @@
     "original_title": "爆弾太平記",
     "original_author": "夢野久作",
     "modern_tech": "反物質トラップ、レーザー核融合、量子エンタングルメント起爆装置、自律致死型AI兵站",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/yumeno-bomb-peace.html",
-    "image": "",
+    "image": "assets/images/yumeno-bomb-peace.png",
     "char_count": 6844
   },
   {
