@@ -66,21 +66,52 @@ def _render_web_markdown(md_text: str) -> str:
 
 def collect_all_stories(history_mgr: Optional[HistoryManager] = None) -> List[Dict[str, Any]]:
     """
-    Collects all stories in content/ matched against data/aozora_catalog.json.
-    Orders works cleanly by catalog sequence so readers can browse all works systematically.
+    Collects all stories in content/ in chronological publication/creation order
+    (matching archive_index.json: first data/history.json order, then content/*.md sorted by date/mtime).
+    When reversed for index.html and README.md, the newest story is always at the very top.
     """
     if history_mgr is None:
         history_mgr = HistoryManager()
 
-    stories: List[Dict[str, Any]] = []
-    used_files = set()
+    catalog_by_id = {w["id"]: (idx, w) for idx, w in enumerate(history_mgr.catalog, start=1)}
+    ordered_pairs: List[ tuple[str, Path] ] = []
+    seen_work_ids = set()
+    seen_paths = set()
 
+    # 1. Chronological order from data/history.json
+    for entry in history_mgr.history:
+        wid = entry.get("work_id", "")
+        fp_str = entry.get("file_path", "").replace("\\", "/")
+        md_path = Path(fp_str) if fp_str else None
+        if (md_path is None or not md_path.exists()) and wid:
+            md_path = history_mgr.find_stock_file_for_work(wid)
+        if md_path and md_path.exists() and wid in catalog_by_id and wid not in seen_work_ids:
+            ordered_pairs.append((wid, md_path))
+            seen_work_ids.add(wid)
+            seen_paths.add(md_path.resolve())
+
+    # 2. Remaining stocked files in content/, ordered chronologically by filename date prefix & mtime
+    unposted_candidates: List[tuple[str, float, str, Path]] = []
     for idx, work in enumerate(history_mgr.catalog, start=1):
         wid = work["id"]
+        if wid in seen_work_ids:
+            continue
         md_path = history_mgr.find_stock_file_for_work(wid)
         if md_path is None or not md_path.exists():
             continue
-        used_files.add(md_path.resolve())
+        date_prefix = md_path.name[:10] if re.match(r"^\d{4}-\d{2}-\d{2}", md_path.name) else "0000-00-00"
+        mtime = md_path.stat().st_mtime
+        unposted_candidates.append((date_prefix, mtime, wid, md_path))
+
+    unposted_candidates.sort(key=lambda item: (item[0], item[1], item[3].name))
+    for _, _, wid, md_path in unposted_candidates:
+        ordered_pairs.append((wid, md_path))
+        seen_work_ids.add(wid)
+        seen_paths.add(md_path.resolve())
+
+    stories: List[Dict[str, Any]] = []
+    for wid, md_path in ordered_pairs:
+        idx, work = catalog_by_id[wid]
         meta, body = parse_markdown_with_frontmatter(str(md_path))
         full_title = meta.get("title", "").strip().strip("『』\"'") or work["title"]
         if "――" in full_title:
@@ -798,7 +829,7 @@ def _write_root_readme(stories: List[Dict[str, Any]], target_readme: Path = Path
         "|:---:|:---|:---:|:---:|:---:|:---|:---|---:|",
     ]
 
-    for s in stories:
+    for s in reversed(stories):
         md_rel = s["md_path"].as_posix()
         web_url = f"{pages_base}/{s['page_rel']}"
         img_cell = f"[🎨挿絵]({s['png_path'].as_posix()})" if s["has_image"] and s["png_path"] else "—"
@@ -859,11 +890,11 @@ def build_github_pages(history_mgr: Optional[HistoryManager] = None) -> Dict[str
         page_html = _build_story_page(story, prev_story=prev_story, next_story=next_story)
         (STORIES_DIR / f"{story['work_id']}.html").write_text(page_html, encoding="utf-8")
 
-    # Write index.html
+    # Write index.html (descending: newest story at the very top)
     index_html = _build_index_page(stories)
     (DOCS_DIR / "index.html").write_text(index_html, encoding="utf-8")
 
-    # Write machine-readable catalog index in docs/stories.json
+    # Write machine-readable catalog index in docs/stories.json (descending: newest first)
     manifest = [
         {
             "no": s["no"],
@@ -877,7 +908,7 @@ def build_github_pages(history_mgr: Optional[HistoryManager] = None) -> Dict[str
             "image": s["image_rel"],
             "char_count": s["char_count"],
         }
-        for s in stories
+        for s in reversed(stories)
     ]
     (DOCS_DIR / "stories.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2),
