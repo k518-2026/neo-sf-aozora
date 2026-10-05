@@ -505,6 +505,18 @@
   },
   {
     "no": 43,
+    "work_id": "dazai-hashire-melos",
+    "title": "走れメロス――信頼の証明",
+    "original_title": "走れメロス",
+    "original_author": "太宰治",
+    "modern_tech": "暗号学的コミットメントとゼロ知識証明、骨格筋ミトコンドリアATP代謝の極限制御、信頼と裏切りの反復ゲーム理論",
+    "has_image": true,
+    "url": "stories/dazai-hashire-melos.html",
+    "image": "assets/images/dazai-hashire-melos.png",
+    "char_count": 6852
+  },
+  {
+    "no": 44,
     "work_id": "miyazawa-chumon",
     "title": "注文の多い料理店――秘密のスマートレストラン",
     "original_title": "注文の多い料理店",
@@ -516,7 +528,7 @@
     "char_count": 5528
   },
   {
-    "no": 44,
+    "no": 45,
     "work_id": "miyazawa-kaze-no-matasaburo",
     "title": "風の又三郎――風の秘密を解く少年",
     "original_title": "風の又三郎",

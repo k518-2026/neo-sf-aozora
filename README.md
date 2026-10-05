@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **44** 作品（うち挿絵付き **14** 作品 / 原典文豪 **12** 名 / 最終更新: 2026-10-06 00:11 JST）
+- **収録作品数**: 全 **45** 作品（うち挿絵付き **15** 作品 / 原典文豪 **13** 名 / 最終更新: 2026-10-06 00:25 JST）
 
 ---
 
@@ -56,8 +56,9 @@
 | 40 | **[黒死館殺人事件――超スマート建築の謎](content/2026-10-04_oguri_kokushikan.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-kokushikan.html) | [📄原稿](content/2026-10-04_oguri_kokushikan.md) | [🎨挿絵](content/2026-10-04_oguri_kokushikan.png) | 小栗虫太郎[『黒死館殺人事件』](https://www.aozora.gr.jp/cards/000125/card1317.html) | 形式手法による自動定理証明（Lean/Coq）、超分子ホスト・ゲスト化学の遅延放出カプセル、スマート建築センサー網のビザンチン障害解析 | 5,704字 |
 | 41 | **[羅生門――進化的生存ゲーム](content/2026-10-04_akutagawa_rashomon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-rashomon.html) | [📄原稿](content/2026-10-04_akutagawa_rashomon.md) | [🎨挿絵](content/2026-10-04_akutagawa_rashomon.png) | 芥川龍之介[『羅生門』](https://www.aozora.gr.jp/cards/000879/card127.html) | 進化ゲーム理論（ESS：進化的に安定な戦略）、ケラチン生体高分子の酵素分解リサイクル、行動神経経済学の道徳意思決定モデル | 4,389字 |
 | 42 | **[杜子春――虚構時間圧縮VRの謎](content/2026-10-04_akutagawa_toshishun.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-toshishun.html) | [📄原稿](content/2026-10-04_akutagawa_toshishun.md) | [🎨挿絵](content/2026-10-04_akutagawa_toshishun.png) | 芥川龍之介[『杜子春』](https://www.aozora.gr.jp/cards/000879/card43016.html) | フルダイブ型時間圧縮VRシミュレーション、前帯状皮質（ACC）の共感・ミラーニューロン回路、強化学習における報酬関数と利他愛 | 5,883字 |
-| 43 | **[注文の多い料理店――秘密のスマートレストラン](content/2026-10-05_miyazawa_chumon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-chumon.html) | [📄原稿](content/2026-10-05_miyazawa_chumon.md) | [🎨挿絵](content/2026-10-05_miyazawa_chumon.png) | 宮沢賢治[『注文の多い料理店』](https://www.aozora.gr.jp/cards/000081/card43754.html) | 行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション | 5,528字 |
-| 44 | **[風の又三郎――風の秘密を解く少年](content/2026-10-05_miyazawa_kaze_no_matasaburo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-kaze-no-matasaburo.html) | [📄原稿](content/2026-10-05_miyazawa_kaze_no_matasaburo.md) | [🎨挿絵](content/2026-10-05_miyazawa_kaze_no_matasaburo.png) | 宮沢賢治[『風の又三郎』](https://www.aozora.gr.jp/cards/000081/card462.html) | ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電 | 4,339字 |
+| 43 | **[走れメロス――信頼の証明](content/2026-10-06_dazai_hashire_melos.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-hashire-melos.html) | [📄原稿](content/2026-10-06_dazai_hashire_melos.md) | [🎨挿絵](content/2026-10-06_dazai_hashire_melos.png) | 太宰治[『走れメロス』](https://www.aozora.gr.jp/cards/000035/card1567.html) | 暗号学的コミットメントとゼロ知識証明、骨格筋ミトコンドリアATP代謝の極限制御、信頼と裏切りの反復ゲーム理論 | 6,852字 |
+| 44 | **[注文の多い料理店――秘密のスマートレストラン](content/2026-10-05_miyazawa_chumon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-chumon.html) | [📄原稿](content/2026-10-05_miyazawa_chumon.md) | [🎨挿絵](content/2026-10-05_miyazawa_chumon.png) | 宮沢賢治[『注文の多い料理店』](https://www.aozora.gr.jp/cards/000081/card43754.html) | 行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション | 5,528字 |
+| 45 | **[風の又三郎――風の秘密を解く少年](content/2026-10-05_miyazawa_kaze_no_matasaburo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-kaze-no-matasaburo.html) | [📄原稿](content/2026-10-05_miyazawa_kaze_no_matasaburo.md) | [🎨挿絵](content/2026-10-05_miyazawa_kaze_no_matasaburo.png) | 宮沢賢治[『風の又三郎』](https://www.aozora.gr.jp/cards/000081/card462.html) | ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電 | 4,339字 |
 
 ---
 

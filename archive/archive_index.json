@@ -702,5 +702,21 @@
     "narration_file": "44_風の又三郎_narration.txt",
     "full_file": "44_風の又三郎_full.txt",
     "original_md_file": "44_風の又三郎.md"
+  },
+  {
+    "work_no": 45,
+    "work_id": "dazai-hashire-melos",
+    "title": "走れメロス",
+    "subtitle": "信頼の証明",
+    "attribution": "",
+    "original_author": "太宰治",
+    "original_title": "走れメロス",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000035/card1567.html",
+    "modern_tech": "暗号学的コミットメントとゼロ知識証明、骨格筋ミトコンドリアATP代謝の極限制御、信頼と裏切りの反復ゲーム理論",
+    "summary": "人間不信の統治者ディオニスが支配するデータ都市。人質となった親友セリヌンティウスを救うため、太陽電池が切れる日没までに荒野を疾走するメロスの信頼証明。",
+    "char_count": 5509,
+    "narration_file": "45_走れメロス_narration.txt",
+    "full_file": "45_走れメロス_full.txt",
+    "original_md_file": "45_走れメロス.md"
   }
 ]
