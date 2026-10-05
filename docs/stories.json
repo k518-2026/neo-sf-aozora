@@ -390,9 +390,9 @@
     "original_title": "昆虫図",
     "original_author": "久生十蘭",
     "modern_tech": "CRISPRジンドライブ、分散合意アルゴリズム、グラフ理論に基づく自己組織化フェロモンネットワーク、マイクロ流体バイオチップ",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/hisao-insect-catalog.html",
-    "image": "",
+    "image": "assets/images/hisao-insect-catalog.png",
     "char_count": 5028
   },
   {
