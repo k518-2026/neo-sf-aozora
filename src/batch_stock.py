@@ -105,8 +105,8 @@ def main():
     parser.add_argument(
         "--count", "-n",
         type=int,
-        default=6,
-        help="Number of unstocked works to generate in this batch (default: 6)"
+        default=5,
+        help="Number of unstocked works to generate in this batch (default: 5)"
     )
     parser.add_argument(
         "--work-id",
@@ -137,7 +137,7 @@ def main():
     parser.add_argument(
         "--generate-images",
         action="store_true",
-        help="Generate missing .png illustrations for existing stocked stories in content/ via Draw Things FLUX.2"
+        help="Generate missing .png illustrations for all existing stories in content/ (including past works) via Draw Things FLUX.2"
     )
     parser.add_argument(
         "--build-pages",
@@ -210,7 +210,7 @@ def main():
         f"Model: '{resolved_model}' (Available: {', '.join(installed_models)})"
     )
 
-    # Generate missing illustrations for existing stocked stories
+    # Generate missing illustrations for all existing stories in content/ (including past works)
     if args.generate_images:
         dt_conn = local_gen.check_draw_things_connection()
         if not dt_conn.get("online"):
@@ -220,38 +220,44 @@ def main():
             )
             sys.exit(1)
 
-        posted_ids = history_mgr.get_posted_ids()
         generated_imgs: List[Path] = []
+        missing_targets = []
         for w in history_mgr.catalog:
             if args.work_id and w["id"] != args.work_id:
-                continue
-            if w["id"] in posted_ids and not args.force and not args.work_id:
                 continue
             sf = history_mgr.find_stock_file_for_work(w["id"])
             if sf is None:
                 continue
             img_path = sf.with_suffix(".png")
             if img_path.exists() and not args.force:
-                logger.info(f"Illustration already exists for {w['id']}: {img_path}")
                 continue
+            missing_targets.append((w, sf, img_path))
+
+        logger.info(f"Found {len(missing_targets)} existing work(s) in content/ needing illustrations.")
+        for idx, (w, sf, img_path) in enumerate(missing_targets, start=1):
+            logger.info(f"\n--- [{idx}/{len(missing_targets)}] Generating illustration for '{w['title']}' ({w['author']}) -> {img_path.name} ---")
             md_text = sf.read_text(encoding="utf-8", errors="ignore")
+            reboot_title = w["title"]
+            for line in md_text.splitlines():
+                if line.strip().startswith("# "):
+                    reboot_title = line.strip()[2:].strip()
+                    break
             saved_img, _ = local_gen.generate_illustration(
                 work=w,
                 output_image_path=img_path,
                 story_body=md_text,
-                reboot_title=w["title"],
+                reboot_title=reboot_title,
             )
             if saved_img:
                 generated_imgs.append(saved_img)
+                try:
+                    from src.site_builder import build_github_pages
+                    build_github_pages(history_mgr)
+                except Exception as e:
+                    logger.warning(f"GitHub Pages build warning: {e}")
+                if args.push:
+                    git_sync_and_push([saved_img])
 
-        if generated_imgs:
-            try:
-                from src.site_builder import build_github_pages
-                build_github_pages(history_mgr)
-            except Exception as e:
-                logger.warning(f"GitHub Pages build warning: {e}")
-        if args.push and generated_imgs:
-            git_sync_and_push(generated_imgs)
         print_stock_status(history_mgr)
         return
 
