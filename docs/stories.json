@@ -210,9 +210,9 @@
     "original_title": "歯車",
     "original_author": "芥川龍之介",
     "modern_tech": "大脳視覚野の反応拡散方程式（エルメントラウト・コーワン数理モデル）、光遺伝学フェーズロック制御、神経雪（Visual Snow）位相解析",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/akutagawa-haguruma.html",
-    "image": "",
+    "image": "assets/images/akutagawa-haguruma.png",
     "char_count": 4702
   },
   {
