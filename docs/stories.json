@@ -366,9 +366,9 @@
     "original_title": "鏡地獄",
     "original_author": "江戸川乱歩",
     "modern_tech": "光学メタマテリアル、負屈折率フォトニック結晶キャビティ、トポロジカル位相幾何学、量子もつれ光子イマーシブ観測",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/edogawa-mirror-hell.html",
-    "image": "",
+    "image": "assets/images/edogawa-mirror-hell.png",
     "char_count": 4770
   },
   {
