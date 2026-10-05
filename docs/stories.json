@@ -378,9 +378,9 @@
     "original_title": "人間椅子",
     "original_author": "江戸川乱歩",
     "modern_tech": "柔軟触覚センサアレイ（電子皮膚 / E-skin）、情報幾何学に基づく触覚多様体解析、自己組織化スマートマテリアル、バイオハプティクス情動AI",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/edogawa-human-chair.html",
-    "image": "",
+    "image": "assets/images/edogawa-human-chair.png",
     "char_count": 6139
   },
   {
