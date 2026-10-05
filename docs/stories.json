@@ -438,9 +438,9 @@
     "original_title": "夢十夜",
     "original_author": "夏目漱石",
     "modern_tech": "クリプトビオシス誘導ガラス化凍結保存、量子ゼノン効果による生体時間制御、深層睡眠時空間シミュレーション",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/soseki-yume-juuya.html",
-    "image": "",
+    "image": "assets/images/soseki-yume-juuya.png",
     "char_count": 7323
   },
   {
@@ -510,9 +510,9 @@
     "original_title": "注文の多い料理店",
     "original_author": "宮沢賢治",
     "modern_tech": "行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/miyazawa-chumon.html",
-    "image": "",
+    "image": "assets/images/miyazawa-chumon.png",
     "char_count": 5528
   },
   {
@@ -522,9 +522,9 @@
     "original_title": "風の又三郎",
     "original_author": "宮沢賢治",
     "modern_tech": "ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/miyazawa-kaze-no-matasaburo.html",
-    "image": "",
+    "image": "assets/images/miyazawa-kaze-no-matasaburo.png",
     "char_count": 4339
   }
 ]
