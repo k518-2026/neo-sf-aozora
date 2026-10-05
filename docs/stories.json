@@ -450,9 +450,9 @@
     "original_title": "完全犯罪",
     "original_author": "小栗虫太郎",
     "modern_tech": "量子もつれ暗号撹乱、超短パルスフェムト秒レーザー熱音響暗殺、環境ゲノム偽装",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/oguri-complete-crime.html",
-    "image": "",
+    "image": "assets/images/oguri-complete-crime.png",
     "char_count": 6016
   },
   {
