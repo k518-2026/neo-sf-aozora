@@ -498,9 +498,9 @@
     "original_title": "夢鬼",
     "original_author": "蘭郁二郎",
     "modern_tech": "fMRI生成AIによる視覚心象復元（Stable Diffusionニューロデコード）、睡眠中シナプス固定阻害、明晰夢電気刺激",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/ran-dream-demon.html",
-    "image": "",
+    "image": "assets/images/ran-dream-demon.png",
     "char_count": 5907
   },
   {
