@@ -1,3 +1,4 @@
+import os
 import re
 import smtplib
 import ssl
@@ -27,12 +28,32 @@ class WordPressMailSender:
         self.config = config
 
     @staticmethod
+    def _load_lightweight_image(path: Path, max_bytes: int = 120_000):
+        """Returns (bytes, mime_subtype). Converts PNG to a small JPEG so the email stays tiny."""
+        raw = path.read_bytes()
+        try:
+            import io
+            from PIL import Image
+            img = Image.open(io.BytesIO(raw)).convert("RGB")
+            for quality in (82, 72, 62, 50):
+                buf = io.BytesIO()
+                img.save(buf, "JPEG", quality=quality, optimize=True)
+                if buf.tell() <= max_bytes:
+                    break
+            return buf.getvalue(), "jpeg"
+        except Exception as e:
+            logger.warning(f"Pillow compression unavailable ({e}); attaching original image.")
+            return raw, "png"
+
+    @staticmethod
     def _sanitize_html_for_blogger(html_text: str) -> str:
         """
-        Simplifies HTML specifically for Blogger's 'Post using email' and strict outbound SMTP filters (e.g., Outlook.com 550 5.7.520):
+        Simplifies HTML specifically for Blogger's 'Post using email' and strict outbound/inbound SMTP filters:
         1. Replaces <a href="...">text</a> with plain text (eliminates external URL spam-filter triggers while keeping DOI strings intact).
-        2. Converts <table> rows (Next Work Preview) into simple <p> lines.
-        3. Strips inline style="..." and class="..." attributes so only lightweight semantic tags remain.
+        2. Safely removes bare URLs without eating adjacent closing HTML tags (</li>, </div>, </p>).
+        3. Removes empty <li> / <ul> elements left behind when a bullet contained only a URL.
+        4. Converts <table> rows (Next Work Preview) into simple <p> lines and inner <div> blocks into <p> blocks.
+        5. Strips inline style="..." and class="..." attributes so only lightweight semantic tags remain.
         """
         cleaned = html_text
         # 1. Strip <a> tags, keeping inner text or 'DOI: 10.xxxx/...'
@@ -43,9 +64,9 @@ class WordPressMailSender:
             flags=re.IGNORECASE | re.DOTALL,
         )
         cleaned = re.sub(r"<a\b[^>]*>(.*?)</a>", r"\1", cleaned, flags=re.IGNORECASE | re.DOTALL)
-        # Remove any remaining bare http/https URLs
-        cleaned = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<\"']+)", r"DOI: \1", cleaned, flags=re.IGNORECASE)
-        cleaned = re.sub(r"https?://[^\s<\"']+", "", cleaned)
+        # Convert bare DOIs to plain 'DOI: 10.xxxx' and remove remaining bare http/https URLs WITHOUT matching '<' or '>'
+        cleaned = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<>\"\)\]」』]+)", r"DOI: \1", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"https?://[^\s<>\"\)\]」』]+", "", cleaned)
         cleaned = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", cleaned, flags=re.IGNORECASE)
 
         # 2. Convert <table> blocks into simple paragraphs
@@ -65,17 +86,32 @@ class WordPressMailSender:
 
         cleaned = re.sub(r"<table\b[^>]*>.*?</table>", _table_to_paragraphs, cleaned, flags=re.IGNORECASE | re.DOTALL)
 
-        # 3. Replace styled scene divider divs with simple <p>
+        # 3. Replace styled scene divider divs (* * *, ◆ ◆ ◆, or ✦ ✦ ✦) with simple <p>
         cleaned = re.sub(
-            r"<div\b[^>]*>\s*◆ ◆ ◆\s*</div>",
+            r"<div\b[^>]*>\s*(?:\*\s*\*\s*\*|◆\s*◆\s*◆|✦\s*✦\s*✦)\s*</div>",
             "<p>◆ ◆ ◆</p>",
             cleaned,
             flags=re.IGNORECASE
         )
 
-        # 4. Strip outer container divs and all inline style/class attributes
+        # 4. Strip outer container div if present, then convert inner <div>...</div> blocks into <p>...</p>
+        cleaned = re.sub(r"<div\b[^>]*class=[\"']sf-story-container[\"'][^>]*>", "", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"<div\b[^>]*>\s*<p\b[^>]*>(.*?)</p>\s*</div>", r"<p>\1</p>", cleaned, flags=re.IGNORECASE | re.DOTALL)
+        cleaned = re.sub(r"<div\b[^>]*>(.*?)</div>", r"<p>\1</p>", cleaned, flags=re.IGNORECASE | re.DOTALL)
         cleaned = re.sub(r"</?div\b[^>]*>", "", cleaned, flags=re.IGNORECASE)
+
+        # 5. Strip all inline style="..." and class="..." attributes
         cleaned = re.sub(r'\s+(?:style|class)=["\'][^"\']*["\']', "", cleaned, flags=re.IGNORECASE)
+
+        # 6. Clean up empty <li> items and empty <ul> blocks
+        cleaned = re.sub(
+            r"\s*<li>\s*(?:(?:URL|DOI|[^<>]{0,35}(?:Webサイト|公式ページ|リンク|検索))\s*[:：]\s*)?</li>",
+            "",
+            cleaned,
+            flags=re.IGNORECASE,
+        )
+        cleaned = re.sub(r"\s*<ul>\s*</ul>", "", cleaned, flags=re.IGNORECASE)
+        cleaned = re.sub(r"\s*<p>\s*\*\s*</p>\s*$", "", cleaned, flags=re.IGNORECASE)
 
         return cleaned.strip()
 
@@ -86,11 +122,23 @@ class WordPressMailSender:
         for_blogger: bool = False
     ) -> MIMEMultipart:
         """
-        Constructs a MIMEMultipart email message with text, HTML, and optional PNG image attachment.
+        Constructs a MIMEMultipart email message with text, HTML, and optional lightweight JPEG/PNG image attachment.
         When for_blogger=True, omits WordPress Jetpack shortcodes ([status], [category], [tags])
         and strips external URLs / complex CSS so outbound/inbound spam filters do not block delivery.
         """
+        use_blogger = for_blogger
+        recipient = to_email if to_email is not None else (
+            self.config.blogger_post_email if use_blogger else self.config.wp_post_email
+        )
+        if recipient and "@blogger.com" in recipient.lower():
+            use_blogger = True
+
         has_image = bool(post.image_path and Path(post.image_path).exists())
+        if has_image and use_blogger and os.environ.get(
+            "ATTACH_IMAGES_BLOGGER", "true"
+        ).strip().lower() not in ("1", "true", "yes"):
+            has_image = False
+
         if has_image:
             msg = MIMEMultipart("mixed")
             alt_part = MIMEMultipart("alternative")
@@ -110,17 +158,15 @@ class WordPressMailSender:
         msg["From"] = f"{from_display} <{self.config.user}>"
         
         # Destination inbox
-        recipient = to_email if to_email is not None else (
-            self.config.blogger_post_email if for_blogger else self.config.wp_post_email
-        )
         msg["To"] = recipient
 
-        # Standard RFC 5322 headers to prevent Gmail/Blogger deduplication or spam filtering
+        # Standard RFC 5322 Date header; let Gmail SMTP generate its native @mail.gmail.com Message-ID when using smtp.gmail.com
         msg["Date"] = formatdate(localtime=True)
-        domain = self.config.user.split("@")[-1] if "@" in self.config.user else "neo-sf-aozora.local"
-        msg["Message-ID"] = make_msgid(domain=domain)
+        if "gmail.com" not in (self.config.host or "").lower():
+            domain = self.config.user.split("@")[-1] if "@" in self.config.user else "neo-sf-aozora.local"
+            msg["Message-ID"] = make_msgid(domain=domain)
 
-        if for_blogger:
+        if use_blogger:
             raw_plain = post.content_plain_clean or post.content_plain
             raw_html = post.content_html_clean or post.content_html
             html_body = self._sanitize_html_for_blogger(raw_html)
@@ -135,8 +181,8 @@ class WordPressMailSender:
                 flags=re.IGNORECASE | re.DOTALL,
             )
             html_body = re.sub(r"<a\b[^>]*>(.*?)</a>", r"\1", html_body, flags=re.IGNORECASE | re.DOTALL)
-            html_body = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<\"']+)", r"DOI: \1", html_body, flags=re.IGNORECASE)
-            html_body = re.sub(r"https?://[^\s<\"']+", "", html_body)
+            html_body = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<>\"\)\]」』]+)", r"DOI: \1", html_body, flags=re.IGNORECASE)
+            html_body = re.sub(r"https?://[^\s<>\"\)\]」』]+", "", html_body)
             html_body = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", html_body, flags=re.IGNORECASE)
 
         # Strip all raw URLs from the plain-text part for both WordPress and Blogger
@@ -147,8 +193,8 @@ class WordPressMailSender:
             flags=re.IGNORECASE,
         )
         plain_body = re.sub(r"\[([^\]]+)\]\(https?://[^\)]+\)", r"\1", plain_body)
-        plain_body = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.\S+)", r"DOI: \1", plain_body, flags=re.IGNORECASE)
-        plain_body = re.sub(r"https?://\S+", "", plain_body)
+        plain_body = re.sub(r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<>\"\)\]」』]+)", r"DOI: \1", plain_body, flags=re.IGNORECASE)
+        plain_body = re.sub(r"https?://[^\s<>\"\)\]」』]+", "", plain_body)
         plain_body = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", plain_body, flags=re.IGNORECASE)
 
         # Attach text part and HTML part
@@ -160,12 +206,12 @@ class WordPressMailSender:
 
         if has_image:
             msg.attach(alt_part)
-            img_file = Path(post.image_path)
-            img_bytes = img_file.read_bytes()
-            img_part = MIMEImage(img_bytes, name=img_file.name)
-            img_part.add_header("Content-Disposition", "attachment", filename=img_file.name)
+            img_bytes, subtype = self._load_lightweight_image(Path(post.image_path))
+            att_name = f"illustration.{'jpg' if subtype == 'jpeg' else 'png'}"
+            img_part = MIMEImage(img_bytes, _subtype=subtype, name=att_name)
+            img_part.add_header("Content-Disposition", "attachment", filename=att_name)
             msg.attach(img_part)
-            logger.info(f"Attached illustration image: {img_file.name} ({len(img_bytes)} bytes)")
+            logger.info(f"Attached illustration image: {att_name} ({len(img_bytes)} bytes)")
 
         return msg
 

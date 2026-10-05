@@ -75,15 +75,15 @@ def _strip_markdown_links_keep_doi(text: str) -> str:
     )
     # 2. Other Markdown links [text](url) -> text
     text = re.sub(r"\[([^\]]+)\]\(https?://[^\)]+\)", r"\1", text)
-    # 3. Bare doi.org URLs -> 'DOI: 10.xxxx/...'
+    # 3. Bare doi.org URLs -> 'DOI: 10.xxxx/...' (without eating closing tags or brackets)
     text = re.sub(
-        r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.\S+)",
+        r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<>\"\)\]」』]+)",
         r"DOI: \1",
         text,
         flags=re.IGNORECASE,
     )
     # 4. Any other bare http/https URLs
-    text = re.sub(r"https?://\S+", "", text)
+    text = re.sub(r"https?://[^\s<>\"\)\]」』]+", "", text)
     # Deduplicate accidental 'DOI: DOI: '
     text = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", text, flags=re.IGNORECASE)
     return text
@@ -238,15 +238,15 @@ def _strip_html_links_keep_doi(html_text: str) -> str:
     )
     # 2. Strip all other <a ...>inner</a> tags, keeping only inner text
     cleaned = re.sub(r"<a\b[^>]*>(.*?)</a>", r"\1", cleaned, flags=re.IGNORECASE | re.DOTALL)
-    # 3. Convert any remaining bare doi.org URLs into 'DOI: 10.xxxx'
+    # 3. Convert any remaining bare doi.org URLs into 'DOI: 10.xxxx' without matching '<' or '>'
     cleaned = re.sub(
-        r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<\"']+)",
+        r"(?:DOI:\s*)?https?://(?:dx\.)?doi\.org/(10\.[^\s<>\"\)\]」』]+)",
         r"DOI: \1",
         cleaned,
         flags=re.IGNORECASE,
     )
-    # 4. Strip any remaining bare http/https URLs
-    cleaned = re.sub(r"https?://[^\s<\"']+", "", cleaned)
+    # 4. Strip any remaining bare http/https URLs without matching '<' or '>'
+    cleaned = re.sub(r"https?://[^\s<>\"\)\]」』]+", "", cleaned)
     # Deduplicate accidental 'DOI: DOI: '
     cleaned = re.sub(r"(?:DOI:\s*){2,}", "DOI: ", cleaned, flags=re.IGNORECASE)
     return cleaned

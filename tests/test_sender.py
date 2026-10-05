@@ -164,7 +164,25 @@ class TestNeoAozoraSystem(unittest.TestCase):
             self.assertEqual(blogger_msg.get_content_type(), "multipart/mixed")
             payloads = wp_msg.get_payload()
             self.assertEqual(len(payloads), 2)
-            self.assertEqual(payloads[1].get_content_type(), "image/png")
+            self.assertIn(payloads[1].get_content_type(), ("image/jpeg", "image/png"))
+
+            # Verify Gmail SMTP omits custom Message-ID so smtp.gmail.com generates native @mail.gmail.com Message-ID
+            gmail_cfg = SMTPConfig(
+                host="smtp.gmail.com",
+                port=587,
+                user="yamamoto.k518@gmail.com",
+                password="secret",
+                use_tls=True,
+                use_ssl=False,
+                from_name="SF Test Publisher",
+                wp_post_email="secret_post@post.wordpress.com",
+                default_status="publish",
+                use_jetpack_shortcodes=True,
+                blogger_post_email="testuser.secret@blogger.com",
+            )
+            gmail_msg = WordPressMailSender(gmail_cfg).create_mime_message(formatted, for_blogger=True)
+            self.assertIsNone(gmail_msg["Message-ID"])
 
 if __name__ == "__main__":
     unittest.main()
+
