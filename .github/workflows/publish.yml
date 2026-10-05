@@ -10,10 +10,10 @@ on:
   # 1) 朝の通勤前: 20:55 UTC = 05:55 JST 起動 -> 06:15〜06:25 JST 頃に配信完了
   # 2) 夕方の通勤前: 07:55 UTC = 16:55 JST 起動 -> 17:15〜17:25 JST 頃に配信完了
   # 3) 夜寝る前: 12:55 UTC = 21:55 JST 起動 -> 22:15〜22:25 JST 頃に配信完了
-  schedule:
-    - cron: '55 20 * * *'
-    - cron: '55 7 * * *'
-    - cron: '55 12 * * *'
+  # schedule:  # 2026-10-05 WordPress 異議申し立ての結果待ちのため一時停止。再開は # を外す
+    # - cron: '55 20 * * *'
+    # - cron: '55 7 * * *'
+    # - cron: '55 12 * * *'
 
   # Manual execution from GitHub Actions UI
   workflow_dispatch:
