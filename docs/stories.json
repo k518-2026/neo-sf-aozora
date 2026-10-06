@@ -1,5 +1,17 @@
 [
   {
+    "no": 48,
+    "work_id": "mori-takasebune",
+    "title": "高瀬舟――神経幸福の果てに漂う流刑",
+    "original_title": "高瀬舟",
+    "original_author": "森鴎外",
+    "modern_tech": "ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル",
+    "has_image": true,
+    "url": "stories/mori-takasebune.html",
+    "image": "assets/images/mori-takasebune.png",
+    "char_count": 5159
+  },
+  {
     "no": 47,
     "work_id": "soseki-kokoro",
     "title": "こころ――失われた記憶の謎",

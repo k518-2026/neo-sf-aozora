@@ -15,10 +15,10 @@
       Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
     </p>
     <div class="stats-bar">
-      <div class="stat-pill"><strong>47</strong> 収録作品</div>
-      <div class="stat-pill"><strong>47</strong> 挿絵付き作品</div>
-      <div class="stat-pill"><strong>14</strong> 原典文豪</div>
-      <div class="stat-pill">最終更新: 2026-10-06 07:20 JST</div>
+      <div class="stat-pill"><strong>48</strong> 収録作品</div>
+      <div class="stat-pill"><strong>48</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>15</strong> 原典文豪</div>
+      <div class="stat-pill">最終更新: 2026-10-06 21:33 JST</div>
     </div>
   </header>
 
@@ -27,7 +27,7 @@
       <div class="filter-group">
         <input type="search" id="searchInput" class="search-input" placeholder="作品名・原典・科学技術キーワードで検索..." oninput="filterCards()" />
         <select id="authorFilter" class="select-filter" onchange="filterCards()">
-          <option value="">すべての原典作家（14名）</option>
+          <option value="">すべての原典作家（15名）</option>
           <option value="中島敦">中島敦</option>
           <option value="久生十蘭">久生十蘭</option>
           <option value="坂口安吾">坂口安吾</option>
@@ -37,6 +37,7 @@
           <option value="宮沢賢治">宮沢賢治</option>
           <option value="小栗虫太郎">小栗虫太郎</option>
           <option value="梶井基次郎">梶井基次郎</option>
+          <option value="森鴎外">森鴎外</option>
           <option value="江戸川乱歩">江戸川乱歩</option>
           <option value="泉鏡花">泉鏡花</option>
           <option value="海野十三">海野十三</option>
@@ -45,7 +46,7 @@
         </select>
         <select id="imageFilter" class="select-filter" onchange="filterCards()">
           <option value="">すべて表示</option>
-          <option value="yes">🎨 挿絵ありのみ (47)</option>
+          <option value="yes">🎨 挿絵ありのみ (48)</option>
         </select>
         <select id="sortOrder" class="select-filter" onchange="sortCards()">
           <option value="desc">新しい順（#大 → #01）</option>
@@ -56,6 +57,22 @@
     </div>
 
     <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-no="48" data-author="森鴎外" data-illustrated="yes" data-search="高瀬舟――神経幸福の果てに漂う流刑 高瀬舟 森鴎外 ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル 地球軌道から流刑衛星へ向かう小型護送シャトル「高瀬舟」。罪人とされる喜助の澄み切った幸福感と、安楽死を巡る深い問いが護送官・庄兵衛の心を揺さぶる。">
+        <a href="stories/mori-takasebune.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/mori-takasebune.png" alt="高瀬舟――神経幸福の果てに漂う流刑" loading="lazy" />
+          <span class="card-no-badge">#48</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：森鴎外『高瀬舟』</div>
+          <h2 class="card-title"><a href="stories/mori-takasebune.html">高瀬舟――神経幸福の果てに漂う流刑</a></h2>
+          <div class="card-tech">🔬 ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル</div>
+          <p class="card-summary">地球軌道から流刑衛星へ向かう小型護送シャトル「高瀬舟」。罪人とされる喜助の澄み切った幸福感と、安楽死を巡る深い問いが護送官・庄兵衛の心を揺さぶる。</p>
+          <div class="card-footer">
+            <span>約 5,159 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/mori-takasebune.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
       <article class="story-card" data-no="47" data-author="夏目漱石" data-illustrated="yes" data-search="こころ――失われた記憶の謎 こころ 夏目漱石 死後起動型タイムロック暗号（time-lock puzzle）、エピソード記憶の神経ホログラフィック再生、罪悪感と自己処罰の認知神経科学 「先生」から届いた長大な暗号化メモリ遺書。百年前のkとの悲劇的な記憶を追体験した「私」が、先生が最後に遺した本当の希望のメッセージに辿り着く。">
         <a href="stories/soseki-kokoro.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/soseki-kokoro.png" alt="こころ――失われた記憶の謎" loading="lazy" />

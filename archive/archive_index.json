@@ -750,5 +750,21 @@
     "narration_file": "47_こころ_narration.txt",
     "full_file": "47_こころ_full.txt",
     "original_md_file": "47_こころ.md"
+  },
+  {
+    "work_no": 48,
+    "work_id": "mori-takasebune",
+    "title": "高瀬舟",
+    "subtitle": "神経幸福の果てに漂う流刑",
+    "attribution": "",
+    "original_author": "森鴎外",
+    "original_title": "高瀬舟",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000129/card691.html",
+    "modern_tech": "ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル",
+    "summary": "地球軌道から流刑衛星へ向かう小型護送シャトル「高瀬舟」。罪人とされる喜助の澄み切った幸福感と、安楽死を巡る深い問いが護送官・庄兵衛の心を揺さぶる。",
+    "char_count": 3348,
+    "narration_file": "48_高瀬舟_narration.txt",
+    "full_file": "48_高瀬舟_full.txt",
+    "original_md_file": "48_高瀬舟.md"
   }
 ]
