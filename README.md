@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **48** 作品（うち挿絵付き **48** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-06 21:33 JST）
+- **収録作品数**: 全 **48** 作品（うち挿絵付き **48** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-06 21:35 JST）
 
 ---
 
@@ -14,7 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
-| 48 | **[高瀬舟――神経幸福の果てに漂う流刑](content/2026-10-06_mori_takasebune.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/mori-takasebune.html) | [📄原稿](content/2026-10-06_mori_takasebune.md) | [🎨挿絵](content/2026-10-06_mori_takasebune.png) | 森鴎外[『高瀬舟』](https://www.aozora.gr.jp/cards/000129/card691.html) | ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル | 5,159字 |
+| 48 | **[高瀬舟――神経幸福の果てに漂う流刑](content/2026-10-06_mori_takasebune.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/mori-takasebune.html) | [📄原稿](content/2026-10-06_mori_takasebune.md) | [🎨挿絵](content/2026-10-06_mori_takasebune.png) | 森鴎外[『高瀬舟』](https://www.aozora.gr.jp/cards/000129/card691.html) | ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル | 5,352字 |
 | 47 | **[こころ――失われた記憶の謎](content/2026-10-06_soseki_kokoro.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-kokoro.html) | [📄原稿](content/2026-10-06_soseki_kokoro.md) | [🎨挿絵](content/2026-10-06_soseki_kokoro.png) | 夏目漱石[『こころ』](https://www.aozora.gr.jp/cards/000148/card773.html) | 死後起動型タイムロック暗号（Time-Lock Puzzle）、エピソード記憶の神経ホログラフィック再生、罪悪感と自己処罰の認知神経科学 | 4,930字 |
 | 46 | **[高野聖――遺伝子の呪縛](content/2026-10-06_izumi_koya_hijiri.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-koya-hijiri.html) | [📄原稿](content/2026-10-06_izumi_koya_hijiri.md) | [🎨挿絵](content/2026-10-06_izumi_koya_hijiri.png) | 泉鏡花[『高野聖』](https://www.aozora.gr.jp/cards/000050/card521.html) | CRISPRウイルスベクターによる体細胞エピゲノム書き換え、犁鼻器・扁桃体フェロモン神経回路、未知の共生微生物による生体再生 | 4,959字 |
 | 45 | **[走れメロス――信頼の証明](content/2026-10-06_dazai_hashire_melos.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-hashire-melos.html) | [📄原稿](content/2026-10-06_dazai_hashire_melos.md) | [🎨挿絵](content/2026-10-06_dazai_hashire_melos.png) | 太宰治[『走れメロス』](https://www.aozora.gr.jp/cards/000035/card1567.html) | 暗号学的コミットメントとゼロ知識証明、骨格筋ミトコンドリアATP代謝の極限制御、信頼と裏切りの反復ゲーム理論 | 4,686字 |

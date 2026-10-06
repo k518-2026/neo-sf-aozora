@@ -606,8 +606,8 @@ class LocalStoryGenerator:
                 if is_dup_para:
                     continue
 
-            # Split paragraph into sentence units (preserving punctuation and closing quotes)
-            sent_tokens = re.findall(r"[^。！？\n]+(?:[。！？]+(?:」|』|）|\))?|$)", p)
+            # Split paragraph into sentence units (preserving punctuation and closing quotes, including 「...」 without a trailing 。)
+            sent_tokens = re.findall(r"(?:「[^」]*」|[^。！？\n]+(?:[。！？]+(?:」|』|）|\))?|$))", p)
             if not sent_tokens:
                 sent_tokens = [p]
 
@@ -634,6 +634,9 @@ class LocalStoryGenerator:
                 continue
 
             reconstructed_p = "".join(kept_sents).strip()
+            # Ensure unbalanced quotes are never left behind
+            if reconstructed_p.count("「") != reconstructed_p.count("」"):
+                reconstructed_p = p.strip()
             # Check if the paragraph ends with an abrupt mid-sentence cutoff (not ending with valid punctuation)
             if reconstructed_p and not re.search(r"[。！？!?」』）\)\*了]$", reconstructed_p):
                 # If paragraph has earlier complete sentences, keep only up to the last complete sentence
@@ -1001,7 +1004,6 @@ class LocalStoryGenerator:
             num_ctx=8192,
         )
         commentary_body = self._clean_llm_output(raw_commentary)
-        commentary_body, _ = self._remove_fuzzy_repetitions(commentary_body)
         # Strip heading if the model repeated it, and strip any stray URLs so only our verified DOIs appear
         commentary_body = re.sub(r"^#+.*作中技術のやさしい解説.*?\n", "", commentary_body).strip()
         commentary_body = re.sub(r"###\s*【引用・参考文献.*", "", commentary_body, flags=re.DOTALL).strip()
