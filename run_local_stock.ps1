@@ -1,15 +1,32 @@
 param(
-    [int]$Count = 5,
+    [int]$Count = 1,
     [string]$HostUrl = "http://192.168.128.59:11434",
     [string]$DrawThingsHost = "http://192.168.128.59:7860",
     [string]$Model = "",
     [switch]$GenerateImages,
+    [switch]$DailyQuota,
     [switch]$WeeklyQuota,
     [switch]$NoPush
 )
 
 $ErrorActionPreference = "Stop"
 Set-Location -Path $PSScriptRoot
+
+if ($DailyQuota -and -not $GenerateImages) {
+    $todayStr = (Get-Date).ToString("yyyy-MM-dd")
+    $createdToday = 0
+    if (Test-Path "content") {
+        Get-ChildItem -Path "content" -Filter "${todayStr}_*.md" | ForEach-Object {
+            $createdToday++
+        }
+    }
+    if ($createdToday -ge $Count) {
+        Write-Host "Daily quota already met ($createdToday / $Count work(s) generated on $todayStr). Skipping." -ForegroundColor Green
+        exit 0
+    }
+    $Count = $Count - $createdToday
+    Write-Host "Daily quota status ($todayStr): $createdToday generated so far, generating remaining $Count work(s)..." -ForegroundColor Cyan
+}
 
 if ($WeeklyQuota -and -not $GenerateImages) {
     # Calculate Monday of the current week (ISO week) to check stories created this week (especially Wed/Thu)
