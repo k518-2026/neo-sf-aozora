@@ -21,12 +21,14 @@ from src.story_generator import (
 logger = logging.getLogger(__name__)
 
 DEFAULT_OLLAMA_HOST = "http://192.168.128.59:11434"
-DEFAULT_LOCAL_MODEL = "gemma4:12b"
-DEFAULT_WRITER_MODEL = "gemma4:12b"
+DEFAULT_LOCAL_MODEL = "shosetsu"
+DEFAULT_WRITER_MODEL = "shosetsu"
 DEFAULT_DRAW_THINGS_HOST = "http://192.168.128.59:7860"
 
 # Preferred local models in priority order if user hasn't explicitly forced one
 PREFERRED_LOCAL_MODELS = [
+    "shosetsu:latest",
+    "shosetsu",
     "gemma3:27b",
     "qwen2.5:32b",
     "gemma4:12b",
@@ -391,7 +393,11 @@ class LocalStoryGenerator:
     def resolve_model_name(self) -> str:
         installed = self.get_installed_models()
         if self.model_name:
-            # If explicitly specified, use it
+            if self.model_name in installed:
+                return self.model_name
+            for inst in installed:
+                if inst.startswith(self.model_name.split(":")[0]):
+                    return inst
             return self.model_name
         for pref in PREFERRED_LOCAL_MODELS:
             if pref in installed:
@@ -405,11 +411,15 @@ class LocalStoryGenerator:
         return DEFAULT_LOCAL_MODEL
 
     def resolve_writer_model_name(self) -> str:
-        """Resolves the optimal installed model for English visual prompt generation (`gemma4:12b` preferred)."""
+        """Resolves the optimal installed model for English visual prompt generation (`shosetsu` / `gemma4:12b` preferred)."""
         installed = self.get_installed_models()
-        if self.writer_model and self.writer_model in installed:
-            return self.writer_model
-        for cand in ("gemma4:12b", "gemma2:9b", "qwen3.5:9b", "qwen2.5:14b"):
+        if self.writer_model:
+            if self.writer_model in installed:
+                return self.writer_model
+            for inst in installed:
+                if inst.startswith(self.writer_model.split(":")[0]):
+                    return inst
+        for cand in ("shosetsu:latest", "shosetsu", "gemma4:12b", "gemma2:9b", "qwen3.5:9b", "qwen2.5:14b"):
             if cand in installed:
                 return cand
         return self.resolve_model_name()
@@ -436,7 +446,7 @@ class LocalStoryGenerator:
                 "repeat_penalty": 1.12,
             },
         }
-        if any(k in model.lower() for k in ("qwen3", "gemma4", "deepseek-r1")):
+        if any(k in model.lower() for k in ("shosetsu", "ronbun", "qwen3", "gemma4", "deepseek-r1")):
             payload["think"] = False
         data = json.dumps(payload).encode("utf-8")
         req = urllib.request.Request(

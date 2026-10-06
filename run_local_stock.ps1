@@ -2,7 +2,7 @@ param(
     [int]$Count = 1,
     [string]$HostUrl = "http://192.168.128.59:11434",
     [string]$DrawThingsHost = "http://192.168.128.59:7860",
-    [string]$Model = "",
+    [string]$Model = "shosetsu",
     [switch]$GenerateImages,
     [switch]$DailyQuota,
     [switch]$WeeklyQuota,
