@@ -1,5 +1,17 @@
 [
   {
+    "no": 49,
+    "work_id": "nakajima-meijin-den",
+    "title": "名人伝――予測される無為の特異点",
+    "original_title": "名人伝",
+    "original_author": "中島敦",
+    "modern_tech": "小脳の順モデル・逆モデルによる運動学習、脳のデフォルト・モード・ネットワーク（DMN）同期、量子測定における非破壊観測",
+    "has_image": true,
+    "url": "stories/nakajima-meijin-den.html",
+    "image": "assets/images/nakajima-meijin-den.png",
+    "char_count": 5742
+  },
+  {
     "no": 48,
     "work_id": "mori-takasebune",
     "title": "高瀬舟――神経幸福の果てに漂う流刑",
