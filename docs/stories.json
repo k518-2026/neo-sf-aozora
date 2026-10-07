@@ -1,5 +1,65 @@
 [
   {
+    "no": 54,
+    "work_id": "yumeno-shojo-jigoku",
+    "title": "少女地獄――電子の檻に咲く偽りの祈り",
+    "original_title": "少女地獄",
+    "original_author": "夢野久作",
+    "modern_tech": "複雑ネットワーク上の情報拡散（SIR数理モデル）、ディープフェイク・合成記憶の電子透かし検証、認知的不協和の解消メカニズム",
+    "has_image": true,
+    "url": "stories/yumeno-shojo-jigoku.html",
+    "image": "assets/images/yumeno-shojo-jigoku.png",
+    "char_count": 5762
+  },
+  {
+    "no": 53,
+    "work_id": "unno-kaiten-makyo",
+    "title": "海底大陸――深淵に眠る「呼吸する」都市",
+    "original_title": "海底大陸",
+    "original_author": "海野十三",
+    "modern_tech": "ミューオン透視（ミュオグラフィ）による海底地殻構造探査、超臨界水地熱発電システム、深海化学合成生態系バイオリアクター",
+    "has_image": true,
+    "url": "stories/unno-kaiten-makyo.html",
+    "image": "assets/images/unno-kaiten-makyo.png",
+    "char_count": 5313
+  },
+  {
+    "no": 52,
+    "work_id": "unno-kasei-ma",
+    "title": "火星魔――結晶体の中に脈動する思考",
+    "original_title": "火星魔",
+    "original_author": "海野十三",
+    "modern_tech": "ケイ素―炭素ハイブリッド高分子の自己組織化、ラマン分光による異星バイオシグネチャ検出、惑星保護検疫プロトコル",
+    "has_image": true,
+    "url": "stories/unno-kasei-ma.html",
+    "image": "assets/images/unno-kasei-ma.png",
+    "char_count": 6028
+  },
+  {
+    "no": 51,
+    "work_id": "edogawa-imomushi",
+    "title": "芋虫――共鳴する残響",
+    "original_title": "芋虫",
+    "original_author": "江戸川乱歩",
+    "modern_tech": "高密度皮質脳波（ECoG）による双方向思考通信、触覚フィードバック型ハプティクス外骨格、神経可塑性による失われた感覚野の再構築",
+    "has_image": true,
+    "url": "stories/edogawa-imomushi.html",
+    "image": "assets/images/edogawa-imomushi.png",
+    "char_count": 5675
+  },
+  {
+    "no": 50,
+    "work_id": "edogawa-kagami-jigoku",
+    "title": "鏡地獄――内省する光の檻",
+    "original_title": "鏡地獄",
+    "original_author": "江戸川乱歩",
+    "modern_tech": "完全反射フォトニック結晶の球面光共振器、光の遅延フィードバックによる多重自己像干渉、身体所有感と自己認識の神経錯覚",
+    "has_image": true,
+    "url": "stories/edogawa-kagami-jigoku.html",
+    "image": "assets/images/edogawa-kagami-jigoku.png",
+    "char_count": 6238
+  },
+  {
     "no": 49,
     "work_id": "nakajima-meijin-den",
     "title": "名人伝――予測される無為の特異点",

@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **49** 作品（うち挿絵付き **49** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-07 20:42 JST）
+- **収録作品数**: 全 **54** 作品（うち挿絵付き **54** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-07 23:33 JST）
 
 ---
 
@@ -14,6 +14,11 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 54 | **[少女地獄――電子の檻に咲く偽りの祈り](content/2026-10-07_yumeno_shojo_jigoku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-shojo-jigoku.html) | [📄原稿](content/2026-10-07_yumeno_shojo_jigoku.md) | [🎨挿絵](content/2026-10-07_yumeno_shojo_jigoku.png) | 夢野久作[『少女地獄』](https://www.aozora.gr.jp/cards/000096/card936.html) | 複雑ネットワーク上の情報拡散（SIR数理モデル）、ディープフェイク・合成記憶の電子透かし検証、認知的不協和の解消メカニズム | 5,762字 |
+| 53 | **[海底大陸――深淵に眠る「呼吸する」都市](content/2026-10-07_unno_kaiten_makyo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-kaiten-makyo.html) | [📄原稿](content/2026-10-07_unno_kaiten_makyo.md) | [🎨挿絵](content/2026-10-07_unno_kaiten_makyo.png) | 海野十三[『海底大陸』](https://www.aozora.gr.jp/cards/000160/card3366.html) | ミューオン透視（ミュオグラフィ）による海底地殻構造探査、超臨界水地熱発電システム、深海化学合成生態系バイオリアクター | 5,313字 |
+| 52 | **[火星魔――結晶体の中に脈動する思考](content/2026-10-07_unno_kasei_ma.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-kasei-ma.html) | [📄原稿](content/2026-10-07_unno_kasei_ma.md) | [🎨挿絵](content/2026-10-07_unno_kasei_ma.png) | 海野十三[『火星魔』](https://www.aozora.gr.jp/cards/000160/card1231.html) | ケイ素―炭素ハイブリッド高分子の自己組織化、ラマン分光による異星バイオシグネチャ検出、惑星保護検疫プロトコル | 6,028字 |
+| 51 | **[芋虫――共鳴する残響](content/2026-10-07_edogawa_imomushi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-imomushi.html) | [📄原稿](content/2026-10-07_edogawa_imomushi.md) | [🎨挿絵](content/2026-10-07_edogawa_imomushi.png) | 江戸川乱歩[『芋虫』](https://www.aozora.gr.jp/cards/001779/card56643.html) | 高密度皮質脳波（ECoG）による双方向思考通信、触覚フィードバック型ハプティクス外骨格、神経可塑性による失われた感覚野の再構築 | 5,675字 |
+| 50 | **[鏡地獄――内省する光の檻](content/2026-10-07_edogawa_kagami_jigoku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-kagami-jigoku.html) | [📄原稿](content/2026-10-07_edogawa_kagami_jigoku.md) | [🎨挿絵](content/2026-10-07_edogawa_kagami_jigoku.png) | 江戸川乱歩[『鏡地獄』](https://www.aozora.gr.jp/cards/001779/card56645.html) | 完全反射フォトニック結晶の球面光共振器、光の遅延フィードバックによる多重自己像干渉、身体所有感と自己認識の神経錯覚 | 6,238字 |
 | 49 | **[名人伝――予測される無為の特異点](content/2026-10-07_nakajima_meijin_den.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-meijin-den.html) | [📄原稿](content/2026-10-07_nakajima_meijin_den.md) | [🎨挿絵](content/2026-10-07_nakajima_meijin_den.png) | 中島敦[『名人伝』](https://www.aozora.gr.jp/cards/000119/card622.html) | 小脳の順モデル・逆モデルによる運動学習、脳のデフォルト・モード・ネットワーク（DMN）同期、量子測定における非破壊観測 | 5,742字 |
 | 48 | **[高瀬舟――神経幸福の果てに漂う流刑](content/2026-10-06_mori_takasebune.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/mori-takasebune.html) | [📄原稿](content/2026-10-06_mori_takasebune.md) | [🎨挿絵](content/2026-10-06_mori_takasebune.png) | 森鴎外[『高瀬舟』](https://www.aozora.gr.jp/cards/000129/card691.html) | ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル | 5,352字 |
 | 47 | **[こころ――失われた記憶の謎](content/2026-10-06_soseki_kokoro.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-kokoro.html) | [📄原稿](content/2026-10-06_soseki_kokoro.md) | [🎨挿絵](content/2026-10-06_soseki_kokoro.png) | 夏目漱石[『こころ』](https://www.aozora.gr.jp/cards/000148/card773.html) | 死後起動型タイムロック暗号（Time-Lock Puzzle）、エピソード記憶の神経ホログラフィック再生、罪悪感と自己処罰の認知神経科学 | 4,930字 |

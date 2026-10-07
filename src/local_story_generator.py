@@ -20,7 +20,11 @@ from src.story_generator import (
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_OLLAMA_HOST = "http://192.168.128.59:11434"
+DEFAULT_OLLAMA_HOST = "http://192.168.128.62:11434"
+FALLBACK_OLLAMA_HOSTS = [
+    "http://192.168.128.62:11434",
+    "http://192.168.128.59:11434",
+]
 DEFAULT_LOCAL_MODEL = "shosetsu"
 DEFAULT_WRITER_MODEL = "shosetsu"
 DEFAULT_DRAW_THINGS_HOST = "http://192.168.128.59:7860"
@@ -343,7 +347,14 @@ class LocalStoryGenerator:
         writer_model: Optional[str] = None,
         draw_things_host: Optional[str] = None,
     ):
-        self.ollama_host = (ollama_host or os.getenv("OLLAMA_HOST", DEFAULT_OLLAMA_HOST)).rstrip("/")
+        raw_host = (ollama_host or os.getenv("OLLAMA_HOST", DEFAULT_OLLAMA_HOST)).strip()
+        primary_hosts = [h.strip().rstrip("/") for h in raw_host.split(",") if h.strip()]
+        self.ollama_host = primary_hosts[0] if primary_hosts else DEFAULT_OLLAMA_HOST
+        self.ollama_hosts: List[str] = list(primary_hosts)
+        for fb in FALLBACK_OLLAMA_HOSTS:
+            fb_clean = fb.rstrip("/")
+            if fb_clean not in self.ollama_hosts:
+                self.ollama_hosts.append(fb_clean)
         self.model_name = model_name or os.getenv("OLLAMA_MODEL", "")
         self.writer_model = writer_model or os.getenv("OLLAMA_WRITER_MODEL", DEFAULT_WRITER_MODEL)
         self.draw_things_host = (draw_things_host or os.getenv("DRAW_THINGS_HOST", DEFAULT_DRAW_THINGS_HOST)).rstrip("/")
@@ -369,25 +380,35 @@ class LocalStoryGenerator:
         return {"online": False, "host": self.draw_things_host}
 
     def is_ollama_running(self, auto_start: bool = False) -> bool:
-        try:
-            req = urllib.request.Request(f"{self.ollama_host}/api/tags")
-            with urllib.request.urlopen(req, timeout=5) as res:
-                if res.getcode() == 200:
-                    return True
-        except Exception as e:
-            logger.debug(f"Ollama server check failed ({self.ollama_host}): {e}")
+        for candidate_host in self.ollama_hosts:
+            try:
+                req = urllib.request.Request(f"{candidate_host}/api/tags")
+                with urllib.request.urlopen(req, timeout=5) as res:
+                    if res.getcode() == 200:
+                        if candidate_host != self.ollama_host:
+                            logger.info(f"Switched active Ollama host from {self.ollama_host} to {candidate_host}")
+                            self.ollama_host = candidate_host
+                        return True
+            except Exception as e:
+                logger.debug(f"Ollama server check failed ({candidate_host}): {e}")
 
         return False
 
     def get_installed_models(self) -> List[str]:
-        try:
-            req = urllib.request.Request(f"{self.ollama_host}/api/tags")
-            with urllib.request.urlopen(req, timeout=5) as res:
-                if res.getcode() == 200:
-                    data = json.loads(res.read().decode("utf-8", errors="ignore"))
-                    return [m.get("name", "") for m in data.get("models", []) if m.get("name")]
-        except Exception as e:
-            logger.debug(f"Could not list Ollama models: {e}")
+        for candidate_host in self.ollama_hosts:
+            try:
+                req = urllib.request.Request(f"{candidate_host}/api/tags")
+                with urllib.request.urlopen(req, timeout=5) as res:
+                    if res.getcode() == 200:
+                        data = json.loads(res.read().decode("utf-8", errors="ignore"))
+                        models = [m.get("name", "") for m in data.get("models", []) if m.get("name")]
+                        if models:
+                            if candidate_host != self.ollama_host:
+                                logger.info(f"Switched active Ollama host to {candidate_host}")
+                                self.ollama_host = candidate_host
+                            return models
+            except Exception as e:
+                logger.debug(f"Could not list Ollama models on {candidate_host}: {e}")
         return []
 
     def resolve_model_name(self) -> str:
@@ -434,7 +455,6 @@ class LocalStoryGenerator:
         model_override: Optional[str] = None,
     ) -> str:
         model = model_override or self.resolve_model_name()
-        url = f"{self.ollama_host}/api/chat"
         payload: Dict[str, Any] = {
             "model": model,
             "messages": messages,
@@ -449,15 +469,27 @@ class LocalStoryGenerator:
         if any(k in model.lower() for k in ("shosetsu", "ronbun", "qwen3", "gemma4", "deepseek-r1")):
             payload["think"] = False
         data = json.dumps(payload).encode("utf-8")
-        req = urllib.request.Request(
-            url,
-            data=data,
-            headers={"Content-Type": "application/json"},
-            method="POST",
-        )
-        with urllib.request.urlopen(req, timeout=timeout) as res:
-            body = json.loads(res.read().decode("utf-8", errors="ignore"))
-            return body.get("message", {}).get("content", "").strip()
+        hosts_to_try = [self.ollama_host] + [h for h in self.ollama_hosts if h != self.ollama_host]
+        last_err: Optional[Exception] = None
+        for host in hosts_to_try:
+            url = f"{host}/api/chat"
+            try:
+                req = urllib.request.Request(
+                    url,
+                    data=data,
+                    headers={"Content-Type": "application/json"},
+                    method="POST",
+                )
+                with urllib.request.urlopen(req, timeout=timeout) as res:
+                    body = json.loads(res.read().decode("utf-8", errors="ignore"))
+                    if host != self.ollama_host:
+                        logger.info(f"Failover succeeded on Ollama host {host}")
+                        self.ollama_host = host
+                    return body.get("message", {}).get("content", "").strip()
+            except Exception as e:
+                last_err = e
+                logger.warning(f"Ollama chat failed on {host} ({model}): {e}")
+        raise RuntimeError(f"All Ollama hosts ({hosts_to_try}) failed for model '{model}': {last_err}")
 
     def _generate_english_queries_via_llm(self, work: Dict[str, Any]) -> List[Tuple[str, str]]:
         """

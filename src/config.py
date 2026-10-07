@@ -39,8 +39,8 @@ class SMTPConfig:
     x_access_token_secret: str = ""
     x_webhook_url: str = ""
     wp_site_url: str = ""
-    ollama_host: str = "http://192.168.128.59:11434"
-    writer_model: str = "gemma4:12b"
+    ollama_host: str = "http://192.168.128.62:11434"
+    writer_model: str = "shosetsu"
     draw_things_host: str = "http://192.168.128.59:7860"
     pause_wp: bool = False
 
@@ -68,8 +68,8 @@ def get_config() -> SMTPConfig:
     if pause_wp and ("wordpress.com" in wp_site_url or not wp_site_url):
         wp_site_url = os.getenv("BLOGGER_SITE_URL", "https://hardsf2026.blogspot.com/")
 
-    ollama_host = os.getenv("OLLAMA_HOST", "http://192.168.128.59:11434").strip()
-    writer_model = os.getenv("OLLAMA_WRITER_MODEL", "gemma4:12b").strip()
+    ollama_host = os.getenv("OLLAMA_HOST", "http://192.168.128.62:11434").strip()
+    writer_model = os.getenv("OLLAMA_WRITER_MODEL", "shosetsu").strip()
     draw_things_host = os.getenv("DRAW_THINGS_HOST", "http://192.168.128.59:7860").strip()
 
     return SMTPConfig(

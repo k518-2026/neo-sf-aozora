@@ -116,7 +116,7 @@ def main():
     parser.add_argument(
         "--host",
         default=None,
-        help="Ollama server URL (default: http://192.168.128.59:11434 on Mac mini M4)"
+        help="Ollama server URL (default: http://192.168.128.62:11434 with fallback to http://192.168.128.59:11434)"
     )
     parser.add_argument(
         "--draw-things-host",
