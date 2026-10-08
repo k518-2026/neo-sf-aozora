@@ -285,6 +285,10 @@ def write_tasks_markdown(manifest: Dict[str, Any]) -> None:
         "| **`sff7020`** | `writer_secondary` | `http://sff7020:1234` (`gemma-4-26b-a4b-qat`) | 1 作品 | 【セカンダリ執筆＆プロット】交互担当（偶数枠）で煽り・ケレン味のあるSF小説を執筆＆プロット設計 |",
         "| **`kenomac-mini`** | `illustrator` | `http://kenomac-mini:7860` (`FLUX.2`) | 5 枚 | 【挿絵＆Web公開】FLUX.2 挿絵生成 (`content/*.png`) ＆ GitHub Pages (`docs/`) 更新 |",
         "",
+        "### ⚡ メインPC (`MINISFORUM64GB`) 電源OFF時の各PC単独・自律実行セットアップ",
+        "- **Windows (`rtx5060lp` / `sff7020`)**: リポジトリ内で `git pull` 後、`.\\setup_autonomous_worker.ps1` を1回実行すると、PC起動時＆毎日20:00/21:00にGitHubからタスクを読み取って自律実行・Pushします（普段既に `run_worker.ps1` を自動実行している場合は自動で最新化されます）。",
+        "- **Mac (`kenomac-mini`)**: リポジトリ内で `git pull && bash setup_autonomous_worker.sh` を1回実行すると、macOS `LaunchAgent` に登録され、Mac起動時＆毎日20:15/21:15に未挿絵作品を検知して FLUX.2 挿絵生成＆GitHub Pages更新を自律実行します。",
+        "",
         "## 🚀 次回PC起動時の自動実行タスクキュー（GitHub蓄積タスク一覧）",
         "",
         "| No. | 作品ID | 原典タイトル（著者） | 先端科学テーマ | 現在の状態 | 次回担当ライター（交互割当） |",
@@ -502,22 +506,23 @@ def run_writer_role(
     rtx_cfg = manifest["roles"].get("rtx5060lp", DEFAULT_ROLES_CONFIG["rtx5060lp"])
     sff_cfg = manifest["roles"].get("sff7020", DEFAULT_ROLES_CONFIG["sff7020"])
 
-    rtx_host = resolve_reachable_url(
-        [
-            os.getenv("OLLAMA_HOST", ""),
-            rtx_cfg.get("host", "http://rtx5060lp:11434"),
-            rtx_cfg.get("fallback_host", "http://192.168.128.62:11434"),
-        ],
-        "/api/tags",
-    )
-    sff_host = resolve_reachable_url(
-        [
-            os.getenv("LM_STUDIO_HOST", ""),
-            sff_cfg.get("host", "http://sff7020:1234"),
-            sff_cfg.get("fallback_host", "http://192.168.128.16:1234"),
-        ],
-        "/v1/models",
-    )
+    rtx_candidates = [
+        os.getenv("OLLAMA_HOST", ""),
+        rtx_cfg.get("host", "http://rtx5060lp:11434"),
+        rtx_cfg.get("fallback_host", "http://192.168.128.62:11434"),
+    ]
+    if preferred_node == "rtx5060lp" or "rtx5060lp" in socket.gethostname().lower():
+        rtx_candidates.insert(0, "http://localhost:11434")
+    rtx_host = resolve_reachable_url(rtx_candidates, "/api/tags")
+
+    sff_candidates = [
+        os.getenv("LM_STUDIO_HOST", ""),
+        sff_cfg.get("host", "http://sff7020:1234"),
+        sff_cfg.get("fallback_host", "http://192.168.128.16:1234"),
+    ]
+    if preferred_node == "sff7020" or "sff7020" in socket.gethostname().lower():
+        sff_candidates.insert(0, "http://localhost:1234")
+    sff_host = resolve_reachable_url(sff_candidates, "/v1/models")
 
     if not rtx_host and not sff_host:
         logger.info("[writer] Primary (rtx5060lp:11434) も Secondary (sff7020:1234) もオフラインのため執筆をスキップします。")
@@ -710,11 +715,11 @@ def run_illustrator_role(
 def detect_local_role() -> str:
     hostname = socket.gethostname().lower()
     if "rtx5060lp" in hostname:
-        return "writer"
+        return "rtx5060lp"
     if "kenomac-mini" in hostname or "mac-mini" in hostname:
-        return "illustrator"
+        return "kenomac-mini"
     if "sff7020" in hostname:
-        return "director"
+        return "sff7020"
     return "lan-dispatch"
 
 
@@ -745,7 +750,7 @@ def main():
     role = args.role
     if role == "auto":
         role = detect_local_role()
-        logger.info(f"ホスト名 '{socket.gethostname()}' から自動判定された実行モード: {role}")
+        logger.info(f"ホスト名 '{socket.gethostname()}' から自動判定された自律実行モード: {role}")
 
     if role == "sync":
         if push_to_git:
@@ -755,13 +760,16 @@ def main():
     if role == "director":
         run_director_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)
     elif role == "sff7020":
+        # Autonomous sff7020 mode: 1) review & pre-plot, 2) write if it's sff7020's turn (or failover), 3) illustrate if kenomac-mini is reachable
         run_director_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)
         manifest = sync_tasks_manifest(history_mgr)
         run_writer_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git, preferred_node="sff7020")
     elif role in ("writer", "rtx5060lp"):
+        # Autonomous rtx5060lp mode: write if it's rtx5060lp's turn (or failover), and illustrate if kenomac-mini is reachable
         pref = "rtx5060lp" if role == "rtx5060lp" else None
         run_writer_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git, preferred_node=pref)
     elif role in ("illustrator", "kenomac-mini"):
+        # Autonomous kenomac-mini mode: generate any pending illustrations & rebuild GitHub Pages
         run_illustrator_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)
     elif role == "lan-dispatch":
         logger.info("=== GitHubのタスクキューから次回の担当タスクを読み取り、プライマリ(rtx5060lp:11434)とセカンダリ(sff7020:1234)で交互に実行します ===")
