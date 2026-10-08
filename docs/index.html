@@ -15,10 +15,10 @@
       Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
     </p>
     <div class="stats-bar">
-      <div class="stat-pill"><strong>54</strong> 収録作品</div>
-      <div class="stat-pill"><strong>54</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>56</strong> 収録作品</div>
+      <div class="stat-pill"><strong>55</strong> 挿絵付き作品</div>
       <div class="stat-pill"><strong>15</strong> 原典文豪</div>
-      <div class="stat-pill">最終更新: 2026-10-07 23:33 JST</div>
+      <div class="stat-pill">最終更新: 2026-10-08 17:54 JST</div>
     </div>
   </header>
 
@@ -46,7 +46,7 @@
         </select>
         <select id="imageFilter" class="select-filter" onchange="filterCards()">
           <option value="">すべて表示</option>
-          <option value="yes">🎨 挿絵ありのみ (54)</option>
+          <option value="yes">🎨 挿絵ありのみ (55)</option>
         </select>
         <select id="sortOrder" class="select-filter" onchange="sortCards()">
           <option value="desc">新しい順（#大 → #01）</option>
@@ -57,10 +57,26 @@
     </div>
 
     <div class="story-grid" id="storyGrid">
-      <article class="story-card" data-no="54" data-author="夢野久作" data-illustrated="yes" data-search="少女地獄――電子の檻に咲く偽りの祈り 少女地獄 夢野久作 複雑ネットワーク上の情報拡散（sir数理モデル）、ディープフェイク・合成記憶の電子透かし検証、認知的不協和の解消メカニズム 虚言と真実が幾重にも織り交ぜられた手記の迷宮。ネットワーク科学と情報理論のメスが、少女たちが作り上げた「優しい嘘」の裏に隠された真実の祈りを解き明かす。">
+      <article class="story-card" data-no="56" data-author="小栗虫太郎" data-illustrated="no" data-search="人魚謎お岩殺し――深海に刻まれたプロテオームの遺言 人魚謎お岩殺し 小栗虫太郎 ルシフェラーゼ生物発光遺伝子回路、哺乳類の潜水反射と低酸素耐性（epas1遺伝子変異）、法医学プロテオミクス解析 怪談と人魚伝説が交錯する港町の怪事件。すべての超常現象を現代の分子生物学と法医学プロテオミクスで論理的に解体し、その奥に秘められた純愛を救い出す。">
+        <a href="stories/oguri-ningyo-hi.html" class="card-thumb-wrap">
+          <div class="card-placeholder"><div style="font-size:1.1rem;color:#7dd3fc;margin-bottom:0.3rem;">『人魚謎お岩殺し』</div><div style="font-size:0.82rem;">小栗虫太郎 ✕ 先端科学SF</div></div>
+          <span class="card-no-badge">#56</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：小栗虫太郎『人魚謎お岩殺し』</div>
+          <h2 class="card-title"><a href="stories/oguri-ningyo-hi.html">人魚謎お岩殺し――深海に刻まれたプロテオームの遺言</a></h2>
+          <div class="card-tech">🔬 ルシフェラーゼ生物発光遺伝子回路、哺乳類の潜水反射と低酸素耐性（EPAS1遺伝子変異）、法医学プロテオミクス解析</div>
+          <p class="card-summary">怪談と人魚伝説が交錯する港町の怪事件。すべての超常現象を現代の分子生物学と法医学プロテオミクスで論理的に解体し、その奥に秘められた純愛を救い出す。</p>
+          <div class="card-footer">
+            <span>約 5,426 文字 </span>
+            <a class="read-link" href="stories/oguri-ningyo-hi.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="55" data-author="夢野久作" data-illustrated="yes" data-search="少女地獄――電子の檻に咲く偽りの祈り 少女地獄 夢野久作 複雑ネットワーク上の情報拡散（sir数理モデル）、ディープフェイク・合成記憶の電子透かし検証、認知的不協和の解消メカニズム 虚言と真実が幾重にも織り交ぜられた手記の迷宮。ネットワーク科学と情報理論のメスが、少女たちが作り上げた「優しい嘘」の裏に隠された真実の祈りを解き明かす。">
         <a href="stories/yumeno-shojo-jigoku.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/yumeno-shojo-jigoku.png" alt="少女地獄――電子の檻に咲く偽りの祈り" loading="lazy" />
-          <span class="card-no-badge">#54</span>
+          <span class="card-no-badge">#55</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：夢野久作『少女地獄』</div>
@@ -73,10 +89,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="53" data-author="海野十三" data-illustrated="yes" data-search="海底大陸――深淵に眠る「呼吸する」都市 海底大陸 海野十三 ミューオン透視（ミュオグラフィ）による海底地殻構造探査、超臨界水地熱発電システム、深海化学合成生態系バイオリアクター 太平洋の深海底に発見された巨大な水没カルデラ構造。宇宙線ミューオン探査が暴き出した海底の巨大空洞都市と、地球の未来を救う超臨界エネルギー。">
+      <article class="story-card" data-no="54" data-author="海野十三" data-illustrated="yes" data-search="海底大陸――深淵に眠る「呼吸する」都市 海底大陸 海野十三 ミューオン透視（ミュオグラフィ）による海底地殻構造探査、超臨界水地熱発電システム、深海化学合成生態系バイオリアクター 太平洋の深海底に発見された巨大な水没カルデラ構造。宇宙線ミューオン探査が暴き出した海底の巨大空洞都市と、地球の未来を救う超臨界エネルギー。">
         <a href="stories/unno-kaiten-makyo.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/unno-kaiten-makyo.png" alt="海底大陸――深淵に眠る「呼吸する」都市" loading="lazy" />
-          <span class="card-no-badge">#53</span>
+          <span class="card-no-badge">#54</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：海野十三『海底大陸』</div>
@@ -89,10 +105,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="52" data-author="海野十三" data-illustrated="yes" data-search="火星魔――結晶体の中に脈動する思考 火星魔 海野十三 ケイ素―炭素ハイブリッド高分子の自己組織化、ラマン分光による異星バイオシグネチャ検出、惑星保護検疫プロトコル 火星サンプルリターン探査機が地球へ持ち帰った未知の結晶体。地球の炭素生命とは異なる原理で思考する「火星の知性」とのファーストコンタクト。">
+      <article class="story-card" data-no="53" data-author="海野十三" data-illustrated="yes" data-search="火星魔――結晶体の中に脈動する思考 火星魔 海野十三 ケイ素―炭素ハイブリッド高分子の自己組織化、ラマン分光による異星バイオシグネチャ検出、惑星保護検疫プロトコル 火星サンプルリターン探査機が地球へ持ち帰った未知の結晶体。地球の炭素生命とは異なる原理で思考する「火星の知性」とのファーストコンタクト。">
         <a href="stories/unno-kasei-ma.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/unno-kasei-ma.png" alt="火星魔――結晶体の中に脈動する思考" loading="lazy" />
-          <span class="card-no-badge">#52</span>
+          <span class="card-no-badge">#53</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：海野十三『火星魔』</div>
@@ -105,10 +121,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="51" data-author="江戸川乱歩" data-illustrated="yes" data-search="芋虫――共鳴する残響 芋虫 江戸川乱歩 高密度皮質脳波（ecog）による双方向思考通信、触覚フィードバック型ハプティクス外骨格、神経可塑性による失われた感覚野の再構築 戦争で四肢と発声を失った夫と、彼を介護する妻。従来の悲劇的な結末を覆し、最新の脳波デコーディングと触覚共有技術によって二人が真の対話と尊厳を取り戻す再生の物語。">
+      <article class="story-card" data-no="52" data-author="江戸川乱歩" data-illustrated="yes" data-search="芋虫――共鳴する残響 芋虫 江戸川乱歩 高密度皮質脳波（ecog）による双方向思考通信、触覚フィードバック型ハプティクス外骨格、神経可塑性による失われた感覚野の再構築 戦争で四肢と発声を失った夫と、彼を介護する妻。従来の悲劇的な結末を覆し、最新の脳波デコーディングと触覚共有技術によって二人が真の対話と尊厳を取り戻す再生の物語。">
         <a href="stories/edogawa-imomushi.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/edogawa-imomushi.png" alt="芋虫――共鳴する残響" loading="lazy" />
-          <span class="card-no-badge">#51</span>
+          <span class="card-no-badge">#52</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：江戸川乱歩『芋虫』</div>
@@ -121,10 +137,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="50" data-author="江戸川乱歩" data-illustrated="yes" data-search="鏡地獄――内省する光の檻 鏡地獄 江戸川乱歩 完全反射フォトニック結晶の球面光共振器、光の遅延フィードバックによる多重自己像干渉、身体所有感と自己認識の神経錯覚 内面が完全鏡面となった球体実験室に入った光学研究者。無限に反復される自己像と光の干渉の中で、普段の人間が決して見ることのできない「真の自分の姿」を目撃する。">
+      <article class="story-card" data-no="51" data-author="江戸川乱歩" data-illustrated="yes" data-search="鏡地獄――内省する光の檻 鏡地獄 江戸川乱歩 完全反射フォトニック結晶の球面光共振器、光の遅延フィードバックによる多重自己像干渉、身体所有感と自己認識の神経錯覚 内面が完全鏡面となった球体実験室に入った光学研究者。無限に反復される自己像と光の干渉の中で、普段の人間が決して見ることのできない「真の自分の姿」を目撃する。">
         <a href="stories/edogawa-kagami-jigoku.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/edogawa-kagami-jigoku.png" alt="鏡地獄――内省する光の檻" loading="lazy" />
-          <span class="card-no-badge">#50</span>
+          <span class="card-no-badge">#51</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：江戸川乱歩『鏡地獄』</div>
@@ -137,10 +153,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="49" data-author="中島敦" data-illustrated="yes" data-search="名人伝――予測される無為の特異点 名人伝 中島敦 小脳の順モデル・逆モデルによる運動学習、脳のデフォルト・モード・ネットワーク（dmn）同期、量子測定における非破壊観測 天下第一の弓の名人を目指した紀昌。眼球の微動制御から神経回路の完全自動化を経て、ついには「弓という概念そのものを忘却する」究極の境地へ至る数理哲学sf。">
+      <article class="story-card" data-no="50" data-author="中島敦" data-illustrated="yes" data-search="名人伝――予測される無為の特異点 名人伝 中島敦 小脳の順モデル・逆モデルによる運動学習、脳のデフォルト・モード・ネットワーク（dmn）同期、量子測定における非破壊観測 天下第一の弓の名人を目指した紀昌。眼球の微動制御から神経回路の完全自動化を経て、ついには「弓という概念そのものを忘却する」究極の境地へ至る数理哲学sf。">
         <a href="stories/nakajima-meijin-den.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/nakajima-meijin-den.png" alt="名人伝――予測される無為の特異点" loading="lazy" />
-          <span class="card-no-badge">#49</span>
+          <span class="card-no-badge">#50</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：中島敦『名人伝』</div>
@@ -153,10 +169,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="48" data-author="森鴎外" data-illustrated="yes" data-search="高瀬舟――神経幸福の果てに漂う流刑 高瀬舟 森鴎外 ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル 地球軌道から流刑衛星へ向かう小型護送シャトル「高瀬舟」。罪人とされる喜助の澄み切った幸福感と、安楽死を巡る深い問いが護送官・庄兵衛の心を揺さぶる。">
+      <article class="story-card" data-no="49" data-author="森鴎外" data-illustrated="yes" data-search="高瀬舟――神経幸福の果てに漂う流刑 高瀬舟 森鴎外 ブレイン・マシン・インターフェースによる疼痛緩和と意思決定確認、ドーパミン報酬系の順応（快楽の踏み車）と「知足」の神経科学、自律航行護送シャトル 地球軌道から流刑衛星へ向かう小型護送シャトル「高瀬舟」。罪人とされる喜助の澄み切った幸福感と、安楽死を巡る深い問いが護送官・庄兵衛の心を揺さぶる。">
         <a href="stories/mori-takasebune.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/mori-takasebune.png" alt="高瀬舟――神経幸福の果てに漂う流刑" loading="lazy" />
-          <span class="card-no-badge">#48</span>
+          <span class="card-no-badge">#49</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：森鴎外『高瀬舟』</div>
@@ -169,10 +185,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="47" data-author="夏目漱石" data-illustrated="yes" data-search="こころ――失われた記憶の謎 こころ 夏目漱石 死後起動型タイムロック暗号（time-lock puzzle）、エピソード記憶の神経ホログラフィック再生、罪悪感と自己処罰の認知神経科学 「先生」から届いた長大な暗号化メモリ遺書。百年前のkとの悲劇的な記憶を追体験した「私」が、先生が最後に遺した本当の希望のメッセージに辿り着く。">
+      <article class="story-card" data-no="48" data-author="夏目漱石" data-illustrated="yes" data-search="こころ――失われた記憶の謎 こころ 夏目漱石 死後起動型タイムロック暗号（time-lock puzzle）、エピソード記憶の神経ホログラフィック再生、罪悪感と自己処罰の認知神経科学 「先生」から届いた長大な暗号化メモリ遺書。百年前のkとの悲劇的な記憶を追体験した「私」が、先生が最後に遺した本当の希望のメッセージに辿り着く。">
         <a href="stories/soseki-kokoro.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/soseki-kokoro.png" alt="こころ――失われた記憶の謎" loading="lazy" />
-          <span class="card-no-badge">#47</span>
+          <span class="card-no-badge">#48</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：夏目漱石『こころ』</div>
@@ -185,10 +201,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="46" data-author="泉鏡花" data-illustrated="yes" data-search="高野聖――遺伝子の呪縛 高野聖 泉鏡花 crisprウイルスベクターによる体細胞エピゲノム書き換え、犁鼻器・扁桃体フェロモン神経回路、未知の共生微生物による生体再生 飛騨の深山に迷い込んだ旅の青年が出会った、輝くばかりに美しい孤屋の女性。周囲の動物たちが持つ「人間と同じ瞳」の謎と、森の生態系が秘めた真実。">
+      <article class="story-card" data-no="47" data-author="泉鏡花" data-illustrated="yes" data-search="高野聖――遺伝子の呪縛 高野聖 泉鏡花 crisprウイルスベクターによる体細胞エピゲノム書き換え、犁鼻器・扁桃体フェロモン神経回路、未知の共生微生物による生体再生 飛騨の深山に迷い込んだ旅の青年が出会った、輝くばかりに美しい孤屋の女性。周囲の動物たちが持つ「人間と同じ瞳」の謎と、森の生態系が秘めた真実。">
         <a href="stories/izumi-koya-hijiri.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/izumi-koya-hijiri.png" alt="高野聖――遺伝子の呪縛" loading="lazy" />
-          <span class="card-no-badge">#46</span>
+          <span class="card-no-badge">#47</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：泉鏡花『高野聖』</div>
@@ -201,10 +217,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="45" data-author="太宰治" data-illustrated="yes" data-search="走れメロス――信頼の証明 走れメロス 太宰治 暗号学的コミットメントとゼロ知識証明、骨格筋ミトコンドリアatp代謝の極限制御、信頼と裏切りの反復ゲーム理論 人間不信の統治者ディオニスが支配するデータ都市。人質となった親友セリヌンティウスを救うため、太陽電池が切れる日没までに荒野を疾走するメロスの信頼証明。">
+      <article class="story-card" data-no="46" data-author="太宰治" data-illustrated="yes" data-search="走れメロス――信頼の証明 走れメロス 太宰治 暗号学的コミットメントとゼロ知識証明、骨格筋ミトコンドリアatp代謝の極限制御、信頼と裏切りの反復ゲーム理論 人間不信の統治者ディオニスが支配するデータ都市。人質となった親友セリヌンティウスを救うため、太陽電池が切れる日没までに荒野を疾走するメロスの信頼証明。">
         <a href="stories/dazai-hashire-melos.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/dazai-hashire-melos.png" alt="走れメロス――信頼の証明" loading="lazy" />
-          <span class="card-no-badge">#45</span>
+          <span class="card-no-badge">#46</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：太宰治『走れメロス』</div>
@@ -217,10 +233,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="44" data-author="宮沢賢治" data-illustrated="yes" data-search="風の又三郎――風の秘密を解く少年 風の又三郎 宮沢賢治 ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電 九月一日の風と共に過疎の村の分校へやってきた謎の転校生。大気の渦と風の流れを自在に読み解く少年との十日間の交流と、嵐の朝の別れ。">
+      <article class="story-card" data-no="45" data-author="宮沢賢治" data-illustrated="yes" data-search="風の又三郎――風の秘密を解く少年 風の又三郎 宮沢賢治 ドップラーライダーによる大気乱流・突風予測、メソスケール気象数値シミュレーション、圧電メタマテリアルによる風力環境発電 九月一日の風と共に過疎の村の分校へやってきた謎の転校生。大気の渦と風の流れを自在に読み解く少年との十日間の交流と、嵐の朝の別れ。">
         <a href="stories/miyazawa-kaze-no-matasaburo.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/miyazawa-kaze-no-matasaburo.png" alt="風の又三郎――風の秘密を解く少年" loading="lazy" />
-          <span class="card-no-badge">#44</span>
+          <span class="card-no-badge">#45</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：宮沢賢治『風の又三郎』</div>
@@ -233,10 +249,10 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="43" data-author="宮沢賢治" data-illustrated="yes" data-search="注文の多い料理店――秘密のスマートレストラン 注文の多い料理店 宮沢賢治 行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション 深山に佇む最新鋭の無人スマートレストラン「山猫軒」。次々と提示される快適な指示（ナッジ）に従ううちに、人間自身が「食材」へと誘導されていくブラックユーモアsf。">
+      <article class="story-card" data-no="44" data-author="宮沢賢治" data-illustrated="yes" data-search="注文の多い料理店――秘密のスマートレストラン 注文の多い料理店 宮沢賢治 行動経済学のナッジ理論と認知フレーミング、自律型スマート建築の環境制御、培養肉と生態系捕食関係の反転シミュレーション 深山に佇む最新鋭の無人スマートレストラン「山猫軒」。次々と提示される快適な指示（ナッジ）に従ううちに、人間自身が「食材」へと誘導されていくブラックユーモアsf。">
         <a href="stories/miyazawa-chumon.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/miyazawa-chumon.png" alt="注文の多い料理店――秘密のスマートレストラン" loading="lazy" />
-          <span class="card-no-badge">#43</span>
+          <span class="card-no-badge">#44</span>
         </a>
         <div class="card-body">
           <div class="card-origin">原典：宮沢賢治『注文の多い料理店』</div>
@@ -246,6 +262,22 @@
           <div class="card-footer">
             <span>約 4,611 文字 🎨 挿絵付</span>
             <a class="read-link" href="stories/miyazawa-chumon.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="43" data-author="宮沢賢治" data-illustrated="yes" data-search="グスコーブドリの伝記――カルボナード島の第三の解 グスコーブドリの伝記 宮沢賢治 カルデラ火山のミュオグラフィ内部マグマ可視化、無人自律ドローン群による火山性co2・温室効果ガス制御、デジタルツイン気象シミュレーションによる冷害回避 イーハトーブを襲う深刻な冷害を救うため、かつては一人の青年が命を賭して火山を噴火させた物語。現代科学のリブート版では、ブドリが構築した自律型地球工学ネットワークとai予測モデルが、誰一人の命も犠牲にすることなく大地に温かい春を取り戻す。">
+        <a href="stories/miyazawa-gusukobudori.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/miyazawa-gusukobudori.png" alt="グスコーブドリの伝記――カルボナード島の第三の解" loading="lazy" />
+          <span class="card-no-badge">#43</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：宮沢賢治『グスコーブドリの伝記』</div>
+          <h2 class="card-title"><a href="stories/miyazawa-gusukobudori.html">グスコーブドリの伝記――カルボナード島の第三の解</a></h2>
+          <div class="card-tech">🔬 カルデラ火山のミュオグラフィ内部マグマ可視化、無人自律ドローン群による火山性CO2・温室効果ガス制御、デジタルツイン気象シミュレーションによる冷害回避</div>
+          <p class="card-summary">イーハトーブを襲う深刻な冷害を救うため、かつては一人の青年が命を賭して火山を噴火させた物語。現代科学のリブート版では、ブドリが構築した自律型地球工学ネットワークとAI予測モデルが、誰一人の命も犠牲にすることなく大地に温かい春を取り戻す。</p>
+          <div class="card-footer">
+            <span>約 4,731 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/miyazawa-gusukobudori.html">作品を読む →</a>
           </div>
         </div>
       </article>
@@ -361,7 +393,7 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="35" data-author="宮沢賢治" data-illustrated="yes" data-search="グスコーブドリの伝記――カルボナード島の第三の解 グスコーブドリの伝記 宮沢賢治 成層圏エアロゾル・インジェクション制御、マグマ溜まり熱流体連成シミュレーション、非線形気候力学系の分岐理論 冷害から人々を救うため火山を人工噴火させようとする青年技師。地球気候モデルの非線形分岐点を計算し、誰一人犠牲にせず気候危機を救う数学的逆転劇。">
+      <article class="story-card" data-no="35" data-author="宮沢賢治" data-illustrated="yes" data-search="グスコーブドリの伝記――カルボナード島の第三の解 グスコーブドリの伝記 宮沢賢治 カルデラ火山のミュオグラフィ内部マグマ可視化、無人自律ドローン群による火山性co2・温室効果ガス制御、デジタルツイン気象シミュレーションによる冷害回避 イーハトーブを襲う深刻な冷害を救うため、かつては一人の青年が命を賭して火山を噴火させた物語。現代科学のリブート版では、ブドリが構築した自律型地球工学ネットワークとai予測モデルが、誰一人の命も犠牲にすることなく大地に温かい春を取り戻す。">
         <a href="stories/miyazawa-gusukobudori.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/miyazawa-gusukobudori.png" alt="グスコーブドリの伝記――カルボナード島の第三の解" loading="lazy" />
           <span class="card-no-badge">#35</span>
@@ -369,8 +401,8 @@
         <div class="card-body">
           <div class="card-origin">原典：宮沢賢治『グスコーブドリの伝記』</div>
           <h2 class="card-title"><a href="stories/miyazawa-gusukobudori.html">グスコーブドリの伝記――カルボナード島の第三の解</a></h2>
-          <div class="card-tech">🔬 成層圏エアロゾル・インジェクション制御、マグマ溜まり熱流体連成シミュレーション、非線形気候力学系の分岐理論</div>
-          <p class="card-summary">冷害から人々を救うため火山を人工噴火させようとする青年技師。地球気候モデルの非線形分岐点を計算し、誰一人犠牲にせず気候危機を救う数学的逆転劇。</p>
+          <div class="card-tech">🔬 カルデラ火山のミュオグラフィ内部マグマ可視化、無人自律ドローン群による火山性CO2・温室効果ガス制御、デジタルツイン気象シミュレーションによる冷害回避</div>
+          <p class="card-summary">イーハトーブを襲う深刻な冷害を救うため、かつては一人の青年が命を賭して火山を噴火させた物語。現代科学のリブート版では、ブドリが構築した自律型地球工学ネットワークとAI予測モデルが、誰一人の命も犠牲にすることなく大地に温かい春を取り戻す。</p>
           <div class="card-footer">
             <span>約 4,731 文字 🎨 挿絵付</span>
             <a class="read-link" href="stories/miyazawa-gusukobudori.html">作品を読む →</a>
@@ -441,7 +473,7 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="30" data-author="芥川龍之介" data-illustrated="yes" data-search="歯車――幻影の歯輪 歯車 芥川龍之介 大脳視覚野の反応拡散方程式（エルメントラウト・コーワン数理モデル）、光遺伝学フェーズロック制御、神経雪（visual snow）位相解析 視野の中で回り続ける半透明の歯車と迫りくる狂気。視覚野の神経ネットワークに生じた数学的対称性の破れから、未知の高次元情報信号を解読する。">
+      <article class="story-card" data-no="30" data-author="芥川龍之介" data-illustrated="yes" data-search="歯車――幻影の歯輪 歯車 芥川龍之介 大脳視覚野における皮質拡延性抑制（csd）と幾何学模様幻視の数理モデル、経頭蓋交流電気刺激（tacs）による神経律動調律、自由エネルギー原理に基づく過剰意味づけ（アポフェニア）の緩和 視界の片隅で回り続ける半透明の歯車と、日常のあらゆる偶然が自分を追い詰める暗号に見える恐怖。最新の計算論的精神医学と非侵襲ニューロモデュレーションが、孤高の作家の脳内で渦巻く予測誤差の嵐を静かに解きほぐしていく。">
         <a href="stories/akutagawa-haguruma.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/akutagawa-haguruma.png" alt="歯車――幻影の歯輪" loading="lazy" />
           <span class="card-no-badge">#30</span>
@@ -449,8 +481,8 @@
         <div class="card-body">
           <div class="card-origin">原典：芥川龍之介『歯車』</div>
           <h2 class="card-title"><a href="stories/akutagawa-haguruma.html">歯車――幻影の歯輪</a></h2>
-          <div class="card-tech">🔬 大脳視覚野の反応拡散方程式（エルメントラウト・コーワン数理モデル）、光遺伝学フェーズロック制御、神経雪（Visual Snow）位相解析</div>
-          <p class="card-summary">視野の中で回り続ける半透明の歯車と迫りくる狂気。視覚野の神経ネットワークに生じた数学的対称性の破れから、未知の高次元情報信号を解読する。</p>
+          <div class="card-tech">🔬 大脳視覚野における皮質拡延性抑制（CSD）と幾何学模様幻視の数理モデル、経頭蓋交流電気刺激（tACS）による神経律動調律、自由エネルギー原理に基づく過剰意味づけ（アポフェニア）の緩和</div>
+          <p class="card-summary">視界の片隅で回り続ける半透明の歯車と、日常のあらゆる偶然が自分を追い詰める暗号に見える恐怖。最新の計算論的精神医学と非侵襲ニューロモデュレーションが、孤高の作家の脳内で渦巻く予測誤差の嵐を静かに解きほぐしていく。</p>
           <div class="card-footer">
             <span>約 4,702 文字 🎨 挿絵付</span>
             <a class="read-link" href="stories/akutagawa-haguruma.html">作品を読む →</a>
@@ -473,7 +505,7 @@
           </div>
         </div>
       </article>
-      <article class="story-card" data-no="28" data-author="夢野久作" data-illustrated="yes" data-search="瓶詰地獄――未来からの福音 瓶詰地獄 夢野久作 シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化dnaタイムスタンプ解析 無人島から流れ着いた三通の瓶詰の手紙。どの順序で読んでも矛盾する記述の謎を、分子分解時計と情報理論のベイズ逆推論が解き明かす。">
+      <article class="story-card" data-no="28" data-author="夢野久作" data-illustrated="yes" data-search="瓶詰地獄――未来からの福音 瓶詰地獄 夢野久作 シリカカプセル封入dnaデジタルデータストレージによる超長期情報保存、海洋表層海流のラグランジュ粒子追跡モデル、放射性炭素年代測定による時系列の再構成 絶海の孤島から流れ着いた3本のガラス瓶。現代の海洋物理学と年代測定技術が、順不同の3通の手紙の正しい時系列を解き明かし、孤島で生き抜いた兄妹の純粋な魂の記録を未来へと救い出す。">
         <a href="stories/yumeno-binzume-jigoku.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/yumeno-binzume-jigoku.png" alt="瓶詰地獄――未来からの福音" loading="lazy" />
           <span class="card-no-badge">#28</span>
@@ -481,8 +513,8 @@
         <div class="card-body">
           <div class="card-origin">原典：夢野久作『瓶詰地獄』</div>
           <h2 class="card-title"><a href="stories/yumeno-binzume-jigoku.html">瓶詰地獄――未来からの福音</a></h2>
-          <div class="card-tech">🔬 シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化DNAタイムスタンプ解析</div>
-          <p class="card-summary">無人島から流れ着いた三通の瓶詰の手紙。どの順序で読んでも矛盾する記述の謎を、分子分解時計と情報理論のベイズ逆推論が解き明かす。</p>
+          <div class="card-tech">🔬 シリカカプセル封入DNAデジタルデータストレージによる超長期情報保存、海洋表層海流のラグランジュ粒子追跡モデル、放射性炭素年代測定による時系列の再構成</div>
+          <p class="card-summary">絶海の孤島から流れ着いた3本のガラス瓶。現代の海洋物理学と年代測定技術が、順不同の3通の手紙の正しい時系列を解き明かし、孤島で生き抜いた兄妹の純粋な魂の記録を未来へと救い出す。</p>
           <div class="card-footer">
             <span>約 5,380 文字 🎨 挿絵付</span>
             <a class="read-link" href="stories/yumeno-binzume-jigoku.html">作品を読む →</a>

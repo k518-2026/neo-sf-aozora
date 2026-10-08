@@ -1,6 +1,18 @@
 [
   {
-    "no": 54,
+    "no": 56,
+    "work_id": "oguri-ningyo-hi",
+    "title": "人魚謎お岩殺し――深海に刻まれたプロテオームの遺言",
+    "original_title": "人魚謎お岩殺し",
+    "original_author": "小栗虫太郎",
+    "modern_tech": "ルシフェラーゼ生物発光遺伝子回路、哺乳類の潜水反射と低酸素耐性（EPAS1遺伝子変異）、法医学プロテオミクス解析",
+    "has_image": false,
+    "url": "stories/oguri-ningyo-hi.html",
+    "image": "",
+    "char_count": 5426
+  },
+  {
+    "no": 55,
     "work_id": "yumeno-shojo-jigoku",
     "title": "少女地獄――電子の檻に咲く偽りの祈り",
     "original_title": "少女地獄",
@@ -12,7 +24,7 @@
     "char_count": 5762
   },
   {
-    "no": 53,
+    "no": 54,
     "work_id": "unno-kaiten-makyo",
     "title": "海底大陸――深淵に眠る「呼吸する」都市",
     "original_title": "海底大陸",
@@ -24,7 +36,7 @@
     "char_count": 5313
   },
   {
-    "no": 52,
+    "no": 53,
     "work_id": "unno-kasei-ma",
     "title": "火星魔――結晶体の中に脈動する思考",
     "original_title": "火星魔",
@@ -36,7 +48,7 @@
     "char_count": 6028
   },
   {
-    "no": 51,
+    "no": 52,
     "work_id": "edogawa-imomushi",
     "title": "芋虫――共鳴する残響",
     "original_title": "芋虫",
@@ -48,7 +60,7 @@
     "char_count": 5675
   },
   {
-    "no": 50,
+    "no": 51,
     "work_id": "edogawa-kagami-jigoku",
     "title": "鏡地獄――内省する光の檻",
     "original_title": "鏡地獄",
@@ -60,7 +72,7 @@
     "char_count": 6238
   },
   {
-    "no": 49,
+    "no": 50,
     "work_id": "nakajima-meijin-den",
     "title": "名人伝――予測される無為の特異点",
     "original_title": "名人伝",
@@ -72,7 +84,7 @@
     "char_count": 5742
   },
   {
-    "no": 48,
+    "no": 49,
     "work_id": "mori-takasebune",
     "title": "高瀬舟――神経幸福の果てに漂う流刑",
     "original_title": "高瀬舟",
@@ -84,7 +96,7 @@
     "char_count": 5352
   },
   {
-    "no": 47,
+    "no": 48,
     "work_id": "soseki-kokoro",
     "title": "こころ――失われた記憶の謎",
     "original_title": "こころ",
@@ -96,7 +108,7 @@
     "char_count": 4930
   },
   {
-    "no": 46,
+    "no": 47,
     "work_id": "izumi-koya-hijiri",
     "title": "高野聖――遺伝子の呪縛",
     "original_title": "高野聖",
@@ -108,7 +120,7 @@
     "char_count": 4959
   },
   {
-    "no": 45,
+    "no": 46,
     "work_id": "dazai-hashire-melos",
     "title": "走れメロス――信頼の証明",
     "original_title": "走れメロス",
@@ -120,7 +132,7 @@
     "char_count": 4686
   },
   {
-    "no": 44,
+    "no": 45,
     "work_id": "miyazawa-kaze-no-matasaburo",
     "title": "風の又三郎――風の秘密を解く少年",
     "original_title": "風の又三郎",
@@ -132,7 +144,7 @@
     "char_count": 4387
   },
   {
-    "no": 43,
+    "no": 44,
     "work_id": "miyazawa-chumon",
     "title": "注文の多い料理店――秘密のスマートレストラン",
     "original_title": "注文の多い料理店",
@@ -142,6 +154,18 @@
     "url": "stories/miyazawa-chumon.html",
     "image": "assets/images/miyazawa-chumon.png",
     "char_count": 4611
+  },
+  {
+    "no": 43,
+    "work_id": "miyazawa-gusukobudori",
+    "title": "グスコーブドリの伝記――カルボナード島の第三の解",
+    "original_title": "グスコーブドリの伝記",
+    "original_author": "宮沢賢治",
+    "modern_tech": "カルデラ火山のミュオグラフィ内部マグマ可視化、無人自律ドローン群による火山性CO2・温室効果ガス制御、デジタルツイン気象シミュレーションによる冷害回避",
+    "has_image": true,
+    "url": "stories/miyazawa-gusukobudori.html",
+    "image": "assets/images/miyazawa-gusukobudori.png",
+    "char_count": 4731
   },
   {
     "no": 42,
@@ -233,7 +257,7 @@
     "title": "グスコーブドリの伝記――カルボナード島の第三の解",
     "original_title": "グスコーブドリの伝記",
     "original_author": "宮沢賢治",
-    "modern_tech": "成層圏エアロゾル・インジェクション制御、マグマ溜まり熱流体連成シミュレーション、非線形気候力学系の分岐理論",
+    "modern_tech": "カルデラ火山のミュオグラフィ内部マグマ可視化、無人自律ドローン群による火山性CO2・温室効果ガス制御、デジタルツイン気象シミュレーションによる冷害回避",
     "has_image": true,
     "url": "stories/miyazawa-gusukobudori.html",
     "image": "assets/images/miyazawa-gusukobudori.png",
@@ -293,7 +317,7 @@
     "title": "歯車――幻影の歯輪",
     "original_title": "歯車",
     "original_author": "芥川龍之介",
-    "modern_tech": "大脳視覚野の反応拡散方程式（エルメントラウト・コーワン数理モデル）、光遺伝学フェーズロック制御、神経雪（Visual Snow）位相解析",
+    "modern_tech": "大脳視覚野における皮質拡延性抑制（CSD）と幾何学模様幻視の数理モデル、経頭蓋交流電気刺激（tACS）による神経律動調律、自由エネルギー原理に基づく過剰意味づけ（アポフェニア）の緩和",
     "has_image": true,
     "url": "stories/akutagawa-haguruma.html",
     "image": "assets/images/akutagawa-haguruma.png",
@@ -317,7 +341,7 @@
     "title": "瓶詰地獄――未来からの福音",
     "original_title": "瓶詰地獄",
     "original_author": "夢野久作",
-    "modern_tech": "シャノン情報理論・誤り訂正復号、ベイズ因果推論ネットワーク、合成生物学カプセル化DNAタイムスタンプ解析",
+    "modern_tech": "シリカカプセル封入DNAデジタルデータストレージによる超長期情報保存、海洋表層海流のラグランジュ粒子追跡モデル、放射性炭素年代測定による時系列の再構成",
     "has_image": true,
     "url": "stories/yumeno-binzume-jigoku.html",
     "image": "assets/images/yumeno-binzume-jigoku.png",
