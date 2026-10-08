@@ -8,6 +8,7 @@ $ErrorActionPreference = "Continue"
 Set-Location -Path $PSScriptRoot
 
 Write-Host "[$(Get-Date -Format 'HH:mm:ss')] Syncing latest code & task queue from GitHub (git pull --rebase origin main)..." -ForegroundColor Cyan
+git checkout -- data/tasks.json data/TASKS.md 2>$null
 git pull --rebase origin main | Out-Host
 
 $argsList = @("-m", "src.task_worker", "--role", $Role)

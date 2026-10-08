@@ -77,6 +77,7 @@ def setup_logging(verbose: bool = False):
 def git_pull_latest() -> bool:
     try:
         logger.info("GitHubから最新の作業リストと原稿を同期中 (git pull --rebase origin main)...")
+        subprocess.run(["git", "checkout", "--", "data/tasks.json", "data/TASKS.md"], check=False)
         subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=False)
         return True
     except Exception as e:
