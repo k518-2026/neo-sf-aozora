@@ -6,11 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-<<<<<<< HEAD
-- **収録作品数**: 全 **59** 作品（うち挿絵付き **59** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-09 01:25 JST）
-=======
-- **収録作品数**: 全 **57** 作品（うち挿絵付き **57** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-08 23:07 JST）
->>>>>>> 6f71abc (feat(sff7020): Update 2 SF plot/review task(s) via sff7020 LM Studio)
+- **収録作品数**: 全 **60** 作品（うち挿絵付き **60** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-09 06:44 JST）
 
 ---
 
@@ -18,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 60 | **[悟浄出世――再帰的自己の相転移（Recursive Self Phase-Transition）](content/2026-10-09_nakajima_tsuki_no_usagi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-tsuki-no-usagi.html) | [📄原稿](content/2026-10-09_nakajima_tsuki_no_usagi.md) | [🎨挿絵](content/2026-10-09_nakajima_tsuki_no_usagi.png) | 中島敦[『悟浄出世』](https://www.aozora.gr.jp/cards/000119/card1738.html) | 再帰的メタ認知アーキテクチャにおける無限後退問題、強化学習における探索（Exploration）と活用（Exploitation）のトレードオフ、前頭前野の意思決定ダイナミクス | 5,745字 |
 | 59 | **[春昼・春昼後刻――量子干渉に溶ける白昼夢の残滓](content/2026-10-09_izumi_gejigeji.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-gejigeji.html) | [📄原稿](content/2026-10-09_izumi_gejigeji.md) | [🎨挿絵](content/2026-10-09_izumi_gejigeji.png) | 泉鏡花[『春昼・春昼後刻』](https://www.aozora.gr.jp/cards/000050/card3585.html) | 非局所的な量子ゴーストイメージング、脳のレム睡眠侵入（白昼夢）時の海馬リプレイ現象、位相シフト干渉計測による空間認識のゆらぎ | 5,685字 |
 | 58 | **[草枕――共鳴する沈黙の風景](content/2026-10-09_soseki_kusamakura.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-kusamakura.html) | [📄原稿](content/2026-10-09_soseki_kusamakura.md) | [🎨挿絵](content/2026-10-09_soseki_kusamakura.png) | 夏目漱石[『草枕』](https://www.aozora.gr.jp/cards/000148/card776.html) | 神経美学（ニューロエステティクス）における島皮質とデフォルト・モード・ネットワークの連携、視線計測と情動デコーディング、デジタルデトックス環境での脳波シータ波同期 | 9,509字 |
 | 57 | **[櫻の樹の下には――地底に脈打つ「記憶」の網](content/2026-10-08_kajii_sakura_no_ki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kajii-sakura-no-ki.html) | [📄原稿](content/2026-10-08_kajii_sakura_no_ki.md) | [🎨挿絵](content/2026-10-08_kajii_sakura_no_ki.png) | 梶井基次郎[『櫻の樹の下には』](https://www.aozora.gr.jp/cards/000074/card427.html) | 菌根菌ネットワーク（ウッド・ワイド・ウェブ）による養分・情報伝達、安定同位体比（δ15N・δ13C）による有機物循環の追跡、植物の揮発性有機化合物（VOC）シグナリング | 5,492字 |

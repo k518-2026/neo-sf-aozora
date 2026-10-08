@@ -1,5 +1,17 @@
 [
   {
+    "no": 60,
+    "work_id": "nakajima-tsuki-no-usagi",
+    "title": "悟浄出世――再帰的自己の相転移（Recursive Self Phase-Transition）",
+    "original_title": "悟浄出世",
+    "original_author": "中島敦",
+    "modern_tech": "再帰的メタ認知アーキテクチャにおける無限後退問題、強化学習における探索（Exploration）と活用（Exploitation）のトレードオフ、前頭前野の意思決定ダイナミクス",
+    "has_image": true,
+    "url": "stories/nakajima-tsuki-no-usagi.html",
+    "image": "assets/images/nakajima-tsuki-no-usagi.png",
+    "char_count": 5745
+  },
+  {
     "no": 59,
     "work_id": "izumi-gejigeji",
     "title": "春昼・春昼後刻――量子干渉に溶ける白昼夢の残滓",

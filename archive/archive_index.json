@@ -926,5 +926,21 @@
     "narration_file": "58_春昼・春昼後刻_narration.txt",
     "full_file": "58_春昼・春昼後刻_full.txt",
     "original_md_file": "58_春昼・春昼後刻.md"
+  },
+  {
+    "work_no": 59,
+    "work_id": "nakajima-tsuki-no-usagi",
+    "title": "悟浄出世",
+    "subtitle": "再帰的自己の相転移（Recursive Self Phase-Transition）",
+    "attribution": "",
+    "original_author": "中島敦",
+    "original_title": "悟浄出世",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000119/card1738.html",
+    "modern_tech": "再帰的メタ認知アーキテクチャにおける無限後退問題、強化学習における探索（Exploration）と活用（Exploitation）のトレードオフ、前頭前野の意思決定ダイナミクス",
+    "summary": "「自分とは何か、なぜ世界は存在するのか」という自己参照ループ（形而上学病）に陥った沙悟浄。流沙河の底で幾多の賢者AIや哲学者を訪ね歩いた末、考え続けることと一歩を踏み出すことの間に横たわる計算論的相転移を悟る。",
+    "char_count": 4069,
+    "narration_file": "59_悟浄出世_narration.txt",
+    "full_file": "59_悟浄出世_full.txt",
+    "original_md_file": "59_悟浄出世.md"
   }
 ]
