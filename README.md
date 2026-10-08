@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **56** 作品（うち挿絵付き **55** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-08 17:54 JST）
+- **収録作品数**: 全 **57** 作品（うち挿絵付き **55** 作品 / 原典文豪 **15** 名 / 最終更新: 2026-10-08 18:00 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 57 | **[櫻の樹の下には――地底に脈打つ「記憶」の網](content/2026-10-08_kajii_sakura_no_ki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kajii-sakura-no-ki.html) | [📄原稿](content/2026-10-08_kajii_sakura_no_ki.md) | — | 梶井基次郎[『櫻の樹の下には』](https://www.aozora.gr.jp/cards/000074/card427.html) | 菌根菌ネットワーク（ウッド・ワイド・ウェブ）による養分・情報伝達、安定同位体比（δ15N・δ13C）による有機物循環の追跡、植物の揮発性有機化合物（VOC）シグナリング | 5,492字 |
 | 56 | **[人魚謎お岩殺し――深海に刻まれたプロテオームの遺言](content/2026-10-08_oguri_ningyo_hi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oguri-ningyo-hi.html) | [📄原稿](content/2026-10-08_oguri_ningyo_hi.md) | — | 小栗虫太郎[『人魚謎お岩殺し』](https://www.aozora.gr.jp/cards/000125/card43606.html) | ルシフェラーゼ生物発光遺伝子回路、哺乳類の潜水反射と低酸素耐性（EPAS1遺伝子変異）、法医学プロテオミクス解析 | 5,426字 |
 | 55 | **[少女地獄――電子の檻に咲く偽りの祈り](content/2026-10-07_yumeno_shojo_jigoku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yumeno-shojo-jigoku.html) | [📄原稿](content/2026-10-07_yumeno_shojo_jigoku.md) | [🎨挿絵](content/2026-10-07_yumeno_shojo_jigoku.png) | 夢野久作[『少女地獄』](https://www.aozora.gr.jp/cards/000096/card936.html) | 複雑ネットワーク上の情報拡散（SIR数理モデル）、ディープフェイク・合成記憶の電子透かし検証、認知的不協和の解消メカニズム | 5,762字 |
 | 54 | **[海底大陸――深淵に眠る「呼吸する」都市](content/2026-10-07_unno_kaiten_makyo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/unno-kaiten-makyo.html) | [📄原稿](content/2026-10-07_unno_kaiten_makyo.md) | [🎨挿絵](content/2026-10-07_unno_kaiten_makyo.png) | 海野十三[『海底大陸』](https://www.aozora.gr.jp/cards/000160/card3366.html) | ミューオン透視（ミュオグラフィ）による海底地殻構造探査、超臨界水地熱発電システム、深海化学合成生態系バイオリアクター | 5,313字 |

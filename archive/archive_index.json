@@ -878,5 +878,21 @@
     "narration_file": "55_人魚謎お岩殺し_narration.txt",
     "full_file": "55_人魚謎お岩殺し_full.txt",
     "original_md_file": "55_人魚謎お岩殺し.md"
+  },
+  {
+    "work_no": 56,
+    "work_id": "kajii-sakura-no-ki",
+    "title": "櫻の樹の下には",
+    "subtitle": "地底に脈打つ「記憶」の網",
+    "attribution": "",
+    "original_author": "梶井基次郎",
+    "original_title": "櫻の樹の下には",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000074/card427.html",
+    "modern_tech": "菌根菌ネットワーク（ウッド・ワイド・ウェブ）による養分・情報伝達、安定同位体比（δ15N・δ13C）による有機物循環の追跡、植物の揮発性有機化合物（VOC）シグナリング",
+    "summary": "爛漫と咲き誇る桜の美しさに眩暈を覚えた主人公は、根元の土壌メタゲノムと菌根菌ネットワークを解析する。地中で静かに分解された無数の生命の記憶が、いかにして春の圧倒的な花弁の色彩へと変換されるのかを解き明かす幻想科学譚。",
+    "char_count": 3637,
+    "narration_file": "56_櫻の樹の下には_narration.txt",
+    "full_file": "56_櫻の樹の下には_full.txt",
+    "original_md_file": "56_櫻の樹の下には.md"
   }
 ]

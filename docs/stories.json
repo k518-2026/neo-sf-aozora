@@ -1,5 +1,17 @@
 [
   {
+    "no": 57,
+    "work_id": "kajii-sakura-no-ki",
+    "title": "櫻の樹の下には――地底に脈打つ「記憶」の網",
+    "original_title": "櫻の樹の下には",
+    "original_author": "梶井基次郎",
+    "modern_tech": "菌根菌ネットワーク（ウッド・ワイド・ウェブ）による養分・情報伝達、安定同位体比（δ15N・δ13C）による有機物循環の追跡、植物の揮発性有機化合物（VOC）シグナリング",
+    "has_image": false,
+    "url": "stories/kajii-sakura-no-ki.html",
+    "image": "",
+    "char_count": 5492
+  },
+  {
     "no": 56,
     "work_id": "oguri-ningyo-hi",
     "title": "人魚謎お岩殺し――深海に刻まれたプロテオームの遺言",
