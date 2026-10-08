@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-09T07:13:31.134361+09:00",
+  "updated_at": "2026-10-09T07:15:41.269262+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1325,8 +1325,8 @@
       "modern_tech": "反復囚人のジレンマにおける協調戦略の数理、視床下部オキシトシン神経系と社会的信頼形成、極限疲労下における中枢性疲労（セントラル・ガバナー理論）の突破",
       "status": "completed",
       "assigned_writer": "sff7020",
-      "plot_file": null,
-      "plot_by": null,
+      "plot_file": "data/plots/dazai-hashire-merosu.md",
+      "plot_by": "sff7020",
       "plot_at": null,
       "md_file": "content/2026-10-09_dazai_hashire_merosu.md",
       "written_by": "sff7020",

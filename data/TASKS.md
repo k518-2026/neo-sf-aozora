@@ -1,7 +1,7 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-10-09T07:13:31`
+- **最終同期日時 (JST)**: `2026-10-09T07:15:41`
 - **進捗サマリー**: 全 **69** 作品 （完了: **63** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **6**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
@@ -33,9 +33,9 @@
 | No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
 | #64 | `yumeno-binzume-jigoku` | 瓶詰地獄（夢野久作） | - | ✓ `rtx5060lp` (2026-10-03) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #62 | `dazai-hashire-merosu` | 走れメロス（太宰治） | - | ✓ `sff7020` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
-| #61 | `nakajima-tsuki-no-usagi` | 悟浄出世（中島敦） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
-| #60 | `izumi-gejigeji` | 春昼・春昼後刻（泉鏡花） | ✓ (sff7020) | ✓ `sff7020` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
+| #62 | `dazai-hashire-merosu` | 走れメロス（太宰治） | ✓ (sff7020) | ✓ `sff7020` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
+| #61 | `nakajima-tsuki-no-usagi` | 悟浄出世（中島敦） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #60 | `izumi-gejigeji` | 春昼・春昼後刻（泉鏡花） | ✓ (sff7020) | ✓ `sff7020` (2026-10-09) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #59 | `soseki-kusamakura` | 草枕（夏目漱石） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
 | #58 | `kajii-sakura-no-ki` | 櫻の樹の下には（梶井基次郎） | - | ✓ `rtx5060lp` (2026-10-08) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #57 | `miyazawa-gusukobudori` | グスコーブドリの伝記（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-04) | ✓ (sff7020) | 🎨 (kenomac-mini) |
