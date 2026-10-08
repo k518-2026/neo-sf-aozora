@@ -1,5 +1,17 @@
 [
   {
+    "no": 61,
+    "work_id": "dazai-hashire-merosu",
+    "title": "走れメロス――不確定性の鼓動",
+    "original_title": "走れメロス",
+    "original_author": "太宰治",
+    "modern_tech": "反復囚人のジレンマにおける協調戦略の数理、視床下部オキシトシン神経系と社会的信頼形成、極限疲労下における中枢性疲労（セントラル・ガバナー理論）の突破",
+    "has_image": true,
+    "url": "stories/dazai-hashire-merosu.html",
+    "image": "assets/images/dazai-hashire-merosu.png",
+    "char_count": 5376
+  },
+  {
     "no": 60,
     "work_id": "nakajima-tsuki-no-usagi",
     "title": "悟浄出世――再帰的自己の相転移（Recursive Self Phase-Transition）",
