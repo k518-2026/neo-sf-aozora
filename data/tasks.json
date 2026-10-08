@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-09T00:40:43.001649+09:00",
+  "updated_at": "2026-10-09T01:08:55.089908+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -617,8 +617,8 @@
       "md_file": "content/2026-10-03_yumeno_binzume_jigoku.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-03",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-09T00:38:21.851798+09:00",
       "png_file": "content/2026-10-03_yumeno_binzume_jigoku.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-03"
@@ -1260,19 +1260,19 @@
       "author": "夏目漱石",
       "theme": "非人情の美学・デフォルトモードネットワーク・生成的美的知覚モデル",
       "modern_tech": "神経美学（ニューロエステティクス）における島皮質とデフォルト・モード・ネットワークの連携、視線計測と情動デコーディング、デジタルデトックス環境での脳波シータ波同期",
-      "status": "plot_ready",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": "data/plots/soseki-kusamakura.md",
       "plot_by": "sff7020",
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-09_soseki_kusamakura.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-09",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-09_soseki_kusamakura.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-09"
     },
     {
       "id": "izumi-gejigeji",
