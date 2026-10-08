@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-08T23:07:36.549711+09:00",
+  "updated_at": "2026-10-09T00:40:43.001649+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -617,8 +617,8 @@
       "md_file": "content/2026-10-03_yumeno_binzume_jigoku.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-03",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-08T22:41:32.218116+09:00",
+      "reviewed_by": null,
+      "reviewed_at": null,
       "png_file": "content/2026-10-03_yumeno_binzume_jigoku.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-03"
@@ -1183,12 +1183,12 @@
       "plot_at": null,
       "md_file": "content/2026-10-08_oguri_ningyo_hi.md",
       "written_by": "rtx5060lp",
-      "written_at": "2026-10-08T17:54:46.139354+09:00",
+      "written_at": "2026-10-08",
       "reviewed_by": null,
       "reviewed_at": null,
       "png_file": "content/2026-10-08_oguri_ningyo_hi.png",
       "illustrated_by": "kenomac-mini",
-      "illustrated_at": "2026-10-08T18:24:34.816838+09:00"
+      "illustrated_at": "2026-10-08"
     },
     {
       "id": "akutagawa-haguruma",
@@ -1205,8 +1205,8 @@
       "md_file": "content/2026-10-03_akutagawa_haguruma.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-03",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-08T23:07:36.548224+09:00",
+      "reviewed_by": null,
+      "reviewed_at": null,
       "png_file": "content/2026-10-03_akutagawa_haguruma.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-03"
@@ -1226,8 +1226,8 @@
       "md_file": "content/2026-10-04_miyazawa_gusukobudori.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-04",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-08T23:07:36.548224+09:00",
+      "reviewed_by": null,
+      "reviewed_at": null,
       "png_file": "content/2026-10-04_miyazawa_gusukobudori.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-04"
@@ -1246,12 +1246,12 @@
       "plot_at": null,
       "md_file": "content/2026-10-08_kajii_sakura_no_ki.md",
       "written_by": "rtx5060lp",
-      "written_at": "2026-10-08T18:00:03.460095+09:00",
+      "written_at": "2026-10-08",
       "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-08T22:41:32.218116+09:00",
+      "reviewed_at": "2026-10-09T00:38:21.851798+09:00",
       "png_file": "content/2026-10-08_kajii_sakura_no_ki.png",
       "illustrated_by": "kenomac-mini",
-      "illustrated_at": "2026-10-08T18:26:51.592381+09:00"
+      "illustrated_at": "2026-10-08"
     },
     {
       "id": "soseki-kusamakura",
@@ -1264,7 +1264,7 @@
       "assigned_writer": "rtx5060lp",
       "plot_file": "data/plots/soseki-kusamakura.md",
       "plot_by": "sff7020",
-      "plot_at": "2026-10-08T22:41:32.218116+09:00",
+      "plot_at": null,
       "md_file": null,
       "written_by": null,
       "written_at": null,
@@ -1281,11 +1281,11 @@
       "author": "泉鏡花",
       "theme": "量子もつれ光子対イメージング・二重スリット干渉・春の白昼夢と平行世界の交差",
       "modern_tech": "非局所的な量子ゴーストイメージング、脳のレム睡眠侵入（白昼夢）時の海馬リプレイ現象、位相シフト干渉計測による空間認識のゆらぎ",
-      "status": "pending",
+      "status": "plot_ready",
       "assigned_writer": "sff7020",
-      "plot_file": null,
-      "plot_by": null,
-      "plot_at": null,
+      "plot_file": "data/plots/izumi-gejigeji.md",
+      "plot_by": "sff7020",
+      "plot_at": "2026-10-09T00:38:21.851798+09:00",
       "md_file": null,
       "written_by": null,
       "written_at": null,
@@ -1374,7 +1374,7 @@
       "written_by": "rtx5060lp",
       "written_at": "2026-10-03",
       "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-08T22:41:32.218116+09:00",
+      "reviewed_at": "2026-10-09T00:38:21.851798+09:00",
       "png_file": "content/2026-10-03_yumeno_binzume_jigoku.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-03"
