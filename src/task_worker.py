@@ -76,9 +76,9 @@ def setup_logging(verbose: bool = False):
 
 def git_pull_latest() -> bool:
     try:
-        logger.info("GitHubから最新の作業リストと原稿を同期中 (git pull --rebase origin main)...")
+        logger.info("GitHubから最新の作業リストと原稿を同期中 (git pull --rebase --autostash origin main)...")
         subprocess.run(["git", "checkout", "--", "data/tasks.json", "data/TASKS.md"], check=False)
-        subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=False)
+        subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=False)
         return True
     except Exception as e:
         logger.warning(f"git pull warning: {e}")
@@ -96,7 +96,9 @@ def git_commit_and_push(message: str, paths: Optional[List[str]] = None) -> bool
             logger.info("コミット対象の変更はありません。")
             return True
         subprocess.run(["git", "commit", "-m", message], check=True)
-        subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=False)
+        pull_res = subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=False)
+        if pull_res.returncode != 0:
+            subprocess.run(["git", "rebase", "--abort"], check=False)
         subprocess.run(["git", "push", "origin", "HEAD:main"], check=True)
         logger.info(f"GitHubへの自動プッシュ完了: {message}")
         return True
@@ -552,7 +554,7 @@ def run_writer_role(
             continue
 
         # Determine which writer is up next (strict alternation based on history or task assignment)
-        turn_node = preferred_node or task.get("assigned_writer") or determine_next_writer_turn(manifest)
+        turn_node = preferred_node or determine_next_writer_turn(manifest)
         if turn_node == "sff7020":
             if sff_host:
                 active_node = "sff7020"
@@ -595,6 +597,7 @@ def run_writer_role(
 
             task["md_file"] = str(out_path).replace("\\", "/")
             task["written_by"] = active_node
+            task["assigned_writer"] = active_node
             task["written_at"] = datetime.now(JST).isoformat()
             task["status"] = "pending_illustration"
             written_count += 1
@@ -610,7 +613,8 @@ def run_writer_role(
                 reboot_title=reboot_title,
             )
 
-            # Re-sync manifest so remaining queued tasks flip their alternating assignment cleanly
+            # Persist updated task metadata first so sync_tasks_manifest preserves written_by & written_at
+            TASKS_JSON_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             manifest = sync_tasks_manifest(history_mgr)
             try:
                 update_archive_all()
