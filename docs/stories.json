@@ -6,9 +6,9 @@
     "original_title": "櫻の樹の下には",
     "original_author": "梶井基次郎",
     "modern_tech": "菌根菌ネットワーク（ウッド・ワイド・ウェブ）による養分・情報伝達、安定同位体比（δ15N・δ13C）による有機物循環の追跡、植物の揮発性有機化合物（VOC）シグナリング",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/kajii-sakura-no-ki.html",
-    "image": "",
+    "image": "assets/images/kajii-sakura-no-ki.png",
     "char_count": 5492
   },
   {

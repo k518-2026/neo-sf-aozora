@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-08T18:24:34.816848+09:00",
+  "updated_at": "2026-10-08T18:26:51.592392+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1182,7 +1182,7 @@
       "author": "梶井基次郎",
       "theme": "土壌微生物叢と植物根圏ネットワーク・窒素同位体トレーサー・生命と死の物質循環",
       "modern_tech": "菌根菌ネットワーク（ウッド・ワイド・ウェブ）による養分・情報伝達、安定同位体比（δ15N・δ13C）による有機物循環の追跡、植物の揮発性有機化合物（VOC）シグナリング",
-      "status": "pending_illustration",
+      "status": "completed",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
@@ -1191,9 +1191,9 @@
       "written_at": "2026-10-08T18:00:03.460095+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-08_kajii_sakura_no_ki.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-08T18:26:51.592381+09:00"
     },
     {
       "id": "soseki-kusamakura",
