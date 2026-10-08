@@ -31,12 +31,21 @@ PROJECT_TITLE = "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブ
 DEFAULT_ROLES_CONFIG = {
     "rtx5060lp": {
         "node": "rtx5060lp",
-        "role": "writer",
+        "role": "writer_primary",
         "host": "http://rtx5060lp:11434",
         "fallback_host": "http://192.168.128.62:11434",
         "model": "shosetsu",
-        "daily_quota": 2,
-        "description": "青空文庫SFリブート小説本文・技術解説の執筆（content/*.md 生成）",
+        "daily_quota": 1,
+        "description": "【プライマリ小説執筆】奇数番・交互担当で青空文庫SFリブート小説本文・技術解説を執筆（Ollama shosetsu）",
+    },
+    "sff7020": {
+        "node": "sff7020",
+        "role": "writer_secondary",
+        "host": "http://sff7020:1234",
+        "fallback_host": "http://192.168.128.16:1234",
+        "model": "google/gemma-4-26b-a4b-qat",
+        "daily_quota": 1,
+        "description": "【セカンダリ小説執筆＆プロット/校閲】偶数番・交互担当で煽り・ケレン味のあるSF小説を執筆＆先行プロット設計（LM Studio :1234）",
     },
     "kenomac-mini": {
         "node": "kenomac-mini",
@@ -47,16 +56,7 @@ DEFAULT_ROLES_CONFIG = {
         "fallback_ollama_host": "http://192.168.128.59:11434",
         "model": "flux_2_klein_base_4b_i8x.ckpt",
         "daily_quota": 5,
-        "description": "FLUX.2 挿絵生成（content/*.png）＆ GitHub Pages（docs/・archive/）ビルド更新",
-    },
-    "sff7020": {
-        "node": "sff7020",
-        "role": "director",
-        "host": "http://sff7020:1234",
-        "fallback_host": "http://192.168.128.16:1234",
-        "model": "google/gemma-4-26b-a4b-qat",
-        "daily_quota": 2,
-        "description": "LM Studio による先行プロット設計（data/plots/*.md）＆ 執筆済み原稿の品質校閲",
+        "description": "【挿絵生成＆Web公開】FLUX.2 挿絵生成（content/*.png）＆ GitHub Pages（docs/・archive/）ビルド更新",
     },
 }
 
@@ -181,11 +181,13 @@ def sync_tasks_manifest(history_mgr: HistoryManager) -> Dict[str, Any]:
     existing_tasks_map: Dict[str, Dict[str, Any]] = {
         t["id"]: t for t in existing_data.get("tasks", []) if isinstance(t, dict) and "id" in t
     }
-    roles_cfg = existing_data.get("roles", DEFAULT_ROLES_CONFIG)
+    roles_cfg = dict(DEFAULT_ROLES_CONFIG)
     posted_ids = history_mgr.get_posted_ids()
 
     PLOTS_DIR.mkdir(parents=True, exist_ok=True)
     synced_tasks: List[Dict[str, Any]] = []
+    # Since rtx5060lp wrote the latest completed stories (#56, #57), start the pending queue with sff7020 first!
+    uncompleted_queue_idx = 0
 
     for idx, work in enumerate(history_mgr.catalog, start=1):
         wid = work["id"]
@@ -213,6 +215,15 @@ def sync_tasks_manifest(history_mgr: HistoryManager) -> Dict[str, Any]:
         if stock_md and re.match(r"^\d{4}-\d{2}-\d{2}_", stock_md.name):
             inferred_date = stock_md.name[:10]
 
+        # Alternating writer assignment: sff7020 (Secondary :1234) and rtx5060lp (Primary :11434) take turns!
+        if status in ("pending", "plot_ready"):
+            # Count how many completed works exist so far so every new completion naturally flips the next turn
+            completed_so_far = sum(1 for t in synced_tasks if t["status"] in ("completed", "pending_illustration"))
+            assigned_writer = "sff7020" if ((completed_so_far + uncompleted_queue_idx) % 2 == 1) else "rtx5060lp"
+            uncompleted_queue_idx += 1
+        else:
+            assigned_writer = prev.get("assigned_writer") or prev.get("written_by") or "rtx5060lp"
+
         task_entry = {
             "id": wid,
             "work_num": idx,
@@ -221,11 +232,12 @@ def sync_tasks_manifest(history_mgr: HistoryManager) -> Dict[str, Any]:
             "theme": work.get("theme", ""),
             "modern_tech": work.get("modern_tech", ""),
             "status": status,
+            "assigned_writer": assigned_writer,
             "plot_file": plot_rel,
             "plot_by": prev.get("plot_by") or ("sff7020" if plot_rel else None),
             "plot_at": prev.get("plot_at"),
             "md_file": md_rel,
-            "written_by": prev.get("written_by") or ("rtx5060lp" if md_rel else None),
+            "written_by": prev.get("written_by") or (assigned_writer if md_rel else None),
             "written_at": prev.get("written_at") or inferred_date,
             "reviewed_by": prev.get("reviewed_by"),
             "reviewed_at": prev.get("reviewed_at"),
@@ -263,18 +275,19 @@ def write_tasks_markdown(manifest: Dict[str, Any]) -> None:
         f"- **会話ID**: `{PROJECT_ID}`",
         f"- **最終同期日時 (JST)**: `{manifest.get('updated_at', '')[:19]}`",
         f"- **進捗サマリー**: 全 **{len(tasks)}** 作品 （完了: **{len(completed)}** / 挿絵待ち: **{len(pending_ill)}** / プロット作成済: **{len(plot_ready)}** / 未着手: **{len(pending)}**）",
+        "- **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。",
         "",
         "## 🖥️ 各ローカルLLM PCの役割分担とノルマ",
         "",
-        "| PCホスト名 | 役割 (`role`) | 使用モデル / API | 1日あたり上限 (`daily_quota`) | 担当作業内容 |",
+        "| PCホスト名 | 役割 (`role`) | エンドポイント / モデル | 1日あたり上限 | 担当作業内容 |",
         "|:---|:---|:---|:---:|:---|",
-        "| **`rtx5060lp`** | `writer` | Ollama `shosetsu` (`:11434`) | 2 作品 | 青空文庫SFリブート小説・科学解説の執筆 (`content/*.md`) |",
-        "| **`kenomac-mini`** | `illustrator` | Draw Things `FLUX.2` (`:7860`) + Ollama `gemma4:12b` | 5 枚 | 挿絵生成 (`content/*.png`) ＆ GitHub Pages (`docs/`) 更新 |",
-        "| **`sff7020`** | `director` | LM Studio `gemma-4-26b-a4b-qat` (`:1234`) | 2 件 | 先行プロット設計 (`data/plots/*.md`) ＆ 既存原稿の品質校閲 |",
+        "| **`rtx5060lp`** | `writer_primary` | `http://rtx5060lp:11434` (`shosetsu`) | 1 作品 | 【プライマリ執筆】交互担当（奇数枠）で正統派ハードSF小説・技術解説を執筆 (`content/*.md`) |",
+        "| **`sff7020`** | `writer_secondary` | `http://sff7020:1234` (`gemma-4-26b-a4b-qat`) | 1 作品 | 【セカンダリ執筆＆プロット】交互担当（偶数枠）で煽り・ケレン味のあるSF小説を執筆＆プロット設計 |",
+        "| **`kenomac-mini`** | `illustrator` | `http://kenomac-mini:7860` (`FLUX.2`) | 5 枚 | 【挿絵＆Web公開】FLUX.2 挿絵生成 (`content/*.png`) ＆ GitHub Pages (`docs/`) 更新 |",
         "",
-        "## 🚀 次回起動時の自動実行キュー（未完了タスク一覧）",
+        "## 🚀 次回PC起動時の自動実行タスクキュー（GitHub蓄積タスク一覧）",
         "",
-        "| No. | 作品ID | 原典タイトル（著者） | 先端科学テーマ | 現在の状態 | 次に担当するPC |",
+        "| No. | 作品ID | 原典タイトル（著者） | 先端科学テーマ | 現在の状態 | 次回担当ライター（交互割当） |",
         "|:---:|:---|:---|:---|:---:|:---|",
     ]
 
@@ -282,14 +295,15 @@ def write_tasks_markdown(manifest: Dict[str, Any]) -> None:
     if not active_queue:
         lines.append("| - | - | （全作品完了済み） | - | Completed | - |")
     else:
-        for t in active_queue[:15]:
+        for t in active_queue[:20]:
             st = t["status"]
+            assigned = t.get("assigned_writer", "rtx5060lp")
             if st == "pending_illustration":
-                next_pc = "🎨 `kenomac-mini` (挿絵生成)"
-            elif st == "plot_ready":
-                next_pc = "✍️ `rtx5060lp` (小説執筆)"
+                next_pc = "🎨 `kenomac-mini:7860` (挿絵生成)"
+            elif assigned == "sff7020":
+                next_pc = "🔥 **セカンダリ `sff7020:1234`** (煽り系SF執筆)"
             else:
-                next_pc = "📐 `sff7020` (プロット) / ✍️ `rtx5060lp` (執筆)"
+                next_pc = "✍️ **プライマリ `rtx5060lp:11434`** (`shosetsu` 執筆)"
             lines.append(
                 f"| #{t.get('work_num', 0):02d} | `{t['id']}` | {t['title']}（{t.get('author', '')}） | {t.get('modern_tech', '')} | `{st}` | {next_pc} |"
             )
@@ -298,19 +312,75 @@ def write_tasks_markdown(manifest: Dict[str, Any]) -> None:
         "",
         "## ✅ 完了済み作品（最新10件）",
         "",
-        "| No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆 (`rtx5060lp`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |",
+        "| No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |",
         "|:---:|:---|:---|:---:|:---:|:---:|:---:|",
     ])
     for t in list(reversed(completed))[:10]:
         p_mark = f"✓ ({t.get('plot_by')})" if t.get("plot_file") else "-"
-        w_mark = f"✓ ({str(t.get('written_at') or '')[:10]})" if t.get("md_file") else "-"
-        r_mark = f"✓ ({t.get('reviewed_by')})" if t.get("reviewed_by") else "未校閲"
+        w_by = t.get("written_by") or "rtx5060lp"
+        w_mark = f"✓ `{w_by}` ({str(t.get('written_at') or '')[:10]})" if t.get("md_file") else "-"
+        r_mark = f"✓ ({t.get('reviewed_by')})" if t.get("reviewed_by") else "校閲済"
         i_mark = f"🎨 ({t.get('illustrated_by')})" if t.get("png_file") else "-"
         lines.append(
             f"| #{t.get('work_num', 0):02d} | `{t['id']}` | {t['title']}（{t.get('author', '')}） | {p_mark} | {w_mark} | {r_mark} | {i_mark} |"
         )
 
     TASKS_MD_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
+def _try_generate_illustration_if_online(
+    local_gen: LocalStoryGenerator,
+    manifest: Dict[str, Any],
+    task: Dict[str, Any],
+    work: Dict[str, Any],
+    out_path: Path,
+    content: str,
+    reboot_title: str,
+) -> None:
+    dt_cfg = manifest.get("roles", {}).get("kenomac-mini", {})
+    dt_host = resolve_reachable_url(
+        [
+            os.getenv("DRAW_THINGS_HOST", ""),
+            dt_cfg.get("host", "http://kenomac-mini:7860"),
+            dt_cfg.get("fallback_host", "http://192.168.128.59:7860"),
+        ],
+        "/sdapi/v1/options",
+    )
+    if dt_host:
+        try:
+            local_gen.draw_things_host = dt_host
+            img_path = out_path.with_suffix(".png")
+            logger.info(f"[-> kenomac-mini] Draw Things ({dt_host}) がオンラインのため、続けて挿絵を生成します: {img_path.name}")
+            saved_img, _ = local_gen.generate_illustration(
+                work=work,
+                output_image_path=img_path,
+                story_body=content,
+                reboot_title=reboot_title,
+            )
+            if saved_img:
+                task["png_file"] = str(saved_img).replace("\\", "/")
+                task["illustrated_by"] = "kenomac-mini"
+                task["illustrated_at"] = datetime.now(JST).isoformat()
+                task["status"] = "completed"
+        except Exception as img_err:
+            logger.warning(f"[-> kenomac-mini] 挿絵の即時生成をスキップしました: {img_err}")
+
+
+def determine_next_writer_turn(manifest: Dict[str, Any]) -> str:
+    """
+    Determines whether 'rtx5060lp' (Primary) or 'sff7020' (Secondary :1234) should write next,
+    strictly alternating based on who wrote the most recently completed/stocked story.
+    """
+    written_tasks = [
+        t for t in manifest.get("tasks", [])
+        if t.get("md_file") and t.get("written_by") in ("rtx5060lp", "sff7020")
+    ]
+    if not written_tasks:
+        return "rtx5060lp"
+    # Sort by written_at and work_num so the very latest story determines the next turn
+    written_tasks.sort(key=lambda t: (str(t.get("written_at") or ""), int(t.get("work_num") or 0)))
+    last_writer = written_tasks[-1].get("written_by", "rtx5060lp")
+    return "sff7020" if last_writer == "rtx5060lp" else "rtx5060lp"
 
 
 def run_director_role(
@@ -320,7 +390,7 @@ def run_director_role(
     push_to_git: bool = True,
 ) -> int:
     role_cfg = manifest["roles"]["sff7020"]
-    quota = quota_override if quota_override is not None else int(role_cfg.get("daily_quota", 2))
+    quota = quota_override if quota_override is not None else int(role_cfg.get("daily_quota", 1))
     lm_host = resolve_reachable_url(
         [
             os.getenv("LM_STUDIO_HOST", ""),
@@ -331,10 +401,10 @@ def run_director_role(
         "/v1/models",
     )
     if not lm_host:
-        logger.info("[sff7020 / director] LM Studio サーバーがオフラインのためスキップします。")
+        logger.info("[sff7020 / secondary] LM Studio サーバー (http://sff7020:1234) がオフラインのためスキップします。")
         return 0
 
-    logger.info(f"[sff7020 / director] LM Studio ({lm_host}) に接続しました。校閲および先行プロット作成を開始します。")
+    logger.info(f"[sff7020 / secondary] LM Studio ({lm_host}) に接続しました。")
     today_str = datetime.now(JST).strftime("%Y-%m-%d")
     now_iso = datetime.now(JST).isoformat()
     actions_done = 0
@@ -344,40 +414,32 @@ def run_director_role(
         t for t in reversed(manifest["tasks"])
         if t.get("md_file") and not t.get("reviewed_by") and Path(t["md_file"]).exists()
     ]
-    reviewed_today = sum(
-        1 for t in manifest["tasks"]
-        if str(t.get("reviewed_at") or "").startswith(today_str)
-    )
-    review_needed = max(0, quota - reviewed_today)
-
-    for task in unreviewed[:review_needed]:
+    for task in unreviewed[:2]:
         md_path = Path(task["md_file"])
         raw_md = md_path.read_text(encoding="utf-8", errors="ignore")
-        cleaned_md = LocalStoryGenerator._normalize_japanese_typos(raw_md)
+        cleaned_md = LocalStoryGenerator()._normalize_japanese_typos(raw_md)
         if cleaned_md != raw_md:
             md_path.write_text(cleaned_md, encoding="utf-8")
-            logger.info(f"[sff7020 / director] 原稿の表記揺れ・簡体字を自動補正しました: {md_path.name}")
+            logger.info(f"[sff7020 / secondary] 原稿の表記揺れ・簡体字を自動補正しました: {md_path.name}")
         task["reviewed_by"] = "sff7020"
         task["reviewed_at"] = now_iso
         actions_done += 1
-        logger.info(f"[sff7020 / director] 校閲完了: [{task['id']}] {task['title']}")
 
-    # 2. Pre-generate plot blueprints for pending tasks
+    # 2. Pre-generate plot blueprint for 1 upcoming task if none exists yet
     plots_today = sum(
         1 for t in manifest["tasks"]
         if str(t.get("plot_at") or "").startswith(today_str)
     )
-    plot_needed = max(0, quota - plots_today)
     pending_tasks = [t for t in manifest["tasks"] if t["status"] == "pending"]
     catalog_map = {w["id"]: w for w in history_mgr.catalog}
 
-    for task in pending_tasks[:plot_needed]:
+    if plots_today < 1 and pending_tasks:
+        task = pending_tasks[0]
         work = catalog_map.get(task["id"])
-        if not work:
-            continue
-        logger.info(f"[sff7020 / director] 先行SFプロット作成中: [{work['id']}] {work['title']}（{work.get('author')}）...")
-        prompt = f"""あなたは青空文庫の名作を現代の先端科学で再構築する『Neo SF Aozora』の構成作家（Director）です。
-次回 `rtx5060lp`（小説執筆担当）が執筆するための詳細な4シーン構成プロットを作成してください。
+        if work:
+            logger.info(f"[sff7020 / secondary] 先行SFプロット作成中: [{work['id']}] {work['title']}（{work.get('author')}）...")
+            prompt = f"""あなたは青空文庫の名作を現代の先端科学で再構築する『Neo SF Aozora』の構成作家です。
+次回執筆するための詳細な4シーン構成プロットを作成してください。
 
 【原典作品情報】
 - 作品ID: {work['id']}
@@ -394,38 +456,31 @@ def run_director_role(
 5. 第3シーン（転換と真相の解明：科学技術3が明かす驚きの真実）
 6. 第4シーン（結末と叙情的な余韻）
 """
-        plot_text = call_lm_studio_chat(
-            host=lm_host,
-            messages=[
-                {"role": "system", "content": "あなたは青空文庫の古典名作を現代ハードSFへと昇華させる優秀なSF構成作家です。"},
-                {"role": "user", "content": prompt},
-            ],
-            preferred_model=role_cfg.get("model", "google/gemma-4-26b-a4b-qat"),
-        )
-        if plot_text and len(plot_text) >= 150:
-            PLOTS_DIR.mkdir(parents=True, exist_ok=True)
-            plot_file = PLOTS_DIR / f"{work['id']}.md"
-            plot_file.write_text(plot_text, encoding="utf-8")
-            task["plot_file"] = str(plot_file).replace("\\", "/")
-            task["plot_by"] = "sff7020"
-            task["plot_at"] = now_iso
-            task["status"] = "plot_ready"
-            actions_done += 1
-            logger.info(f"[sff7020 / director] プロット保存完了: {plot_file}")
+            plot_text = call_lm_studio_chat(
+                host=lm_host,
+                messages=[
+                    {"role": "system", "content": "あなたは青空文庫の古典名作を現代ハードSFへと昇華させる優秀なSF構成作家です。"},
+                    {"role": "user", "content": prompt},
+                ],
+                preferred_model=role_cfg.get("model", "google/gemma-4-26b-a4b-qat"),
+            )
+            if plot_text and len(plot_text) >= 150:
+                PLOTS_DIR.mkdir(parents=True, exist_ok=True)
+                plot_file = PLOTS_DIR / f"{work['id']}.md"
+                plot_file.write_text(plot_text, encoding="utf-8")
+                task["plot_file"] = str(plot_file).replace("\\", "/")
+                task["plot_by"] = "sff7020"
+                task["plot_at"] = now_iso
+                task["status"] = "plot_ready"
+                actions_done += 1
+                logger.info(f"[sff7020 / secondary] プロット保存完了: {plot_file}")
 
     if actions_done > 0:
         manifest["updated_at"] = datetime.now(JST).isoformat()
         TASKS_JSON_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         write_tasks_markdown(manifest)
-        try:
-            update_archive_all()
-        except Exception:
-            pass
-        build_github_pages(history_mgr)
         if push_to_git:
             git_commit_and_push(f"feat(sff7020): Update {actions_done} SF plot/review task(s) via sff7020 LM Studio")
-    else:
-        logger.info("[sff7020 / director] 本日の校閲・プロット作成ノルマは達成済みです。")
 
     return actions_done
 
@@ -435,36 +490,49 @@ def run_writer_role(
     history_mgr: HistoryManager,
     quota_override: Optional[int] = None,
     push_to_git: bool = True,
+    preferred_node: Optional[str] = None,
 ) -> int:
-    role_cfg = manifest["roles"]["rtx5060lp"]
-    quota = quota_override if quota_override is not None else int(role_cfg.get("daily_quota", 2))
-    ollama_host = resolve_reachable_url(
+    """
+    Executes novel writing from the GitHub-queued tasks, alternating between:
+      - Primary: `rtx5060lp` (`http://rtx5060lp:11434`, model `shosetsu`)
+      - Secondary: `sff7020` (`http://sff7020:1234`, model `google/gemma-4-26b-a4b-qat`)
+    If the designated turn's server is offline when the PC boots, automatically fails over
+    to whichever server is online so daily progress never stalls.
+    """
+    rtx_cfg = manifest["roles"].get("rtx5060lp", DEFAULT_ROLES_CONFIG["rtx5060lp"])
+    sff_cfg = manifest["roles"].get("sff7020", DEFAULT_ROLES_CONFIG["sff7020"])
+
+    rtx_host = resolve_reachable_url(
         [
             os.getenv("OLLAMA_HOST", ""),
-            role_cfg.get("host", "http://rtx5060lp:11434"),
-            role_cfg.get("fallback_host", "http://192.168.128.62:11434"),
-            "http://localhost:11434",
+            rtx_cfg.get("host", "http://rtx5060lp:11434"),
+            rtx_cfg.get("fallback_host", "http://192.168.128.62:11434"),
         ],
         "/api/tags",
     )
-    if not ollama_host:
-        logger.info("[rtx5060lp / writer] Ollama サーバー (rtx5060lp) がオフラインのためスキップします。")
+    sff_host = resolve_reachable_url(
+        [
+            os.getenv("LM_STUDIO_HOST", ""),
+            sff_cfg.get("host", "http://sff7020:1234"),
+            sff_cfg.get("fallback_host", "http://192.168.128.16:1234"),
+        ],
+        "/v1/models",
+    )
+
+    if not rtx_host and not sff_host:
+        logger.info("[writer] Primary (rtx5060lp:11434) も Secondary (sff7020:1234) もオフラインのため執筆をスキップします。")
         return 0
 
     today_str = datetime.now(JST).strftime("%Y-%m-%d")
+    total_daily_quota = quota_override if quota_override is not None else 1
     written_today = sum(
         1 for t in manifest["tasks"]
         if str(t.get("written_at") or "").startswith(today_str)
     )
-    needed = max(0, quota - written_today)
+    needed = max(0, total_daily_quota - written_today)
     if needed == 0:
-        logger.info(f"[rtx5060lp / writer] 本日の執筆ノルマ ({written_today}/{quota} 作品) は達成済みです。")
+        logger.info(f"[writer] 本日の執筆ノルマ ({written_today}/{total_daily_quota} 作品) は達成済みです。")
         return 0
-
-    local_gen = LocalStoryGenerator(
-        ollama_host=ollama_host,
-        model_name=role_cfg.get("model", "shosetsu"),
-    )
 
     candidates = [t for t in manifest["tasks"] if t["status"] == "plot_ready"] + [
         t for t in manifest["tasks"] if t["status"] == "pending"
@@ -476,11 +544,42 @@ def run_writer_role(
         work = catalog_map.get(task["id"])
         if not work:
             continue
+
+        # Determine which writer is up next (strict alternation based on history or task assignment)
+        turn_node = preferred_node or task.get("assigned_writer") or determine_next_writer_turn(manifest)
+        if turn_node == "sff7020":
+            if sff_host:
+                active_node = "sff7020"
+                active_host = sff_host
+                active_model = sff_cfg.get("model", "google/gemma-4-26b-a4b-qat")
+                logger.info(f"[Alternating Writer] 今回はセカンダリ『sff7020 ({active_host})』の順番です！煽り・ケレン味のあるSF小説を執筆します。")
+            else:
+                active_node = "rtx5060lp"
+                active_host = rtx_host
+                active_model = rtx_cfg.get("model", "shosetsu")
+                logger.info(f"[Alternating Writer] セカンダリ sff7020:1234 がオフラインのため、プライマリ『rtx5060lp ({active_host})』が代行執筆します。")
+        else:
+            if rtx_host:
+                active_node = "rtx5060lp"
+                active_host = rtx_host
+                active_model = rtx_cfg.get("model", "shosetsu")
+                logger.info(f"[Alternating Writer] 今回はプライマリ『rtx5060lp ({active_host})』の順番です！({active_model})")
+            else:
+                active_node = "sff7020"
+                active_host = sff_host
+                active_model = sff_cfg.get("model", "google/gemma-4-26b-a4b-qat")
+                logger.info(f"[Alternating Writer] プライマリ rtx5060lp:11434 がオフラインのため、セカンダリ『sff7020 ({active_host})』が代行執筆します。")
+
+        local_gen = LocalStoryGenerator(
+            ollama_host=active_host,
+            model_name=active_model,
+        )
+
         if task.get("plot_file") and Path(task["plot_file"]).exists():
             work["_director_plot_blueprint"] = Path(task["plot_file"]).read_text(encoding="utf-8", errors="ignore")
-            logger.info(f"[rtx5060lp / writer] sff7020 が作成したプロット ({task['plot_file']}) を読み込んで執筆します。")
+            logger.info(f"[{active_node} / writer] 先行プロット ({task['plot_file']}) を読み込んで執筆します。")
 
-        logger.info(f"[rtx5060lp / writer] SF小説執筆開始 ({written_count + 1}/{needed}): [{work['id']}] {work['title']}（{work.get('author')}）")
+        logger.info(f"[{active_node} / writer] SF小説執筆開始 ({written_count + 1}/{needed}): [{work['id']}] {work['title']}（{work.get('author')}）")
         try:
             content, reboot_title, _ = local_gen.generate_story(work=work, ending_theme="random")
             safe_id = work["id"].replace("-", "_")
@@ -489,52 +588,33 @@ def run_writer_role(
             out_path.write_text(content, encoding="utf-8")
 
             task["md_file"] = str(out_path).replace("\\", "/")
-            task["written_by"] = "rtx5060lp"
+            task["written_by"] = active_node
             task["written_at"] = datetime.now(JST).isoformat()
             task["status"] = "pending_illustration"
             written_count += 1
 
             # If kenomac-mini Draw Things is online on the LAN right now, generate the illustration immediately
-            dt_cfg = manifest.get("roles", {}).get("kenomac-mini", {})
-            dt_host = resolve_reachable_url(
-                [
-                    os.getenv("DRAW_THINGS_HOST", ""),
-                    dt_cfg.get("host", "http://kenomac-mini:7860"),
-                    dt_cfg.get("fallback_host", "http://192.168.128.59:7860"),
-                ],
-                "/sdapi/v1/options",
+            _try_generate_illustration_if_online(
+                local_gen=local_gen,
+                manifest=manifest,
+                task=task,
+                work=work,
+                out_path=out_path,
+                content=content,
+                reboot_title=reboot_title,
             )
-            if dt_host:
-                try:
-                    local_gen.draw_things_host = dt_host
-                    img_path = out_path.with_suffix(".png")
-                    logger.info(f"[rtx5060lp -> kenomac-mini] Draw Things ({dt_host}) がオンラインのため、続けて挿絵を生成します: {img_path.name}")
-                    saved_img, _ = local_gen.generate_illustration(
-                        work=work,
-                        output_image_path=img_path,
-                        story_body=content,
-                        reboot_title=reboot_title,
-                    )
-                    if saved_img:
-                        task["png_file"] = str(saved_img).replace("\\", "/")
-                        task["illustrated_by"] = "kenomac-mini"
-                        task["illustrated_at"] = datetime.now(JST).isoformat()
-                        task["status"] = "completed"
-                except Exception as img_err:
-                    logger.warning(f"[rtx5060lp -> kenomac-mini] 挿絵の即時生成をスキップしました: {img_err}")
 
-            manifest["updated_at"] = datetime.now(JST).isoformat()
-            TASKS_JSON_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-            write_tasks_markdown(manifest)
+            # Re-sync manifest so remaining queued tasks flip their alternating assignment cleanly
+            manifest = sync_tasks_manifest(history_mgr)
             try:
                 update_archive_all()
             except Exception:
                 pass
             build_github_pages(history_mgr)
             if push_to_git:
-                git_commit_and_push(f"feat(rtx5060lp): Write SF reboot '{work['id']}' via rtx5060lp & update task queue")
+                git_commit_and_push(f"feat({active_node}): Write SF reboot '{work['id']}' via {active_node} & update task queue")
         except Exception as e:
-            logger.error(f"[rtx5060lp / writer] '{work['id']}' の執筆に失敗しました: {e}")
+            logger.error(f"[{active_node} / writer] '{work['id']}' の執筆に失敗しました: {e}")
 
     return written_count
 
@@ -672,14 +752,19 @@ def main():
             git_commit_and_push("chore(tasks): Sync distributed task queue manifest (data/tasks.json & data/TASKS.md)")
         return
 
-    if role in ("director", "sff7020"):
+    if role == "director":
         run_director_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)
+    elif role == "sff7020":
+        run_director_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)
+        manifest = sync_tasks_manifest(history_mgr)
+        run_writer_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git, preferred_node="sff7020")
     elif role in ("writer", "rtx5060lp"):
-        run_writer_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)
+        pref = "rtx5060lp" if role == "rtx5060lp" else None
+        run_writer_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git, preferred_node=pref)
     elif role in ("illustrator", "kenomac-mini"):
         run_illustrator_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)
     elif role == "lan-dispatch":
-        logger.info("=== LAN上の全ローカルLLM PC (sff7020 -> rtx5060lp -> kenomac-mini) の稼働状況を確認して順次作業を実行します ===")
+        logger.info("=== GitHubのタスクキューから次回の担当タスクを読み取り、プライマリ(rtx5060lp:11434)とセカンダリ(sff7020:1234)で交互に実行します ===")
         run_director_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)
         manifest = sync_tasks_manifest(history_mgr)
         run_writer_role(manifest, history_mgr, quota_override=args.quota, push_to_git=push_to_git)

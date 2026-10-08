@@ -21,11 +21,15 @@ from src.story_generator import (
 logger = logging.getLogger(__name__)
 
 DEFAULT_OLLAMA_HOST = "http://rtx5060lp:11434"
+SECONDARY_LLM_HOST = "http://sff7020:1234"
 FALLBACK_OLLAMA_HOSTS = [
     "http://rtx5060lp:11434",
+    "http://sff7020:1234",
+    "http://192.168.128.16:1234",
     "http://kenomac-mini:11434",
 ]
 DEFAULT_LOCAL_MODEL = "shosetsu"
+DEFAULT_SECONDARY_MODEL = "google/gemma-4-26b-a4b-qat"
 DEFAULT_WRITER_MODEL = "shosetsu"
 DEFAULT_DRAW_THINGS_HOST = "http://kenomac-mini:7860"
 
@@ -379,40 +383,64 @@ class LocalStoryGenerator:
             }
         return {"online": False, "host": self.draw_things_host}
 
+    @staticmethod
+    def _is_openai_compatible_host(host: str) -> bool:
+        """Returns True if the host is an LM Studio / OpenAI-compatible server (e.g. http://sff7020:1234)."""
+        h = host.lower()
+        return ":1234" in h or "sff7020" in h or "/v1" in h
+
     def is_ollama_running(self, auto_start: bool = False) -> bool:
         for candidate_host in self.ollama_hosts:
             try:
-                req = urllib.request.Request(f"{candidate_host}/api/tags")
+                probe_path = "/v1/models" if self._is_openai_compatible_host(candidate_host) else "/api/tags"
+                req = urllib.request.Request(f"{candidate_host}{probe_path}")
                 with urllib.request.urlopen(req, timeout=5) as res:
                     if res.getcode() == 200:
                         if candidate_host != self.ollama_host:
-                            logger.info(f"Switched active Ollama host from {self.ollama_host} to {candidate_host}")
+                            logger.info(f"Switched active LLM host from {self.ollama_host} to {candidate_host}")
                             self.ollama_host = candidate_host
                         return True
             except Exception as e:
-                logger.debug(f"Ollama server check failed ({candidate_host}): {e}")
+                logger.debug(f"LLM server check failed ({candidate_host}): {e}")
 
         return False
 
     def get_installed_models(self) -> List[str]:
         for candidate_host in self.ollama_hosts:
             try:
-                req = urllib.request.Request(f"{candidate_host}/api/tags")
+                is_oai = self._is_openai_compatible_host(candidate_host)
+                probe_path = "/v1/models" if is_oai else "/api/tags"
+                req = urllib.request.Request(f"{candidate_host}{probe_path}")
                 with urllib.request.urlopen(req, timeout=5) as res:
                     if res.getcode() == 200:
                         data = json.loads(res.read().decode("utf-8", errors="ignore"))
-                        models = [m.get("name", "") for m in data.get("models", []) if m.get("name")]
+                        if is_oai:
+                            models = [
+                                m.get("id", "")
+                                for m in data.get("data", [])
+                                if m.get("id") and "embed" not in m.get("id", "").lower()
+                            ]
+                        else:
+                            models = [m.get("name", "") for m in data.get("models", []) if m.get("name")]
                         if models:
                             if candidate_host != self.ollama_host:
-                                logger.info(f"Switched active Ollama host to {candidate_host}")
+                                logger.info(f"Switched active LLM host to {candidate_host}")
                                 self.ollama_host = candidate_host
                             return models
             except Exception as e:
-                logger.debug(f"Could not list Ollama models on {candidate_host}: {e}")
+                logger.debug(f"Could not list LLM models on {candidate_host}: {e}")
         return []
 
     def resolve_model_name(self) -> str:
         installed = self.get_installed_models()
+        if self._is_openai_compatible_host(self.ollama_host):
+            if self.model_name and self.model_name in installed:
+                return self.model_name
+            if DEFAULT_SECONDARY_MODEL in installed:
+                return DEFAULT_SECONDARY_MODEL
+            if installed:
+                return installed[0]
+            return DEFAULT_SECONDARY_MODEL
         if self.model_name:
             if self.model_name in installed:
                 return self.model_name
@@ -434,6 +462,12 @@ class LocalStoryGenerator:
     def resolve_writer_model_name(self) -> str:
         """Resolves the optimal installed model for English visual prompt generation (`shosetsu` / `gemma4:12b` preferred)."""
         installed = self.get_installed_models()
+        if self._is_openai_compatible_host(self.ollama_host):
+            if DEFAULT_SECONDARY_MODEL in installed:
+                return DEFAULT_SECONDARY_MODEL
+            if installed:
+                return installed[0]
+            return DEFAULT_SECONDARY_MODEL
         if self.writer_model:
             if self.writer_model in installed:
                 return self.writer_model
@@ -454,25 +488,41 @@ class LocalStoryGenerator:
         timeout: int = 1200,
         model_override: Optional[str] = None,
     ) -> str:
-        model = model_override or self.resolve_model_name()
-        payload: Dict[str, Any] = {
-            "model": model,
-            "messages": messages,
-            "stream": False,
-            "options": {
-                "temperature": temperature,
-                "num_predict": num_predict,
-                "num_ctx": num_ctx,
-                "repeat_penalty": 1.12,
-            },
-        }
-        if any(k in model.lower() for k in ("shosetsu", "ronbun", "qwen3", "gemma4", "deepseek-r1")):
-            payload["think"] = False
-        data = json.dumps(payload).encode("utf-8")
         hosts_to_try = [self.ollama_host] + [h for h in self.ollama_hosts if h != self.ollama_host]
         last_err: Optional[Exception] = None
         for host in hosts_to_try:
-            url = f"{host}/api/chat"
+            is_oai = self._is_openai_compatible_host(host)
+            if is_oai:
+                url = f"{host}/v1/chat/completions"
+                oai_model = model_override if (model_override and "/" in model_override) else DEFAULT_SECONDARY_MODEL
+                oai_payload: Dict[str, Any] = {
+                    "model": oai_model,
+                    "messages": messages,
+                    "temperature": temperature,
+                    "max_tokens": num_predict,
+                    "stream": False,
+                }
+                data = json.dumps(oai_payload).encode("utf-8")
+            else:
+                url = f"{host}/api/chat"
+                model = model_override or self.resolve_model_name()
+                if "/" in model and not is_oai:
+                    model = DEFAULT_LOCAL_MODEL
+                payload: Dict[str, Any] = {
+                    "model": model,
+                    "messages": messages,
+                    "stream": False,
+                    "options": {
+                        "temperature": temperature,
+                        "num_predict": num_predict,
+                        "num_ctx": num_ctx,
+                        "repeat_penalty": 1.12,
+                    },
+                }
+                if any(k in model.lower() for k in ("shosetsu", "ronbun", "qwen3", "gemma4", "deepseek-r1")):
+                    payload["think"] = False
+                data = json.dumps(payload).encode("utf-8")
+
             try:
                 req = urllib.request.Request(
                     url,
@@ -483,13 +533,18 @@ class LocalStoryGenerator:
                 with urllib.request.urlopen(req, timeout=timeout) as res:
                     body = json.loads(res.read().decode("utf-8", errors="ignore"))
                     if host != self.ollama_host:
-                        logger.info(f"Failover succeeded on Ollama host {host}")
+                        logger.info(f"Failover succeeded on LLM host {host}")
                         self.ollama_host = host
+                    if is_oai:
+                        choices = body.get("choices", [])
+                        if choices:
+                            return choices[0].get("message", {}).get("content", "").strip()
+                        return ""
                     return body.get("message", {}).get("content", "").strip()
             except Exception as e:
                 last_err = e
-                logger.warning(f"Ollama chat failed on {host} ({model}): {e}")
-        raise RuntimeError(f"All Ollama hosts ({hosts_to_try}) failed for model '{model}': {last_err}")
+                logger.warning(f"LLM chat failed on {host}: {e}")
+        raise RuntimeError(f"All LLM hosts ({hosts_to_try}) failed: {last_err}")
 
     def _generate_english_queries_via_llm(self, work: Dict[str, Any]) -> List[Tuple[str, str]]:
         """
