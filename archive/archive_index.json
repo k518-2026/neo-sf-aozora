@@ -906,9 +906,25 @@
     "aozora_url": "https://www.aozora.gr.jp/cards/000148/card776.html",
     "modern_tech": "神経美学（ニューロエステティクス）における島皮質とデフォルト・モード・ネットワークの連携、視線計測と情動デコーディング、デジタルデトックス環境での脳波シータ波同期",
     "summary": "感情の過剰な共感ネットワークに疲弊した現代の視覚科学者が、あらゆる通信を遮断した山間の保養地『那古井』を訪れる。「非人情」という東洋の美的距離感を神経科学で再定義し、謎めいた女性・那美との対話を通じて心の平穏を取り戻す。",
-    "char_count": 3021,
+    "char_count": 6003,
     "narration_file": "57_草枕_narration.txt",
     "full_file": "57_草枕_full.txt",
     "original_md_file": "57_草枕.md"
+  },
+  {
+    "work_no": 58,
+    "work_id": "izumi-gejigeji",
+    "title": "春昼・春昼後刻",
+    "subtitle": "量子干渉に溶ける白昼夢の残滓",
+    "attribution": "",
+    "original_author": "泉鏡花",
+    "original_title": "春昼・春昼後刻",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000050/card3585.html",
+    "modern_tech": "非局所的な量子ゴーストイメージング、脳のレム睡眠侵入（白昼夢）時の海馬リプレイ現象、位相シフト干渉計測による空間認識のゆらぎ",
+    "summary": "菜の花が揺れる春の寺で出会った旅人と美しい女性。うららかな白昼の眠気の中で、現実と夢、過去と現在が量子干渉縞のように重なり合い、失われた想いが時空を超えて結像する幻想光学ロマンス。",
+    "char_count": 3777,
+    "narration_file": "58_春昼・春昼後刻_narration.txt",
+    "full_file": "58_春昼・春昼後刻_full.txt",
+    "original_md_file": "58_春昼・春昼後刻.md"
   }
 ]

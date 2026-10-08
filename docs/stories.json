@@ -1,15 +1,27 @@
 [
   {
+    "no": 59,
+    "work_id": "izumi-gejigeji",
+    "title": "春昼・春昼後刻――量子干渉に溶ける白昼夢の残滓",
+    "original_title": "春昼・春昼後刻",
+    "original_author": "泉鏡花",
+    "modern_tech": "非局所的な量子ゴーストイメージング、脳のレム睡眠侵入（白昼夢）時の海馬リプレイ現象、位相シフト干渉計測による空間認識のゆらぎ",
+    "has_image": true,
+    "url": "stories/izumi-gejigeji.html",
+    "image": "assets/images/izumi-gejigeji.png",
+    "char_count": 5685
+  },
+  {
     "no": 58,
     "work_id": "soseki-kusamakura",
-    "title": "草枕――非人情の神経幾何学",
+    "title": "草枕――共鳴する沈黙の風景",
     "original_title": "草枕",
     "original_author": "夏目漱石",
     "modern_tech": "神経美学（ニューロエステティクス）における島皮質とデフォルト・モード・ネットワークの連携、視線計測と情動デコーディング、デジタルデトックス環境での脳波シータ波同期",
     "has_image": true,
     "url": "stories/soseki-kusamakura.html",
     "image": "assets/images/soseki-kusamakura.png",
-    "char_count": 4440
+    "char_count": 9509
   },
   {
     "no": 57,
