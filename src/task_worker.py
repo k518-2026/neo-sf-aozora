@@ -494,6 +494,35 @@ def run_writer_role(
             task["status"] = "pending_illustration"
             written_count += 1
 
+            # If kenomac-mini Draw Things is online on the LAN right now, generate the illustration immediately
+            dt_cfg = manifest.get("roles", {}).get("kenomac-mini", {})
+            dt_host = resolve_reachable_url(
+                [
+                    os.getenv("DRAW_THINGS_HOST", ""),
+                    dt_cfg.get("host", "http://kenomac-mini:7860"),
+                    dt_cfg.get("fallback_host", "http://192.168.128.59:7860"),
+                ],
+                "/sdapi/v1/options",
+            )
+            if dt_host:
+                try:
+                    local_gen.draw_things_host = dt_host
+                    img_path = out_path.with_suffix(".png")
+                    logger.info(f"[rtx5060lp -> kenomac-mini] Draw Things ({dt_host}) がオンラインのため、続けて挿絵を生成します: {img_path.name}")
+                    saved_img, _ = local_gen.generate_illustration(
+                        work=work,
+                        output_image_path=img_path,
+                        story_body=content,
+                        reboot_title=reboot_title,
+                    )
+                    if saved_img:
+                        task["png_file"] = str(saved_img).replace("\\", "/")
+                        task["illustrated_by"] = "kenomac-mini"
+                        task["illustrated_at"] = datetime.now(JST).isoformat()
+                        task["status"] = "completed"
+                except Exception as img_err:
+                    logger.warning(f"[rtx5060lp -> kenomac-mini] 挿絵の即時生成をスキップしました: {img_err}")
+
             manifest["updated_at"] = datetime.now(JST).isoformat()
             TASKS_JSON_PATH.write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
             write_tasks_markdown(manifest)
