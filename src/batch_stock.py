@@ -116,12 +116,12 @@ def main():
     parser.add_argument(
         "--host",
         default=None,
-        help="Ollama server URL (default: http://192.168.128.62:11434 with fallback to http://192.168.128.59:11434)"
+        help="Ollama server URL (default: http://rtx5060lp:11434 with fallback to http://kenomac-mini:11434)"
     )
     parser.add_argument(
         "--draw-things-host",
         default=None,
-        help="Draw Things HTTP API URL (default: http://192.168.128.59:7860 on Mac mini M4)"
+        help="Draw Things HTTP API URL (default: http://kenomac-mini:7860 on Mac mini M4)"
     )
     parser.add_argument(
         "--model", "-m",

@@ -20,14 +20,14 @@ from src.story_generator import (
 
 logger = logging.getLogger(__name__)
 
-DEFAULT_OLLAMA_HOST = "http://192.168.128.62:11434"
+DEFAULT_OLLAMA_HOST = "http://rtx5060lp:11434"
 FALLBACK_OLLAMA_HOSTS = [
-    "http://192.168.128.62:11434",
-    "http://192.168.128.59:11434",
+    "http://rtx5060lp:11434",
+    "http://kenomac-mini:11434",
 ]
 DEFAULT_LOCAL_MODEL = "shosetsu"
 DEFAULT_WRITER_MODEL = "shosetsu"
-DEFAULT_DRAW_THINGS_HOST = "http://192.168.128.59:7860"
+DEFAULT_DRAW_THINGS_HOST = "http://kenomac-mini:7860"
 
 # Preferred local models in priority order if user hasn't explicitly forced one
 PREFERRED_LOCAL_MODELS = [
@@ -903,7 +903,7 @@ class LocalStoryGenerator:
 
 【最終的な結末テーマ（後半で到達する方向性）：★{theme_info['name']}★】
 {theme_info['description']}
-
+{f"{chr(10)}【構成作家（sff7020 / Gemma 4 26B）による事前プロット設計】{chr(10)}{work['_director_plot_blueprint']}{chr(10)}" if work.get('_director_plot_blueprint') else ""}
 【前半パート（今回執筆する範囲）の構成と絶対ルール】
 1. **1行目の出力形式**:
    1行目には必ず `TITLE: {work['title']}――（物語の核心を突く魅力的な副題）` の形式でタイトルのみを書いてください。
@@ -1158,7 +1158,7 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
     ) -> Tuple[Optional[Path], str]:
         """
         Generates a 512x512 sci-fi illustration using Draw Things HTTP API
-        (`http://192.168.128.59:7860/sdapi/v1/txt2img`, model `flux_2_klein_base_4b_i8x.ckpt`)
+        (`http://kenomac-mini:7860/sdapi/v1/txt2img`, model `flux_2_klein_base_4b_i8x.ckpt`)
         with an English prompt created by `gemma4:12b`.
         Returns (saved_image_path_or_None, english_prompt_used).
         """
