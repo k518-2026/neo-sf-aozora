@@ -390,6 +390,39 @@ def main():
         preview_file.write_text(formatted.content_html, encoding="utf-8")
         logger.info(f"Rendered HTML saved to: {preview_file.resolve()}")
 
+    # Dispatch via SMTP (Blogger and/or WordPress)
+    sender = WordPressMailSender(config)
+    if config.pause_wp:
+        logger.info("PAUSE_WP is active: skipping WordPress email dispatch and posting to Blogger only.")
+    result = sender.send_post(formatted, dry_run=is_dry_run, blogger_only=config.pause_wp)
+
+    if not result.get("success") and not is_dry_run:
+        logger.error(f"Dispatch failed: {result.get('error')}")
+        sys.exit(1)
+
+    # Simultaneously post original work name and SF reboot perspective to X (Twitter)
+    if formatted.status == "publish" or is_dry_run:
+        try:
+            x_poster = XPoster(config)
+            x_poster.post_update(
+                work=target_work,
+                reboot_title=formatted.title,
+                dry_run=is_dry_run
+            )
+        except Exception as x_err:
+            logger.warning(f"X (Twitter) posting warning (non-fatal): {x_err}")
+
+    # If live dispatch was successful, record in history
+    if not is_dry_run and target_work:
+        history_mgr.record_post(
+            work=target_work,
+            reboot_title=formatted.title,
+            file_path=str(target_file),
+            references=target_refs,
+            status=formatted.status
+        )
+        logger.info(f"Recorded '{formatted.title}' in data/history.json and data/POSTED_STORIES.md")
+
     # Automatically keep local, MakeMP3FromAozora archives, and GitHub Pages (docs/) up to date
     try:
         from src.archiver import update_archive_all

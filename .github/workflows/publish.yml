@@ -1,19 +1,15 @@
-name: Thrice-Daily Neo Aozora Sci-Fi Reboot to WordPress
+name: Daily Neo Aozora Sci-Fi Reboot to Blogger, WordPress & X
 
-# Prevent overlapping runs (e.g., if manual dispatch and delayed schedule trigger near the same time)
+# Prevent overlapping runs
 concurrency:
   group: neo-sf-aozora-publish
   cancel-in-progress: false
 
 on:
-  # Thrice-daily scheduled runs (triggered at :55 of the preceding hour to absorb GitHub Actions 15-25m runner queue delays, ensuring completion before 06:30, 17:30, 22:30 JST):
-  # 1) 朝の通勤前: 20:55 UTC = 05:55 JST 起動 -> 06:15〜06:25 JST 頃に配信完了
-  # 2) 夕方の通勤前: 07:55 UTC = 16:55 JST 起動 -> 17:15〜17:25 JST 頃に配信完了
-  # 3) 夜寝る前: 12:55 UTC = 21:55 JST 起動 -> 22:15〜22:25 JST 頃に配信完了
-  # schedule:  # 2026-10-05 WordPress 異議申し立ての結果待ちのため一時停止。再開は # を外す
-    # - cron: '55 20 * * *'
-    # - cron: '55 7 * * *'
-    # - cron: '55 12 * * *'
+  # Daily scheduled run (triggered at 20:55 UTC = 05:55 JST to absorb 15-20m runner queue delays, completing at ~06:15 JST):
+  # 朝6時15分に1日1回、蓄積された作品から Blogger / WordPress / X へ自動投稿
+  schedule:
+    - cron: '55 20 * * *'
 
   # Manual execution from GitHub Actions UI
   workflow_dispatch:
@@ -117,7 +113,7 @@ jobs:
           SMTP_USE_SSL: ${{ secrets.SMTP_USE_SSL || 'false' }}
           WP_POST_EMAIL: ${{ secrets.WP_POST_EMAIL }}
           BLOGGER_POST_EMAIL: ${{ secrets.BLOGGER_POST_EMAIL || '' }}
-          PAUSE_WP: 'true'
+          PAUSE_WP: ${{ vars.PAUSE_WP || 'false' }}
           BLOGGER_SITE_URL: 'https://hardsf2026.blogspot.com/'
           WP_SITE_URL: ${{ secrets.WP_SITE_URL || vars.WP_SITE_URL || '' }}
           X_API_KEY: ${{ secrets.X_API_KEY || secrets.TWITTER_API_KEY || '' }}

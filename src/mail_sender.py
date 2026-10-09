@@ -279,24 +279,30 @@ class WordPressMailSender:
         logger.info(f"Connecting to SMTP server {self.config.host}:{self.config.port}...")
         
         try:
-            sent_blogger = []
+            sent_wp = False
             # 1. Send to WordPress (if not blogger_only and wp_post_email is configured)
             if wp_recipient:
-                wp_msg = self.create_mime_message(post, to_email=wp_recipient, for_blogger=False)
-                self._send_single_message(wp_recipient, wp_msg)
-                logger.info(f"Successfully posted to WordPress via email! Recipient: {wp_recipient}")
+                try:
+                    wp_msg = self.create_mime_message(post, to_email=wp_recipient, for_blogger=False)
+                    self._send_single_message(wp_recipient, wp_msg)
+                    sent_wp = True
+                    logger.info(f"Successfully posted to WordPress via email! Recipient: {wp_recipient}")
+                except Exception as wp_err:
+                    if not blogger_recipients:
+                        raise
+                    logger.error(f"Failed to send email to WordPress ({wp_recipient}): {wp_err}", exc_info=True)
 
             # 2. Send to Blogger over a separate SMTP session (after a 10s pause if WP was just sent)
             for b_addr in blogger_recipients:
                 try:
-                    if wp_recipient:
+                    if sent_wp:
                         time.sleep(10)
                     b_msg = self.create_mime_message(post, to_email=b_addr, for_blogger=True)
                     self._send_single_message(b_addr, b_msg)
                     sent_blogger.append(b_addr)
                     logger.info(f"Successfully posted to Blogger via email! Recipient: {b_addr}")
                 except Exception as b_err:
-                    if blogger_only:
+                    if blogger_only or not sent_wp:
                         raise
                     logger.error(f"Failed to send email to Blogger ({b_addr}): {b_err}", exc_info=True)
 

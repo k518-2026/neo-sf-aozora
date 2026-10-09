@@ -57,7 +57,7 @@ def get_config() -> SMTPConfig:
     blogger_post_email = os.getenv("BLOGGER_POST_EMAIL", "").strip()
     default_status = os.getenv("DEFAULT_POST_STATUS", "publish")
     use_jetpack_shortcodes = os.getenv("USE_JETPACK_SHORTCODES", "true").lower() in ("true", "1", "yes")
-    pause_wp = os.getenv("PAUSE_WP", "true").lower() in ("true", "1", "yes")
+    pause_wp = os.getenv("PAUSE_WP", "false").lower() in ("true", "1", "yes")
 
     x_api_key = os.getenv("X_API_KEY") or os.getenv("TWITTER_API_KEY", "")
     x_api_secret = os.getenv("X_API_SECRET") or os.getenv("TWITTER_API_SECRET", "")
