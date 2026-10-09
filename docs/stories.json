@@ -1,5 +1,17 @@
 [
   {
+    "no": 62,
+    "work_id": "edogawa-oshie-to-tabisuru-otoko",
+    "title": "押絵と旅する男――光学的蜃気楼の残響（エコー）",
+    "original_title": "押絵と旅する男",
+    "original_author": "江戸川乱歩",
+    "modern_tech": "メタサーフェス平面レンズによる広視野ライトフィールド再生、大気温度勾配による上位蜃気楼の光学シミュレーション、エピソード記憶の永続化と時間知覚の歪み",
+    "has_image": true,
+    "url": "stories/edogawa-oshie-to-tabisuru-otoko.html",
+    "image": "assets/images/edogawa-oshie-to-tabisuru-otoko.png",
+    "char_count": 5628
+  },
+  {
     "no": 61,
     "work_id": "dazai-hashire-merosu",
     "title": "走れメロス――不確定性の鼓動",

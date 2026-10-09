@@ -958,5 +958,21 @@
     "narration_file": "60_走れメロス_narration.txt",
     "full_file": "60_走れメロス_full.txt",
     "original_md_file": "60_走れメロス.md"
+  },
+  {
+    "work_no": 61,
+    "work_id": "edogawa-oshie-to-tabisuru-otoko",
+    "title": "押絵と旅する男",
+    "subtitle": "光学的蜃気楼の残響（エコー）",
+    "attribution": "",
+    "original_author": "江戸川乱歩",
+    "original_title": "押絵と旅する男",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56646.html",
+    "modern_tech": "メタサーフェス平面レンズによる広視野ライトフィールド再生、大気温度勾配による上位蜃気楼の光学シミュレーション、エピソード記憶の永続化と時間知覚の歪み",
+    "summary": "夕暮れの列車の中で老人が見せてくれた精巧な押絵。双眼鏡のレンズ越しに覗き込んだ瞬間、光学メタマテリアルに封じ込められた明治の浅草凌雲閣の記憶と、時間を超えた切ない恋が生き生きと動き出す。",
+    "char_count": 4177,
+    "narration_file": "61_押絵と旅する男_narration.txt",
+    "full_file": "61_押絵と旅する男_full.txt",
+    "original_md_file": "61_押絵と旅する男.md"
   }
 ]
