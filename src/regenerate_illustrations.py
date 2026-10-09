@@ -179,6 +179,154 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "The room is well-lit with warm glowing gas-filament lamps blended with electric cyan instrumentation, rich wood-and-chrome textures, high luminous contrast, beautiful vibrant depth, no pitch-black darkness, pure art without text."
         ),
     },
+    {
+        "index": 11,
+        "work_id": "oguri-20th-century-iron-mask",
+        "title": "二十世紀鉄仮面",
+        "author": "小栗虫太郎",
+        "content_paths": [Path("content/2026-09-28_oguri_20th_century_iron_mask.png")],
+        "docs_path": Path("docs/assets/images/oguri-20th-century-iron-mask.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Chief Inspector Kagami, an elite forensic investigator in his early 30s with short black hair, wearing a sleek modern dark suit. "
+            "Masterpiece medium shot: dignified intelligent handsome face, beautifully detailed expressive eyes, clear luminous pupils, delicate iris reflections with crisp light catchlights, sharp symmetrical anime facial features, focused calm expression. "
+            "In the high-tech interior of an autonomous vehicle speeding through a vibrant neon-lit metropolis at night, he examines floating 3D holographic models of DNA facial profiling and biological biometric masks in luminous cyan, emerald, and electric blue. "
+            "Well-lit illuminated interior with ambient dashboard glow and vibrant city highway light streaks outside the panoramic window, crisp clean contrast, radiant highlights, no murky gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 12,
+        "work_id": "unno-floating-island",
+        "title": "浮かぶ飛行島",
+        "author": "海野十三",
+        "content_paths": [Path("content/2026-09-28_unno_floating_island.png")],
+        "docs_path": Path("docs/assets/images/unno-floating-island.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Shinichi Kamiya, a brilliant aerospace engineer in his late 20s with tidy black hair, wearing a high-tech flight-suit style engineering jacket. "
+            "Masterpiece half-body portrait: passionate determined handsome face, captivating expressive eyes, clear dark irises with detailed specular catchlights, sharp symmetrical anime facial features, resolute dignified expression. "
+            "Standing on the grand panoramic observation control deck of the colossal floating megastructure 'Icarus Pier' in the stratosphere at 15,000 meters altitude. "
+            "Outside the massive glass dome, the brilliant curved blue horizon of Earth glows against the deep stratospheric sky under radiant sunlight. Holographic superconducting levitation consoles glow in golden-amber and bright cyan. "
+            "Well-lit illuminated control deck with radiant daylight and solar lens flares, crisp dynamic contrast, no muddy shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 13,
+        "work_id": "unno-captive",
+        "title": "俘囚",
+        "author": "海野十三",
+        "content_paths": [Path("content/2026-09-29_unno_captive.png")],
+        "docs_path": Path("docs/assets/images/unno-captive.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Susumu Sonezaki, a genius theoretical physicist in his early 30s with sharp features and determined dark hair, wearing a minimalist high-tech containment suit. "
+            "Masterpiece medium shot: fearless defiant handsome face, breathtaking detailed expressive eyes, sharp clear pupils with sparkling light reflections, refined symmetrical anime facial structure, triumphant visionary smile. "
+            "Inside a sterile high-security quantum containment chamber with reinforced white ceramic walls. "
+            "As he opens his arms, a miraculous AdS/CFT holographic quantum wormhole manifests around him, with brilliant radiant rings of cobalt blue, violet, and crystalline particle light tearing open a spacetime singularity gateway. "
+            "Highly illuminated environment, vivid luminous energy arcs, strong clean contrast, gleaming highlights, no murky pitch-black room, pure art without text."
+        ),
+    },
+    {
+        "index": 14,
+        "work_id": "unno-metal-man",
+        "title": "金属人間",
+        "author": "海野十三",
+        "content_paths": [Path("content/2026-09-29_unno_metal_man.png")],
+        "docs_path": Path("docs/assets/images/unno-metal-man.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Masumi Kusano, an intellectual biochemist in his late 20s with neatly parted hair and spectacles, wearing a modern crisp white lab coat. "
+            "Masterpiece half-body portrait: calm intellectual handsome face, striking beautiful expressive eyes reflecting a faint mysterious sapphire Cherenkov glow deep within the pupils, delicate catchlights, symmetrical refined anime facial features, serene visionary expression. "
+            "In an illuminated state-of-the-art medical biotechnology laboratory. "
+            "His rolled-up right sleeve reveals his forearm under a soft infrared beam: beneath translucent skin, intricate self-assembling liquid gallium-indium alloy nano-circuits gleam in radiant liquid silver and glowing cyan lines pulsing harmoniously. "
+            "Bright modern lab lighting, clean crisp contrast, radiant metallic reflections, no murky darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 15,
+        "work_id": "hisao-insect-catalog",
+        "title": "昆虫図",
+        "author": "久生十蘭",
+        "content_paths": [Path("content/2026-09-29_hisao_insect_catalog.png")],
+        "docs_path": Path("docs/assets/images/hisao-insect-catalog.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Shuji Kusano, a young computational biologist in his late 20s with gentle dark hair, wearing a white research coat over a crisp shirt. "
+            "Masterpiece medium close-up portrait: sensitive intelligent handsome face, beautifully drawn deeply expressive eyes, clear luminous pupils with delicate iris details, sharp symmetrical anime facial features, contemplative wonder expression. "
+            "In a brightly lit botanical bio-cybernetics laboratory surrounded by lush illuminated greenhouse foliage and glass terrariums. "
+            "Floating before him are glowing microfluidic biochips and shimmering swarm-intelligence pheromone networks: iridescent cerulean-and-emerald robotic jewel beetles and bio-engineered fireflies radiating warm golden and turquoise specks of light in the air. "
+            "Well-lit ambient room, crisp vivid colors, strong dynamic contrast, radiant highlights, no gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 16,
+        "work_id": "edogawa-human-chair",
+        "title": "人間椅子",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-09-30_edogawa_human_chair.png")],
+        "docs_path": Path("docs/assets/images/edogawa-human-chair.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Yoshiko, an elegant and beautiful Japanese female author in her mid-20s with glossy dark shoulder-length hair, wearing a sophisticated cream-colored silk blouse and long skirt. "
+            "Masterpiece half-body portrait: strikingly gorgeous feminine face, mesmerizing beautifully detailed anime eyes with long delicate eyelashes, luminous brown irises with crystal-clear catchlights, graceful refined facial features, a gentle melancholic and blissful sigh. "
+            "Seated comfortably in a sleek, luxurious autonomous smart armchair 'Anima' in an airy modern sunlit private library. "
+            "The ergonomic black armchair has subtle micro-sensor electronic skin lines (E-skin) pulsing with soft warm golden and rose-gold haptic feedback light. "
+            "Bright daylight streaming through large arching windows illuminating book collections, radiant ambient room lighting, crisp contrast, warm exquisite aesthetic, no murky dark shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 17,
+        "work_id": "edogawa-mirror-hell",
+        "title": "鏡地獄",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-09-30_edogawa_mirror_hell.png")],
+        "docs_path": Path("docs/assets/images/edogawa-mirror-hell.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Reiji Sawamura, a passionate optical physicist in his late 20s with stylish dark hair, wearing a white tech-fabric research coat. "
+            "Masterpiece medium shot: handsome intense face filled with awe, extraordinarily detailed expressive anime eyes reflecting infinite prismatic mirror reflections, crystal-clear pupils with specular light catches, sharp symmetrical facial features, mesmerized dignified expression. "
+            "Standing at the epicenter of a gigantic spherical topological metamaterial optical resonator inside a high-tech cleanroom. "
+            "Around him, countless negative-index mirrors and topological photonic crystals bounce infinite beams of pure light, creating a breathtaking kaleidoscope of cosmic microwave background radiation and rainbow spectral flares. "
+            "Brilliantly illuminated environment, gleaming crystalline prisms, intense vibrant colors, sharp clean contrast, radiant lighting, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 18,
+        "work_id": "edogawa-psychological-test",
+        "title": "心理試験",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-09-30_edogawa_psychological_test.png")],
+        "docs_path": Path("docs/assets/images/edogawa-psychological-test.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Seiichiro Fukiya, a 21-year-old elite university prodigy in theoretical computing with sleek neat black hair, wearing a crisp dark collared shirt. "
+            "Masterpiece close-up half-body portrait: impeccably handsome, cold yet refined face, mesmerizingly clear and piercing expressive eyes with sharp pupils and delicate iris catchlights, perfectly symmetrical anime features, a subtle composed enigmatic smirk. "
+            "In a modern well-lit cognitive neuro-forensic examination room. Wearing a minimalist high-tech fNIRS headset emitting subtle near-infrared laser sensors on his brow. "
+            "Before him, transparent holographic monitors display perfectly balanced brainwave waveforms, oxygenation metrics, and zero-knowledge cryptographic proofs in soft glowing cyan and mint-green lines. "
+            "Fully illuminated clean architectural room, high dynamic contrast, crisp outlines, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 19,
+        "work_id": "edogawa-attic-stroller",
+        "title": "屋根裏の散歩者",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-10-01_edogawa_attic_stroller.png")],
+        "docs_path": Path("docs/assets/images/edogawa-attic-stroller.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Saburo Goda, a solitary electromagnetic radio researcher in his mid-20s with slightly tousled dark hair, wearing a casual dark tech-hoodie. "
+            "Masterpiece medium shot: sharp observant handsome face, intense and deeply focused expressive eyes with clear pupils and radiant monitor reflections, crisp symmetrical anime facial features, deeply engrossed expression. "
+            "In an atmospheric yet well-lit converted attic laboratory filled with planar array antennas, signal processors, and glowing multicaster displays. "
+            "On his ultra-wide monitors glow holographic 3D wireframe human body meshes and terahertz through-wall scattering radar fields in vibrant electric cyan and violet hues, mapping real-time cardiac rhythm attractors. "
+            "Clear dynamic contrast, warm ambient desk lamps balancing the glowing screens, radiant highlights, clean sharp details, no murky darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 20,
+        "work_id": "edogawa-picture-traveler",
+        "title": "押絵と旅する男",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-10-01_edogawa_picture_traveler.png")],
+        "docs_path": Path("docs/assets/images/edogawa-picture-traveler.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of an emotional scene from 'The Man Traveling with the Brocade Picture': in a warmly lit vintage express train observation car speeding through a snowy twilight. "
+            "A dignified, gentle elderly Japanese man in his late 60s with neat silver-white hair and kind expressive eyes, wearing an elegant wool coat, gently holds an ornate antique picture frame. "
+            "Inside the glowing frame is an extraordinarily beautiful anime girl in her late teens dressed in Taisho-roman modern attire, with sparkling expressive brown eyes, radiant smile, and delicate hair ribbons, alive and gently moving within a topological superconducting quantum processor field that emits soft golden starlight and faint blue luminescence. "
+            "Warm train cabin lighting, soft snow falling outside the large window, rich dynamic contrast, exquisite nostalgic and futuristic aesthetic, clear detailed facial anatomy, no murky gloom, pure art without text."
+        ),
+    },
 ]
 
 
@@ -242,9 +390,9 @@ def generate_single_illustration(spec: Dict[str, Any], url: str = DRAW_THINGS_UR
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Regenerate illustrations #1 to #10 with improved eyes and contrast")
-    parser.add_argument("--start", type=int, default=1, help="Start index (1-10)")
-    parser.add_argument("--end", type=int, default=10, help="End index (1-10)")
+    parser = argparse.ArgumentParser(description="Regenerate illustrations with improved eyes and contrast")
+    parser.add_argument("--start", type=int, default=11, help="Start index (1-20)")
+    parser.add_argument("--end", type=int, default=20, help="End index (1-20)")
     parser.add_argument("--no-push", action="store_true", help="Do not git commit/push each work")
     args = parser.parse_args()
 
@@ -278,7 +426,8 @@ def main():
         build_github_pages(HistoryManager())
         if not args.no_push:
             subprocess.run(["git", "add", "docs/", "archive/", "README.md"], check=False)
-            subprocess.run(["git", "commit", "-m", "chore(site): Rebuild GitHub Pages with regenerated illustrations #1-#10"], check=False)
+            commit_title = f"chore(site): Rebuild GitHub Pages with regenerated illustrations #{args.start}-#{args.end}"
+            subprocess.run(["git", "commit", "-m", commit_title], check=False)
             subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=False)
             subprocess.run(["git", "push", "origin", "HEAD:main"], check=False)
     except Exception as e:
@@ -287,3 +436,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
