@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-10T02:08:46.912197+09:00",
+  "updated_at": "2026-10-10T06:48:22.126110+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -617,8 +617,8 @@
       "md_file": "content/2026-10-03_yumeno_binzume_jigoku.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-03",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-10T02:06:25.295905+09:00",
       "png_file": "content/2026-10-03_yumeno_binzume_jigoku.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-03"
