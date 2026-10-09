@@ -280,6 +280,7 @@ class WordPressMailSender:
         
         try:
             sent_wp = False
+            sent_blogger = []
             # 1. Send to WordPress (if not blogger_only and wp_post_email is configured)
             if wp_recipient:
                 try:
