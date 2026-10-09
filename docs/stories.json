@@ -1,5 +1,17 @@
 [
   {
+    "no": 63,
+    "work_id": "sakaguchi-sakura-no-mori",
+    "title": "桜の森の満開の下――テルペン・シンギュラリティ：感覚の特異点",
+    "original_title": "桜の森の満開の下",
+    "original_author": "坂口安吾",
+    "modern_tech": "植物由来揮発性モノテルペン類が辺縁系に及ぼす神経薬理作用、広大空間における感覚入力過多（サブライム体験）の脳機能イメージング、孤独感の神経基盤",
+    "has_image": true,
+    "url": "stories/sakaguchi-sakura-no-mori.html",
+    "image": "assets/images/sakaguchi-sakura-no-mori.png",
+    "char_count": 4939
+  },
+  {
     "no": 62,
     "work_id": "edogawa-oshie-to-tabisuru-otoko",
     "title": "押絵と旅する男――光学的蜃気楼の残響（エコー）",
@@ -57,7 +69,7 @@
     "has_image": true,
     "url": "stories/soseki-kusamakura.html",
     "image": "assets/images/soseki-kusamakura.png",
-    "char_count": 9509
+    "char_count": 10169
   },
   {
     "no": 57,
