@@ -1,7 +1,7 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-10-10T06:48:22`
+- **最終同期日時 (JST)**: `2026-10-10T12:55:13`
 - **進捗サマリー**: 全 **69** 作品 （完了: **65** / 挿絵待ち: **0** / プロット作成済: **1** / 未着手: **3**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
@@ -32,8 +32,8 @@
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
 | #65 | `sakaguchi-sakura-no-mori` | 桜の森の満開の下（坂口安吾） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #64 | `yumeno-binzume-jigoku` | 瓶詰地獄（夢野久作） | - | ✓ `rtx5060lp` (2026-10-03) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #63 | `edogawa-oshie-to-tabisuru-otoko` | 押絵と旅する男（江戸川乱歩） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-10) | 校閲済 | 🎨 (kenomac-mini) |
-| #62 | `dazai-hashire-merosu` | 走れメロス（太宰治） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
+| #63 | `edogawa-oshie-to-tabisuru-otoko` | 押絵と旅する男（江戸川乱歩） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #62 | `dazai-hashire-merosu` | 走れメロス（太宰治） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #61 | `nakajima-tsuki-no-usagi` | 悟浄出世（中島敦） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
 | #60 | `izumi-gejigeji` | 春昼・春昼後刻（泉鏡花） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
 | #59 | `soseki-kusamakura` | 草枕（夏目漱石） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
