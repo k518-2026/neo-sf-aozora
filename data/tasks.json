@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-10T12:55:24.056506+09:00",
+  "updated_at": "2026-10-10T23:43:23.379313+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1407,19 +1407,19 @@
       "author": "折口信夫",
       "theme": "古代音響考古学・二上山夕日の天文シミュレーション・蓮糸織物の構造色フォトニクス",
       "modern_tech": "古墳石室の音響共鳴特性（アーキオアコースティクス）解析、古天文学による春分・秋分の太陽軌道復元、ハス繊維のナノ微細構造が織りなす構造色ホログラフィ",
-      "status": "plot_ready",
-      "assigned_writer": "sff7020",
+      "status": "completed",
+      "assigned_writer": "rtx5060lp",
       "plot_file": "data/plots/origuchi-shisha-no-sho.md",
       "plot_by": "sff7020",
       "plot_at": "2026-10-10T02:06:25.295905+09:00",
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-10_origuchi_shisha_no_sho.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-10T23:37:24.760181+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-10_origuchi_shisha_no_sho.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-10T23:43:23.337598+09:00"
     },
     {
       "id": "koda-goju-no-to",

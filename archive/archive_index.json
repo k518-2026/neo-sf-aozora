@@ -990,5 +990,21 @@
     "narration_file": "62_桜の森の満開の下_narration.txt",
     "full_file": "62_桜の森の満開の下_full.txt",
     "original_md_file": "62_桜の森の満開の下.md"
+  },
+  {
+    "work_no": 63,
+    "work_id": "origuchi-shisha-no-sho",
+    "title": "死者の書",
+    "subtitle": "共鳴する光の曼荼羅（Mandala of Resonant Light）",
+    "attribution": "",
+    "original_author": "折口信夫",
+    "original_title": "死者の書",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000933/card13205.html",
+    "modern_tech": "古墳石室の音響共鳴特性（アーキオアコースティクス）解析、古天文学による春分・秋分の太陽軌道復元、ハス繊維のナノ微細構造が織りなす構造色ホログラフィ",
+    "summary": "二上山の麓、千年の眠りから目覚めようとする古代の貴公子と、彼方の光に導かれて蓮糸で曼荼羅を織り上げる郎女。古代の祈りの風景を、音響考古学と構造色フォトニクスで鮮やかに蘇らせる時空ロマン。",
+    "char_count": 3829,
+    "narration_file": "63_死者の書_narration.txt",
+    "full_file": "63_死者の書_full.txt",
+    "original_md_file": "63_死者の書.md"
   }
 ]

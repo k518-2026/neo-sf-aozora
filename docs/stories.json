@@ -1,5 +1,17 @@
 [
   {
+    "no": 63,
+    "work_id": "origuchi-shisha-no-sho",
+    "title": "死者の書――共鳴する光の曼荼羅（Mandala of Resonant Light）",
+    "original_title": "死者の書",
+    "original_author": "折口信夫",
+    "modern_tech": "古墳石室の音響共鳴特性（アーキオアコースティクス）解析、古天文学による春分・秋分の太陽軌道復元、ハス繊維のナノ微細構造が織りなす構造色ホログラフィ",
+    "has_image": true,
+    "url": "stories/origuchi-shisha-no-sho.html",
+    "image": "assets/images/origuchi-shisha-no-sho.png",
+    "char_count": 5906
+  },
+  {
     "no": 62,
     "work_id": "sakaguchi-sakura-no-mori",
     "title": "桜の森の満開の下――テルペン・シンギュラリティ：感覚の特異点",
