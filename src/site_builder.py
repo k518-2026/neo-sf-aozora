@@ -914,6 +914,55 @@ def build_github_pages(history_mgr: Optional[HistoryManager] = None) -> Dict[str
         encoding="utf-8",
     )
 
+    # Fallback / alias for https://k518-2026.github.io/neo-sf-aozora/docs/
+    docs_sub = DOCS_DIR / "docs"
+    docs_sub.mkdir(parents=True, exist_ok=True)
+    docs_redirect_html = (
+        "<!DOCTYPE html>\n"
+        "<html lang=\"ja\">\n"
+        "<head>\n"
+        "  <meta charset=\"UTF-8\">\n"
+        "  <meta http-equiv=\"refresh\" content=\"0; url=../\">\n"
+        "  <title>青空文庫SF進化論 - 自動リダイレクト</title>\n"
+        "  <script>\n"
+        "    window.location.replace('../' + window.location.search + window.location.hash);\n"
+        "  </script>\n"
+        "</head>\n"
+        "<body style=\"font-family: sans-serif; text-align: center; padding: 40px;\">\n"
+        "  <p>青空文庫SF進化論 ライブラリへ移動しています... <a href=\"../\">トップページはこちら</a></p>\n"
+        "</body>\n"
+        "</html>\n"
+    )
+    (docs_sub / "index.html").write_text(docs_redirect_html, encoding="utf-8")
+
+    # 404.html with automatic redirection for legacy /docs/ subpaths or invalid URLs
+    not_found_html = (
+        "<!DOCTYPE html>\n"
+        "<html lang=\"ja\">\n"
+        "<head>\n"
+        "  <meta charset=\"UTF-8\">\n"
+        "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n"
+        "  <title>青空文庫SF進化論</title>\n"
+        "  <script>\n"
+        "    (function() {\n"
+        "      var p = window.location.pathname;\n"
+        "      if (p.indexOf('/neo-sf-aozora/docs/') !== -1) {\n"
+        "        var target = p.replace('/neo-sf-aozora/docs/', '/neo-sf-aozora/') + window.location.search + window.location.hash;\n"
+        "        window.location.replace(target);\n"
+        "      }\n"
+        "    })();\n"
+        "  </script>\n"
+        "  <link rel=\"stylesheet\" href=\"/neo-sf-aozora/style.css\">\n"
+        "</head>\n"
+        "<body style=\"font-family: sans-serif; text-align: center; padding: 60px 20px; background: #0f172a; color: #f8fafc;\">\n"
+        "  <h2 style=\"color: #38bdf8;\">青空文庫SF進化論 ライブラリ</h2>\n"
+        "  <p style=\"color: #94a3b8;\">お探しのページへ移動しています...</p>\n"
+        "  <p style=\"margin-top: 24px;\"><a href=\"/neo-sf-aozora/\" style=\"color: #38bdf8; text-decoration: underline;\">トップページへ戻る</a></p>\n"
+        "</body>\n"
+        "</html>\n"
+    )
+    (DOCS_DIR / "404.html").write_text(not_found_html, encoding="utf-8")
+
     # Update root README.md with links to all novels
     _write_root_readme(stories, Path("README.md"))
 

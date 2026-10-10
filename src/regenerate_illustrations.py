@@ -536,6 +536,331 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Cinematic sci-fi anime illustration of Shinji Yajima, a brilliant 27-year-old neurogeneticist with slightly messy dark hair, wearing an open white laboratory coat over a dark shirt. Masterpiece close-up half-body portrait: intensely intellectual, handsome face etched with thrilling realization, deeply expressive eyes reflecting holographic neural patterns, clear pupils with sparkling catchlights, sharp symmetrical anime features. In an illuminated advanced neurogenetics laboratory. Before his multielectrode array incubator, a holographic cerebral organoid pulses with complex self-referential gamma waves, manifesting in the air as a mesmerizing, luminous golden and cyan 'Strange Loop' recursive fractal diagram. Brightly lit state-of-the-art cleanroom, crisp glass reflections, radiant holographic telemetry, high dynamic contrast, no murky darkness, pure art without text."
         ),
     },
+    {
+        "index": 40,
+        "work_id": "oguri-kokushikan",
+        "title": "黒死館殺人事件",
+        "author": "小栗虫太郎",
+        "content_paths": [Path("content/2026-10-04_oguri_kokushikan.png")],
+        "docs_path": Path("docs/assets/images/oguri-kokushikan.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kentaro Suzuki, an elite forensic investigator in his late 20s in a sleek dark trenchcoat, standing with Mariko Kobe, a brilliant mathematical forensic woman in her 20s with glasses and lab coat. "
+            "Masterpiece close-up half-body composition: both characters have exquisitely drawn, clear expressive eyes with delicate specular iris reflections, sharp pupils, refined symmetrical anime facial features. "
+            "Inside the illuminated Neo-Black Castle research hall, radiant holographic formal logic proof trees and crystalline mathematical equations in glowing cyan, gold, and amber float in the air. "
+            "Bright architectural lighting, high dynamic contrast, crisp highlights, no pitch-black darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 41,
+        "work_id": "akutagawa-rashomon",
+        "title": "羅生門",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-04_akutagawa_rashomon.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-rashomon.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kentaro Kato, a determined 24-year-old resource recovery operator in high-tech utilitarian gear. "
+            "Masterpiece close-up half-body portrait: handsome face with intense, beautifully detailed amber eyes with clear luminous pupils, delicate iris catchlights, resolute calm expression, symmetrical anime anatomy. "
+            "Standing on the upper deck of the colossal cyberpunk Rashomon Gate overlooking a vast futuristic metropolis at twilight. "
+            "Beside him hovers a sleek recycling pod emitting vibrant turquoise scanning laser fans. Glowing sunset gradient in orange, magenta, and sapphire sky, bright reflective surfaces, radiant contrast, crisp details, no murky dark room, pure art without text."
+        ),
+    },
+    {
+        "index": 42,
+        "work_id": "akutagawa-toshishun",
+        "title": "杜子春",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-04_akutagawa_toshishun.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-toshishun.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Takuro Yamada, a brilliant 23-year-old neuroengineering entrepreneur, inside a luminous CAVE time-compression VR chamber. "
+            "Masterpiece half-body portrait: handsome face filled with serene emotional awakening, stunningly detailed expressive eyes with crystal-clear irises reflecting golden and sapphire light, sharp pupils and delicate eyelashes. "
+            "Surrounding him are concentric rings of holographic light, floating radiant memory fragments and geometric neural pathways glowing in brilliant gold, emerald, and azure. "
+            "Well-lit futuristic laboratory environment, radiant ambient illumination, clean vibrant dynamic contrast, no pitch-black gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 43,
+        "work_id": "miyazawa-chumon",
+        "title": "注文の多い料理店",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-10-05_miyazawa_chumon.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-chumon.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kentaro Suzuki, a handsome 26-year-old science journalist, and Mika Sato, a stylish 25-year-old female smart architecture researcher. "
+            "Masterpiece portrait: both characters possess exquisitely rendered, captivating eyes with sparkling pupils, crisp iris reflections, refined symmetrical anime facial beauty, expressions of intrigued discovery. "
+            "Inside the illuminated smart restaurant Yamanekoken, where sleek glass and curved timber blend seamlessly with radiant floating holographic menus and golden ambient light ribbons. "
+            "Sunlit mountain forest visible through expansive panoramic glass walls, bright warm ambient lighting, high dynamic contrast, crisp details, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 44,
+        "work_id": "miyazawa-kaze-no-matasaburo",
+        "title": "風の又三郎",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-10-05_miyazawa_kaze_no_matasaburo.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-kaze-no-matasaburo.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Matasaburo Kaza-mi, an enigmatic 12-year-old boy with windswept vibrant red-auburn hair, standing on a sun-drenched highland plateau beside an atmospheric Doppler lidar station. "
+            "Masterpiece close-up portrait: captivating mystical turquoise eyes with sparkling pupils, clear crystalline iris catchlights, refined gentle anime facial features, wind blowing through his clothes. "
+            "Around him, shimmering micro-vortices and luminous emerald and silver wind currents are visualized by floating lidar laser beams under a boundless brilliant blue autumn sky. "
+            "Radiant daylight, vibrant saturated natural colors, crisp high contrast, joyful sparkling highlights, no dark shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 45,
+        "work_id": "dazai-hashire-melos",
+        "title": "走れメロス",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-06_dazai_hashire_melos.png")],
+        "docs_path": Path("docs/assets/images/dazai-hashire-melos.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Melos, a passionate 22-year-old cryptographer and athlete with dark windswept hair, sprinting along a sun-drenched cybernetic solar causeway toward the gleaming high-tech metropolis of Syracuse. "
+            "Masterpiece dynamic half-body portrait: fiercely determined handsome face with dazzlingly clear amber eyes, sharp pupils, specular sunlight catchlights in his irises, symmetrical refined anime facial anatomy. "
+            "Around him float radiant streams of zero-knowledge cryptographic proofs and sparkling golden energy motes under a brilliant radiant blue sky and blazing golden sun. "
+            "Vivid saturated colors, heroic dynamic lighting, high dynamic contrast, crisp edges, no darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 46,
+        "work_id": "izumi-koya-hijiri",
+        "title": "高野聖",
+        "author": "泉鏡花",
+        "content_paths": [Path("content/2026-10-06_izumi_koya_hijiri.png")],
+        "docs_path": Path("docs/assets/images/izumi-koya-hijiri.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Takashi Kusanagi, a handsome 25-year-old molecular biologist, meeting Shizuka, a breathtakingly beautiful mystical woman in her early 20s with long flowing black hair and an elegant modern kimono. "
+            "Masterpiece half-body portrait: Shizuka has mesmerizing, deep obsidian and violet eyes with sparkling luminous catchlights, delicate eyelashes, porcelain skin, refined symmetrical anime beauty. "
+            "Beside a crystal-clear mountain stream in an ancient sun-dappled mountain sanctuary, where bioluminescent flora and gentle mountain mist glow with emerald and sapphire sparkles. "
+            "Bright ambient forest light filtering through lush green canopy, radiant highlights, high dynamic contrast, enchanting serene atmosphere, no murky blackness, pure art without text."
+        ),
+    },
+    {
+        "index": 47,
+        "work_id": "soseki-kokoro",
+        "title": "こころ",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-10-06_soseki_kokoro.png")],
+        "docs_path": Path("docs/assets/images/soseki-kokoro.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Ryuichi Kato, a handsome 24-year-old digital archivist with neatly combed dark hair, in a sunlit modern study overlooking a sun-drenched coastal city through floor-to-ceiling windows. "
+            "Masterpiece close-up half-body portrait: deeply thoughtful, intelligent face with expressive hazel-brown eyes, clear pupils, luminous iris reflections of floating golden data prisms, symmetrical refined anime features. "
+            "In his hands he holds a glowing holographic time-lock memory puzzle cube that unfurls into delicate golden and cyan threads of preserved thoughts. "
+            "Warm golden afternoon sunlight bathing the room, clean crisp architectural contrast, luminous highlights, peaceful dignified atmosphere, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 48,
+        "work_id": "mori-takasebune",
+        "title": "高瀬舟",
+        "author": "森鴎外",
+        "content_paths": [Path("content/2026-10-06_mori_takasebune.png")],
+        "docs_path": Path("docs/assets/images/mori-takasebune.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kisuke, a brilliant 26-year-old neuroscientist with a transcendently serene smile, aboard the observation deck of the autonomous transport shuttle Takasebune. "
+            "Masterpiece close-up half-body portrait: extraordinarily gentle and peaceful face, magnificent clear dark eyes filled with profound contentment and sparkling specular catchlights, delicate symmetrical anime anatomy. "
+            "Looking out through the wide curved viewport at the radiant curved horizon of Earth bathed in brilliant blue and gold sunlight against a luminous starry nebula. "
+            "Well-lit high-tech observation lounge, clean ambient panel lighting, crisp dynamic contrast, celestial wonder, no muddy shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 49,
+        "work_id": "nakajima-meijin-den",
+        "title": "名人伝",
+        "author": "中島敦",
+        "content_paths": [Path("content/2026-10-07_nakajima_meijin_den.png")],
+        "docs_path": Path("docs/assets/images/nakajima-meijin-den.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kisho, the legendary archer in his late 20s with noble refined features, standing in a luminous cyber-zen meditation training dojo. "
+            "Masterpiece close-up half-body portrait: dignified calm expression, peerless sharp eyes with microscopic pinpoint clarity, luminous silver-blue irises reflecting transcendent focus, delicate specular catchlights, flawless symmetrical anime facial anatomy. "
+            "Before his poised fingertips, a glowing electromagnetic cyber-bow dissolves into ethereal quantum wave circles of golden and cyan particles. "
+            "Bright illuminated dojo with white minimalist architecture, radiant floor lighting, vibrant high contrast, profound stillness, no murky darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 50,
+        "work_id": "edogawa-kagami-jigoku",
+        "title": "鏡地獄",
+        "author": "江戸川乱歩",
+        "content_paths": [
+            Path("content/2026-10-07_edogawa_kagami_jigoku.png"),
+            Path("content/2026-09-30_edogawa_mirror_hell.png"),
+        ],
+        "docs_path": Path("docs/assets/images/edogawa-kagami-jigoku.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Seiji Saeki, a handsome 26-year-old quantum optics physicist with stylish dark hair, standing before a magnificent spherical photonic crystal resonator. "
+            "Masterpiece close-up half-body portrait: captivated, brilliant face illuminated by kaleidoscopic laser reflections, breathtakingly detailed wide eyes with intricate iris patterns, clear pupils, sparkling multi-colored catchlights, symmetrical refined anime features. "
+            "Inside the spherical mirror chamber, infinite self-reflections dance with concentric rings of laser light in ruby, emerald, and sapphire. "
+            "Bright modern optical physics laboratory, dazzling radiant light beams, crisp sharp reflections, high dynamic contrast, zero pitch-black gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 51,
+        "work_id": "edogawa-imomushi",
+        "title": "芋虫",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-10-07_edogawa_imomushi.png")],
+        "docs_path": Path("docs/assets/images/edogawa-imomushi.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Mariko Saeki, a compassionate and brilliant 27-year-old female bio-interface researcher in a sleek white medical coat. "
+            "Masterpiece close-up half-body portrait: radiant feminine beauty, deeply expressive warm amber-brown eyes brimming with tenderness and hope, delicate eyelashes, crisp specular iris catchlights, refined symmetrical anime facial structure. "
+            "Holding an advanced neural-haptic exoskeleton interface that glows with soft golden synaptic light lines, connecting with her patient's mind in a sunlit futuristic rehabilitation pavilion. "
+            "Bright morning sunlight pouring through large glass walls, cheerful clean ambient lighting, high contrast, warm hopeful atmosphere, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 52,
+        "work_id": "unno-kasei-ma",
+        "title": "火星魔",
+        "author": "海野十三",
+        "content_paths": [Path("content/2026-10-07_unno_kasei_ma.png")],
+        "docs_path": Path("docs/assets/images/unno-kasei-ma.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Seiichi Saeki, an elite 32-year-old planetary quarantine officer in a sleek white biosphere inspection uniform with transparent visor pushed up. "
+            "Masterpiece close-up half-body portrait: sharp intellectual handsome face, keen perceptive hazel eyes with crystal-clear pupils and bright specular catchlights, serious analytical expression, symmetrical anime anatomy. "
+            "In an illuminated quarantine cleanroom, he examines a hovering extraterrestrial silicon-carbon crystal pulsating with vivid magenta and cyan geometric bioluminescence. "
+            "Bright pristine laboratory lighting, polished reflective workbenches, crisp clean depth, high dynamic contrast, vivid scientific atmosphere, no murky gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 53,
+        "work_id": "unno-kaiten-makyo",
+        "title": "海底大陸",
+        "author": "海野十三",
+        "content_paths": [Path("content/2026-10-07_unno_kaiten_makyo.png")],
+        "docs_path": Path("docs/assets/images/unno-kaiten-makyo.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kazuma Sato, a handsome 31-year-old marine geologist in a high-tech naval expedition uniform, on the observation bridge of the deep-sea exploration vessel Leviathan. "
+            "Masterpiece close-up half-body portrait: face filled with awe and scientific wonder, intensely clear dark-blue eyes reflecting vibrant turquoise ocean glow, sharp pupils and delicate catchlights, symmetrical refined anime features. "
+            "Looking through reinforced panoramic observation glass at a colossal illuminated submerged caldera city, with glowing cyan hydrothermal energy conduits and luminous chemotrophic coral reefs. "
+            "Bright bridge console lighting, vivid deep-sea luminescence, radiant contrast, clean crisp lines, no murky blackness, pure art without text."
+        ),
+    },
+    {
+        "index": 54,
+        "work_id": "yumeno-shojo-jigoku",
+        "title": "少女地獄",
+        "author": "夢野久作",
+        "content_paths": [Path("content/2026-10-07_yumeno_shojo_jigoku.png")],
+        "docs_path": Path("docs/assets/images/yumeno-shojo-jigoku.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kaito, a sharp 23-year-old digital forensics investigator with dark hair, and Saki, a brilliant 22-year-old female data scientist with bob hair. "
+            "Masterpiece half-body portrait: both characters possess exquisitely detailed, expressive eyes with clear pupils and radiant catchlights, intelligent dignified expressions, refined anime facial symmetry. "
+            "Inside their illuminated archive studio, surrounded by floating 3D holographic network graph trees and crystalline data nodes glowing in sparkling turquoise, violet, and amber. "
+            "Panoramic window revealing a vibrant illuminated evening skyline, clean interior ambient lighting, high dynamic contrast, crisp details, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 55,
+        "work_id": "oguri-ningyo-hi",
+        "title": "人魚謎お岩殺し",
+        "author": "小栗虫太郎",
+        "content_paths": [Path("content/2026-10-08_oguri_ningyo_hi.png")],
+        "docs_path": Path("docs/assets/images/oguri-ningyo-hi.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Setouchi, a distinguished 28-year-old forensic proteomics specialist in a modern dark blazer, in a high-tech coastal forensic laboratory at Yokohama Harbor. "
+            "Masterpiece close-up half-body portrait: handsome intellectual face with dignified expression, strikingly clear dark eyes with brilliant specular catchlights and sharp pupils, refined symmetrical anime features. "
+            "Examining a glowing quartz container filled with luminescent luciferase deep-sea proteins emitting ethereal emerald and turquoise light. "
+            "Harbor view outside large windows with vibrant twilight amber and indigo sky, bright warm laboratory ambient illumination, clean crisp contrast, no pitch-black gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 56,
+        "work_id": "kajii-sakura-no-ki",
+        "title": "櫻の樹の下には",
+        "author": "梶井基次郎",
+        "content_paths": [Path("content/2026-10-08_kajii_sakura_no_ki.png")],
+        "docs_path": Path("docs/assets/images/kajii-sakura-no-ki.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Makabe, a passionate 24-year-old plant physiologist with tousled brown hair, standing in a sun-drenched botanical bio-dome under a magnificent blooming cherry blossom tree. "
+            "Masterpiece close-up half-body portrait: youthful handsome face filled with intellectual epiphany, dazzlingly clear hazel eyes with sparkling light reflections, sharp pupils, refined symmetrical anime features. "
+            "Swirling pink sakura petals dance through the sunbeams, while below the glass floor glowing mycorrhizal fungal networks pulse with radiant golden and cyan bio-signals. "
+            "Brilliant spring sunshine pouring through glass geometric domes, vibrant saturated colors, crisp dynamic contrast, joyful luminous atmosphere, no dark shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 57,
+        "work_id": "soseki-kusamakura",
+        "title": "草枕",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-10-09_soseki_kusamakura.png")],
+        "docs_path": Path("docs/assets/images/soseki-kusamakura.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kazuma Saeki, a 27-year-old visual neuroscientist in casual linen attire, and Nami, a graceful 24-year-old woman in an elegant modern kimono, at a serene mountain retreat in Nakoi. "
+            "Masterpiece half-body portrait: both characters have breathtakingly beautiful expressive eyes with crystalline pupils and delicate catchlights, calm poetic expressions, flawless anime facial symmetry. "
+            "Sitting in an open-air modern Japanese pavilion overlooking a sunlit valley of lush green bamboo and misty mountains under soft golden afternoon sunbeams. "
+            "Warm natural sunlight, delicate green and golden color palette, crisp peaceful contrast, luminous highlights, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 58,
+        "work_id": "izumi-gejigeji",
+        "title": "春昼・春昼後刻",
+        "author": "泉鏡花",
+        "content_paths": [Path("content/2026-10-09_izumi_gejigeji.png")],
+        "docs_path": Path("docs/assets/images/izumi-gejigeji.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kazuma Seto, a handsome 26-year-old quantum optics physicist, and Akari, an alert 22-year-old female technician with ponytail. "
+            "Masterpiece half-body portrait: both characters possess wonderfully expressive, clear eyes with luminous pupils and crisp catchlights, expressions of gentle wonder and awe, refined anime features. "
+            "In an illuminated quantum physics lab where a non-local ghost-imaging chamber projects a delicate, shimmering holographic silhouette of an ethereal woman in warm golden laser beams. "
+            "Large windows look out over a sun-drenched yellow rapeseed flower field under clear spring skies, radiant warm lighting, high contrast, romantic scientific atmosphere, no murky darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 59,
+        "work_id": "nakajima-tsuki-no-usagi",
+        "title": "悟浄出世",
+        "author": "中島敦",
+        "content_paths": [Path("content/2026-10-09_nakajima_tsuki_no_usagi.png")],
+        "docs_path": Path("docs/assets/images/nakajima-tsuki-no-usagi.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Sha Gojo, an advanced cognitive cybernetic entity appearing as a noble, handsome young man in his mid-20s in flowing cyber-silk robes. "
+            "Masterpiece close-up half-body portrait: deeply contemplative, handsome face with sublime intelligence, piercingly clear lapis-lazuli blue eyes with glowing micro-circuit catchlights, sharp pupils, refined anime facial anatomy. "
+            "Standing in the digital desert of the Ryusha River beneath a cosmic cybernetic sky where radiant fractal self-referential mathematical geometry loops hover in brilliant gold and turquoise light. "
+            "Luminous celestial ambient lighting, radiant contrast, sparkling digital motes, crisp philosophical aura, no muddy darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 60,
+        "work_id": "dazai-hashire-merosu",
+        "title": "走れメロス",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-09_dazai_hashire_merosu.png")],
+        "docs_path": Path("docs/assets/images/dazai-hashire-merosu.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Melos, an athletic and determined 23-year-old runner with dark wind-tousled hair and intense amber eyes, sprinting along an elevated solar causeway in Dionysus Prime. "
+            "Masterpiece dynamic half-body portrait: handsome face overflowing with unstoppable courage, dazzlingly clear eyes with sharp pupils, radiant sunlight catchlights, refined symmetrical anime features. "
+            "Behind him, holographic game-theory dilemma matrices dissolve into clouds of sparkling golden glitter against a brilliant blue utopian sky and gleaming white towers. "
+            "Blazing glorious daylight, saturated vibrant colors, dynamic heroic motion, sharp crisp contrast, no darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 61,
+        "work_id": "edogawa-oshie-to-tabisuru-otoko",
+        "title": "押絵と旅する男",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-10-10_edogawa_oshie_to_tabisuru_otoko.png")],
+        "docs_path": Path("docs/assets/images/edogawa-oshie-to-tabisuru-otoko.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kai, a handsome 25-year-old optical forensics investigator in a tailored dark vest, seated inside a futuristic high-speed maglev train at brilliant sunset. "
+            "Masterpiece close-up half-body portrait: focused, intelligent handsome face with mesmerizingly clear dark eyes reflecting glowing sunset hues, sharp pupils, specular catchlights, refined anime facial anatomy. "
+            "Beside him on the table, an intricate multi-layered optical lightfield Oshie artwork projects vivid, three-dimensional miniature holographic figures of a Meiji-era couple into the air. "
+            "Panoramic train window showing a fiery crimson, gold, and violet sunset over towering skyscrapers, rich dynamic lighting, radiant warm contrast, no murky darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 62,
+        "work_id": "sakaguchi-sakura-no-mori",
+        "title": "桜の森の満開の下",
+        "author": "坂口安吾",
+        "content_paths": [Path("content/2026-10-10_sakaguchi_sakura_no_mori.png")],
+        "docs_path": Path("docs/assets/images/sakaguchi-sakura-no-mori.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kai, a striking 26-year-old environmental officer in an open tactical exploration coat, standing inside the vast biodome of planet Sakura. "
+            "Masterpiece close-up half-body portrait: handsome features with an intense, captivating expression, exceptionally clear deep indigo eyes with sparkling reflections of glowing cherry petals, sharp pupils, refined anime anatomy. "
+            "Surrounded by a majestic forest of genetically enhanced crystalline cherry blossom trees in full bloom, swirling clouds of vivid pink and magenta petals illuminated by celestial auroras in the night sky. "
+            "Dramatic vibrant lighting, rich dynamic contrast, dazzling colorful highlights, clear atmospheric depth, no muddy darkness, pure art without text."
+        ),
+    },
 ]
 
 
@@ -600,8 +925,8 @@ def generate_single_illustration(spec: Dict[str, Any], url: str = DRAW_THINGS_UR
 
 def main():
     parser = argparse.ArgumentParser(description="Regenerate illustrations with improved eyes and contrast")
-    parser.add_argument("--start", type=int, default=21, help="Start index (1-39)")
-    parser.add_argument("--end", type=int, default=39, help="End index (1-39)")
+    parser.add_argument("--start", type=int, default=40, help="Start index (1-62)")
+    parser.add_argument("--end", type=int, default=62, help="End index (1-62)")
     parser.add_argument("--no-push", action="store_true", help="Do not git commit/push each work")
     args = parser.parse_args()
 
