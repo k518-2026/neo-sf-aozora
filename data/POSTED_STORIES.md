@@ -44,3 +44,4 @@
 | 35 | 2026-10-10 | グスコーブドリの伝記 | グスコーブドリの伝記（宮沢賢治） | Nature/Science/Cell | Publish |
 | 36 | 2026-10-10 | 桜の樹の下には | 桜の樹の下には（梶井基次郎） | Nature/Science/Cell | Publish |
 | 37 | 2026-10-11 | 夢十夜 | 夢十夜（夏目漱石） | Fahy, G. M., & Wowk, B. (2015). Principles of ice-free cryopreservation by vitrification. *Methods in Molecular Biology*, 1257, 21–82., Facchi, P., & Pascazio, S. (2008). Quantum Zeno dynamics: mathematical and physical aspects. *Journal of Physics A: Mathematical and Theoretical*, 41(49), 493001. | Publish |
+| 38 | 2026-10-11 | 桜の森の満開の下 | 桜の森の満開の下（坂口安吾） | Pendry, J. B., Schurig, D., Smith, D. R. (2006). Controlling Electromagnetic Fields. *Science*, 312(5781), 1780-1782., Phelps, E. A., LeDoux, J. E. (2005). Contributions of the Amygdala to Emotion Processing: From Animal Models to Human Behavior. *Neuron*, 48(2), 175-187. | Publish |
