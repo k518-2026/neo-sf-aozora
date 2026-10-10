@@ -43,3 +43,4 @@
 | 34 | 2026-10-05 | 檸檬 | 檸檬（梶井基次郎） | Turin, L. (1996). A Spectroscopic Mechanism for Primary Olfactory Reception. *Chemical Senses*, 21(6), 773-791., Zhang, J., Gecevičius, M., Beresna, M., & Kazansky, P. G. (2014). Seemingly Unlimited Lifetime Data Storage in Nanostructured Glass. *Physical Review Letters*, 112(3), 033901. | Publish |
 | 35 | 2026-10-10 | グスコーブドリの伝記 | グスコーブドリの伝記（宮沢賢治） | Nature/Science/Cell | Publish |
 | 36 | 2026-10-10 | 桜の樹の下には | 桜の樹の下には（梶井基次郎） | Nature/Science/Cell | Publish |
+| 37 | 2026-10-11 | 夢十夜 | 夢十夜（夏目漱石） | Fahy, G. M., & Wowk, B. (2015). Principles of ice-free cryopreservation by vitrification. *Methods in Molecular Biology*, 1257, 21–82., Facchi, P., & Pascazio, S. (2008). Quantum Zeno dynamics: mathematical and physical aspects. *Journal of Physics A: Mathematical and Theoretical*, 41(49), 493001. | Publish |

@@ -666,5 +666,19 @@
     "file_path": "content/2026-10-04_kajii_sakuranoki.md",
     "status": "publish",
     "references": []
+  },
+  {
+    "work_id": "soseki-yume-juuya",
+    "original_title": "夢十夜",
+    "original_author": "夏目漱石",
+    "reboot_title": "夢十夜――百合の檻",
+    "posted_at": "2026-10-11T07:29:14.168938+09:00",
+    "file_path": "content/2026-10-04_soseki_yume_juuya.md",
+    "status": "publish",
+    "references": [
+      "Fahy, G. M., & Wowk, B. (2015). Principles of ice-free cryopreservation by vitrification. *Methods in Molecular Biology*, 1257, 21–82.",
+      "Facchi, P., & Pascazio, S. (2008). Quantum Zeno dynamics: mathematical and physical aspects. *Journal of Physics A: Mathematical and Theoretical*, 41(49), 493001.",
+      "Mura, S., Nicolas, J., & Couvreur, P. (2013). Stimuli-responsive nanocarriers for drug delivery. *Nature Materials*, 12(11), 991–1003."
+    ]
   }
 ]
