@@ -532,15 +532,18 @@ def run_writer_role(
         return 0
 
     today_str = datetime.now(JST).strftime("%Y-%m-%d")
-    total_daily_quota = quota_override if quota_override is not None else 1
-    written_today = sum(
-        1 for t in manifest["tasks"]
-        if str(t.get("written_at") or "").startswith(today_str)
-    )
-    needed = max(0, total_daily_quota - written_today)
-    if needed == 0:
-        logger.info(f"[writer] 本日の執筆ノルマ ({written_today}/{total_daily_quota} 作品) は達成済みです。")
-        return 0
+    if quota_override is not None:
+        needed = quota_override
+    else:
+        total_daily_quota = 1
+        written_today = sum(
+            1 for t in manifest["tasks"]
+            if str(t.get("written_at") or "").startswith(today_str)
+        )
+        needed = max(0, total_daily_quota - written_today)
+        if needed == 0:
+            logger.info(f"[writer] 本日の執筆ノルマ ({written_today}/{total_daily_quota} 作品) は達成済みです。")
+            return 0
 
     candidates = [t for t in manifest["tasks"] if t["status"] == "plot_ready"] + [
         t for t in manifest["tasks"] if t["status"] == "pending"

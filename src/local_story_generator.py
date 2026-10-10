@@ -1165,9 +1165,9 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
 [Rules for Output]
 1. Output ONLY the raw English prompt paragraph. Do NOT include explanations, markdown formatting, quotes, or Japanese text.
 2. Start with: "Cinematic sci-fi anime illustration of ..."
-3. Visually describe the characters, setting, lighting, and the specific scientific/literary visual motif (e.g., holographic quantum patterns, glowing bioluminescent laboratory, retro-futuristic Meiji/Taisho literary atmosphere fused with futuristic technology, starry cosmos, or surreal cybernetic phenomena).
+3. Visually describe the characters (accurate age, gender, occupation matching the story, beautifully drawn expressive eyes with clear pupils, realistic specular iris reflections, refined symmetrical anime facial anatomy), illuminated setting with radiant ambient lighting, dynamic contrast, zero pitch-black gloom, and the specific scientific visual motif (e.g., glowing holographic quantum diagrams, bioluminescent instruments, clean futuristic laboratory, starry cosmos).
 4. NEVER mention words, text, letters, book covers, titles, labels, or writing/equations on screens. The image must contain ZERO text or characters.
-5. End with: "masterpiece sci-fi anime novel illustration style, Makoto Shinkai and Ghost in the Shell inspired cinematic lighting, calm and composed atmosphere, strong contrast, rich deep colors, crisp details, no text, no letters."
+5. End with: "masterpiece sci-fi anime novel illustration style, beautifully rendered crystal-clear eyes with specular catchlights, radiant ambient illumination, strong clean contrast, rich vivid colors, crisp sharp details, no dark gloom, pure art without text."
 """
         try:
             logger.info(f"[Writer: {writer_model}] Generating English illustration prompt for FLUX.2...")
@@ -1243,8 +1243,9 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
         )
 
         style_suffix = (
-            "calm and composed atmosphere, strong contrast, rich deep colors, balanced lighting, "
-            "distinct shadows and highlights, crisp clean artwork, pure illustration without any text or letters"
+            "illuminated radiant ambient lighting, strong dynamic contrast, vivid saturated colors, "
+            "beautifully drawn expressive eyes with clear pupils and delicate iris catchlights, refined symmetrical anime anatomy, "
+            "crisp highlights, no dark gloom, pure art without any text, letters, or words"
         )
         if "strong contrast" not in en_prompt.lower() or "no text" not in en_prompt.lower():
             en_prompt = f"{en_prompt.rstrip(' .')}, {style_suffix}."
@@ -1253,13 +1254,15 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
         payload = {
             "prompt": en_prompt,
             "negative_prompt": (
+                "pitch black background, murky dark room, underexposed, muddy shadows, low contrast, washed out, "
+                "deformed eyes, asymmetrical eyes, weird eyes, crossed eyes, misaligned pupils, poorly drawn eyes, "
+                "disfigured face, bad facial anatomy, mutated features, blurry face, creepy face, grotesque expression, "
                 "text, letters, words, kanji, chinese characters, japanese text, english text, typography, title, "
-                "book cover, watermark, signature, logo, caption, writing, chalk equations, numbers, "
-                "overexposed, washed out, faded, blown-out highlights, whiteout, pastel haze, low contrast"
+                "watermark, signature, logo, caption, book cover"
             ),
             "width": 512,
             "height": 512,
-            "steps": 12,
+            "steps": 16,
             "guidance_scale": 4.0,
             "sampler": "Euler A Trailing",
         }
