@@ -6,10 +6,10 @@ concurrency:
   cancel-in-progress: false
 
 on:
-  # Daily scheduled run (triggered at 20:55 UTC = 05:55 JST to absorb 15-20m runner queue delays, completing at ~06:15 JST):
-  # 朝6時15分に1日1回、蓄積された作品から Blogger / WordPress / X へ自動投稿
+  # Daily scheduled run at 04:43 JST (19:43 UTC):
+  # 毎朝4時43分（JST）に1日1回、蓄積された作品から Blogger / WordPress / X へ自動投稿
   schedule:
-    - cron: '55 20 * * *'
+    - cron: '43 19 * * *'
 
   # Manual execution from GitHub Actions UI
   workflow_dispatch:
