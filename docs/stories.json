@@ -1,5 +1,17 @@
 [
   {
+    "no": 65,
+    "work_id": "hori-kaze-tachinu",
+    "title": "風立ちぬ――微細なる風が運ぶ、命の共鳴",
+    "original_title": "風立ちぬ",
+    "original_author": "堀辰雄",
+    "modern_tech": "個別化mRNAワクチンと粘膜免疫誘導による呼吸器疾患の克服、山岳森林浴におけるフィトンチッドと自律神経・NK細胞活性化、生体バイタル同期による共感ケア",
+    "has_image": true,
+    "url": "stories/hori-kaze-tachinu.html",
+    "image": "assets/images/hori-kaze-tachinu.png",
+    "char_count": 5293
+  },
+  {
     "no": 64,
     "work_id": "koda-goju-no-to",
     "title": "五重塔――揺らぎの調律者",

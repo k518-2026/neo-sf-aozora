@@ -15,10 +15,10 @@
       Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
     </p>
     <div class="stats-bar">
-      <div class="stat-pill"><strong>64</strong> 収録作品</div>
-      <div class="stat-pill"><strong>64</strong> 挿絵付き作品</div>
-      <div class="stat-pill"><strong>17</strong> 原典文豪</div>
-      <div class="stat-pill">最終更新: 2026-10-10 23:55 JST</div>
+      <div class="stat-pill"><strong>65</strong> 収録作品</div>
+      <div class="stat-pill"><strong>65</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>18</strong> 原典文豪</div>
+      <div class="stat-pill">最終更新: 2026-10-11 00:06 JST</div>
     </div>
   </header>
 
@@ -27,10 +27,11 @@
       <div class="filter-group">
         <input type="search" id="searchInput" class="search-input" placeholder="作品名・原典・科学技術キーワードで検索..." oninput="filterCards()" />
         <select id="authorFilter" class="select-filter" onchange="filterCards()">
-          <option value="">すべての原典作家（17名）</option>
+          <option value="">すべての原典作家（18名）</option>
           <option value="中島敦">中島敦</option>
           <option value="久生十蘭">久生十蘭</option>
           <option value="坂口安吾">坂口安吾</option>
+          <option value="堀辰雄">堀辰雄</option>
           <option value="夏目漱石">夏目漱石</option>
           <option value="夢野久作">夢野久作</option>
           <option value="太宰治">太宰治</option>
@@ -48,7 +49,7 @@
         </select>
         <select id="imageFilter" class="select-filter" onchange="filterCards()">
           <option value="">すべて表示</option>
-          <option value="yes">🎨 挿絵ありのみ (64)</option>
+          <option value="yes">🎨 挿絵ありのみ (65)</option>
         </select>
         <select id="sortOrder" class="select-filter" onchange="sortCards()">
           <option value="desc">新しい順（#大 → #01）</option>
@@ -59,6 +60,22 @@
     </div>
 
     <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-no="65" data-author="堀辰雄" data-illustrated="yes" data-search="風立ちぬ――微細なる風が運ぶ、命の共鳴 風立ちぬ 堀辰雄 個別化mrnaワクチンと粘膜免疫誘導による呼吸器疾患の克服、山岳森林浴におけるフィトンチッドと自律神経・nk細胞活性化、生体バイタル同期による共感ケア 風が吹き抜ける八ヶ岳のサナトリウム。かつては絶望と隣り合わせだった療養の日々を、最新の再生医療・免疫療法によって「未来へ生き延びるための希望の時間」へと書き換え、二人の愛が試練を越えて結実する明るい未来の物語。">
+        <a href="stories/hori-kaze-tachinu.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/hori-kaze-tachinu.png" alt="風立ちぬ――微細なる風が運ぶ、命の共鳴" loading="lazy" />
+          <span class="card-no-badge">#65</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：堀辰雄『風立ちぬ』</div>
+          <h2 class="card-title"><a href="stories/hori-kaze-tachinu.html">風立ちぬ――微細なる風が運ぶ、命の共鳴</a></h2>
+          <div class="card-tech">🔬 個別化mRNAワクチンと粘膜免疫誘導による呼吸器疾患の克服、山岳森林浴におけるフィトンチッドと自律神経・NK細胞活性化、生体バイタル同期による共感ケア</div>
+          <p class="card-summary">風が吹き抜ける八ヶ岳のサナトリウム。かつては絶望と隣り合わせだった療養の日々を、最新の再生医療・免疫療法によって「未来へ生き延びるための希望の時間」へと書き換え、二人の愛が試練を越えて結実する明るい未来の物語。</p>
+          <div class="card-footer">
+            <span>約 5,293 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/hori-kaze-tachinu.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
       <article class="story-card" data-no="64" data-author="幸田露伴" data-illustrated="yes" data-search="五重塔――揺らぎの調律者 五重塔 幸田露伴 木組み仕口の摩擦減衰と心柱による同調質量ダンパー（tmd）機構、スーパーコンピュータによる超大型台風の流体・構造連成解析、木材セルロース結晶の経年強度増加 不器用な大工・十兵衛が魂を込めて組み上げた五重塔に、未曾有の暴風雨が襲いかかる。なぜ釘を一本も使わない木造塔が現代の超高層ビルをも凌ぐ耐震・耐風性能を持つのかを、構造力学と職人の情熱の交差として描く。">
         <a href="stories/koda-goju-no-to.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/koda-goju-no-to.png" alt="五重塔――揺らぎの調律者" loading="lazy" />

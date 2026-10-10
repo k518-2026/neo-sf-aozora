@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **64** 作品（うち挿絵付き **64** 作品 / 原典文豪 **17** 名 / 最終更新: 2026-10-10 23:55 JST）
+- **収録作品数**: 全 **65** 作品（うち挿絵付き **65** 作品 / 原典文豪 **18** 名 / 最終更新: 2026-10-11 00:06 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 65 | **[風立ちぬ――微細なる風が運ぶ、命の共鳴](content/2026-10-10_hori_kaze_tachinu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/hori-kaze-tachinu.html) | [📄原稿](content/2026-10-10_hori_kaze_tachinu.md) | [🎨挿絵](content/2026-10-10_hori_kaze_tachinu.png) | 堀辰雄[『風立ちぬ』](https://www.aozora.gr.jp/cards/001030/card4803.html) | 個別化mRNAワクチンと粘膜免疫誘導による呼吸器疾患の克服、山岳森林浴におけるフィトンチッドと自律神経・NK細胞活性化、生体バイタル同期による共感ケア | 5,293字 |
 | 64 | **[五重塔――揺らぎの調律者](content/2026-10-10_koda_goju_no_to.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/koda-goju-no-to.html) | [📄原稿](content/2026-10-10_koda_goju_no_to.md) | [🎨挿絵](content/2026-10-10_koda_goju_no_to.png) | 幸田露伴[『五重塔』](https://www.aozora.gr.jp/cards/000051/card1427.html) | 木組み仕口の摩擦減衰と心柱による同調質量ダンパー（TMD）機構、スーパーコンピュータによる超大型台風の流体・構造連成解析、木材セルロース結晶の経年強度増加 | 5,939字 |
 | 63 | **[死者の書――共鳴する光の曼荼羅（Mandala of Resonant Light）](content/2026-10-10_origuchi_shisha_no_sho.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/origuchi-shisha-no-sho.html) | [📄原稿](content/2026-10-10_origuchi_shisha_no_sho.md) | [🎨挿絵](content/2026-10-10_origuchi_shisha_no_sho.png) | 折口信夫[『死者の書』](https://www.aozora.gr.jp/cards/000933/card13205.html) | 古墳石室の音響共鳴特性（アーキオアコースティクス）解析、古天文学による春分・秋分の太陽軌道復元、ハス繊維のナノ微細構造が織りなす構造色ホログラフィ | 5,906字 |
 | 62 | **[桜の森の満開の下――テルペン・シンギュラリティ：感覚の特異点](content/2026-10-10_sakaguchi_sakura_no_mori.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/sakaguchi-sakura-no-mori.html) | [📄原稿](content/2026-10-10_sakaguchi_sakura_no_mori.md) | [🎨挿絵](content/2026-10-10_sakaguchi_sakura_no_mori.png) | 坂口安吾[『桜の森の満開の下』](https://www.aozora.gr.jp/cards/001095/card42618.html) | 植物由来揮発性モノテルペン類が辺縁系に及ぼす神経薬理作用、広大空間における感覚入力過多（サブライム体験）の脳機能イメージング、孤独感の神経基盤 | 4,939字 |

@@ -1022,5 +1022,21 @@
     "narration_file": "64_五重塔_narration.txt",
     "full_file": "64_五重塔_full.txt",
     "original_md_file": "64_五重塔.md"
+  },
+  {
+    "work_no": 65,
+    "work_id": "hori-kaze-tachinu",
+    "title": "風立ちぬ",
+    "subtitle": "微細なる風が運ぶ、命の共鳴",
+    "attribution": "",
+    "original_author": "堀辰雄",
+    "original_title": "風立ちぬ",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001030/card4803.html",
+    "modern_tech": "個別化mRNAワクチンと粘膜免疫誘導による呼吸器疾患の克服、山岳森林浴におけるフィトンチッドと自律神経・NK細胞活性化、生体バイタル同期による共感ケア",
+    "summary": "風が吹き抜ける八ヶ岳のサナトリウム。かつては絶望と隣り合わせだった療養の日々を、最新の再生医療・免疫療法によって「未来へ生き延びるための希望の時間」へと書き換え、二人の愛が試練を越えて結実する明るい未来の物語。",
+    "char_count": 3447,
+    "narration_file": "65_風立ちぬ_narration.txt",
+    "full_file": "65_風立ちぬ_full.txt",
+    "original_md_file": "65_風立ちぬ.md"
   }
 ]

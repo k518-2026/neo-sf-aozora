@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-10T23:55:11.169882+09:00",
+  "updated_at": "2026-10-11T00:06:21.203934+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1449,19 +1449,19 @@
       "author": "堀辰雄",
       "theme": "高原サナトリウムの微気象学・mRNA免疫療法と生命の希望・二人で紡ぐ時間の結晶",
       "modern_tech": "個別化mRNAワクチンと粘膜免疫誘導による呼吸器疾患の克服、山岳森林浴におけるフィトンチッドと自律神経・NK細胞活性化、生体バイタル同期による共感ケア",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "sff7020",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-10_hori_kaze_tachinu.md",
+      "written_by": "sff7020",
+      "written_at": "2026-10-10",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-10_hori_kaze_tachinu.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-10"
     },
     {
       "id": "tayama-futon",
