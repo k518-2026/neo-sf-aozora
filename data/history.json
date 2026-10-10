@@ -694,5 +694,19 @@
       "Phelps, E. A., LeDoux, J. E. (2005). Contributions of the Amygdala to Emotion Processing: From Animal Models to Human Behavior. *Neuron*, 48(2), 175-187.",
       "Smalley, D., Nygaard, E., Rogers, W., Gneiting, S. a., Qaderi, K. (2018). Progress on Photophoretic Trap Displays. *Frontiers in Optics / Laser Science*, FM4C.2."
     ]
+  },
+  {
+    "work_id": "yumeno-dogra-magra",
+    "original_title": "ドグラ・マグラ",
+    "original_author": "夢野久作",
+    "reboot_title": "ドグラ・マグラ――遺伝する記憶",
+    "posted_at": "2026-10-11T07:36:54.037278+09:00",
+    "file_path": "content/2026-10-04_yumeno_dogra_magra.md",
+    "status": "publish",
+    "references": [
+      "Dias, B. G., Ressler, K. J. (2014). Parental olfactory experience influences behavior and neural structure in subsequent generations. *Nature Neuroscience*, 17(1), 89-96.",
+      "Trujillo, C. A., Gao, R., Negraes, P. D., Gu, J., Buchanan, J., Preissl, S., et al. (2019). Complex Oscillatory Waves Emerging from Cortical Organoids Model Early Human Brain Network Development. *Cell Stem Cell*, 25(4), 558-569.e7.",
+      "Miers, P., Hofstadter, D. R. (1979). Godel, Escher, Bach: An Eternal Golden Braid. *MLN*, 94(5), 1214."
+    ]
   }
 ]
