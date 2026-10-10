@@ -42,3 +42,4 @@
 | 33 | 2026-10-05 | 山月記 | 山月記（中島敦） | Kobayashi, T., Yamaguchi, T., Hamanaka, S., Kato-Itoh, M., Yamazaki, Y., Ibata, M., et al. (2010). Generation of Rat Pancreas in Mouse by Interspecific Blastocyst Injection of Pluripotent Stem Cells. *Cell*, 142(5), 787-799., Winding, M., Pedigo, B. D., Barnes, C. L., Patsolic, H. G., Park, Y., Kazimiers, T., et al. (2023). The connectome of an insect brain. *Science*, 379(6636), eadd9330. | Publish |
 | 34 | 2026-10-05 | 檸檬 | 檸檬（梶井基次郎） | Turin, L. (1996). A Spectroscopic Mechanism for Primary Olfactory Reception. *Chemical Senses*, 21(6), 773-791., Zhang, J., Gecevičius, M., Beresna, M., & Kazansky, P. G. (2014). Seemingly Unlimited Lifetime Data Storage in Nanostructured Glass. *Physical Review Letters*, 112(3), 033901. | Publish |
 | 35 | 2026-10-10 | グスコーブドリの伝記 | グスコーブドリの伝記（宮沢賢治） | Nature/Science/Cell | Publish |
+| 36 | 2026-10-10 | 桜の樹の下には | 桜の樹の下には（梶井基次郎） | Nature/Science/Cell | Publish |
