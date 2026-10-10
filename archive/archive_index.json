@@ -1006,5 +1006,21 @@
     "narration_file": "63_死者の書_narration.txt",
     "full_file": "63_死者の書_full.txt",
     "original_md_file": "63_死者の書.md"
+  },
+  {
+    "work_no": 64,
+    "work_id": "koda-goju-no-to",
+    "title": "五重塔",
+    "subtitle": "揺らぎの調律者",
+    "attribution": "",
+    "original_author": "幸田露伴",
+    "original_title": "五重塔",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000051/card1427.html",
+    "modern_tech": "木組み仕口の摩擦減衰と心柱による同調質量ダンパー（TMD）機構、スーパーコンピュータによる超大型台風の流体・構造連成解析、木材セルロース結晶の経年強度増加",
+    "summary": "不器用な大工・十兵衛が魂を込めて組み上げた五重塔に、未曾有の暴風雨が襲いかかる。なぜ釘を一本も使わない木造塔が現代の超高層ビルをも凌ぐ耐震・耐風性能を持つのかを、構造力学と職人の情熱の交差として描く。",
+    "char_count": 3914,
+    "narration_file": "64_五重塔_narration.txt",
+    "full_file": "64_五重塔_full.txt",
+    "original_md_file": "64_五重塔.md"
   }
 ]

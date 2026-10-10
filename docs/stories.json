@@ -1,5 +1,17 @@
 [
   {
+    "no": 64,
+    "work_id": "koda-goju-no-to",
+    "title": "五重塔――揺らぎの調律者",
+    "original_title": "五重塔",
+    "original_author": "幸田露伴",
+    "modern_tech": "木組み仕口の摩擦減衰と心柱による同調質量ダンパー（TMD）機構、スーパーコンピュータによる超大型台風の流体・構造連成解析、木材セルロース結晶の経年強度増加",
+    "has_image": true,
+    "url": "stories/koda-goju-no-to.html",
+    "image": "assets/images/koda-goju-no-to.png",
+    "char_count": 5939
+  },
+  {
     "no": 63,
     "work_id": "origuchi-shisha-no-sho",
     "title": "死者の書――共鳴する光の曼荼羅（Mandala of Resonant Light）",
