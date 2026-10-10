@@ -1,8 +1,8 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-10-11T00:06:21`
-- **進捗サマリー**: 全 **69** 作品 （完了: **68** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **1**）
+- **最終同期日時 (JST)**: `2026-10-11T01:26:30`
+- **進捗サマリー**: 全 **69** 作品 （完了: **69** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
 ## 🖥️ 各ローカルLLM PCの役割分担とノルマ
@@ -21,19 +21,19 @@
 
 | No. | 作品ID | 原典タイトル（著者） | 先端科学テーマ | 現在の状態 | 次回担当ライター（交互割当） |
 |:---:|:---|:---|:---|:---:|:---|
-| #69 | `tayama-futon` | 蒲団（田山花袋） | 嗅球から扁桃体・海馬へ直結する情動記憶回路の神経科学、ガスクロマトグラフィー質量分析（GC-MS）による微量揮発性分子プロファイリング、メタ認知療法による執着からの解放 | `pending` | ✍️ **プライマリ `rtx5060lp:11434`** (`shosetsu` 執筆) |
+| - | - | （全作品完了済み） | - | Completed | - |
 
 ## ✅ 完了済み作品（最新10件）
 
 | No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
-| #68 | `hori-kaze-tachinu` | 風立ちぬ（堀辰雄） | - | ✓ `sff7020` (2026-10-10) | 校閲済 | 🎨 (kenomac-mini) |
+| #69 | `tayama-futon` | 蒲団（田山花袋） | - | ✓ `rtx5060lp` (2026-10-11) | 校閲済 | 🎨 (kenomac-mini) |
+| #68 | `hori-kaze-tachinu` | 風立ちぬ（堀辰雄） | - | ✓ `rtx5060lp` (2026-10-10) | 校閲済 | 🎨 (kenomac-mini) |
 | #67 | `koda-goju-no-to` | 五重塔（幸田露伴） | - | ✓ `rtx5060lp` (2026-10-10) | 校閲済 | 🎨 (kenomac-mini) |
 | #66 | `origuchi-shisha-no-sho` | 死者の書（折口信夫） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-10) | 校閲済 | 🎨 (kenomac-mini) |
-| #65 | `sakaguchi-sakura-no-mori` | 桜の森の満開の下（坂口安吾） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #64 | `yumeno-binzume-jigoku` | 瓶詰地獄（夢野久作） | - | ✓ `rtx5060lp` (2026-10-03) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #63 | `edogawa-oshie-to-tabisuru-otoko` | 押絵と旅する男（江戸川乱歩） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #62 | `dazai-hashire-merosu` | 走れメロス（太宰治） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #61 | `nakajima-tsuki-no-usagi` | 悟浄出世（中島敦） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #60 | `izumi-gejigeji` | 春昼・春昼後刻（泉鏡花） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #59 | `soseki-kusamakura` | 草枕（夏目漱石） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
+| #65 | `sakaguchi-sakura-no-mori` | 桜の森の満開の下（坂口安吾） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-10) | 校閲済 | 🎨 (kenomac-mini) |
+| #64 | `yumeno-binzume-jigoku` | 瓶詰地獄（夢野久作） | - | ✓ `rtx5060lp` (2026-10-03) | 校閲済 | 🎨 (kenomac-mini) |
+| #63 | `edogawa-oshie-to-tabisuru-otoko` | 押絵と旅する男（江戸川乱歩） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-10) | 校閲済 | 🎨 (kenomac-mini) |
+| #62 | `dazai-hashire-merosu` | 走れメロス（太宰治） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
+| #61 | `nakajima-tsuki-no-usagi` | 悟浄出世（中島敦） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |
+| #60 | `izumi-gejigeji` | 春昼・春昼後刻（泉鏡花） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-09) | 校閲済 | 🎨 (kenomac-mini) |

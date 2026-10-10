@@ -15,10 +15,10 @@
       Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
     </p>
     <div class="stats-bar">
-      <div class="stat-pill"><strong>65</strong> 収録作品</div>
-      <div class="stat-pill"><strong>65</strong> 挿絵付き作品</div>
-      <div class="stat-pill"><strong>18</strong> 原典文豪</div>
-      <div class="stat-pill">最終更新: 2026-10-11 00:06 JST</div>
+      <div class="stat-pill"><strong>66</strong> 収録作品</div>
+      <div class="stat-pill"><strong>66</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>19</strong> 原典文豪</div>
+      <div class="stat-pill">最終更新: 2026-10-11 01:26 JST</div>
     </div>
   </header>
 
@@ -27,7 +27,7 @@
       <div class="filter-group">
         <input type="search" id="searchInput" class="search-input" placeholder="作品名・原典・科学技術キーワードで検索..." oninput="filterCards()" />
         <select id="authorFilter" class="select-filter" onchange="filterCards()">
-          <option value="">すべての原典作家（18名）</option>
+          <option value="">すべての原典作家（19名）</option>
           <option value="中島敦">中島敦</option>
           <option value="久生十蘭">久生十蘭</option>
           <option value="坂口安吾">坂口安吾</option>
@@ -44,12 +44,13 @@
           <option value="江戸川乱歩">江戸川乱歩</option>
           <option value="泉鏡花">泉鏡花</option>
           <option value="海野十三">海野十三</option>
+          <option value="田山花袋">田山花袋</option>
           <option value="芥川龍之介">芥川龍之介</option>
           <option value="蘭郁二郎">蘭郁二郎</option>
         </select>
         <select id="imageFilter" class="select-filter" onchange="filterCards()">
           <option value="">すべて表示</option>
-          <option value="yes">🎨 挿絵ありのみ (65)</option>
+          <option value="yes">🎨 挿絵ありのみ (66)</option>
         </select>
         <select id="sortOrder" class="select-filter" onchange="sortCards()">
           <option value="desc">新しい順（#大 → #01）</option>
@@ -60,6 +61,22 @@
     </div>
 
     <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-no="66" data-author="田山花袋" data-illustrated="yes" data-search="蒲団――嗅覚記憶の迷宮と「執着」の解剖学 蒲団 田山花袋 嗅球から扁桃体・海馬へ直結する情動記憶回路の神経科学、ガスクロマトグラフィー質量分析（gc-ms）による微量揮発性分子プロファイリング、メタ認知療法による執着からの解放 なぜ人は特定の「香り」に触れた瞬間、理性では抑えきれないほどの記憶と情動に揺さぶられるのか。日本自然主義文学の代表作を、最新の嗅覚神経科学と情動記憶のメカニズムからユーモラスかつ知的に解剖する。">
+        <a href="stories/tayama-futon.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/tayama-futon.png" alt="蒲団――嗅覚記憶の迷宮と「執着」の解剖学" loading="lazy" />
+          <span class="card-no-badge">#66</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：田山花袋『蒲団』</div>
+          <h2 class="card-title"><a href="stories/tayama-futon.html">蒲団――嗅覚記憶の迷宮と「執着」の解剖学</a></h2>
+          <div class="card-tech">🔬 嗅球から扁桃体・海馬へ直結する情動記憶回路の神経科学、ガスクロマトグラフィー質量分析（GC-MS）による微量揮発性分子プロファイリング、メタ認知療法による執着からの解放</div>
+          <p class="card-summary">なぜ人は特定の「香り」に触れた瞬間、理性では抑えきれないほどの記憶と情動に揺さぶられるのか。日本自然主義文学の代表作を、最新の嗅覚神経科学と情動記憶のメカニズムからユーモラスかつ知的に解剖する。</p>
+          <div class="card-footer">
+            <span>約 5,347 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/tayama-futon.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
       <article class="story-card" data-no="65" data-author="堀辰雄" data-illustrated="yes" data-search="風立ちぬ――微細なる風が運ぶ、命の共鳴 風立ちぬ 堀辰雄 個別化mrnaワクチンと粘膜免疫誘導による呼吸器疾患の克服、山岳森林浴におけるフィトンチッドと自律神経・nk細胞活性化、生体バイタル同期による共感ケア 風が吹き抜ける八ヶ岳のサナトリウム。かつては絶望と隣り合わせだった療養の日々を、最新の再生医療・免疫療法によって「未来へ生き延びるための希望の時間」へと書き換え、二人の愛が試練を越えて結実する明るい未来の物語。">
         <a href="stories/hori-kaze-tachinu.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/hori-kaze-tachinu.png" alt="風立ちぬ――微細なる風が運ぶ、命の共鳴" loading="lazy" />

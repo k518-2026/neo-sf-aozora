@@ -1,5 +1,17 @@
 [
   {
+    "no": 66,
+    "work_id": "tayama-futon",
+    "title": "蒲団――嗅覚記憶の迷宮と「執着」の解剖学",
+    "original_title": "蒲団",
+    "original_author": "田山花袋",
+    "modern_tech": "嗅球から扁桃体・海馬へ直結する情動記憶回路の神経科学、ガスクロマトグラフィー質量分析（GC-MS）による微量揮発性分子プロファイリング、メタ認知療法による執着からの解放",
+    "has_image": true,
+    "url": "stories/tayama-futon.html",
+    "image": "assets/images/tayama-futon.png",
+    "char_count": 5347
+  },
+  {
     "no": 65,
     "work_id": "hori-kaze-tachinu",
     "title": "風立ちぬ――微細なる風が運ぶ、命の共鳴",

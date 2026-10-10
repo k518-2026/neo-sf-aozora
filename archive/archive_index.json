@@ -1038,5 +1038,21 @@
     "narration_file": "65_風立ちぬ_narration.txt",
     "full_file": "65_風立ちぬ_full.txt",
     "original_md_file": "65_風立ちぬ.md"
+  },
+  {
+    "work_no": 66,
+    "work_id": "tayama-futon",
+    "title": "蒲団",
+    "subtitle": "嗅覚記憶の迷宮と「執着」の解剖学",
+    "attribution": "",
+    "original_author": "田山花袋",
+    "original_title": "蒲団",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000214/card1669.html",
+    "modern_tech": "嗅球から扁桃体・海馬へ直結する情動記憶回路の神経科学、ガスクロマトグラフィー質量分析（GC-MS）による微量揮発性分子プロファイリング、メタ認知療法による執着からの解放",
+    "summary": "なぜ人は特定の「香り」に触れた瞬間、理性では抑えきれないほどの記憶と情動に揺さぶられるのか。日本自然主義文学の代表作を、最新の嗅覚神経科学と情動記憶のメカニズムからユーモラスかつ知的に解剖する。",
+    "char_count": 3489,
+    "narration_file": "66_蒲団_narration.txt",
+    "full_file": "66_蒲団_full.txt",
+    "original_md_file": "66_蒲団.md"
   }
 ]
