@@ -708,5 +708,19 @@
       "Trujillo, C. A., Gao, R., Negraes, P. D., Gu, J., Buchanan, J., Preissl, S., et al. (2019). Complex Oscillatory Waves Emerging from Cortical Organoids Model Early Human Brain Network Development. *Cell Stem Cell*, 25(4), 558-569.e7.",
       "Miers, P., Hofstadter, D. R. (1979). Godel, Escher, Bach: An Eternal Golden Braid. *MLN*, 94(5), 1214."
     ]
+  },
+  {
+    "work_id": "oguri-kokushikan",
+    "original_title": "黒死館殺人事件",
+    "original_author": "小栗虫太郎",
+    "reboot_title": "黒死館殺人事件――超スマート建築の謎",
+    "posted_at": "2026-10-11T23:39:07.639420+09:00",
+    "file_path": "content/2026-10-04_oguri_kokushikan.md",
+    "status": "publish",
+    "references": [
+      "Trinh, T. H., Wu, Y., Le, Q. V., He, H., Luong, T. (2024). Solving olympiad geometry without human demonstrations. *Nature*, 625(7995), 476-482.",
+      "Cram, R. M. (1991). VMEbus Design Example. *Microcomputer Busses*, 231-238.",
+      "Lamport, L., Shostak, R., Pease, M. (1982). The Byzantine Generals Problem. *ACM Transactions on Programming Languages and Systems*, 4(3), 382-401."
+    ]
   }
 ]
