@@ -861,6 +861,62 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Dramatic vibrant lighting, rich dynamic contrast, dazzling colorful highlights, clear atmospheric depth, no muddy darkness, pure art without text."
         ),
     },
+    {
+        "index": 63,
+        "work_id": "origuchi-shisha-no-sho",
+        "title": "死者の書",
+        "author": "折口信夫",
+        "content_paths": [Path("content/2026-10-10_origuchi_shisha_no_sho.png")],
+        "docs_path": Path("docs/assets/images/origuchi-shisha-no-sho.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Iratsume, a beautiful noble 20-year-old female optical archivist in modern ceremonial white and silver lab robes, inside an illuminated ancient temple research sanctum. "
+            "Masterpiece close-up half-body portrait: breathtaking delicate face, exceptionally beautiful expressive amber eyes with radiant crystalline catchlights and crisp iris reflections, sharp pupils, elegant feminine anime features. "
+            "Before her floats a resplendent holographic Mandala woven from luminescent golden and cyan photonic threads, projecting ancient memory patterns into the air. "
+            "The sanctum is filled with radiant ambient light streaming through towering arched apertures, rich dynamic contrast, vivid atmospheric glow, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 64,
+        "work_id": "koda-goju-no-to",
+        "title": "五重塔",
+        "author": "幸田露伴",
+        "content_paths": [Path("content/2026-10-10_koda_goju_no_to.png")],
+        "docs_path": Path("docs/assets/images/koda-goju-no-to.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Saeki, an intelligent handsome 32-year-old male structural architect in modern streamlined tactical researcher attire, in an illuminated high-tech observatory overlooking a majestic futuristic pagoda. "
+            "Masterpiece close-up half-body portrait: dignified confident face with sharp, exceptionally clear detailed brown eyes, crisp specular catchlights and distinct iris contours, refined anime facial features. "
+            "Through expansive panoramic glass windows stands a towering experimental five-story carbon-fiber and timber pagoda glowing with harmonious blue structural telemetry lights under a dramatic radiant sunrise. "
+            "Floating holographic fluid-structure vibration diagrams in vibrant emerald and amber surround his workspace, brilliant morning sunlight casting crisp dramatic highlights, high contrast, vivid clean colors, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 65,
+        "work_id": "hori-kaze-tachinu",
+        "title": "風立ちぬ",
+        "author": "堀辰雄",
+        "content_paths": [Path("content/2026-10-10_hori_kaze_tachinu.png")],
+        "docs_path": Path("docs/assets/images/hori-kaze-tachinu.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kazuma Saeki, a gentle handsome 28-year-old male physician, standing beside Shino, a bright lovely 24-year-old female scientist, in the sunlit glass biodome garden of a highland sanatorium. "
+            "Masterpiece close-up portrait: focused on their expressive, remarkably beautiful and clear detailed eyes with delicate iris reflections and sharp luminous pupils, dignified and affectionate expressions, refined anime facial anatomy. "
+            "Surrounded by lush green alpine firs and white birch trees illuminated by brilliant golden morning sunlight filtering through mist, swirling microscopic bioluminescent vaccine particles glowing soft emerald in the breeze. "
+            "Expansive mountain valley vista in the background, airy radiant atmosphere, rich dynamic lighting and vivid contrast, crystal-clear warmth, no pitch-black gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 66,
+        "work_id": "tayama-futon",
+        "title": "蒲団",
+        "author": "田山花袋",
+        "content_paths": [Path("content/2026-10-11_tayama_futon.png")],
+        "docs_path": Path("docs/assets/images/tayama-futon.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Saeki, a contemplative handsome 35-year-old male cognitive neuroscientist in a sleek modern charcoal lab jacket, in an illuminated metropolitan skyscraper laboratory at dawn. "
+            "Masterpiece close-up half-body portrait: intellectual, awakened gentle expression, remarkably detailed expressive hazel eyes with sharp distinct pupils and sparkling morning light catchlights, refined anime anatomy. "
+            "Before him floats an intricate holographic neural connectivity map and olfactory molecular spectrum blooming in warm amber, soft rose, and luminous cyan light, representing freedom from obsession. "
+            "Expansive floor-to-ceiling panoramic glass windows reveal a glorious bright city sunrise with golden, coral, and clear blue skies, radiant high contrast, clean crisp lines, completely illuminated space without gloomy shadows, pure art without text."
+        ),
+    },
 ]
 
 
