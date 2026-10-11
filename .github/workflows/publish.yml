@@ -1,4 +1,4 @@
-name: Daily Neo Aozora Sci-Fi Reboot to Blogger, WordPress & X
+name: Publish to X, WordPress & Blogger
 
 # Prevent overlapping runs
 concurrency:
@@ -7,7 +7,7 @@ concurrency:
 
 on:
   # Daily scheduled run at 04:43 JST (19:43 UTC):
-  # 毎朝4時43分（JST）に1日1回、蓄積された作品から Blogger / WordPress / X へ自動投稿
+  # 毎朝4時43分（JST）に1日1回、蓄積された作品から X / WordPress / Blogger へ自動投稿
   schedule:
     - cron: '43 19 * * *'
 
@@ -50,17 +50,6 @@ on:
         required: false
         type: string
         default: ''
-      ending_theme:
-        description: 'Ending theme (random [3:2:3:2], bright, dystopia, romance, mystery)'
-        required: false
-        type: choice
-        options:
-          - random
-          - bright
-          - dystopia
-          - romance
-          - mystery
-        default: 'random'
       x_only:
         description: 'X (Twitter) test/repost only (post latest published work to X without sending WordPress email)'
         required: false
@@ -77,7 +66,7 @@ permissions:
 
 jobs:
   daily-publish:
-    name: Generate & Dispatch Sci-Fi Post via Email
+    name: Dispatch Stocked Story to X, WordPress & Blogger
     runs-on: ubuntu-latest
 
     steps:
@@ -101,7 +90,7 @@ jobs:
         run: |
           python -m unittest discover tests
 
-      - name: Execute Daily Generation and WordPress / Blogger Mail Dispatch
+      - name: Dispatch Stocked Story to X, WordPress & Blogger
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_TEXT_MODEL: ${{ vars.GEMINI_TEXT_MODEL || 'gemini-3.8-flash' }}
@@ -126,7 +115,6 @@ jobs:
           INPUT_FORCE: ${{ github.event.inputs.force }}
           INPUT_WORK_ID: ${{ github.event.inputs.work_id }}
           INPUT_REPOST: ${{ github.event.inputs.repost }}
-          INPUT_ENDING_THEME: ${{ github.event.inputs.ending_theme }}
           INPUT_X_ONLY: ${{ github.event.inputs.x_only }}
           INPUT_BLOGGER_ONLY: ${{ github.event.inputs.blogger_only }}
         run: |
@@ -156,10 +144,6 @@ jobs:
             ARGS="$ARGS --repost $INPUT_REPOST"
           elif [ -n "$INPUT_WORK_ID" ]; then
             ARGS="$ARGS --work-id $INPUT_WORK_ID"
-          fi
-
-          if [ -n "$INPUT_ENDING_THEME" ] && [ "$INPUT_ENDING_THEME" != "random" ]; then
-            ARGS="$ARGS --ending $INPUT_ENDING_THEME"
           fi
 
           if [ -n "${{ github.event.inputs.post_status }}" ]; then
