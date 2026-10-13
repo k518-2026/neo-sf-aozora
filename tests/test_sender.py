@@ -170,7 +170,7 @@ class TestNeoAozoraSystem(unittest.TestCase):
             gmail_cfg = SMTPConfig(
                 host="smtp.gmail.com",
                 port=587,
-                user="yamamoto.k518@gmail.com",
+                user="user@example.com",
                 password="secret",
                 use_tls=True,
                 use_ssl=False,
