@@ -750,5 +750,18 @@
       "Astori, S., Sandi, C. (2024). The brain’s go-getter circuit: Anterior cingulate cortex to nucleus accumbens and its disruption by stress. *Neuron*, 112(3), 333-335.",
       "Bagot, L. (2020). Transfer and zero-shot reinforcement learning : learning behaviors without a reward function. *University of Antwerp*."
     ]
+  },
+  {
+    "work_id": "dazai-hashire-melos",
+    "original_title": "走れメロス",
+    "original_author": "太宰治",
+    "reboot_title": "走れメロス――信頼の証明",
+    "posted_at": "2026-10-13T10:38:06.051984+09:00",
+    "file_path": "content/2026-10-06_dazai_hashire_melos.md",
+    "status": "publish",
+    "references": [
+      "Mundele, B., Han, C. (2022). Polynomial Commitment-Based Zero-Knowledge Proof Schemes. *AIJR Publisher*.",
+      "Vieider, F. (2020). Risk, Betrayal, and Inequality: Decomposing the Trust Game. *AEA Randomized Controlled Trials*."
+    ]
   }
 ]
