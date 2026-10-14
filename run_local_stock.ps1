@@ -1,7 +1,7 @@
 param(
     [int]$Count = 1,
-    [string]$HostUrl = "http://rtx5060lp:11434,http://sff7020:1234",
-    [string]$DrawThingsHost = "http://kenomac-mini:7860",
+    [string]$HostUrl = "http://rtx5060lp:11434",
+    [string]$DrawThingsHost = "http://192.168.128.59:7860",
     [string]$Model = "shosetsu",
     [string]$Role = "lan-dispatch",
     [switch]$GenerateImages,
@@ -14,7 +14,6 @@ $ErrorActionPreference = "Stop"
 Set-Location -Path $PSScriptRoot
 
 $env:OLLAMA_HOST = $HostUrl
-$env:LM_STUDIO_HOST = "http://sff7020:1234"
 $env:DRAW_THINGS_HOST = $DrawThingsHost
 
 Write-Host "1. Pulling latest task queue (data/tasks.json & data/TASKS.md) from GitHub..." -ForegroundColor Cyan

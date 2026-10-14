@@ -21,17 +21,15 @@ from src.story_generator import (
 logger = logging.getLogger(__name__)
 
 DEFAULT_OLLAMA_HOST = "http://rtx5060lp:11434"
-SECONDARY_LLM_HOST = "http://sff7020:1234"
+SECONDARY_LLM_HOST = "http://rtx5060lp:11434"
 FALLBACK_OLLAMA_HOSTS = [
     "http://rtx5060lp:11434",
-    "http://sff7020:1234",
-    "http://192.168.128.16:1234",
-    "http://kenomac-mini:11434",
+    "http://192.168.128.62:11434",
 ]
 DEFAULT_LOCAL_MODEL = "shosetsu"
-DEFAULT_SECONDARY_MODEL = "google/gemma-4-26b-a4b-qat"
+DEFAULT_SECONDARY_MODEL = "shosetsu"
 DEFAULT_WRITER_MODEL = "shosetsu"
-DEFAULT_DRAW_THINGS_HOST = "http://kenomac-mini:7860"
+DEFAULT_DRAW_THINGS_HOST = "http://192.168.128.59:7860"
 
 # Preferred local models in priority order if user hasn't explicitly forced one
 PREFERRED_LOCAL_MODELS = [
@@ -218,6 +216,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
         (
             "分散センサー網におけるビザンチン障害耐性（ビザンチン将軍問題）",
             "Lamport Shostak Pease The Byzantine Generals Problem ACM Transactions on Programming Languages and Systems 1982",
+        ),
+    ],
+    "dazai-ningen-shikkaku": [
+        (
+            "ブレイン・マシン・インターフェースによる神経デコーディング",
+            "Willett Hochberg Shenoy High-performance brain-to-text communication via handwriting Nature 2021",
+        ),
+        (
+            "マイクロ表情・情動自律神経バイオフィードバック",
+            "Ekman Friesen Constants across cultures in the face and emotion Journal of Personality and Social Psychology",
+        ),
+        (
+            "脳波同期と他者共感の計算論的神経科学",
+            "Hasson Uri Neural coupling between speakers and listeners Proceedings of the National Academy of Sciences 2010",
+        ),
+    ],
+    "soseki-wagahai-wa-neko": [
+        (
+            "生体神経とナノバイオセンサーのハイブリッド結合",
+            "Lieber Nanoscale electronic interfaces with cells and tissues Nano Letters 2012",
+        ),
+        (
+            "マルチスペクトル環境知覚と超音波センシング",
+            "Jones Sensory ecology How organisms acquire and process information Nature 2008",
+        ),
+        (
+            "群知能による分散型都市環境モニタリング",
+            "Bonabeau Dorigo Theraulaz Swarm Intelligence From Natural to Artificial Systems Oxford 1999",
+        ),
+    ],
+    "soseki-botchan": [
+        (
+            "マルチエージェント強化学習と組織ダイナミクス",
+            "Vinyals Silver Grandmaster level in StarCraft II using multi-agent reinforcement learning Nature 2019",
+        ),
+        (
+            "量子暗号と改ざん不能な分散型監査ログ",
+            "Bennett Brassard Quantum cryptography Public key distribution and coin tossing IEEE 1984",
+        ),
+        (
+            "非ゼロサムゲーム理論と集団協力メカニズム",
+            "Axelrod Hamilton The Evolution of Cooperation Science 1981",
         ),
     ],
 }

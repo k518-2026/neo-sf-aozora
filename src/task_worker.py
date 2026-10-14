@@ -35,17 +35,17 @@ DEFAULT_ROLES_CONFIG = {
         "host": "http://rtx5060lp:11434",
         "fallback_host": "http://192.168.128.62:11434",
         "model": "shosetsu",
-        "daily_quota": 1,
-        "description": "【プライマリ小説執筆】奇数番・交互担当で青空文庫SFリブート小説本文・技術解説を執筆（Ollama shosetsu）",
+        "daily_quota": 3,
+        "description": "【専用執筆LLM】青空文庫SFリブート小説本文・技術解説を執筆（Ollama shosetsu）",
     },
     "sff7020": {
         "node": "sff7020",
         "role": "writer_secondary",
-        "host": "http://sff7020:1234",
-        "fallback_host": "http://192.168.128.16:1234",
-        "model": "google/gemma-4-26b-a4b-qat",
-        "daily_quota": 1,
-        "description": "【セカンダリ小説執筆＆プロット/校閲】偶数番・交互担当で煽り・ケレン味のあるSF小説を執筆＆先行プロット設計（LM Studio :1234）",
+        "host": "http://rtx5060lp:11434",
+        "fallback_host": "http://192.168.128.62:11434",
+        "model": "shosetsu",
+        "daily_quota": 0,
+        "description": "【休止中】執筆はすべて rtx5060lp に集約",
     },
     "kenomac-mini": {
         "node": "kenomac-mini",
@@ -218,14 +218,7 @@ def sync_tasks_manifest(history_mgr: HistoryManager) -> Dict[str, Any]:
         if stock_md and re.match(r"^\d{4}-\d{2}-\d{2}_", stock_md.name):
             inferred_date = stock_md.name[:10]
 
-        # Alternating writer assignment: sff7020 (Secondary :1234) and rtx5060lp (Primary :11434) take turns!
-        if status in ("pending", "plot_ready"):
-            # Count how many completed works exist so far so every new completion naturally flips the next turn
-            completed_so_far = sum(1 for t in synced_tasks if t["status"] in ("completed", "pending_illustration"))
-            assigned_writer = "sff7020" if ((completed_so_far + uncompleted_queue_idx) % 2 == 1) else "rtx5060lp"
-            uncompleted_queue_idx += 1
-        else:
-            assigned_writer = prev.get("assigned_writer") or prev.get("written_by") or "rtx5060lp"
+        assigned_writer = "rtx5060lp"
 
         task_entry = {
             "id": wid,
@@ -556,30 +549,10 @@ def run_writer_role(
         if not work:
             continue
 
-        # Determine which writer is up next (strict alternation based on history or task assignment)
-        turn_node = preferred_node or determine_next_writer_turn(manifest)
-        if turn_node == "sff7020":
-            if sff_host:
-                active_node = "sff7020"
-                active_host = sff_host
-                active_model = sff_cfg.get("model", "google/gemma-4-26b-a4b-qat")
-                logger.info(f"[Alternating Writer] 今回はセカンダリ『sff7020 ({active_host})』の順番です！煽り・ケレン味のあるSF小説を執筆します。")
-            else:
-                active_node = "rtx5060lp"
-                active_host = rtx_host
-                active_model = rtx_cfg.get("model", "shosetsu")
-                logger.info(f"[Alternating Writer] セカンダリ sff7020:1234 がオフラインのため、プライマリ『rtx5060lp ({active_host})』が代行執筆します。")
-        else:
-            if rtx_host:
-                active_node = "rtx5060lp"
-                active_host = rtx_host
-                active_model = rtx_cfg.get("model", "shosetsu")
-                logger.info(f"[Alternating Writer] 今回はプライマリ『rtx5060lp ({active_host})』の順番です！({active_model})")
-            else:
-                active_node = "sff7020"
-                active_host = sff_host
-                active_model = sff_cfg.get("model", "google/gemma-4-26b-a4b-qat")
-                logger.info(f"[Alternating Writer] プライマリ rtx5060lp:11434 がオフラインのため、セカンダリ『sff7020 ({active_host})』が代行執筆します。")
+        active_node = "rtx5060lp"
+        active_host = rtx_host
+        active_model = rtx_cfg.get("model", "shosetsu")
+        logger.info(f"[Dedicated Writer] 専用執筆LLM『rtx5060lp ({active_host})』で執筆します。({active_model})")
 
         local_gen = LocalStoryGenerator(
             ollama_host=active_host,

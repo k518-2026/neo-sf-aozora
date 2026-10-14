@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-14T12:11:39.682395+09:00",
+  "updated_at": "2026-10-14T20:55:39.449695+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -10,17 +10,17 @@
       "host": "http://rtx5060lp:11434",
       "fallback_host": "http://192.168.128.62:11434",
       "model": "shosetsu",
-      "daily_quota": 1,
-      "description": "【プライマリ小説執筆】奇数番・交互担当で青空文庫SFリブート小説本文・技術解説を執筆（Ollama shosetsu）"
+      "daily_quota": 3,
+      "description": "【専用執筆LLM】青空文庫SFリブート小説本文・技術解説を執筆（Ollama shosetsu）"
     },
     "sff7020": {
       "node": "sff7020",
       "role": "writer_secondary",
-      "host": "http://sff7020:1234",
-      "fallback_host": "http://192.168.128.16:1234",
-      "model": "google/gemma-4-26b-a4b-qat",
-      "daily_quota": 1,
-      "description": "【セカンダリ小説執筆＆プロット/校閲】偶数番・交互担当で煽り・ケレン味のあるSF小説を執筆＆先行プロット設計（LM Studio :1234）"
+      "host": "http://rtx5060lp:11434",
+      "fallback_host": "http://192.168.128.62:11434",
+      "model": "shosetsu",
+      "daily_quota": 0,
+      "description": "【休止中】執筆はすべて rtx5060lp に集約"
     },
     "kenomac-mini": {
       "node": "kenomac-mini",
@@ -1483,6 +1483,69 @@
       "png_file": "content/2026-10-11_tayama_futon.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-11"
+    },
+    {
+      "id": "dazai-ningen-shikkaku",
+      "work_num": 70,
+      "title": "人間失格",
+      "author": "太宰治",
+      "theme": "脳波デコーディングと情動バイオフィードバック・神経擬態UI・他者共感インターフェース",
+      "modern_tech": "ブレイン・マシン・インターフェース（BMI）による神経活動実時間解読、マイクロ表情・自律神経同期型ニューロインターフェース、情動デコーディングによる孤立感緩和プロトコル",
+      "status": "pending",
+      "assigned_writer": "rtx5060lp",
+      "plot_file": null,
+      "plot_by": null,
+      "plot_at": null,
+      "md_file": null,
+      "written_by": null,
+      "written_at": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "png_file": null,
+      "illustrated_by": null,
+      "illustrated_at": null
+    },
+    {
+      "id": "soseki-wagahai-wa-neko",
+      "work_num": 71,
+      "title": "吾輩は猫である",
+      "author": "夏目漱石",
+      "theme": "バイオハイブリッド義体・異種間テレメトリ・都市生態系環境センシング",
+      "modern_tech": "生体神経とナノバイオセンサーのハイブリッド結合、マルチスペクトル超音波・赤外線環境知覚インターフェース、群知能による分散型都市環境モニタリング",
+      "status": "pending",
+      "assigned_writer": "rtx5060lp",
+      "plot_file": null,
+      "plot_by": null,
+      "plot_at": null,
+      "md_file": null,
+      "written_by": null,
+      "written_at": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "png_file": null,
+      "illustrated_by": null,
+      "illustrated_at": null
+    },
+    {
+      "id": "soseki-botchan",
+      "work_num": 72,
+      "title": "坊っちゃん",
+      "author": "夏目漱石",
+      "theme": "ゲーム理論・自律型マルチエージェント協調・ブロックチェーン監査証跡",
+      "modern_tech": "マルチエージェント強化学習による組織ダイナミクス・不正検知、量子もつれ暗号を用いた改ざん不能な監査ログ、非ゼロサムゲーム理論に基づく集団意思決定アルゴリズム",
+      "status": "pending",
+      "assigned_writer": "rtx5060lp",
+      "plot_file": null,
+      "plot_by": null,
+      "plot_at": null,
+      "md_file": null,
+      "written_by": null,
+      "written_at": null,
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "png_file": null,
+      "illustrated_by": null,
+      "illustrated_at": null
     }
   ]
 }

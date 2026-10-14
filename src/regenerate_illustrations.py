@@ -917,6 +917,48 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Expansive floor-to-ceiling panoramic glass windows reveal a glorious bright city sunrise with golden, coral, and clear blue skies, radiant high contrast, clean crisp lines, completely illuminated space without gloomy shadows, pure art without text."
         ),
     },
+    {
+        "index": 70,
+        "work_id": "dazai-ningen-shikkaku",
+        "title": "人間失格",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-15_dazai_ningen_shikkaku.png")],
+        "docs_path": Path("docs/assets/images/dazai-ningen-shikkaku.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Yozo, a sensitive handsome 23-year-old male artist and neuro-interface designer with sleek messy dark hair, standing in a radiant high-tech glass studio in neo-Tokyo at dusk. "
+            "Masterpiece close-up half-body portrait: striking melancholic yet relieved gentle expression, remarkably beautiful expressive dark eyes with luminous specular catchlights and clear detailed irises, refined anime facial anatomy. "
+            "A delicate glowing neural headband on his temples projects subtle luminous fractal waves of brain activity, while shimmering holographic emotional biofeedback particles in cyan and gold float in the air around him. "
+            "Behind him, vibrant illuminated city lights and colorful aurora-like holographic sky displays stream through panoramic windows, high contrast, radiant clean illumination, no murky shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 71,
+        "work_id": "soseki-wagahai-wa-neko",
+        "title": "吾輩は猫である",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-10-15_soseki_wagahai_wa_neko.png")],
+        "docs_path": Path("docs/assets/images/soseki-wagahai-wa-neko.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of an adorable intelligent black-and-white feline bio-hybrid cybernetic cat, perched gracefully on the polished wooden veranda of a sunlit Japanese-Western fusion garden villa. "
+            "Masterpiece close-up portrait: extraordinarily beautiful large luminous emerald-gold feline eyes with sharp vertical pupils and sparkling crystalline reflections, dignified witty expression, sleek soft fur. "
+            "Tiny intricate micro-sensors along its sleek silver collar project glowing holographic environmental telemetry readouts and ultrasonic soundwave ripple diagrams in vibrant amber and jade green into the sunbeams. "
+            "Lush bright green garden foliage with blooming camellias drenched in warm golden morning sunlight, rich colorful contrast, radiant pristine atmosphere, no dark gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 72,
+        "work_id": "soseki-botchan",
+        "title": "坊っちゃん",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-10-15_soseki_botchan.png")],
+        "docs_path": Path("docs/assets/images/soseki-botchan.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Botchan, a spirited energetic handsome 24-year-old male quantum physics teacher with short black hair and rolled-up modern researcher sleeves, standing in a sun-drenched high-tech classroom. "
+            "Masterpiece close-up half-body portrait: bold honest expression full of vitality and integrity, exceptionally clear brilliant fiery amber eyes with crisp light catchlights and detailed pupils, sharp handsome anime facial features. "
+            "In front of him, dynamic three-dimensional holographic game-theory matrices and quantum multi-agent simulation orbits glow in vivid sapphire, gold, and ruby red. "
+            "Wide classroom windows overlooking a sparkling blue seaside bay under an expansive clear azure sky, intense natural sunlight creating crisp highlights, vibrant high contrast, no dark gloom, pure art without text."
+        ),
+    },
 ]
 
 
