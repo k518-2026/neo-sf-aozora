@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **66** 作品（うち挿絵付き **66** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-14 16:42 JST）
+- **収録作品数**: 全 **67** 作品（うち挿絵付き **67** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-14 21:11 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 67 | **[人間失格――神経擬態と虚構の共鳴](content/2026-10-14_dazai_ningen_shikkaku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-ningen-shikkaku.html) | [📄原稿](content/2026-10-14_dazai_ningen_shikkaku.md) | [🎨挿絵](content/2026-10-14_dazai_ningen_shikkaku.png) | 太宰治[『人間失格』](https://www.aozora.gr.jp/cards/000035/card301.html) | ブレイン・マシン・インターフェース（BMI）による神経活動実時間解読、マイクロ表情・自律神経同期型ニューロインターフェース、情動デコーディングによる孤立感緩和プロトコル | 5,348字 |
 | 66 | **[蒲団――嗅覚記憶の迷宮と「執着」の解剖学](content/2026-10-11_tayama_futon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/tayama-futon.html) | [📄原稿](content/2026-10-11_tayama_futon.md) | [🎨挿絵](content/2026-10-11_tayama_futon.png) | 田山花袋[『蒲団』](https://www.aozora.gr.jp/cards/000214/card1669.html) | 嗅球から扁桃体・海馬へ直結する情動記憶回路の神経科学、ガスクロマトグラフィー質量分析（GC-MS）による微量揮発性分子プロファイリング、メタ認知療法による執着からの解放 | 5,347字 |
 | 65 | **[風立ちぬ――微細なる風が運ぶ、命の共鳴](content/2026-10-10_hori_kaze_tachinu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/hori-kaze-tachinu.html) | [📄原稿](content/2026-10-10_hori_kaze_tachinu.md) | [🎨挿絵](content/2026-10-10_hori_kaze_tachinu.png) | 堀辰雄[『風立ちぬ』](https://www.aozora.gr.jp/cards/001030/card4803.html) | 個別化mRNAワクチンと粘膜免疫誘導による呼吸器疾患の克服、山岳森林浴におけるフィトンチッドと自律神経・NK細胞活性化、生体バイタル同期による共感ケア | 5,293字 |
 | 64 | **[五重塔――揺らぎの調律者](content/2026-10-10_koda_goju_no_to.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/koda-goju-no-to.html) | [📄原稿](content/2026-10-10_koda_goju_no_to.md) | [🎨挿絵](content/2026-10-10_koda_goju_no_to.png) | 幸田露伴[『五重塔』](https://www.aozora.gr.jp/cards/000051/card1427.html) | 木組み仕口の摩擦減衰と心柱による同調質量ダンパー（TMD）機構、スーパーコンピュータによる超大型台風の流体・構造連成解析、木材セルロース結晶の経年強度増加 | 5,939字 |

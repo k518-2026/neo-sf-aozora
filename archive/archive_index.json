@@ -1054,5 +1054,21 @@
     "narration_file": "66_蒲団_narration.txt",
     "full_file": "66_蒲団_full.txt",
     "original_md_file": "66_蒲団.md"
+  },
+  {
+    "work_no": 67,
+    "work_id": "dazai-ningen-shikkaku",
+    "title": "人間失格",
+    "subtitle": "神経擬態と虚構の共鳴",
+    "attribution": "",
+    "original_author": "太宰治",
+    "original_title": "人間失格",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000035/card301.html",
+    "modern_tech": "ブレイン・マシン・インターフェース（BMI）による神経活動実時間解読、マイクロ表情・自律神経同期型ニューロインターフェース、情動デコーディングによる孤立感緩和プロトコル",
+    "summary": "他人の前で『道化』を演じ続け、真の感情を隠し通してきた青年・葉蔵。脳波・神経活動がリアルタイムで可視化・共有される近未来ニューロリンク社会において、彼が直面する『人間であることの資格』と、テクノロジーを通じた究極の自己受容を描く。",
+    "char_count": 3489,
+    "narration_file": "67_人間失格_narration.txt",
+    "full_file": "67_人間失格_full.txt",
+    "original_md_file": "67_人間失格.md"
   }
 ]

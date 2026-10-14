@@ -1,5 +1,17 @@
 [
   {
+    "no": 67,
+    "work_id": "dazai-ningen-shikkaku",
+    "title": "人間失格――神経擬態と虚構の共鳴",
+    "original_title": "人間失格",
+    "original_author": "太宰治",
+    "modern_tech": "ブレイン・マシン・インターフェース（BMI）による神経活動実時間解読、マイクロ表情・自律神経同期型ニューロインターフェース、情動デコーディングによる孤立感緩和プロトコル",
+    "has_image": true,
+    "url": "stories/dazai-ningen-shikkaku.html",
+    "image": "assets/images/dazai-ningen-shikkaku.png",
+    "char_count": 5348
+  },
+  {
     "no": 66,
     "work_id": "tayama-futon",
     "title": "蒲団――嗅覚記憶の迷宮と「執着」の解剖学",

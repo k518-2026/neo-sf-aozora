@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-14T21:03:50.170995+09:00",
+  "updated_at": "2026-10-14T21:11:24.828673+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1121,8 +1121,8 @@
       "md_file": "content/2026-10-07_unno_kasei_ma.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-07",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-14T21:00:04.398791+09:00",
+      "reviewed_by": null,
+      "reviewed_at": null,
       "png_file": "content/2026-10-07_unno_kasei_ma.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-07"
@@ -1142,8 +1142,8 @@
       "md_file": "content/2026-10-07_unno_kaiten_makyo.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-07",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-14T21:00:04.398791+09:00",
+      "reviewed_by": null,
+      "reviewed_at": null,
       "png_file": "content/2026-10-07_unno_kaiten_makyo.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-07"
@@ -1491,19 +1491,19 @@
       "author": "太宰治",
       "theme": "脳波デコーディングと情動バイオフィードバック・神経擬態UI・他者共感インターフェース",
       "modern_tech": "ブレイン・マシン・インターフェース（BMI）による神経活動実時間解読、マイクロ表情・自律神経同期型ニューロインターフェース、情動デコーディングによる孤立感緩和プロトコル",
-      "status": "plot_ready",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": "data/plots/dazai-ningen-shikkaku.md",
       "plot_by": "sff7020",
-      "plot_at": "2026-10-14T21:00:04.398791+09:00",
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "plot_at": null,
+      "md_file": "content/2026-10-14_dazai_ningen_shikkaku.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-14T21:04:30.365023+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-14_dazai_ningen_shikkaku.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-14T21:11:24.788129+09:00"
     },
     {
       "id": "soseki-wagahai-wa-neko",
