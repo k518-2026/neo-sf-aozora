@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-14T21:22:46.407239+09:00",
+  "updated_at": "2026-10-14T21:33:41.612181+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1533,19 +1533,19 @@
       "author": "夏目漱石",
       "theme": "ゲーム理論・自律型マルチエージェント協調・ブロックチェーン監査証跡",
       "modern_tech": "マルチエージェント強化学習による組織ダイナミクス・不正検知、量子もつれ暗号を用いた改ざん不能な監査ログ、非ゼロサムゲーム理論に基づく集団意思決定アルゴリズム",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-14_soseki_botchan.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-14",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-14_soseki_botchan.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-14"
     }
   ]
 }

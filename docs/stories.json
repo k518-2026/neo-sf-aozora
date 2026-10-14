@@ -1,5 +1,17 @@
 [
   {
+    "no": 69,
+    "work_id": "soseki-botchan",
+    "title": "坊っちゃん――最適化された地獄のアルゴリズム",
+    "original_title": "坊っちゃん",
+    "original_author": "夏目漱石",
+    "modern_tech": "マルチエージェント強化学習による組織ダイナミクス・不正検知、量子もつれ暗号を用いた改ざん不能な監査ログ、非ゼロサムゲーム理論に基づく集団意思決定アルゴリズム",
+    "has_image": true,
+    "url": "stories/soseki-botchan.html",
+    "image": "assets/images/soseki-botchan.png",
+    "char_count": 5603
+  },
+  {
     "no": 68,
     "work_id": "soseki-wagahai-wa-neko",
     "title": "吾輩は猫である――都市の深淵を聴く神経（ニューラル）の眼",

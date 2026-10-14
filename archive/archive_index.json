@@ -1086,5 +1086,21 @@
     "narration_file": "68_吾輩は猫である_narration.txt",
     "full_file": "68_吾輩は猫である_full.txt",
     "original_md_file": "68_吾輩は猫である.md"
+  },
+  {
+    "work_no": 69,
+    "work_id": "soseki-botchan",
+    "title": "坊っちゃん",
+    "subtitle": "最適化された地獄のアルゴリズム",
+    "attribution": "",
+    "original_author": "夏目漱石",
+    "original_title": "坊っちゃん",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000148/card752.html",
+    "modern_tech": "マルチエージェント強化学習による組織ダイナミクス・不正検知、量子もつれ暗号を用いた改ざん不能な監査ログ、非ゼロサムゲーム理論に基づく集団意思決定アルゴリズム",
+    "summary": "曲がったことが大嫌いな無鉄砲青年が、四国の地方校に物理教師として赴任。狸や赤シャツ、野だいこらが蠢く学校組織の権力闘争と不正に対し、数学・ゲーム理論と持ち前の痛快な真っ直ぐさで正面から立ち向かう爽快な科学活劇。",
+    "char_count": 3619,
+    "narration_file": "69_坊っちゃん_narration.txt",
+    "full_file": "69_坊っちゃん_full.txt",
+    "original_md_file": "69_坊っちゃん.md"
   }
 ]

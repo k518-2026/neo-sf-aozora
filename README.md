@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **68** 作品（うち挿絵付き **68** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-14 21:22 JST）
+- **収録作品数**: 全 **69** 作品（うち挿絵付き **69** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-14 21:33 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 69 | **[坊っちゃん――最適化された地獄のアルゴリズム](content/2026-10-14_soseki_botchan.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-botchan.html) | [📄原稿](content/2026-10-14_soseki_botchan.md) | [🎨挿絵](content/2026-10-14_soseki_botchan.png) | 夏目漱石[『坊っちゃん』](https://www.aozora.gr.jp/cards/000148/card752.html) | マルチエージェント強化学習による組織ダイナミクス・不正検知、量子もつれ暗号を用いた改ざん不能な監査ログ、非ゼロサムゲーム理論に基づく集団意思決定アルゴリズム | 5,603字 |
 | 68 | **[吾輩は猫である――都市の深淵を聴く神経（ニューラル）の眼](content/2026-10-14_soseki_wagahai_wa_neko.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-wagahai-wa-neko.html) | [📄原稿](content/2026-10-14_soseki_wagahai_wa_neko.md) | [🎨挿絵](content/2026-10-14_soseki_wagahai_wa_neko.png) | 夏目漱石[『吾輩は猫である』](https://www.aozora.gr.jp/cards/000148/card789.html) | 生体神経とナノバイオセンサーのハイブリッド結合、マルチスペクトル超音波・赤外線環境知覚インターフェース、群知能による分散型都市環境モニタリング | 5,562字 |
 | 67 | **[人間失格――神経擬態と虚構の共鳴](content/2026-10-14_dazai_ningen_shikkaku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-ningen-shikkaku.html) | [📄原稿](content/2026-10-14_dazai_ningen_shikkaku.md) | [🎨挿絵](content/2026-10-14_dazai_ningen_shikkaku.png) | 太宰治[『人間失格』](https://www.aozora.gr.jp/cards/000035/card301.html) | ブレイン・マシン・インターフェース（BMI）による神経活動実時間解読、マイクロ表情・自律神経同期型ニューロインターフェース、情動デコーディングによる孤立感緩和プロトコル | 5,348字 |
 | 66 | **[蒲団――嗅覚記憶の迷宮と「執着」の解剖学](content/2026-10-11_tayama_futon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/tayama-futon.html) | [📄原稿](content/2026-10-11_tayama_futon.md) | [🎨挿絵](content/2026-10-11_tayama_futon.png) | 田山花袋[『蒲団』](https://www.aozora.gr.jp/cards/000214/card1669.html) | 嗅球から扁桃体・海馬へ直結する情動記憶回路の神経科学、ガスクロマトグラフィー質量分析（GC-MS）による微量揮発性分子プロファイリング、メタ認知療法による執着からの解放 | 5,347字 |
