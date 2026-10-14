@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-14T21:11:24.828673+09:00",
+  "updated_at": "2026-10-14T21:14:41.505436+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1121,8 +1121,8 @@
       "md_file": "content/2026-10-07_unno_kasei_ma.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-07",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-14T21:00:04.398791+09:00",
       "png_file": "content/2026-10-07_unno_kasei_ma.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-07"
@@ -1142,8 +1142,8 @@
       "md_file": "content/2026-10-07_unno_kaiten_makyo.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-07",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-14T21:00:04.398791+09:00",
       "png_file": "content/2026-10-07_unno_kaiten_makyo.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-07"
@@ -1495,15 +1495,15 @@
       "assigned_writer": "rtx5060lp",
       "plot_file": "data/plots/dazai-ningen-shikkaku.md",
       "plot_by": "sff7020",
-      "plot_at": null,
+      "plot_at": "2026-10-14T21:00:04.398791+09:00",
       "md_file": "content/2026-10-14_dazai_ningen_shikkaku.md",
       "written_by": "rtx5060lp",
-      "written_at": "2026-10-14T21:04:30.365023+09:00",
+      "written_at": "2026-10-14T21:09:51.976349+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
       "png_file": "content/2026-10-14_dazai_ningen_shikkaku.png",
       "illustrated_by": "kenomac-mini",
-      "illustrated_at": "2026-10-14T21:11:24.788129+09:00"
+      "illustrated_at": "2026-10-14T21:14:41.466882+09:00"
     },
     {
       "id": "soseki-wagahai-wa-neko",
