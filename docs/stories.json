@@ -1,5 +1,17 @@
 [
   {
+    "no": 68,
+    "work_id": "soseki-wagahai-wa-neko",
+    "title": "吾輩は猫である――都市の深淵を聴く神経（ニューラル）の眼",
+    "original_title": "吾輩は猫である",
+    "original_author": "夏目漱石",
+    "modern_tech": "生体神経とナノバイオセンサーのハイブリッド結合、マルチスペクトル超音波・赤外線環境知覚インターフェース、群知能による分散型都市環境モニタリング",
+    "has_image": true,
+    "url": "stories/soseki-wagahai-wa-neko.html",
+    "image": "assets/images/soseki-wagahai-wa-neko.png",
+    "char_count": 5562
+  },
+  {
     "no": 67,
     "work_id": "dazai-ningen-shikkaku",
     "title": "人間失格――神経擬態と虚構の共鳴",

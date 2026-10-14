@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-14T21:14:41.505436+09:00",
+  "updated_at": "2026-10-14T21:22:46.407239+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1121,8 +1121,8 @@
       "md_file": "content/2026-10-07_unno_kasei_ma.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-07",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-14T21:00:04.398791+09:00",
+      "reviewed_by": null,
+      "reviewed_at": null,
       "png_file": "content/2026-10-07_unno_kasei_ma.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-07"
@@ -1142,8 +1142,8 @@
       "md_file": "content/2026-10-07_unno_kaiten_makyo.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-07",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-14T21:00:04.398791+09:00",
+      "reviewed_by": null,
+      "reviewed_at": null,
       "png_file": "content/2026-10-07_unno_kaiten_makyo.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-07"
@@ -1495,15 +1495,15 @@
       "assigned_writer": "rtx5060lp",
       "plot_file": "data/plots/dazai-ningen-shikkaku.md",
       "plot_by": "sff7020",
-      "plot_at": "2026-10-14T21:00:04.398791+09:00",
+      "plot_at": null,
       "md_file": "content/2026-10-14_dazai_ningen_shikkaku.md",
       "written_by": "rtx5060lp",
-      "written_at": "2026-10-14T21:09:51.976349+09:00",
+      "written_at": "2026-10-14T21:04:30.365023+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
       "png_file": "content/2026-10-14_dazai_ningen_shikkaku.png",
       "illustrated_by": "kenomac-mini",
-      "illustrated_at": "2026-10-14T21:14:41.466882+09:00"
+      "illustrated_at": "2026-10-14T21:11:24.788129+09:00"
     },
     {
       "id": "soseki-wagahai-wa-neko",
@@ -1512,19 +1512,19 @@
       "author": "夏目漱石",
       "theme": "バイオハイブリッド義体・異種間テレメトリ・都市生態系環境センシング",
       "modern_tech": "生体神経とナノバイオセンサーのハイブリッド結合、マルチスペクトル超音波・赤外線環境知覚インターフェース、群知能による分散型都市環境モニタリング",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-14_soseki_wagahai_wa_neko.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-14",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-14_soseki_wagahai_wa_neko.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-14"
     },
     {
       "id": "soseki-botchan",

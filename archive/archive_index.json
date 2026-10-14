@@ -1070,5 +1070,21 @@
     "narration_file": "67_人間失格_narration.txt",
     "full_file": "67_人間失格_full.txt",
     "original_md_file": "67_人間失格.md"
+  },
+  {
+    "work_no": 68,
+    "work_id": "soseki-wagahai-wa-neko",
+    "title": "吾輩は猫である",
+    "subtitle": "都市の深淵を聴く神経（ニューラル）の眼",
+    "attribution": "",
+    "original_author": "夏目漱石",
+    "original_title": "吾輩は猫である",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000148/card789.html",
+    "modern_tech": "生体神経とナノバイオセンサーのハイブリッド結合、マルチスペクトル超音波・赤外線環境知覚インターフェース、群知能による分散型都市環境モニタリング",
+    "summary": "苦沙弥先生の屋敷に入り込んだ一匹の野良猫。実は極秘開発された環境調査用バイオハイブリッド神経プローブだった。知的な皮肉とユーモアを湛えた独自の知覚センサーが、奇妙で滑稽な人間たちの生態と、都市の深部でうごめく秘密をクールに暴き出す。",
+    "char_count": 3785,
+    "narration_file": "68_吾輩は猫である_narration.txt",
+    "full_file": "68_吾輩は猫である_full.txt",
+    "original_md_file": "68_吾輩は猫である.md"
   }
 ]
