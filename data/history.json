@@ -819,5 +819,19 @@
       "Research Collaboration (2024). The neural replay mechanisms of episodic memory consolidation under stress in humans. *Advances in Psychological Science*, 32(7), 1031.",
       "Janaway, C. (2007). Guilt, Bad Conscience, and Self‐Punishment. *Beyond Selflessness*, 124-142."
     ]
+  },
+  {
+    "work_id": "mori-takasebune",
+    "original_title": "高瀬舟",
+    "original_author": "森鴎外",
+    "reboot_title": "高瀬舟――神経幸福の果てに漂う流刑",
+    "posted_at": "2026-10-16T07:32:51.493858+09:00",
+    "file_path": "content/2026-10-06_mori_takasebune.md",
+    "status": "publish",
+    "references": [
+      "Mahmoudi, B., Sanchez, J. C. (2011). A Symbiotic Brain-Machine Interface through Value-Based Decision Making. *PLoS ONE*, 6(3), e14760.",
+      "Karin, O., Alon, U. (2021). The dopamine circuit as a reward-taxis navigation system. *openRxiv*.",
+      "Sherry, L., Shortle, J., Donohue, G., Berlin, B., West, J. (2020). Autonomous Systems Design, Testing, and Deployment: Lessons Learned from The Deployment of an Autonomous Shuttle Bus. *2020 Integrated Communications Navigation and Surveillance Conference (ICNS)*, 5D1-1-5D1-14."
+    ]
   }
 ]
