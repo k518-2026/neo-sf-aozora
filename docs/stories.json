@@ -1,5 +1,17 @@
 [
   {
+    "no": 72,
+    "work_id": "edogawa-kaijin-nijumenso",
+    "title": "怪人二十面相――変幻する虚像の境界",
+    "original_title": "怪人二十面相",
+    "original_author": "江戸川乱歩",
+    "modern_tech": "電気光学メタマテリアルによる動的皮膚迷彩・光学的クローキング、生体電位波形とマルチモーダル顔面特徴点のリアルタイム模倣、量子セキュア認証と少年探偵団の分散センシング網",
+    "has_image": true,
+    "url": "stories/edogawa-kaijin-nijumenso.html",
+    "image": "assets/images/edogawa-kaijin-nijumenso.png",
+    "char_count": 5933
+  },
+  {
     "no": 71,
     "work_id": "akutagawa-jigokuhen",
     "title": "地獄変――美の臨界点に宿る神託",

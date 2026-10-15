@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-15T20:15:03.400681+09:00",
+  "updated_at": "2026-10-15T20:26:33.729363+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1596,19 +1596,19 @@
       "author": "江戸川乱歩",
       "theme": "動的メタマテリアル迷彩・顔面微細生体認証欺瞞・量子もつれ警備ネットワーク",
       "modern_tech": "電気光学メタマテリアルによる動的皮膚迷彩・光学的クローキング、生体電位波形とマルチモーダル顔面特徴点のリアルタイム模倣、量子セキュア認証と少年探偵団の分散センシング網",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-15_edogawa_kaijin_nijumenso.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-15",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-15_edogawa_kaijin_nijumenso.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-15"
     }
   ]
 }

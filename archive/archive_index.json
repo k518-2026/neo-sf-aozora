@@ -1134,5 +1134,21 @@
     "narration_file": "71_地獄変_narration.txt",
     "full_file": "71_地獄変_full.txt",
     "original_md_file": "71_地獄変.md"
+  },
+  {
+    "work_no": 72,
+    "work_id": "edogawa-kaijin-nijumenso",
+    "title": "怪人二十面相",
+    "subtitle": "変幻する虚像の境界",
+    "attribution": "",
+    "original_author": "江戸川乱歩",
+    "original_title": "怪人二十面相",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56648.html",
+    "modern_tech": "電気光学メタマテリアルによる動的皮膚迷彩・光学的クローキング、生体電位波形とマルチモーダル顔面特徴点のリアルタイム模倣、量子セキュア認証と少年探偵団の分散センシング網",
+    "summary": "あらゆる顔と姿に変幻自在に化ける伝説の盗賊・二十面相。最先端のナノメタマテリアル迷彩とバイオメトリクス偽装技術を駆使する怪盗に対し、名探偵・明智小五郎と少年探偵団の自律分散センサー網が知略の限りを尽くして挑む近未来ハイパーサスペンス。",
+    "char_count": 3948,
+    "narration_file": "72_怪人二十面相_narration.txt",
+    "full_file": "72_怪人二十面相_full.txt",
+    "original_md_file": "72_怪人二十面相.md"
   }
 ]

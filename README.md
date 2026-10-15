@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **71** 作品（うち挿絵付き **71** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-15 20:15 JST）
+- **収録作品数**: 全 **72** 作品（うち挿絵付き **72** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-15 20:26 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 72 | **[怪人二十面相――変幻する虚像の境界](content/2026-10-15_edogawa_kaijin_nijumenso.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-kaijin-nijumenso.html) | [📄原稿](content/2026-10-15_edogawa_kaijin_nijumenso.md) | [🎨挿絵](content/2026-10-15_edogawa_kaijin_nijumenso.png) | 江戸川乱歩[『怪人二十面相』](https://www.aozora.gr.jp/cards/001779/card56648.html) | 電気光学メタマテリアルによる動的皮膚迷彩・光学的クローキング、生体電位波形とマルチモーダル顔面特徴点のリアルタイム模倣、量子セキュア認証と少年探偵団の分散センシング網 | 5,933字 |
 | 71 | **[地獄変――美の臨界点に宿る神託](content/2026-10-15_akutagawa_jigokuhen.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-jigokuhen.html) | [📄原稿](content/2026-10-15_akutagawa_jigokuhen.md) | [🎨挿絵](content/2026-10-15_akutagawa_jigokuhen.png) | 芥川龍之介[『地獄変』](https://www.aozora.gr.jp/cards/000879/card66.html) | 深層拡散モデルによる極限情動状態のニューラルイメージング、極低温プラズマ分光イメージング、美学的知覚における報酬系ドーパミンサージと認知的不協和の計測 | 5,338字 |
 | 70 | **[鼻――形態形成の神域への侵犯](content/2026-10-15_akutagawa_hana.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-hana.html) | [📄原稿](content/2026-10-15_akutagawa_hana.md) | [🎨挿絵](content/2026-10-15_akutagawa_hana.png) | 芥川龍之介[『鼻』](https://www.aozora.gr.jp/cards/000879/card42.html) | モルフォゲン濃度勾配を制御するバイオ3Dプリンティング組織再生、軟骨オルガノイドの自己組織化リモデリング、身体失認（アノソグノシア）と顔面知覚の神経心理学 | 5,589字 |
 | 69 | **[坊っちゃん――最適化された地獄のアルゴリズム](content/2026-10-14_soseki_botchan.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-botchan.html) | [📄原稿](content/2026-10-14_soseki_botchan.md) | [🎨挿絵](content/2026-10-14_soseki_botchan.png) | 夏目漱石[『坊っちゃん』](https://www.aozora.gr.jp/cards/000148/card752.html) | マルチエージェント強化学習による組織ダイナミクス・不正検知、量子もつれ暗号を用いた改ざん不能な監査ログ、非ゼロサムゲーム理論に基づく集団意思決定アルゴリズム | 5,603字 |
