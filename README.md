@@ -6,11 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-<<<<<<< Updated upstream
-- **収録作品数**: 全 **72** 作品（うち挿絵付き **72** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-16 07:32 JST）
-=======
-- **収録作品数**: 全 **72** 作品（うち挿絵付き **72** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-15 21:00 JST）
->>>>>>> Stashed changes
+- **収録作品数**: 全 **73** 作品（うち挿絵付き **73** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-16 08:38 JST）
 
 ---
 
@@ -18,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 73 | **[Ｄ坂の殺人事件――残像の檻に囚われた視線](content/2026-10-16_edogawa_d_zaka.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-d-zaka.html) | [📄原稿](content/2026-10-16_edogawa_d_zaka.md) | [🎨挿絵](content/2026-10-16_edogawa_d_zaka.png) | 江戸川乱歩[『Ｄ坂の殺人事件』](https://www.aozora.gr.jp/cards/001779/card56645.html) | 光コヒーレンストモグラフィと量子光干渉計による空間光子遅延復元、微細眼球運動（マイクロサッカード）と瞳孔変動の神経画像解析、シャノン情報エントロピーと閉鎖系情報漏洩解析 | 5,687字 |
 | 72 | **[怪人二十面相――変幻する虚像の境界](content/2026-10-15_edogawa_kaijin_nijumenso.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-kaijin-nijumenso.html) | [📄原稿](content/2026-10-15_edogawa_kaijin_nijumenso.md) | [🎨挿絵](content/2026-10-15_edogawa_kaijin_nijumenso.png) | 江戸川乱歩[『怪人二十面相』](https://www.aozora.gr.jp/cards/001779/card56648.html) | 電気光学メタマテリアルによる動的皮膚迷彩・光学的クローキング、生体電位波形とマルチモーダル顔面特徴点のリアルタイム模倣、量子セキュア認証と少年探偵団の分散センシング網 | 5,933字 |
 | 71 | **[地獄変――美の臨界点に宿る神託](content/2026-10-15_akutagawa_jigokuhen.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-jigokuhen.html) | [📄原稿](content/2026-10-15_akutagawa_jigokuhen.md) | [🎨挿絵](content/2026-10-15_akutagawa_jigokuhen.png) | 芥川龍之介[『地獄変』](https://www.aozora.gr.jp/cards/000879/card66.html) | 深層拡散モデルによる極限情動状態のニューラルイメージング、極低温プラズマ分光イメージング、美学的知覚における報酬系ドーパミンサージと認知的不協和の計測 | 5,338字 |
 | 70 | **[鼻――形態形成の神域への侵犯](content/2026-10-15_akutagawa_hana.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-hana.html) | [📄原稿](content/2026-10-15_akutagawa_hana.md) | [🎨挿絵](content/2026-10-15_akutagawa_hana.png) | 芥川龍之介[『鼻』](https://www.aozora.gr.jp/cards/000879/card42.html) | モルフォゲン濃度勾配を制御するバイオ3Dプリンティング組織再生、軟骨オルガノイドの自己組織化リモデリング、身体失認（アノソグノシア）と顔面知覚の神経心理学 | 5,589字 |

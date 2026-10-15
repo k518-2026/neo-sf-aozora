@@ -1,5 +1,17 @@
 [
   {
+    "no": 73,
+    "work_id": "edogawa-d-zaka",
+    "title": "Ｄ坂の殺人事件――残像の檻に囚われた視線",
+    "original_title": "Ｄ坂の殺人事件",
+    "original_author": "江戸川乱歩",
+    "modern_tech": "光コヒーレンストモグラフィと量子光干渉計による空間光子遅延復元、微細眼球運動（マイクロサッカード）と瞳孔変動の神経画像解析、シャノン情報エントロピーと閉鎖系情報漏洩解析",
+    "has_image": true,
+    "url": "stories/edogawa-d-zaka.html",
+    "image": "assets/images/edogawa-d-zaka.png",
+    "char_count": 5687
+  },
+  {
     "no": 72,
     "work_id": "edogawa-kaijin-nijumenso",
     "title": "怪人二十面相――変幻する虚像の境界",

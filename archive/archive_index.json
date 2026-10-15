@@ -1150,5 +1150,21 @@
     "narration_file": "72_怪人二十面相_narration.txt",
     "full_file": "72_怪人二十面相_full.txt",
     "original_md_file": "72_怪人二十面相.md"
+  },
+  {
+    "work_no": 73,
+    "work_id": "edogawa-d-zaka",
+    "title": "Ｄ坂の殺人事件",
+    "subtitle": "残像の檻に囚われた視線",
+    "attribution": "",
+    "original_author": "江戸川乱歩",
+    "original_title": "Ｄ坂の殺人事件",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56645.html",
+    "modern_tech": "光コヒーレンストモグラフィと量子光干渉計による空間光子遅延復元、微細眼球運動（マイクロサッカード）と瞳孔変動の神経画像解析、シャノン情報エントロピーと閉鎖系情報漏洩解析",
+    "summary": "古書店が並ぶD坂の喫茶店で発生した不可解な密室殺人事件。青年探偵・明智小五郎は、量子光干渉による空間残留光子の遅延復元と、容疑者たちの微細サッカード視線追跡ログを照合し、人間の心理的盲点と密室の幾何学的トリックを暴き出す。",
+    "char_count": 3736,
+    "narration_file": "73_Ｄ坂の殺人事件_narration.txt",
+    "full_file": "73_Ｄ坂の殺人事件_full.txt",
+    "original_md_file": "73_Ｄ坂の殺人事件.md"
   }
 ]
