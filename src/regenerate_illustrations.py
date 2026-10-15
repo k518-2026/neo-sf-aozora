@@ -959,6 +959,48 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Wide classroom windows overlooking a sparkling blue seaside bay under an expansive clear azure sky, intense natural sunlight creating crisp highlights, vibrant high contrast, no dark gloom, pure art without text."
         ),
     },
+    {
+        "index": 73,
+        "work_id": "akutagawa-hana",
+        "title": "鼻",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-15_akutagawa_hana.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-hana.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Naigu, a thoughtful 42-year-old male bio-reconstructive monk-scientist in modern silver-trimmed cybernetic ceremonial robes, standing in a luminous biotechnology laboratory. "
+            "Masterpiece close-up half-body portrait: contemplative, deeply human dignified expression, remarkably detailed expressive brown eyes with clear pupils and subtle light catchlights, refined anime facial anatomy. "
+            "In front of him, glowing holographic morphogenetic gradient scaffolds and micro-cellular cartilage regeneration models float in soft jade green and luminous cyan light. "
+            "Sunbeams stream through towering laboratory windows overlooking a tranquil futuristic zen temple garden, radiant ambient light, high clean contrast, no muddy shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 74,
+        "work_id": "akutagawa-jigokuhen",
+        "title": "地獄変",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-15_akutagawa_jigokuhen.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-jigokuhen.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Yoshihide, a visionary 38-year-old male neural generative artist with sharp intense features and dark disheveled hair, standing inside a vast illuminated cyberpunk art sanctum. "
+            "Masterpiece close-up half-body portrait: fierce, passionate artistic expression, extraordinarily striking expressive eyes glowing with amber fire and crisp iris reflections, sharp pupils, refined anime facial features. "
+            "Surrounding him, towering curved holographic folding screens project blazing inferno neural landscapes and plasma flame fractals in vivid crimson, gold, and electric violet. "
+            "Dramatic radiant lighting, spectacular dynamic contrast, dazzling colorful highlights, illuminated pristine atmosphere without pitch-black gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 75,
+        "work_id": "edogawa-kaijin-nijumenso",
+        "title": "怪人二十面相",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-10-15_edogawa_kaijin_nijumenso.png")],
+        "docs_path": Path("docs/assets/images/edogawa-kaijin-nijumenso.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kaijin Nijumenso, an enigmatic handsome phantom gentleman thief in a sophisticated tailored dark-blue suit with subtle glowing metamaterial lapels, perched atop a neon-lit clocktower in neo-Tokyo. "
+            "Masterpiece close-up half-body portrait: charismatic mysterious smirk, captivatingly clear detailed violet-blue eyes with brilliant specular catchlights and sharp pupils, refined anime features. "
+            "A delicate optical metamaterial cloaking wave shimmers across his fingertips, while floating holographic multi-spectral facial biometric disguise masks glitch into luminous cyan particles in the wind. "
+            "Panoramic cityscape under a radiant twilight skyline filled with colorful flying vehicles and aurora holographic billboards, rich dynamic lighting, vibrant high contrast, no dark gloom, pure art without text."
+        ),
+    },
 ]
 
 

@@ -260,6 +260,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Axelrod Hamilton The Evolution of Cooperation Science 1981",
         ),
     ],
+    "akutagawa-hana": [
+        (
+            "モルフォゲン濃度勾配とバイオ3Dプリンティング組織再生",
+            "Turing The Chemical Basis of Morphogenesis Philosophical Transactions of the Royal Society 1952",
+        ),
+        (
+            "軟骨オルガノイドの自己組織化リモデリング",
+            "Lancaster Knoblich Organogenesis in a dish Modeling development and disease using organoid technologies Science 2014",
+        ),
+        (
+            "自己身体認知と容貌知覚の神経心理学",
+            "Kanwisher McDermott Chun The fusiform face area a module in human extrastriate cortex Journal of Neuroscience 1997",
+        ),
+    ],
+    "akutagawa-jigokuhen": [
+        (
+            "深層拡散モデルによるニューラルイメージングと情動デコーディング",
+            "Ho Jain Abbeel Denoising diffusion probabilistic models NeurIPS 2020",
+        ),
+        (
+            "極低温プラズマ分光イメージング",
+            "Becker The European Physical Journal D plasma spectroscopy imaging 2006",
+        ),
+        (
+            "美学的知覚における報酬系ドーパミンサージ",
+            "Zeki Beauty in the brain Culture and Brain neuroesthetics 2014",
+        ),
+    ],
+    "edogawa-kaijin-nijumenso": [
+        (
+            "電気光学メタマテリアルによる動的皮膚迷彩と光学的クローキング",
+            "Schurig Pendry Smith Metamaterial Electromagnetic Cloak at Microwave Frequencies Science 2006",
+        ),
+        (
+            "マルチモーダル顔面特徴点のリアルタイム模倣と生体認証欺瞞",
+            "Jain Flynn Ross Handbook of Biometrics Springer 2008",
+        ),
+        (
+            "量子セキュア認証と自律分散センシング網",
+            "Gisin Ribordy Tittel Zbinden Quantum cryptography Reviews of Modern Physics 2002",
+        ),
+    ],
 }
 
 
