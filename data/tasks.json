@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-15T20:03:45.399263+09:00",
+  "updated_at": "2026-10-15T20:07:03.222703+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1499,8 +1499,8 @@
       "md_file": "content/2026-10-14_dazai_ningen_shikkaku.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-14T21:04:30.365023+09:00",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-15T20:00:04.477265+09:00",
       "png_file": "content/2026-10-14_dazai_ningen_shikkaku.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-14T21:11:24.788129+09:00"
@@ -1561,12 +1561,12 @@
       "plot_at": null,
       "md_file": "content/2026-10-15_akutagawa_hana.md",
       "written_by": "rtx5060lp",
-      "written_at": "2026-10-15T19:57:56.323600+09:00",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "written_at": "2026-10-15",
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-15T20:00:04.477265+09:00",
       "png_file": "content/2026-10-15_akutagawa_hana.png",
       "illustrated_by": "kenomac-mini",
-      "illustrated_at": "2026-10-15T20:03:45.343402+09:00"
+      "illustrated_at": "2026-10-15T20:07:03.222688+09:00"
     },
     {
       "id": "akutagawa-jigokuhen",
@@ -1579,7 +1579,7 @@
       "assigned_writer": "rtx5060lp",
       "plot_file": "data/plots/akutagawa-jigokuhen.md",
       "plot_by": "sff7020",
-      "plot_at": null,
+      "plot_at": "2026-10-15T20:00:04.477265+09:00",
       "md_file": null,
       "written_by": null,
       "written_at": null,
