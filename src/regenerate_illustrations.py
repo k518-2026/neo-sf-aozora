@@ -1001,6 +1001,51 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Panoramic cityscape under a radiant twilight skyline filled with colorful flying vehicles and aurora holographic billboards, rich dynamic lighting, vibrant high contrast, no dark gloom, pure art without text."
         ),
     },
+    {
+        "index": 76,
+        "work_id": "edogawa-d-zaka",
+        "title": "Ｄ坂の殺人事件",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-10-16_edogawa_d_zaka.png")],
+        "docs_path": Path("docs/assets/images/edogawa-d-zaka.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Akechi Kogoro, an exceptionally brilliant and observant young Japanese detective in his early 20s, sitting by the window in a vibrant sunlit retro-futuristic cybernetic cafe along D-Hill slope. "
+            "Masterpiece close-up half-body portrait: untidy voluminous wavy dark hair, intensely sharp and piercingly clear obsidian eyes with bright radiant specular catchlights and clearly focused pupils, thoughtful analytical expression. "
+            "Wearing a modern high-collared dark coat over subtle glowing kimono garments. "
+            "Through the window and air around him, luminous azure quantum coherence interference lattices and microscopic photon delay reconstruction vectors float in mid-air, decoding a locked-room mystery. "
+            "Golden sunlight streaming through stained glass, radiant high contrast, vibrant saturated colors, crisp clarity, no murky darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 77,
+        "work_id": "akutagawa-yabu-no-naka",
+        "title": "藪の中",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-16_akutagawa_yabu_no_naka.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-yabu-no-naka.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of an elite cybernetic forensic investigator, an intelligent Japanese man in his late 20s, standing inside a breathtakingly illuminated high-tech cybernetic bamboo forest sanctuary. "
+            "Masterpiece close-up half-body portrait: sharp refined masculine features, intensely vivid and translucent amber-gold eyes with distinct detailed irises, crystal-clear pupils and dazzling catchlights, calm yet focused gaze. "
+            "Wearing a sleek white-and-silver neural investigative uniform with glowing turquoise circuitry trim. "
+            "Multiple shimmering holographic memory projection shards and glowing biometric synaptic waveforms swirl gracefully in the air between vertical luminescent bamboo groves, depicting conflicting testimonies. "
+            "Spectacular sunbeams piercing the canopy, ethereal radiant lighting, vivid vibrant emerald and gold color palette, high contrast, clean pristine illumination, pure art without text."
+        ),
+    },
+    {
+        "index": 78,
+        "work_id": "dazai-fugaku-hyakkei",
+        "title": "富嶽百景",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-16_dazai_fugaku_hyakkei.png")],
+        "docs_path": Path("docs/assets/images/dazai-fugaku-hyakkei.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of a contemplative young atmospheric engineer, a handsome Japanese man in his mid 20s, standing on the open observation deck of the Misaka pass stratospheric research station. "
+            "Masterpiece close-up half-body portrait: soft windswept dark hair, remarkably clear and deep lapis-blue eyes brimming with delicate specular highlights and sharp detailed pupils, an introspective gentle yet determined expression. "
+            "Wearing a stylish warm high-altitude observation jacket with subtle sensor armbands. "
+            "In the background, a majestic snow-capped Mount Fuji crowned by a gigantic crystalline terraforming planetary weather-control spire shines brilliantly under a pure cobalt sky, with faint holographic multi-spectral LIDAR atmospheric scan rings illuminating the clouds below. "
+            "Breathtaking clear daylight, glorious golden sunrays, crisp dynamic contrast, vividly saturated colors, pristine transparent atmosphere without gloom, pure art without text."
+        ),
+    },
 ]
 
 

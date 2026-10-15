@@ -302,6 +302,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Gisin Ribordy Tittel Zbinden Quantum cryptography Reviews of Modern Physics 2002",
         ),
     ],
+    "edogawa-d-zaka": [
+        (
+            "光コヒーレンストモグラフィと光子遅延復元技術",
+            "Hecht optical coherence tomography Science 1991",
+        ),
+        (
+            "微細眼球運動（マイクロサッカード）と視覚情報認知",
+            "Martinez-Conde Macknik Fixational eye movements in normal and pathological vision Nature Reviews Neuroscience 2004",
+        ),
+        (
+            "シャノン情報エントロピーと閉鎖系通信理論",
+            "Shannon A Mathematical Theory of Communication Bell System Technical Journal 1948",
+        ),
+    ],
+    "akutagawa-yabu-no-naka": [
+        (
+            "事後言語介入による記憶再構成（ロフタス効果）",
+            "Loftus Palmer Reconstruction of automobile destruction an example of the interaction between language and memory Journal of Verbal Learning 1974",
+        ),
+        (
+            "エピソード記憶の再固定化（リコンソリデーション）神経機構",
+            "Nader Hardt A single standard for memory The case for reconsolidation Nature Reviews Neuroscience 2009",
+        ),
+        (
+            "量子観測問題と客観的実在の測定論（ホイーラー・ズレック）",
+            "Wheeler Zurek Quantum Theory and Measurement Princeton University Press 1983",
+        ),
+    ],
+    "dazai-fugaku-hyakkei": [
+        (
+            "大気中水分滞留時間と地球規模循環ダイナミクス",
+            "Trenberth Atmospheric Moisture Residence Time and Planetary Scale Circulation Journal of Climate 1998",
+        ),
+        (
+            "大気エアロゾルと雲のマルチ波長光学リモートセンシング",
+            "Kerr Optical remote sensing of atmospheric aerosols and clouds Nature 2000",
+        ),
+        (
+            "人新世（Anthropocene）における地球惑星工学と環境適応",
+            "Crutzen Geology of mankind Nature 2002",
+        ),
+    ],
 }
 
 
