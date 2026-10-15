@@ -1,7 +1,7 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-10-15T21:00:03`
+- **最終同期日時 (JST)**: `2026-10-16T07:37:58`
 - **進捗サマリー**: 全 **75** 作品 （完了: **75** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
@@ -29,10 +29,10 @@
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
 | #75 | `edogawa-kaijin-nijumenso` | 怪人二十面相（江戸川乱歩） | - | ✓ `rtx5060lp` (2026-10-15) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #74 | `akutagawa-jigokuhen` | 地獄変（芥川龍之介） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-15) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #73 | `akutagawa-hana` | 鼻（芥川龍之介） | - | ✓ `rtx5060lp` (2026-10-15) | 校閲済 | 🎨 (kenomac-mini) |
+| #73 | `akutagawa-hana` | 鼻（芥川龍之介） | - | ✓ `rtx5060lp` (2026-10-15) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #72 | `soseki-botchan` | 坊っちゃん（夏目漱石） | - | ✓ `rtx5060lp` (2026-10-14) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #71 | `soseki-wagahai-wa-neko` | 吾輩は猫である（夏目漱石） | - | ✓ `rtx5060lp` (2026-10-14) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #70 | `dazai-ningen-shikkaku` | 人間失格（太宰治） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-14) | 校閲済 | 🎨 (kenomac-mini) |
+| #70 | `dazai-ningen-shikkaku` | 人間失格（太宰治） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-14) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #69 | `tayama-futon` | 蒲団（田山花袋） | - | ✓ `rtx5060lp` (2026-10-11) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #68 | `hori-kaze-tachinu` | 風立ちぬ（堀辰雄） | - | ✓ `rtx5060lp` (2026-10-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #67 | `koda-goju-no-to` | 五重塔（幸田露伴） | - | ✓ `rtx5060lp` (2026-10-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
