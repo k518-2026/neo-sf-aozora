@@ -1,5 +1,17 @@
 [
   {
+    "no": 74,
+    "work_id": "akutagawa-yabu-no-naka",
+    "title": "藪の中――記憶の再構成と観測者の揺らぎ",
+    "original_title": "藪の中",
+    "original_author": "芥川龍之介",
+    "modern_tech": "記憶の事後再構成と言語介入効果（ロフタス効果）、シナプス可塑性とエピソード記憶再固定化（リコンソリデーション）阻害技術、量子測定問題と観測者効果における主観的真実の多重収縮",
+    "has_image": true,
+    "url": "stories/akutagawa-yabu-no-naka.html",
+    "image": "assets/images/akutagawa-yabu-no-naka.png",
+    "char_count": 5390
+  },
+  {
     "no": 73,
     "work_id": "edogawa-d-zaka",
     "title": "Ｄ坂の殺人事件――残像の檻に囚われた視線",

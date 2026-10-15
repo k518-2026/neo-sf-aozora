@@ -1166,5 +1166,21 @@
     "narration_file": "73_Ｄ坂の殺人事件_narration.txt",
     "full_file": "73_Ｄ坂の殺人事件_full.txt",
     "original_md_file": "73_Ｄ坂の殺人事件.md"
+  },
+  {
+    "work_no": 74,
+    "work_id": "akutagawa-yabu-no-naka",
+    "title": "藪の中",
+    "subtitle": "記憶の再構成と観測者の揺らぎ",
+    "attribution": "",
+    "original_author": "芥川龍之介",
+    "original_title": "藪の中",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000879/card179.html",
+    "modern_tech": "記憶の事後再構成と言語介入効果（ロフタス効果）、シナプス可塑性とエピソード記憶再固定化（リコンソリデーション）阻害技術、量子測定問題と観測者効果における主観的真実の多重収縮",
+    "summary": "密林の竹藪で発見された変死体をめぐり、木樵り、旅法師、放免、多襄丸、真砂、そして巫女に憑依した死者の霊（意識エミュレータ）の証言がすべて食い違う。電脳捜査官は記憶の再固定化バイアスと観測者効果の矛盾を追究するが、客観的真実そのものが観測者の意識と不可分に揺らぎ始める。",
+    "char_count": 3466,
+    "narration_file": "74_藪の中_narration.txt",
+    "full_file": "74_藪の中_full.txt",
+    "original_md_file": "74_藪の中.md"
   }
 ]
