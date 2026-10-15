@@ -1,5 +1,17 @@
 [
   {
+    "no": 71,
+    "work_id": "akutagawa-jigokuhen",
+    "title": "地獄変――美の臨界点に宿る神託",
+    "original_title": "地獄変",
+    "original_author": "芥川龍之介",
+    "modern_tech": "深層拡散モデルによる極限情動状態のニューラルイメージング、極低温プラズマ分光イメージング、美学的知覚における報酬系ドーパミンサージと認知的不協和の計測",
+    "has_image": true,
+    "url": "stories/akutagawa-jigokuhen.html",
+    "image": "assets/images/akutagawa-jigokuhen.png",
+    "char_count": 5338
+  },
+  {
     "no": 70,
     "work_id": "akutagawa-hana",
     "title": "鼻――形態形成の神域への侵犯",
