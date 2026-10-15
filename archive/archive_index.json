@@ -1102,5 +1102,21 @@
     "narration_file": "69_坊っちゃん_narration.txt",
     "full_file": "69_坊っちゃん_full.txt",
     "original_md_file": "69_坊っちゃん.md"
+  },
+  {
+    "work_no": 70,
+    "work_id": "akutagawa-hana",
+    "title": "鼻",
+    "subtitle": "形態形成の神域への侵犯",
+    "attribution": "",
+    "original_author": "芥川龍之介",
+    "original_title": "鼻",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000879/card42.html",
+    "modern_tech": "モルフォゲン濃度勾配を制御するバイオ3Dプリンティング組織再生、軟骨オルガノイドの自己組織化リモデリング、身体失認（アノソグノシア）と顔面知覚の神経心理学",
+    "summary": "特異に肥大化した鼻に苦悩する禅智内供。最先端のバイオマテリアルと形態形成シグナル制御技術によってついに理想の鼻を再形成するが、周囲の視線と彼自身の自己意識は予期せぬ認知の歪みへと迷い込む。人間の自己愛と他者承認欲求を鋭く解剖する異色SF。",
+    "char_count": 3570,
+    "narration_file": "70_鼻_narration.txt",
+    "full_file": "70_鼻_full.txt",
+    "original_md_file": "70_鼻.md"
   }
 ]

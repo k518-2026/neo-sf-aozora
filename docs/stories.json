@@ -1,5 +1,17 @@
 [
   {
+    "no": 70,
+    "work_id": "akutagawa-hana",
+    "title": "鼻――形態形成の神域への侵犯",
+    "original_title": "鼻",
+    "original_author": "芥川龍之介",
+    "modern_tech": "モルフォゲン濃度勾配を制御するバイオ3Dプリンティング組織再生、軟骨オルガノイドの自己組織化リモデリング、身体失認（アノソグノシア）と顔面知覚の神経心理学",
+    "has_image": true,
+    "url": "stories/akutagawa-hana.html",
+    "image": "assets/images/akutagawa-hana.png",
+    "char_count": 5589
+  },
+  {
     "no": 69,
     "work_id": "soseki-botchan",
     "title": "坊っちゃん――最適化された地獄のアルゴリズム",
