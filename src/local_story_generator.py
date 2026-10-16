@@ -344,6 +344,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Crutzen Geology of mankind Nature 2002",
         ),
     ],
+    "soseki-sanshiro": [
+        (
+            "光子放射圧と光ピンセットによる微細物質捕捉",
+            "Ashkin Acceleration and Trapping of Particles by Radiation Pressure Physical Review Letters 1970",
+        ),
+        (
+            "前頭頭頂ネットワークにおける注意制御ダイナミクス",
+            "Corbetta Shulman Control of goal-directed and stimulus-driven attention in the brain Nature Reviews Neuroscience 2002",
+        ),
+        (
+            "スモールワールド複雑ネットワークにおける社会的感情伝播",
+            "Watts Strogatz Collective dynamics of small-world networks Nature 1998",
+        ),
+    ],
+    "mori-sansho-dayu": [
+        (
+            "ナノ足場材料と人工皮膚組織再生工学",
+            "Langer Vacanti Tissue Engineering Science 1993",
+        ),
+        (
+            "量子暗号鍵配送と長距離生体もつれテレメトリ",
+            "Bennett Brassard Quantum cryptography Public key distribution and coin tossing Theoretical Computer Science 2014",
+        ),
+        (
+            "下肢パワード外骨格と重負荷バイオメカニクス",
+            "Dollar Herr Lower extremity exoskeletons and active orthoses a review IEEE 2008",
+        ),
+    ],
+    "akutagawa-torokko": [
+        (
+            "磁気浮上（マグレブ）推進とマスドライバー軌道力学",
+            "Lee Kim Lee Review of maglev train technologies IEEE 2006",
+        ),
+        (
+            "扁桃体を中心とする情動・恐怖回路と自律神経サージ",
+            "LeDoux Emotion Circuits in the Brain Annual Review of Neuroscience 2000",
+        ),
+        (
+            "極限的恐怖・パニック状態における主観的時間伸長（タキサイキア現象）",
+            "Stetson Fiesta Eagleman Does time really slow down during a frightening event PLoS ONE 2007",
+        ),
+    ],
 }
 
 

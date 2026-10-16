@@ -1046,6 +1046,50 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Breathtaking clear daylight, glorious golden sunrays, crisp dynamic contrast, vividly saturated colors, pristine transparent atmosphere without gloom, pure art without text."
         ),
     },
+    {
+        "index": 79,
+        "work_id": "soseki-sanshiro",
+        "title": "三四郎",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-10-16_soseki_sanshiro.png")],
+        "docs_path": Path("docs/assets/images/soseki-sanshiro.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Sanshiro Ogawa, an earnest and intelligent young Japanese university student in his early 20s, standing inside a sun-drenched advanced quantum photonics physics laboratory. "
+            "Masterpiece close-up half-body portrait: neat natural dark hair, captivatingly clear and curious deep obsidian-black eyes with radiant crystalline catchlights and focused pupils, an expression of intellectual awe and wonder. "
+            "Wearing a sharp contemporary academic blazer over a sleek sensor-infused collared shirt. "
+            "In front of him, glowing azure laser optical tweezers levitate and manipulate luminescent nano-particles in mid-air, while outside the massive floor-to-ceiling glass windows stretches a breathtaking futuristic Tokyo metropolis with elevated maglev sky-trains under a pristine blue sky. "
+            "Glorious sunlight streaming through windows, brilliant dynamic lighting, vibrant rich colors, pristine clarity, high contrast without gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 80,
+        "work_id": "mori-sansho-dayu",
+        "title": "山椒大夫",
+        "author": "森鴎外",
+        "content_paths": [Path("content/2026-10-16_mori_sansho_dayu.png")],
+        "docs_path": Path("docs/assets/images/mori-sansho-dayu.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Zushio, an indomitable and noble-hearted young Japanese man in his late teens, standing amidst the towering crystal caverns of an asteroid mining facility. "
+            "Masterpiece close-up half-body portrait: handsome rugged features, strikingly clear and determined amber-hazel eyes shining with intense emotional warmth, detailed irises, sharp pupils and brilliant specular reflections. "
+            "Wearing a sleek titanium-alloy powered exoskeleton harness over work gear, with faint luminous turquoise nano-skin repair circuits glowing softly across his forehead and temple. "
+            "Majestic beams of golden orbital daylight pour through a massive cavern vault opening above, illuminating swirling stardust and crystalline minerals, dramatic heroic composition, rich vibrant colors, high contrast, radiant hopeful atmosphere, pure art without text."
+        ),
+    },
+    {
+        "index": 81,
+        "work_id": "akutagawa-torokko",
+        "title": "トロッコ",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-16_akutagawa_torokko.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-torokko.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Ryohei, an energetic and spirited 8-year-old Japanese boy, standing excitedly on a high-tech coastal maglev track embankment. "
+            "Masterpiece close-up half-body portrait: cute lively expression full of thrilling adventure, remarkably large and sparkling deep-chestnut eyes filled with crystalline reflections, sharp defined pupils and vivid specular catchlights, windblown messy black hair. "
+            "Wearing a vibrant colorful tech-wear adventurous outdoor windbreaker and utility shorts. "
+            "Beside him sits a sleek autonomous levitating magnetic cargo railcar on glowing electromagnetic rails stretching along the dramatic seaside cliff. "
+            "In the background, a spectacular golden sunset blazes over the sparkling ocean with vibrant orange, pink and violet skies, radiant cinematic lighting, rich saturated colors, high contrast, clean pristine illumination, pure art without text."
+        ),
+    },
 ]
 
 
