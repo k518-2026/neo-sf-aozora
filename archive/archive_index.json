@@ -1230,5 +1230,21 @@
     "narration_file": "77_山椒大夫_narration.txt",
     "full_file": "77_山椒大夫_full.txt",
     "original_md_file": "77_山椒大夫.md"
+  },
+  {
+    "work_no": 78,
+    "work_id": "akutagawa-torokko",
+    "title": "トロッコ",
+    "subtitle": "加速する思考の地平",
+    "attribution": "",
+    "original_author": "芥川龍之介",
+    "original_title": "トロッコ",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000879/card73.html",
+    "modern_tech": "磁気浮上（マグレブ）リニア推進とマスドライバー軌道力学、扁桃体を中心とする情動・恐怖回路と自律神経サージ、極限的恐怖・パニック状態における主観的時間伸長（タキサイキア現象）",
+    "summary": "海岸沿いの断崖に建設中の無人マスドライバー・磁気浮上軌道。8歳の少年・良平は、作業用自律トロッコの滑走する魅力に惹かれ、作業員アンドロイドたちと共に帰還不能点を越えて遠方ステーションまで同行してしまう。日没と同時に無情にも置き去りにされた良平は、パニックの中で知覚時間が極度に引き延ばされる神経サージを体験しながら、夜のレールを命がけで疾走する。",
+    "char_count": 3529,
+    "narration_file": "78_トロッコ_narration.txt",
+    "full_file": "78_トロッコ_full.txt",
+    "original_md_file": "78_トロッコ.md"
   }
 ]

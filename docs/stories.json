@@ -1,5 +1,17 @@
 [
   {
+    "no": 78,
+    "work_id": "akutagawa-torokko",
+    "title": "トロッコ――加速する思考の地平",
+    "original_title": "トロッコ",
+    "original_author": "芥川龍之介",
+    "modern_tech": "磁気浮上（マグレブ）リニア推進とマスドライバー軌道力学、扁桃体を中心とする情動・恐怖回路と自律神経サージ、極限的恐怖・パニック状態における主観的時間伸長（タキサイキア現象）",
+    "has_image": true,
+    "url": "stories/akutagawa-torokko.html",
+    "image": "assets/images/akutagawa-torokko.png",
+    "char_count": 5403
+  },
+  {
     "no": 77,
     "work_id": "mori-sansho-dayu",
     "title": "山椒大夫――量子共鳴する亡霊の皮膚",
