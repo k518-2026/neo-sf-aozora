@@ -1214,5 +1214,21 @@
     "narration_file": "76_三四郎_narration.txt",
     "full_file": "76_三四郎_full.txt",
     "original_md_file": "76_三四郎.md"
+  },
+  {
+    "work_no": 77,
+    "work_id": "mori-sansho-dayu",
+    "title": "山椒大夫",
+    "subtitle": "量子共鳴する亡霊の皮膚",
+    "attribution": "",
+    "original_author": "森鴎外",
+    "original_title": "山椒大夫",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000129/card2058.html",
+    "modern_tech": "ナノ足場材料と人工皮膚組織工学、量子鍵配送と長距離生体もつれテレメトリ、下肢パワード外骨格と重負荷バイオメカニクス",
+    "summary": "辺境小惑星の過酷な自動採掘プラント「山椒大夫」に捕らわれた姉弟・安寿と厨子王。重力過負荷に耐えるパワード外骨格での強制労働、額に刻まれた識別生体焼印。安寿の自己犠牲による通信衛星リンク解放と自己修復ナノスキンの覚醒を経て、厨子王は母の生体量子共鳴波が響く流刑惑星へと決死の脱出を果たす。",
+    "char_count": 3886,
+    "narration_file": "77_山椒大夫_narration.txt",
+    "full_file": "77_山椒大夫_full.txt",
+    "original_md_file": "77_山椒大夫.md"
   }
 ]

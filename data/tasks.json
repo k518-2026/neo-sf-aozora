@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-16T22:19:03.233672+09:00",
+  "updated_at": "2026-10-16T22:30:48.945170+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1701,19 +1701,19 @@
       "author": "森鴎外",
       "theme": "採掘コロニー・自己組織化ナノスキン・量子生体共鳴テレメトリ",
       "modern_tech": "ナノ足場材料と人工皮膚組織工学、量子鍵配送と長距離生体もつれテレメトリ、下肢パワード外骨格と重負荷バイオメカニクス",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-16_mori_sansho_dayu.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-16",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-16_mori_sansho_dayu.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-16"
     },
     {
       "id": "akutagawa-torokko",

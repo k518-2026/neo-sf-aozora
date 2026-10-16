@@ -1,5 +1,17 @@
 [
   {
+    "no": 77,
+    "work_id": "mori-sansho-dayu",
+    "title": "山椒大夫――量子共鳴する亡霊の皮膚",
+    "original_title": "山椒大夫",
+    "original_author": "森鴎外",
+    "modern_tech": "ナノ足場材料と人工皮膚組織工学、量子鍵配送と長距離生体もつれテレメトリ、下肢パワード外骨格と重負荷バイオメカニクス",
+    "has_image": true,
+    "url": "stories/mori-sansho-dayu.html",
+    "image": "assets/images/mori-sansho-dayu.png",
+    "char_count": 5477
+  },
+  {
     "no": 76,
     "work_id": "soseki-sanshiro",
     "title": "三四郎――光子の檻に囚われた迷い羊",
