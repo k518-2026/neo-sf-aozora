@@ -833,5 +833,19 @@
       "Karin, O., Alon, U. (2021). The dopamine circuit as a reward-taxis navigation system. *openRxiv*.",
       "Sherry, L., Shortle, J., Donohue, G., Berlin, B., West, J. (2020). Autonomous Systems Design, Testing, and Deployment: Lessons Learned from The Deployment of an Autonomous Shuttle Bus. *2020 Integrated Communications Navigation and Surveillance Conference (ICNS)*, 5D1-1-5D1-14."
     ]
+  },
+  {
+    "work_id": "nakajima-meijin-den",
+    "original_title": "名人伝",
+    "original_author": "中島敦",
+    "reboot_title": "名人伝――予測される無為の特異点",
+    "posted_at": "2026-10-17T07:12:31.894956+09:00",
+    "file_path": "content/2026-10-07_nakajima_meijin_den.md",
+    "status": "publish",
+    "references": [
+      "Fujita, M. (2006). Feed-forward associative motor learning by the cerebellum. *The Cerebellum*, 5(4), 298-299.",
+      "Meindl, T., Elmouden, R., Mueller, S., Teipel, S., Reiser, M. (2009). Test-retest stability of the default-mode network (DMN) of the human brain. *NeuroImage*, 47, S60.",
+      "Research Collaboration (2020). Non-destructive testing. Ultrasonic thickness measurement. *BSI British Standards*."
+    ]
   }
 ]
