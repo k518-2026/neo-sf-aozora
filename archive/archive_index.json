@@ -1198,5 +1198,21 @@
     "narration_file": "75_富嶽百景_narration.txt",
     "full_file": "75_富嶽百景_full.txt",
     "original_md_file": "75_富嶽百景.md"
+  },
+  {
+    "work_no": 76,
+    "work_id": "soseki-sanshiro",
+    "title": "三四郎",
+    "subtitle": "光子の檻に囚われた迷い羊",
+    "attribution": "",
+    "original_author": "夏目漱石",
+    "original_title": "三四郎",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000148/card794.html",
+    "modern_tech": "光子放射圧と光ピンセットによる微細物質操作、前頭頭頂ネットワークにおける注意制御ダイナミクス、スモールワールド複雑ネットワークにおける社会的感情伝播",
+    "summary": "熊本からメガロポリス帝都の先端物理量子研究所へと進学した青年・三四郎。光子線放射圧を研究する野々宮、冷徹な美禰子、超電導ネットワークが交錯する近代情報都市の中で、彼らは情報飽和した迷える自我「ストレイ・シープ」として互いの引力と斥力に揺れ動く。",
+    "char_count": 3722,
+    "narration_file": "76_三四郎_narration.txt",
+    "full_file": "76_三四郎_full.txt",
+    "original_md_file": "76_三四郎.md"
   }
 ]

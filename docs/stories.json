@@ -1,5 +1,17 @@
 [
   {
+    "no": 76,
+    "work_id": "soseki-sanshiro",
+    "title": "三四郎――光子の檻に囚われた迷い羊",
+    "original_title": "三四郎",
+    "original_author": "夏目漱石",
+    "modern_tech": "光子放射圧と光ピンセットによる微細物質操作、前頭頭頂ネットワークにおける注意制御ダイナミクス、スモールワールド複雑ネットワークにおける社会的感情伝播",
+    "has_image": true,
+    "url": "stories/soseki-sanshiro.html",
+    "image": "assets/images/soseki-sanshiro.png",
+    "char_count": 5191
+  },
+  {
     "no": 75,
     "work_id": "dazai-fugaku-hyakkei",
     "title": "富嶽百景――人新世の調律者",
