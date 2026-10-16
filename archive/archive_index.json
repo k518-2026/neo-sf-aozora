@@ -1182,5 +1182,21 @@
     "narration_file": "74_藪の中_narration.txt",
     "full_file": "74_藪の中_full.txt",
     "original_md_file": "74_藪の中.md"
+  },
+  {
+    "work_no": 75,
+    "work_id": "dazai-fugaku-hyakkei",
+    "title": "富嶽百景",
+    "subtitle": "人新世の調律者",
+    "attribution": "",
+    "original_author": "太宰治",
+    "original_title": "富嶽百景",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000035/card271.html",
+    "modern_tech": "大気中水分滞留時間と地球規模循環ダイナミクス、マルチ波長ライダー（LIDAR）と偏光光学リモートセンシング、人新世（Anthropocene）における地球規模気候工学と環境適応",
+    "summary": "人生の挫折を経験し御坂峠の成層圏気象観測ステーションへ赴任した青年技術者。冷徹な幾何学的造形を保ち続ける超高精度気象制御テラフォーミングコア「富嶽」の観測データと向き合う中で、人工の完全性と自然の不完全性の狭間で揺れる人間の精神的再起を描く。",
+    "char_count": 3231,
+    "narration_file": "75_富嶽百景_narration.txt",
+    "full_file": "75_富嶽百景_full.txt",
+    "original_md_file": "75_富嶽百景.md"
   }
 ]

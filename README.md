@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **74** 作品（うち挿絵付き **74** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-16 08:49 JST）
+- **収録作品数**: 全 **75** 作品（うち挿絵付き **75** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-16 09:00 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 75 | **[富嶽百景――人新世の調律者](content/2026-10-16_dazai_fugaku_hyakkei.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-fugaku-hyakkei.html) | [📄原稿](content/2026-10-16_dazai_fugaku_hyakkei.md) | [🎨挿絵](content/2026-10-16_dazai_fugaku_hyakkei.png) | 太宰治[『富嶽百景』](https://www.aozora.gr.jp/cards/000035/card271.html) | 大気中水分滞留時間と地球規模循環ダイナミクス、マルチ波長ライダー（LIDAR）と偏光光学リモートセンシング、人新世（Anthropocene）における地球規模気候工学と環境適応 | 5,389字 |
 | 74 | **[藪の中――記憶の再構成と観測者の揺らぎ](content/2026-10-16_akutagawa_yabu_no_naka.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-yabu-no-naka.html) | [📄原稿](content/2026-10-16_akutagawa_yabu_no_naka.md) | [🎨挿絵](content/2026-10-16_akutagawa_yabu_no_naka.png) | 芥川龍之介[『藪の中』](https://www.aozora.gr.jp/cards/000879/card179.html) | 記憶の事後再構成と言語介入効果（ロフタス効果）、シナプス可塑性とエピソード記憶再固定化（リコンソリデーション）阻害技術、量子測定問題と観測者効果における主観的真実の多重収縮 | 5,390字 |
 | 73 | **[Ｄ坂の殺人事件――残像の檻に囚われた視線](content/2026-10-16_edogawa_d_zaka.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-d-zaka.html) | [📄原稿](content/2026-10-16_edogawa_d_zaka.md) | [🎨挿絵](content/2026-10-16_edogawa_d_zaka.png) | 江戸川乱歩[『Ｄ坂の殺人事件』](https://www.aozora.gr.jp/cards/001779/card56645.html) | 光コヒーレンストモグラフィと量子光干渉計による空間光子遅延復元、微細眼球運動（マイクロサッカード）と瞳孔変動の神経画像解析、シャノン情報エントロピーと閉鎖系情報漏洩解析 | 5,687字 |
 | 72 | **[怪人二十面相――変幻する虚像の境界](content/2026-10-15_edogawa_kaijin_nijumenso.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-kaijin-nijumenso.html) | [📄原稿](content/2026-10-15_edogawa_kaijin_nijumenso.md) | [🎨挿絵](content/2026-10-15_edogawa_kaijin_nijumenso.png) | 江戸川乱歩[『怪人二十面相』](https://www.aozora.gr.jp/cards/001779/card56648.html) | 電気光学メタマテリアルによる動的皮膚迷彩・光学的クローキング、生体電位波形とマルチモーダル顔面特徴点のリアルタイム模倣、量子セキュア認証と少年探偵団の分散センシング網 | 5,933字 |

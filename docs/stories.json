@@ -1,5 +1,17 @@
 [
   {
+    "no": 75,
+    "work_id": "dazai-fugaku-hyakkei",
+    "title": "富嶽百景――人新世の調律者",
+    "original_title": "富嶽百景",
+    "original_author": "太宰治",
+    "modern_tech": "大気中水分滞留時間と地球規模循環ダイナミクス、マルチ波長ライダー（LIDAR）と偏光光学リモートセンシング、人新世（Anthropocene）における地球規模気候工学と環境適応",
+    "has_image": true,
+    "url": "stories/dazai-fugaku-hyakkei.html",
+    "image": "assets/images/dazai-fugaku-hyakkei.png",
+    "char_count": 5389
+  },
+  {
     "no": 74,
     "work_id": "akutagawa-yabu-no-naka",
     "title": "藪の中――記憶の再構成と観測者の揺らぎ",
