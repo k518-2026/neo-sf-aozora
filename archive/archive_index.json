@@ -1246,5 +1246,21 @@
     "narration_file": "78_トロッコ_narration.txt",
     "full_file": "78_トロッコ_full.txt",
     "original_md_file": "78_トロッコ.md"
+  },
+  {
+    "work_no": 79,
+    "work_id": "nakajima-riryo",
+    "title": "李陵",
+    "subtitle": "遺伝子の記憶、凍てつく星の亡霊",
+    "attribution": "",
+    "original_author": "中島敦",
+    "original_title": "李陵",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000119/card621.html",
+    "modern_tech": "DNA分子ストレージによる超長期デジタル歴史記録保存、極限環境刺激に応答するエピジェネティック遺伝子発現制御、社会的孤立・極限監禁下における神経認知防御機構",
+    "summary": "帝国辺境の防衛前哨基地で全滅の危機に瀕した歴戦の星系指揮官・李陵。捕虜となった彼は異星環境適応のための不可逆なエピジェネティック生体改変を受け入れざるを得なくなる。一方、帝都では司馬遷が極刑に耐えDNA高密度ストレージを用いた恒星間正史『史記』の編纂に命を削り、氷雪の辺境で節操を守り続ける蘇武の信号が届く。名誉と裏切りの深淵で魂が交錯するハードSF歴史巨編。",
+    "char_count": 3972,
+    "narration_file": "79_李陵_narration.txt",
+    "full_file": "79_李陵_full.txt",
+    "original_md_file": "79_李陵.md"
   }
 ]

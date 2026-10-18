@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-18T12:51:55.082222+09:00",
+  "updated_at": "2026-10-18T13:03:46.787064+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1743,19 +1743,19 @@
       "author": "中島敦",
       "theme": "DNA恒星間アーカイブ・極限適応エピジェネティクス・孤立神経認知",
       "modern_tech": "DNA分子ストレージによる超長期デジタル歴史記録保存、極限環境刺激に応答するエピジェネティック遺伝子発現制御、社会的孤立・極限監禁下における神経認知防御機構",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-18_nakajima_riryo.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-18T12:57:59.462145+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-18_nakajima_riryo.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-18T13:03:46.734251+09:00"
     },
     {
       "id": "soseki-mon",

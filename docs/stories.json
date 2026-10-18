@@ -1,5 +1,17 @@
 [
   {
+    "no": 79,
+    "work_id": "nakajima-riryo",
+    "title": "李陵――遺伝子の記憶、凍てつく星の亡霊",
+    "original_title": "李陵",
+    "original_author": "中島敦",
+    "modern_tech": "DNA分子ストレージによる超長期デジタル歴史記録保存、極限環境刺激に応答するエピジェネティック遺伝子発現制御、社会的孤立・極限監禁下における神経認知防御機構",
+    "has_image": true,
+    "url": "stories/nakajima-riryo.html",
+    "image": "assets/images/nakajima-riryo.png",
+    "char_count": 5898
+  },
+  {
     "no": 78,
     "work_id": "akutagawa-torokko",
     "title": "トロッコ――加速する思考の地平",

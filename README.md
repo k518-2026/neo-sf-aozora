@@ -6,11 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-<<<<<<< Updated upstream
-- **収録作品数**: 全 **78** 作品（うち挿絵付き **78** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-18 06:45 JST）
-=======
-- **収録作品数**: 全 **78** 作品（うち挿絵付き **78** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-17 21:30 JST）
->>>>>>> Stashed changes
+- **収録作品数**: 全 **79** 作品（うち挿絵付き **79** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-18 13:03 JST）
 
 ---
 
@@ -18,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 79 | **[李陵――遺伝子の記憶、凍てつく星の亡霊](content/2026-10-18_nakajima_riryo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-riryo.html) | [📄原稿](content/2026-10-18_nakajima_riryo.md) | [🎨挿絵](content/2026-10-18_nakajima_riryo.png) | 中島敦[『李陵』](https://www.aozora.gr.jp/cards/000119/card621.html) | DNA分子ストレージによる超長期デジタル歴史記録保存、極限環境刺激に応答するエピジェネティック遺伝子発現制御、社会的孤立・極限監禁下における神経認知防御機構 | 5,898字 |
 | 78 | **[トロッコ――加速する思考の地平](content/2026-10-16_akutagawa_torokko.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-torokko.html) | [📄原稿](content/2026-10-16_akutagawa_torokko.md) | [🎨挿絵](content/2026-10-16_akutagawa_torokko.png) | 芥川龍之介[『トロッコ』](https://www.aozora.gr.jp/cards/000879/card73.html) | 磁気浮上（マグレブ）リニア推進とマスドライバー軌道力学、扁桃体を中心とする情動・恐怖回路と自律神経サージ、極限的恐怖・パニック状態における主観的時間伸長（タキサイキア現象） | 5,403字 |
 | 77 | **[山椒大夫――量子共鳴する亡霊の皮膚](content/2026-10-16_mori_sansho_dayu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/mori-sansho-dayu.html) | [📄原稿](content/2026-10-16_mori_sansho_dayu.md) | [🎨挿絵](content/2026-10-16_mori_sansho_dayu.png) | 森鴎外[『山椒大夫』](https://www.aozora.gr.jp/cards/000129/card2058.html) | ナノ足場材料と人工皮膚組織工学、量子鍵配送と長距離生体もつれテレメトリ、下肢パワード外骨格と重負荷バイオメカニクス | 5,477字 |
 | 76 | **[三四郎――光子の檻に囚われた迷い羊](content/2026-10-16_soseki_sanshiro.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-sanshiro.html) | [📄原稿](content/2026-10-16_soseki_sanshiro.md) | [🎨挿絵](content/2026-10-16_soseki_sanshiro.png) | 夏目漱石[『三四郎』](https://www.aozora.gr.jp/cards/000148/card794.html) | 光子放射圧と光ピンセットによる微細物質操作、前頭頭頂ネットワークにおける注意制御ダイナミクス、スモールワールド複雑ネットワークにおける社会的感情伝播 | 5,191字 |
