@@ -1,5 +1,17 @@
 [
   {
+    "no": 80,
+    "work_id": "soseki-mon",
+    "title": "門――因果律の境界に立つ観測者",
+    "original_title": "門",
+    "original_author": "夏目漱石",
+    "modern_tech": "事象の地平線における量子もつれ相補性と情報境界（ファイアウォール理論）、デフォルトモードネットワーク（DMN）の神経同期制御と変容意識瞑想、道徳的感情（罪悪感・羞恥）を司る前頭眼窩野・島皮質神経回路",
+    "has_image": true,
+    "url": "stories/soseki-mon.html",
+    "image": "assets/images/soseki-mon.png",
+    "char_count": 5363
+  },
+  {
     "no": 79,
     "work_id": "nakajima-riryo",
     "title": "李陵――遺伝子の記憶、凍てつく星の亡霊",

@@ -1262,5 +1262,21 @@
     "narration_file": "79_李陵_narration.txt",
     "full_file": "79_李陵_full.txt",
     "original_md_file": "79_李陵.md"
+  },
+  {
+    "work_no": 80,
+    "work_id": "soseki-mon",
+    "title": "門",
+    "subtitle": "因果律の境界に立つ観測者",
+    "attribution": "",
+    "original_author": "夏目漱石",
+    "original_title": "門",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000148/card795.html",
+    "modern_tech": "事象の地平線における量子もつれ相補性と情報境界（ファイアウォール理論）、デフォルトモードネットワーク（DMN）の神経同期制御と変容意識瞑想、道徳的感情（罪悪感・羞恥）を司る前頭眼窩野・島皮質神経回路",
+    "summary": "かつての親友への裏切りという消えない記憶を抱え、崖下の遮蔽シェルターで寄り添い暮らす宗助とお米。過去の因果律の重圧から逃れるため、宗助は意識の深層アクセスを試みる量子禅寺「門」のニューロフィードバックへと身を投じる。しかし、強固な量子情報境界（ファイアウォール）の前に立ちすくむ彼の前に、門は決して開かれることはなかった。静謐な実存と贖罪のサイバーサスペンス。",
+    "char_count": 3552,
+    "narration_file": "80_門_narration.txt",
+    "full_file": "80_門_full.txt",
+    "original_md_file": "80_門.md"
   }
 ]

@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-18T13:03:46.787064+09:00",
+  "updated_at": "2026-10-18T13:14:42.721045+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1764,19 +1764,19 @@
       "author": "夏目漱石",
       "theme": "量子暗号ファイアウォール・DMN瞑想変容意識・罪悪感神経回路",
       "modern_tech": "事象の地平線における量子もつれ相補性と情報境界（ファイアウォール理論）、デフォルトモードネットワーク（DMN）の神経同期制御と変容意識瞑想、道徳的感情（罪悪感・羞恥）を司る前頭眼窩野・島皮質神経回路",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-18_soseki_mon.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-18",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-18_soseki_mon.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-18"
     },
     {
       "id": "akutagawa-butoukai",
