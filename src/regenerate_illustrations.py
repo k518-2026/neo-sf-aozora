@@ -1090,6 +1090,51 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "In the background, a spectacular golden sunset blazes over the sparkling ocean with vibrant orange, pink and violet skies, radiant cinematic lighting, rich saturated colors, high contrast, clean pristine illumination, pure art without text."
         ),
     },
+    {
+        "index": 82,
+        "work_id": "nakajima-riryo",
+        "title": "李陵",
+        "author": "中島敦",
+        "content_paths": [Path("content/2026-10-18_nakajima_riryo.png")],
+        "docs_path": Path("docs/assets/images/nakajima-riryo.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Li Ling, a battle-hardened and proud Japanese-style galactic fleet commander in his mid 30s, standing resolute upon the snow-covered ridge of an alien frontier world. "
+            "Masterpiece close-up half-body portrait: rugged handsome facial structure with a stern noble gaze, piercingly clear obsidian-black eyes with intense specular catchlights and sharp focused pupils, reflecting resilience amidst isolation. "
+            "Wearing heavy midnight-blue nano-composite combat armor with subtle glowing cyan energy conduits. "
+            "Behind him, the dramatic twin moons of an icy planet illuminate swirling snow flurries and distant crystalline orbital defense towers under an aurora-lit cosmic sky. "
+            "Crisp dynamic lighting, brilliant high contrast, rich saturated blues and silvers, pristine clear atmosphere without murky darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 83,
+        "work_id": "soseki-mon",
+        "title": "門",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-10-18_soseki_mon.png")],
+        "docs_path": Path("docs/assets/images/soseki-mon.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Sosuke Nonaka, an introspective and intellectual scholar in his early 30s, sitting quietly on the polished wooden veranda of a secluded cybernetic sanctuary at the base of a lush mossy cliff. "
+            "Masterpiece close-up half-body portrait: gentle contemplative expression, remarkably deep and clear indigo-blue eyes with delicate crystalline highlights and refined pupils, conveying quiet remorse and enduring affection. "
+            "Wearing clean minimalist modern grey loungewear with subtle neural-link interface threads along the collar. "
+            "In front of him, soft golden afternoon sunbeams filter through vibrant green maple leaves, while faint geometric holographic mandala firewalls hover gently in mid-air above raked gravel. "
+            "Warm radiant lighting, glorious natural contrast, vivid saturated colors, pristine transparent ambiance without gloomy shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 84,
+        "work_id": "akutagawa-butoukai",
+        "title": "舞踏会",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-18_akutagawa_butoukai.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-butoukai.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Akiko, an enchanting and aristocratic 17-year-old Japanese young lady, dancing gracefully inside the grand orbital gravity ballroom of space station Rokumeikan. "
+            "Masterpiece close-up half-body portrait: exquisite graceful features, breathtakingly clear luminous amethyst-violet eyes with brilliant specular catchlights and sharp detailed irises, an innocent radiant smile filled with wonder. "
+            "Wearing a dazzling high-tech white and lavender ballgown interwoven with sparkling optical fiber lace and delicate glowing pearls. "
+            "Through the colossal curved panoramic observation dome behind her, colorful laser-induced plasma fireworks blossom like brilliant cosmic chrysanthemums against the deep velvet void of space and glowing blue Earth below. "
+            "Glorious spectacular illumination, dazzling dynamic highlights, vibrant saturated color palette, clean high contrast without darkness, pure art without text."
+        ),
+    },
 ]
 
 

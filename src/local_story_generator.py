@@ -386,6 +386,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Stetson Fiesta Eagleman Does time really slow down during a frightening event PLoS ONE 2007",
         ),
     ],
+    "nakajima-riryo": [
+        (
+            "DNA分子ストレージによる超長期デジタル記録保存",
+            "Church Gao Kosuri Next-generation digital information storage in DNA Science 2012",
+        ),
+        (
+            "極限環境適応におけるエピジェネティック遺伝子発現制御",
+            "Jaenisch Bird Epigenetic regulation of gene expression Nature Genetics 2003",
+        ),
+        (
+            "社会的孤立・極限監禁下における神経認知防御機構",
+            "Cacioppo Hawkley Social isolation and health Neuroscience 2003",
+        ),
+    ],
+    "soseki-mon": [
+        (
+            "量子情報境界と事象の地平線（ファイアウォール理論）",
+            "Almheiri Marolf Polchinski Sully Black holes complementarity or firewalls Journal of High Energy Physics 2013",
+        ),
+        (
+            "デフォルトモードネットワーク（DMN）の神経同期と瞑想変容意識",
+            "Brewer Worhunsky Gray Meditation experience is associated with differences in default-mode network PNAS 2011",
+        ),
+        (
+            "道徳的感情（罪悪感・羞恥）を司る前頭葉神経回路",
+            "Tangney Stuewig Mashek Moral Emotions and Moral Behavior Annual Review of Psychology 2007",
+        ),
+    ],
+    "akutagawa-butoukai": [
+        (
+            "回転式宇宙ステーションにおける人工重力ダイナミクス",
+            "Clement Bukley Artificial Gravity Springer 2007",
+        ),
+        (
+            "レーザー誘起プラズマ発光分光（LIBS）と光子放射スペクトル",
+            "Cremers Radziemski Handbook of Laser-Induced Breakdown Spectroscopy Wiley 2006",
+        ),
+        (
+            "自伝的記憶想起とノスタルジア知覚における神経相関",
+            "Wildschut Sedikides Nostalgia content triggers functions Journal of Personality and Social Psychology 2006",
+        ),
+    ],
 }
 
 
