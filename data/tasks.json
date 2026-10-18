@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-18T19:45:33.930872+09:00",
+  "updated_at": "2026-10-18T20:00:03.232709+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -932,8 +932,8 @@
       "md_file": "content/2026-10-06_dazai_hashire_melos.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-06",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-18T20:00:03.219636+09:00",
       "png_file": "content/2026-10-06_dazai_hashire_melos.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-06"
@@ -1751,8 +1751,8 @@
       "md_file": "content/2026-10-18_nakajima_riryo.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-18T12:57:59.462145+09:00",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-18T20:00:03.219636+09:00",
       "png_file": "content/2026-10-18_nakajima_riryo.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-18T13:03:46.734251+09:00"
