@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **80** 作品（うち挿絵付き **80** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-18 13:14 JST）
+- **収録作品数**: 全 **81** 作品（うち挿絵付き **81** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-18 13:25 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 81 | **[しかし、今夜の舞踏会――国際親善を目的としたこの盛大なイベントの間、報告は異常な数値を弾き出していた。](content/2026-10-18_akutagawa_butoukai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-butoukai.html) | [📄原稿](content/2026-10-18_akutagawa_butoukai.md) | [🎨挿絵](content/2026-10-18_akutagawa_butoukai.png) | 芥川龍之介[『舞踏会』](https://www.aozora.gr.jp/cards/000879/card70.html) | 回転式宇宙ステーションにおける人工重力環境ダイナミクス、レーザー誘起プラズマ発光分光（LIBS）と光子放射スペクトル制御、自伝的記憶想起とノスタルジア知覚における前頭葉・海馬神経相関 | 5,555字 |
 | 80 | **[門――因果律の境界に立つ観測者](content/2026-10-18_soseki_mon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-mon.html) | [📄原稿](content/2026-10-18_soseki_mon.md) | [🎨挿絵](content/2026-10-18_soseki_mon.png) | 夏目漱石[『門』](https://www.aozora.gr.jp/cards/000148/card795.html) | 事象の地平線における量子もつれ相補性と情報境界（ファイアウォール理論）、デフォルトモードネットワーク（DMN）の神経同期制御と変容意識瞑想、道徳的感情（罪悪感・羞恥）を司る前頭眼窩野・島皮質神経回路 | 5,363字 |
 | 79 | **[李陵――遺伝子の記憶、凍てつく星の亡霊](content/2026-10-18_nakajima_riryo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-riryo.html) | [📄原稿](content/2026-10-18_nakajima_riryo.md) | [🎨挿絵](content/2026-10-18_nakajima_riryo.png) | 中島敦[『李陵』](https://www.aozora.gr.jp/cards/000119/card621.html) | DNA分子ストレージによる超長期デジタル歴史記録保存、極限環境刺激に応答するエピジェネティック遺伝子発現制御、社会的孤立・極限監禁下における神経認知防御機構 | 5,898字 |
 | 78 | **[トロッコ――加速する思考の地平](content/2026-10-16_akutagawa_torokko.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-torokko.html) | [📄原稿](content/2026-10-16_akutagawa_torokko.md) | [🎨挿絵](content/2026-10-16_akutagawa_torokko.png) | 芥川龍之介[『トロッコ』](https://www.aozora.gr.jp/cards/000879/card73.html) | 磁気浮上（マグレブ）リニア推進とマスドライバー軌道力学、扁桃体を中心とする情動・恐怖回路と自律神経サージ、極限的恐怖・パニック状態における主観的時間伸長（タキサイキア現象） | 5,403字 |

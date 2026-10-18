@@ -1,5 +1,17 @@
 [
   {
+    "no": 81,
+    "work_id": "akutagawa-butoukai",
+    "title": "しかし、今夜の舞踏会――国際親善を目的としたこの盛大なイベントの間、報告は異常な数値を弾き出していた。",
+    "original_title": "舞踏会",
+    "original_author": "芥川龍之介",
+    "modern_tech": "回転式宇宙ステーションにおける人工重力環境ダイナミクス、レーザー誘起プラズマ発光分光（LIBS）と光子放射スペクトル制御、自伝的記憶想起とノスタルジア知覚における前頭葉・海馬神経相関",
+    "has_image": true,
+    "url": "stories/akutagawa-butoukai.html",
+    "image": "assets/images/akutagawa-butoukai.png",
+    "char_count": 5555
+  },
+  {
     "no": 80,
     "work_id": "soseki-mon",
     "title": "門――因果律の境界に立つ観測者",
