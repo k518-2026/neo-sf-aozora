@@ -1,5 +1,17 @@
 [
   {
+    "no": 83,
+    "work_id": "dazai-shayo",
+    "title": "斜陽――崩壊する生態系と利他性の残響",
+    "original_title": "斜陽",
+    "original_author": "太宰治",
+    "modern_tech": "閉鎖生態系生命維持システム（CELSS）における水・物質循環熱力学、ヘリウム3（³He）次世代核融合炉の燃料枯渇と代替高効率エネルギー代謝、進化ゲーム理論に基づく過酷環境下での利他行動・協力の進化五法則（Nowakモデル）",
+    "has_image": true,
+    "url": "stories/dazai-shayo.html",
+    "image": "assets/images/dazai-shayo.png",
+    "char_count": 6404
+  },
+  {
     "no": 82,
     "work_id": "edogawa-kogane-kamen",
     "title": "黄金仮面――量子磁場の残響と光の亡霊",

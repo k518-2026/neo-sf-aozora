@@ -1310,5 +1310,21 @@
     "narration_file": "82_黄金仮面_narration.txt",
     "full_file": "82_黄金仮面_full.txt",
     "original_md_file": "82_黄金仮面.md"
+  },
+  {
+    "work_no": 83,
+    "work_id": "dazai-shayo",
+    "title": "斜陽",
+    "subtitle": "崩壊する生態系と利他性の残響",
+    "attribution": "",
+    "original_author": "太宰治",
+    "original_title": "斜陽",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000035/card1565.html",
+    "modern_tech": "閉鎖生態系生命維持システム（CELSS）における水・物質循環熱力学、ヘリウム3（³He）次世代核融合炉の燃料枯渇と代替高効率エネルギー代謝、進化ゲーム理論に基づく過酷環境下での利他行動・協力の進化五法則（Nowakモデル）",
+    "summary": "地球連邦の旧世代テラフォーミングコロニー「伊豆」の人工環境が、ヘリウム3核融合燃料の枯渇により不可逆な衰退（斜陽）を迎えていた。没落した特権技術者階級の娘・かず子は、生命維持システムの老朽化に耐えながら、旧来の階級道徳を捨て去り、新たな生命の火を次世代へ繋ぐ「進化の道徳革命」を決意する。滅びゆく人工天体の夕暮れを生き抜く、誇り高き実存と再生の人間讃歌。",
+    "char_count": 4493,
+    "narration_file": "83_斜陽_narration.txt",
+    "full_file": "83_斜陽_full.txt",
+    "original_md_file": "83_斜陽.md"
   }
 ]

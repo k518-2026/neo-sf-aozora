@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **82** 作品（うち挿絵付き **82** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-19 19:40 JST）
+- **収録作品数**: 全 **83** 作品（うち挿絵付き **83** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-19 19:52 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 83 | **[斜陽――崩壊する生態系と利他性の残響](content/2026-10-19_dazai_shayo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-shayo.html) | [📄原稿](content/2026-10-19_dazai_shayo.md) | [🎨挿絵](content/2026-10-19_dazai_shayo.png) | 太宰治[『斜陽』](https://www.aozora.gr.jp/cards/000035/card1565.html) | 閉鎖生態系生命維持システム（CELSS）における水・物質循環熱力学、ヘリウム3（³He）次世代核融合炉の燃料枯渇と代替高効率エネルギー代謝、進化ゲーム理論に基づく過酷環境下での利他行動・協力の進化五法則（Nowakモデル） | 6,404字 |
 | 82 | **[黄金仮面――量子磁場の残響と光の亡霊](content/2026-10-19_edogawa_kogane_kamen.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/edogawa-kogane-kamen.html) | [📄原稿](content/2026-10-19_edogawa_kogane_kamen.md) | [🎨挿絵](content/2026-10-19_edogawa_kogane_kamen.png) | 江戸川乱歩[『黄金仮面』](https://www.aozora.gr.jp/cards/001779/card56647.html) | 金ナノ粒子による局在表面プラズモン共鳴（LSPR）と動的光散乱シールド、超電導量子干渉計（SQUID）を用いた極微弱生体磁気トラッキング、深層学習顔面認識網を無力化する敵対的物理摂動マスク（Adversarial Perturbations） | 5,074字 |
 | 81 | **[舞踏会――光子花火と重力のワルツ](content/2026-10-18_akutagawa_butoukai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-butoukai.html) | [📄原稿](content/2026-10-18_akutagawa_butoukai.md) | [🎨挿絵](content/2026-10-18_akutagawa_butoukai.png) | 芥川龍之介[『舞踏会』](https://www.aozora.gr.jp/cards/000879/card70.html) | 回転式宇宙ステーションにおける人工重力環境ダイナミクス、レーザー誘起プラズマ発光分光（LIBS）と光子放射スペクトル制御、自伝的記憶想起とノスタルジア知覚における前頭葉・海馬神経相関 | 5,555字 |
 | 80 | **[門――因果律の境界に立つ観測者](content/2026-10-18_soseki_mon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-mon.html) | [📄原稿](content/2026-10-18_soseki_mon.md) | [🎨挿絵](content/2026-10-18_soseki_mon.png) | 夏目漱石[『門』](https://www.aozora.gr.jp/cards/000148/card795.html) | 事象の地平線における量子もつれ相補性と情報境界（ファイアウォール理論）、デフォルトモードネットワーク（DMN）の神経同期制御と変容意識瞑想、道徳的感情（罪悪感・羞恥）を司る前頭眼窩野・島皮質神経回路 | 5,363字 |

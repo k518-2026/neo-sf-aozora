@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-19T19:40:11.015056+09:00",
+  "updated_at": "2026-10-19T19:52:47.675129+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1827,19 +1827,19 @@
       "author": "太宰治",
       "theme": "閉鎖生態系循環崩壊・ヘリウム3核融合枯渇・利他進化道徳革命",
       "modern_tech": "閉鎖生態系生命維持システム（CELSS）における水・物質循環熱力学、ヘリウム3（³He）次世代核融合炉の燃料枯渇と代替高効率エネルギー代謝、進化ゲーム理論に基づく過酷環境下での利他行動・協力の進化五法則（Nowakモデル）",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-19_dazai_shayo.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-19",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-19_dazai_shayo.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-19"
     },
     {
       "id": "miyazawa-cello-goushe",
