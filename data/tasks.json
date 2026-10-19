@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-19T20:09:57.788624+09:00",
+  "updated_at": "2026-10-19T21:00:03.458102+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -869,8 +869,8 @@
       "md_file": "content/2026-10-04_oguri_kokushikan.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-04",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-19T21:00:03.457164+09:00",
       "png_file": "content/2026-10-04_oguri_kokushikan.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-04"
@@ -1814,8 +1814,8 @@
       "md_file": "content/2026-10-19_edogawa_kogane_kamen.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-19T19:34:23.127072+09:00",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-19T21:00:03.457164+09:00",
       "png_file": "content/2026-10-19_edogawa_kogane_kamen.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-19T19:40:10.945613+09:00"
