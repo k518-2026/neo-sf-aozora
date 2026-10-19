@@ -1,5 +1,17 @@
 [
   {
+    "no": 84,
+    "work_id": "miyazawa-cello-goushe",
+    "title": "セロ弾きのゴーシュ――共鳴する沈黙の周波数",
+    "original_title": "セロ弾きのゴーシュ",
+    "original_author": "宮沢賢治",
+    "modern_tech": "コヒーレント・フォノン共鳴と音響メタマテリアルによる微細熱・振動操作、比較認知科学に基づく種間音響コミュニケーション（バイオアコースティクス）、特定周波数音響刺激による脳神経可塑性誘導と微小組織治癒促進メカニズム",
+    "has_image": true,
+    "url": "stories/miyazawa-cello-goushe.html",
+    "image": "assets/images/miyazawa-cello-goushe.png",
+    "char_count": 5926
+  },
+  {
     "no": 83,
     "work_id": "dazai-shayo",
     "title": "斜陽――崩壊する生態系と利他性の残響",

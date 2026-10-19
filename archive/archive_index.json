@@ -1326,5 +1326,21 @@
     "narration_file": "83_斜陽_narration.txt",
     "full_file": "83_斜陽_full.txt",
     "original_md_file": "83_斜陽.md"
+  },
+  {
+    "work_no": 84,
+    "work_id": "miyazawa-cello-goushe",
+    "title": "セロ弾きのゴーシュ",
+    "subtitle": "共鳴する沈黙の周波数",
+    "attribution": "",
+    "original_author": "宮沢賢治",
+    "original_title": "セロ弾きのゴーシュ",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000081/card470.html",
+    "modern_tech": "コヒーレント・フォノン共鳴と音響メタマテリアルによる微細熱・振動操作、比較認知科学に基づく種間音響コミュニケーション（バイオアコースティクス）、特定周波数音響刺激による脳神経可塑性誘導と微小組織治癒促進メカニズム",
+    "summary": "恒星間交響楽団「金星」のチェロ奏者ゴーシュは、音響量子（フォノン）共鳴装置を搭載したチェロの扱いに苦悩していた。毎夜、彼の孤立した音響ラボに現れる生体インターフェース動物たち――共鳴周波数を要求する三毛猫、正確なテンポを刻むかっこう、周波数音波で病気の子の神経治癒を願う野ねずみ。異種生命とのセッションを通じてフォノンの生命共鳴を悟ったゴーシュは、楽団のホールで奇跡の音を奏でる。",
+    "char_count": 3963,
+    "narration_file": "84_セロ弾きのゴーシュ_narration.txt",
+    "full_file": "84_セロ弾きのゴーシュ_full.txt",
+    "original_md_file": "84_セロ弾きのゴーシュ.md"
   }
 ]
