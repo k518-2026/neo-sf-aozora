@@ -428,6 +428,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Wildschut Sedikides Nostalgia content triggers functions Journal of Personality and Social Psychology 2006",
         ),
     ],
+    "edogawa-kogane-kamen": [
+        (
+            "金ナノ粒子局在表面プラズモン共鳴（LSPR）と光散乱",
+            "Willets Van Duyne Localized Surface Plasmon Resonance Spectroscopy Annual Review 2007",
+        ),
+        (
+            "超電導量子干渉計（SQUID）による極微弱生体磁気計測",
+            "Fagaly Superconducting quantum interference device Review of Scientific Instruments 2006",
+        ),
+        (
+            "物理世界における敵対的機械学習摂動（Adversarial Perturbations）",
+            "Goodfellow Shlens Szegedy Explaining and harnessing adversarial examples 2014",
+        ),
+    ],
+    "dazai-shayo": [
+        (
+            "閉鎖生態系生命維持システム（CELSS）と物質循環熱力学",
+            "Nelson Dempster Closed ecological systems Biosphere 2 to space life support PNAS 2009",
+        ),
+        (
+            "ヘリウム3（³He）次世代核融合炉と代替エネルギー代謝",
+            "Wittenberg Santarius Kulcinski Lunar helium-3 and fusion power Fusion Technology 1986",
+        ),
+        (
+            "過酷環境下における協力と利他行動の進化五法則（Nowakモデル）",
+            "Nowak Five Rules for the Evolution of Cooperation Science 2006",
+        ),
+    ],
+    "miyazawa-cello-goushe": [
+        (
+            "コヒーレント・フォノン工学と音響メタマテリアル熱制御",
+            "Maldovan Sound and heat revolutions in phononics Nature 2013",
+        ),
+        (
+            "種間音響コミュニケーション（バイオアコースティクス）と認知進化",
+            "Fitch The evolution of speech a comparative review Trends in Cognitive Sciences 2000",
+        ),
+        (
+            "音楽音響刺激による脳神経可塑性誘導と認知機能回復",
+            "Sarkamo Tervaniemi Cognitive recovery and mood enhancement by music listening Brain 2008",
+        ),
+    ],
 }
 
 

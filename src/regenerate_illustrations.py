@@ -1135,6 +1135,51 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Glorious spectacular illumination, dazzling dynamic highlights, vibrant saturated color palette, clean high contrast without darkness, pure art without text."
         ),
     },
+    {
+        "index": 85,
+        "work_id": "edogawa-kogane-kamen",
+        "title": "黄金仮面",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-10-19_edogawa_kogane_kamen.png")],
+        "docs_path": Path("docs/assets/images/edogawa-kogane-kamen.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Akechi Kogoro, an exceptionally sharp and intellectual Japanese master detective in his late 20s, confronting an invisible cyber-threat in a grand sunlit high-tech museum hall. "
+            "Masterpiece close-up half-body portrait: untidy wavy dark hair, piercingly intelligent and crystal-clear obsidian eyes brimming with brilliant specular catchlights and sharp focused pupils, a confident analytical smirk. "
+            "Wearing a modern tailored navy suit with subtle cybernetic telemetry lapels over a crisp dark vest. "
+            "In front of him, floating holographic sensor streams and golden nano-plasmonic light scattering ripples outline the translucent cloaked silhouette of the phantom thief, while illuminated security lasers intersect in the air. "
+            "Brilliant golden lighting, spectacular high contrast, vivid rich colors, pristine crystal-clear atmosphere without gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 86,
+        "work_id": "dazai-shayo",
+        "title": "斜陽",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-19_dazai_shayo.png")],
+        "docs_path": Path("docs/assets/images/dazai-shayo.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Kazuko, an aristocratic and resolute young Japanese woman engineer in her late 20s, standing on the observation terrace of a terraforming biodome overlooking a vast Martian landscape. "
+            "Masterpiece close-up half-body portrait: elegant graceful features, stunningly clear and emotive amber-gold eyes with delicate specular catchlights and distinct detailed pupils, expressing quiet defiance and noble warmth. "
+            "Wearing a stylish clean terraforming uniform with soft glowing copper utility accents. "
+            "Behind her, an immense glowing red giant sun sinks toward the horizon, casting glorious golden and crimson light over the colossal geothermal towers and lush green hydroponic terraces. "
+            "Magnificent twilight radiance, dramatic high contrast, rich saturated warm colors, pristine illuminated atmosphere without gloomy shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 87,
+        "work_id": "miyazawa-cello-goushe",
+        "title": "セロ弾きのゴーシュ",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-10-19_miyazawa_cello_goushe.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-cello-goushe.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Goushe, an earnest and passionate young Japanese cybernetic cellist in his early 20s, performing intently inside his illuminated glass observatory workshop at night. "
+            "Masterpiece close-up half-body portrait: messy natural dark hair, remarkably large and deeply expressive chestnut-brown eyes glowing with vibrant crystalline catchlights and focused pupils, a look of profound musical transcendence. "
+            "Holding an elegant futuristic cello crafted from dark translucent composite materials that emits glowing cyan and emerald acoustic phonon resonance waves into the air. "
+            "Through the panoramic glass walls, a dazzling starry night sky filled with a colorful spiral nebula and shooting stars illuminates the cozy timber laboratory. "
+            "Magical radiant lighting, enchanting high contrast, vibrant saturated hues, pristine transparent atmosphere without murky gloom, pure art without text."
+        ),
+    },
 ]
 
 
