@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-19T19:28:47.455170+09:00",
+  "updated_at": "2026-10-19T19:40:11.015056+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1806,19 +1806,19 @@
       "author": "江戸川乱歩",
       "theme": "金ナノプラズモン散乱・超電導SQUID磁気追跡・敵対的摂動マスク",
       "modern_tech": "金ナノ粒子による局在表面プラズモン共鳴（LSPR）と動的光散乱シールド、超電導量子干渉計（SQUID）を用いた極微弱生体磁気トラッキング、深層学習顔面認識網を無力化する敵対的物理摂動マスク（Adversarial Perturbations）",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-19_edogawa_kogane_kamen.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-19T19:34:23.127072+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-19_edogawa_kogane_kamen.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-19T19:40:10.945613+09:00"
     },
     {
       "id": "dazai-shayo",

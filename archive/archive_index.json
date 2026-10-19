@@ -1294,5 +1294,21 @@
     "narration_file": "81_舞踏会_narration.txt",
     "full_file": "81_舞踏会_full.txt",
     "original_md_file": "81_舞踏会.md"
+  },
+  {
+    "work_no": 82,
+    "work_id": "edogawa-kogane-kamen",
+    "title": "黄金仮面",
+    "subtitle": "量子磁場の残響と光の亡霊",
+    "attribution": "",
+    "original_author": "江戸川乱歩",
+    "original_title": "黄金仮面",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56647.html",
+    "modern_tech": "金ナノ粒子による局在表面プラズモン共鳴（LSPR）と動的光散乱シールド、超電導量子干渉計（SQUID）を用いた極微弱生体磁気トラッキング、深層学習顔面認識網を無力化する敵対的物理摂動マスク（Adversarial Perturbations）",
+    "summary": "メガロポリス帝都の国立博物館から白昼堂々国宝級量子コアが強奪された。犯人は黄金に輝くナノ粒子プラズモン仮面を身につけた世紀の怪盗「黄金仮面」。深層学習生体認識カメラを物理的敵対摂動で無力化し姿を消す怪盗に対し、名探偵・明智小五郎は超電導SQUIDセンサ網による極微弱生体磁気トラッキングを展開。知性と技術の極限を尽くした追撃戦が幕を開ける。",
+    "char_count": 3197,
+    "narration_file": "82_黄金仮面_narration.txt",
+    "full_file": "82_黄金仮面_full.txt",
+    "original_md_file": "82_黄金仮面.md"
   }
 ]

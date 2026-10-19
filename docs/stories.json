@@ -1,5 +1,17 @@
 [
   {
+    "no": 82,
+    "work_id": "edogawa-kogane-kamen",
+    "title": "黄金仮面――量子磁場の残響と光の亡霊",
+    "original_title": "黄金仮面",
+    "original_author": "江戸川乱歩",
+    "modern_tech": "金ナノ粒子による局在表面プラズモン共鳴（LSPR）と動的光散乱シールド、超電導量子干渉計（SQUID）を用いた極微弱生体磁気トラッキング、深層学習顔面認識網を無力化する敵対的物理摂動マスク（Adversarial Perturbations）",
+    "has_image": true,
+    "url": "stories/edogawa-kogane-kamen.html",
+    "image": "assets/images/edogawa-kogane-kamen.png",
+    "char_count": 5074
+  },
+  {
     "no": 81,
     "work_id": "akutagawa-butoukai",
     "title": "舞踏会――光子花火と重力のワルツ",
