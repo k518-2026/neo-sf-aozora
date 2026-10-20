@@ -1180,6 +1180,51 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Magical radiant lighting, enchanting high contrast, vibrant saturated hues, pristine transparent atmosphere without murky gloom, pure art without text."
         ),
     },
+    {
+        "index": 88,
+        "work_id": "dazai-kachikachi-yama",
+        "title": "カチカチ山",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-21_dazai_kachikachi_yama.png")],
+        "docs_path": Path("docs/assets/images/dazai-kachikachi-yama.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Tanuki, a rugged and strangely endearing middle-aged Japanese cyborg mechanic in his mid 40s, standing on the deck of a sleek futuristic colloidal boat on a sunlit crystal-clear alien lake. "
+            "Masterpiece close-up half-body portrait: round honest face with short scruffy dark hair, surprisingly pure and expressive warm chestnut eyes filled with genuine specular catchlights and clear pupils, a naive earnest expression. "
+            "Wearing durable weathered heavy-duty engineering overalls with glowing turquoise cybernetic arm joints. "
+            "In the background, a beautiful white-and-silver AI android rabbit enforcer watches from the lush floral shoreline, while golden sunlight sparkles across vibrant turquoise water ripples under a radiant azure sky. "
+            "Brilliant luminous daylight, glorious high contrast, rich saturated colors, clean pristine atmosphere without gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 89,
+        "work_id": "akutagawa-imogayu",
+        "title": "芋粥",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-21_akutagawa_imogayu.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-imogayu.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Goi, a humble and weary Japanese low-ranking cyber-clerk in his late 40s, standing overwhelmed inside a magnificent high-tech banquet chamber. "
+            "Masterpiece close-up half-body portrait: gentle timid features with thinning dark hair, remarkably wide and deeply expressive hazel-brown eyes glistening with comical awe and distinct specular highlights, sharp clear pupils, mouth slightly agape in utter bewilderment. "
+            "Wearing a modest, slightly worn indigo cyber-bureaucrat robe with faint copper interface embroidery. "
+            "In front of him stands a colossal, gleaming chrome industrial nano-synthesizer cauldron brimming with mountains of steaming golden sweet porridge, with luminous sweet vapor clouds swirling under sparkling crystalline chandeliers. "
+            "Spectacular opulent lighting, dazzling dynamic contrast, rich vibrant golds and warm hues, pristine transparent atmosphere without darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 90,
+        "work_id": "soseki-jitensha-nikki",
+        "title": "自転車日記",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-10-21_soseki_jitensha_nikki.png")],
+        "docs_path": Path("docs/assets/images/soseki-jitensha-nikki.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Natsume, a distinguished and ultra-serious intellectual Japanese scholar in his early 30s, determinedly attempting to balance on a high-tech self-righting superconducting gyroscopic bicycle along a scenic cobblestone promenade in neo-London. "
+            "Masterpiece close-up half-body portrait: handsome refined features, neat black hair and a small cultured mustache, intensely focused and comically resolute obsidian eyes with bright crystalline catchlights and pinpoint pupils, an expression of desperate intellectual concentration. "
+            "Wearing a tailored vintage British tweed jacket over a crisp high-collared shirt with subtle glowing sensor cuffs. "
+            "The futuristic bicycle beneath him hums with azure electromagnetic rings around its wheels, as curious Victorian-cyberpunk passerby androids watch in amusement under warm golden gaslight holograms along the sparkling river. "
+            "Gorgeous sunny atmospheric lighting, magnificent dynamic contrast, richly saturated colors, clean pristine illumination without murky shadows, pure art without text."
+        ),
+    },
 ]
 
 

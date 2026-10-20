@@ -470,6 +470,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Sarkamo Tervaniemi Cognitive recovery and mood enhancement by music listening Brain 2008",
         ),
     ],
+    "dazai-kachikachi-yama": [
+        (
+            "ナノ流体コロイド懸濁液の動的熱伝導性と構造崩壊",
+            "Murshed Leong Rice A review of nanofluids analysis synthesis and applications Applied Thermal Engineering 2008",
+        ),
+        (
+            "熱分解プラズマ燃焼工学と高エネルギー推進",
+            "Glassman Yetter Combustion Academic Press 2008",
+        ),
+        (
+            "進化ゲーム理論における捕食・被食者の欺瞞戦略",
+            "Maynard Smith Evolution and the Theory of Games Cambridge 1982",
+        ),
+    ],
+    "akutagawa-imogayu": [
+        (
+            "中脳ドーパミン系による報酬予測誤差と欲求動機づけ",
+            "Schultz Dayan Montague A neural substrate of prediction and reward Science 1997",
+        ),
+        (
+            "ナノエマルジョン脂質キャリアによる味覚分子合成",
+            "McClements Weiss Emulsion-based delivery systems for lipophilic bioactive components 2007",
+        ),
+        (
+            "快楽適応（ヘドニック・トレッドミル）と欲求充足後の実存的空虚化",
+            "Berridge Robinson What is the role of dopamine in reward Brain Research Reviews 1998",
+        ),
+    ],
+    "soseki-jitensha-nikki": [
+        (
+            "線形化二輪ビークル動力学方程式（ステア・バランス連成制御）",
+            "Meijaard Papadopoulos Ruina Schwab Linearized dynamics equations for bicycle Proceedings of the Royal Society A 2007",
+        ),
+        (
+            "小脳プルキンエ細胞における長期抑圧（LTD）と内部モデル学習",
+            "Ito Control of mental activities by internal models in the cerebellum Nature Reviews Neuroscience 2008",
+        ),
+        (
+            "感覚運動フィードバックループにおける神経伝達遅延と適応制御",
+            "Wolpert Ghahramani Computational principles of movement neuroscience Nature Neuroscience 2000",
+        ),
+    ],
 }
 
 
