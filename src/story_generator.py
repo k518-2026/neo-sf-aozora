@@ -155,7 +155,7 @@ def repair_references_in_content(content: str) -> Tuple[str, List[str], List[str
 
     return repaired_content, valid_dois, unresolved_dois
 
-# Ending themes and weighted random ratio (明るい未来:ディストピア:ラブロマンス:ミステリー = 3:2:3:2)
+# Ending themes and weighted random ratio (明るい未来:ディストピア:ラブロマンス:ミステリー:パロディー = 3:2:3:2:3)
 ENDING_THEMES = [
     {
         "id": "bright",
@@ -197,10 +197,20 @@ ENDING_THEMES = [
             "散りばめられた伏線が一気に回収され、論理的推論によって驚愕の真相が白日の下に晒される、本格探偵小説の美学に満ちた鮮やかな結末を描いてください。"
         )
     },
+    {
+        "id": "parody",
+        "name": "パロディー・風刺コメディ",
+        "weight": 3,
+        "description": (
+            "【結末テーマ：パロディー・風刺コメディ（知的なユーモア・大真面目な科学の暴走・メタ視点・ナンセンスSF）】\n"
+            "最先端科学技術を極端にオーバースペックに使い倒したり、青空文庫の古典名作の深刻な葛藤やシチュエーションを現代・未来の最新テクノロジーで大真面目に解決しようとした結果、かえって予測不能な珍事や滑稽な混乱、シュールな結末に突入する。\n"
+            "登場人物たちはあくまで至極大真面目だが、状況のギャップや皮肉なすれ違い、思わずクスッと笑ってしまう知的な風刺やブラックユーモア、星新一や筒井康隆のような切れ味鋭いウィットに富んだ快作を描いてください。"
+        )
+    },
 ]
 
 def select_ending_theme(preferred: Optional[str] = None) -> Dict[str, Any]:
-    """Selects an ending theme based on weights (3:2:3:2) or user preference."""
+    """Selects an ending theme based on weights (3:2:3:2:3) or user preference."""
     if preferred and preferred.lower() not in ("random", "none", ""):
         pref = preferred.lower()
         for t in ENDING_THEMES:

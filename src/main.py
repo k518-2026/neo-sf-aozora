@@ -94,9 +94,9 @@ def main():
     )
     parser.add_argument(
         "--ending",
-        choices=["random", "bright", "dystopia", "romance", "mystery"],
+        choices=["random", "bright", "dystopia", "romance", "mystery", "parody"],
         default="random",
-        help="Optional: Ending theme ('random', 'bright' (明るい未来), 'dystopia' (ディストピア), 'romance' (ラブロマンス), 'mystery' (ミステリー). Default: random with 3:2:3:2 ratio)"
+        help="Optional: Ending theme ('random', 'bright' (明るい未来), 'dystopia' (ディストピア), 'romance' (ラブロマンス), 'mystery' (ミステリー), 'parody' (パロディー・風刺コメディ). Default: random with 3:2:3:2:3 ratio)"
     )
     parser.add_argument(
         "--x-only",
