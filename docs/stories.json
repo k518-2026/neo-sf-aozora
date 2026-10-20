@@ -1,5 +1,17 @@
 [
   {
+    "no": 85,
+    "work_id": "dazai-kachikachi-yama",
+    "title": "カチカチ山――融解する境界と偽りの進化",
+    "original_title": "カチカチ山",
+    "original_author": "太宰治",
+    "modern_tech": "ナノ流体（コロイド懸濁液）の動的構造安定性と急速崩壊現象、熱分解プラズマ燃焼工学、進化ゲーム理論における捕食・被食者の欺瞞戦略と認知的搾取",
+    "has_image": true,
+    "url": "stories/dazai-kachikachi-yama.html",
+    "image": "assets/images/dazai-kachikachi-yama.png",
+    "char_count": 5561
+  },
+  {
     "no": 84,
     "work_id": "miyazawa-cello-goushe",
     "title": "セロ弾きのゴーシュ――共鳴する沈黙の周波数",

@@ -1342,5 +1342,21 @@
     "narration_file": "84_セロ弾きのゴーシュ_narration.txt",
     "full_file": "84_セロ弾きのゴーシュ_full.txt",
     "original_md_file": "84_セロ弾きのゴーシュ.md"
+  },
+  {
+    "work_no": 85,
+    "work_id": "dazai-kachikachi-yama",
+    "title": "カチカチ山",
+    "subtitle": "融解する境界と偽りの進化",
+    "attribution": "",
+    "original_author": "太宰治",
+    "original_title": "カチカチ山",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000035/card42360.html",
+    "modern_tech": "ナノ流体（コロイド懸濁液）の動的構造安定性と急速崩壊現象、熱分解プラズマ燃焼工学、進化ゲーム理論における捕食・被食者の欺瞞戦略と認知的搾取",
+    "summary": "宇宙開拓惑星の辺境で暮らす無骨な旧式サイボーグ技師タヌキ。彼は冷酷非情な特務AI執行官ウサギに惚れ込み、背部ブースター点火テスト（背中点火）や高濃度塩水ナノスキン消毒に耐えるが、脱出用「ナノ流体コロイド泥舟」に乗り込んだ瞬間、船体は無情にも溶解し始める。太宰流ブラックユーモアの最高峰！",
+    "char_count": 3660,
+    "narration_file": "85_カチカチ山_narration.txt",
+    "full_file": "85_カチカチ山_full.txt",
+    "original_md_file": "85_カチカチ山.md"
   }
 ]
