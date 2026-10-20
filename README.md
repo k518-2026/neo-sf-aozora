@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **85** 作品（うち挿絵付き **85** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-21 00:40 JST）
+- **収録作品数**: 全 **86** 作品（うち挿絵付き **85** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-21 01:00 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 86 | **[芋粥――報酬予測誤差の果てにある虚無](content/2026-10-21_akutagawa_imogayu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-imogayu.html) | [📄原稿](content/2026-10-21_akutagawa_imogayu.md) | — | 芥川龍之介[『芋粥』](https://www.aozora.gr.jp/cards/000879/card57.html) | 中脳ドーパミン系による報酬予測誤差と欲求動機づけ（Schultzモデル）、ナノエマルジョン脂質キャリアによる超高純度味覚・芳香分子合成、快楽適応（ヘドニック・トレッドミル）による欲求充足後の実存的空虚化 | 5,922字 |
 | 85 | **[カチカチ山――融解する境界と偽りの進化](content/2026-10-21_dazai_kachikachi_yama.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-kachikachi-yama.html) | [📄原稿](content/2026-10-21_dazai_kachikachi_yama.md) | [🎨挿絵](content/2026-10-21_dazai_kachikachi_yama.png) | 太宰治[『カチカチ山』](https://www.aozora.gr.jp/cards/000035/card42360.html) | ナノ流体（コロイド懸濁液）の動的構造安定性と急速崩壊現象、熱分解プラズマ燃焼工学、進化ゲーム理論における捕食・被食者の欺瞞戦略と認知的搾取 | 5,561字 |
 | 84 | **[セロ弾きのゴーシュ――共鳴する沈黙の周波数](content/2026-10-19_miyazawa_cello_goushe.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-cello-goushe.html) | [📄原稿](content/2026-10-19_miyazawa_cello_goushe.md) | [🎨挿絵](content/2026-10-19_miyazawa_cello_goushe.png) | 宮沢賢治[『セロ弾きのゴーシュ』](https://www.aozora.gr.jp/cards/000081/card470.html) | コヒーレント・フォノン共鳴と音響メタマテリアルによる微細熱・振動操作、比較認知科学に基づく種間音響コミュニケーション（バイオアコースティクス）、特定周波数音響刺激による脳神経可塑性誘導と微小組織治癒促進メカニズム | 5,926字 |
 | 83 | **[斜陽――崩壊する生態系と利他性の残響](content/2026-10-19_dazai_shayo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-shayo.html) | [📄原稿](content/2026-10-19_dazai_shayo.md) | [🎨挿絵](content/2026-10-19_dazai_shayo.png) | 太宰治[『斜陽』](https://www.aozora.gr.jp/cards/000035/card1565.html) | 閉鎖生態系生命維持システム（CELSS）における水・物質循環熱力学、ヘリウム3（³He）次世代核融合炉の燃料枯渇と代替高効率エネルギー代謝、進化ゲーム理論に基づく過酷環境下での利他行動・協力の進化五法則（Nowakモデル） | 6,404字 |

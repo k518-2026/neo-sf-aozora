@@ -1358,5 +1358,21 @@
     "narration_file": "85_カチカチ山_narration.txt",
     "full_file": "85_カチカチ山_full.txt",
     "original_md_file": "85_カチカチ山.md"
+  },
+  {
+    "work_no": 86,
+    "work_id": "akutagawa-imogayu",
+    "title": "芋粥",
+    "subtitle": "報酬予測誤差の果てにある虚無",
+    "attribution": "",
+    "original_author": "芥川龍之介",
+    "original_title": "芋粥",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000879/card57.html",
+    "modern_tech": "中脳ドーパミン系による報酬予測誤差と欲求動機づけ（Schultzモデル）、ナノエマルジョン脂質キャリアによる超高純度味覚・芳香分子合成、快楽適応（ヘドニック・トレッドミル）による欲求充足後の実存的空虚化",
+    "summary": "メガロポリス帝都の最下層で働く冴えない下級技術官・五位。「芋粥を飽きるほど食いたい」という生涯の夢を抱く彼を、星系貴族・利仁は巨大ナノリアクター釜の芋粥で迎え撃つ。眼前に出現した無尽蔵の甘味の海を前に、五位のドーパミン受容体は過剰飽和を起こし、夢を失った男の哀しくも笑えるアイロニーが炸裂する。",
+    "char_count": 3877,
+    "narration_file": "86_芋粥_narration.txt",
+    "full_file": "86_芋粥_full.txt",
+    "original_md_file": "86_芋粥.md"
   }
 ]
