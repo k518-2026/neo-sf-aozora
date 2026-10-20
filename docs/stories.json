@@ -18,9 +18,9 @@
     "original_title": "芋粥",
     "original_author": "芥川龍之介",
     "modern_tech": "中脳ドーパミン系による報酬予測誤差と欲求動機づけ（Schultzモデル）、ナノエマルジョン脂質キャリアによる超高純度味覚・芳香分子合成、快楽適応（ヘドニック・トレッドミル）による欲求充足後の実存的空虚化",
-    "has_image": false,
+    "has_image": true,
     "url": "stories/akutagawa-imogayu.html",
-    "image": "",
+    "image": "assets/images/akutagawa-imogayu.png",
     "char_count": 5922
   },
   {
