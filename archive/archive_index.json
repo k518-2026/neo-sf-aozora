@@ -1374,5 +1374,21 @@
     "narration_file": "86_芋粥_narration.txt",
     "full_file": "86_芋粥_full.txt",
     "original_md_file": "86_芋粥.md"
+  },
+  {
+    "work_no": 87,
+    "work_id": "soseki-jitensha-nikki",
+    "title": "自転車日記",
+    "subtitle": "運動学習の境界線に揺れる幽霊",
+    "attribution": "",
+    "original_author": "夏目漱石",
+    "original_title": "自転車日記",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000148/card782.html",
+    "modern_tech": "線形化二輪ビークル動力学方程式（ステア・バランス連成制御）、小脳プルキンエ細胞における長期抑圧（LTD）と内部フォワードモデル、感覚運動フィードバックループにおける神経伝達遅延と適応制御",
+    "summary": "ネオ・ロンドンへ留学した生真面目な客員教授・夏目。近代都市の先端「超電導アクティブジャイロ自立式二輪モビリティ（電脳自転車）」を乗りこなそうと大決意するが、小脳内部モデルの形成が追いつかずテムズ川の河畔で激しく横転を繰り返す。物理法則と自身の神経系との戦いを大真面目に手記に記す抱腹絶倒ユーモアSF！",
+    "char_count": 3687,
+    "narration_file": "87_自転車日記_narration.txt",
+    "full_file": "87_自転車日記_full.txt",
+    "original_md_file": "87_自転車日記.md"
   }
 ]

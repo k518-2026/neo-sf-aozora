@@ -1,5 +1,17 @@
 [
   {
+    "no": 87,
+    "work_id": "soseki-jitensha-nikki",
+    "title": "自転車日記――運動学習の境界線に揺れる幽霊",
+    "original_title": "自転車日記",
+    "original_author": "夏目漱石",
+    "modern_tech": "線形化二輪ビークル動力学方程式（ステア・バランス連成制御）、小脳プルキンエ細胞における長期抑圧（LTD）と内部フォワードモデル、感覚運動フィードバックループにおける神経伝達遅延と適応制御",
+    "has_image": true,
+    "url": "stories/soseki-jitensha-nikki.html",
+    "image": "assets/images/soseki-jitensha-nikki.png",
+    "char_count": 5609
+  },
+  {
     "no": 86,
     "work_id": "akutagawa-imogayu",
     "title": "芋粥――報酬予測誤差の果てにある虚無",

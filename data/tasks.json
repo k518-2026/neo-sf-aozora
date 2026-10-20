@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-21T01:00:56.188595+09:00",
+  "updated_at": "2026-10-21T01:14:29.633969+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1911,19 +1911,19 @@
       "author": "夏目漱石",
       "theme": "二輪自律ジャイロ動力学・小脳内部モデル運動学習・感覚運動フィードバック遅延",
       "modern_tech": "線形化二輪ビークル動力学方程式（ステア・バランス連成制御）、小脳プルキンエ細胞における長期抑圧（LTD）と内部フォワードモデル、感覚運動フィードバックループにおける神経伝達遅延と適応制御",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-21_soseki_jitensha_nikki.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-21",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-21_soseki_jitensha_nikki.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-21"
     }
   ]
 }
