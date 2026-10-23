@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-21T01:14:29.633969+09:00",
+  "updated_at": "2026-10-23T21:00:03.474645+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1890,7 +1890,7 @@
       "author": "芥川龍之介",
       "theme": "ドーパミン報酬予測誤差・ナノエマルジョン味覚合成・快楽適応ヘドニックトレッドミル",
       "modern_tech": "中脳ドーパミン系による報酬予測誤差と欲求動機づけ（Schultzモデル）、ナノエマルジョン脂質キャリアによる超高純度味覚・芳香分子合成、快楽適応（ヘドニック・トレッドミル）による欲求充足後の実存的空虚化",
-      "status": "pending_illustration",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
@@ -1898,11 +1898,11 @@
       "md_file": "content/2026-10-21_akutagawa_imogayu.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-21",
-      "reviewed_by": null,
-      "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-23T21:00:03.459803+09:00",
+      "png_file": "content/2026-10-21_akutagawa_imogayu.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-21"
     },
     {
       "id": "soseki-jitensha-nikki",
@@ -1919,8 +1919,8 @@
       "md_file": "content/2026-10-21_soseki_jitensha_nikki.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-21",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-23T21:00:03.459803+09:00",
       "png_file": "content/2026-10-21_soseki_jitensha_nikki.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-21"
