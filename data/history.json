@@ -945,5 +945,19 @@
       "IIZUMI, Y. (2007). Studies of lake environments using stable isotope ratios of nitrogen (.DELTA.15N) and Carbon (.DELTA.13C). *Journal of Japanese Association of Hydrological Sciences*, 37(4), 209-220.",
       "Research Collaboration (2020). Paints and varnishes � Determination of volatile organic compounds (VOC) and/or semi volatile organic compounds (SVOC) content. *BSI British Standards*."
     ]
+  },
+  {
+    "work_id": "soseki-kusamakura",
+    "original_title": "草枕",
+    "original_author": "夏目漱石",
+    "reboot_title": "草枕――共鳴する沈黙の風景",
+    "posted_at": "2026-10-25T06:54:21.914074+09:00",
+    "file_path": "content/2026-10-09_soseki_kusamakura.md",
+    "status": "publish",
+    "references": [
+      "Menon, V., Cerri, D., Lee, B., Yuan, R., Lee, S., Shih, Y. I. (2022). Optogenetic stimulation of anterior insular cortex neurons reveals causal mechanisms underlying suppression of the default mode network by the salience network. *openRxiv*.",
+      "Wall, C. A., Wang, Q., Weng, M., Kim, E. S., Whitaker, L., Perlmutter, M., et al. (2015). Mapping connections between biological-emotional preferences and affective recognition: An eye-tracking interface for passive assessment of emotional competency. *2015 International Conference on Affective Computing and Intelligent Interaction (ACII)*, 21-27.",
+      "Otto, D. (2016). Digital Detox total. *Digital Detox*, 133-138."
+    ]
   }
 ]
