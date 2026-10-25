@@ -1,5 +1,17 @@
 [
   {
+    "no": 90,
+    "work_id": "edogawa-nisen-doka",
+    "title": "二銭銅貨――ナノスケールの亡霊と量子への階梯",
+    "original_title": "二銭銅貨",
+    "original_author": "江戸川乱歩",
+    "modern_tech": "ナノ粒子PUF（物理的複製困難関数）による金属ステガノグラフィ、量子アニーリング・イジング模型による組合せ最適化暗号解読、ゼロ知識対話型証明と二重ブラフ・メカニズム",
+    "has_image": true,
+    "url": "stories/edogawa-nisen-doka.html",
+    "image": "assets/images/edogawa-nisen-doka.png",
+    "char_count": 5784
+  },
+  {
     "no": 89,
     "work_id": "akutagawa-majutsu",
     "title": "魔術――強欲のアルゴリズムを越える聖域",

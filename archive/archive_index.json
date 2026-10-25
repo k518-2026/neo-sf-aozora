@@ -1422,5 +1422,21 @@
     "narration_file": "89_魔術_narration.txt",
     "full_file": "89_魔術_full.txt",
     "original_md_file": "89_魔術.md"
+  },
+  {
+    "work_no": 90,
+    "work_id": "edogawa-nisen-doka",
+    "title": "二銭銅貨",
+    "subtitle": "ナノスケールの亡霊と量子への階梯",
+    "attribution": "",
+    "original_author": "江戸川乱歩",
+    "original_title": "二銭銅貨",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001779/card56647.html",
+    "modern_tech": "ナノ粒子PUF（物理的複製困難関数）による金属ステガノグラフィ、量子アニーリング・イジング模型による組合せ最適化暗号解読、ゼロ知識対話型証明と二重ブラフ・メカニズム",
+    "summary": "貧民街の下宿で失業中の二人の青年。ある日手に入れた変哲もない古びた二銭銅貨の表面に、ナノスケールの物理複製困難構造（PUF）と量子暗号鍵が刻まれていることを発見する。大泥棒が遺した秘密資産コードを巡り、親友同士の痛快な知略暗号戦とゼロ知識二重ブラフが炸裂する。",
+    "char_count": 3949,
+    "narration_file": "90_二銭銅貨_narration.txt",
+    "full_file": "90_二銭銅貨_full.txt",
+    "original_md_file": "90_二銭銅貨.md"
   }
 ]
