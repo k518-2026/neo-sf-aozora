@@ -1,5 +1,17 @@
 [
   {
+    "no": 88,
+    "work_id": "sakaguchi-hakuchi",
+    "title": "白痴――共鳴する空白の境界",
+    "original_title": "白痴",
+    "original_author": "坂口安吾",
+    "modern_tech": "脳波ハイパースキャニングによる対人神経同期（Inter-brain synchrony）、大規模火災旋風・熱対流渦シミュレーション、極限ストレス・被曝環境下における神経細胞保護と可塑性適応",
+    "has_image": true,
+    "url": "stories/sakaguchi-hakuchi.html",
+    "image": "assets/images/sakaguchi-hakuchi.png",
+    "char_count": 5275
+  },
+  {
     "no": 87,
     "work_id": "soseki-jitensha-nikki",
     "title": "自転車日記――運動学習の境界線に揺れる幽霊",

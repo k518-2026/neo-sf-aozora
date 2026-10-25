@@ -1390,5 +1390,21 @@
     "narration_file": "87_自転車日記_narration.txt",
     "full_file": "87_自転車日記_full.txt",
     "original_md_file": "87_自転車日記.md"
+  },
+  {
+    "work_no": 88,
+    "work_id": "sakaguchi-hakuchi",
+    "title": "白痴",
+    "subtitle": "共鳴する空白の境界",
+    "attribution": "",
+    "original_author": "坂口安吾",
+    "original_title": "白痴",
+    "aozora_url": "https://www.aozora.gr.jp/cards/001095/card42621.html",
+    "modern_tech": "脳波ハイパースキャニングによる対人神経同期（Inter-brain synchrony）、大規模火災旋風・熱対流渦シミュレーション、極限ストレス・被曝環境下における神経細胞保護と可塑性適応",
+    "summary": "成層圏軌道爆撃が降り注ぐメガロポリス。無気力な情報処理技師・伊沢は、隣家の言語機能を喪失した知能障害の女と出会う。轟音と熱風の火災旋風が迫る極限の夜、二人の脳波は非言語領域で異常な共鳴を開始し、崩壊する都市からの超低空脱出行が幕を開ける。",
+    "char_count": 3425,
+    "narration_file": "88_白痴_narration.txt",
+    "full_file": "88_白痴_full.txt",
+    "original_md_file": "88_白痴.md"
   }
 ]
