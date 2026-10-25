@@ -512,6 +512,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Wolpert Ghahramani Computational principles of movement neuroscience Nature Neuroscience 2000",
         ),
     ],
+    "sakaguchi-hakuchi": [
+        (
+            "非言語生体脳波同調・対人ニューロシンクロニー",
+            "Dumas Nadel Inter-brain synchronization during social interaction PLoS ONE 2010",
+        ),
+        (
+            "大規模火災旋風および対流プルーム流体力学",
+            "Tohidi Kaye Comprehensive review of fire whirls fluid dynamics",
+        ),
+        (
+            "極限ストレス下における神経保護と生体適応",
+            "Charney Psychobiology of resilience to extreme stress Nature Reviews Neuroscience 2004",
+        ),
+    ],
+    "akutagawa-majutsu": [
+        (
+            "凝縮系核反応・格子支援核融合（常温核変換）",
+            "McKubre Cold fusion experimental status Current Science 2015",
+        ),
+        (
+            "没入型バーチャルリアリティと身体所有感・知覚変容",
+            "Slater Sanchez-Vives Enhancing our lives with immersive virtual reality Frontiers in Robotics and AI 2016",
+        ),
+        (
+            "強化学習における強欲アルゴリズム（Greedy policy）の限界",
+            "Mnih Silver Human-level control through deep reinforcement learning Nature 2015",
+        ),
+    ],
+    "edogawa-nisen-doka": [
+        (
+            "ナノステガノグラフィおよび物理的偽造防止技術",
+            "Kumar Nanoparticle physical unclonable functions anti-counterfeiting Nature Communications",
+        ),
+        (
+            "量子アニーリングおよび組合せ最適化暗号解読",
+            "Kadowaki Nishimori Quantum annealing in the transverse Ising model Physical Review E 1998",
+        ),
+        (
+            "ゼロ知識証明および対話型暗号プロトコル",
+            "Goldwasser Micali Rackoff The knowledge complexity of interactive proof systems SIAM Journal on Computing 1989",
+        ),
+    ],
 }
 
 
@@ -610,7 +652,7 @@ def query_crossref_verified_paper(query_str: str, tech_label: str = "", used_doi
     try:
         req = urllib.request.Request(
             url,
-            headers={"User-Agent": "AozoraSciFiBot/2.0 (https://github.com/k518-2026/neo-sf-aozora)"}
+            headers={"User-Agent": "AozoraSciFiBot/2.0 (https://github.com/k518-2026/neo-sf-aozora; mailto:contact@aozora-sf.org)"}
         )
         with urllib.request.urlopen(req, timeout=12) as res:
             if res.getcode() == 200:
@@ -887,6 +929,7 @@ class LocalStoryGenerator:
         used_dois: set = set()
 
         for tech_label, query_str in tech_queries:
+            time.sleep(1.0)
             logger.info(f"Pre-fetching verified Crossref paper for [{tech_label}] (Query: '{query_str}')...")
             paper = query_crossref_verified_paper(query_str, tech_label=tech_label, used_dois=used_dois)
             if paper:

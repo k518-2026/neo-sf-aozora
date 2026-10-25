@@ -1225,6 +1225,48 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Gorgeous sunny atmospheric lighting, magnificent dynamic contrast, richly saturated colors, clean pristine illumination without murky shadows, pure art without text."
         ),
     },
+    {
+        "index": 91,
+        "work_id": "sakaguchi-hakuchi",
+        "title": "白痴",
+        "author": "坂口安吾",
+        "content_paths": [Path("content/2026-10-25_sakaguchi_hakuchi.png")],
+        "docs_path": Path("docs/assets/images/sakaguchi-hakuchi.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Izawa, a determined young Japanese neural data technician in his late 20s, shielding a serene young woman on an illuminated elevated transit catwalk overlooking a mega-city under orbital bombardment. "
+            "Masterpiece close-up half-body portrait: both characters have stunningly detailed and beautifully drawn expressive eyes, Izawa with fiery determined amber eyes and sharp pupils reflecting bright firestorms, the woman with gentle luminous lavender eyes brimming with delicate crystalline catchlights and quiet transcendent peace. "
+            "Glowing cyan holographic neural synchrony waves subtly link their temples in the warm night air. "
+            "In the background, spectacular radiant firestorm plumes and distant energy flares illuminate the futuristic skyline in brilliant gold, amber, and vibrant violet, creating powerful dynamic contrast and radiant illumination without pitch-black murkiness, pure art without text."
+        ),
+    },
+    {
+        "index": 92,
+        "work_id": "akutagawa-majutsu",
+        "title": "魔術",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-10-25_akutagawa_majutsu.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-majutsu.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of Missra, an enigmatic and aristocratic Indian alchemist-physicist, demonstrating condensed matter nuclear transmutation inside a lavishly illuminated Victorian neo-laboratory. "
+            "Masterpiece close-up half-body portrait: Missra has a striking dignified face, wearing a tailored crimson velvet frock coat with golden quantum filament embroidery, with piercing intensely intelligent dark eyes featuring sharp pupils and sparkling catchlights. Beside him, an astonished young Japanese scholar looks on with wide expressive hazel eyes glistening in awe. "
+            "Between their hands hovers a radiant levitating transmutation sphere emitting dazzling golden-emerald photon rings that illuminate the whole room in warm opulent brilliance. "
+            "Polished brass instruments, glowing holographic chemical lattices, and crystalline glassware reflect vivid prismatic highlights, strong dynamic contrast, no dark shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 93,
+        "work_id": "edogawa-nisen-doka",
+        "title": "二銭銅貨",
+        "author": "江戸川乱歩",
+        "content_paths": [Path("content/2026-10-25_edogawa_nisen_doka.png")],
+        "docs_path": Path("docs/assets/images/edogawa-nisen-doka.png"),
+        "prompt": (
+            "Cinematic sci-fi anime illustration of two clever young Japanese cryptanalyst comrades in their early 20s celebrating a breakthrough in a brightly sunlit neo-Tokyo apartment workshop. "
+            "Masterpiece close-up half-body portrait: one young man excitedly holds up an antique copper coin radiating intricate holographic nanostructure circuits in emerald and cyan, grinning with playful intellectual triumph. Both have exceptionally expressive, gorgeously rendered eyes with crisp iris details, sharp pupils, and radiant specular catchlights reflecting floating holographic cipher matrices. "
+            "The cozy workshop is filled with beaming golden sunlight pouring through large loft windows, retro-futuristic quantum computing consoles, paper blueprints, and sparkling holographic code scrolls. "
+            "Vibrant saturated colors, magnificent dynamic contrast, uplifting radiant atmosphere without darkness, pure art without text."
+        ),
+    },
 ]
 
 
