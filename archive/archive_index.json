@@ -1406,5 +1406,21 @@
     "narration_file": "88_白痴_narration.txt",
     "full_file": "88_白痴_full.txt",
     "original_md_file": "88_白痴.md"
+  },
+  {
+    "work_no": 89,
+    "work_id": "akutagawa-majutsu",
+    "title": "魔術",
+    "subtitle": "強欲のアルゴリズムを越える聖域",
+    "attribution": "",
+    "original_author": "芥川龍之介",
+    "original_title": "魔術",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000879/card67.html",
+    "modern_tech": "凝縮系核反応・格子支援核融合（LENR）による元素変換、完全没入型ニューロVR知覚インターフェース、強化学習エージェントにおけるグリーディ方策（強欲アルゴリズム）の局所最適トラップと破綻",
+    "summary": "郊外の研究施設に住む謎めいたインド人科学者ミスラから、常温核変換の秘密プロトコルを学ぼうとする青年。しかし秘術伝授の条件は「自己の強欲（Greedy policy）を一切発動させないこと」。やがて青年は共有ニューロVRの幻惑ダイブの中で、己の報酬予測誤差と強欲の罠に試される。",
+    "char_count": 3289,
+    "narration_file": "89_魔術_narration.txt",
+    "full_file": "89_魔術_full.txt",
+    "original_md_file": "89_魔術.md"
   }
 ]

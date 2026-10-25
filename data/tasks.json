@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-25T09:57:07.110241+09:00",
+  "updated_at": "2026-10-25T10:11:36.600835+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1953,19 +1953,19 @@
       "author": "芥川龍之介",
       "theme": "常温核変換・共有ニューロVRダイブ・強化学習強欲崩壊",
       "modern_tech": "凝縮系核反応・格子支援核融合（LENR）による元素変換、完全没入型ニューロVR知覚インターフェース、強化学習エージェントにおけるグリーディ方策（強欲アルゴリズム）の局所最適トラップと破綻",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-25_akutagawa_majutsu.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-25",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-25_akutagawa_majutsu.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-25"
     },
     {
       "id": "edogawa-nisen-doka",

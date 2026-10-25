@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **88** 作品（うち挿絵付き **88** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-25 09:57 JST）
+- **収録作品数**: 全 **89** 作品（うち挿絵付き **89** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-25 10:11 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 89 | **[魔術――強欲のアルゴリズムを越える聖域](content/2026-10-25_akutagawa_majutsu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-majutsu.html) | [📄原稿](content/2026-10-25_akutagawa_majutsu.md) | [🎨挿絵](content/2026-10-25_akutagawa_majutsu.png) | 芥川龍之介[『魔術』](https://www.aozora.gr.jp/cards/000879/card67.html) | 凝縮系核反応・格子支援核融合（LENR）による元素変換、完全没入型ニューロVR知覚インターフェース、強化学習エージェントにおけるグリーディ方策（強欲アルゴリズム）の局所最適トラップと破綻 | 5,113字 |
 | 88 | **[白痴――共鳴する空白の境界](content/2026-10-25_sakaguchi_hakuchi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/sakaguchi-hakuchi.html) | [📄原稿](content/2026-10-25_sakaguchi_hakuchi.md) | [🎨挿絵](content/2026-10-25_sakaguchi_hakuchi.png) | 坂口安吾[『白痴』](https://www.aozora.gr.jp/cards/001095/card42621.html) | 脳波ハイパースキャニングによる対人神経同期（Inter-brain synchrony）、大規模火災旋風・熱対流渦シミュレーション、極限ストレス・被曝環境下における神経細胞保護と可塑性適応 | 5,275字 |
 | 87 | **[自転車日記――運動学習の境界線に揺れる幽霊](content/2026-10-21_soseki_jitensha_nikki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-jitensha-nikki.html) | [📄原稿](content/2026-10-21_soseki_jitensha_nikki.md) | [🎨挿絵](content/2026-10-21_soseki_jitensha_nikki.png) | 夏目漱石[『自転車日記』](https://www.aozora.gr.jp/cards/000148/card782.html) | 線形化二輪ビークル動力学方程式（ステア・バランス連成制御）、小脳プルキンエ細胞における長期抑圧（LTD）と内部フォワードモデル、感覚運動フィードバックループにおける神経伝達遅延と適応制御 | 5,609字 |
 | 86 | **[芋粥――報酬予測誤差の果てにある虚無](content/2026-10-21_akutagawa_imogayu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-imogayu.html) | [📄原稿](content/2026-10-21_akutagawa_imogayu.md) | [🎨挿絵](content/2026-10-21_akutagawa_imogayu.png) | 芥川龍之介[『芋粥』](https://www.aozora.gr.jp/cards/000879/card57.html) | 中脳ドーパミン系による報酬予測誤差と欲求動機づけ（Schultzモデル）、ナノエマルジョン脂質キャリアによる超高純度味覚・芳香分子合成、快楽適応（ヘドニック・トレッドミル）による欲求充足後の実存的空虚化 | 5,922字 |

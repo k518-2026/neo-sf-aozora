@@ -1,5 +1,17 @@
 [
   {
+    "no": 89,
+    "work_id": "akutagawa-majutsu",
+    "title": "魔術――強欲のアルゴリズムを越える聖域",
+    "original_title": "魔術",
+    "original_author": "芥川龍之介",
+    "modern_tech": "凝縮系核反応・格子支援核融合（LENR）による元素変換、完全没入型ニューロVR知覚インターフェース、強化学習エージェントにおけるグリーディ方策（強欲アルゴリズム）の局所最適トラップと破綻",
+    "has_image": true,
+    "url": "stories/akutagawa-majutsu.html",
+    "image": "assets/images/akutagawa-majutsu.png",
+    "char_count": 5113
+  },
+  {
     "no": 88,
     "work_id": "sakaguchi-hakuchi",
     "title": "白痴――共鳴する空白の境界",
