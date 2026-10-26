@@ -972,5 +972,18 @@
       "Research Collaboration (2020). Quantum Ghost Imaging Spectrometer. *American Chemical Society (ACS)*.",
       "Liu, Q., Wang, Y., He, J., Ji, F., Wang, B. (2014). Tilt shift determinations with spatial-carrier phase-shift method in temporal phase-shift interferometry. *Journal of Optics*, 16(7), 075404."
     ]
+  },
+  {
+    "work_id": "nakajima-tsuki-no-usagi",
+    "original_title": "悟浄出世",
+    "original_author": "中島敦",
+    "reboot_title": "悟浄出世――再帰的自己の相転移（Recursive Self Phase-Transition）",
+    "posted_at": "2026-10-27T08:22:11.674737+09:00",
+    "file_path": "content/2026-10-09_nakajima_tsuki_no_usagi.md",
+    "status": "publish",
+    "references": [
+      "Cameron, R. P. (2022). Infinite Regress. *Chains of Being*, 11-49.",
+      "Yi, Z., Li, W., Dai, Y. (2025). A Sequential Data Extractor for Adaptive Tradeoff Between Exploration and Exploitation in Reinforcement Learning. *Elsevier BV*."
+    ]
   }
 ]
