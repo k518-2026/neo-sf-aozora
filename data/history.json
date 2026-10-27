@@ -985,5 +985,19 @@
       "Cameron, R. P. (2022). Infinite Regress. *Chains of Being*, 11-49.",
       "Yi, Z., Li, W., Dai, Y. (2025). A Sequential Data Extractor for Adaptive Tradeoff Between Exploration and Exploitation in Reinforcement Learning. *Elsevier BV*."
     ]
+  },
+  {
+    "work_id": "dazai-hashire-merosu",
+    "original_title": "走れメロス",
+    "original_author": "太宰治",
+    "reboot_title": "走れメロス――不確定性の鼓動",
+    "posted_at": "2026-10-28T08:14:14.239060+09:00",
+    "file_path": "content/2026-10-09_dazai_hashire_merosu.md",
+    "status": "publish",
+    "references": [
+      "Garisto, D. (2025). Science sleuths raise concerns about scores of bioengineering papers. *Nature*.",
+      "López, J. C. (2003). Quantum leap for quantum dots. *Nature Reviews Neuroscience*, 4(3), 163-163.",
+      "Wolff, A., Choquette, A., Northoff, G., Iriki, A., Dumas, G. (2026). Quantum computing for neuroscience: opportunities beyond classical limits. *Nature Reviews Neuroscience*."
+    ]
   }
 ]
