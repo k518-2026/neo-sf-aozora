@@ -1,5 +1,17 @@
 [
   {
+    "no": 91,
+    "work_id": "dazai-goodbye",
+    "title": "グッド・バイ――関係性の解体と匿名証明の諧曲",
+    "original_title": "グッド・バイ",
+    "original_author": "太宰治",
+    "modern_tech": "分散表現学習（beta-VAE）による関係性パラメータの解離（Disentanglement）、暗号学的匿名クレデンシャルとゼロ知識身元証明、安定結婚問題（Gale-Shapley）およびマルチエージェント非協力ゲーム均衡の意図的破綻",
+    "has_image": true,
+    "url": "stories/dazai-goodbye.html",
+    "image": "assets/images/dazai-goodbye.png",
+    "char_count": 5884
+  },
+  {
     "no": 90,
     "work_id": "edogawa-nisen-doka",
     "title": "二銭銅貨――ナノスケールの亡霊と量子への階梯",

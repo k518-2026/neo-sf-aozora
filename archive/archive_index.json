@@ -1438,5 +1438,21 @@
     "narration_file": "90_二銭銅貨_narration.txt",
     "full_file": "90_二銭銅貨_full.txt",
     "original_md_file": "90_二銭銅貨.md"
+  },
+  {
+    "work_no": 91,
+    "work_id": "dazai-goodbye",
+    "title": "グッド・バイ",
+    "subtitle": "関係性の解体と匿名証明の諧曲",
+    "attribution": "",
+    "original_author": "太宰治",
+    "original_title": "グッド・バイ",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000035/card258.html",
+    "modern_tech": "分散表現学習（beta-VAE）による関係性パラメータの解離（Disentanglement）、暗号学的匿名クレデンシャルとゼロ知識身元証明、安定結婚問題（Gale-Shapley）およびマルチエージェント非協力ゲーム均衡の意図的破綻",
+    "summary": "メガロポリスで複数のニューロ結合相手（愛人）を抱え込み、関係性過負荷で破滅寸前の雑誌編集長・田島。彼は全関係を一括清算すべく、怪力かつ絶世の美女アンドロイド・キヌ子を「暗号化偽装妻」として雇い、愛人たちへの決別巡礼を開始する。太宰治の未完の傑作喜劇を、マルチエージェント契約理論と痛快な知略コメディで描くハードSFパロディ！",
+    "char_count": 3785,
+    "narration_file": "91_グッド・バイ_narration.txt",
+    "full_file": "91_グッド・バイ_full.txt",
+    "original_md_file": "91_グッド・バイ.md"
   }
 ]
