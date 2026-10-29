@@ -1454,5 +1454,21 @@
     "narration_file": "91_グッド・バイ_narration.txt",
     "full_file": "91_グッド・バイ_full.txt",
     "original_md_file": "91_グッド・バイ.md"
+  },
+  {
+    "work_no": 92,
+    "work_id": "miyazawa-donguri-to-yamaneko",
+    "title": "どんぐりと山猫",
+    "subtitle": "最適解の果てに揺らぐ魂の共鳴",
+    "attribution": "",
+    "original_author": "宮沢賢治",
+    "original_title": "どんぐりと山猫",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000081/card43752.html",
+    "modern_tech": "社会的選択理論におけるアローの不可能性定理と集団選好のパラドックス、多目的進化的アルゴリズム（NSGA-II）による高次元パレート境界面探索、マルコフ連鎖を用いた不確実性下ランク集約アルゴリズム",
+    "summary": "少年・一郎のもとに届いた「明日、面倒な裁判があるから来られたし」という山猫からの暗号通信。黄金色のバイオフォレストで行われていたのは、数千個の自律ナノマシン「どんぐり」たちが「誰が一番偉いか」を巡って無限ループに陥った法廷論争だった。アローの不可能性定理を前に頭を抱える山猫裁判長に、一郎が授けた痛快な裁定アルゴリズムとは！？",
+    "char_count": 3763,
+    "narration_file": "92_どんぐりと山猫_narration.txt",
+    "full_file": "92_どんぐりと山猫_full.txt",
+    "original_md_file": "92_どんぐりと山猫.md"
   }
 ]

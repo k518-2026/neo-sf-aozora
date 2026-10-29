@@ -1,5 +1,17 @@
 [
   {
+    "no": 92,
+    "work_id": "miyazawa-donguri-to-yamaneko",
+    "title": "どんぐりと山猫――最適解の果てに揺らぐ魂の共鳴",
+    "original_title": "どんぐりと山猫",
+    "original_author": "宮沢賢治",
+    "modern_tech": "社会的選択理論におけるアローの不可能性定理と集団選好のパラドックス、多目的進化的アルゴリズム（NSGA-II）による高次元パレート境界面探索、マルコフ連鎖を用いた不確実性下ランク集約アルゴリズム",
+    "has_image": true,
+    "url": "stories/miyazawa-donguri-to-yamaneko.html",
+    "image": "assets/images/miyazawa-donguri-to-yamaneko.png",
+    "char_count": 5661
+  },
+  {
     "no": 91,
     "work_id": "dazai-goodbye",
     "title": "グッド・バイ――関係性の解体と匿名証明の諧曲",
