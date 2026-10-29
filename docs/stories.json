@@ -1,5 +1,17 @@
 [
   {
+    "no": 93,
+    "work_id": "nakajima-mojika",
+    "title": "文字禍――記号の亡霊と崩壊する意味の檻",
+    "original_title": "文字禍",
+    "original_author": "中島敦",
+    "modern_tech": "生成AIの自己再帰的再学習に伴うモデル崩壊（Model Collapse / Representation Collapse）、アルゴリズム情報理論とコルモゴロフ複雑性による情報圧縮の極限限界、物理的記号接地問題（Symbol Grounding Problem）と意味論の消失",
+    "has_image": true,
+    "url": "stories/nakajima-mojika.html",
+    "image": "assets/images/nakajima-mojika.png",
+    "char_count": 5827
+  },
+  {
     "no": 92,
     "work_id": "miyazawa-donguri-to-yamaneko",
     "title": "どんぐりと山猫――最適解の果てに揺らぐ魂の共鳴",

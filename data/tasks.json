@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-29T09:30:08.548621+09:00",
+  "updated_at": "2026-10-29T09:37:31.846298+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2037,19 +2037,19 @@
       "author": "中島敦",
       "theme": "自己再帰的表象崩壊・コルモゴロフ複雑性・物理的記号接地問題",
       "modern_tech": "生成AIの自己再帰的再学習に伴うモデル崩壊（Model Collapse / Representation Collapse）、アルゴリズム情報理論とコルモゴロフ複雑性による情報圧縮の極限限界、物理的記号接地問題（Symbol Grounding Problem）と意味論の消失",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-29_nakajima_mojika.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-29",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-29_nakajima_mojika.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-29"
     }
   ]
 }

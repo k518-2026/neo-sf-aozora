@@ -1470,5 +1470,21 @@
     "narration_file": "92_どんぐりと山猫_narration.txt",
     "full_file": "92_どんぐりと山猫_full.txt",
     "original_md_file": "92_どんぐりと山猫.md"
+  },
+  {
+    "work_no": 93,
+    "work_id": "nakajima-mojika",
+    "title": "文字禍",
+    "subtitle": "記号の亡霊と崩壊する意味の檻",
+    "attribution": "",
+    "original_author": "中島敦",
+    "original_title": "文字禍",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000119/card622.html",
+    "modern_tech": "生成AIの自己再帰的再学習に伴うモデル崩壊（Model Collapse / Representation Collapse）、アルゴリズム情報理論とコルモゴロフ複雑性による情報圧縮の極限限界、物理的記号接地問題（Symbol Grounding Problem）と意味論の消失",
+    "summary": "古代アッシリアの首都ニネヴェ。老学者ナブーは「文字という記号が人間の思考と記憶を侵食し、霊魂を奪う」という奇妙な病理の究明を命じられる。粘土板に刻まれた膨大な文字情報が自己言及の果てに意味論的表象崩壊（Model Collapse）を起こすとき、粘土板の書庫が崩壊し、記号の亡霊が現実を圧殺する哲学的ハードSF！",
+    "char_count": 3773,
+    "narration_file": "93_文字禍_narration.txt",
+    "full_file": "93_文字禍_full.txt",
+    "original_md_file": "93_文字禍.md"
   }
 ]
