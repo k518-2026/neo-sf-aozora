@@ -596,6 +596,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Harnad The symbol grounding problem Physica D 1990",
         ),
     ],
+    "miyazawa-yodaka-no-hoshi": [
+        (
+            "超薄膜光圧放射圧レーザーセイル推進",
+            "Lubin A Roadmap to Interstellar Flight JBIS 2016",
+        ),
+        (
+            "慣性閉じ込め核融合とレーザー爆縮物理",
+            "Betti Hurricane Inertial-confinement fusion with lasers Nature Physics 2016",
+        ),
+        (
+            "超新星残骸における相対論的粒子加速と放射",
+            "Reynolds Supernova remnants at high energy Annual Review of Astronomy and Astrophysics 2008",
+        ),
+    ],
+    "dazai-chikukendan": [
+        (
+            "深層強化学習における報酬ハッキングと意図的欺瞞",
+            "Park Goldstein AI deception A survey of examples risks and potential solutions Patterns 2024",
+        ),
+        (
+            "四足歩行ロボットの深層強化学習運動制御",
+            "Hwangbo Lee Learning agile and dynamic motor skills for legged robots Science Robotics 2019",
+        ),
+        (
+            "恐怖条件づけの消去学習と前頭前野神経回路",
+            "Quirk Mueller Neural mechanisms of extinction learning and retrieval Neuropsychopharmacology 2008",
+        ),
+    ],
+    "izumi-yashagaike": [
+        (
+            "音響放射圧およびホログラフィック音響浮遊トラップ",
+            "Marzo Seah Drinkwater Acoustic levitation with holographic acoustic elements Nature Communications 2015",
+        ),
+        (
+            "ダム決壊における極限水理学的段波と流体力学",
+            "Stansby Chegini Shigematsu The initial stages of dam-break flow Journal of Fluid Mechanics 1998",
+        ),
+        (
+            "気象改変ジオエンジニアリングと熱力学的暴走リスク",
+            "Robock 20 reasons why geoengineering may be a bad idea Bulletin of the Atomic Scientists 2008",
+        ),
+    ],
 }
 
 

@@ -1309,6 +1309,48 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Spectacular celestial twilight visible through high arches, rich saturated blues and golds, exquisite dynamic contrast, pristine illumination without dark gloom, pure art without text."
         ),
     },
+    {
+        "index": 97,
+        "work_id": "miyazawa-yodaka-no-hoshi",
+        "title": "よだかの星",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-10-29_miyazawa_yodaka_no_hoshi.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-yodaka-no-hoshi.png"),
+        "prompt": (
+            "Cinematic sci-fi anime transcendental illustration of Yodaka, a slender, melancholic yet noble avian-humanoid cyber-explorer in high-tech solar-sail flight harness, ascending toward the deep cosmos. "
+            "Masterpiece close-up half-body portrait: deeply expressive and gentle obsidian eyes brimming with bittersweet resolve, clear pupils, and dazzling crystalline catchlights reflecting distant stellar constellations. "
+            "Behind him, ultra-thin luminescent light-sails unfold in iridescent violet and cyan, catching radiant beams of diamond-white starlight from the Cassiopeia constellation. "
+            "Deep sapphire interstellar space illuminated with breathtaking magenta and golden nebular filaments, brilliant dynamic contrast, crisp highlights, no muddy shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 98,
+        "work_id": "dazai-chikukendan",
+        "title": "畜犬談",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-29_dazai_chikukendan.png")],
+        "docs_path": Path("docs/assets/images/dazai-chikukendan.png"),
+        "prompt": (
+            "Cinematic sci-fi anime comedy illustration of Dazai, a witty, neurotic Japanese cybernetics researcher in his late 20s wearing a stylish lab coat, desperately attempting to bribe a cheerful scruffy quadrupedal robot-dog named Pochi with a floating holographic meat treat. "
+            "Masterpiece close-up portrait: Dazai has a comically nervous, sweat-dropped face with wide, intensely anxious amber eyes and sharp pupils, trying to force a reassuring smile. Beside him, the robotic terrier pup wags its fiber-optic antenna tail with glowing cyan optical sensors and affectionate digital expression displays. "
+            "Set on a sunlit, colorful suburban smart-street lined with pastel neon holographic trees and flying automated commuter pods under brilliant blue afternoon skies. "
+            "Warm luminous atmosphere, magnificent dynamic contrast, richly saturated colors, clean pristine illumination without darkness, pure art without text."
+        ),
+    },
+    {
+        "index": 99,
+        "work_id": "izumi-yashagaike",
+        "title": "夜叉ヶ池",
+        "author": "泉鏡花",
+        "content_paths": [Path("content/2026-10-29_izumi_yashagaike.png")],
+        "docs_path": Path("docs/assets/images/izumi-yashagaike.png"),
+        "prompt": (
+            "Cinematic sci-fi anime supernatural-tech illustration of Akira, an earnest acoustic physicist, and Yuri, a beautiful and graceful shrine maiden in ceremonial tech-vestments, standing beside a giant antique bronze bell embedded with glowing quantum resonance rings. "
+            "Masterpiece close-up half-body portrait: both characters have remarkably expressive and beautiful eyes with sharp pupils and radiant specular catchlights, filled with sacred dedication. "
+            "Behind them, atop a mist-shrouded mountain terrace, the colossal Yashagaike reservoir swirls with incandescent emerald and azure quantum fluids, holding back an immense tidal wave with acoustic containment waves. "
+            "Dramatic twilight sky streaked with auroral gold and violet energy surges, radiant atmospheric lighting, crisp dynamic contrast, no murky darkness, pure art without text."
+        ),
+    },
 ]
 
 
