@@ -1486,5 +1486,21 @@
     "narration_file": "93_文字禍_narration.txt",
     "full_file": "93_文字禍_full.txt",
     "original_md_file": "93_文字禍.md"
+  },
+  {
+    "work_no": 94,
+    "work_id": "miyazawa-yodaka-no-hoshi",
+    "title": "よだかの星",
+    "subtitle": "終焉の光圧と臨界の残響",
+    "attribution": "",
+    "original_author": "宮沢賢治",
+    "original_title": "よだかの星",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000081/card473.html",
+    "modern_tech": "超薄膜光圧放射圧レーザーセイルによる恒星間亜光速航行、慣性閉じ込めレーザー爆縮核融合炉の自律的臨界転換、超新星残骸パルサーにおける相対論的荷電粒子加速とシンクロトロン放射",
+    "summary": "醜い外殻の旧式惑星探査機として造られ、タカ型迎撃機や星間鳥類ドローンたちから冷酷に追放された「よだか」。己の存在意義を求めて星間空間へ飛び立った彼は、全身の推進炉を慣性閉じ込めレーザー爆縮の臨界点へと引き上げ、カシオペア座の彼方で永遠に青白く輝く恒星間ビーコンへと昇華する――宮沢賢治の珠玉の名作を詩的相対論ハードSFとしてリブート！",
+    "char_count": 3698,
+    "narration_file": "94_よだかの星_narration.txt",
+    "full_file": "94_よだかの星_full.txt",
+    "original_md_file": "94_よだかの星.md"
   }
 ]

@@ -1,5 +1,17 @@
 [
   {
+    "no": 94,
+    "work_id": "miyazawa-yodaka-no-hoshi",
+    "title": "よだかの星――終焉の光圧と臨界の残響",
+    "original_title": "よだかの星",
+    "original_author": "宮沢賢治",
+    "modern_tech": "超薄膜光圧放射圧レーザーセイルによる恒星間亜光速航行、慣性閉じ込めレーザー爆縮核融合炉の自律的臨界転換、超新星残骸パルサーにおける相対論的荷電粒子加速とシンクロトロン放射",
+    "has_image": true,
+    "url": "stories/miyazawa-yodaka-no-hoshi.html",
+    "image": "assets/images/miyazawa-yodaka-no-hoshi.png",
+    "char_count": 5491
+  },
+  {
     "no": 93,
     "work_id": "nakajima-mojika",
     "title": "文字禍――記号の亡霊と崩壊する意味の檻",

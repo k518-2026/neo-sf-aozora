@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **93** 作品（うち挿絵付き **93** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-29 09:37 JST）
+- **収録作品数**: 全 **94** 作品（うち挿絵付き **94** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-29 18:03 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 94 | **[よだかの星――終焉の光圧と臨界の残響](content/2026-10-29_miyazawa_yodaka_no_hoshi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-yodaka-no-hoshi.html) | [📄原稿](content/2026-10-29_miyazawa_yodaka_no_hoshi.md) | [🎨挿絵](content/2026-10-29_miyazawa_yodaka_no_hoshi.png) | 宮沢賢治[『よだかの星』](https://www.aozora.gr.jp/cards/000081/card473.html) | 超薄膜光圧放射圧レーザーセイルによる恒星間亜光速航行、慣性閉じ込めレーザー爆縮核融合炉の自律的臨界転換、超新星残骸パルサーにおける相対論的荷電粒子加速とシンクロトロン放射 | 5,491字 |
 | 93 | **[文字禍――記号の亡霊と崩壊する意味の檻](content/2026-10-29_nakajima_mojika.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-mojika.html) | [📄原稿](content/2026-10-29_nakajima_mojika.md) | [🎨挿絵](content/2026-10-29_nakajima_mojika.png) | 中島敦[『文字禍』](https://www.aozora.gr.jp/cards/000119/card622.html) | 生成AIの自己再帰的再学習に伴うモデル崩壊（Model Collapse / Representation Collapse）、アルゴリズム情報理論とコルモゴロフ複雑性による情報圧縮の極限限界、物理的記号接地問題（Symbol Grounding Problem）と意味論の消失 | 5,827字 |
 | 92 | **[どんぐりと山猫――最適解の果てに揺らぐ魂の共鳴](content/2026-10-29_miyazawa_donguri_to_yamaneko.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-donguri-to-yamaneko.html) | [📄原稿](content/2026-10-29_miyazawa_donguri_to_yamaneko.md) | [🎨挿絵](content/2026-10-29_miyazawa_donguri_to_yamaneko.png) | 宮沢賢治[『どんぐりと山猫』](https://www.aozora.gr.jp/cards/000081/card43752.html) | 社会的選択理論におけるアローの不可能性定理と集団選好のパラドックス、多目的進化的アルゴリズム（NSGA-II）による高次元パレート境界面探索、マルコフ連鎖を用いた不確実性下ランク集約アルゴリズム | 5,661字 |
 | 91 | **[グッド・バイ――関係性の解体と匿名証明の諧曲](content/2026-10-29_dazai_goodbye.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-goodbye.html) | [📄原稿](content/2026-10-29_dazai_goodbye.md) | [🎨挿絵](content/2026-10-29_dazai_goodbye.png) | 太宰治[『グッド・バイ』](https://www.aozora.gr.jp/cards/000035/card258.html) | 分散表現学習（beta-VAE）による関係性パラメータの解離（Disentanglement）、暗号学的匿名クレデンシャルとゼロ知識身元証明、安定結婚問題（Gale-Shapley）およびマルチエージェント非協力ゲーム均衡の意図的破綻 | 5,884字 |
