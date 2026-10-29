@@ -1267,6 +1267,48 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Vibrant saturated colors, magnificent dynamic contrast, uplifting radiant atmosphere without darkness, pure art without text."
         ),
     },
+    {
+        "index": 94,
+        "work_id": "dazai-goodbye",
+        "title": "グッド・バイ",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-29_dazai_goodbye.png")],
+        "docs_path": Path("docs/assets/images/dazai-goodbye.png"),
+        "prompt": (
+            "Cinematic sci-fi anime comedy illustration of Tajima, a handsome but comically frantic Japanese cyber-publisher in his early 30s, and Kinuko, a stunningly gorgeous yet deadpan and physically imposing woman in an elegant tailored trench coat. "
+            "Masterpiece close-up half-body portrait: Kinuko eats a holographic gourmet pastry with sublime indifference while Tajima nervously gestures with an encrypted severance datapad. Both have remarkably expressive eyes—Kinuko with cool, piercing sapphire eyes and sparkling specular highlights, Tajima with desperately pleading amber eyes and pinpoint pupils. "
+            "Set on a chic, illuminated open-air terrace in a neon-lit neo-Tokyo boulevard during a vibrant golden-magenta sunset, with floating translucent menus and sleek flying sky-taxis streaming past. "
+            "Radiant atmospheric lighting, brilliant dynamic contrast, richly saturated colors, clean pristine illumination without murky shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 95,
+        "work_id": "miyazawa-donguri-to-yamaneko",
+        "title": "どんぐりと山猫",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-10-29_miyazawa_donguri_to_yamaneko.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-donguri-to-yamaneko.png"),
+        "prompt": (
+            "Cinematic sci-fi anime whimsical illustration of Ichiro, a clever and earnest Japanese schoolboy in a crisp high-tech utility uniform, attending an outdoor arbitration court alongside a magnificent, pompous bipedal Cyber-Wildcat judge. "
+            "Masterpiece portrait: the Wildcat wears a radiant gold-braided officer coat and a glowing tactical monocle, while Ichiro watches with sparkling, keenly observant hazel eyes filled with amusement and crystalline catchlights. "
+            "Surrounding them in a sun-drenched cybernetic forest glade, hundreds of animated mechanical acorns with glowing expression displays bounce and argue comically on polished cedar benches under a floating holographic Pareto-frontier ranking graph. "
+            "Beaming morning sunlight filtering through emerald foliage, vibrant saturated colors, cheerful luminous atmosphere with strong crisp contrast, pure art without text."
+        ),
+    },
+    {
+        "index": 96,
+        "work_id": "nakajima-mojika",
+        "title": "文字禍",
+        "author": "中島敦",
+        "content_paths": [Path("content/2026-10-29_nakajima_mojika.png")],
+        "docs_path": Path("docs/assets/images/nakajima-mojika.png"),
+        "prompt": (
+            "Cinematic sci-fi anime philosophical illustration of Napu, an ascetic young Mesopotamian scholar-archivist in elegant cyber-robes woven with glowing copper neural threads, inside a colossal imperial holographic library in neo-Nineveh. "
+            "Masterpiece close-up half-body portrait: stunningly detailed face filled with awe and existential revelation, intensely piercing obsidian eyes reflecting constellations of glowing cuneiform data glyphs with sharp pupils and delicate specular catchlights. "
+            "Around him float towering columns of luminescent crystalline tablets and swirling spirals of golden text particles that illuminate the grand stone hall with dazzling radiant light. "
+            "Spectacular celestial twilight visible through high arches, rich saturated blues and golds, exquisite dynamic contrast, pristine illumination without dark gloom, pure art without text."
+        ),
+    },
 ]
 
 

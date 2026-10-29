@@ -554,6 +554,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Goldwasser Micali Rackoff The knowledge complexity of interactive proof systems SIAM Journal on Computing 1989",
         ),
     ],
+    "dazai-goodbye": [
+        (
+            "分散表現学習における関係性の解きほぐし（Disentanglement）",
+            "Higgins Matthey beta-VAE Learning Basic Visual Concepts with a Constrained Variational Framework",
+        ),
+        (
+            "暗号学的匿名クレデンシャルとゼロ知識身元証明",
+            "Camenisch Lysyanskaya Signature schemes and anonymous credentials",
+        ),
+        (
+            "安定結婚問題と非協力ゲームにおけるマッチング均衡",
+            "Gale Shapley College Admissions and the Stability of Marriage American Mathematical Monthly",
+        ),
+    ],
+    "miyazawa-donguri-to-yamaneko": [
+        (
+            "社会的選択理論におけるアローの不可能性定理と選好集約",
+            "Arrow A Difficulty in the Concept of Social Welfare Journal of Political Economy 1950",
+        ),
+        (
+            "多目的進化的アルゴリズムにおけるパレート最適性（NSGA-II）",
+            "Deb Pratap Agarwal Meyarivan A fast and elitist multiobjective genetic algorithm NSGA-II IEEE Transactions on Evolutionary Computation 2002",
+        ),
+        (
+            "マルコフ連鎖を用いたウェブ検索ランキング集約アルゴリズム",
+            "Dwork Kumar Naor Sivakumar Rank aggregation methods for the Web WWW 2001",
+        ),
+    ],
+    "nakajima-mojika": [
+        (
+            "生成AIの自己再帰学習における表象崩壊（Model Collapse）現象",
+            "Shumailov Shumaylov AI models collapse when trained on recursively generated data Nature 2024",
+        ),
+        (
+            "アルゴリズム情報理論とコルモゴロフ複雑性による記号限界",
+            "Kolmogorov Three approaches to the quantitative definition of information Problems of Information Transmission 1965",
+        ),
+        (
+            "物理的記号接地問題（Symbol Grounding Problem）と意味論の起源",
+            "Harnad The symbol grounding problem Physica D 1990",
+        ),
+    ],
 }
 
 
