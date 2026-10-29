@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-29T18:11:23.660106+09:00",
+  "updated_at": "2026-10-29T18:18:51.378279+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2100,19 +2100,19 @@
       "author": "泉鏡花",
       "theme": "音響放射圧共振障壁・ダム決壊極限流動サージ・気象改変暴走",
       "modern_tech": "ホログラフィック音響放射圧による超高密度量子流体封じ込め共振障壁、極限水理学的段波（サージ波）のナビエ・ストークス流体力学シミュレーション、エーロゾル注入型気象改変ジオエンジニアリングの熱力学的暴走現象",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-29_izumi_yashagaike.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-29",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-29_izumi_yashagaike.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-29"
     }
   ]
 }

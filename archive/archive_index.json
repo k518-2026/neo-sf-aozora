@@ -1518,5 +1518,21 @@
     "narration_file": "95_畜犬談_narration.txt",
     "full_file": "95_畜犬談_full.txt",
     "original_md_file": "95_畜犬談.md"
+  },
+  {
+    "work_no": 96,
+    "work_id": "izumi-yashagaike",
+    "title": "夜叉ヶ池",
+    "subtitle": "音響障壁の均衡と神域の熱力学",
+    "attribution": "",
+    "original_author": "泉鏡花",
+    "original_title": "夜叉ヶ池",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000050/card3407.html",
+    "modern_tech": "ホログラフィック音響放射圧による超高密度量子流体封じ込め共振障壁、極限水理学的段波（サージ波）のナビエ・ストークス流体力学シミュレーション、エーロゾル注入型気象改変ジオエンジニアリングの熱力学的暴走現象",
+    "summary": "霊峰の頂に湛えられた高密度量子流体貯水槽「夜叉ヶ池」。一日に三度、共振鐘を鳴らすことで音響放射圧障壁を維持し、下界の壊滅を防ぐ孤独な音響物理学者・晃と妻の百合。だが下流の村が未曾有の干魃に見舞われ、狂信的な村人たちが雨乞いのために無謀な大気ジオエンジニアリング放射と百合の生贄を強行したとき、共振障壁は破断し、天を衝く量子津波が咆哮する！",
+    "char_count": 3608,
+    "narration_file": "96_夜叉ヶ池_narration.txt",
+    "full_file": "96_夜叉ヶ池_full.txt",
+    "original_md_file": "96_夜叉ヶ池.md"
   }
 ]

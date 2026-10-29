@@ -1,5 +1,17 @@
 [
   {
+    "no": 96,
+    "work_id": "izumi-yashagaike",
+    "title": "夜叉ヶ池――音響障壁の均衡と神域の熱力学",
+    "original_title": "夜叉ヶ池",
+    "original_author": "泉鏡花",
+    "modern_tech": "ホログラフィック音響放射圧による超高密度量子流体封じ込め共振障壁、極限水理学的段波（サージ波）のナビエ・ストークス流体力学シミュレーション、エーロゾル注入型気象改変ジオエンジニアリングの熱力学的暴走現象",
+    "has_image": true,
+    "url": "stories/izumi-yashagaike.html",
+    "image": "assets/images/izumi-yashagaike.png",
+    "char_count": 5396
+  },
+  {
     "no": 95,
     "work_id": "dazai-chikukendan",
     "title": "畜犬談――報酬ハッキングする聖犬の機略",
