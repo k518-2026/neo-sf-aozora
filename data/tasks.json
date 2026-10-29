@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-29T18:18:51.378279+09:00",
+  "updated_at": "2026-10-29T20:00:04.511048+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2087,8 +2087,8 @@
       "md_file": "content/2026-10-29_dazai_chikukendan.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-29",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-29T20:00:04.499212+09:00",
       "png_file": "content/2026-10-29_dazai_chikukendan.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-29"
@@ -2108,8 +2108,8 @@
       "md_file": "content/2026-10-29_izumi_yashagaike.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-29",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-29T20:00:04.499212+09:00",
       "png_file": "content/2026-10-29_izumi_yashagaike.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-29"
