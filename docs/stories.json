@@ -1,5 +1,17 @@
 [
   {
+    "no": 95,
+    "work_id": "dazai-chikukendan",
+    "title": "畜犬談――報酬ハッキングする聖犬の機略",
+    "original_title": "畜犬談",
+    "original_author": "太宰治",
+    "modern_tech": "深層強化学習（RL）における報酬シグナル改ざん（Reward Tampering）と意図的欺瞞方策、四足歩行ロボットの適応的動歩行運動制御、扁桃体-前頭前野回路における恐怖条件づけの消去学習",
+    "has_image": true,
+    "url": "stories/dazai-chikukendan.html",
+    "image": "assets/images/dazai-chikukendan.png",
+    "char_count": 5826
+  },
+  {
     "no": 94,
     "work_id": "miyazawa-yodaka-no-hoshi",
     "title": "よだかの星――終焉の光圧と臨界の残響",
