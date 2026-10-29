@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-29T20:00:04.511048+09:00",
+  "updated_at": "2026-10-29T21:00:03.634599+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2045,8 +2045,8 @@
       "md_file": "content/2026-10-29_nakajima_mojika.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-29",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-29T21:00:03.633588+09:00",
       "png_file": "content/2026-10-29_nakajima_mojika.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-29"
@@ -2066,8 +2066,8 @@
       "md_file": "content/2026-10-29_miyazawa_yodaka_no_hoshi.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-29T18:01:48.102664+09:00",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-29T21:00:03.633588+09:00",
       "png_file": "content/2026-10-29_miyazawa_yodaka_no_hoshi.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-29T18:03:35.185693+09:00"
