@@ -1,7 +1,7 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-10-30T20:00:03`
+- **最終同期日時 (JST)**: `2026-10-30T21:00:03`
 - **進捗サマリー**: 全 **102** 作品 （完了: **102** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
@@ -29,11 +29,11 @@
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
 | #102 | `miyazawa-yamanashi` | やまなし（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #101 | `izumi-gekaritsu` | 外科室（泉鏡花） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #100 | `mori-maihime` | 舞姫（森鴎外） | - | ✓ `rtx5060lp` (2026-10-30) | 校閲済 | 🎨 (kenomac-mini) |
+| #100 | `mori-maihime` | 舞姫（森鴎外） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #99 | `izumi-yashagaike` | 夜叉ヶ池（泉鏡花） | - | ✓ `rtx5060lp` (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #98 | `dazai-chikukendan` | 畜犬談（太宰治） | - | ✓ `rtx5060lp` (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #97 | `miyazawa-yodaka-no-hoshi` | よだかの星（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #96 | `nakajima-mojika` | 文字禍（中島敦） | - | ✓ `rtx5060lp` (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #95 | `miyazawa-donguri-to-yamaneko` | どんぐりと山猫（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-29) | 校閲済 | 🎨 (kenomac-mini) |
+| #95 | `miyazawa-donguri-to-yamaneko` | どんぐりと山猫（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #94 | `dazai-goodbye` | グッド・バイ（太宰治） | - | ✓ `rtx5060lp` (2026-10-29) | 校閲済 | 🎨 (kenomac-mini) |
 | #93 | `edogawa-nisen-doka` | 二銭銅貨（江戸川乱歩） | - | ✓ `rtx5060lp` (2026-10-25) | ✓ (sff7020) | 🎨 (kenomac-mini) |
