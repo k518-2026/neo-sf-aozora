@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-30T17:29:09.263376+09:00",
+  "updated_at": "2026-10-30T17:36:31.124707+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2142,19 +2142,19 @@
       "author": "泉鏡花",
       "theme": "痛覚ゲートコントロール・意識複雑性指標・完全準同型秘密計算",
       "modern_tech": "脊髄膠様質における痛覚ゲートコントロール理論と下行性疼痛抑制系、経頭蓋磁気刺激-脳波による意識レベル判定（Perturbational Complexity Index, PCI）、格子暗号・完全準同型暗号による生体神経秘密計算とデータ保護",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-30_izumi_gekaritsu.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-30",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-30_izumi_gekaritsu.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-30"
     },
     {
       "id": "miyazawa-yamanashi",

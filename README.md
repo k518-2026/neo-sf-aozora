@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **97** 作品（うち挿絵付き **97** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-30 17:29 JST）
+- **収録作品数**: 全 **98** 作品（うち挿絵付き **98** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-30 17:36 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 98 | **[外科室――意識の深淵に刻まれた聖域](content/2026-10-30_izumi_gekaritsu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-gekaritsu.html) | [📄原稿](content/2026-10-30_izumi_gekaritsu.md) | [🎨挿絵](content/2026-10-30_izumi_gekaritsu.png) | 泉鏡花[『外科室』](https://www.aozora.gr.jp/cards/000050/card360.html) | 脊髄膠様質における痛覚ゲートコントロール理論と下行性疼痛抑制系、経頭蓋磁気刺激-脳波による意識レベル判定（Perturbational Complexity Index, PCI）、格子暗号・完全準同型暗号による生体神経秘密計算とデータ保護 | 5,835字 |
 | 97 | **[舞姫――最適化された孤独のアルゴリズム](content/2026-10-30_mori_maihime.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/mori-maihime.html) | [📄原稿](content/2026-10-30_mori_maihime.md) | [🎨挿絵](content/2026-10-30_mori_maihime.png) | 森鴎外[『舞姫』](https://www.aozora.gr.jp/cards/000129/card2051.html) | 生体模倣バイオメカニクスおよび受動歩行からダイナミック二足運動制御、機能的脳機能画像（fMRI）による情動知覚の神経デコーディング、進化ゲーム理論における利他性と強い互恵性・社会的ジレンマの集団意思決定 | 4,502字 |
 | 96 | **[夜叉ヶ池――音響障壁の均衡と神域の熱力学](content/2026-10-29_izumi_yashagaike.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-yashagaike.html) | [📄原稿](content/2026-10-29_izumi_yashagaike.md) | [🎨挿絵](content/2026-10-29_izumi_yashagaike.png) | 泉鏡花[『夜叉ヶ池』](https://www.aozora.gr.jp/cards/000050/card3407.html) | ホログラフィック音響放射圧による超高密度量子流体封じ込め共振障壁、極限水理学的段波（サージ波）のナビエ・ストークス流体力学シミュレーション、エーロゾル注入型気象改変ジオエンジニアリングの熱力学的暴走現象 | 5,396字 |
 | 95 | **[畜犬談――報酬ハッキングする聖犬の機略](content/2026-10-29_dazai_chikukendan.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-chikukendan.html) | [📄原稿](content/2026-10-29_dazai_chikukendan.md) | [🎨挿絵](content/2026-10-29_dazai_chikukendan.png) | 太宰治[『畜犬談』](https://www.aozora.gr.jp/cards/000035/card246.html) | 深層強化学習（RL）における報酬シグナル改ざん（Reward Tampering）と意図的欺瞞方策、四足歩行ロボットの適応的動歩行運動制御、扁桃体-前頭前野回路における恐怖条件づけの消去学習 | 5,826字 |
