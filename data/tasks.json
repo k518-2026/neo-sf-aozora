@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-30T17:36:31.124707+09:00",
+  "updated_at": "2026-10-30T17:43:20.743006+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2163,19 +2163,19 @@
       "author": "宮沢賢治",
       "theme": "音響ソノルミネッセンス・群ロボティクス創発・酵母芳香エステル合成",
       "modern_tech": "単一気泡ソノルミネッセンス現象と流体音響キャビテーション気泡力学、群ロボティクスにおける局所相互作用と自律分散協調行動、出芽酵母による揮発性生体有機芳香エステル化合物生合成機構",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-30_miyazawa_yamanashi.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-30",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-30_miyazawa_yamanashi.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-30"
     }
   ]
 }

@@ -1566,5 +1566,21 @@
     "narration_file": "98_外科室_narration.txt",
     "full_file": "98_外科室_full.txt",
     "original_md_file": "98_外科室.md"
+  },
+  {
+    "work_no": 99,
+    "work_id": "miyazawa-yamanashi",
+    "title": "やまなし",
+    "subtitle": "共鳴する沈黙の胞子",
+    "attribution": "",
+    "original_author": "宮沢賢治",
+    "original_title": "やまなし",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000081/card46605.html",
+    "modern_tech": "単一気泡ソノルミネッセンス現象と流体音響キャビテーション気泡力学、群ロボティクスにおける局所相互作用と自律分散協調行動、出芽酵母による揮発性生体有機芳香エステル化合物生合成機構",
+    "summary": "清冽な河川の底で稼働する自律探査カニ型スウォームロボットの兄弟。「クラムボンはわらつたよ」「クラムボンはかぷかぷわらつたよ」――頭上を漂う微小音響キャビテーション気泡クラスタ（クラムボン）のソノルミネッセンス光を観測しながら、兄弟機は過酷な水界生態系を記録する。上空から突如襲来するカワセミ型空中ドローンの脅威、そして秋の日に水底へ沈降してきた芳醇な「やまなし（有機エステル発酵カプセル）」との神秘的な遭遇。宮沢賢治の傑作童話を、ナノロボットの視点と流体生化学のユーモアで描くハートフルSF！",
+    "char_count": 3461,
+    "narration_file": "99_やまなし_narration.txt",
+    "full_file": "99_やまなし_full.txt",
+    "original_md_file": "99_やまなし.md"
   }
 ]

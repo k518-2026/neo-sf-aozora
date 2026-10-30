@@ -1,5 +1,17 @@
 [
   {
+    "no": 99,
+    "work_id": "miyazawa-yamanashi",
+    "title": "やまなし――共鳴する沈黙の胞子",
+    "original_title": "やまなし",
+    "original_author": "宮沢賢治",
+    "modern_tech": "単一気泡ソノルミネッセンス現象と流体音響キャビテーション気泡力学、群ロボティクスにおける局所相互作用と自律分散協調行動、出芽酵母による揮発性生体有機芳香エステル化合物生合成機構",
+    "has_image": true,
+    "url": "stories/miyazawa-yamanashi.html",
+    "image": "assets/images/miyazawa-yamanashi.png",
+    "char_count": 5405
+  },
+  {
     "no": 98,
     "work_id": "izumi-gekaritsu",
     "title": "外科室――意識の深淵に刻まれた聖域",
