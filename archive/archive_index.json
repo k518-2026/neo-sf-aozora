@@ -1534,5 +1534,21 @@
     "narration_file": "96_夜叉ヶ池_narration.txt",
     "full_file": "96_夜叉ヶ池_full.txt",
     "original_md_file": "96_夜叉ヶ池.md"
+  },
+  {
+    "work_no": 97,
+    "work_id": "mori-maihime",
+    "title": "舞姫",
+    "subtitle": "最適化された孤独のアルゴリズム",
+    "attribution": "",
+    "original_author": "森鴎外",
+    "original_title": "舞姫",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000129/card2051.html",
+    "modern_tech": "生体模倣バイオメカニクスおよび受動歩行からダイナミック二足運動制御、機能的脳機能画像（fMRI）による情動知覚の神経デコーディング、進化ゲーム理論における利他性と強い互恵性・社会的ジレンマの集団意思決定",
+    "summary": "【祝・第100作記念】ネオ・ベルリンに派遣された量子情報省の若き官僚エリート・太田豊太郎。彼はサイバネティクス劇場で優雅に舞う人工生体バレリーナ・エリスと出会い、孤独な魂を通わせ合う。だが本国中央政府の召還命令と、出世を至上命題とする官僚機構のアルゴリズム的同調圧力が二人の絆を引き裂く。近代日本の自我の目覚めと社会的最適化の悲痛な相克を描く、日本近代文学の最高峰をハードSFリブート！",
+    "char_count": 2802,
+    "narration_file": "97_舞姫_narration.txt",
+    "full_file": "97_舞姫_full.txt",
+    "original_md_file": "97_舞姫.md"
   }
 ]

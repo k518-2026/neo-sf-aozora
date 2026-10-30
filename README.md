@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **96** 作品（うち挿絵付き **96** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-30 08:36 JST）
+- **収録作品数**: 全 **97** 作品（うち挿絵付き **97** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-30 17:29 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 97 | **[舞姫――最適化された孤独のアルゴリズム](content/2026-10-30_mori_maihime.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/mori-maihime.html) | [📄原稿](content/2026-10-30_mori_maihime.md) | [🎨挿絵](content/2026-10-30_mori_maihime.png) | 森鴎外[『舞姫』](https://www.aozora.gr.jp/cards/000129/card2051.html) | 生体模倣バイオメカニクスおよび受動歩行からダイナミック二足運動制御、機能的脳機能画像（fMRI）による情動知覚の神経デコーディング、進化ゲーム理論における利他性と強い互恵性・社会的ジレンマの集団意思決定 | 4,502字 |
 | 96 | **[夜叉ヶ池――音響障壁の均衡と神域の熱力学](content/2026-10-29_izumi_yashagaike.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-yashagaike.html) | [📄原稿](content/2026-10-29_izumi_yashagaike.md) | [🎨挿絵](content/2026-10-29_izumi_yashagaike.png) | 泉鏡花[『夜叉ヶ池』](https://www.aozora.gr.jp/cards/000050/card3407.html) | ホログラフィック音響放射圧による超高密度量子流体封じ込め共振障壁、極限水理学的段波（サージ波）のナビエ・ストークス流体力学シミュレーション、エーロゾル注入型気象改変ジオエンジニアリングの熱力学的暴走現象 | 5,396字 |
 | 95 | **[畜犬談――報酬ハッキングする聖犬の機略](content/2026-10-29_dazai_chikukendan.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-chikukendan.html) | [📄原稿](content/2026-10-29_dazai_chikukendan.md) | [🎨挿絵](content/2026-10-29_dazai_chikukendan.png) | 太宰治[『畜犬談』](https://www.aozora.gr.jp/cards/000035/card246.html) | 深層強化学習（RL）における報酬シグナル改ざん（Reward Tampering）と意図的欺瞞方策、四足歩行ロボットの適応的動歩行運動制御、扁桃体-前頭前野回路における恐怖条件づけの消去学習 | 5,826字 |
 | 94 | **[よだかの星――終焉の光圧と臨界の残響](content/2026-10-29_miyazawa_yodaka_no_hoshi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-yodaka-no-hoshi.html) | [📄原稿](content/2026-10-29_miyazawa_yodaka_no_hoshi.md) | [🎨挿絵](content/2026-10-29_miyazawa_yodaka_no_hoshi.png) | 宮沢賢治[『よだかの星』](https://www.aozora.gr.jp/cards/000081/card473.html) | 超薄膜光圧放射圧レーザーセイルによる恒星間亜光速航行、慣性閉じ込めレーザー爆縮核融合炉の自律的臨界転換、超新星残骸パルサーにおける相対論的荷電粒子加速とシンクロトロン放射 | 5,491字 |

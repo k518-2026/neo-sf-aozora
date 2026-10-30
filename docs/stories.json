@@ -1,5 +1,17 @@
 [
   {
+    "no": 97,
+    "work_id": "mori-maihime",
+    "title": "舞姫――最適化された孤独のアルゴリズム",
+    "original_title": "舞姫",
+    "original_author": "森鴎外",
+    "modern_tech": "生体模倣バイオメカニクスおよび受動歩行からダイナミック二足運動制御、機能的脳機能画像（fMRI）による情動知覚の神経デコーディング、進化ゲーム理論における利他性と強い互恵性・社会的ジレンマの集団意思決定",
+    "has_image": true,
+    "url": "stories/mori-maihime.html",
+    "image": "assets/images/mori-maihime.png",
+    "char_count": 4502
+  },
+  {
     "no": 96,
     "work_id": "izumi-yashagaike",
     "title": "夜叉ヶ池――音響障壁の均衡と神域の熱力学",
