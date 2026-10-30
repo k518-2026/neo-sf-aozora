@@ -1351,6 +1351,49 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Dramatic twilight sky streaked with auroral gold and violet energy surges, radiant atmospheric lighting, crisp dynamic contrast, no murky darkness, pure art without text."
         ),
     },
+    {
+        "index": 100,
+        "work_id": "mori-maihime",
+        "title": "舞姫",
+        "author": "森鴎外",
+        "content_paths": [Path("content/2026-10-30_mori_maihime.png")],
+        "docs_path": Path("docs/assets/images/mori-maihime.png"),
+        "prompt": (
+            "Cinematic sci-fi anime romantic tragedy illustration celebrating the 100th masterpiece story. "
+            "Masterpiece close-up half-body portrait of Toyotaro, a dignified young Japanese quantum cyber-bureaucrat in an immaculate high-collared navy uniform, holding hands with Elise, an ethereal and breathtakingly beautiful cybernetic ballerina with shimmering blonde hair and delicate silver interface ribbons. "
+            "Both characters have exceptionally detailed, gorgeously rendered eyes: Toyotaro with sorrowful deep amber eyes reflecting conflicted duty, Elise with radiant sapphire eyes glistening with tender emotional light, crystal-clear pupils, and delicate specular catchlights. "
+            "Set on the grand illuminated balcony of the neo-Berlin Imperial Cyber-Opera House overlooking a breathtaking night vista of Unter den Linden bathed in golden gaslight holograms and glowing transit beams. "
+            "Opulent ambient lighting, magnificent dynamic contrast, richly saturated golds and deep blues, pristine atmospheric clarity without murky gloom, pure art without text."
+        ),
+    },
+    {
+        "index": 101,
+        "work_id": "izumi-gekaritsu",
+        "title": "外科室",
+        "author": "泉鏡花",
+        "content_paths": [Path("content/2026-10-30_izumi_gekaritsu.png")],
+        "docs_path": Path("docs/assets/images/izumi-gekaritsu.png"),
+        "prompt": (
+            "Cinematic sci-fi anime intense emotional drama illustration of Dr. Takamine, a brilliant and austere Japanese neurosurgeon in clean high-tech medical robes, preparing for a delicate unanesthetized neural operation with the noble Countess Kifune. "
+            "Masterpiece close-up portrait: the Countess lies with serene and transcendent resolve, gazing up at Takamine with remarkably expressive, tear-glistening obsidian eyes featuring sharp pupils and blazing catchlights of unspoken love; Takamine looks down with deeply focused, piercing dark eyes filled with sacred concentration. "
+            "The state-of-the-art operating theater is brilliantly illuminated with pristine surgical white and gold ambient lighting, surrounded by floating translucent holographic vital-signs lattices and glowing neural synapse displays in vivid emerald and cyan. "
+            "Spectacular crisp dynamic contrast, immaculate luminous environment, completely free of murky shadows, pure art without text."
+        ),
+    },
+    {
+        "index": 102,
+        "work_id": "miyazawa-yamanashi",
+        "title": "やまなし",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-10-30_miyazawa_yamanashi.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-yamanashi.png"),
+        "prompt": (
+            "Cinematic sci-fi anime whimsical underwater wonder illustration of two adorable, sleek mechanical autonomous crab scout probes exploring a crystal-clear riverbed in an enchanted valley. "
+            "Masterpiece portrait: the two crab probes have expressive, glowing circular optical sensor eyes with sparkling crystalline highlights, curiously raising their miniature manipulators toward shimmering clusters of floating sonoluminescent micro-bubbles ('Clambon') that emit radiant azure and mint-green luminescence. "
+            "Above them, through pristine flowing water, brilliant golden beams of autumn sunlight pierce the stream like shimmering pillars of light, illuminating smooth colorful river pebbles and a ripe, aromatic golden bio-capsule ('Yamanashi') gently sinking to the sandy floor with tiny bubbling trails. "
+            "Vivid saturated aquamarine and golden amber tones, dazzling dynamic contrast, joyous luminous atmosphere without dark murkiness, pure art without text."
+        ),
+    },
 ]
 
 

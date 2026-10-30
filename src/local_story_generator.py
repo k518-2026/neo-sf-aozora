@@ -638,6 +638,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Robock 20 reasons why geoengineering may be a bad idea Bulletin of the Atomic Scientists 2008",
         ),
     ],
+    "mori-maihime": [
+        (
+            "受動歩行およびダイナミック二足歩行運動制御力学",
+            "Collins Ruina Efficient bipedal robots based on passive-dynamic walkers Nature 2005",
+        ),
+        (
+            "機能的脳機能画像による情動知覚の神経デコーディング",
+            "Kragel LaBar Decoding facial expressions of emotion from frontoparietal cortex Nature Communications 2018",
+        ),
+        (
+            "進化ゲーム理論における利他性と強い互恵性の進化",
+            "Bowles Gintis The evolution of strong reciprocity cooperation in heterogeneous populations Theoretical Population Biology 2004",
+        ),
+    ],
+    "izumi-gekaritsu": [
+        (
+            "脊髄膠様質痛覚制御機構とゲートコントロール理論",
+            "Melzack Wall Pain mechanisms A new theory Science 1965",
+        ),
+        (
+            "経頭蓋磁気刺激と脳波摂動複雑性指標（PCI）による意識判定",
+            "Casali Gosseries Massimini A theoretically based index of consciousness independent of sensory processing Science Translational Medicine 2013",
+        ),
+        (
+            "完全準同型暗号による秘密計算と生体データ保護",
+            "Gentry A fully homomorphic encryption scheme Stanford University 2009",
+        ),
+    ],
+    "miyazawa-yamanashi": [
+        (
+            "単一気泡ソノルミネッセンスと流体音響キャビテーション",
+            "Brenner Hilgenfeldt Lohse Single-bubble sonoluminescence Reviews of Modern Physics 2002",
+        ),
+        (
+            "群ロボティクスにおける自律分散協調と創発行動",
+            "Brambilla Ferrante Birattari Dorigo Swarm robotics a review from the swarm engineering perspective Swarm Intelligence 2013",
+        ),
+        (
+            "出芽酵母による揮発性芳香エステル化合物生合成機構",
+            "Saerens Duong Verstrepen Production of volatile aroma compounds by Saccharomyces cerevisiae Applied Microbiology and Biotechnology 2010",
+        ),
+    ],
 }
 
 
