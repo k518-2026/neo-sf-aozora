@@ -1,5 +1,17 @@
 [
   {
+    "no": 102,
+    "work_id": "miyazawa-otsuberu-to-zo",
+    "title": "オツベルと象――バイオハイブリッド工場における「意志」の不協和音",
+    "original_title": "オツベルと象",
+    "original_author": "宮沢賢治",
+    "modern_tech": "アジアゾウにおける超低周波不可聴インフラサウンド音響通信、生体骨格筋アクチュエータを用いたバイオハイブリッド・ロボティクス、サイバーフィジカル生産システムにおける自律分散型製造制御",
+    "has_image": true,
+    "url": "stories/miyazawa-otsuberu-to-zo.html",
+    "image": "assets/images/miyazawa-otsuberu-to-zo.png",
+    "char_count": 5721
+  },
+  {
     "no": 101,
     "work_id": "dazai-hifu-to-kokoro",
     "title": "皮膚と心――完璧なる虚飾の崩壊",

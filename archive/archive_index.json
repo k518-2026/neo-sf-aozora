@@ -1614,5 +1614,21 @@
     "narration_file": "101_皮膚と心_narration.txt",
     "full_file": "101_皮膚と心_full.txt",
     "original_md_file": "101_皮膚と心.md"
+  },
+  {
+    "work_no": 102,
+    "work_id": "miyazawa-otsuberu-to-zo",
+    "title": "オツベルと象",
+    "subtitle": "バイオハイブリッド工場における「意志」の不協和音",
+    "attribution": "",
+    "original_author": "宮沢賢治",
+    "original_title": "オツベルと象",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000081/card460.html",
+    "modern_tech": "アジアゾウにおける超低周波不可聴インフラサウンド音響通信、生体骨格筋アクチュエータを用いたバイオハイブリッド・ロボティクス、サイバーフィジカル生産システムにおける自律分散型製造制御",
+    "summary": "「オツベルときたら大したもんだ」——完全自動化メガ・アグロプラントを牛耳る冷酷な工場主オツベルは、迷い込んだ純白の巨大バイオ・タイタン（白象）を糖質ナノペレットと神経拘束バンドで騙し、過酷な重労働を課す。衰弱した白象が発した超低周波インフラサウンドSOS暗号を感知し、赤眼の野生バイオ・タイタン大隊が地鳴りとともに工場へ突入する！痛快無比の怪獣バイオSFパロディ！",
+    "char_count": 3741,
+    "narration_file": "102_オツベルと象_narration.txt",
+    "full_file": "102_オツベルと象_full.txt",
+    "original_md_file": "102_オツベルと象.md"
   }
 ]

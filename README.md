@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **101** 作品（うち挿絵付き **101** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-31 21:53 JST）
+- **収録作品数**: 全 **102** 作品（うち挿絵付き **102** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-31 22:00 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 102 | **[オツベルと象――バイオハイブリッド工場における「意志」の不協和音](content/2026-10-31_miyazawa_otsuberu_to_zo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-otsuberu-to-zo.html) | [📄原稿](content/2026-10-31_miyazawa_otsuberu_to_zo.md) | [🎨挿絵](content/2026-10-31_miyazawa_otsuberu_to_zo.png) | 宮沢賢治[『オツベルと象』](https://www.aozora.gr.jp/cards/000081/card460.html) | アジアゾウにおける超低周波不可聴インフラサウンド音響通信、生体骨格筋アクチュエータを用いたバイオハイブリッド・ロボティクス、サイバーフィジカル生産システムにおける自律分散型製造制御 | 5,721字 |
 | 101 | **[皮膚と心――完璧なる虚飾の崩壊](content/2026-10-31_dazai_hifu_to_kokoro.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-hifu-to-kokoro.html) | [📄原稿](content/2026-10-31_dazai_hifu_to_kokoro.md) | [🎨挿絵](content/2026-10-31_dazai_hifu_to_kokoro.png) | 太宰治[『皮膚と心』](https://www.aozora.gr.jp/cards/000035/card286.html) | フレキシブル有機電界効果トランジスタによる大面積人工皮膚（e-skin）、身体醜形障害における顔面視覚情報処理と神経基盤、標的化ナノ粒子ドラッグデリバリーによる生体組織修復 | 5,450字 |
 | 100 | **[弟子――ビザンチン・プロトコルの殉職](content/2026-10-31_nakajima_deshi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-deshi.html) | [📄原稿](content/2026-10-31_nakajima_deshi.md) | [🎨挿絵](content/2026-10-31_nakajima_deshi.png) | 中島敦[『弟子』](https://www.aozora.gr.jp/cards/000119/card622.html) | 大規模推論モデルのRLHF/RLAIF規範倫理アライメント理論、ビザンチン障害耐性分散合意アルゴリズム、運動機能再建のための侵襲型ブレイン・マシン・インターフェースと高トルク人工筋骨格制御 | 5,820字 |
 | 99 | **[やまなし――共鳴する沈黙の胞子](content/2026-10-30_miyazawa_yamanashi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-yamanashi.html) | [📄原稿](content/2026-10-30_miyazawa_yamanashi.md) | [🎨挿絵](content/2026-10-30_miyazawa_yamanashi.png) | 宮沢賢治[『やまなし』](https://www.aozora.gr.jp/cards/000081/card46605.html) | 単一気泡ソノルミネッセンス現象と流体音響キャビテーション気泡力学、群ロボティクスにおける局所相互作用と自律分散協調行動、出芽酵母による揮発性生体有機芳香エステル化合物生合成機構 | 5,405字 |
