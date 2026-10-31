@@ -1598,5 +1598,21 @@
     "narration_file": "100_弟子_narration.txt",
     "full_file": "100_弟子_full.txt",
     "original_md_file": "100_弟子.md"
+  },
+  {
+    "work_no": 101,
+    "work_id": "dazai-hifu-to-kokoro",
+    "title": "皮膚と心",
+    "subtitle": "完璧なる虚飾の崩壊",
+    "attribution": "",
+    "original_author": "太宰治",
+    "original_title": "皮膚と心",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000035/card286.html",
+    "modern_tech": "フレキシブル有機電界効果トランジスタによる大面積人工皮膚（e-skin）、身体醜形障害における顔面視覚情報処理と神経基盤、標的化ナノ粒子ドラッグデリバリーによる生体組織修復",
+    "summary": "24歳の若妻は、全身に纏った最高級メイドインジャパンの生体デザイン・ナノスキン（有機人工皮膚）の乳房脇に、微小な異常隆起（おでき）を発見する。「醜い！これじゃ夫に嫌われてしまう！」と自己意識が猛烈に暴走し、サイバー皮膚科のヤブ診断AIに絶望しながら阿鼻叫喚の自意識迷宮を彷徨う。太宰治特有の自意識過剰モノローグが現代サイバーパンクと融合した最高峰のパロディ・ハードSFコメディ！",
+    "char_count": 3536,
+    "narration_file": "101_皮膚と心_narration.txt",
+    "full_file": "101_皮膚と心_full.txt",
+    "original_md_file": "101_皮膚と心.md"
   }
 ]

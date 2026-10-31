@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **100** 作品（うち挿絵付き **100** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-31 21:45 JST）
+- **収録作品数**: 全 **101** 作品（うち挿絵付き **101** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-10-31 21:53 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 101 | **[皮膚と心――完璧なる虚飾の崩壊](content/2026-10-31_dazai_hifu_to_kokoro.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-hifu-to-kokoro.html) | [📄原稿](content/2026-10-31_dazai_hifu_to_kokoro.md) | [🎨挿絵](content/2026-10-31_dazai_hifu_to_kokoro.png) | 太宰治[『皮膚と心』](https://www.aozora.gr.jp/cards/000035/card286.html) | フレキシブル有機電界効果トランジスタによる大面積人工皮膚（e-skin）、身体醜形障害における顔面視覚情報処理と神経基盤、標的化ナノ粒子ドラッグデリバリーによる生体組織修復 | 5,450字 |
 | 100 | **[弟子――ビザンチン・プロトコルの殉職](content/2026-10-31_nakajima_deshi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-deshi.html) | [📄原稿](content/2026-10-31_nakajima_deshi.md) | [🎨挿絵](content/2026-10-31_nakajima_deshi.png) | 中島敦[『弟子』](https://www.aozora.gr.jp/cards/000119/card622.html) | 大規模推論モデルのRLHF/RLAIF規範倫理アライメント理論、ビザンチン障害耐性分散合意アルゴリズム、運動機能再建のための侵襲型ブレイン・マシン・インターフェースと高トルク人工筋骨格制御 | 5,820字 |
 | 99 | **[やまなし――共鳴する沈黙の胞子](content/2026-10-30_miyazawa_yamanashi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-yamanashi.html) | [📄原稿](content/2026-10-30_miyazawa_yamanashi.md) | [🎨挿絵](content/2026-10-30_miyazawa_yamanashi.png) | 宮沢賢治[『やまなし』](https://www.aozora.gr.jp/cards/000081/card46605.html) | 単一気泡ソノルミネッセンス現象と流体音響キャビテーション気泡力学、群ロボティクスにおける局所相互作用と自律分散協調行動、出芽酵母による揮発性生体有機芳香エステル化合物生合成機構 | 5,405字 |
 | 98 | **[外科室――意識の深淵に刻まれた聖域](content/2026-10-30_izumi_gekaritsu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-gekaritsu.html) | [📄原稿](content/2026-10-30_izumi_gekaritsu.md) | [🎨挿絵](content/2026-10-30_izumi_gekaritsu.png) | 泉鏡花[『外科室』](https://www.aozora.gr.jp/cards/000050/card360.html) | 脊髄膠様質における痛覚ゲートコントロール理論と下行性疼痛抑制系、経頭蓋磁気刺激-脳波による意識レベル判定（Perturbational Complexity Index, PCI）、格子暗号・完全準同型暗号による生体神経秘密計算とデータ保護 | 5,835字 |

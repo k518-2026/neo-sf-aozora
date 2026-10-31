@@ -1,5 +1,17 @@
 [
   {
+    "no": 101,
+    "work_id": "dazai-hifu-to-kokoro",
+    "title": "皮膚と心――完璧なる虚飾の崩壊",
+    "original_title": "皮膚と心",
+    "original_author": "太宰治",
+    "modern_tech": "フレキシブル有機電界効果トランジスタによる大面積人工皮膚（e-skin）、身体醜形障害における顔面視覚情報処理と神経基盤、標的化ナノ粒子ドラッグデリバリーによる生体組織修復",
+    "has_image": true,
+    "url": "stories/dazai-hifu-to-kokoro.html",
+    "image": "assets/images/dazai-hifu-to-kokoro.png",
+    "char_count": 5450
+  },
+  {
     "no": 100,
     "work_id": "nakajima-deshi",
     "title": "弟子――ビザンチン・プロトコルの殉職",
