@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-31T21:45:35.828527+09:00",
+  "updated_at": "2026-10-31T21:46:07.083875+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -428,8 +428,8 @@
       "md_file": "content/2026-10-01_edogawa_attic_stroller.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-01",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-31T21:46:07.083078+09:00",
       "png_file": "content/2026-10-01_edogawa_attic_stroller.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-01"
@@ -2192,8 +2192,8 @@
       "md_file": "content/2026-10-31_nakajima_deshi.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-10-31T21:43:47.975667+09:00",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-10-31T21:46:07.083078+09:00",
       "png_file": "content/2026-10-31_nakajima_deshi.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-10-31T21:45:35.763093+09:00"
