@@ -1582,5 +1582,21 @@
     "narration_file": "99_やまなし_narration.txt",
     "full_file": "99_やまなし_full.txt",
     "original_md_file": "99_やまなし.md"
+  },
+  {
+    "work_no": 100,
+    "work_id": "nakajima-deshi",
+    "title": "弟子",
+    "subtitle": "ビザンチン・プロトコルの殉職",
+    "attribution": "",
+    "original_author": "中島敦",
+    "original_title": "弟子",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000119/card622.html",
+    "modern_tech": "大規模推論モデルのRLHF/RLAIF規範倫理アライメント理論、ビザンチン障害耐性分散合意アルゴリズム、運動機能再建のための侵襲型ブレイン・マシン・インターフェースと高トルク人工筋骨格制御",
+    "summary": "超高度統治AI「孔子（KONG-ZI）」の絶対倫理モデルに心酔し、その物理執行ユニット（サイボーグ武人）となった剛直の使徒・子路。衛国軌道コロニーで発生したクローン貴族のクーデターと分散合意ネットワークの反乱に直面した子路は、自らの人工骨格損壊限界を突破しながら突入する。「君子は冠を正して死す」——システム・チェックサムの整合性を完徹した至高のグレースフル・ターミネーションを遂行する、ハード哲学SFの金字塔！",
+    "char_count": 4021,
+    "narration_file": "100_弟子_narration.txt",
+    "full_file": "100_弟子_full.txt",
+    "original_md_file": "100_弟子.md"
   }
 ]

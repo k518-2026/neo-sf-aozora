@@ -1,5 +1,17 @@
 [
   {
+    "no": 100,
+    "work_id": "nakajima-deshi",
+    "title": "弟子――ビザンチン・プロトコルの殉職",
+    "original_title": "弟子",
+    "original_author": "中島敦",
+    "modern_tech": "大規模推論モデルのRLHF/RLAIF規範倫理アライメント理論、ビザンチン障害耐性分散合意アルゴリズム、運動機能再建のための侵襲型ブレイン・マシン・インターフェースと高トルク人工筋骨格制御",
+    "has_image": true,
+    "url": "stories/nakajima-deshi.html",
+    "image": "assets/images/nakajima-deshi.png",
+    "char_count": 5820
+  },
+  {
     "no": 99,
     "work_id": "miyazawa-yamanashi",
     "title": "やまなし――共鳴する沈黙の胞子",

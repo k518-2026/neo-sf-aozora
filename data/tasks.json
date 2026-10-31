@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-10-31T21:38:12.673966+09:00",
+  "updated_at": "2026-10-31T21:45:35.828527+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2184,19 +2184,19 @@
       "author": "中島敦",
       "theme": "超知能AGI規範倫理・ビザンチン合意・自律サイボーグのフォールトトレランス",
       "modern_tech": "大規模推論モデルのRLHF/RLAIF規範倫理アライメント理論、ビザンチン障害耐性分散合意アルゴリズム、運動機能再建のための侵襲型ブレイン・マシン・インターフェースと高トルク人工筋骨格制御",
-      "status": "plot_ready",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": "data/plots/nakajima-deshi.md",
       "plot_by": "sff7020",
       "plot_at": "2026-10-31T21:36:05.992310+09:00",
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-10-31_nakajima_deshi.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-10-31T21:43:47.975667+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-10-31_nakajima_deshi.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-10-31T21:45:35.763093+09:00"
     },
     {
       "id": "dazai-hifu-to-kokoro",
