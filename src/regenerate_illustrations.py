@@ -1394,113 +1394,46 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Vivid saturated aquamarine and golden amber tones, dazzling dynamic contrast, joyous luminous atmosphere without dark murkiness, pure art without text."
         ),
     },
+    {
+        "index": 103,
+        "work_id": "nakajima-deshi",
+        "title": "弟子",
+        "author": "中島敦",
+        "content_paths": [Path("content/2026-10-31_nakajima_deshi.png")],
+        "docs_path": Path("docs/assets/images/nakajima-deshi.png"),
+        "prompt": (
+            "Cinematic sci-fi anime cyberpunk illustration. "
+            "Masterpiece dynamic medium-full shot of Zilu, a fierce and heavily augmented cyborg warrior with glowing cyan cybernetic conduits along his muscular arms and battle-worn ceramic armor, standing proudly amidst flying sparks and holographic system alerts. "
+            "Beside him hovers the ethereal, translucent golden holographic avatar of Confucius (KONG-ZI), an ancient sage projected in intricate flowing data robes. "
+            "Futuristic orbital pagoda backdrop with shattered energy shields, neon character runes cascading in the dark sky, high-voltage lighting, ultra-detailed textures, 8k masterpiece, pure art without text."
+        ),
+    },
+    {
+        "index": 104,
+        "work_id": "dazai-hifu-to-kokoro",
+        "title": "皮膚と心",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-10-31_dazai_hifu_to_kokoro.png")],
+        "docs_path": Path("docs/assets/images/dazai-hifu-to-kokoro.png"),
+        "prompt": (
+            "Cinematic satirical cyber-comedy anime illustration. "
+            "Masterpiece portrait of a dramatic and fashionable young Japanese woman wearing a futuristic sheer silk cyber-kimono, peering into a floating augmented-reality vanity mirror with wide, exaggerated distressed amber eyes and flushed cheeks. "
+            "Her pearlescent bio-nano skin has tiny glowing circuitry grids, and she hysterically examines a microscopic glowing red anomaly near her collarbone with a holographic magnifying tool. "
+            "A humorous round floating medical diagnostic robot hovers nearby displaying panic alerts and heartbeat graphs, chic neo-Tokyo apartment interior, soft neon pastel tones, expressive anime facial art, pure art without text."
+        ),
+    },
+    {
+        "index": 105,
+        "work_id": "miyazawa-otsuberu-to-zo",
+        "title": "オツベルと象",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-10-31_miyazawa_otsuberu_to_zo.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-otsuberu-to-zo.png"),
+        "prompt": (
+            "Cinematic epic bio-cyberpunk hard SF illustration. "
+            "Masterpiece wide dynamic shot of a colossal, majestic bio-mechanical white titan elephant with luminous ivory tusks and glowing azure muscle fibers breaking heavy steel laser-restraint chains in an automated mega-factory. "
+            "In the background, shadowy figures of greedy cyber-industrialist Otsubel and automated security drones retreat in panic, while the horizon glows with the ruby-red optical sensors of an approaching herd of wild bio-titans tearing down the factory walls. "
+            "Dramatic steam and sparks, dynamic volumetric lighting, monumental scale, cinematic sci-fi fantasy anime style, 8k masterpiece, pure art without text."
+        ),
+    },
 ]
-
-
-def generate_single_illustration(spec: Dict[str, Any], url: str = DRAW_THINGS_URL) -> bool:
-    idx = spec["index"]
-    title = spec["title"]
-    work_id = spec["work_id"]
-    prompt = spec["prompt"]
-
-    logger.info(f"[{idx}] Generating improved illustration for #{idx} {title} ({work_id})...")
-    payload = {
-        "prompt": prompt,
-        "negative_prompt": NEGATIVE_PROMPT,
-        "width": 512,
-        "height": 512,
-        "steps": 16,
-        "guidance_scale": 4.0,
-        "sampler": "Euler A Trailing",
-    }
-
-    req = urllib.request.Request(
-        f"{url}/sdapi/v1/txt2img",
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-
-    t0 = time.time()
-    try:
-        with urllib.request.urlopen(req, timeout=900) as res:
-            if res.getcode() != 200:
-                logger.error(f"HTTP error {res.getcode()} from Draw Things")
-                return False
-            data = json.loads(res.read().decode("utf-8"))
-            images = data.get("images", [])
-            if not images or not images[0]:
-                logger.error("No image data returned from Draw Things")
-                return False
-
-            b64_str = re.sub(r"^data:image/[^;]+;base64,", "", images[0])
-            img_bytes = base64.b64decode(b64_str)
-            elapsed = time.time() - t0
-            logger.info(f"[{idx}] Image received: {len(img_bytes)} bytes in {elapsed:.1f}s")
-
-            # Save to content paths
-            for cp in spec["content_paths"]:
-                cp.parent.mkdir(parents=True, exist_ok=True)
-                cp.write_bytes(img_bytes)
-                logger.info(f"  -> Saved to {cp}")
-
-            # Save to docs path
-            dp = spec["docs_path"]
-            dp.parent.mkdir(parents=True, exist_ok=True)
-            dp.write_bytes(img_bytes)
-            logger.info(f"  -> Saved to {dp}")
-
-            return True
-    except Exception as e:
-        logger.error(f"Generation failed for #{idx} {title}: {e}")
-        return False
-
-
-def main():
-    parser = argparse.ArgumentParser(description="Regenerate illustrations with improved eyes and contrast")
-    parser.add_argument("--start", type=int, default=40, help="Start index (1-62)")
-    parser.add_argument("--end", type=int, default=62, help="End index (1-62)")
-    parser.add_argument("--no-push", action="store_true", help="Do not git commit/push each work")
-    args = parser.parse_args()
-
-    targets = [s for s in WORKS_SPEC if args.start <= s["index"] <= args.end]
-    logger.info(f"Starting batch illustration replacement for {len(targets)} works (#{args.start} to #{args.end})")
-
-    success_count = 0
-    for spec in targets:
-        ok = generate_single_illustration(spec)
-        if ok:
-            success_count += 1
-            if not args.no_push:
-                try:
-                    subprocess.run(["git", "add", "content/", "docs/"], check=False)
-                    msg = f"feat(illust): Replace #{spec['index']} '{spec['title']}' illustration with refined eyes & high contrast"
-                    subprocess.run(["git", "commit", "-m", msg], check=False)
-                    subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=False)
-                    subprocess.run(["git", "push", "origin", "HEAD:main"], check=False)
-                    logger.info(f"Pushed #{spec['index']} to GitHub successfully.")
-                except Exception as git_err:
-                    logger.warning(f"Git push warning: {git_err}")
-
-    logger.info(f"Batch completed: {success_count}/{len(targets)} works successfully replaced.")
-
-    # Rebuild site
-    try:
-        from src.site_builder import build_github_pages
-        from src.history_manager import HistoryManager
-        from src.archiver import update_archive_all
-        update_archive_all()
-        build_github_pages(HistoryManager())
-        if not args.no_push:
-            subprocess.run(["git", "add", "docs/", "archive/", "README.md"], check=False)
-            commit_title = f"chore(site): Rebuild GitHub Pages with regenerated illustrations #{args.start}-#{args.end}"
-            subprocess.run(["git", "commit", "-m", commit_title], check=False)
-            subprocess.run(["git", "pull", "--rebase", "--autostash", "origin", "main"], check=False)
-            subprocess.run(["git", "push", "origin", "HEAD:main"], check=False)
-    except Exception as e:
-        logger.warning(f"Site build warning: {e}")
-
-
-if __name__ == "__main__":
-    main()
-
