@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-11-04T21:00:03.650317+09:00",
+  "updated_at": "2026-11-05T20:00:03.820322+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -260,8 +260,8 @@
       "md_file": "content/2026-09-28_oguri_20th_century_iron_mask.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-09-28",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-11-05T20:00:03.806148+09:00",
       "png_file": "content/2026-09-28_oguri_20th_century_iron_mask.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-09-28"
@@ -281,8 +281,8 @@
       "md_file": "content/2026-09-28_unno_floating_island.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-09-28",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-11-05T20:00:03.806148+09:00",
       "png_file": "content/2026-09-28_unno_floating_island.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-09-28"
