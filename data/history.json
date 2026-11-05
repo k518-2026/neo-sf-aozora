@@ -1096,5 +1096,19 @@
       "Ekman, P., Friesen, W. V. (1971). Constants across cultures in the face and emotion.. *Journal of Personality and Social Psychology*, 17(2), 124-129.",
       "Stephens, G. J., Silbert, L. J., Hasson, U. (2010). Speaker–listener neural coupling underlies successful communication. *Proceedings of the National Academy of Sciences*, 107(32), 14425-14430."
     ]
+  },
+  {
+    "work_id": "soseki-wagahai-wa-neko",
+    "original_title": "吾輩は猫である",
+    "original_author": "夏目漱石",
+    "reboot_title": "吾輩は猫である――都市の深淵を聴く神経（ニューラル）の眼",
+    "posted_at": "2026-11-05T09:32:47.648860+09:00",
+    "file_path": "content/2026-10-14_soseki_wagahai_wa_neko.md",
+    "status": "publish",
+    "references": [
+      "Dick, R. (2012). Inter-dimensional effects in nano-structures. *Nanoscale Research Letters*, 7(1).",
+      "Partridg, J. (1993). Sensory ecology: How organisms acquire and respond to information. *Trends in Ecology &amp; Evolution*, 8(7), 262-263.",
+      "Bonabeau, E., Dorigo, M., Theraulaz, G. (1999). Swarm Intelligence. *Oxford University Press*."
+    ]
   }
 ]
