@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **103** 作品（うち挿絵付き **103** 作品 / 原典文豪 **19** 名 / 最終更新: 2026-11-06 23:35 JST）
+- **収録作品数**: 全 **104** 作品（うち挿絵付き **104** 作品 / 原典文豪 **20** 名 / 最終更新: 2026-11-06 23:43 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 104 | **[恩讐の彼方に――極限岩盤に刻印された贖罪のアルゴリズム](content/2026-11-06_kikuchi_onshu_no_kanata_ni.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kikuchi-onshu-no-kanata-ni.html) | [📄原稿](content/2026-11-06_kikuchi_onshu_no_kanata_ni.md) | [🎨挿絵](content/2026-11-06_kikuchi_onshu_no_kanata_ni.png) | 菊池寛[『恩讐の彼方に』](https://www.aozora.gr.jp/cards/000083/card496.html) | 熱プラズマ破砕（サーマル・スポレーション）による超硬質岩盤掘削工学、極限差応力下における岩盤破壊クライテリオンとトンネル安定性解析、長期孤立過酷環境における復讐心消去と和解の情動認知神経回路 | 6,330字 |
 | 103 | **[蜜柑――慣性檻と黄金のペレット](content/2026-11-06_akutagawa_mikan.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-mikan.html) | [📄原稿](content/2026-11-06_akutagawa_mikan.md) | [🎨挿絵](content/2026-11-06_akutagawa_mikan.png) | 芥川龍之介[『蜜柑』](https://www.aozora.gr.jp/cards/000879/card98.html) | 軌道エレベータの超高強度カーボンナノチューブ・テザー力学、長距離衛星・地上間量子もつれ光子暗号通信、慣性閉じ込め核融合燃料ターゲット・ペレット圧縮工学 | 5,302字 |
 | 102 | **[オツベルと象――バイオハイブリッド工場における「意志」の不協和音](content/2026-10-31_miyazawa_otsuberu_to_zo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-otsuberu-to-zo.html) | [📄原稿](content/2026-10-31_miyazawa_otsuberu_to_zo.md) | [🎨挿絵](content/2026-10-31_miyazawa_otsuberu_to_zo.png) | 宮沢賢治[『オツベルと象』](https://www.aozora.gr.jp/cards/000081/card460.html) | アジアゾウにおける超低周波不可聴インフラサウンド音響通信、生体骨格筋アクチュエータを用いたバイオハイブリッド・ロボティクス、サイバーフィジカル生産システムにおける自律分散型製造制御 | 5,721字 |
 | 101 | **[皮膚と心――完璧なる虚飾の崩壊](content/2026-10-31_dazai_hifu_to_kokoro.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-hifu-to-kokoro.html) | [📄原稿](content/2026-10-31_dazai_hifu_to_kokoro.md) | [🎨挿絵](content/2026-10-31_dazai_hifu_to_kokoro.png) | 太宰治[『皮膚と心』](https://www.aozora.gr.jp/cards/000035/card286.html) | フレキシブル有機電界効果トランジスタによる大面積人工皮膚（e-skin）、身体醜形障害における顔面視覚情報処理と神経基盤、標的化ナノ粒子ドラッグデリバリーによる生体組織修復 | 5,450字 |

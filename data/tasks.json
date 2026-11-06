@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-11-06T23:35:14.881385+09:00",
+  "updated_at": "2026-11-06T23:43:56.698327+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2268,19 +2268,19 @@
       "author": "菊池寛",
       "theme": "小惑星帯熱プラズマ掘削・超高応力岩盤力学・許しと和解の神経科学",
       "modern_tech": "熱プラズマ破砕（サーマル・スポレーション）による超硬質岩盤掘削工学、極限差応力下における岩盤破壊クライテリオンとトンネル安定性解析、長期孤立過酷環境における復讐心消去と和解の情動認知神経回路",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-11-06_kikuchi_onshu_no_kanata_ni.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-11-06",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-11-06_kikuchi_onshu_no_kanata_ni.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-11-06"
     },
     {
       "id": "dazai-shitakiri-suzume",

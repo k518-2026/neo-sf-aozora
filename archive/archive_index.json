@@ -1646,5 +1646,21 @@
     "narration_file": "103_蜜柑_narration.txt",
     "full_file": "103_蜜柑_full.txt",
     "original_md_file": "103_蜜柑.md"
+  },
+  {
+    "work_no": 104,
+    "work_id": "kikuchi-onshu-no-kanata-ni",
+    "title": "恩讐の彼方に",
+    "subtitle": "極限岩盤に刻印された贖罪のアルゴリズム",
+    "attribution": "",
+    "original_author": "菊池寛",
+    "original_title": "恩讐の彼方に",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000083/card496.html",
+    "modern_tech": "熱プラズマ破砕（サーマル・スポレーション）による超硬質岩盤掘削工学、極限差応力下における岩盤破壊クライテリオンとトンネル安定性解析、長期孤立過酷環境における復讐心消去と和解の情動認知神経回路",
+    "summary": "過去の殺人の罪業を背負い、カイパーベルトの死の超重力小惑星帯「樋の口岩礁」で、遭難船を救うための亜空間ワームホール・トンネルをたった一人、プラズマ削岩ランスで30年間掘り続けるサイボーグ僧侶・了海。そこへ父の仇を討つべく、最新型高周波ブレードを携えたサイボーグ剣士・実吉が突入する。しかし、血肉を削り岩盤と格闘する了海の超人的な姿に実吉の復讐アルゴリズムは乱れ、やがて仇敵同士が並んで熱核プラズマを放ち始める――。日本文学屈指の復讐と救済の名作を壮大にリブートした超弩級ハードSF！",
+    "char_count": 4326,
+    "narration_file": "104_恩讐の彼方に_narration.txt",
+    "full_file": "104_恩讐の彼方に_full.txt",
+    "original_md_file": "104_恩讐の彼方に.md"
   }
 ]

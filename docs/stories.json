@@ -1,5 +1,17 @@
 [
   {
+    "no": 104,
+    "work_id": "kikuchi-onshu-no-kanata-ni",
+    "title": "恩讐の彼方に――極限岩盤に刻印された贖罪のアルゴリズム",
+    "original_title": "恩讐の彼方に",
+    "original_author": "菊池寛",
+    "modern_tech": "熱プラズマ破砕（サーマル・スポレーション）による超硬質岩盤掘削工学、極限差応力下における岩盤破壊クライテリオンとトンネル安定性解析、長期孤立過酷環境における復讐心消去と和解の情動認知神経回路",
+    "has_image": true,
+    "url": "stories/kikuchi-onshu-no-kanata-ni.html",
+    "image": "assets/images/kikuchi-onshu-no-kanata-ni.png",
+    "char_count": 6330
+  },
+  {
     "no": 103,
     "work_id": "akutagawa-mikan",
     "title": "蜜柑――慣性檻と黄金のペレット",
