@@ -1,5 +1,17 @@
 [
   {
+    "no": 105,
+    "work_id": "dazai-shitakiri-suzume",
+    "title": "舌切雀――重力子に託された魂の旋律",
+    "original_title": "舌切雀",
+    "original_author": "太宰治",
+    "modern_tech": "昆虫・鳥類模倣型バイオハイブリッド自律羽ばたきマイクロエアビークル（MAV）、ホーキング放射を抑制した極微小原始ブラックホール重力子コンテナ、自己注意機構（Self-Attention）に基づく直接音声生体信号翻訳ニューラルネットワーク",
+    "has_image": true,
+    "url": "stories/dazai-shitakiri-suzume.html",
+    "image": "assets/images/dazai-shitakiri-suzume.png",
+    "char_count": 5019
+  },
+  {
     "no": 104,
     "work_id": "kikuchi-onshu-no-kanata-ni",
     "title": "恩讐の彼方に――極限岩盤に刻印された贖罪のアルゴリズム",
