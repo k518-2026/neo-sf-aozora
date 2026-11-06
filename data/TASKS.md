@@ -1,7 +1,7 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-11-06T23:51:05`
+- **最終同期日時 (JST)**: `2026-11-06T23:51:11`
 - **進捗サマリー**: 全 **108** 作品 （完了: **108** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
@@ -25,15 +25,26 @@
 
 ## ✅ 完了済み作品（最新10件）
 
-| No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |
+| No. | 作品ID | 原典タイトル（著者） | プロット (sff7020) | 執筆担当 (written_by) | 校閲 (sff7020) | 挿絵 (kenomac-mini) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
-| #108 | `dazai-shitakiri-suzume` | 舌切雀（太宰治） | - | ✓ `rtx5060lp` (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
-| #107 | `kikuchi-onshu-no-kanata-ni` | 恩讐の彼方に（菊池寛） | - | ✓ `rtx5060lp` (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
-| #106 | `akutagawa-mikan` | 蜜柑（芥川龍之介） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
-| #105 | `miyazawa-otsuberu-to-zo` | オツベルと象（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #104 | `dazai-hifu-to-kokoro` | 皮膚と心（太宰治） | - | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #103 | `nakajima-deshi` | 弟子（中島敦） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #102 | `miyazawa-yamanashi` | やまなし（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #101 | `izumi-gekaritsu` | 外科室（泉鏡花） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #100 | `mori-maihime` | 舞姫（森鴎外） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #99 | `izumi-yashagaike` | 夜叉ヶ池（泉鏡花） | - | ✓ `rtx5060lp` (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #105 | dazai-shitakiri-suzume | 舌切雀（太宰治） | - | ✓ 
+tx5060lp (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
+| #104 | kikuchi-onshu-no-kanata-ni | 恩讐の彼方に（菊池寛） | - | ✓ 
+tx5060lp (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
+| #103 | kutagawa-mikan | 蜜柑（芥川龍之介） | ✓ (sff7020) | ✓ 
+tx5060lp (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
+| #102 | miyazawa-otsuberu-to-zo | オツベルと象（宮沢賢治） | - | ✓ 
+tx5060lp (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #101 | dazai-hifu-to-kokoro | 皮膚と心（太宰治） | - | ✓ 
+tx5060lp (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #100 | 
+akajima-deshi | 弟子（中島敦） | ✓ (sff7020) | ✓ 
+tx5060lp (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #99 | miyazawa-yamanashi | やまなし（宮沢賢治） | - | ✓ 
+tx5060lp (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #98 | izumi-gekaritsu | 外科室（泉鏡花） | - | ✓ 
+tx5060lp (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #97 | mori-maihime | 舞姫（森鴎外） | - | ✓ 
+tx5060lp (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #96 | izumi-yashagaike | 夜叉ヶ池（泉鏡花） | - | ✓ 
+tx5060lp (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |

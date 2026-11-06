@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-11-06T23:51:05.763993+09:00",
+  "updated_at": "2026-11-06T23:51:11.390468+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -1191,50 +1191,8 @@
       "illustrated_at": "2026-10-08"
     },
     {
-      "id": "akutagawa-haguruma",
-      "work_num": 56,
-      "title": "歯車",
-      "author": "芥川龍之介",
-      "theme": "視覚野の閃輝暗点・神経振動の位相ロック・ベイズ予測誤差の暴走",
-      "modern_tech": "大脳視覚野における皮質拡延性抑制（CSD）と幾何学模様幻視の数理モデル、経頭蓋交流電気刺激（tACS）による神経律動調律、自由エネルギー原理に基づく過剰意味づけ（アポフェニア）の緩和",
-      "status": "completed",
-      "assigned_writer": "rtx5060lp",
-      "plot_file": null,
-      "plot_by": null,
-      "plot_at": null,
-      "md_file": "content/2026-10-03_akutagawa_haguruma.md",
-      "written_by": "rtx5060lp",
-      "written_at": "2026-10-03",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-14T10:33:46.142012+09:00",
-      "png_file": "content/2026-10-03_akutagawa_haguruma.png",
-      "illustrated_by": "kenomac-mini",
-      "illustrated_at": "2026-10-03"
-    },
-    {
-      "id": "miyazawa-gusukobudori",
-      "work_num": 57,
-      "title": "グスコーブドリの伝記",
-      "author": "宮沢賢治",
-      "theme": "成層圏エアロゾル気候工学・火山ガス炭素循環制御・自己犠牲なき無人自律防災",
-      "modern_tech": "カルデラ火山のミュオグラフィ内部マグマ可視化、無人自律ドローン群による火山性CO2・温室効果ガス制御、デジタルツイン気象シミュレーションによる冷害回避",
-      "status": "completed",
-      "assigned_writer": "rtx5060lp",
-      "plot_file": null,
-      "plot_by": null,
-      "plot_at": null,
-      "md_file": "content/2026-10-04_miyazawa_gusukobudori.md",
-      "written_by": "rtx5060lp",
-      "written_at": "2026-10-04",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-14T10:33:46.142012+09:00",
-      "png_file": "content/2026-10-04_miyazawa_gusukobudori.png",
-      "illustrated_by": "kenomac-mini",
-      "illustrated_at": "2026-10-04"
-    },
-    {
       "id": "kajii-sakura-no-ki",
-      "work_num": 58,
+      "work_num": 56,
       "title": "櫻の樹の下には",
       "author": "梶井基次郎",
       "theme": "土壌微生物叢と植物根圏ネットワーク・窒素同位体トレーサー・生命と死の物質循環",
@@ -1255,7 +1213,7 @@
     },
     {
       "id": "soseki-kusamakura",
-      "work_num": 59,
+      "work_num": 57,
       "title": "草枕",
       "author": "夏目漱石",
       "theme": "非人情の美学・デフォルトモードネットワーク・生成的美的知覚モデル",
@@ -1276,7 +1234,7 @@
     },
     {
       "id": "izumi-gejigeji",
-      "work_num": 60,
+      "work_num": 58,
       "title": "春昼・春昼後刻",
       "author": "泉鏡花",
       "theme": "量子もつれ光子対イメージング・二重スリット干渉・春の白昼夢と平行世界の交差",
@@ -1297,7 +1255,7 @@
     },
     {
       "id": "nakajima-tsuki-no-usagi",
-      "work_num": 61,
+      "work_num": 59,
       "title": "悟浄出世",
       "author": "中島敦",
       "theme": "自己意識の計算論・メタ認知ニューラルネットワーク・懐疑から行動への相転移",
@@ -1318,7 +1276,7 @@
     },
     {
       "id": "dazai-hashire-merosu",
-      "work_num": 62,
+      "work_num": 60,
       "title": "走れメロス",
       "author": "太宰治",
       "theme": "進化ゲーム理論の信頼構築・オキシトシン神経回路・極限持久運動の生理学",
@@ -1339,7 +1297,7 @@
     },
     {
       "id": "edogawa-oshie-to-tabisuru-otoko",
-      "work_num": 63,
+      "work_num": 61,
       "title": "押絵と旅する男",
       "author": "江戸川乱歩",
       "theme": "ライトフィールド立体ホログラフィ・大気蜃気楼のメタマテリアル屈折・時間を止めた恋",
@@ -1359,29 +1317,8 @@
       "illustrated_at": "2026-10-10"
     },
     {
-      "id": "yumeno-binzume-jigoku",
-      "work_num": 64,
-      "title": "瓶詰地獄",
-      "author": "夢野久作",
-      "theme": "海洋漂流シミュレーション・DNAデータストレージ・逆順メッセージの時間復元",
-      "modern_tech": "シリカカプセル封入DNAデジタルデータストレージによる超長期情報保存、海洋表層海流のラグランジュ粒子追跡モデル、放射性炭素年代測定による時系列の再構成",
-      "status": "completed",
-      "assigned_writer": "rtx5060lp",
-      "plot_file": null,
-      "plot_by": null,
-      "plot_at": null,
-      "md_file": "content/2026-10-03_yumeno_binzume_jigoku.md",
-      "written_by": "rtx5060lp",
-      "written_at": "2026-10-03",
-      "reviewed_by": "sff7020",
-      "reviewed_at": "2026-10-13T17:48:16.553640+09:00",
-      "png_file": "content/2026-10-03_yumeno_binzume_jigoku.png",
-      "illustrated_by": "kenomac-mini",
-      "illustrated_at": "2026-10-03"
-    },
-    {
       "id": "sakaguchi-sakura-no-mori",
-      "work_num": 65,
+      "work_num": 62,
       "title": "桜の森の満開の下",
       "author": "坂口安吾",
       "theme": "感覚遮断と空間的孤独の神経科学・芳香テルペン類の中枢作用・美と狂気の境界",
@@ -1402,7 +1339,7 @@
     },
     {
       "id": "origuchi-shisha-no-sho",
-      "work_num": 66,
+      "work_num": 63,
       "title": "死者の書",
       "author": "折口信夫",
       "theme": "古代音響考古学・二上山夕日の天文シミュレーション・蓮糸織物の構造色フォトニクス",
@@ -1423,7 +1360,7 @@
     },
     {
       "id": "koda-goju-no-to",
-      "work_num": 67,
+      "work_num": 64,
       "title": "五重塔",
       "author": "幸田露伴",
       "theme": "伝統木造建築の非線形免震構造・心柱の同調質量ダンパー（TMD）・極限暴風シミュレーション",
@@ -1444,7 +1381,7 @@
     },
     {
       "id": "hori-kaze-tachinu",
-      "work_num": 68,
+      "work_num": 65,
       "title": "風立ちぬ",
       "author": "堀辰雄",
       "theme": "高原サナトリウムの微気象学・mRNA免疫療法と生命の希望・二人で紡ぐ時間の結晶",
@@ -1465,7 +1402,7 @@
     },
     {
       "id": "tayama-futon",
-      "work_num": 69,
+      "work_num": 66,
       "title": "蒲団",
       "author": "田山花袋",
       "theme": "嗅覚受容体と扁桃体・海馬の直接結線（プルースト効果）・フェロモン分子科学・執着の昇華",
@@ -1486,7 +1423,7 @@
     },
     {
       "id": "dazai-ningen-shikkaku",
-      "work_num": 70,
+      "work_num": 67,
       "title": "人間失格",
       "author": "太宰治",
       "theme": "脳波デコーディングと情動バイオフィードバック・神経擬態UI・他者共感インターフェース",
@@ -1507,7 +1444,7 @@
     },
     {
       "id": "soseki-wagahai-wa-neko",
-      "work_num": 71,
+      "work_num": 68,
       "title": "吾輩は猫である",
       "author": "夏目漱石",
       "theme": "バイオハイブリッド義体・異種間テレメトリ・都市生態系環境センシング",
@@ -1528,7 +1465,7 @@
     },
     {
       "id": "soseki-botchan",
-      "work_num": 72,
+      "work_num": 69,
       "title": "坊っちゃん",
       "author": "夏目漱石",
       "theme": "ゲーム理論・自律型マルチエージェント協調・ブロックチェーン監査証跡",
@@ -1549,7 +1486,7 @@
     },
     {
       "id": "akutagawa-hana",
-      "work_num": 73,
+      "work_num": 70,
       "title": "鼻",
       "author": "芥川龍之介",
       "theme": "生体組織再生・形態形成モルフォゲン勾配・自己身体認知と容貌コンプレックスの精神生理学",
@@ -1570,7 +1507,7 @@
     },
     {
       "id": "akutagawa-jigokuhen",
-      "work_num": 74,
+      "work_num": 71,
       "title": "地獄変",
       "author": "芥川龍之介",
       "theme": "極限美学・ニューラルスタイル転送・自律創発AI生成アートと人間の情動臨界",
@@ -1591,7 +1528,7 @@
     },
     {
       "id": "edogawa-kaijin-nijumenso",
-      "work_num": 75,
+      "work_num": 72,
       "title": "怪人二十面相",
       "author": "江戸川乱歩",
       "theme": "動的メタマテリアル迷彩・顔面微細生体認証欺瞞・量子もつれ警備ネットワーク",
@@ -1612,7 +1549,7 @@
     },
     {
       "id": "edogawa-d-zaka",
-      "work_num": 76,
+      "work_num": 73,
       "title": "Ｄ坂の殺人事件",
       "author": "江戸川乱歩",
       "theme": "量子光干渉・密室光子遅延復元・微細眼球運動解析",
@@ -1633,7 +1570,7 @@
     },
     {
       "id": "akutagawa-yabu-no-naka",
-      "work_num": 77,
+      "work_num": 74,
       "title": "藪の中",
       "author": "芥川龍之介",
       "theme": "神経記憶事後改ざん・記憶再固定化阻害・量子観測者効果",
@@ -1654,7 +1591,7 @@
     },
     {
       "id": "dazai-fugaku-hyakkei",
-      "work_num": 78,
+      "work_num": 75,
       "title": "富嶽百景",
       "author": "太宰治",
       "theme": "成層圏ライダー観測・テラフォーミング気象制御・人新世地球惑星工学",
@@ -1675,7 +1612,7 @@
     },
     {
       "id": "soseki-sanshiro",
-      "work_num": 79,
+      "work_num": 76,
       "title": "三四郎",
       "author": "夏目漱石",
       "theme": "光子放射圧・都市型BMI情動伝播・ストレイシープ複雑系",
@@ -1696,7 +1633,7 @@
     },
     {
       "id": "mori-sansho-dayu",
-      "work_num": 80,
+      "work_num": 77,
       "title": "山椒大夫",
       "author": "森鴎外",
       "theme": "採掘コロニー・自己組織化ナノスキン・量子生体共鳴テレメトリ",
@@ -1717,7 +1654,7 @@
     },
     {
       "id": "akutagawa-torokko",
-      "work_num": 81,
+      "work_num": 78,
       "title": "トロッコ",
       "author": "芥川龍之介",
       "theme": "磁気浮上マスドライバー・急性ストレス情動回路・極限時間知覚遅延",
@@ -1738,7 +1675,7 @@
     },
     {
       "id": "nakajima-riryo",
-      "work_num": 82,
+      "work_num": 79,
       "title": "李陵",
       "author": "中島敦",
       "theme": "DNA恒星間アーカイブ・極限適応エピジェネティクス・孤立神経認知",
@@ -1759,7 +1696,7 @@
     },
     {
       "id": "soseki-mon",
-      "work_num": 83,
+      "work_num": 80,
       "title": "門",
       "author": "夏目漱石",
       "theme": "量子暗号ファイアウォール・DMN瞑想変容意識・罪悪感神経回路",
@@ -1780,7 +1717,7 @@
     },
     {
       "id": "akutagawa-butoukai",
-      "work_num": 84,
+      "work_num": 81,
       "title": "舞踏会",
       "author": "芥川龍之介",
       "theme": "回転軌道ステーション人工重力・プラズマ分光花火・ノスタルジア記憶想起",
@@ -1801,7 +1738,7 @@
     },
     {
       "id": "edogawa-kogane-kamen",
-      "work_num": 85,
+      "work_num": 82,
       "title": "黄金仮面",
       "author": "江戸川乱歩",
       "theme": "金ナノプラズモン散乱・超電導SQUID磁気追跡・敵対的摂動マスク",
@@ -1822,7 +1759,7 @@
     },
     {
       "id": "dazai-shayo",
-      "work_num": 86,
+      "work_num": 83,
       "title": "斜陽",
       "author": "太宰治",
       "theme": "閉鎖生態系循環崩壊・ヘリウム3核融合枯渇・利他進化道徳革命",
@@ -1843,7 +1780,7 @@
     },
     {
       "id": "miyazawa-cello-goushe",
-      "work_num": 87,
+      "work_num": 84,
       "title": "セロ弾きのゴーシュ",
       "author": "宮沢賢治",
       "theme": "音響量子フォノン共鳴・種間生体通信・音響刺激神経細胞再生",
@@ -1864,7 +1801,7 @@
     },
     {
       "id": "dazai-kachikachi-yama",
-      "work_num": 88,
+      "work_num": 85,
       "title": "カチカチ山",
       "author": "太宰治",
       "theme": "ナノ流体泥舟崩壊・熱分解プラズマ推進・進化ゲーム理論欺瞞",
@@ -1885,7 +1822,7 @@
     },
     {
       "id": "akutagawa-imogayu",
-      "work_num": 89,
+      "work_num": 86,
       "title": "芋粥",
       "author": "芥川龍之介",
       "theme": "ドーパミン報酬予測誤差・ナノエマルジョン味覚合成・快楽適応ヘドニックトレッドミル",
@@ -1906,7 +1843,7 @@
     },
     {
       "id": "soseki-jitensha-nikki",
-      "work_num": 90,
+      "work_num": 87,
       "title": "自転車日記",
       "author": "夏目漱石",
       "theme": "二輪自律ジャイロ動力学・小脳内部モデル運動学習・感覚運動フィードバック遅延",
@@ -1927,7 +1864,7 @@
     },
     {
       "id": "sakaguchi-hakuchi",
-      "work_num": 91,
+      "work_num": 88,
       "title": "白痴",
       "author": "坂口安吾",
       "theme": "非言語生体脳波同調・火災旋風熱対流・極限神経保護",
@@ -1948,7 +1885,7 @@
     },
     {
       "id": "akutagawa-majutsu",
-      "work_num": 92,
+      "work_num": 89,
       "title": "魔術",
       "author": "芥川龍之介",
       "theme": "常温核変換・共有ニューロVRダイブ・強化学習強欲崩壊",
@@ -1969,7 +1906,7 @@
     },
     {
       "id": "edogawa-nisen-doka",
-      "work_num": 93,
+      "work_num": 90,
       "title": "二銭銅貨",
       "author": "江戸川乱歩",
       "theme": "ナノステガノグラフィ・量子アニーリング暗号解読・ゼロ知識証明",
@@ -1990,7 +1927,7 @@
     },
     {
       "id": "dazai-goodbye",
-      "work_num": 94,
+      "work_num": 91,
       "title": "グッド・バイ",
       "author": "太宰治",
       "theme": "ニューロ分散表現解離・ゼロ知識身元偽装・マルチエージェント均衡破綻",
@@ -2011,7 +1948,7 @@
     },
     {
       "id": "miyazawa-donguri-to-yamaneko",
-      "work_num": 95,
+      "work_num": 92,
       "title": "どんぐりと山猫",
       "author": "宮沢賢治",
       "theme": "アロー不可能性定理・パレート最適化裁定AI・マルコフ連鎖ランク集約",
@@ -2032,7 +1969,7 @@
     },
     {
       "id": "nakajima-mojika",
-      "work_num": 96,
+      "work_num": 93,
       "title": "文字禍",
       "author": "中島敦",
       "theme": "自己再帰的表象崩壊・コルモゴロフ複雑性・物理的記号接地問題",
@@ -2053,7 +1990,7 @@
     },
     {
       "id": "miyazawa-yodaka-no-hoshi",
-      "work_num": 97,
+      "work_num": 94,
       "title": "よだかの星",
       "author": "宮沢賢治",
       "theme": "光圧レーザーセイル推進・自己核融合爆縮転換・超新星相対論的粒子加速",
@@ -2074,7 +2011,7 @@
     },
     {
       "id": "dazai-chikukendan",
-      "work_num": 98,
+      "work_num": 95,
       "title": "畜犬談",
       "author": "太宰治",
       "theme": "強化学習意図的欺瞞・四足歩行ロボット制御・恐怖条件づけ消去",
@@ -2095,7 +2032,7 @@
     },
     {
       "id": "izumi-yashagaike",
-      "work_num": 99,
+      "work_num": 96,
       "title": "夜叉ヶ池",
       "author": "泉鏡花",
       "theme": "音響放射圧共振障壁・ダム決壊極限流動サージ・気象改変暴走",
@@ -2116,7 +2053,7 @@
     },
     {
       "id": "mori-maihime",
-      "work_num": 100,
+      "work_num": 97,
       "title": "舞姫",
       "author": "森鴎外",
       "theme": "二足歩行ダイナミクス・情動神経デコーディング・集団意思決定ゲーム理論",
@@ -2137,7 +2074,7 @@
     },
     {
       "id": "izumi-gekaritsu",
-      "work_num": 101,
+      "work_num": 98,
       "title": "外科室",
       "author": "泉鏡花",
       "theme": "痛覚ゲートコントロール・意識複雑性指標・完全準同型秘密計算",
@@ -2158,7 +2095,7 @@
     },
     {
       "id": "miyazawa-yamanashi",
-      "work_num": 102,
+      "work_num": 99,
       "title": "やまなし",
       "author": "宮沢賢治",
       "theme": "音響ソノルミネッセンス・群ロボティクス創発・酵母芳香エステル合成",
@@ -2179,7 +2116,7 @@
     },
     {
       "id": "nakajima-deshi",
-      "work_num": 103,
+      "work_num": 100,
       "title": "弟子",
       "author": "中島敦",
       "theme": "超知能AGI規範倫理・ビザンチン合意・自律サイボーグのフォールトトレランス",
@@ -2200,7 +2137,7 @@
     },
     {
       "id": "dazai-hifu-to-kokoro",
-      "work_num": 104,
+      "work_num": 101,
       "title": "皮膚と心",
       "author": "太宰治",
       "theme": "生体ナノスキン異常変異・身体醜形認知バイアス・自己破壊的パラノイアコメディ",
@@ -2221,7 +2158,7 @@
     },
     {
       "id": "miyazawa-otsuberu-to-zo",
-      "work_num": 105,
+      "work_num": 102,
       "title": "オツベルと象",
       "author": "宮沢賢治",
       "theme": "巨大バイオハイブリッド使役制御・超音波生体通信・自律分散型プロレタリア蜂起",
@@ -2242,7 +2179,7 @@
     },
     {
       "id": "akutagawa-mikan",
-      "work_num": 106,
+      "work_num": 103,
       "title": "蜜柑",
       "author": "芥川龍之介",
       "theme": "軌道エレベータ連絡超特急・慣性制御分離・高純度核融合ペレット",
@@ -2263,7 +2200,7 @@
     },
     {
       "id": "kikuchi-onshu-no-kanata-ni",
-      "work_num": 107,
+      "work_num": 104,
       "title": "恩讐の彼方に",
       "author": "菊池寛",
       "theme": "小惑星帯熱プラズマ掘削・超高応力岩盤力学・許しと和解の神経科学",
@@ -2284,7 +2221,7 @@
     },
     {
       "id": "dazai-shitakiri-suzume",
-      "work_num": 108,
+      "work_num": 105,
       "title": "舌切雀",
       "author": "太宰治",
       "theme": "バイオハイブリッド羽ばたきロボット・プライモーディアルブラックホール・トランスフォーマー言語翻訳",

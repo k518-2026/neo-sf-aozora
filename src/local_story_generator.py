@@ -722,6 +722,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Monostori Cyber-physical Production Systems Roots Expectations CIRP Annals",
         ),
     ],
+    "akutagawa-mikan": [
+        (
+            "軌道エレベータの超高強度カーボンナノチューブ・テザー力学",
+            "Aravind The physics of the space elevator American Journal of Physics 2007",
+        ),
+        (
+            "長距離衛星・地上間量子もつれ光子暗号通信",
+            "Yin Satellite-based entanglement distribution over 1200 kilometers Science 2017",
+        ),
+        (
+            "慣性閉じ込め核融合燃料ターゲット・ペレット圧縮工学",
+            "Betti Hurricane Inertial-confinement fusion with lasers Nature Physics 2016",
+        ),
+    ],
+    "kikuchi-onshu-no-kanata-ni": [
+        (
+            "熱プラズマ破砕による超硬質岩盤掘削工学",
+            "Potter Thermal spallation drilling of hard rock 1987",
+        ),
+        (
+            "極限差応力下における岩盤破壊クライテリオンとトンネル安定性",
+            "Hoek Brown Empirical strength criterion for rock masses 1980",
+        ),
+        (
+            "長期過酷環境における復讐心消去と和解の情動認知神経回路",
+            "McCullough Forgiveness Theory research and applications 2000",
+        ),
+    ],
+    "dazai-shitakiri-suzume": [
+        (
+            "生物模倣型自律羽ばたきマイクロエアビークル制御工学",
+            "Wood The first takeoff of a biologically inspired at-scale robotic insect 2008",
+        ),
+        (
+            "極微小原始ブラックホール重力子コンテナとホーキング放射",
+            "Hawking Black hole explosions Nature 1974",
+        ),
+        (
+            "自己注意機構ニューラルネットワークによる直接生体信号翻訳",
+            "Vaswani Attention is all you need NeurIPS 2017",
+        ),
+    ],
 }
 
 

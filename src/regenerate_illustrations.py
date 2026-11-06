@@ -1436,4 +1436,48 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Dramatic steam and sparks, dynamic volumetric lighting, monumental scale, cinematic sci-fi fantasy anime style, 8k masterpiece, pure art without text."
         ),
     },
+    {
+        "index": 106,
+        "work_id": "akutagawa-mikan",
+        "title": "蜜柑",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-11-06_akutagawa_mikan.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-mikan.png"),
+        "prompt": (
+            "Cinematic sci-fi anime poignant emotional masterpiece. "
+            "Masterpiece dynamic wide shot inside a sleek orbital space elevator transit train carriage traveling through high-orbit twilight. "
+            "A modest, determined young Japanese girl in rustic working-class spacesuit overalls stands by an opened reinforced observation window, tossing radiant, glowing golden fusion pellets ('mandarins') into the vacuum outside. "
+            "The radiant golden pellets leave shimmering, sparkling trails of light against the deep cosmic darkness, illuminating the earth below and the smiling faces of her younger brothers watching from a distant domed orbital station. "
+            "Breathtaking volumetric starlight, emotive expressive anime character art, sparkling golden and azure tones, 8k masterpiece, pure art without text."
+        ),
+    },
+    {
+        "index": 107,
+        "work_id": "kikuchi-onshu-no-kanata-ni",
+        "title": "恩讐の彼方に",
+        "author": "菊池寛",
+        "content_paths": [Path("content/2026-11-06_kikuchi_onshu_no_kanata_ni.png")],
+        "docs_path": Path("docs/assets/images/kikuchi-onshu-no-kanata-ni.png"),
+        "prompt": (
+            "Cinematic epic hard sci-fi cyberpunk illustration. "
+            "Masterpiece dynamic shot of two battle-hardened cyborg warriors inside a colossal subterranean asteroid mining tunnel. "
+            "Ryokai, an aged cybernetic monk with weathered titanium plating, and Jitsunosuke, a young armored warrior with a high-frequency blade sheathed on his back, standing shoulder-to-shoulder aiming powerful glowing plasma-thermal drilling lances into impenetrable dark asteroid bedrock. "
+            "Brilliant plasma arcs and blinding sparks illuminate ancient crystalline strata, dramatic rock dust swirling in low gravity, sweat and resolve, cinematic lighting, ultra-detailed textures, 8k masterpiece, pure art without text."
+        ),
+    },
+    {
+        "index": 108,
+        "work_id": "dazai-shitakiri-suzume",
+        "title": "舌切雀",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-11-06_dazai_shitakiri_suzume.png")],
+        "docs_path": Path("docs/assets/images/dazai-shitakiri-suzume.png"),
+        "prompt": (
+            "Cinematic whimsical sci-fi anime satire comedy illustration. "
+            "Masterpiece charming and dynamic scene in a deep-space orbital sanctuary garden filled with glowing biomechanical plants. "
+            "A distinguished, stoic elderly cyber-programmer in refined flowing haori robes sits enjoying tea, surrounded by a delightful swarm of tiny, cute bio-hybrid mechanical sparrows with sparkling sapphire sensor eyes and iridescent metallic wings. "
+            "Beside him, an ornate glowing futuristic levitating treasure chest ('light wicker basket') pulses with warm golden anti-matter luminescence. "
+            "Lush cosmic bioluminescence, elegant space habitat interior, charming expressive anime character designs, cheerful vibrant colors, 8k masterpiece, pure art without text."
+        ),
+    },
 ]
