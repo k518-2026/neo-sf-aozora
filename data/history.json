@@ -1124,5 +1124,19 @@
       "Bennett, C. H., Brassard, G. (2014). Quantum cryptography: Public key distribution and coin tossing. *Theoretical Computer Science*, 560, 7-11.",
       "Axelrod, R., Hamilton, W. D. (1981). The Evolution of Cooperation. *Science*, 211(4489), 1390-1396."
     ]
+  },
+  {
+    "work_id": "akutagawa-hana",
+    "original_title": "鼻",
+    "original_author": "芥川龍之介",
+    "reboot_title": "鼻――形態形成の神域への侵犯",
+    "posted_at": "2026-11-07T08:49:57.576369+09:00",
+    "file_path": "content/2026-10-15_akutagawa_hana.md",
+    "status": "publish",
+    "references": [
+      "Turing, A. M. (1952). The chemical basis of morphogenesis. *Philosophical Transactions of the Royal Society of London. Series B, Biological Sciences*, 237(641), 37-72.",
+      "Lancaster, M. A., Knoblich, J. A. (2014). Organogenesis in a dish: Modeling development and disease using organoid technologies. *Science*, 345(6194).",
+      "Kanwisher, N., McDermott, J., Chun, M. M. (2002). The Fusiform Face Area: A Module in Human Extrastriate Cortex Specialized for Face Perception. *Foundations in Social Neuroscience*, 259-276."
+    ]
   }
 ]
