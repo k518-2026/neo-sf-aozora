@@ -1630,5 +1630,21 @@
     "narration_file": "102_オツベルと象_narration.txt",
     "full_file": "102_オツベルと象_full.txt",
     "original_md_file": "102_オツベルと象.md"
+  },
+  {
+    "work_no": 103,
+    "work_id": "akutagawa-mikan",
+    "title": "蜜柑",
+    "subtitle": "慣性檻と黄金のペレット",
+    "attribution": "",
+    "original_author": "芥川龍之介",
+    "original_title": "蜜柑",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000879/card98.html",
+    "modern_tech": "軌道エレベータの超高強度カーボンナノチューブ・テザー力学、長距離衛星・地上間量子もつれ光子暗号通信、慣性閉じ込め核融合燃料ターゲット・ペレット圧縮工学",
+    "summary": "軌道エレベータ連絡用・超伝導亜光速特急「ひかり」の客車内。疲労と退屈に沈む技術官僚の「私」の前に、下層区画の薄汚れた作業服を着た少女が乗り込んでくる。不可解な彼女の挙動を冷ややかに観察する私。だが列車が地上低軌道スラム街の防護シールド境界に差しかかった瞬間、彼女は慣性制御窓を強引に開放し、線路脇の弟たちへ向けて眩い「黄金の果実（高純度重水素核融合ペレット）」を惜しみなく投下する！暗澹たる宇宙階層社会を貫く、魂の解放と光のハードSF！",
+    "char_count": 3548,
+    "narration_file": "103_蜜柑_narration.txt",
+    "full_file": "103_蜜柑_full.txt",
+    "original_md_file": "103_蜜柑.md"
   }
 ]

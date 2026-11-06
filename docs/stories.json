@@ -1,5 +1,17 @@
 [
   {
+    "no": 103,
+    "work_id": "akutagawa-mikan",
+    "title": "蜜柑――慣性檻と黄金のペレット",
+    "original_title": "蜜柑",
+    "original_author": "芥川龍之介",
+    "modern_tech": "軌道エレベータの超高強度カーボンナノチューブ・テザー力学、長距離衛星・地上間量子もつれ光子暗号通信、慣性閉じ込め核融合燃料ターゲット・ペレット圧縮工学",
+    "has_image": true,
+    "url": "stories/akutagawa-mikan.html",
+    "image": "assets/images/akutagawa-mikan.png",
+    "char_count": 5302
+  },
+  {
     "no": 102,
     "work_id": "miyazawa-otsuberu-to-zo",
     "title": "オツベルと象――バイオハイブリッド工場における「意志」の不協和音",
