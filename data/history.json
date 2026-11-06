@@ -1110,5 +1110,19 @@
       "Partridg, J. (1993). Sensory ecology: How organisms acquire and respond to information. *Trends in Ecology &amp; Evolution*, 8(7), 262-263.",
       "Bonabeau, E., Dorigo, M., Theraulaz, G. (1999). Swarm Intelligence. *Oxford University Press*."
     ]
+  },
+  {
+    "work_id": "soseki-botchan",
+    "original_title": "坊っちゃん",
+    "original_author": "夏目漱石",
+    "reboot_title": "坊っちゃん――最適化された地獄のアルゴリズム",
+    "posted_at": "2026-11-06T09:33:56.404319+09:00",
+    "file_path": "content/2026-10-14_soseki_botchan.md",
+    "status": "publish",
+    "references": [
+      "Vinyals, O., Babuschkin, I., Czarnecki, W. M., Mathieu, M., Dudzik, A., Chung, J., et al. (2019). Grandmaster level in StarCraft II using multi-agent reinforcement learning. *Nature*, 575(7782), 350-354.",
+      "Bennett, C. H., Brassard, G. (2014). Quantum cryptography: Public key distribution and coin tossing. *Theoretical Computer Science*, 560, 7-11.",
+      "Axelrod, R., Hamilton, W. D. (1981). The Evolution of Cooperation. *Science*, 211(4489), 1390-1396."
+    ]
   }
 ]
