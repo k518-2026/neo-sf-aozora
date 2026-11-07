@@ -1138,5 +1138,19 @@
       "Lancaster, M. A., Knoblich, J. A. (2014). Organogenesis in a dish: Modeling development and disease using organoid technologies. *Science*, 345(6194).",
       "Kanwisher, N., McDermott, J., Chun, M. M. (2002). The Fusiform Face Area: A Module in Human Extrastriate Cortex Specialized for Face Perception. *Foundations in Social Neuroscience*, 259-276."
     ]
+  },
+  {
+    "work_id": "akutagawa-jigokuhen",
+    "original_title": "地獄変",
+    "original_author": "芥川龍之介",
+    "reboot_title": "地獄変――美の臨界点に宿る神託",
+    "posted_at": "2026-11-08T08:02:14.970428+09:00",
+    "file_path": "content/2026-10-15_akutagawa_jigokuhen.md",
+    "status": "publish",
+    "references": [
+      "Zhang, Y. (2026). Discriminator-Augmented Denoising Diffusion Probabilistic Models for Seismic Data. *Copernicus GmbH*.",
+      "Matusch, A., Becker, J. S. (2012). Bio-imaging of metals in a mouse model of Alzheimer's disease by laser ablation inductively coupled plasma mass spectrometry. *Biomedical Spectroscopy and Imaging*, 1(1), 57-65.",
+      "Ishizu, T., Zeki, S. (2017). The experience of beauty derived from sorrow. *Human Brain Mapping*, 38(8), 4185-4200."
+    ]
   }
 ]
