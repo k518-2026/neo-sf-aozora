@@ -1152,5 +1152,19 @@
       "Matusch, A., Becker, J. S. (2012). Bio-imaging of metals in a mouse model of Alzheimer's disease by laser ablation inductively coupled plasma mass spectrometry. *Biomedical Spectroscopy and Imaging*, 1(1), 57-65.",
       "Ishizu, T., Zeki, S. (2017). The experience of beauty derived from sorrow. *Human Brain Mapping*, 38(8), 4185-4200."
     ]
+  },
+  {
+    "work_id": "edogawa-kaijin-nijumenso",
+    "original_title": "怪人二十面相",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "怪人二十面相――変幻する虚像の境界",
+    "posted_at": "2026-11-09T08:09:44.746777+09:00",
+    "file_path": "content/2026-10-15_edogawa_kaijin_nijumenso.md",
+    "status": "publish",
+    "references": [
+      "Schurig, D., Mock, J. J., Justice, B. J., Cummer, S. A., Pendry, J. B., Starr, A. F., et al. (2006). Metamaterial Electromagnetic Cloak at Microwave Frequencies. *Science*, 314(5801), 977-980.",
+      "Research Collaboration (2008). Handbook of Biometrics. *Springer US*.",
+      "Gisin, N., Ribordy, G., Tittel, W., Zbinden, H. (2002). Quantum cryptography. *Reviews of Modern Physics*, 74(1), 145-195."
+    ]
   }
 ]
