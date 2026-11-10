@@ -764,6 +764,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Vaswani Attention is all you need NeurIPS 2017",
         ),
     ],
+    "higuchi-takekurabe": [
+        (
+            "社会的オキシトシン受容体・神経修飾メカニズム",
+            "Kosfeld Oxytocin increases trust in humans Nature 2005",
+        ),
+        (
+            "階層社会と脳報酬系神経回路",
+            "Zink Neurological basis of social hierarchy Science 2008",
+        ),
+        (
+            "エピジェネティクス環境適応と思春期行動変容",
+            "Meaney Epigenetics and the environmental regulation of the genome 2004",
+        ),
+    ],
+    "koda-gojuno-to": [
+        (
+            "巨大メガストラクチャー耐震構造と自律適応力学",
+            "Soong State of the art of active control in structural engineering 1993",
+        ),
+        (
+            "機械的メタマテリアルにおける負のポアソン比と衝撃吸収",
+            "Lakes Foam structures with a negative Poissons ratio Science 1987",
+        ),
+        (
+            "トポロジー最適化による超高張力構造設計",
+            "Bendsoe Generating optimal topologies in structural design 1988",
+        ),
+    ],
+    "nakajima-meijinden": [
+        (
+            "量子ゼノン効果による状態崩壊抑制理論",
+            "Misra Sudarshan The Zeno paradox in quantum theory 1977",
+        ),
+        (
+            "弱測定理論と非破壊量子情報取得",
+            "Aharonov Albert Vaidman How the result of a measurement 1988",
+        ),
+        (
+            "巨視的量子コヒーレンスとデコヒーレンス抑制",
+            "Zurek Decoherence and the transition from quantum to classical 1991",
+        ),
+    ],
 }
 
 

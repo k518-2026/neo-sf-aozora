@@ -1480,4 +1480,49 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Lush cosmic bioluminescence, elegant space habitat interior, charming expressive anime character designs, cheerful vibrant colors, 8k masterpiece, pure art without text."
         ),
     },
+    {
+        "index": 106,
+        "work_id": "higuchi-takekurabe",
+        "title": "たけくらべ",
+        "author": "樋口一葉",
+        "content_paths": [Path("content/2026-11-10_higuchi_takekurabe.png")],
+        "docs_path": Path("docs/assets/images/higuchi-takekurabe.png"),
+        "prompt": (
+            "Cinematic poignant cyber-melodrama anime illustration. "
+            "Masterpiece dynamic atmospheric scene set in a luxurious floating neon-lit orbital entertainment habitat 'Shin-Yoshiwara'. "
+            "Midori, a spirited and striking young Japanese girl in an exquisite glowing cyber-kimono with flowing holographic hair ribbons, stands on a high transparent balcony looking down at the endless neon cityscape below. "
+            "Beside the balcony stands Shinnyo, a somber young cyber-monk in austere high-tech robes with a glowing holographic datapad, his eyes filled with quiet longing and unspoken parting sorrow. "
+            "Cherry blossom holographic particles drifting through starlit glass corridors, vibrant magenta and twilight-cyan volumetric lighting, evocative anime emotional masterpiece, 8k masterpiece, pure art without text."
+        ),
+    },
+    {
+        "index": 107,
+        "work_id": "koda-gojuno-to",
+        "title": "五重塔",
+        "author": "幸田露伴",
+        "content_paths": [Path("content/2026-11-10_koda_gojuno_to.png")],
+        "docs_path": Path("docs/assets/images/koda-gojuno-to.png"),
+        "prompt": (
+            "Cinematic epic architectural hard sci-fi anime illustration. "
+            "Masterpiece monumental wide shot of a colossal five-tiered orbital mass-driver space tower 'Tenno-to' standing resolute against a cataclysmic atmospheric hyper-hurricane. "
+            "The tower's interlocking titanium and carbon-nanotube metamaterial lattice dynamically flexes and breathes, glowing with pulsing azure energy dampeners as lightning arcs across violent storm clouds. "
+            "In the foreground on an observation gantry, a lone master structural craftsman in weathered exo-suit overalls watches with absolute calm and pride as his creation conquers the ultimate storm. "
+            "Monumental sense of scale, blinding lightning flashes, swirling hurricane vortex, hyper-detailed mechanical lattice, 8k masterpiece, pure art without text."
+        ),
+    },
+    {
+        "index": 108,
+        "work_id": "nakajima-meijinden",
+        "title": "名人伝",
+        "author": "中島敦",
+        "content_paths": [Path("content/2026-11-10_nakajima_meijinden.png")],
+        "docs_path": Path("docs/assets/images/nakajima-meijinden.png"),
+        "prompt": (
+            "Cinematic mystical philosophical hard sci-fi anime illustration. "
+            "Masterpiece breathtaking scene atop a misty, otherworldly floating mountain peak under a cosmic starry sky. "
+            "The master archer Ji Chang, clad in elegant minimalist flowing white cyber-hanfu, stands poised in supreme serenity without a bow in his empty hands. "
+            "In front of him, shimmering quantum probability waves and delicate glowing geometric interference ripples converge precisely on a distant target without a single arrow released. "
+            "Ethereal bioluminescent mist, sublime cosmic vista, crystalline starlight, profound stillness and transcendent enlightenment, 8k masterpiece, pure art without text."
+        ),
+    },
 ]
