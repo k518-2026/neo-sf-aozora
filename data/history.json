@@ -1166,5 +1166,19 @@
       "Research Collaboration (2008). Handbook of Biometrics. *Springer US*.",
       "Gisin, N., Ribordy, G., Tittel, W., Zbinden, H. (2002). Quantum cryptography. *Reviews of Modern Physics*, 74(1), 145-195."
     ]
+  },
+  {
+    "work_id": "edogawa-d-zaka",
+    "original_title": "Ｄ坂の殺人事件",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "Ｄ坂の殺人事件――残像の檻に囚われた視線",
+    "posted_at": "2026-11-10T11:24:29.769639+09:00",
+    "file_path": "content/2026-10-16_edogawa_d_zaka.md",
+    "status": "publish",
+    "references": [
+      "Hecht, R., Watson, J. J., Tang, E. M., Tao, Y. K. (2023). Optimization of intraoperative spectrally encoded coherence tomography and reflectometry for ophthalmic surgery. *Optical Coherence Tomography and Coherence Domain Optical Methods in Biomedicine XXVII*, 18.",
+      "Martinez-Conde, S., Macknik, S. L., Hubel, D. H. (2004). The role of fixational eye movements in visual perception. *Nature Reviews Neuroscience*, 5(3), 229-240.",
+      "Shannon, C. E. (1948). A Mathematical Theory of Communication. *Bell System Technical Journal*, 27(3), 379-423."
+    ]
   }
 ]
