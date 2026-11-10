@@ -1525,4 +1525,48 @@ WORKS_SPEC: List[Dict[str, Any]] = [
             "Ethereal bioluminescent mist, sublime cosmic vista, crystalline starlight, profound stillness and transcendent enlightenment, 8k masterpiece, pure art without text."
         ),
     },
+    {
+        "index": 109,
+        "work_id": "tanizaki-shisei",
+        "title": "刺青",
+        "author": "谷崎潤一郎",
+        "content_paths": [Path("content/2026-11-10_tanizaki_shisei.png")],
+        "docs_path": Path("docs/assets/images/tanizaki-shisei.png"),
+        "prompt": (
+            "Cinematic decadent cyber-biopunk anime illustration. "
+            "Masterpiece striking scene in a dimly lit, atmospheric traditional Japanese tatami chamber fused with advanced holographic medical apparatus. "
+            "A breathtakingly beautiful, pale young Japanese woman sits with her back turned toward the viewer, displaying a glowing, intricate bioluminescent cybernetic spider tattoo spanning her entire pale spine and shoulders, glowing with vibrant crimson and violet bio-nano conduits. "
+            "In front of her, an exhausted male bio-tattoo master kneels in awe and subservience, completely captivated by her overwhelming, predatory presence. "
+            "Soft dramatic shadows, glowing crimson holographic spider-silk threads in the air, sensual and dangerous aura, 8k masterpiece, pure art without text."
+        ),
+    },
+    {
+        "index": 110,
+        "work_id": "sakaguchi-yonagahime-to-mimio",
+        "title": "夜長姫と耳男",
+        "author": "坂口安吾",
+        "content_paths": [Path("content/2026-11-10_sakaguchi_yonagahime_to_mimio.png")],
+        "docs_path": Path("docs/assets/images/sakaguchi-yonagahime-to-mimio.png"),
+        "prompt": (
+            "Cinematic dark gothic cyber-fantasy anime illustration. "
+            "Masterpiece dynamic scene in a futuristic orbital bio-sculpting atelier overlooking a vast starry cosmos. "
+            "Princess Yonaga, an exquisitely beautiful young cyber-heiress with a chilling, innocent smile and radiant lavender hair, stands admiring a colossal, terrifying living bio-sculpture of a horned demon deity that pulses with dark crimson bio-luminescence. "
+            "Beside the statue, Mimio, a battle-scarred cyborg sculptor with cybernetic acoustic sensory ears and chisel tools, watches her with a mixture of profound terror and obsessive reverence. "
+            "Eerie ethereal violet starlight, floating bio-luminescent tendrils, decadent gothic atmosphere, intricate biomaterial textures, 8k masterpiece, pure art without text."
+        ),
+    },
+    {
+        "index": 111,
+        "work_id": "hagiwara-nekomachi",
+        "title": "猫町",
+        "author": "萩原朔太郎",
+        "content_paths": [Path("content/2026-11-10_hagiwara_nekomachi.png")],
+        "docs_path": Path("docs/assets/images/hagiwara-nekomachi.png"),
+        "prompt": (
+            "Cinematic surreal cognitive sci-fi anime masterpiece illustration. "
+            "Masterpiece dynamic medium-wide shot of a sunlit, ornate European-style town square with curving non-Euclidean cobblestone streets and Escher-like clock towers. "
+            "A bewildered male intellectual in 1920s attire and cyber-spectacles stares in stunned amazement as all the elegant pedestrians around him are revealed to be upright, two-legged humanoid cybernetic cats dressed in dapper tailcoats, parasols, and top hats, going about their civilized day. "
+            "Shimmering geometric hexagonal grid-lines overlaying the architecture, warm golden afternoon sunlight, whimsical and uncanny psychological wonder, vibrant pastel colors, 8k masterpiece, pure art without text."
+        ),
+    },
 ]

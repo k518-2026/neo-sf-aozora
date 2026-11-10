@@ -806,6 +806,48 @@ CATALOG_TECH_QUERIES: Dict[str, List[Tuple[str, str]]] = {
             "Zurek Decoherence and the transition from quantum to classical 1991",
         ),
     ],
+    "tanizaki-shisei": [
+        (
+            "生体適合性柔軟人工皮膚エレクトロニクス",
+            "Bao Skin-inspired organic electronics Nature 2018",
+        ),
+        (
+            "感覚フィードバック神経インターフェース",
+            "Flesher Intracortical microstimulation somatosensory cortex 2016",
+        ),
+        (
+            "クモ毒ペプチドのイオンチャネル遮断機構",
+            "Saez Spider venom peptides as therapeutics Toxins 2010",
+        ),
+    ],
+    "sakaguchi-yonagahime-to-mimio": [
+        (
+            "神経美学における恐怖と美的快感の神経基盤",
+            "Zeki Neuroaesthetics an emerging field 2004",
+        ),
+        (
+            "自己組織化合成生物学による形態形成制御",
+            "Davies Synthetic morphology 2017",
+        ),
+        (
+            "超知能における目的関数破綻とアライメント問題",
+            "Bostrom Superintelligence paths dangers strategies 2014",
+        ),
+    ],
+    "hagiwara-nekomachi": [
+        (
+            "内嗅皮質における格子細胞の空間マッピング",
+            "Hafting Microstructure of a spatial map in the entorhinal cortex Nature 2005",
+        ),
+        (
+            "格子状神経コードによる高次概念空間の構造化",
+            "Constantinescu Organizing conceptual knowledge in humans with a gridlike code Science 2016",
+        ),
+        (
+            "幻覚性知覚変容における神経相関動態",
+            "Carhart-Harris Neural correlates of the psychedelic state PNAS 2012",
+        ),
+    ],
 }
 
 
