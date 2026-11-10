@@ -1,5 +1,17 @@
 [
   {
+    "no": 111,
+    "work_id": "hagiwara-nekomachi",
+    "title": "猫町――位相転移する認識の迷宮",
+    "original_title": "猫町",
+    "original_author": "萩原朔太郎",
+    "modern_tech": "内嗅皮質における格子細胞（Grid Cells）による六角形座標空間マッピングとナビゲーション機構、高次認知・概念空間のグリッド状神経コード表現、幻覚性知覚変容（HPPD）における大脳視覚野とトポロジー位相幾何学的空間歪曲",
+    "has_image": true,
+    "url": "stories/hagiwara-nekomachi.html",
+    "image": "assets/images/hagiwara-nekomachi.png",
+    "char_count": 5614
+  },
+  {
     "no": 110,
     "work_id": "sakaguchi-yonagahime-to-mimio",
     "title": "夜長姫と耳男――変異する美学と自己組織化する呪詛",

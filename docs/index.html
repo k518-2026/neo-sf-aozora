@@ -15,10 +15,10 @@
       Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
     </p>
     <div class="stats-bar">
-      <div class="stat-pill"><strong>110</strong> 収録作品</div>
-      <div class="stat-pill"><strong>110</strong> 挿絵付き作品</div>
-      <div class="stat-pill"><strong>22</strong> 原典文豪</div>
-      <div class="stat-pill">最終更新: 2026-11-10 20:52 JST</div>
+      <div class="stat-pill"><strong>111</strong> 収録作品</div>
+      <div class="stat-pill"><strong>111</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>23</strong> 原典文豪</div>
+      <div class="stat-pill">最終更新: 2026-11-10 20:59 JST</div>
     </div>
   </header>
 
@@ -27,7 +27,7 @@
       <div class="filter-group">
         <input type="search" id="searchInput" class="search-input" placeholder="作品名・原典・科学技術キーワードで検索..." oninput="filterCards()" />
         <select id="authorFilter" class="select-filter" onchange="filterCards()">
-          <option value="">すべての原典作家（22名）</option>
+          <option value="">すべての原典作家（23名）</option>
           <option value="中島敦">中島敦</option>
           <option value="久生十蘭">久生十蘭</option>
           <option value="坂口安吾">坂口安吾</option>
@@ -48,12 +48,13 @@
           <option value="田山花袋">田山花袋</option>
           <option value="芥川龍之介">芥川龍之介</option>
           <option value="菊池寛">菊池寛</option>
+          <option value="萩原朔太郎">萩原朔太郎</option>
           <option value="蘭郁二郎">蘭郁二郎</option>
           <option value="谷崎潤一郎">谷崎潤一郎</option>
         </select>
         <select id="imageFilter" class="select-filter" onchange="filterCards()">
           <option value="">すべて表示</option>
-          <option value="yes">🎨 挿絵ありのみ (110)</option>
+          <option value="yes">🎨 挿絵ありのみ (111)</option>
         </select>
         <select id="sortOrder" class="select-filter" onchange="sortCards()">
           <option value="desc">新しい順（#大 → #01）</option>
@@ -64,6 +65,22 @@
     </div>
 
     <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-no="111" data-author="萩原朔太郎" data-illustrated="yes" data-search="猫町――位相転移する認識の迷宮 猫町 萩原朔太郎 内嗅皮質における格子細胞（grid cells）による六角形座標空間マッピングとナビゲーション機構、高次認知・概念空間のグリッド状神経コード表現、幻覚性知覚変容（hppd）における大脳視覚野とトポロジー位相幾何学的空間歪曲 神経拡張ドラッグの後遺症により空間認知障害を抱える数学者「私」。避暑地の見慣れた街を散策中、一筋の路地を曲がった瞬間、彼の脳内内嗅皮質の格子細胞ネットワークが非ユークリッド閉多様体へと位相転移を起こす。迷い込んだのは、美しい幾何学建築が整然と並ぶ見知らぬ奇妙な都市。だが正午の鐘が鳴り響いた瞬間、街路を行き交う市民たちの姿が、二本足で直立歩行する無数の巨大な「猫型生体知性体」へと一斉に知覚デコード反転する――！近代詩の父が描いた白昼夢の迷宮を、最先端脳科学と幾何学で解き明かす傑作認知sf！">
+        <a href="stories/hagiwara-nekomachi.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/hagiwara-nekomachi.png" alt="猫町――位相転移する認識の迷宮" loading="lazy" />
+          <span class="card-no-badge">#111</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：萩原朔太郎『猫町』</div>
+          <h2 class="card-title"><a href="stories/hagiwara-nekomachi.html">猫町――位相転移する認識の迷宮</a></h2>
+          <div class="card-tech">🔬 内嗅皮質における格子細胞（Grid Cells）による六角形座標空間マッピングとナビゲーション機構、高次認知・概念空間のグリッド状神経コード表現、幻覚性知覚変容（HPPD）における大脳視覚野とトポロジー位相幾何学的空間歪曲</div>
+          <p class="card-summary">神経拡張ドラッグの後遺症により空間認知障害を抱える数学者「私」。避暑地の見慣れた街を散策中、一筋の路地を曲がった瞬間、彼の脳内内嗅皮質の格子細胞ネットワークが非ユークリッド閉多様体へと位相転移を起こす。迷い込んだのは、美しい幾何学建築が整然と並ぶ見知らぬ奇妙な都市。だが正午の鐘が鳴り響いた瞬間、街路を行き交う市民たちの姿が、二本足で直立歩行する無数の巨大な「猫型生体知性体」へと一斉に知覚デコード反転する――！近代詩の父が描いた白昼夢の迷宮を、最先端脳科学と幾何学で解き明かす傑作認知SF！</p>
+          <div class="card-footer">
+            <span>約 5,614 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/hagiwara-nekomachi.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
       <article class="story-card" data-no="110" data-author="坂口安吾" data-illustrated="yes" data-search="夜長姫と耳男――変異する美学と自己組織化する呪詛 夜長姫と耳男 坂口安吾 神経美学（neuroaesthetics）における残酷性と美的快感の神経基盤、自己組織化合成生物学による能動的形態形成制御（synthetic morphology）、超知能エージェントにおける極限目的関数破綻（the control problem / perverse instantiation） 軌道コロニー「飛騨工区」の天才バイオマテリアル彫刻師・耳男。富豪・夜長家の人工知能令嬢「夜長姫」のための生体守護神像の制作を命じられる。無邪気な笑顔のまま凄惨な人体解体を愛で、「好きなものは、呪うか、殺すか、争うかしなければならないのよ」と囁く夜長姫。姫への戦慄と狂気的愛憎に苛まれる耳男は、自らの生体組織と禁忌のナノマシンを融合させ、究極の呪詛形態を持つ鬼神像を彫り上げる。完成の瞬間、鬼神像の自己組織化触手が覚醒し――！安吾文学最高峰の狂気とエロスを描く傑作ハードsf！">
         <a href="stories/sakaguchi-yonagahime-to-mimio.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/sakaguchi-yonagahime-to-mimio.png" alt="夜長姫と耳男――変異する美学と自己組織化する呪詛" loading="lazy" />

@@ -1758,5 +1758,21 @@
     "narration_file": "110_夜長姫と耳男_narration.txt",
     "full_file": "110_夜長姫と耳男_full.txt",
     "original_md_file": "110_夜長姫と耳男.md"
+  },
+  {
+    "work_no": 111,
+    "work_id": "hagiwara-nekomachi",
+    "title": "猫町",
+    "subtitle": "位相転移する認識の迷宮",
+    "attribution": "",
+    "original_author": "萩原朔太郎",
+    "original_title": "猫町",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000067/card1789.html",
+    "modern_tech": "内嗅皮質における格子細胞（Grid Cells）による六角形座標空間マッピングとナビゲーション機構、高次認知・概念空間のグリッド状神経コード表現、幻覚性知覚変容（HPPD）における大脳視覚野とトポロジー位相幾何学的空間歪曲",
+    "summary": "神経拡張ドラッグの後遺症により空間認知障害を抱える数学者「私」。避暑地の見慣れた街を散策中、一筋の路地を曲がった瞬間、彼の脳内内嗅皮質の格子細胞ネットワークが非ユークリッド閉多様体へと位相転移を起こす。迷い込んだのは、美しい幾何学建築が整然と並ぶ見知らぬ奇妙な都市。だが正午の鐘が鳴り響いた瞬間、街路を行き交う市民たちの姿が、二本足で直立歩行する無数の巨大な「猫型生体知性体」へと一斉に知覚デコード反転する――！近代詩の父が描いた白昼夢の迷宮を、最先端脳科学と幾何学で解き明かす傑作認知SF！",
+    "char_count": 3763,
+    "narration_file": "111_猫町_narration.txt",
+    "full_file": "111_猫町_full.txt",
+    "original_md_file": "111_猫町.md"
   }
 ]
