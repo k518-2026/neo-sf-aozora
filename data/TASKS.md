@@ -1,8 +1,8 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-11-06T23:51:11`
-- **進捗サマリー**: 全 **108** 作品 （完了: **108** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
+- **最終同期日時 (JST)**: `2026-11-10T18:57:41`
+- **進捗サマリー**: 全 **108** 作品 （完了: **105** / 挿絵待ち: **0** / プロット作成済: **1** / 未着手: **2**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
 ## 🖥️ 各ローカルLLM PCの役割分担とノルマ
@@ -21,30 +21,21 @@
 
 | No. | 作品ID | 原典タイトル（著者） | 先端科学テーマ | 現在の状態 | 次回担当ライター（交互割当） |
 |:---:|:---|:---|:---|:---:|:---|
-| - | - | （全作品完了済み） | - | Completed | - |
+| #106 | `higuchi-takekurabe` | たけくらべ（樋口一葉） | 神経内分泌ペプチド（オキシトシン）受容体活性化による共感・服従神経回路修飾、社会的階層知覚と前頭葉-線条体報酬系の結合動態、環境因子によるヒストン修飾とDNAメチル化がもたらす思春期エピジェネティック発現変容 | `plot_ready` | ✍️ **プライマリ `rtx5060lp:11434`** (`shosetsu` 執筆) |
+| #107 | `koda-gojuno-to` | 五重塔（幸田露伴） | 建築構造工学における能動的マスダンパー制振と受動的エネルギー散逸理論、負のポアソン比（オーゼティック）を有する3次元機械的メタマテリアルの衝撃分散機構、トポロジー最適化（Homogenization Method）による超高強度・極小重量トラス構造の自動創成 | `pending` | ✍️ **プライマリ `rtx5060lp:11434`** (`shosetsu` 執筆) |
+| #108 | `nakajima-meijinden` | 名人伝（中島敦） | 連続的・高頻度非破壊射影測定による量子状態崩壊抑制（量子ゼノン効果）、フォン・ノイマン測定の極限限界を超える弱測定（Weak Measurement）と増幅効果、巨視的開放量子系における環境誘起デコヒーレンスの位相相殺制御 | `pending` | ✍️ **プライマリ `rtx5060lp:11434`** (`shosetsu` 執筆) |
 
 ## ✅ 完了済み作品（最新10件）
 
-| No. | 作品ID | 原典タイトル（著者） | プロット (sff7020) | 執筆担当 (written_by) | 校閲 (sff7020) | 挿絵 (kenomac-mini) |
+| No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
-| #105 | dazai-shitakiri-suzume | 舌切雀（太宰治） | - | ✓ 
-tx5060lp (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
-| #104 | kikuchi-onshu-no-kanata-ni | 恩讐の彼方に（菊池寛） | - | ✓ 
-tx5060lp (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
-| #103 | kutagawa-mikan | 蜜柑（芥川龍之介） | ✓ (sff7020) | ✓ 
-tx5060lp (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
-| #102 | miyazawa-otsuberu-to-zo | オツベルと象（宮沢賢治） | - | ✓ 
-tx5060lp (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #101 | dazai-hifu-to-kokoro | 皮膚と心（太宰治） | - | ✓ 
-tx5060lp (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #100 | 
-akajima-deshi | 弟子（中島敦） | ✓ (sff7020) | ✓ 
-tx5060lp (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #99 | miyazawa-yamanashi | やまなし（宮沢賢治） | - | ✓ 
-tx5060lp (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #98 | izumi-gekaritsu | 外科室（泉鏡花） | - | ✓ 
-tx5060lp (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #97 | mori-maihime | 舞姫（森鴎外） | - | ✓ 
-tx5060lp (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #96 | izumi-yashagaike | 夜叉ヶ池（泉鏡花） | - | ✓ 
-tx5060lp (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #105 | `dazai-shitakiri-suzume` | 舌切雀（太宰治） | - | ✓ `rtx5060lp` (2026-11-06) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #104 | `kikuchi-onshu-no-kanata-ni` | 恩讐の彼方に（菊池寛） | - | ✓ `rtx5060lp` (2026-11-06) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #103 | `akutagawa-mikan` | 蜜柑（芥川龍之介） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-06) | 校閲済 | 🎨 (kenomac-mini) |
+| #102 | `miyazawa-otsuberu-to-zo` | オツベルと象（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #101 | `dazai-hifu-to-kokoro` | 皮膚と心（太宰治） | - | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #100 | `nakajima-deshi` | 弟子（中島敦） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #99 | `miyazawa-yamanashi` | やまなし（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #98 | `izumi-gekaritsu` | 外科室（泉鏡花） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #97 | `mori-maihime` | 舞姫（森鴎外） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
+| #96 | `izumi-yashagaike` | 夜叉ヶ池（泉鏡花） | - | ✓ `rtx5060lp` (2026-10-29) | ✓ (sff7020) | 🎨 (kenomac-mini) |
