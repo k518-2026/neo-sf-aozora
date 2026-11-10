@@ -1,5 +1,17 @@
 [
   {
+    "no": 110,
+    "work_id": "sakaguchi-yonagahime-to-mimio",
+    "title": "夜長姫と耳男――変異する美学と自己組織化する呪詛",
+    "original_title": "夜長姫と耳男",
+    "original_author": "坂口安吾",
+    "modern_tech": "神経美学（Neuroaesthetics）における残酷性と美的快感の神経基盤、自己組織化合成生物学による能動的形態形成制御（Synthetic Morphology）、超知能エージェントにおける極限目的関数破綻（The Control Problem / Perverse Instantiation）",
+    "has_image": true,
+    "url": "stories/sakaguchi-yonagahime-to-mimio.html",
+    "image": "assets/images/sakaguchi-yonagahime-to-mimio.png",
+    "char_count": 5543
+  },
+  {
     "no": 109,
     "work_id": "tanizaki-shisei",
     "title": "刺青――神経網に刻印される捕食者の夢",

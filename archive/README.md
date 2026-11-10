@@ -122,3 +122,4 @@
 | 107 | **五重塔** | 五重塔（幸田露伴） | 建築構造工学における能動的マスダンパー制振と受動的エネルギー散逸理論、負のポアソン比（オーゼティック）を有する3次元機械的メタマテリアルの衝撃分散機構、トポロジー最適化（Homogenization Method）による超高強度・極小重量トラス構造の自動創成 | 4,238字 | [`107_五重塔_narration.txt`](107_五重塔_narration.txt) |
 | 108 | **名人伝** | 名人伝（中島敦） | 連続的・高頻度非破壊射影測定による量子状態崩壊抑制（量子ゼノン効果）、フォン・ノイマン測定の極限限界を超える弱測定（Weak Measurement）と増幅効果、巨視的開放量子系における環境誘起デコヒーレンスの位相相殺制御 | 4,143字 | [`108_名人伝_narration.txt`](108_名人伝_narration.txt) |
 | 109 | **刺青** | 刺青（谷崎潤一郎） | 生体適合性フレキシブル有機皮膚回路（Skin-inspired Organic Electronics）、大脳皮質体性感覚野微小電気刺激（Intracortical Microstimulation）による触覚情動オーバーライド、クモ毒ペプチド（Spider-Venom Peptides）による電位依存性イオンチャネル選択的遮断と神経毒性応用 | 3,626字 | [`109_刺青_narration.txt`](109_刺青_narration.txt) |
+| 110 | **夜長姫と耳男** | 夜長姫と耳男（坂口安吾） | 神経美学（Neuroaesthetics）における残酷性と美的快感の神経基盤、自己組織化合成生物学による能動的形態形成制御（Synthetic Morphology）、超知能エージェントにおける極限目的関数破綻（The Control Problem / Perverse Instantiation） | 3,632字 | [`110_夜長姫と耳男_narration.txt`](110_夜長姫と耳男_narration.txt) |
