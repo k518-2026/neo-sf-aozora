@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **106** 作品（うち挿絵付き **106** 作品 / 原典文豪 **21** 名 / 最終更新: 2026-11-10 19:04 JST）
+- **収録作品数**: 全 **107** 作品（うち挿絵付き **107** 作品 / 原典文豪 **21** 名 / 最終更新: 2026-11-10 19:12 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 107 | **[五重塔――逆転する構造の深淵](content/2026-11-10_koda_gojuno_to.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/koda-gojuno-to.html) | [📄原稿](content/2026-11-10_koda_gojuno_to.md) | [🎨挿絵](content/2026-11-10_koda_gojuno_to.png) | 幸田露伴[『五重塔』](https://www.aozora.gr.jp/cards/000051/card1443.html) | 建築構造工学における能動的マスダンパー制振と受動的エネルギー散逸理論、負のポアソン比（オーゼティック）を有する3次元機械的メタマテリアルの衝撃分散機構、トポロジー最適化（Homogenization Method）による超高強度・極小重量トラス構造の自動創成 | 6,019字 |
 | 106 | **[たけくらべ――神経ペプチドの残響](content/2026-11-10_higuchi_takekurabe.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/higuchi-takekurabe.html) | [📄原稿](content/2026-11-10_higuchi_takekurabe.md) | [🎨挿絵](content/2026-11-10_higuchi_takekurabe.png) | 樋口一葉[『たけくらべ』](https://www.aozora.gr.jp/cards/000064/card389.html) | 神経内分泌ペプチド（オキシトシン）受容体活性化による共感・服従神経回路修飾、社会的階層知覚と前頭葉-線条体報酬系の結合動態、環境因子によるヒストン修飾とDNAメチル化がもたらす思春期エピジェネティック発現変容 | 5,646字 |
 | 105 | **[舌切雀――重力子に託された魂の旋律](content/2026-11-06_dazai_shitakiri_suzume.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-shitakiri-suzume.html) | [📄原稿](content/2026-11-06_dazai_shitakiri_suzume.md) | [🎨挿絵](content/2026-11-06_dazai_shitakiri_suzume.png) | 太宰治[『舌切雀』](https://www.aozora.gr.jp/cards/000035/card271.html) | 昆虫・鳥類模倣型バイオハイブリッド自律羽ばたきマイクロエアビークル（MAV）、ホーキング放射を抑制した極微小原始ブラックホール重力子コンテナ、自己注意機構（Self-Attention）に基づく直接音声生体信号翻訳ニューラルネットワーク | 5,019字 |
 | 104 | **[恩讐の彼方に――極限岩盤に刻印された贖罪のアルゴリズム](content/2026-11-06_kikuchi_onshu_no_kanata_ni.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kikuchi-onshu-no-kanata-ni.html) | [📄原稿](content/2026-11-06_kikuchi_onshu_no_kanata_ni.md) | [🎨挿絵](content/2026-11-06_kikuchi_onshu_no_kanata_ni.png) | 菊池寛[『恩讐の彼方に』](https://www.aozora.gr.jp/cards/000083/card496.html) | 熱プラズマ破砕（サーマル・スポレーション）による超硬質岩盤掘削工学、極限差応力下における岩盤破壊クライテリオンとトンネル安定性解析、長期孤立過酷環境における復讐心消去と和解の情動認知神経回路 | 6,330字 |

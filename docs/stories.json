@@ -1,5 +1,17 @@
 [
   {
+    "no": 107,
+    "work_id": "koda-gojuno-to",
+    "title": "五重塔――逆転する構造の深淵",
+    "original_title": "五重塔",
+    "original_author": "幸田露伴",
+    "modern_tech": "建築構造工学における能動的マスダンパー制振と受動的エネルギー散逸理論、負のポアソン比（オーゼティック）を有する3次元機械的メタマテリアルの衝撃分散機構、トポロジー最適化（Homogenization Method）による超高強度・極小重量トラス構造の自動創成",
+    "has_image": true,
+    "url": "stories/koda-gojuno-to.html",
+    "image": "assets/images/koda-gojuno-to.png",
+    "char_count": 6019
+  },
+  {
     "no": 106,
     "work_id": "higuchi-takekurabe",
     "title": "たけくらべ――神経ペプチドの残響",

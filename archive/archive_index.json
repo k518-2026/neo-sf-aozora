@@ -1694,5 +1694,21 @@
     "narration_file": "106_たけくらべ_narration.txt",
     "full_file": "106_たけくらべ_full.txt",
     "original_md_file": "106_たけくらべ.md"
+  },
+  {
+    "work_no": 107,
+    "work_id": "koda-gojuno-to",
+    "title": "五重塔",
+    "subtitle": "逆転する構造の深淵",
+    "attribution": "",
+    "original_author": "幸田露伴",
+    "original_title": "五重塔",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000051/card1443.html",
+    "modern_tech": "建築構造工学における能動的マスダンパー制振と受動的エネルギー散逸理論、負のポアソン比（オーゼティック）を有する3次元機械的メタマテリアルの衝撃分散機構、トポロジー最適化（Homogenization Method）による超高強度・極小重量トラス構造の自動創成",
+    "summary": "地球温暖化の極限、超巨大暴風「ハイパーケイン」が常時吹き荒れる赤道軌道エレベータ基地。そこにそびえ立つ第5世代軌道マスドライバー塔「天王塔」の建造を巡り、「のっそり」と嘲笑されながらも完全自律適応型メタマテリアル構造理論を頑なに追求する孤高の天才構造設計士・十兵衛。暴風圏の超音速乱気流がタワーを襲う中、伝統的制振制御を誇る名匠・源太の設計を遥かに超え、十兵衛の五重の相関トラスが嵐のエネルギーを逆位相で吸収し自律呼吸を始める――！職人の誇りと先端構造力学が激突する本格骨太ハードSF！",
+    "char_count": 4238,
+    "narration_file": "107_五重塔_narration.txt",
+    "full_file": "107_五重塔_full.txt",
+    "original_md_file": "107_五重塔.md"
   }
 ]
