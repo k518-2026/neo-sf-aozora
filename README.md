@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **108** 作品（うち挿絵付き **108** 作品 / 原典文豪 **21** 名 / 最終更新: 2026-11-10 19:20 JST）
+- **収録作品数**: 全 **109** 作品（うち挿絵付き **109** 作品 / 原典文豪 **22** 名 / 最終更新: 2026-11-10 20:45 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 109 | **[刺青――神経網に刻印される捕食者の夢](content/2026-11-10_tanizaki_shisei.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/tanizaki-shisei.html) | [📄原稿](content/2026-11-10_tanizaki_shisei.md) | [🎨挿絵](content/2026-11-10_tanizaki_shisei.png) | 谷崎潤一郎[『刺青』](https://www.aozora.gr.jp/cards/001383/card56767.html) | 生体適合性フレキシブル有機皮膚回路（Skin-inspired Organic Electronics）、大脳皮質体性感覚野微小電気刺激（Intracortical Microstimulation）による触覚情動オーバーライド、クモ毒ペプチド（Spider-Venom Peptides）による電位依存性イオンチャネル選択的遮断と神経毒性応用 | 5,524字 |
 | 108 | **[名人伝――観測されることのない深淵への射手](content/2026-11-10_nakajima_meijinden.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-meijinden.html) | [📄原稿](content/2026-11-10_nakajima_meijinden.md) | [🎨挿絵](content/2026-11-10_nakajima_meijinden.png) | 中島敦[『名人伝』](https://www.aozora.gr.jp/cards/000119/card621.html) | 連続的・高頻度非破壊射影測定による量子状態崩壊抑制（量子ゼノン効果）、フォン・ノイマン測定の極限限界を超える弱測定（Weak Measurement）と増幅効果、巨視的開放量子系における環境誘起デコヒーレンスの位相相殺制御 | 5,919字 |
 | 107 | **[五重塔――逆転する構造の深淵](content/2026-11-10_koda_gojuno_to.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/koda-gojuno-to.html) | [📄原稿](content/2026-11-10_koda_gojuno_to.md) | [🎨挿絵](content/2026-11-10_koda_gojuno_to.png) | 幸田露伴[『五重塔』](https://www.aozora.gr.jp/cards/000051/card1443.html) | 建築構造工学における能動的マスダンパー制振と受動的エネルギー散逸理論、負のポアソン比（オーゼティック）を有する3次元機械的メタマテリアルの衝撃分散機構、トポロジー最適化（Homogenization Method）による超高強度・極小重量トラス構造の自動創成 | 6,019字 |
 | 106 | **[たけくらべ――神経ペプチドの残響](content/2026-11-10_higuchi_takekurabe.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/higuchi-takekurabe.html) | [📄原稿](content/2026-11-10_higuchi_takekurabe.md) | [🎨挿絵](content/2026-11-10_higuchi_takekurabe.png) | 樋口一葉[『たけくらべ』](https://www.aozora.gr.jp/cards/000064/card389.html) | 神経内分泌ペプチド（オキシトシン）受容体活性化による共感・服従神経回路修飾、社会的階層知覚と前頭葉-線条体報酬系の結合動態、環境因子によるヒストン修飾とDNAメチル化がもたらす思春期エピジェネティック発現変容 | 5,646字 |

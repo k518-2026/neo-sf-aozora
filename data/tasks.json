@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-11-10T20:38:36.558649+09:00",
+  "updated_at": "2026-11-10T20:45:36.547067+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2310,19 +2310,19 @@
       "author": "谷崎潤一郎",
       "theme": "バイオ生体皮膚エレクトロニクス・皮下皮質直結刺激・クモ毒ペプチド捕食性反転",
       "modern_tech": "生体適合性フレキシブル有機皮膚回路（Skin-inspired Organic Electronics）、大脳皮質体性感覚野微小電気刺激（Intracortical Microstimulation）による触覚情動オーバーライド、クモ毒ペプチド（Spider-Venom Peptides）による電位依存性イオンチャネル選択的遮断と神経毒性応用",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-11-10_tanizaki_shisei.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-11-10T20:43:32.601396+09:00",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-11-10_tanizaki_shisei.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-11-10T20:45:36.464483+09:00"
     },
     {
       "id": "sakaguchi-yonagahime-to-mimio",

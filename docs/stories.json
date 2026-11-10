@@ -1,5 +1,17 @@
 [
   {
+    "no": 109,
+    "work_id": "tanizaki-shisei",
+    "title": "刺青――神経網に刻印される捕食者の夢",
+    "original_title": "刺青",
+    "original_author": "谷崎潤一郎",
+    "modern_tech": "生体適合性フレキシブル有機皮膚回路（Skin-inspired Organic Electronics）、大脳皮質体性感覚野微小電気刺激（Intracortical Microstimulation）による触覚情動オーバーライド、クモ毒ペプチド（Spider-Venom Peptides）による電位依存性イオンチャネル選択的遮断と神経毒性応用",
+    "has_image": true,
+    "url": "stories/tanizaki-shisei.html",
+    "image": "assets/images/tanizaki-shisei.png",
+    "char_count": 5524
+  },
+  {
     "no": 108,
     "work_id": "nakajima-meijinden",
     "title": "名人伝――観測されることのない深淵への射手",

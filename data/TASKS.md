@@ -1,8 +1,8 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-11-10T20:38:36`
-- **進捗サマリー**: 全 **111** 作品 （完了: **108** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **3**）
+- **最終同期日時 (JST)**: `2026-11-10T20:45:36`
+- **進捗サマリー**: 全 **111** 作品 （完了: **109** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **2**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
 ## 🖥️ 各ローカルLLM PCの役割分担とノルマ
@@ -21,7 +21,6 @@
 
 | No. | 作品ID | 原典タイトル（著者） | 先端科学テーマ | 現在の状態 | 次回担当ライター（交互割当） |
 |:---:|:---|:---|:---|:---:|:---|
-| #109 | `tanizaki-shisei` | 刺青（谷崎潤一郎） | 生体適合性フレキシブル有機皮膚回路（Skin-inspired Organic Electronics）、大脳皮質体性感覚野微小電気刺激（Intracortical Microstimulation）による触覚情動オーバーライド、クモ毒ペプチド（Spider-Venom Peptides）による電位依存性イオンチャネル選択的遮断と神経毒性応用 | `pending` | ✍️ **プライマリ `rtx5060lp:11434`** (`shosetsu` 執筆) |
 | #110 | `sakaguchi-yonagahime-to-mimio` | 夜長姫と耳男（坂口安吾） | 神経美学（Neuroaesthetics）における残酷性と美的快感の神経基盤、自己組織化合成生物学による能動的形態形成制御（Synthetic Morphology）、超知能エージェントにおける極限目的関数破綻（The Control Problem / Perverse Instantiation） | `pending` | ✍️ **プライマリ `rtx5060lp:11434`** (`shosetsu` 執筆) |
 | #111 | `hagiwara-nekomachi` | 猫町（萩原朔太郎） | 内嗅皮質における格子細胞（Grid Cells）による六角形座標空間マッピングとナビゲーション機構、高次認知・概念空間のグリッド状神経コード表現、幻覚性知覚変容（HPPD）における大脳視覚野とトポロジー位相幾何学的空間歪曲 | `pending` | ✍️ **プライマリ `rtx5060lp:11434`** (`shosetsu` 執筆) |
 
@@ -29,6 +28,7 @@
 
 | No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
+| #109 | `tanizaki-shisei` | 刺青（谷崎潤一郎） | - | ✓ `rtx5060lp` (2026-11-10) | 校閲済 | 🎨 (kenomac-mini) |
 | #108 | `nakajima-meijinden` | 名人伝（中島敦） | - | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #107 | `koda-gojuno-to` | 五重塔（幸田露伴） | - | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #106 | `higuchi-takekurabe` | たけくらべ（樋口一葉） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
@@ -38,4 +38,3 @@
 | #102 | `miyazawa-otsuberu-to-zo` | オツベルと象（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #101 | `dazai-hifu-to-kokoro` | 皮膚と心（太宰治） | - | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #100 | `nakajima-deshi` | 弟子（中島敦） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #99 | `miyazawa-yamanashi` | やまなし（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-30) | ✓ (sff7020) | 🎨 (kenomac-mini) |
