@@ -1,5 +1,17 @@
 [
   {
+    "no": 106,
+    "work_id": "higuchi-takekurabe",
+    "title": "たけくらべ――神経ペプチドの残響",
+    "original_title": "たけくらべ",
+    "original_author": "樋口一葉",
+    "modern_tech": "神経内分泌ペプチド（オキシトシン）受容体活性化による共感・服従神経回路修飾、社会的階層知覚と前頭葉-線条体報酬系の結合動態、環境因子によるヒストン修飾とDNAメチル化がもたらす思春期エピジェネティック発現変容",
+    "has_image": true,
+    "url": "stories/higuchi-takekurabe.html",
+    "image": "assets/images/higuchi-takekurabe.png",
+    "char_count": 5646
+  },
+  {
     "no": 105,
     "work_id": "dazai-shitakiri-suzume",
     "title": "舌切雀――重力子に託された魂の旋律",

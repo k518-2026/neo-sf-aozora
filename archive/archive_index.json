@@ -1678,5 +1678,21 @@
     "narration_file": "105_舌切雀_narration.txt",
     "full_file": "105_舌切雀_full.txt",
     "original_md_file": "105_舌切雀.md"
+  },
+  {
+    "work_no": 106,
+    "work_id": "higuchi-takekurabe",
+    "title": "たけくらべ",
+    "subtitle": "神経ペプチドの残響",
+    "attribution": "",
+    "original_author": "樋口一葉",
+    "original_title": "たけくらべ",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000064/card389.html",
+    "modern_tech": "神経内分泌ペプチド（オキシトシン）受容体活性化による共感・服従神経回路修飾、社会的階層知覚と前頭葉-線条体報酬系の結合動態、環境因子によるヒストン修飾とDNAメチル化がもたらす思春期エピジェネティック発現変容",
+    "summary": "地球低軌道に浮かぶ巨大人工歓楽コロニー「新吉原」。歓楽区画の看板AIアバターとして幼少期から神経ペプチド修飾を受けて育った勝気な少女・美登利と、清廉な軌道僧院の電子情報僧侶・信如。思春期を迎え、社会的階層差と不可逆なエピジェネティック分化プログラムが発動する中、二人の間に生じる切なくも激烈な情動の揺らぎを描く、近代日本文学の最高峰を翻案したサイバー・メロドラマハードSF！",
+    "char_count": 3910,
+    "narration_file": "106_たけくらべ_narration.txt",
+    "full_file": "106_たけくらべ_full.txt",
+    "original_md_file": "106_たけくらべ.md"
   }
 ]

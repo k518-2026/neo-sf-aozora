@@ -15,10 +15,10 @@
       Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
     </p>
     <div class="stats-bar">
-      <div class="stat-pill"><strong>105</strong> 収録作品</div>
-      <div class="stat-pill"><strong>105</strong> 挿絵付き作品</div>
-      <div class="stat-pill"><strong>20</strong> 原典文豪</div>
-      <div class="stat-pill">最終更新: 2026-11-10 11:24 JST</div>
+      <div class="stat-pill"><strong>106</strong> 収録作品</div>
+      <div class="stat-pill"><strong>106</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>21</strong> 原典文豪</div>
+      <div class="stat-pill">最終更新: 2026-11-10 19:04 JST</div>
     </div>
   </header>
 
@@ -27,7 +27,7 @@
       <div class="filter-group">
         <input type="search" id="searchInput" class="search-input" placeholder="作品名・原典・科学技術キーワードで検索..." oninput="filterCards()" />
         <select id="authorFilter" class="select-filter" onchange="filterCards()">
-          <option value="">すべての原典作家（20名）</option>
+          <option value="">すべての原典作家（21名）</option>
           <option value="中島敦">中島敦</option>
           <option value="久生十蘭">久生十蘭</option>
           <option value="坂口安吾">坂口安吾</option>
@@ -41,6 +41,7 @@
           <option value="折口信夫">折口信夫</option>
           <option value="梶井基次郎">梶井基次郎</option>
           <option value="森鴎外">森鴎外</option>
+          <option value="樋口一葉">樋口一葉</option>
           <option value="江戸川乱歩">江戸川乱歩</option>
           <option value="泉鏡花">泉鏡花</option>
           <option value="海野十三">海野十三</option>
@@ -51,7 +52,7 @@
         </select>
         <select id="imageFilter" class="select-filter" onchange="filterCards()">
           <option value="">すべて表示</option>
-          <option value="yes">🎨 挿絵ありのみ (105)</option>
+          <option value="yes">🎨 挿絵ありのみ (106)</option>
         </select>
         <select id="sortOrder" class="select-filter" onchange="sortCards()">
           <option value="desc">新しい順（#大 → #01）</option>
@@ -62,6 +63,22 @@
     </div>
 
     <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-no="106" data-author="樋口一葉" data-illustrated="yes" data-search="たけくらべ――神経ペプチドの残響 たけくらべ 樋口一葉 神経内分泌ペプチド（オキシトシン）受容体活性化による共感・服従神経回路修飾、社会的階層知覚と前頭葉-線条体報酬系の結合動態、環境因子によるヒストン修飾とdnaメチル化がもたらす思春期エピジェネティック発現変容 地球低軌道に浮かぶ巨大人工歓楽コロニー「新吉原」。歓楽区画の看板aiアバターとして幼少期から神経ペプチド修飾を受けて育った勝気な少女・美登利と、清廉な軌道僧院の電子情報僧侶・信如。思春期を迎え、社会的階層差と不可逆なエピジェネティック分化プログラムが発動する中、二人の間に生じる切なくも激烈な情動の揺らぎを描く、近代日本文学の最高峰を翻案したサイバー・メロドラマハードsf！">
+        <a href="stories/higuchi-takekurabe.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/higuchi-takekurabe.png" alt="たけくらべ――神経ペプチドの残響" loading="lazy" />
+          <span class="card-no-badge">#106</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：樋口一葉『たけくらべ』</div>
+          <h2 class="card-title"><a href="stories/higuchi-takekurabe.html">たけくらべ――神経ペプチドの残響</a></h2>
+          <div class="card-tech">🔬 神経内分泌ペプチド（オキシトシン）受容体活性化による共感・服従神経回路修飾、社会的階層知覚と前頭葉-線条体報酬系の結合動態、環境因子によるヒストン修飾とDNAメチル化がもたらす思春期エピジェネティック発現変容</div>
+          <p class="card-summary">地球低軌道に浮かぶ巨大人工歓楽コロニー「新吉原」。歓楽区画の看板AIアバターとして幼少期から神経ペプチド修飾を受けて育った勝気な少女・美登利と、清廉な軌道僧院の電子情報僧侶・信如。思春期を迎え、社会的階層差と不可逆なエピジェネティック分化プログラムが発動する中、二人の間に生じる切なくも激烈な情動の揺らぎを描く、近代日本文学の最高峰を翻案したサイバー・メロドラマハードSF！</p>
+          <div class="card-footer">
+            <span>約 5,646 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/higuchi-takekurabe.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
       <article class="story-card" data-no="105" data-author="太宰治" data-illustrated="yes" data-search="舌切雀――重力子に託された魂の旋律 舌切雀 太宰治 昆虫・鳥類模倣型バイオハイブリッド自律羽ばたきマイクロエアビークル（mav）、ホーキング放射を抑制した極微小原始ブラックホール重力子コンテナ、自己注意機構（self-attention）に基づく直接音声生体信号翻訳ニューラルネットワーク 「人間なんて、だいたい浅ましいものさ」――孤独を愛する隠遁プログラマーの「おじいさん」が手懐けた、愛らしい自律型バイオ羽ばたきドローン「雀のお宿スワーム（スズメ）」。だが強欲でヒステリックな「おばあさん」は、高周波通信アンテナ（舌）を切断して追放してしまう。おじいさんが深宇宙デブリ帯の「雀のお宿コロニー」へ行くと、aiスワームたちの大歓待を受け、お土産に「軽い葛籠（重力子推進反物質コンテナ）」を授かる。一方、強奪に現れたおばあさんが持ち帰った「重い葛籠」から現れたのは、時空を歪めるマイクロ・ブラックホールの重力崩壊トラップだった！太宰治の気品ある人間洞察と皮肉が冴え渡る極上パロディsf！">
         <a href="stories/dazai-shitakiri-suzume.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/dazai-shitakiri-suzume.png" alt="舌切雀――重力子に託された魂の旋律" loading="lazy" />
