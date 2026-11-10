@@ -1,5 +1,17 @@
 [
   {
+    "no": 108,
+    "work_id": "nakajima-meijinden",
+    "title": "名人伝――観測されることのない深淵への射手",
+    "original_title": "名人伝",
+    "original_author": "中島敦",
+    "modern_tech": "連続的・高頻度非破壊射影測定による量子状態崩壊抑制（量子ゼノン効果）、フォン・ノイマン測定の極限限界を超える弱測定（Weak Measurement）と増幅効果、巨視的開放量子系における環境誘起デコヒーレンスの位相相殺制御",
+    "has_image": true,
+    "url": "stories/nakajima-meijinden.html",
+    "image": "assets/images/nakajima-meijinden.png",
+    "char_count": 5919
+  },
+  {
     "no": 107,
     "work_id": "koda-gojuno-to",
     "title": "五重塔――逆転する構造の深淵",

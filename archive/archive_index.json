@@ -1710,5 +1710,21 @@
     "narration_file": "107_五重塔_narration.txt",
     "full_file": "107_五重塔_full.txt",
     "original_md_file": "107_五重塔.md"
+  },
+  {
+    "work_no": 108,
+    "work_id": "nakajima-meijinden",
+    "title": "名人伝",
+    "subtitle": "観測されることのない深淵への射手",
+    "attribution": "",
+    "original_author": "中島敦",
+    "original_title": "名人伝",
+    "aozora_url": "https://www.aozora.gr.jp/cards/000119/card621.html",
+    "modern_tech": "連続的・高頻度非破壊射影測定による量子状態崩壊抑制（量子ゼノン効果）、フォン・ノイマン測定の極限限界を超える弱測定（Weak Measurement）と増幅効果、巨視的開放量子系における環境誘起デコヒーレンスの位相相殺制御",
+    "summary": "天下無双の超長距離狙撃手（スナイパー）を目指し修業を重ねた青年・紀昌。名匠・飛衛の教えを受け、目元の瞬きを完全に制止して極微素粒子を巨岩のように視覚化する超視覚認知拡張を会得した彼は、ついに霍山に住む伝説の量子隠者・甘蝿老師のもとへ赴く。甘蝿の「不射の射（矢をつがえずして的中せしむる）」を目の当たりにした紀昌は、極微の標的に光子すら当てずに確率振幅だけを干渉させる「量子弱測定・ゼノン射撃理論」の深淵に到達する。数十年後、都へ戻った紀昌の眼は完全な無為を湛え、弓という道具の名すら忘れ去っていた――！東洋哲学の至高の境地と量子測定論が融合した傑作思考実験SF！",
+    "char_count": 4143,
+    "narration_file": "108_名人伝_narration.txt",
+    "full_file": "108_名人伝_full.txt",
+    "original_md_file": "108_名人伝.md"
   }
 ]

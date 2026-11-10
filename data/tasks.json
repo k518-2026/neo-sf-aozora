@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-11-10T19:12:35.512008+09:00",
+  "updated_at": "2026-11-10T19:20:24.107271+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2289,19 +2289,19 @@
       "author": "中島敦",
       "theme": "量子ゼノン効果・無観測射撃理論・弱測定による超遠隔確率収束",
       "modern_tech": "連続的・高頻度非破壊射影測定による量子状態崩壊抑制（量子ゼノン効果）、フォン・ノイマン測定の極限限界を超える弱測定（Weak Measurement）と増幅効果、巨視的開放量子系における環境誘起デコヒーレンスの位相相殺制御",
-      "status": "pending",
+      "status": "completed",
       "assigned_writer": "rtx5060lp",
       "plot_file": null,
       "plot_by": null,
       "plot_at": null,
-      "md_file": null,
-      "written_by": null,
-      "written_at": null,
+      "md_file": "content/2026-11-10_nakajima_meijinden.md",
+      "written_by": "rtx5060lp",
+      "written_at": "2026-11-10",
       "reviewed_by": null,
       "reviewed_at": null,
-      "png_file": null,
-      "illustrated_by": null,
-      "illustrated_at": null
+      "png_file": "content/2026-11-10_nakajima_meijinden.png",
+      "illustrated_by": "kenomac-mini",
+      "illustrated_at": "2026-11-10"
     }
   ]
 }
