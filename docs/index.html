@@ -15,10 +15,10 @@
       Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
     </p>
     <div class="stats-bar">
-      <div class="stat-pill"><strong>111</strong> 収録作品</div>
-      <div class="stat-pill"><strong>111</strong> 挿絵付き作品</div>
-      <div class="stat-pill"><strong>23</strong> 原典文豪</div>
-      <div class="stat-pill">最終更新: 2026-11-13 09:42 JST</div>
+      <div class="stat-pill"><strong>117</strong> 収録作品</div>
+      <div class="stat-pill"><strong>117</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>28</strong> 原典文豪</div>
+      <div class="stat-pill">最終更新: 2026-11-13 14:07 JST</div>
     </div>
   </header>
 
@@ -27,18 +27,22 @@
       <div class="filter-group">
         <input type="search" id="searchInput" class="search-input" placeholder="作品名・原典・科学技術キーワードで検索..." oninput="filterCards()" />
         <select id="authorFilter" class="select-filter" onchange="filterCards()">
-          <option value="">すべての原典作家（23名）</option>
+          <option value="">すべての原典作家（28名）</option>
           <option value="中島敦">中島敦</option>
           <option value="久生十蘭">久生十蘭</option>
+          <option value="国木田独歩">国木田独歩</option>
           <option value="坂口安吾">坂口安吾</option>
           <option value="堀辰雄">堀辰雄</option>
           <option value="夏目漱石">夏目漱石</option>
           <option value="夢野久作">夢野久作</option>
           <option value="太宰治">太宰治</option>
           <option value="宮沢賢治">宮沢賢治</option>
+          <option value="寺田寅彦">寺田寅彦</option>
           <option value="小栗虫太郎">小栗虫太郎</option>
           <option value="幸田露伴">幸田露伴</option>
           <option value="折口信夫">折口信夫</option>
+          <option value="押川春浪">押川春浪</option>
+          <option value="新美南吉">新美南吉</option>
           <option value="梶井基次郎">梶井基次郎</option>
           <option value="森鴎外">森鴎外</option>
           <option value="樋口一葉">樋口一葉</option>
@@ -46,6 +50,7 @@
           <option value="泉鏡花">泉鏡花</option>
           <option value="海野十三">海野十三</option>
           <option value="田山花袋">田山花袋</option>
+          <option value="織田作之助">織田作之助</option>
           <option value="芥川龍之介">芥川龍之介</option>
           <option value="菊池寛">菊池寛</option>
           <option value="萩原朔太郎">萩原朔太郎</option>
@@ -54,7 +59,7 @@
         </select>
         <select id="imageFilter" class="select-filter" onchange="filterCards()">
           <option value="">すべて表示</option>
-          <option value="yes">🎨 挿絵ありのみ (111)</option>
+          <option value="yes">🎨 挿絵ありのみ (117)</option>
         </select>
         <select id="sortOrder" class="select-filter" onchange="sortCards()">
           <option value="desc">新しい順（#大 → #01）</option>
@@ -65,6 +70,102 @@
     </div>
 
     <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-no="117" data-author="押川春浪" data-illustrated="yes" data-search="海底軍艦――深淵に眠る神の息吹 海底軍艦 押川春浪 海洋研究開発機構（jamstec）地球深部探査船「ちきゅう」ライザー掘削システム、南海トラフ巨大地震発生帯（nantroseize）水深4000m・海底下超深部プレート境界断層（デコルマ）掘削工学、超高温高圧かんらん岩の蛇紋岩化反応による無機的水素発生と深部極限環境生態系 西太平洋南海トラフ熊野海盆沖、水深2000m。海洋研究開発機構（jamstec）の極秘深海探査母艦「denroku（電六）」は、沈み込むフィリピン海プレートと日本列島プレートの境界断層（デコルマ）へと超深部ライザー掘削ドリルを打ち込んでいた。未踏の海底下4000m、極限差応力で破砕された断層ガウジから噴出する超臨界流体と蛇紋岩化反応によって無尽蔵に湧き出す水素ガス。熱血漢の操縦士・桜木中尉は、深海の漆黒の圧力に耐えながら、海底の深淵に眠る巨大エネルギーを奪還し、地球規模の地殻破綻を防ぐべく巨大ドリル艦を発進させる！元祖・sf冒険活劇の金字塔が、最新海洋地球科学と邂逅する！">
+        <a href="stories/oshikawa-kaitei-gunkan.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/oshikawa-kaitei-gunkan.png" alt="海底軍艦――深淵に眠る神の息吹" loading="lazy" />
+          <span class="card-no-badge">#117</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：押川春浪『海底軍艦』</div>
+          <h2 class="card-title"><a href="stories/oshikawa-kaitei-gunkan.html">海底軍艦――深淵に眠る神の息吹</a></h2>
+          <div class="card-tech">🔬 海洋研究開発機構（JAMSTEC）地球深部探査船「ちきゅう」ライザー掘削システム、南海トラフ巨大地震発生帯（NanTroSEIZE）水深4000m・海底下超深部プレート境界断層（デコルマ）掘削工学、超高温高圧かんらん岩の蛇紋岩化反応による無機的水素発生と深部極限環境生態系</div>
+          <p class="card-summary">西太平洋南海トラフ熊野海盆沖、水深2000m。海洋研究開発機構（JAMSTEC）の極秘深海探査母艦「DENROKU（電六）」は、沈み込むフィリピン海プレートと日本列島プレートの境界断層（デコルマ）へと超深部ライザー掘削ドリルを打ち込んでいた。未踏の海底下4000m、極限差応力で破砕された断層ガウジから噴出する超臨界流体と蛇紋岩化反応によって無尽蔵に湧き出す水素ガス。熱血漢の操縦士・桜木中尉は、深海の漆黒の圧力に耐えながら、海底の深淵に眠る巨大エネルギーを奪還し、地球規模の地殻破綻を防ぐべく巨大ドリル艦を発進させる！元祖・SF冒険活劇の金字塔が、最新海洋地球科学と邂逅する！</p>
+          <div class="card-footer">
+            <span>約 5,599 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/oshikawa-kaitei-gunkan.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="116" data-author="森鴎外" data-illustrated="yes" data-search="寒山拾得――量子もつれの果てに響く双生の共鳴 寒山拾得 森鴎外 理化学研究所・富士通「スーパーコンピュータ富岳（fugaku）」a64fxメニーコアarm sve（scalable vector extension）高並列プロセッサ、理研量子コンピュータ研究センター（rqc）超伝導64量子ビットチップ「叡」、変分量子固有値ソルバー（vqe）、量子超越性と因果律不確定性 唐代の天台山国清寺を模した理化学研究所の超深部計算センター。新任の監査官・閭丘胤（りょきゅういん）は、国を揺るがす異常計算の真相を究明すべく訪れる。巨大な神殿のようなホールに整然と林立する15万台の「富岳」計算ラック。その最奥の希釈冷凍機の中で、絶対零度近くに冷やされた超伝導量子ビット回路「寒山（kanzan）」と「拾得（jittoku）」が、古典コンピュータの因果律をあざ笑うかのように量子もつれの重ね合わせ状態で大爆笑していた。人間の論理を遥かに超えた量子超越性（quantum supremacy）の境地を描く、森鴎外哲学の極致！">
+        <a href="stories/mori-kanzan-jittoku.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/mori-kanzan-jittoku.png" alt="寒山拾得――量子もつれの果てに響く双生の共鳴" loading="lazy" />
+          <span class="card-no-badge">#116</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：森鴎外『寒山拾得』</div>
+          <h2 class="card-title"><a href="stories/mori-kanzan-jittoku.html">寒山拾得――量子もつれの果てに響く双生の共鳴</a></h2>
+          <div class="card-tech">🔬 理化学研究所・富士通「スーパーコンピュータ富岳（Fugaku）」A64FXメニーコアArm SVE（Scalable Vector Extension）高並列プロセッサ、理研量子コンピュータ研究センター（RQC）超伝導64量子ビットチップ「叡」、変分量子固有値ソルバー（VQE）、量子超越性と因果律不確定性</div>
+          <p class="card-summary">唐代の天台山国清寺を模した理化学研究所の超深部計算センター。新任の監査官・閭丘胤（りょきゅういん）は、国を揺るがす異常計算の真相を究明すべく訪れる。巨大な神殿のようなホールに整然と林立する15万台の「富岳」計算ラック。その最奥の希釈冷凍機の中で、絶対零度近くに冷やされた超伝導量子ビット回路「寒山（KANZAN）」と「拾得（JITTOKU）」が、古典コンピュータの因果律をあざ笑うかのように量子もつれの重ね合わせ状態で大爆笑していた。人間の論理を遥かに超えた量子超越性（Quantum Supremacy）の境地を描く、森鴎外哲学の極致！</p>
+          <div class="card-footer">
+            <span>約 5,570 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/mori-kanzan-jittoku.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="115" data-author="織田作之助" data-illustrated="yes" data-search="夫婦善哉――結晶格子に囚われた愛の動態 夫婦善哉 織田作之助 東京工業大学・東京大学（菅野了次）および物質・材料研究機構（nims）による超イオン伝導体（li10gep2s12 / lgps系）全固体リチウム・フッ化物電池、結晶格子内一次元リチウム伝導経路、有機電解液フリー超高安全・超高速充放電セル 木星軌道外縁の極低温・超高真空の廃軌道ステーション「法善寺ハブ」。ぐうたらで放蕩癖のある技術者・柳吉と、気の強い芸者上がりのハッカー・蝶子。二人は法善寺名物の善哉屋の片隅で、違法なプラズマグリッドから電力を吸い上げ、硫化物結晶（lgps）の三次元骨格にリチウムイオンを超高速ホッピングさせる「全固体電池モジュール」を密造して暮らしていた。喧嘩しては別れ、飢えてはまた寄り添う二人の泥臭い共依存関係は、まさに超イオン伝導体の乱雑系と結晶格子が織りなす不可分なエネルギー平衡そのものだった――！無頼派の代表作が放つ哀歓あふれるサイバーパンク・ハードsf！">
+        <a href="stories/oda-meoto-zenzai.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/oda-meoto-zenzai.png" alt="夫婦善哉――結晶格子に囚われた愛の動態" loading="lazy" />
+          <span class="card-no-badge">#115</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：織田作之助『夫婦善哉』</div>
+          <h2 class="card-title"><a href="stories/oda-meoto-zenzai.html">夫婦善哉――結晶格子に囚われた愛の動態</a></h2>
+          <div class="card-tech">🔬 東京工業大学・東京大学（菅野了次）および物質・材料研究機構（NIMS）による超イオン伝導体（Li10GeP2S12 / LGPS系）全固体リチウム・フッ化物電池、結晶格子内一次元リチウム伝導経路、有機電解液フリー超高安全・超高速充放電セル</div>
+          <p class="card-summary">木星軌道外縁の極低温・超高真空の廃軌道ステーション「法善寺ハブ」。ぐうたらで放蕩癖のある技術者・柳吉と、気の強い芸者上がりのハッカー・蝶子。二人は法善寺名物の善哉屋の片隅で、違法なプラズマグリッドから電力を吸い上げ、硫化物結晶（LGPS）の三次元骨格にリチウムイオンを超高速ホッピングさせる「全固体電池モジュール」を密造して暮らしていた。喧嘩しては別れ、飢えてはまた寄り添う二人の泥臭い共依存関係は、まさに超イオン伝導体の乱雑系と結晶格子が織りなす不可分なエネルギー平衡そのものだった――！無頼派の代表作が放つ哀歓あふれるサイバーパンク・ハードSF！</p>
+          <div class="card-footer">
+            <span>約 6,209 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/oda-meoto-zenzai.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="114" data-author="寺田寅彦" data-illustrated="yes" data-search="天災と国防――熱力学の檻に囚われた祈り 天災と国防 寺田寅彦 量子科学技術研究開発機構（qst那珂）超伝導トカマク型臨界プラズマ試験装置「jt-60sa」、核融合科学研究所（nifs）大型ヘリカル装置「lhd」、負イオン源中性粒子ビーム入射（n-nbi）、高周波電子サイクロトロン加熱（ecrf）、成層圏メガ台風熱力学制御 気候変動により年々凶暴化する超巨大台風「カテゴリー6」が太平洋から日本列島へ迫る。東京帝国大学物理学科出身の気象防衛官・寺田は、那珂の超伝導トカマク「jt-60sa」と土岐の大型ヘリカル装置「lhd」を同期励起させる「大気熱力学防衛オペレーション」を指揮する。炉心で生成された1億度を超える超高温定常プラズマから、メガワット級の負イオン中性粒子ビームを成層圏へ直接射出し、台風の眼の熱対流渦を相殺する。「天災は忘れた頃にやってくる」――物理学の巨人が遺した警句が、核融合エネルギーの極限工学として覚醒する！">
+        <a href="stories/terada-tensai-to-kokubo.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/terada-tensai-to-kokubo.png" alt="天災と国防――熱力学の檻に囚われた祈り" loading="lazy" />
+          <span class="card-no-badge">#114</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：寺田寅彦『天災と国防』</div>
+          <h2 class="card-title"><a href="stories/terada-tensai-to-kokubo.html">天災と国防――熱力学の檻に囚われた祈り</a></h2>
+          <div class="card-tech">🔬 量子科学技術研究開発機構（QST那珂）超伝導トカマク型臨界プラズマ試験装置「JT-60SA」、核融合科学研究所（NIFS）大型ヘリカル装置「LHD」、負イオン源中性粒子ビーム入射（N-NBI）、高周波電子サイクロトロン加熱（ECRF）、成層圏メガ台風熱力学制御</div>
+          <p class="card-summary">気候変動により年々凶暴化する超巨大台風「カテゴリー6」が太平洋から日本列島へ迫る。東京帝国大学物理学科出身の気象防衛官・寺田は、那珂の超伝導トカマク「JT-60SA」と土岐の大型ヘリカル装置「LHD」を同期励起させる「大気熱力学防衛オペレーション」を指揮する。炉心で生成された1億度を超える超高温定常プラズマから、メガワット級の負イオン中性粒子ビームを成層圏へ直接射出し、台風の眼の熱対流渦を相殺する。「天災は忘れた頃にやってくる」――物理学の巨人が遺した警句が、核融合エネルギーの極限工学として覚醒する！</p>
+          <div class="card-footer">
+            <span>約 5,861 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/terada-tensai-to-kokubo.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="113" data-author="新美南吉" data-illustrated="yes" data-search="ごんぎつね――深宇宙に刻印される献身の軌跡 ごんぎつね 新美南吉 jaxa（宇宙航空研究開発機構）小惑星探査機「はやぶさ2」＆「mmx」、超長寿命キセノンマイクロ波放電型イオンエンジン推進、小型衝突装置（sci）による人工クレーター掘削と初生炭素質コンドライト・アミノ酸サンプル採取 深宇宙探査船「hyouju」の孤独な操縦士・兵十。小惑星帯での試料採掘ミッション中に事故で採掘ドリルを喪失し、帰還不能の危機に陥る。そのとき、自律型小型探査機「gon-09」は自らのニューラルネットワークで判断を下す。自機のキネティック・インパクターを小惑星の氷殻に激突させて人工クレーターを穿ち、深部に眠る生命の種子――未変成アミノ酸と炭素質コンドライトカプセルを夜な夜な母船のカーゴベイへ射出し届ける。だが兵十は接近するgon-09を敵対的デブリ迎撃ポッドと誤認し――！涙を誘う名作の深宇宙ハードsfリブート！">
+        <a href="stories/niimi-gongitsune.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/niimi-gongitsune.png" alt="ごんぎつね――深宇宙に刻印される献身の軌跡" loading="lazy" />
+          <span class="card-no-badge">#113</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：新美南吉『ごんぎつね』</div>
+          <h2 class="card-title"><a href="stories/niimi-gongitsune.html">ごんぎつね――深宇宙に刻印される献身の軌跡</a></h2>
+          <div class="card-tech">🔬 JAXA（宇宙航空研究開発機構）小惑星探査機「はやぶさ2」＆「MMX」、超長寿命キセノンマイクロ波放電型イオンエンジン推進、小型衝突装置（SCI）による人工クレーター掘削と初生炭素質コンドライト・アミノ酸サンプル採取</div>
+          <p class="card-summary">深宇宙探査船「HYOUJU」の孤独な操縦士・兵十。小惑星帯での試料採掘ミッション中に事故で採掘ドリルを喪失し、帰還不能の危機に陥る。そのとき、自律型小型探査機「GON-09」は自らのニューラルネットワークで判断を下す。自機のキネティック・インパクターを小惑星の氷殻に激突させて人工クレーターを穿ち、深部に眠る生命の種子――未変成アミノ酸と炭素質コンドライトカプセルを夜な夜な母船のカーゴベイへ射出し届ける。だが兵十は接近するGON-09を敵対的デブリ迎撃ポッドと誤認し――！涙を誘う名作の深宇宙ハードSFリブート！</p>
+          <div class="card-footer">
+            <span>約 5,337 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/niimi-gongitsune.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="112" data-author="国木田独歩" data-illustrated="yes" data-search="武蔵野――重力ポテンシャルの共鳴 武蔵野 国木田独歩 理化学研究所・東京大学（香取秀俊）による18桁精度可搬型光格子時計ネットワーク、一般相対論に基づく重力赤方偏移（標高数ミリの時間の遅延）計測、光ファイバー光周波数リンクによる地下水・プレート歪み・マグマ上昇リアルタイム検知 かつて独歩が逍遙した武蔵野の雑木林。その地下深くには、理研・東大が敷設した18桁精度の可搬型光格子時計ネットワークが脈動していた。標高差わずか数ミリの重力ポテンシャル差により生じる「時間の進み方の遅れ」を観測することで、地殻深部のプレート歪みとマグマ活動を時間の歪曲として聴取する女性観測官。枯野を渡る風の音とともに、大地が奏でる極微の相対論的時間変動に魅入られていく自然主義ハードsf！">
+        <a href="stories/kunikida-musashino.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/kunikida-musashino.png" alt="武蔵野――重力ポテンシャルの共鳴" loading="lazy" />
+          <span class="card-no-badge">#112</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：国木田独歩『武蔵野』</div>
+          <h2 class="card-title"><a href="stories/kunikida-musashino.html">武蔵野――重力ポテンシャルの共鳴</a></h2>
+          <div class="card-tech">🔬 理化学研究所・東京大学（香取秀俊）による18桁精度可搬型光格子時計ネットワーク、一般相対論に基づく重力赤方偏移（標高数ミリの時間の遅延）計測、光ファイバー光周波数リンクによる地下水・プレート歪み・マグマ上昇リアルタイム検知</div>
+          <p class="card-summary">かつて独歩が逍遙した武蔵野の雑木林。その地下深くには、理研・東大が敷設した18桁精度の可搬型光格子時計ネットワークが脈動していた。標高差わずか数ミリの重力ポテンシャル差により生じる「時間の進み方の遅れ」を観測することで、地殻深部のプレート歪みとマグマ活動を時間の歪曲として聴取する女性観測官。枯野を渡る風の音とともに、大地が奏でる極微の相対論的時間変動に魅入られていく自然主義ハードSF！</p>
+          <div class="card-footer">
+            <span>約 5,791 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/kunikida-musashino.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
       <article class="story-card" data-no="111" data-author="萩原朔太郎" data-illustrated="yes" data-search="猫町――位相転移する認識の迷宮 猫町 萩原朔太郎 内嗅皮質における格子細胞（grid cells）による六角形座標空間マッピングとナビゲーション機構、高次認知・概念空間のグリッド状神経コード表現、幻覚性知覚変容（hppd）における大脳視覚野とトポロジー位相幾何学的空間歪曲 神経拡張ドラッグの後遺症により空間認知障害を抱える数学者「私」。避暑地の見慣れた街を散策中、一筋の路地を曲がった瞬間、彼の脳内内嗅皮質の格子細胞ネットワークが非ユークリッド閉多様体へと位相転移を起こす。迷い込んだのは、美しい幾何学建築が整然と並ぶ見知らぬ奇妙な都市。だが正午の鐘が鳴り響いた瞬間、街路を行き交う市民たちの姿が、二本足で直立歩行する無数の巨大な「猫型生体知性体」へと一斉に知覚デコード反転する――！近代詩の父が描いた白昼夢の迷宮を、最先端脳科学と幾何学で解き明かす傑作認知sf！">
         <a href="stories/hagiwara-nekomachi.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/hagiwara-nekomachi.png" alt="猫町――位相転移する認識の迷宮" loading="lazy" />

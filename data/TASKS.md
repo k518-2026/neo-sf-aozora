@@ -1,8 +1,8 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-11-12T21:00:03`
-- **進捗サマリー**: 全 **111** 作品 （完了: **111** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
+- **最終同期日時 (JST)**: `2026-11-13T14:06:08`
+- **進捗サマリー**: 全 **117** 作品 （完了: **117** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
 ## 🖥️ 各ローカルLLM PCの役割分担とノルマ
@@ -27,13 +27,13 @@
 
 | No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
+| #117 | `oshikawa-kaitei-gunkan` | 海底軍艦（押川春浪） | - | ✓ `rtx5060lp` (2026-11-13) | 校閲済 | 🎨 (kenomac-mini) |
+| #116 | `mori-kanzan-jittoku` | 寒山拾得（森鴎外） | - | ✓ `rtx5060lp` (2026-11-13) | 校閲済 | 🎨 (kenomac-mini) |
+| #115 | `oda-meoto-zenzai` | 夫婦善哉（織田作之助） | - | ✓ `rtx5060lp` (2026-11-13) | 校閲済 | 🎨 (kenomac-mini) |
+| #114 | `terada-tensai-to-kokubo` | 天災と国防（寺田寅彦） | - | ✓ `rtx5060lp` (2026-11-13) | 校閲済 | 🎨 (kenomac-mini) |
+| #113 | `niimi-gongitsune` | ごんぎつね（新美南吉） | - | ✓ `rtx5060lp` (2026-11-13) | 校閲済 | 🎨 (kenomac-mini) |
+| #112 | `kunikida-musashino` | 武蔵野（国木田独歩） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-13) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #111 | `hagiwara-nekomachi` | 猫町（萩原朔太郎） | - | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #110 | `sakaguchi-yonagahime-to-mimio` | 夜長姫と耳男（坂口安吾） | - | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #109 | `tanizaki-shisei` | 刺青（谷崎潤一郎） | - | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #108 | `nakajima-meijinden` | 名人伝（中島敦） | - | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #107 | `koda-gojuno-to` | 五重塔（幸田露伴） | - | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #106 | `higuchi-takekurabe` | たけくらべ（樋口一葉） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-10) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #105 | `dazai-shitakiri-suzume` | 舌切雀（太宰治） | - | ✓ `rtx5060lp` (2026-11-06) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #104 | `kikuchi-onshu-no-kanata-ni` | 恩讐の彼方に（菊池寛） | - | ✓ `rtx5060lp` (2026-11-06) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #103 | `akutagawa-mikan` | 蜜柑（芥川龍之介） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-06) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #102 | `miyazawa-otsuberu-to-zo` | オツベルと象（宮沢賢治） | - | ✓ `rtx5060lp` (2026-10-31) | ✓ (sff7020) | 🎨 (kenomac-mini) |
