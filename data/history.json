@@ -1221,5 +1221,18 @@
       "Ashkin, A. (1970). Acceleration and Trapping of Particles by Radiation Pressure. *Physical Review Letters*, 24(4), 156-159.",
       "Corbetta, M., Shulman, G. L. (2002). Control of goal-directed and stimulus-driven attention in the brain. *Nature Reviews Neuroscience*, 3(3), 201-215."
     ]
+  },
+  {
+    "work_id": "mori-sansho-dayu",
+    "original_title": "山椒大夫",
+    "original_author": "森鴎外",
+    "reboot_title": "山椒大夫――量子共鳴する亡霊の皮膚",
+    "posted_at": "2026-11-15T08:24:26.594211+09:00",
+    "file_path": "content/2026-10-16_mori_sansho_dayu.md",
+    "status": "publish",
+    "references": [
+      "Langer, R., Vacanti, J. P. (1993). Tissue Engineering. *Science*, 260(5110), 920-926.",
+      "Bennett, C. H., Brassard, G. (2014). Quantum cryptography: Public key distribution and coin tossing. *Theoretical Computer Science*, 560, 7-11."
+    ]
   }
 ]
