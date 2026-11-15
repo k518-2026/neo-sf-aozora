@@ -1234,5 +1234,19 @@
       "Langer, R., Vacanti, J. P. (1993). Tissue Engineering. *Science*, 260(5110), 920-926.",
       "Bennett, C. H., Brassard, G. (2014). Quantum cryptography: Public key distribution and coin tossing. *Theoretical Computer Science*, 560, 7-11."
     ]
+  },
+  {
+    "work_id": "akutagawa-torokko",
+    "original_title": "トロッコ",
+    "original_author": "芥川龍之介",
+    "reboot_title": "トロッコ――加速する思考の地平",
+    "posted_at": "2026-11-16T08:31:21.943627+09:00",
+    "file_path": "content/2026-10-16_akutagawa_torokko.md",
+    "status": "publish",
+    "references": [
+      "Hyung-Woo Lee, Ki-Chan Kim, Ju Lee (2006). Review of maglev train technologies. *IEEE Transactions on Magnetics*, 42(7), 1917-1925.",
+      "LeDoux, J. E. (2000). Emotion Circuits in the Brain. *Annual Review of Neuroscience*, 23(1), 155-184.",
+      "Stetson, C., Fiesta, M. P., Eagleman, D. M. (2007). Does Time Really Slow Down during a Frightening Event?. *PLoS ONE*, 2(12), e1295."
+    ]
   }
 ]
