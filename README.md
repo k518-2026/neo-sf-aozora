@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **117** 作品（うち挿絵付き **117** 作品 / 原典文豪 **28** 名 / 最終更新: 2026-11-16 08:31 JST）
+- **収録作品数**: 全 **120** 作品（うち挿絵付き **120** 作品 / 原典文豪 **30** 名 / 最終更新: 2026-11-16 20:49 JST）
 
 ---
 
@@ -14,6 +14,9 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 120 | **[機械――極限ナノ秒に封じられた魂の残滓](content/2026-11-16_yokomitsu_kikai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yokomitsu-kikai.html) | [📄原稿](content/2026-11-16_yokomitsu_kikai.md) | [🎨挿絵](content/2026-11-16_yokomitsu_kikai.png) | 横光利一[『機械』](https://www.aozora.gr.jp/cards/000168/card2160.html) | 理化学研究所播磨事業所「SACLA（X線自由電子レーザー XFEL）」によるフェムト秒パルスX線散乱、化学結合の開裂・形成のリアルタイム直接観測（フェムト秒分子動画）、ハードX線10nm極限集光ミラー技術、超微細ナノ加工計測 | 5,327字 |
+| 119 | **[月に吠える――幾何学的共鳴の残響](content/2026-11-16_hagiwara_tsuki_ni_hoeru.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/hagiwara-tsuki-ni-hoeru.html) | [📄原稿](content/2026-11-16_hagiwara_tsuki_ni_hoeru.md) | [🎨挿絵](content/2026-11-16_hagiwara_tsuki_ni_hoeru.png) | 萩原朔太郎[『月に吠える』](https://www.aozora.gr.jp/cards/000067/card855.html) | 理化学研究所・東京大学（十倉好紀）によるカイラル磁性体中の二次元磁気スキルミオン（Magnetic Skyrmions）格子実空間観測、ナノスケール位相幾何学スピン渦による超低消費電力不揮発性レーストラックメモリ、生体植物地下茎（リゾーム）ハイブリッド情報伝送 | 5,954字 |
+| 118 | **[赤い蝋燭と人魚――深海光音響共鳴のレクイエム](content/2026-11-16_ogawa_akai_rosoku_to_ningyo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ogawa-akai-rosoku-to-ningyo.html) | [📄原稿](content/2026-11-16_ogawa_akai_rosoku_to_ningyo.md) | [🎨挿絵](content/2026-11-16_ogawa_akai_rosoku_to_ningyo.png) | 小川未明[『赤い蝋燭と人魚』](https://www.aozora.gr.jp/cards/001475/card51475.html) | 京都大学iPS細胞研究所（CiRA）および理化学研究所による多能性幹細胞の三次元自己組織化眼杯（Optic Cup）オルガノイド形成、深海性発光バクテリア・ルシフェラーゼ遺伝子導入キメラ生体バイオリアクター、海洋微小音響センシングと光音響波発生 | 5,794字 |
 | 117 | **[海底軍艦――深淵に眠る神の息吹](content/2026-11-13_oshikawa_kaitei_gunkan.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oshikawa-kaitei-gunkan.html) | [📄原稿](content/2026-11-13_oshikawa_kaitei_gunkan.md) | [🎨挿絵](content/2026-11-13_oshikawa_kaitei_gunkan.png) | 押川春浪[『海底軍艦』](https://www.aozora.gr.jp/cards/000077/card450.html) | 海洋研究開発機構（JAMSTEC）地球深部探査船「ちきゅう」ライザー掘削システム、南海トラフ巨大地震発生帯（NanTroSEIZE）水深4000m・海底下超深部プレート境界断層（デコルマ）掘削工学、超高温高圧かんらん岩の蛇紋岩化反応による無機的水素発生と深部極限環境生態系 | 5,599字 |
 | 116 | **[寒山拾得――量子もつれの果てに響く双生の共鳴](content/2026-11-13_mori_kanzan_jittoku.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/mori-kanzan-jittoku.html) | [📄原稿](content/2026-11-13_mori_kanzan_jittoku.md) | [🎨挿絵](content/2026-11-13_mori_kanzan_jittoku.png) | 森鴎外[『寒山拾得』](https://www.aozora.gr.jp/cards/000129/card2055.html) | 理化学研究所・富士通「スーパーコンピュータ富岳（Fugaku）」A64FXメニーコアArm SVE（Scalable Vector Extension）高並列プロセッサ、理研量子コンピュータ研究センター（RQC）超伝導64量子ビットチップ「叡」、変分量子固有値ソルバー（VQE）、量子超越性と因果律不確定性 | 5,570字 |
 | 115 | **[夫婦善哉――結晶格子に囚われた愛の動態](content/2026-11-13_oda_meoto_zenzai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/oda-meoto-zenzai.html) | [📄原稿](content/2026-11-13_oda_meoto_zenzai.md) | [🎨挿絵](content/2026-11-13_oda_meoto_zenzai.png) | 織田作之助[『夫婦善哉』](https://www.aozora.gr.jp/cards/000040/card327.html) | 東京工業大学・東京大学（菅野了次）および物質・材料研究機構（NIMS）による超イオン伝導体（Li10GeP2S12 / LGPS系）全固体リチウム・フッ化物電池、結晶格子内一次元リチウム伝導経路、有機電解液フリー超高安全・超高速充放電セル | 6,209字 |

@@ -1,5 +1,41 @@
 [
   {
+    "no": 120,
+    "work_id": "yokomitsu-kikai",
+    "title": "機械――極限ナノ秒に封じられた魂の残滓",
+    "original_title": "機械",
+    "original_author": "横光利一",
+    "modern_tech": "理化学研究所播磨事業所「SACLA（X線自由電子レーザー XFEL）」によるフェムト秒パルスX線散乱、化学結合の開裂・形成のリアルタイム直接観測（フェムト秒分子動画）、ハードX線10nm極限集光ミラー技術、超微細ナノ加工計測",
+    "has_image": true,
+    "url": "stories/yokomitsu-kikai.html",
+    "image": "assets/images/yokomitsu-kikai.png",
+    "char_count": 5327
+  },
+  {
+    "no": 119,
+    "work_id": "hagiwara-tsuki-ni-hoeru",
+    "title": "月に吠える――幾何学的共鳴の残響",
+    "original_title": "月に吠える",
+    "original_author": "萩原朔太郎",
+    "modern_tech": "理化学研究所・東京大学（十倉好紀）によるカイラル磁性体中の二次元磁気スキルミオン（Magnetic Skyrmions）格子実空間観測、ナノスケール位相幾何学スピン渦による超低消費電力不揮発性レーストラックメモリ、生体植物地下茎（リゾーム）ハイブリッド情報伝送",
+    "has_image": true,
+    "url": "stories/hagiwara-tsuki-ni-hoeru.html",
+    "image": "assets/images/hagiwara-tsuki-ni-hoeru.png",
+    "char_count": 5954
+  },
+  {
+    "no": 118,
+    "work_id": "ogawa-akai-rosoku-to-ningyo",
+    "title": "赤い蝋燭と人魚――深海光音響共鳴のレクイエム",
+    "original_title": "赤い蝋燭と人魚",
+    "original_author": "小川未明",
+    "modern_tech": "京都大学iPS細胞研究所（CiRA）および理化学研究所による多能性幹細胞の三次元自己組織化眼杯（Optic Cup）オルガノイド形成、深海性発光バクテリア・ルシフェラーゼ遺伝子導入キメラ生体バイオリアクター、海洋微小音響センシングと光音響波発生",
+    "has_image": true,
+    "url": "stories/ogawa-akai-rosoku-to-ningyo.html",
+    "image": "assets/images/ogawa-akai-rosoku-to-ningyo.png",
+    "char_count": 5794
+  },
+  {
     "no": 117,
     "work_id": "oshikawa-kaitei-gunkan",
     "title": "海底軍艦――深淵に眠る神の息吹",

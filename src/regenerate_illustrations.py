@@ -41,6 +41,33 @@ NEGATIVE_PROMPT = (
 
 WORKS_SPEC: List[Dict[str, Any]] = [
     {
+        "index": 120,
+        "work_id": "yokomitsu-kikai",
+        "title": "機械",
+        "author": "横光利一",
+        "content_paths": [Path("content/2026-11-16_yokomitsu_kikai.png")],
+        "docs_path": Path("docs/assets/images/yokomitsu-kikai.png"),
+        "prompt": "Cinematic modernist noir sci-fi anime illustration. Interior of a cramped, dimly lit high-precision manufacturing and optics workshop filled with glowing amber vacuum tubes, chemical flasks, and intricate copper gears. At the center stands an imposing futuristic beamline apparatus connected to a vacuum chamber, projecting a glowing holographic molecular movie showing chemical bonds vibrating and reforming in femtosecond steps. Three tense Japanese craftsmen in dark work uniforms and protective glasses exchange suspicious, calculated glances across the steel workbench under harsh overhead industrial fluorescent lights. Geometric constructivist composition, mechanical tension, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 119,
+        "work_id": "hagiwara-tsuki-ni-hoeru",
+        "title": "月に吠える",
+        "author": "萩原朔太郎",
+        "content_paths": [Path("content/2026-11-16_hagiwara_tsuki_ni_hoeru.png")],
+        "docs_path": Path("docs/assets/images/hagiwara-tsuki-ni-hoeru.png"),
+        "prompt": "Cinematic psychological sci-fi anime illustration. A nocturnal haunting scene in a dense Japanese bamboo grove illuminated by an enormous, surreal cold blue full moon. From the soil between sharp bamboo shoots, intricate glowing cyan and purple spiraling vortex patterns of magnetic skyrmions rise like phantom mist. A sickly, sensitive young poet-physicist with cybernetic sensory goggles kneels on the damp earth, gripping his temples in overwhelming synesthetic ecstasy as ethereal spectral silver hounds formed of glowing magnetic flux lines howl towards the radiant moon. Hauntingly beautiful, poetic dark sci-fi, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 118,
+        "work_id": "ogawa-akai-rosoku-to-ningyo",
+        "title": "赤い蝋燭と人魚",
+        "author": "小川未明",
+        "content_paths": [Path("content/2026-11-16_ogawa_akai_rosoku_to_ningyo.png")],
+        "docs_path": Path("docs/assets/images/ogawa-akai-rosoku-to-ningyo.png"),
+        "prompt": "Cinematic melancholic dark fantasy sci-fi anime illustration. A young bio-engineered mermaid chimera (NINGYO) with iridescent bioluminescent scales and delicate human-like features sits inside a glowing glass cylindrical culture tank in a dark cliffside ocean laboratory. Beside the tank on an antique wooden table, several hand-sculpted red candles made of bio-luminescent organic wax burn with intense crimson and amber flames, casting mysterious patterns of light onto the stormy black northern sea visible through a massive circular observation window. High gothic sci-fi aesthetic, emotional cinematic lighting, 8k masterpiece, pure art without text.",
+    },
+    {
         "index": 117,
         "work_id": "oshikawa-kaitei-gunkan",
         "title": "海底軍艦",
