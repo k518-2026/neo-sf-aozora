@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **120** 作品（うち挿絵付き **120** 作品 / 原典文豪 **30** 名 / 最終更新: 2026-11-18 10:52 JST）
+- **収録作品数**: 全 **123** 作品（うち挿絵付き **123** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-18 16:58 JST）
 
 ---
 
@@ -14,6 +14,9 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 123 | **[シグナルとシグナレス――極低温に刻印される磁束の恋](content/2026-11-18_miyazawa_signal_to_signalless.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-signal-to-signalless.html) | [📄原稿](content/2026-11-18_miyazawa_signal_to_signalless.md) | [🎨挿絵](content/2026-11-18_miyazawa_signal_to_signalless.png) | 宮沢賢治[『シグナルとシグナレス』](https://www.aozora.gr.jp/cards/000081/card408.html) | JR東海および鉄道総合技術研究所（RTRI）超電導磁気浮上式鉄道（SCMaglev）、ニオブチタン・高温超電導（HTS）マグネット、超電導体の磁束ピン止め効果（Flux Pinning）、リニア同期モーター（LSM）による時速500km/h超の非接触推進、自律型電磁シグナル通信ノード | 5,647字 |
+| 122 | **[野菊の墓――ナノ空間に刻印された「香りの記憶」](content/2026-11-18_ito_nogiku_no_haka.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ito-nogiku-no-haka.html) | [📄原稿](content/2026-11-18_ito_nogiku_no_haka.md) | [🎨挿絵](content/2026-11-18_ito_nogiku_no_haka.png) | 伊藤左千夫[『野菊の墓』](https://www.aozora.gr.jp/cards/000058/card1197.html) | 京都大学高等研究院（北川進 特別教授）による多孔性配位高分子（PCP/MOF: Porous Coordination Polymers）、自己組織化ナノ多孔質結晶格子による特定揮発性有機化合物（VOC/テルペノイド）の1分子選択的認識・吸着、環境中フェムトモル極微量生体シグナル分離 | 5,544字 |
+| 121 | **[歌行燈――量子共鳴の幽玄（Quantum Resonance of Yūgen）](content/2026-11-18_izumi_utaandon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-utaandon.html) | [📄原稿](content/2026-11-18_izumi_utaandon.md) | [🎨挿絵](content/2026-11-18_izumi_utaandon.png) | 泉鏡花[『歌行燈』](https://www.aozora.gr.jp/cards/000050/card965.html) | 東京大学宇宙線研究所（ICRR）大型低温重力波望遠鏡「KAGRA」、神岡鉱山地下1000mの極限静穏環境、20K（マイナス253℃）に冷却された超高純度サファイア鏡懸架システム、レーザー干渉計による時空の歪み（重力波）検出、小脳内部運動モデルと能楽の舞「海士」における極微動静止制御 | 5,217字 |
 | 120 | **[機械――極限ナノ秒に封じられた魂の残滓](content/2026-11-16_yokomitsu_kikai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yokomitsu-kikai.html) | [📄原稿](content/2026-11-16_yokomitsu_kikai.md) | [🎨挿絵](content/2026-11-16_yokomitsu_kikai.png) | 横光利一[『機械』](https://www.aozora.gr.jp/cards/000168/card2160.html) | 理化学研究所播磨事業所「SACLA（X線自由電子レーザー XFEL）」によるフェムト秒パルスX線散乱、化学結合の開裂・形成のリアルタイム直接観測（フェムト秒分子動画）、ハードX線10nm極限集光ミラー技術、超微細ナノ加工計測 | 5,327字 |
 | 119 | **[月に吠える――幾何学的共鳴の残響](content/2026-11-16_hagiwara_tsuki_ni_hoeru.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/hagiwara-tsuki-ni-hoeru.html) | [📄原稿](content/2026-11-16_hagiwara_tsuki_ni_hoeru.md) | [🎨挿絵](content/2026-11-16_hagiwara_tsuki_ni_hoeru.png) | 萩原朔太郎[『月に吠える』](https://www.aozora.gr.jp/cards/000067/card855.html) | 理化学研究所・東京大学（十倉好紀）によるカイラル磁性体中の二次元磁気スキルミオン（Magnetic Skyrmions）格子実空間観測、ナノスケール位相幾何学スピン渦による超低消費電力不揮発性レーストラックメモリ、生体植物地下茎（リゾーム）ハイブリッド情報伝送 | 5,954字 |
 | 118 | **[赤い蝋燭と人魚――深海光音響共鳴のレクイエム](content/2026-11-16_ogawa_akai_rosoku_to_ningyo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ogawa-akai-rosoku-to-ningyo.html) | [📄原稿](content/2026-11-16_ogawa_akai_rosoku_to_ningyo.md) | [🎨挿絵](content/2026-11-16_ogawa_akai_rosoku_to_ningyo.png) | 小川未明[『赤い蝋燭と人魚』](https://www.aozora.gr.jp/cards/001475/card51475.html) | 京都大学iPS細胞研究所（CiRA）および理化学研究所による多能性幹細胞の三次元自己組織化眼杯（Optic Cup）オルガノイド形成、深海性発光バクテリア・ルシフェラーゼ遺伝子導入キメラ生体バイオリアクター、海洋微小音響センシングと光音響波発生 | 5,794字 |

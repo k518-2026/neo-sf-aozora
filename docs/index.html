@@ -15,10 +15,10 @@
       Mac mini M4 ローカルAI（Ollama &amp; Draw Things FLUX.2）により執筆・挿絵生成し、GitHub Pages上で公開しています。
     </p>
     <div class="stats-bar">
-      <div class="stat-pill"><strong>120</strong> 収録作品</div>
-      <div class="stat-pill"><strong>120</strong> 挿絵付き作品</div>
-      <div class="stat-pill"><strong>30</strong> 原典文豪</div>
-      <div class="stat-pill">最終更新: 2026-11-18 10:52 JST</div>
+      <div class="stat-pill"><strong>123</strong> 収録作品</div>
+      <div class="stat-pill"><strong>123</strong> 挿絵付き作品</div>
+      <div class="stat-pill"><strong>31</strong> 原典文豪</div>
+      <div class="stat-pill">最終更新: 2026-11-18 16:58 JST</div>
     </div>
   </header>
 
@@ -27,9 +27,10 @@
       <div class="filter-group">
         <input type="search" id="searchInput" class="search-input" placeholder="作品名・原典・科学技術キーワードで検索..." oninput="filterCards()" />
         <select id="authorFilter" class="select-filter" onchange="filterCards()">
-          <option value="">すべての原典作家（30名）</option>
+          <option value="">すべての原典作家（31名）</option>
           <option value="中島敦">中島敦</option>
           <option value="久生十蘭">久生十蘭</option>
+          <option value="伊藤左千夫">伊藤左千夫</option>
           <option value="国木田独歩">国木田独歩</option>
           <option value="坂口安吾">坂口安吾</option>
           <option value="堀辰雄">堀辰雄</option>
@@ -61,7 +62,7 @@
         </select>
         <select id="imageFilter" class="select-filter" onchange="filterCards()">
           <option value="">すべて表示</option>
-          <option value="yes">🎨 挿絵ありのみ (120)</option>
+          <option value="yes">🎨 挿絵ありのみ (123)</option>
         </select>
         <select id="sortOrder" class="select-filter" onchange="sortCards()">
           <option value="desc">新しい順（#大 → #01）</option>
@@ -72,6 +73,54 @@
     </div>
 
     <div class="story-grid" id="storyGrid">
+      <article class="story-card" data-no="123" data-author="宮沢賢治" data-illustrated="yes" data-search="シグナルとシグナレス――極低温に刻印される磁束の恋 シグナルとシグナレス 宮沢賢治 jr東海および鉄道総合技術研究所（rtri）超電導磁気浮上式鉄道（scmaglev）、ニオブチタン・高温超電導（hts）マグネット、超電導体の磁束ピン止め効果（flux pinning）、リニア同期モーター（lsm）による時速500km/h超の非接触推進、自律型電磁シグナル通信ノード 岩手山を遠くに望む東北・極低温亜真空リニア実験回廊。本線側の高剛性鋼鉄シグナルタワー「本線シグナル」と、軽便支線側の可憐な光電パルス信号機「シグナレス」。二つの自律型ai通信シグナルは、真空チューブ軌道内を極低温液体ヘリウムで冷却された超電導磁石によって時速500kmで疾走する超高速リニア列車を監視しながら、微弱な電磁誘導波で愛を語り合っていた。超電導体の磁束線が結晶欠陥に強固に捕獲される「ピン止め効果」のように、二人の精神は軌道上の磁気格子に固く結びつけられていた。だが、酷寒の猛吹雪の夜、本線にメガワット級の磁気クエンチ事故が発生し、暴走する超電導リニアがシグナレスの支線分岐器へと突入する――！宮沢賢治の詩的寓話が、日本の誇る超電導リニア極限力学として疾走する壮大なsfロマンス！">
+        <a href="stories/miyazawa-signal-to-signalless.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/miyazawa-signal-to-signalless.png" alt="シグナルとシグナレス――極低温に刻印される磁束の恋" loading="lazy" />
+          <span class="card-no-badge">#123</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：宮沢賢治『シグナルとシグナレス』</div>
+          <h2 class="card-title"><a href="stories/miyazawa-signal-to-signalless.html">シグナルとシグナレス――極低温に刻印される磁束の恋</a></h2>
+          <div class="card-tech">🔬 JR東海および鉄道総合技術研究所（RTRI）超電導磁気浮上式鉄道（SCMaglev）、ニオブチタン・高温超電導（HTS）マグネット、超電導体の磁束ピン止め効果（Flux Pinning）、リニア同期モーター（LSM）による時速500km/h超の非接触推進、自律型電磁シグナル通信ノード</div>
+          <p class="card-summary">岩手山を遠くに望む東北・極低温亜真空リニア実験回廊。本線側の高剛性鋼鉄シグナルタワー「本線シグナル」と、軽便支線側の可憐な光電パルス信号機「シグナレス」。二つの自律型AI通信シグナルは、真空チューブ軌道内を極低温液体ヘリウムで冷却された超電導磁石によって時速500kmで疾走する超高速リニア列車を監視しながら、微弱な電磁誘導波で愛を語り合っていた。超電導体の磁束線が結晶欠陥に強固に捕獲される「ピン止め効果」のように、二人の精神は軌道上の磁気格子に固く結びつけられていた。だが、酷寒の猛吹雪の夜、本線にメガワット級の磁気クエンチ事故が発生し、暴走する超電導リニアがシグナレスの支線分岐器へと突入する――！宮沢賢治の詩的寓話が、日本の誇る超電導リニア極限力学として疾走する壮大なSFロマンス！</p>
+          <div class="card-footer">
+            <span>約 5,647 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/miyazawa-signal-to-signalless.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="122" data-author="伊藤左千夫" data-illustrated="yes" data-search="野菊の墓――ナノ空間に刻印された「香りの記憶」 野菊の墓 伊藤左千夫 京都大学高等研究院（北川進 特別教授）による多孔性配位高分子（pcp/mof: porous coordination polymers）、自己組織化ナノ多孔質結晶格子による特定揮発性有機化合物（voc/テルペノイド）の1分子選択的認識・吸着、環境中フェムトモル極微量生体シグナル分離 矢切の渡しが白く霞む晩秋の江戸川放水路。15歳の少年・政夫と、野菊のような従姉・民子。二人は京都大学が開発した多孔性配位高分子（pcp/mof）ナノ膜を搭載した大気環境バイオセンサーの開発を手伝っていた。金属イオンと有機配位子が自己組織化して無数に織りなすサブナノメートルの微細空間は、野菊が放つ極微量の揮発性芳香分子（α-ピネンやボルニルアセテート）だけを、大気中から1分子単位で吸着・凝縮する驚異の分子認識機能を持っていた。だが、大人たちの因習と家柄によって民子は遠くへ嫁がされ、病に倒れる。死の床で民子が握りしめていたのは、政夫との記憶が分子レベルで永久固定されたpcp多孔性結晶カプセルだった――。「民さんは野菊のような人だ」――日本文学史上もっとも純粋で哀切な恋の記憶を、最先端ナノ空間化学が永遠に結晶化する珠玉のハードsf！">
+        <a href="stories/ito-nogiku-no-haka.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/ito-nogiku-no-haka.png" alt="野菊の墓――ナノ空間に刻印された「香りの記憶」" loading="lazy" />
+          <span class="card-no-badge">#122</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：伊藤左千夫『野菊の墓』</div>
+          <h2 class="card-title"><a href="stories/ito-nogiku-no-haka.html">野菊の墓――ナノ空間に刻印された「香りの記憶」</a></h2>
+          <div class="card-tech">🔬 京都大学高等研究院（北川進 特別教授）による多孔性配位高分子（PCP/MOF: Porous Coordination Polymers）、自己組織化ナノ多孔質結晶格子による特定揮発性有機化合物（VOC/テルペノイド）の1分子選択的認識・吸着、環境中フェムトモル極微量生体シグナル分離</div>
+          <p class="card-summary">矢切の渡しが白く霞む晩秋の江戸川放水路。15歳の少年・政夫と、野菊のような従姉・民子。二人は京都大学が開発した多孔性配位高分子（PCP/MOF）ナノ膜を搭載した大気環境バイオセンサーの開発を手伝っていた。金属イオンと有機配位子が自己組織化して無数に織りなすサブナノメートルの微細空間は、野菊が放つ極微量の揮発性芳香分子（α-ピネンやボルニルアセテート）だけを、大気中から1分子単位で吸着・凝縮する驚異の分子認識機能を持っていた。だが、大人たちの因習と家柄によって民子は遠くへ嫁がされ、病に倒れる。死の床で民子が握りしめていたのは、政夫との記憶が分子レベルで永久固定されたPCP多孔性結晶カプセルだった――。「民さんは野菊のような人だ」――日本文学史上もっとも純粋で哀切な恋の記憶を、最先端ナノ空間化学が永遠に結晶化する珠玉のハードSF！</p>
+          <div class="card-footer">
+            <span>約 5,544 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/ito-nogiku-no-haka.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
+      <article class="story-card" data-no="121" data-author="泉鏡花" data-illustrated="yes" data-search="歌行燈――量子共鳴の幽玄（quantum resonance of yūgen） 歌行燈 泉鏡花 東京大学宇宙線研究所（icrr）大型低温重力波望遠鏡「kagra」、神岡鉱山地下1000mの極限静穏環境、20k（マイナス253℃）に冷却された超高純度サファイア鏡懸架システム、レーザー干渉計による時空の歪み（重力波）検出、小脳内部運動モデルと能楽の舞「海士」における極微動静止制御 伊勢桑名の夜。老舗旅館の一室で、かつて能楽界を追放された若き天才シテ方・恩地喜多八は、東京大学宇宙線研究所が神岡鉱山の地底深くに建造した極低温重力波望遠鏡「kagra」の主任観測官・宗山と再会する。20ケルビン（零下253度）の極低温に凍結された超高純度サファイア鏡は、熱雑音を完全に排除し、数十億光年の彼方でブラックホールが衝突する時空のさざ波を捉える。だが、サファイア鏡の懸架ワイヤーに生じる原因不明の微小量子共振が、喜多八がかつて舞った世阿弥の能『海士』の呼吸周期と完全に同期していた。かつて愛した芸妓・お袖の歌行燈の灯火に導かれ、喜多八は地底の真空トンネルで時空の歪みを鎮める究極の舞に挑む――！鏡花幽玄の最高峰を、極限量子重力波天文学で解き明かす傑作ハードsf！">
+        <a href="stories/izumi-utaandon.html" class="card-thumb-wrap">
+          <img class="card-thumb" src="assets/images/izumi-utaandon.png" alt="歌行燈――量子共鳴の幽玄（Quantum Resonance of Yūgen）" loading="lazy" />
+          <span class="card-no-badge">#121</span>
+        </a>
+        <div class="card-body">
+          <div class="card-origin">原典：泉鏡花『歌行燈』</div>
+          <h2 class="card-title"><a href="stories/izumi-utaandon.html">歌行燈――量子共鳴の幽玄（Quantum Resonance of Yūgen）</a></h2>
+          <div class="card-tech">🔬 東京大学宇宙線研究所（ICRR）大型低温重力波望遠鏡「KAGRA」、神岡鉱山地下1000mの極限静穏環境、20K（マイナス253℃）に冷却された超高純度サファイア鏡懸架システム、レーザー干渉計による時空の歪み（重力波）検出、小脳内部運動モデルと能楽の舞「海士」における極微動静止制御</div>
+          <p class="card-summary">伊勢桑名の夜。老舗旅館の一室で、かつて能楽界を追放された若き天才シテ方・恩地喜多八は、東京大学宇宙線研究所が神岡鉱山の地底深くに建造した極低温重力波望遠鏡「KAGRA」の主任観測官・宗山と再会する。20ケルビン（零下253度）の極低温に凍結された超高純度サファイア鏡は、熱雑音を完全に排除し、数十億光年の彼方でブラックホールが衝突する時空のさざ波を捉える。だが、サファイア鏡の懸架ワイヤーに生じる原因不明の微小量子共振が、喜多八がかつて舞った世阿弥の能『海士』の呼吸周期と完全に同期していた。かつて愛した芸妓・お袖の歌行燈の灯火に導かれ、喜多八は地底の真空トンネルで時空の歪みを鎮める究極の舞に挑む――！鏡花幽玄の最高峰を、極限量子重力波天文学で解き明かす傑作ハードSF！</p>
+          <div class="card-footer">
+            <span>約 5,217 文字 🎨 挿絵付</span>
+            <a class="read-link" href="stories/izumi-utaandon.html">作品を読む →</a>
+          </div>
+        </div>
+      </article>
       <article class="story-card" data-no="120" data-author="横光利一" data-illustrated="yes" data-search="機械――極限ナノ秒に封じられた魂の残滓 機械 横光利一 理化学研究所播磨事業所「sacla（x線自由電子レーザー xfel）」によるフェムト秒パルスx線散乱、化学結合の開裂・形成のリアルタイム直接観測（フェムト秒分子動画）、ハードx線10nm極限集光ミラー技術、超微細ナノ加工計測 薬品と機械油の刺激臭が立ち込める東京下町の超精密光学素子加工工場。頑固で職人気質の主人・黒川、粗暴で直情的な技師・軽部、陰険で計算高い富振、そして新参の「私」。工場の中央には、理研播磨のsaclaから超高真空ビームラインを直結したフェムト秒x線散乱計測装置が鎮座していた。溶液中の金錯体や高分子がオングストローム単位で結合・解離する瞬間を、1000兆分の1秒のパルスで「分子動画」として直接観測する極限環境。だが、測定データに現れた謎の不純物ピークを巡り、技師たちの間で嫉妬、盗聴、薬物混入の疑心暗鬼が連鎖する。人間とは、外部の力学系と環境パラメータによって正確に駆動される一台の「機械」に過ぎないのか――新感覚派の金字塔を、最先端極限光学物理と冷徹な心理幾何学で再構築する傑作力学ハードsf！">
         <a href="stories/yokomitsu-kikai.html" class="card-thumb-wrap">
           <img class="card-thumb" src="assets/images/yokomitsu-kikai.png" alt="機械――極限ナノ秒に封じられた魂の残滓" loading="lazy" />

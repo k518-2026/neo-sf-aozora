@@ -41,6 +41,33 @@ NEGATIVE_PROMPT = (
 
 WORKS_SPEC: List[Dict[str, Any]] = [
     {
+        "index": 123,
+        "work_id": "miyazawa-signal-to-signalless",
+        "title": "シグナルとシグナレス",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-11-18_miyazawa_signal_to_signalless.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-signal-to-signalless.png"),
+        "prompt": "Cinematic romantic physics sci-fi anime illustration. A snow-covered winter railway junction in Iwate under a brilliant starry night sky with the Milky Way. On one side stands a tall, dignified futuristic gantry signal tower with blue and green glowing optical lenses (Signal), and on the other stands an elegant, slender wayside pulse signal lantern with gentle amber lights (Signalless). Between them, an ultra-sleek aerodynamic superconducting maglev train (SCMaglev L0) hovers smoothly above glowing electromagnetic guideways emitting soft cyan flux ribbons, kicking up sparkling powdered snow. Retro-futuristic Kenji Miyazawa poetic wonder, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 122,
+        "work_id": "ito-nogiku-no-haka",
+        "title": "野菊の墓",
+        "author": "伊藤左千夫",
+        "content_paths": [Path("content/2026-11-18_ito_nogiku_no_haka.png")],
+        "docs_path": Path("docs/assets/images/ito-nogiku-no-haka.png"),
+        "prompt": "Cinematic nostalgic emotional sci-fi anime illustration. A misty autumn riverside landscape in rural Japan (Yagiri ferry) surrounded by blooming wild white and violet aster flowers (Nogiku). A tender young Japanese girl with dark hair in a simple vintage cotton kimono holds a glowing, translucent crystalline nanostructured cube (PCP/MOF material) that emanates faint golden holographic floral molecular meshes. Beside her, a sensitive teenage boy in student uniform looks at her with bittersweet longing. Soft golden evening light through river mist, wistful atmospheric depth, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 121,
+        "work_id": "izumi-utaandon",
+        "title": "歌行燈",
+        "author": "泉鏡花",
+        "content_paths": [Path("content/2026-11-18_izumi_utaandon.png")],
+        "docs_path": Path("docs/assets/images/izumi-utaandon.png"),
+        "prompt": "Cinematic sublime sci-fi anime illustration. Deep underground in the cavernous high-vacuum laser tunnel of the KAGRA gravitational wave observatory in Kamioka. A graceful young male Noh dancer in traditional black silk hakama and an ornate demonic female mask executes an ethereal, motionless ceremonial dance before a colossal, glowing cyan suspended cryogenic sapphire mirror chilled to 20 Kelvin. Intersecting red and blue laser beamlines slice through the misty darkness, illuminating ripples of gravitational spacetime distortion. Ethereal paper lantern (Andon) glows softly nearby, hauntingly beautiful, 8k masterpiece, pure art without text.",
+    },
+    {
         "index": 120,
         "work_id": "yokomitsu-kikai",
         "title": "機械",

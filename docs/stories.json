@@ -1,5 +1,41 @@
 [
   {
+    "no": 123,
+    "work_id": "miyazawa-signal-to-signalless",
+    "title": "シグナルとシグナレス――極低温に刻印される磁束の恋",
+    "original_title": "シグナルとシグナレス",
+    "original_author": "宮沢賢治",
+    "modern_tech": "JR東海および鉄道総合技術研究所（RTRI）超電導磁気浮上式鉄道（SCMaglev）、ニオブチタン・高温超電導（HTS）マグネット、超電導体の磁束ピン止め効果（Flux Pinning）、リニア同期モーター（LSM）による時速500km/h超の非接触推進、自律型電磁シグナル通信ノード",
+    "has_image": true,
+    "url": "stories/miyazawa-signal-to-signalless.html",
+    "image": "assets/images/miyazawa-signal-to-signalless.png",
+    "char_count": 5647
+  },
+  {
+    "no": 122,
+    "work_id": "ito-nogiku-no-haka",
+    "title": "野菊の墓――ナノ空間に刻印された「香りの記憶」",
+    "original_title": "野菊の墓",
+    "original_author": "伊藤左千夫",
+    "modern_tech": "京都大学高等研究院（北川進 特別教授）による多孔性配位高分子（PCP/MOF: Porous Coordination Polymers）、自己組織化ナノ多孔質結晶格子による特定揮発性有機化合物（VOC/テルペノイド）の1分子選択的認識・吸着、環境中フェムトモル極微量生体シグナル分離",
+    "has_image": true,
+    "url": "stories/ito-nogiku-no-haka.html",
+    "image": "assets/images/ito-nogiku-no-haka.png",
+    "char_count": 5544
+  },
+  {
+    "no": 121,
+    "work_id": "izumi-utaandon",
+    "title": "歌行燈――量子共鳴の幽玄（Quantum Resonance of Yūgen）",
+    "original_title": "歌行燈",
+    "original_author": "泉鏡花",
+    "modern_tech": "東京大学宇宙線研究所（ICRR）大型低温重力波望遠鏡「KAGRA」、神岡鉱山地下1000mの極限静穏環境、20K（マイナス253℃）に冷却された超高純度サファイア鏡懸架システム、レーザー干渉計による時空の歪み（重力波）検出、小脳内部運動モデルと能楽の舞「海士」における極微動静止制御",
+    "has_image": true,
+    "url": "stories/izumi-utaandon.html",
+    "image": "assets/images/izumi-utaandon.png",
+    "char_count": 5217
+  },
+  {
     "no": 120,
     "work_id": "yokomitsu-kikai",
     "title": "機械――極限ナノ秒に封じられた魂の残滓",
