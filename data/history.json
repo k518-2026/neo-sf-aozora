@@ -1262,5 +1262,18 @@
       "Jaenisch, R., Bird, A. (2003). Epigenetic regulation of gene expression: how the genome integrates intrinsic and environmental signals. *Nature Genetics*, 33(S3), 245-254.",
       "Cacioppo, J. T., Hawkley, L. C. (2003). Social isolation and health in older adults. *PsycEXTRA Dataset*."
     ]
+  },
+  {
+    "work_id": "soseki-mon",
+    "original_title": "門",
+    "original_author": "夏目漱石",
+    "reboot_title": "門――因果律の境界に立つ観測者",
+    "posted_at": "2026-11-18T10:52:28.148757+09:00",
+    "file_path": "content/2026-10-18_soseki_mon.md",
+    "status": "publish",
+    "references": [
+      "Almheiri, A., Marolf, D., Polchinski, J., Sully, J. (2013). Black holes: complementarity or firewalls?. *Journal of High Energy Physics*, 2013(2).",
+      "Brewer, J. A., Worhunsky, P. D., Gray, J. R., Tang, Y., Weber, J., Kober, H. (2011). Meditation experience is associated with differences in default mode network activity and connectivity. *Proceedings of the National Academy of Sciences*, 108(50), 20254-20259."
+    ]
   }
 ]
