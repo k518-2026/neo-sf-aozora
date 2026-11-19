@@ -1,5 +1,41 @@
 [
   {
+    "no": 126,
+    "work_id": "natsume-yume-juya",
+    "title": "夢十夜――重力赤方偏移に刻まれる約束",
+    "original_title": "夢十夜",
+    "original_author": "夏目漱石",
+    "modern_tech": "理化学研究所（RIKEN）および東京大学（香取秀俊 卓越教授）によるストロンチウム原子「光格子時計（Optical Lattice Clock）」、魔法波長レーザー干渉トラップ、18桁精度（10^-18）による時間計測、アインシュタイン一般相対性理論に基づく重力赤方偏移（標高1cm差の時間遅れ検知）、相対論的測地学（Relativistic Geodesy）",
+    "has_image": true,
+    "url": "stories/natsume-yume-juya.html",
+    "image": "assets/images/natsume-yume-juya.png",
+    "char_count": 5698
+  },
+  {
+    "no": 125,
+    "work_id": "dazai-hashire-meros",
+    "title": "走れメロス――ナノビームの果てに加速する友情",
+    "original_title": "走れメロス",
+    "original_author": "太宰治",
+    "modern_tech": "高エネルギー加速器研究機構（KEK）周長3km大型円型衝突加速器「SuperKEKB」、Belle II検出器、ナノビーム方式による世界最高衝突輝度（ルミノシティ）、超伝導超高真空キャビティ、B中間子・反B中間子崩壊における粒子・反粒子のCP対称性の破れ、反物質消滅の相対論的極限時間同期",
+    "has_image": true,
+    "url": "stories/dazai-hashire-meros.html",
+    "image": "assets/images/dazai-hashire-meros.png",
+    "char_count": 6080
+  },
+  {
+    "no": 124,
+    "work_id": "koda-gojunoto",
+    "title": "五重塔――心柱（しんばしら）の共振軌道",
+    "original_title": "五重塔",
+    "original_author": "幸田露伴",
+    "modern_tech": "JAXA（宇宙航空研究開発機構）小惑星探査機「はやぶさ2」および火星衛星探査計画「MMX」、マイクロ波放電型キセノンイオンエンジン（μ10）、炭素複合材料メガトラス自律展開構造、五重塔の「心柱制振力学（柔構造振動絶縁）」を応用した軌道マスドライバー免震設計、太陽風嵐（コロナ質量放出: CME）耐性",
+    "has_image": true,
+    "url": "stories/koda-gojunoto.html",
+    "image": "assets/images/koda-gojunoto.png",
+    "char_count": 5779
+  },
+  {
     "no": 123,
     "work_id": "miyazawa-signal-to-signalless",
     "title": "シグナルとシグナレス――極低温に刻印される磁束の恋",

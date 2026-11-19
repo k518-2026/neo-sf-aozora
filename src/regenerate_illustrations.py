@@ -41,6 +41,33 @@ NEGATIVE_PROMPT = (
 
 WORKS_SPEC: List[Dict[str, Any]] = [
     {
+        "index": 126,
+        "work_id": "natsume-yume-juya",
+        "title": "夢十夜",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-11-19_natsume_yume_juya.png")],
+        "docs_path": Path("docs/assets/images/natsume-yume-juya.png"),
+        "prompt": "Cinematic mystical quantum physics sci-fi anime illustration. A quiet, misty mountain summit at twilight under an indigo sky filled with faint constellations. An elegant solitary gravestone made of dark polished granite is entwined with glowing cyan laser interference lattices of an ultra-precise optical lattice clock. From the base of the stone, a solitary, luminous pure white lily flower blooms gracefully, radiating soft golden pollen and delicate gravitational spacetime ripples. A pensive Japanese scholar in modern trench coat kneels reverently beside the stone, gazing at a glowing holographic clock displaying 18 decimal places of time. Melancholic, deeply poetic, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 125,
+        "work_id": "dazai-hashire-meros",
+        "title": "走れメロス",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-11-19_dazai_hashire_meros.png")],
+        "docs_path": Path("docs/assets/images/dazai-hashire-meros.png"),
+        "prompt": "Cinematic high-octane particle physics sci-fi anime illustration. Inside the vast, curved circular vacuum tunnel of the SuperKEKB particle collider at KEK. A young, fiercely determined athletic Japanese protagonist in an advanced lightweight particle-shielding cyber suit sprints at relativistic speed along glowing electromagnetic guide rails. Dazzling, concentrated nanobeams of azure electrons and brilliant violet positrons race in parallel vacuum beam pipes beside him, creating blinding particle trails and Cherenkov radiation. Futuristic cryogenic quadrupole magnets and warning holograms line the tunnel walls. Dynamic motion blur, dramatic cinematic lighting, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 124,
+        "work_id": "koda-gojunoto",
+        "title": "五重塔",
+        "author": "幸田露伴",
+        "content_paths": [Path("content/2026-11-19_koda_gojunoto.png")],
+        "docs_path": Path("docs/assets/images/koda-gojunoto.png"),
+        "prompt": "Cinematic epic space engineering hard sci-fi anime illustration. In low Earth orbit above the glowing blue curve of the Earth and brilliant stars, a colossal, breathtaking twelve-kilometer orbital space tower (Gojunoto) with five distinct modular aerodynamic tiers inspired by ancient Japanese pagoda architecture. Glowing cyan microwave-discharge xenon ion engines fire soft propulsion plumes into the void. A rugged Japanese space architect in a detailed technical EVA spacesuit floats outside with glowing holographic construction blueprints. A violent crimson solar flare storm (CME) and glowing particle arcs illuminate the immense carbon-nanotube central spine and flexible truss suspension. 8k masterpiece, hyper-detailed, pure art without text.",
+    },
+    {
         "index": 123,
         "work_id": "miyazawa-signal-to-signalless",
         "title": "シグナルとシグナレス",

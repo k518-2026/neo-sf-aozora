@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **123** 作品（うち挿絵付き **123** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-18 21:00 JST）
+- **収録作品数**: 全 **126** 作品（うち挿絵付き **126** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-20 00:09 JST）
 
 ---
 
@@ -14,6 +14,9 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 126 | **[夢十夜――重力赤方偏移に刻まれる約束](content/2026-11-19_natsume_yume_juya.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/natsume-yume-juya.html) | [📄原稿](content/2026-11-19_natsume_yume_juya.md) | [🎨挿絵](content/2026-11-19_natsume_yume_juya.png) | 夏目漱石[『夢十夜』](https://www.aozora.gr.jp/cards/000148/card799.html) | 理化学研究所（RIKEN）および東京大学（香取秀俊 卓越教授）によるストロンチウム原子「光格子時計（Optical Lattice Clock）」、魔法波長レーザー干渉トラップ、18桁精度（10^-18）による時間計測、アインシュタイン一般相対性理論に基づく重力赤方偏移（標高1cm差の時間遅れ検知）、相対論的測地学（Relativistic Geodesy） | 5,698字 |
+| 125 | **[走れメロス――ナノビームの果てに加速する友情](content/2026-11-19_dazai_hashire_meros.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-hashire-meros.html) | [📄原稿](content/2026-11-19_dazai_hashire_meros.md) | [🎨挿絵](content/2026-11-19_dazai_hashire_meros.png) | 太宰治[『走れメロス』](https://www.aozora.gr.jp/cards/000035/card1567.html) | 高エネルギー加速器研究機構（KEK）周長3km大型円型衝突加速器「SuperKEKB」、Belle II検出器、ナノビーム方式による世界最高衝突輝度（ルミノシティ）、超伝導超高真空キャビティ、B中間子・反B中間子崩壊における粒子・反粒子のCP対称性の破れ、反物質消滅の相対論的極限時間同期 | 6,080字 |
+| 124 | **[五重塔――心柱（しんばしら）の共振軌道](content/2026-11-19_koda_gojunoto.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/koda-gojunoto.html) | [📄原稿](content/2026-11-19_koda_gojunoto.md) | [🎨挿絵](content/2026-11-19_koda_gojunoto.png) | 幸田露伴[『五重塔』](https://www.aozora.gr.jp/cards/000051/card403.html) | JAXA（宇宙航空研究開発機構）小惑星探査機「はやぶさ2」および火星衛星探査計画「MMX」、マイクロ波放電型キセノンイオンエンジン（μ10）、炭素複合材料メガトラス自律展開構造、五重塔の「心柱制振力学（柔構造振動絶縁）」を応用した軌道マスドライバー免震設計、太陽風嵐（コロナ質量放出: CME）耐性 | 5,779字 |
 | 123 | **[シグナルとシグナレス――極低温に刻印される磁束の恋](content/2026-11-18_miyazawa_signal_to_signalless.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-signal-to-signalless.html) | [📄原稿](content/2026-11-18_miyazawa_signal_to_signalless.md) | [🎨挿絵](content/2026-11-18_miyazawa_signal_to_signalless.png) | 宮沢賢治[『シグナルとシグナレス』](https://www.aozora.gr.jp/cards/000081/card408.html) | JR東海および鉄道総合技術研究所（RTRI）超電導磁気浮上式鉄道（SCMaglev）、ニオブチタン・高温超電導（HTS）マグネット、超電導体の磁束ピン止め効果（Flux Pinning）、リニア同期モーター（LSM）による時速500km/h超の非接触推進、自律型電磁シグナル通信ノード | 5,647字 |
 | 122 | **[野菊の墓――ナノ空間に刻印された「香りの記憶」](content/2026-11-18_ito_nogiku_no_haka.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/ito-nogiku-no-haka.html) | [📄原稿](content/2026-11-18_ito_nogiku_no_haka.md) | [🎨挿絵](content/2026-11-18_ito_nogiku_no_haka.png) | 伊藤左千夫[『野菊の墓』](https://www.aozora.gr.jp/cards/000058/card1197.html) | 京都大学高等研究院（北川進 特別教授）による多孔性配位高分子（PCP/MOF: Porous Coordination Polymers）、自己組織化ナノ多孔質結晶格子による特定揮発性有機化合物（VOC/テルペノイド）の1分子選択的認識・吸着、環境中フェムトモル極微量生体シグナル分離 | 5,544字 |
 | 121 | **[歌行燈――量子共鳴の幽玄（Quantum Resonance of Yūgen）](content/2026-11-18_izumi_utaandon.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/izumi-utaandon.html) | [📄原稿](content/2026-11-18_izumi_utaandon.md) | [🎨挿絵](content/2026-11-18_izumi_utaandon.png) | 泉鏡花[『歌行燈』](https://www.aozora.gr.jp/cards/000050/card965.html) | 東京大学宇宙線研究所（ICRR）大型低温重力波望遠鏡「KAGRA」、神岡鉱山地下1000mの極限静穏環境、20K（マイナス253℃）に冷却された超高純度サファイア鏡懸架システム、レーザー干渉計による時空の歪み（重力波）検出、小脳内部運動モデルと能楽の舞「海士」における極微動静止制御 | 5,217字 |
