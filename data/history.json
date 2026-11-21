@@ -1303,5 +1303,19 @@
       "Fagaly, R. L. (2006). Superconducting quantum interference device instruments and applications. *Review of Scientific Instruments*, 77(10).",
       "Kurakin, A., Goodfellow, I. J., Bengio, S. (2018). Adversarial Examples in the Physical World. *Artificial Intelligence Safety and Security*, 99-112."
     ]
+  },
+  {
+    "work_id": "dazai-shayo",
+    "original_title": "斜陽",
+    "original_author": "太宰治",
+    "reboot_title": "斜陽――崩壊する生態系と利他性の残響",
+    "posted_at": "2026-11-21T09:57:32.844762+09:00",
+    "file_path": "content/2026-10-19_dazai_shayo.md",
+    "status": "publish",
+    "references": [
+      "Nelson, M., Dempster, W. F., Allen, J. P. (2009). The water cycle in closed ecological systems: Perspectives from the Biosphere 2 and Laboratory Biosphere systems. *Advances in Space Research*, 44(12), 1404-1412.",
+      "Wittenberg, L. J., Santarius, J. F., Kulcinski, G. L. (1986). Lunar Source of3He for Commercial Fusion Power. *Fusion Technology*, 10(2), 167-178.",
+      "Nowak, M. A. (2006). Five Rules for the Evolution of Cooperation. *Science*, 314(5805), 1560-1563."
+    ]
   }
 ]
