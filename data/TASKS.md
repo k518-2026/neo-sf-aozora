@@ -1,8 +1,8 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-11-21T22:37:26`
-- **進捗サマリー**: 全 **126** 作品 （完了: **126** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
+- **最終同期日時 (JST)**: `2026-11-22T05:26:58`
+- **進捗サマリー**: 全 **129** 作品 （完了: **129** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
 ## 🖥️ 各ローカルLLM PCの役割分担とノルマ
@@ -27,13 +27,13 @@
 
 | No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
+| #129 | `terada-chawan-no-yu` | 茶わんの湯（寺田寅彦） | - | ✓ `rtx5060lp` (2026-11-22) | 校閲済 | 🎨 (kenomac-mini) |
+| #128 | `kajii-sakura-no-ki-no-shita-niwa` | 桜の樹の下には（梶井基次郎） | - | ✓ `rtx5060lp` (2026-11-22) | 校閲済 | 🎨 (kenomac-mini) |
+| #127 | `tanizaki-shunkinsho` | 春琴抄（谷崎潤一郎） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-22) | 校閲済 | 🎨 (kenomac-mini) |
 | #126 | `natsume-yume-juya` | 夢十夜（夏目漱石） | - | ✓ `rtx5060lp` (2026-11-19) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #125 | `dazai-hashire-meros` | 走れメロス（太宰治） | - | ✓ `rtx5060lp` (2026-11-19) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #124 | `koda-gojunoto` | 五重塔（幸田露伴） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-19) | 校閲済 | 🎨 (kenomac-mini) |
+| #124 | `koda-gojunoto` | 五重塔（幸田露伴） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-19) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #123 | `miyazawa-signal-to-signalless` | シグナルとシグナレス（宮沢賢治） | - | ✓ `rtx5060lp` (2026-11-18) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #122 | `ito-nogiku-no-haka` | 野菊の墓（伊藤左千夫） | - | ✓ `rtx5060lp` (2026-11-18) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #121 | `izumi-utaandon` | 歌行燈（泉鏡花） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-18) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #120 | `yokomitsu-kikai` | 機械（横光利一） | - | ✓ `rtx5060lp` (2026-11-16) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #119 | `hagiwara-tsuki-ni-hoeru` | 月に吠える（萩原朔太郎） | - | ✓ `rtx5060lp` (2026-11-16) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #118 | `ogawa-akai-rosoku-to-ningyo` | 赤い蝋燭と人魚（小川未明） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-16) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #117 | `oshikawa-kaitei-gunkan` | 海底軍艦（押川春浪） | - | ✓ `rtx5060lp` (2026-11-13) | ✓ (sff7020) | 🎨 (kenomac-mini) |

@@ -41,6 +41,33 @@ NEGATIVE_PROMPT = (
 
 WORKS_SPEC: List[Dict[str, Any]] = [
     {
+        "index": 129,
+        "work_id": "terada-chawan-no-yu",
+        "title": "茶わんの湯",
+        "author": "寺田寅彦",
+        "content_paths": [Path("content/2026-11-22_terada_chawan_no_yu.png")],
+        "docs_path": Path("docs/assets/images/terada-chawan-no-yu.png"),
+        "prompt": "Cinematic high-energy physics sci-fi anime illustration. Inside the colossal, stainless-steel vacuum target chamber of the LFEX petawatt laser facility at Osaka University. Intersecting intense golden and violet laser beams converge upon a tiny fuel pellet suspended in vacuum, generating a blinding micro-sun plasma fireball with intricate glowing shockwave rings. In the foreground, an observant Japanese physicist in a crisp lab coat gently holds a simple ceramic Japanese teacup (Yunomi), from which delicate steam curls rise, mirroring the exact fluid hydrodynamic vortex patterns of the plasma explosion in the chamber. Brilliant scientific wonder, cinematic chiaroscuro, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 128,
+        "work_id": "kajii-sakura-no-ki-no-shita-niwa",
+        "title": "桜の樹の下には",
+        "author": "梶井基次郎",
+        "content_paths": [Path("content/2026-11-22_kajii_sakura_no_ki_no_shita_niwa.png")],
+        "docs_path": Path("docs/assets/images/kajii-sakura-no-ki-no-shita-niwa.png"),
+        "prompt": "Cinematic surreal quantum biology sci-fi anime illustration. Under a colossal, ancient Japanese cherry blossom tree in full, breathtaking bloom at night. Petals glow with subtle bioluminescent pink and crystalline azure hues. A frail, sensitive young Japanese scientist in a dark student coat kneels at the gnarled roots, gently inserting a slender, glowing crystalline diamond quantum sensor probe into the dark soil. From beneath the ground, translucent holographic networks of bioluminescent subterranean roots and quantum spin magnetic field lines branch out, revealing a ghostly, beautiful anatomical organic form dormant deep within the earth. Ethereal floating glowing sakura petals, mysterious and poetic, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 127,
+        "work_id": "tanizaki-shunkinsho",
+        "title": "春琴抄",
+        "author": "谷崎潤一郎",
+        "content_paths": [Path("content/2026-11-22_tanizaki_shunkinsho.png")],
+        "docs_path": Path("docs/assets/images/tanizaki-shunkinsho.png"),
+        "prompt": "Cinematic dark aesthetic cyberpunk-biopunk anime illustration. In a dim, atmospheric traditional Japanese tatami chamber blended with futuristic biomedical machinery. A stunningly beautiful blind Japanese young woman (Shunkin) in an ornate dark silk kimono sits serenely, holding an elegant cybernetic acoustic shamisen. Her eyes are covered by an exquisite, translucent golden bio-circuit blindfold glowing softly with azure neural signals. Beside her, a devoted young Japanese male bio-engineer (Sasuke) kneels with reverence, holding a glowing micro-incubator containing a pulsating, microscopic retinal organoid. Ethereal golden data streams float in the air, melancholic shadows, 8k masterpiece, pure art without text.",
+    },
+    {
         "index": 126,
         "work_id": "natsume-yume-juya",
         "title": "夢十夜",

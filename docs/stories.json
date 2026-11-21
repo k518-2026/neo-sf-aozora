@@ -1,5 +1,41 @@
 [
   {
+    "no": 129,
+    "work_id": "terada-chawan-no-yu",
+    "title": "茶わんの湯――極限の相似則が描く虚像",
+    "original_title": "茶わんの湯",
+    "original_author": "寺田寅彦",
+    "modern_tech": "大阪大学レーザー科学研究所（ILE）高出力ペタワットレーザー「LFEX」、高速点火レーザー核融合、相対論的レーザー照射による極限高エネルギー密度プラズマ生成、レイリー・テイラー流体不安定性と熱対流衝撃波面、実験室宇宙物理学における超新星残骸プラズマ対流のスケール相似則",
+    "has_image": true,
+    "url": "stories/terada-chawan-no-yu.html",
+    "image": "assets/images/terada-chawan-no-yu.png",
+    "char_count": 6066
+  },
+  {
+    "no": 128,
+    "work_id": "kajii-sakura-no-ki-no-shita-niwa",
+    "title": "桜の樹の下には――量子共鳴する死者の旋律",
+    "original_title": "桜の樹の下には",
+    "original_author": "梶井基次郎",
+    "modern_tech": "物質・材料研究機構（NIMS）および産業技術総合研究所（AIST）による超高純度ダイヤモンド窒素-空孔（NV）センター量子センサ、光検出磁気共鳴（ODMR）による生体内ナノスケール局所温度・極微弱磁場マッピング、土壌マイクロバイオームの生体高分子代謝スピン緩和時間測定、クロロフィル蛍光共鳴エネルギー移動（FRET）",
+    "has_image": true,
+    "url": "stories/kajii-sakura-no-ki-no-shita-niwa.html",
+    "image": "assets/images/kajii-sakura-no-ki-no-shita-niwa.png",
+    "char_count": 5392
+  },
+  {
+    "no": 127,
+    "work_id": "tanizaki-shunkinsho",
+    "title": "春琴抄――共鳴する網膜の深淵（レチナル・レゾナンス）",
+    "original_title": "春琴抄",
+    "original_author": "谷崎潤一郎",
+    "modern_tech": "京都大学iPS細胞研究所（CiRA / 山中伸弥 教授）ヒトiPS細胞由来の自己組織化3D網膜オルガノイド、視覚再生バイオハイブリッド神経電極アレイ、光遺伝学（オプトジェネティクス）による視神経刺激、大脳視覚野V1/V2シナプス可塑性と閉眼状態での共有神経共鳴",
+    "has_image": true,
+    "url": "stories/tanizaki-shunkinsho.html",
+    "image": "assets/images/tanizaki-shunkinsho.png",
+    "char_count": 5560
+  },
+  {
     "no": 126,
     "work_id": "natsume-yume-juya",
     "title": "夢十夜――重力赤方偏移に刻まれる約束",

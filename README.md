@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **126** 作品（うち挿絵付き **126** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-21 09:57 JST）
+- **収録作品数**: 全 **129** 作品（うち挿絵付き **129** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-22 05:27 JST）
 
 ---
 
@@ -14,6 +14,9 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 129 | **[茶わんの湯――極限の相似則が描く虚像](content/2026-11-22_terada_chawan_no_yu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/terada-chawan-no-yu.html) | [📄原稿](content/2026-11-22_terada_chawan_no_yu.md) | [🎨挿絵](content/2026-11-22_terada_chawan_no_yu.png) | 寺田寅彦[『茶わんの湯』](https://www.aozora.gr.jp/cards/000042/card2457.html) | 大阪大学レーザー科学研究所（ILE）高出力ペタワットレーザー「LFEX」、高速点火レーザー核融合、相対論的レーザー照射による極限高エネルギー密度プラズマ生成、レイリー・テイラー流体不安定性と熱対流衝撃波面、実験室宇宙物理学における超新星残骸プラズマ対流のスケール相似則 | 6,066字 |
+| 128 | **[桜の樹の下には――量子共鳴する死者の旋律](content/2026-11-22_kajii_sakura_no_ki_no_shita_niwa.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kajii-sakura-no-ki-no-shita-niwa.html) | [📄原稿](content/2026-11-22_kajii_sakura_no_ki_no_shita_niwa.md) | [🎨挿絵](content/2026-11-22_kajii_sakura_no_ki_no_shita_niwa.png) | 梶井基次郎[『桜の樹の下には』](https://www.aozora.gr.jp/cards/000074/card427.html) | 物質・材料研究機構（NIMS）および産業技術総合研究所（AIST）による超高純度ダイヤモンド窒素-空孔（NV）センター量子センサ、光検出磁気共鳴（ODMR）による生体内ナノスケール局所温度・極微弱磁場マッピング、土壌マイクロバイオームの生体高分子代謝スピン緩和時間測定、クロロフィル蛍光共鳴エネルギー移動（FRET） | 5,392字 |
+| 127 | **[春琴抄――共鳴する網膜の深淵（レチナル・レゾナンス）](content/2026-11-22_tanizaki_shunkinsho.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/tanizaki-shunkinsho.html) | [📄原稿](content/2026-11-22_tanizaki_shunkinsho.md) | [🎨挿絵](content/2026-11-22_tanizaki_shunkinsho.png) | 谷崎潤一郎[『春琴抄』](https://www.aozora.gr.jp/cards/001383/card56866.html) | 京都大学iPS細胞研究所（CiRA / 山中伸弥 教授）ヒトiPS細胞由来の自己組織化3D網膜オルガノイド、視覚再生バイオハイブリッド神経電極アレイ、光遺伝学（オプトジェネティクス）による視神経刺激、大脳視覚野V1/V2シナプス可塑性と閉眼状態での共有神経共鳴 | 5,560字 |
 | 126 | **[夢十夜――重力赤方偏移に刻まれる約束](content/2026-11-19_natsume_yume_juya.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/natsume-yume-juya.html) | [📄原稿](content/2026-11-19_natsume_yume_juya.md) | [🎨挿絵](content/2026-11-19_natsume_yume_juya.png) | 夏目漱石[『夢十夜』](https://www.aozora.gr.jp/cards/000148/card799.html) | 理化学研究所（RIKEN）および東京大学（香取秀俊 卓越教授）によるストロンチウム原子「光格子時計（Optical Lattice Clock）」、魔法波長レーザー干渉トラップ、18桁精度（10^-18）による時間計測、アインシュタイン一般相対性理論に基づく重力赤方偏移（標高1cm差の時間遅れ検知）、相対論的測地学（Relativistic Geodesy） | 5,698字 |
 | 125 | **[走れメロス――ナノビームの果てに加速する友情](content/2026-11-19_dazai_hashire_meros.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-hashire-meros.html) | [📄原稿](content/2026-11-19_dazai_hashire_meros.md) | [🎨挿絵](content/2026-11-19_dazai_hashire_meros.png) | 太宰治[『走れメロス』](https://www.aozora.gr.jp/cards/000035/card1567.html) | 高エネルギー加速器研究機構（KEK）周長3km大型円型衝突加速器「SuperKEKB」、Belle II検出器、ナノビーム方式による世界最高衝突輝度（ルミノシティ）、超伝導超高真空キャビティ、B中間子・反B中間子崩壊における粒子・反粒子のCP対称性の破れ、反物質消滅の相対論的極限時間同期 | 6,080字 |
 | 124 | **[五重塔――心柱（しんばしら）の共振軌道](content/2026-11-19_koda_gojunoto.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/koda-gojunoto.html) | [📄原稿](content/2026-11-19_koda_gojunoto.md) | [🎨挿絵](content/2026-11-19_koda_gojunoto.png) | 幸田露伴[『五重塔』](https://www.aozora.gr.jp/cards/000051/card403.html) | JAXA（宇宙航空研究開発機構）小惑星探査機「はやぶさ2」および火星衛星探査計画「MMX」、マイクロ波放電型キセノンイオンエンジン（μ10）、炭素複合材料メガトラス自律展開構造、五重塔の「心柱制振力学（柔構造振動絶縁）」を応用した軌道マスドライバー免震設計、太陽風嵐（コロナ質量放出: CME）耐性 | 5,779字 |
