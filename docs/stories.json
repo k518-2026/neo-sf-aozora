@@ -1,5 +1,41 @@
 [
   {
+    "no": 132,
+    "work_id": "niimi-tebukuro-wo-kai-ni",
+    "title": "手袋を買いに――極低温の境界線上の孤独",
+    "original_title": "手袋を買いに",
+    "original_author": "新美南吉",
+    "modern_tech": "理化学研究所（RIKEN）放射光科学研究センターのX線自由電子レーザー（XFEL）施設「SACLA」、フェムト秒X線パルスによる過冷却水・氷晶核形成プロセスの実時間原子分解能計測、赤外線放射・熱伝導を極限遮断するフォノニック・メタマテリアル生体ナノファブリック（防寒手袋）",
+    "has_image": true,
+    "url": "stories/niimi-tebukuro-wo-kai-ni.html",
+    "image": "assets/images/niimi-tebukuro-wo-kai-ni.png",
+    "char_count": 6172
+  },
+  {
+    "no": 131,
+    "work_id": "miyazawa-gusukobudori-no-denki",
+    "title": "グスコーブドリの伝記――凍てつく星の調律者",
+    "original_title": "グスコーブドリの伝記",
+    "original_author": "宮沢賢治",
+    "modern_tech": "海洋研究開発機構（JAMSTEC）および気象庁気象研究所による全球非静力学正二十面体大気モデル「NICAM」、スーパーコンピュータによる雲微物理結合気候予測シミュレーション、成層圏エアロゾル注入（SAI）および火山灰二酸化炭素同位体放出による日射・温室効果コントロール（気候工学 / ジオエンジニアリング）",
+    "has_image": true,
+    "url": "stories/miyazawa-gusukobudori-no-denki.html",
+    "image": "assets/images/miyazawa-gusukobudori-no-denki.png",
+    "char_count": 6143
+  },
+  {
+    "no": 130,
+    "work_id": "akutagawa-hankechi",
+    "title": "手巾――磁気スキルミオンの位相反転",
+    "original_title": "手巾",
+    "original_author": "芥川龍之介",
+    "modern_tech": "東北大学電気通信研究所（RIEC）および理化学研究所創発物性科学研究センター（CEMS）によるスピントロニクス技術、電子スピンの自転角運動量を用いたスピントルク磁化反転（STT-MRAM）、ナノスケール渦状磁気構造「磁気スキルミオン（Magnetic Skyrmions）」の位相制御、超高感度ナノ磁気センサによる生体微小磁場・自律神経系パルス計測",
+    "has_image": true,
+    "url": "stories/akutagawa-hankechi.html",
+    "image": "assets/images/akutagawa-hankechi.png",
+    "char_count": 6497
+  },
+  {
     "no": 129,
     "work_id": "terada-chawan-no-yu",
     "title": "茶わんの湯――極限の相似則が描く虚像",

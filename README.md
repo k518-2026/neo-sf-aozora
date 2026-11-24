@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **129** 作品（うち挿絵付き **129** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-23 09:30 JST）
+- **収録作品数**: 全 **132** 作品（うち挿絵付き **132** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-24 13:10 JST）
 
 ---
 
@@ -14,6 +14,9 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 132 | **[手袋を買いに――極低温の境界線上の孤独](content/2026-11-24_niimi_tebukuro_wo_kai_ni.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/niimi-tebukuro-wo-kai-ni.html) | [📄原稿](content/2026-11-24_niimi_tebukuro_wo_kai_ni.md) | [🎨挿絵](content/2026-11-24_niimi_tebukuro_wo_kai_ni.png) | 新美南吉[『手袋を買いに』](https://www.aozora.gr.jp/cards/000121/card637.html) | 理化学研究所（RIKEN）放射光科学研究センターのX線自由電子レーザー（XFEL）施設「SACLA」、フェムト秒X線パルスによる過冷却水・氷晶核形成プロセスの実時間原子分解能計測、赤外線放射・熱伝導を極限遮断するフォノニック・メタマテリアル生体ナノファブリック（防寒手袋） | 6,172字 |
+| 131 | **[グスコーブドリの伝記――凍てつく星の調律者](content/2026-11-24_miyazawa_gusukobudori_no_denki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-gusukobudori-no-denki.html) | [📄原稿](content/2026-11-24_miyazawa_gusukobudori_no_denki.md) | [🎨挿絵](content/2026-11-24_miyazawa_gusukobudori_no_denki.png) | 宮沢賢治[『グスコーブドリの伝記』](https://www.aozora.gr.jp/cards/000081/card1924.html) | 海洋研究開発機構（JAMSTEC）および気象庁気象研究所による全球非静力学正二十面体大気モデル「NICAM」、スーパーコンピュータによる雲微物理結合気候予測シミュレーション、成層圏エアロゾル注入（SAI）および火山灰二酸化炭素同位体放出による日射・温室効果コントロール（気候工学 / ジオエンジニアリング） | 6,143字 |
+| 130 | **[手巾――磁気スキルミオンの位相反転](content/2026-11-24_akutagawa_hankechi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-hankechi.html) | [📄原稿](content/2026-11-24_akutagawa_hankechi.md) | [🎨挿絵](content/2026-11-24_akutagawa_hankechi.png) | 芥川龍之介[『手巾』](https://www.aozora.gr.jp/cards/000879/card43.html) | 東北大学電気通信研究所（RIEC）および理化学研究所創発物性科学研究センター（CEMS）によるスピントロニクス技術、電子スピンの自転角運動量を用いたスピントルク磁化反転（STT-MRAM）、ナノスケール渦状磁気構造「磁気スキルミオン（Magnetic Skyrmions）」の位相制御、超高感度ナノ磁気センサによる生体微小磁場・自律神経系パルス計測 | 6,497字 |
 | 129 | **[茶わんの湯――極限の相似則が描く虚像](content/2026-11-22_terada_chawan_no_yu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/terada-chawan-no-yu.html) | [📄原稿](content/2026-11-22_terada_chawan_no_yu.md) | [🎨挿絵](content/2026-11-22_terada_chawan_no_yu.png) | 寺田寅彦[『茶わんの湯』](https://www.aozora.gr.jp/cards/000042/card2457.html) | 大阪大学レーザー科学研究所（ILE）高出力ペタワットレーザー「LFEX」、高速点火レーザー核融合、相対論的レーザー照射による極限高エネルギー密度プラズマ生成、レイリー・テイラー流体不安定性と熱対流衝撃波面、実験室宇宙物理学における超新星残骸プラズマ対流のスケール相似則 | 6,066字 |
 | 128 | **[桜の樹の下には――量子共鳴する死者の旋律](content/2026-11-22_kajii_sakura_no_ki_no_shita_niwa.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kajii-sakura-no-ki-no-shita-niwa.html) | [📄原稿](content/2026-11-22_kajii_sakura_no_ki_no_shita_niwa.md) | [🎨挿絵](content/2026-11-22_kajii_sakura_no_ki_no_shita_niwa.png) | 梶井基次郎[『桜の樹の下には』](https://www.aozora.gr.jp/cards/000074/card427.html) | 物質・材料研究機構（NIMS）および産業技術総合研究所（AIST）による超高純度ダイヤモンド窒素-空孔（NV）センター量子センサ、光検出磁気共鳴（ODMR）による生体内ナノスケール局所温度・極微弱磁場マッピング、土壌マイクロバイオームの生体高分子代謝スピン緩和時間測定、クロロフィル蛍光共鳴エネルギー移動（FRET） | 5,392字 |
 | 127 | **[春琴抄――共鳴する網膜の深淵（レチナル・レゾナンス）](content/2026-11-22_tanizaki_shunkinsho.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/tanizaki-shunkinsho.html) | [📄原稿](content/2026-11-22_tanizaki_shunkinsho.md) | [🎨挿絵](content/2026-11-22_tanizaki_shunkinsho.png) | 谷崎潤一郎[『春琴抄』](https://www.aozora.gr.jp/cards/001383/card56866.html) | 京都大学iPS細胞研究所（CiRA / 山中伸弥 教授）ヒトiPS細胞由来の自己組織化3D網膜オルガノイド、視覚再生バイオハイブリッド神経電極アレイ、光遺伝学（オプトジェネティクス）による視神経刺激、大脳視覚野V1/V2シナプス可塑性と閉眼状態での共有神経共鳴 | 5,560字 |

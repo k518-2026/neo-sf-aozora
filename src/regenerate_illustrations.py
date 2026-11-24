@@ -41,6 +41,33 @@ NEGATIVE_PROMPT = (
 
 WORKS_SPEC: List[Dict[str, Any]] = [
     {
+        "index": 132,
+        "work_id": "niimi-tebukuro-wo-kai-ni",
+        "title": "手袋を買いに",
+        "author": "新美南吉",
+        "content_paths": [Path("content/2026-11-24_niimi_tebukuro_wo_kai_ni.png")],
+        "docs_path": Path("docs/assets/images/niimi-tebukuro-wo-kai-ni.png"),
+        "prompt": "Cinematic heartwarming winter sci-fi anime illustration. A snowy, quiet cobblestone street in a cozy European-Japanese fusion mountain town at night under gently falling snowflakes. At the glowing, warm wooden window of a rustic hat and glove shop, a small, adorable anthropomorphic fox kit wearing a winter scarf timidly reaches up. From its small paw, soft glowing blue crystalline frost patterns melt into gentle warmth as a kind human shopkeeper with glasses hands over a pair of glowing, soft knitted wool-like metamaterial mittens with subtle golden nanofiber weaves. Warm amber window light contrasting with cool blue snowy night, deeply emotional and gentle, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 131,
+        "work_id": "miyazawa-gusukobudori-no-denki",
+        "title": "グスコーブドリの伝記",
+        "author": "宮沢賢治",
+        "content_paths": [Path("content/2026-11-24_miyazawa_gusukobudori_no_denki.png")],
+        "docs_path": Path("docs/assets/images/miyazawa-gusukobudori-no-denki.png"),
+        "prompt": "Cinematic epic climate engineering sci-fi anime illustration. On the rim of a roaring, colossal active volcanic crater (Carbonado Volcano) under a dark, freezing twilight sky swept by bitter blizzards. A courageous young Japanese climate engineer (Guskobudori) in a heavy, high-tech geothermal research jumpsuit stands resolute near a glowing control console displaying intricate 3D planetary atmospheric cloud flow simulations. Giant columns of glowing orange molten lava and dense plumes of volcanic gas erupt upward into the stratosphere, melting the surrounding ice and casting dramatic golden reflections across snowy mountain peaks. Heroic determination, breathtaking scale, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 130,
+        "work_id": "akutagawa-hankechi",
+        "title": "手巾",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-11-24_akutagawa_hankechi.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-hankechi.png"),
+        "prompt": "Cinematic psychological sci-fi anime illustration. In an atmospheric, dimly lit Meiji-modern academic study lined with bookshelves and subtle holographic diagnostic displays. A dignified middle-aged Japanese professor in an academic suit gazes with stunned empathy across a polished mahogany desk. Sitting opposite him is a noble, grief-stricken Japanese mother in a traditional dark kimono; her face wears an unnaturally composed, serene faint smile, but beneath the desk edge, her hands tightly twist a fine white handkerchief (Hankechi) that emanates glowing azure and crimson magnetic flux vortices (skyrmions). Soft cinematic chiaroscuro, emotive and intellectual, 8k masterpiece, pure art without text.",
+    },
+    {
         "index": 129,
         "work_id": "terada-chawan-no-yu",
         "title": "茶わんの湯",
