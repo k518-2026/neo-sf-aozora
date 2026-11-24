@@ -1345,5 +1345,19 @@
       "Glassman, I., Yetter, R. A. (2008). Environmental Combustion Considerations. *Combustion*, 409-494.",
       "Smith, J. M. (1982). Evolution and the Theory of Games. *Cambridge University Press*."
     ]
+  },
+  {
+    "work_id": "akutagawa-imogayu",
+    "original_title": "芋粥",
+    "original_author": "芥川龍之介",
+    "reboot_title": "芋粥――報酬予測誤差の果てにある虚無",
+    "posted_at": "2026-11-24T13:27:37.756659+09:00",
+    "file_path": "content/2026-10-21_akutagawa_imogayu.md",
+    "status": "publish",
+    "references": [
+      "Schultz, W., Dayan, P., Montague, P. R. (1997). A Neural Substrate of Prediction and Reward. *Science*, 275(5306), 1593-1599.",
+      "McClements, D. J., Decker, E. A., Weiss, J. (2007). Emulsion‐Based Delivery Systems for Lipophilic Bioactive Components. *Journal of Food Science*, 72(8).",
+      "Berridge, K. C., Robinson, T. E. (1998). What is the role of dopamine in reward: hedonic impact, reward learning, or incentive salience?. *Brain Research Reviews*, 28(3), 309-369."
+    ]
   }
 ]
