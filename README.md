@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **132** 作品（うち挿絵付き **132** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-25 12:10 JST）
+- **収録作品数**: 全 **135** 作品（うち挿絵付き **135** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-25 20:49 JST）
 
 ---
 
@@ -14,6 +14,9 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 135 | **[トカトントン――共振する虚無の残響](content/2026-11-25_dazai_tokatonton.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-tokatonton.html) | [📄原稿](content/2026-11-25_dazai_tokatonton.md) | [🎨挿絵](content/2026-11-25_dazai_tokatonton.png) | 太宰治[『トカトントン』](https://www.aozora.gr.jp/cards/000035/card2282.html) | 名古屋大学（伊丹健一郎 教授）によるトポロジカル分子ナノカーボン「カーボンナノベルト（Carbon Nanobelt）」の精密化学合成、ナノ電子機械システム（NEMS）共振器、熱浴フォノンの散乱と局所デヒーレンス、極微小ナノスケール構造における量子力学的音響フォノンモード | 5,811字 |
+| 134 | **[三四郎――迷子の光子（ストレイ・シープ）の行方](content/2026-11-25_natsume_sanshiro.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/natsume-sanshiro.html) | [📄原稿](content/2026-11-25_natsume_sanshiro.md) | [🎨挿絵](content/2026-11-25_natsume_sanshiro.png) | 夏目漱石[『三四郎』](https://www.aozora.gr.jp/cards/000148/card794.html) | 産業技術総合研究所（AIST）および量子科学技術研究開発機構（QST）による極低温超伝導ナノワイヤ単一光子検出器（SNSPD: Superconducting Nanowire Single-Photon Detector）、ピコ秒時間分解能による光子放射圧測定、量子鍵配送（QKD）衛星ネットワーク、観測による量子もつれ波束の収縮と重ね合わせ状態 | 5,633字 |
+| 133 | **[舞踏会――超分子記憶の再構築（Reconstruction of Supramolecular Memory）](content/2026-11-25_akutagawa_butokai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-butokai.html) | [📄原稿](content/2026-11-25_akutagawa_butokai.md) | [🎨挿絵](content/2026-11-25_akutagawa_butokai.png) | 芥川龍之介[『舞踏会』](https://www.aozora.gr.jp/cards/000879/card28.html) | 東京大学大学院工学系研究科（相田卓三 卓越教授）による室温自己修復ポリマーガラス（Polyether-thioureas）、密な水素結合チオ尿素ネットワークによる破断面自発再接合、超分子フォトニック結晶、機械的破断後の光学・導電特性の完全回復、生体適合性スマートガラス | 6,139字 |
 | 132 | **[手袋を買いに――極低温の境界線上の孤独](content/2026-11-24_niimi_tebukuro_wo_kai_ni.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/niimi-tebukuro-wo-kai-ni.html) | [📄原稿](content/2026-11-24_niimi_tebukuro_wo_kai_ni.md) | [🎨挿絵](content/2026-11-24_niimi_tebukuro_wo_kai_ni.png) | 新美南吉[『手袋を買いに』](https://www.aozora.gr.jp/cards/000121/card637.html) | 理化学研究所（RIKEN）放射光科学研究センターのX線自由電子レーザー（XFEL）施設「SACLA」、フェムト秒X線パルスによる過冷却水・氷晶核形成プロセスの実時間原子分解能計測、赤外線放射・熱伝導を極限遮断するフォノニック・メタマテリアル生体ナノファブリック（防寒手袋） | 6,172字 |
 | 131 | **[グスコーブドリの伝記――凍てつく星の調律者](content/2026-11-24_miyazawa_gusukobudori_no_denki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-gusukobudori-no-denki.html) | [📄原稿](content/2026-11-24_miyazawa_gusukobudori_no_denki.md) | [🎨挿絵](content/2026-11-24_miyazawa_gusukobudori_no_denki.png) | 宮沢賢治[『グスコーブドリの伝記』](https://www.aozora.gr.jp/cards/000081/card1924.html) | 海洋研究開発機構（JAMSTEC）および気象庁気象研究所による全球非静力学正二十面体大気モデル「NICAM」、スーパーコンピュータによる雲微物理結合気候予測シミュレーション、成層圏エアロゾル注入（SAI）および火山灰二酸化炭素同位体放出による日射・温室効果コントロール（気候工学 / ジオエンジニアリング） | 6,143字 |
 | 130 | **[手巾――磁気スキルミオンの位相反転](content/2026-11-24_akutagawa_hankechi.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-hankechi.html) | [📄原稿](content/2026-11-24_akutagawa_hankechi.md) | [🎨挿絵](content/2026-11-24_akutagawa_hankechi.png) | 芥川龍之介[『手巾』](https://www.aozora.gr.jp/cards/000879/card43.html) | 東北大学電気通信研究所（RIEC）および理化学研究所創発物性科学研究センター（CEMS）によるスピントロニクス技術、電子スピンの自転角運動量を用いたスピントルク磁化反転（STT-MRAM）、ナノスケール渦状磁気構造「磁気スキルミオン（Magnetic Skyrmions）」の位相制御、超高感度ナノ磁気センサによる生体微小磁場・自律神経系パルス計測 | 6,497字 |

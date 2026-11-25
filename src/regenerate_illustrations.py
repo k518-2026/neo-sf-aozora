@@ -41,6 +41,33 @@ NEGATIVE_PROMPT = (
 
 WORKS_SPEC: List[Dict[str, Any]] = [
     {
+        "index": 135,
+        "work_id": "dazai-tokatonton",
+        "title": "トカトントン",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-11-25_dazai_tokatonton.png")],
+        "docs_path": Path("docs/assets/images/dazai-tokatonton.png"),
+        "prompt": "Cinematic psychological retro-futuristic sci-fi anime illustration. In a quiet, cluttered post-war Japanese countryside post office at dusk. A sensitive young Japanese postal clerk sits at an old wooden desk with his head in his hands in an agony of existential disillusionment. Floating faintly near his temple is a glowing, microscopic molecular ring structure of a carbon nanobelt, vibrating with delicate crimson and cyan acoustic phonon soundwaves that ripple through the air like invisible hammer strikes. Dust motes float in warm sunset beams through window blinds, stark emotional chiaroscuro, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 134,
+        "work_id": "natsume-sanshiro",
+        "title": "三四郎",
+        "author": "夏目漱石",
+        "content_paths": [Path("content/2026-11-25_natsume_sanshiro.png")],
+        "docs_path": Path("docs/assets/images/natsume-sanshiro.png"),
+        "prompt": "Cinematic intellectual quantum physics sci-fi anime illustration. A tranquil Japanese university campus garden pond (Shinji-ike) surrounded by lush autumn trees. A stylish, enigmatic young Japanese woman (Mineko) holding an elegant white parasol with subtle glowing fiber-optic seams stands beside the water, looking back with a knowing, melancholic smile. Nearby on a wooden bench, a reflective young student in a Meiji-era dark school uniform holds a glowing quantum optoelectronic tablet displaying single-photon detection interference waveforms. Ethereal, translucent holographic sheep particles dissolve into soft cyan light beams above the water. 8k masterpiece, nostalgic and poetic, pure art without text.",
+    },
+    {
+        "index": 133,
+        "work_id": "akutagawa-butokai",
+        "title": "舞踏会",
+        "author": "芥川龍之介",
+        "content_paths": [Path("content/2026-11-25_akutagawa_butokai.png")],
+        "docs_path": Path("docs/assets/images/akutagawa-butokai.png"),
+        "prompt": "Cinematic romantic sci-fi anime illustration. Inside a breathtaking, futuristic neo-Rococo ballroom (Rokumeikan). An elegant seventeen-year-old Japanese young lady in an exquisite white Victorian ballgown dances a graceful waltz with a handsome French naval officer in a formal cybernetic dress uniform. Above them, a colossal chandelier made of glowing, self-healing crystalline polymer glass shatters into shimmering golden shards that dynamically reconnect in mid-air with visible glowing hydrogen-bond energy threads. Magnificent fireworks burst outside tall arched glass windows, reflecting across polished marble floors. 8k masterpiece, sublime, pure art without text.",
+    },
+    {
         "index": 132,
         "work_id": "niimi-tebukuro-wo-kai-ni",
         "title": "手袋を買いに",

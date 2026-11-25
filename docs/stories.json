@@ -1,5 +1,41 @@
 [
   {
+    "no": 135,
+    "work_id": "dazai-tokatonton",
+    "title": "トカトントン――共振する虚無の残響",
+    "original_title": "トカトントン",
+    "original_author": "太宰治",
+    "modern_tech": "名古屋大学（伊丹健一郎 教授）によるトポロジカル分子ナノカーボン「カーボンナノベルト（Carbon Nanobelt）」の精密化学合成、ナノ電子機械システム（NEMS）共振器、熱浴フォノンの散乱と局所デヒーレンス、極微小ナノスケール構造における量子力学的音響フォノンモード",
+    "has_image": true,
+    "url": "stories/dazai-tokatonton.html",
+    "image": "assets/images/dazai-tokatonton.png",
+    "char_count": 5811
+  },
+  {
+    "no": 134,
+    "work_id": "natsume-sanshiro",
+    "title": "三四郎――迷子の光子（ストレイ・シープ）の行方",
+    "original_title": "三四郎",
+    "original_author": "夏目漱石",
+    "modern_tech": "産業技術総合研究所（AIST）および量子科学技術研究開発機構（QST）による極低温超伝導ナノワイヤ単一光子検出器（SNSPD: Superconducting Nanowire Single-Photon Detector）、ピコ秒時間分解能による光子放射圧測定、量子鍵配送（QKD）衛星ネットワーク、観測による量子もつれ波束の収縮と重ね合わせ状態",
+    "has_image": true,
+    "url": "stories/natsume-sanshiro.html",
+    "image": "assets/images/natsume-sanshiro.png",
+    "char_count": 5633
+  },
+  {
+    "no": 133,
+    "work_id": "akutagawa-butokai",
+    "title": "舞踏会――超分子記憶の再構築（Reconstruction of Supramolecular Memory）",
+    "original_title": "舞踏会",
+    "original_author": "芥川龍之介",
+    "modern_tech": "東京大学大学院工学系研究科（相田卓三 卓越教授）による室温自己修復ポリマーガラス（Polyether-thioureas）、密な水素結合チオ尿素ネットワークによる破断面自発再接合、超分子フォトニック結晶、機械的破断後の光学・導電特性の完全回復、生体適合性スマートガラス",
+    "has_image": true,
+    "url": "stories/akutagawa-butokai.html",
+    "image": "assets/images/akutagawa-butokai.png",
+    "char_count": 6139
+  },
+  {
     "no": 132,
     "work_id": "niimi-tebukuro-wo-kai-ni",
     "title": "手袋を買いに――極低温の境界線上の孤独",
