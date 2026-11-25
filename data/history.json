@@ -1359,5 +1359,19 @@
       "McClements, D. J., Decker, E. A., Weiss, J. (2007). Emulsion‐Based Delivery Systems for Lipophilic Bioactive Components. *Journal of Food Science*, 72(8).",
       "Berridge, K. C., Robinson, T. E. (1998). What is the role of dopamine in reward: hedonic impact, reward learning, or incentive salience?. *Brain Research Reviews*, 28(3), 309-369."
     ]
+  },
+  {
+    "work_id": "soseki-jitensha-nikki",
+    "original_title": "自転車日記",
+    "original_author": "夏目漱石",
+    "reboot_title": "自転車日記――運動学習の境界線に揺れる幽霊",
+    "posted_at": "2026-11-25T12:10:40.676278+09:00",
+    "file_path": "content/2026-10-21_soseki_jitensha_nikki.md",
+    "status": "publish",
+    "references": [
+      "Meijaard, J. P., Papadopoulos, J. M., Ruina, A., Schwab, A. L. (2007). Linearized dynamics equations for the balance and steer of a bicycle: a benchmark and review. *Proceedings of the Royal Society A: Mathematical, Physical and Engineering Sciences*, 463(2084), 1955-1982.",
+      "Ito, M. (2008). Control of mental activities by internal models in the cerebellum. *Nature Reviews Neuroscience*, 9(4), 304-313.",
+      "Wolpert, D. M., Ghahramani, Z. (2000). Computational principles of movement neuroscience. *Nature Neuroscience*, 3(S11), 1212-1217."
+    ]
   }
 ]
