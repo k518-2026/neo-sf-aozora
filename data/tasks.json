@@ -2,7 +2,7 @@
   "project_id": "b531d04e-6cb0-4202-9ea3-0056c8e2d7f6",
   "project_name": "neo-sf-aozora",
   "project_title": "Neo SF Aozora（青空文庫×最先端科学 ハードSFリブート）",
-  "updated_at": "2026-11-26T12:42:17.449005+09:00",
+  "updated_at": "2026-11-26T20:00:03.483960+09:00",
   "roles": {
     "rtx5060lp": {
       "node": "rtx5060lp",
@@ -2906,8 +2906,8 @@
       "md_file": "content/2026-11-26_nakajima_gojo_shusse.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-11-26",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-11-26T20:00:03.468412+09:00",
       "png_file": "content/2026-11-26_nakajima_gojo_shusse.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-11-26"
@@ -2927,8 +2927,8 @@
       "md_file": "content/2026-11-26_dazai_hazakura_to_mateki.md",
       "written_by": "rtx5060lp",
       "written_at": "2026-11-26",
-      "reviewed_by": null,
-      "reviewed_at": null,
+      "reviewed_by": "sff7020",
+      "reviewed_at": "2026-11-26T20:00:03.468412+09:00",
       "png_file": "content/2026-11-26_dazai_hazakura_to_mateki.png",
       "illustrated_by": "kenomac-mini",
       "illustrated_at": "2026-11-26"
