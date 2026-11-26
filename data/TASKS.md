@@ -1,8 +1,8 @@
 # 📋 分散ローカルLLM 自動作業リスト (`neo-sf-aozora`)
 
 - **会話ID**: `b531d04e-6cb0-4202-9ea3-0056c8e2d7f6`
-- **最終同期日時 (JST)**: `2026-11-25T21:00:03`
-- **進捗サマリー**: 全 **135** 作品 （完了: **135** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
+- **最終同期日時 (JST)**: `2026-11-26T12:42:17`
+- **進捗サマリー**: 全 **138** 作品 （完了: **138** / 挿絵待ち: **0** / プロット作成済: **0** / 未着手: **0**）
 - **交互執筆モード**: プライマリ **`rtx5060lp:11434`** (`shosetsu`) と セカンダリ **`sff7020:1234`** (`gemma-4-26b-a4b-qat`) が1作ずつ交互に小説執筆を担当します（相手がオフライン時はオンライン側がフェイルオーバー代行）。
 
 ## 🖥️ 各ローカルLLM PCの役割分担とノルマ
@@ -27,13 +27,13 @@
 
 | No. | 作品ID | 原典タイトル（著者） | プロット (`sff7020`) | 執筆担当 (`written_by`) | 校閲 (`sff7020`) | 挿絵 (`kenomac-mini`) |
 |:---:|:---|:---|:---:|:---:|:---:|:---:|
+| #138 | `dazai-hazakura-to-mateki` | 葉桜と魔笛（太宰治） | - | ✓ `rtx5060lp` (2026-11-26) | 校閲済 | 🎨 (kenomac-mini) |
+| #137 | `nakajima-gojo-shusse` | 悟浄出世（中島敦） | - | ✓ `rtx5060lp` (2026-11-26) | 校閲済 | 🎨 (kenomac-mini) |
+| #136 | `sakaguchi-kaze-hakase` | 風博士（坂口安吾） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-26) | 校閲済 | 🎨 (kenomac-mini) |
 | #135 | `dazai-tokatonton` | トカトントン（太宰治） | - | ✓ `rtx5060lp` (2026-11-25) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #134 | `natsume-sanshiro` | 三四郎（夏目漱石） | - | ✓ `rtx5060lp` (2026-11-25) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #133 | `akutagawa-butokai` | 舞踏会（芥川龍之介） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-25) | 校閲済 | 🎨 (kenomac-mini) |
+| #133 | `akutagawa-butokai` | 舞踏会（芥川龍之介） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-25) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #132 | `niimi-tebukuro-wo-kai-ni` | 手袋を買いに（新美南吉） | - | ✓ `rtx5060lp` (2026-11-24) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #131 | `miyazawa-gusukobudori-no-denki` | グスコーブドリの伝記（宮沢賢治） | - | ✓ `rtx5060lp` (2026-11-24) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #130 | `akutagawa-hankechi` | 手巾（芥川龍之介） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-24) | ✓ (sff7020) | 🎨 (kenomac-mini) |
 | #129 | `terada-chawan-no-yu` | 茶わんの湯（寺田寅彦） | - | ✓ `rtx5060lp` (2026-11-22) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #128 | `kajii-sakura-no-ki-no-shita-niwa` | 桜の樹の下には（梶井基次郎） | - | ✓ `rtx5060lp` (2026-11-22) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #127 | `tanizaki-shunkinsho` | 春琴抄（谷崎潤一郎） | ✓ (sff7020) | ✓ `rtx5060lp` (2026-11-22) | ✓ (sff7020) | 🎨 (kenomac-mini) |
-| #126 | `natsume-yume-juya` | 夢十夜（夏目漱石） | - | ✓ `rtx5060lp` (2026-11-19) | ✓ (sff7020) | 🎨 (kenomac-mini) |

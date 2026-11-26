@@ -41,6 +41,33 @@ NEGATIVE_PROMPT = (
 
 WORKS_SPEC: List[Dict[str, Any]] = [
     {
+        "index": 138,
+        "work_id": "dazai-hazakura-to-mateki",
+        "title": "葉桜と魔笛",
+        "author": "太宰治",
+        "content_paths": [Path("content/2026-11-26_dazai_hazakura_to_mateki.png")],
+        "docs_path": Path("docs/assets/images/dazai-hazakura-to-mateki.png"),
+        "prompt": "Cinematic poignant emotional sci-fi anime illustration. A traditional Japanese tatami room open to a veranda overlooking a misty garden with lush green young cherry leaves (Hazakura) in gentle twilight rain. A frail, beautiful young Japanese woman in a white yukata rests peacefully on a futon, gazing toward the rain with serene tearful eyes. Beside her, an older sister gently holds a glowing quantum terminal displaying a green and blue Knight's Tour chessboard traversal lattice and state-transition network graphs. Outside in the rainy garden beneath the green leaves, translucent crystalline soundwaves of an invisible magic flute ripple softly through falling raindrops like glowing golden stardust. Heartbreakingly beautiful, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 137,
+        "work_id": "nakajima-gojo-shusse",
+        "title": "悟浄出世",
+        "author": "中島敦",
+        "content_paths": [Path("content/2026-11-26_nakajima_gojo_shusse.png")],
+        "docs_path": Path("docs/assets/images/nakajima-gojo-shusse.png"),
+        "prompt": "Cinematic sublime quantum philosophy sci-fi anime illustration. In the dark, ethereal depths of the cosmic Liusha River (Flowing Sands River). A pensive, noble anthropomorphic water kappa-like scholar (Sha Gojyo) in adorned flowing dark robes floats serenely among glowing deep-sea silt and luminescent aquatic organisms. Before him floats a colossal, intricate holographic labyrinth based on Trémaux's maze algorithm, its pathways marked with glowing cyan and gold quantum marks. Woven into the maze walls are radiant Diophantine algebraic equations and multidimensional photonic cluster state grids radiating soft ethereal light through deep indigo waters. Contemplative, intellectually transcendent, 8k masterpiece, pure art without text.",
+    },
+    {
+        "index": 136,
+        "work_id": "sakaguchi-kaze-hakase",
+        "title": "風博士",
+        "author": "坂口安吾",
+        "content_paths": [Path("content/2026-11-26_sakaguchi_kaze_hakase.png")],
+        "docs_path": Path("docs/assets/images/sakaguchi-kaze-hakase.png"),
+        "prompt": "Cinematic eccentric retro-futuristic sci-fi anime illustration. Inside the chaotic, paper-strewn high-tech laboratory of an eccentric genius physicist (Kaze Hakase). The wide-eyed professor with wild hair excitedly gestures with mathematical chalk, pointing toward a colossal, glowing mechanical metamaterial windmill frame outside the broken circular window. In mid-air, glowing holographic geometric puzzle diagrams of Dudeney's Haberdasher puzzle show equilateral triangles transforming into squares via four hinged segments, surrounded by floating permutation grids of the Fifteen Puzzle. Fierce turbulent wind gusts whip blueprints and glowing mathematical formulas through the room under stormy lightning sky. Dynamic, witty, 8k masterpiece, pure art without text.",
+    },
+    {
         "index": 135,
         "work_id": "dazai-tokatonton",
         "title": "トカトントン",
