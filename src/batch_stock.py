@@ -286,9 +286,8 @@ def main():
                 targets = history_mgr.select_unstocked_works(count=args.count)
 
     if not targets:
-        logger.info("All catalog works are already published or stocked in content/!")
-        print_stock_status(history_mgr)
-        return
+        logger.error("Failed to select or generate any new catalog works for batch stock!")
+        sys.exit(1)
 
     logger.info(f"Selected {len(targets)} work(s) for local batch generation: {[w['title'] for w in targets]}")
     generated_files: List[Path] = []
