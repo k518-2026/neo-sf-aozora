@@ -75,8 +75,10 @@ def git_sync_and_push(generated_files: List[Path]) -> bool:
         return True
 
     try:
-        logger.info("Syncing with remote GitHub repository (git pull --rebase origin main)...")
-        subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=False)
+        logger.info("Syncing with remote GitHub repository (git fetch & merge -X ours origin/main)...")
+        git_env = {**os.environ, "GIT_EDITOR": "true"}
+        subprocess.run(["git", "fetch", "origin", "main"], check=False, env=git_env)
+        subprocess.run(["git", "merge", "--no-edit", "-X", "ours", "origin/main"], check=False, env=git_env)
 
         cmd_add = ["git", "add", "README.md", "data/", "content/", "archive/", "docs/"]
         subprocess.run(cmd_add, check=True)
