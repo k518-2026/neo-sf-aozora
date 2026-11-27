@@ -1,5 +1,17 @@
 [
   {
+    "no": 141,
+    "work_id": "akutagawa-nihon-no-kei",
+    "title": "日本の景』(芥川龍之介) / リュイブル・コルベッティ型幾何学と超伝導量子回路による「日本」の再構築パズル――観測者が書き換える精神の領土",
+    "original_title": "日本の景』(芥川龍之介) / リュイブル・コルベッティ型幾何学と超伝導量子回路による「日本」の再構築パズル",
+    "original_author": "芥川龍之介",
+    "modern_tech": "東京大学理研・量子情報研究部門のトポロジカル超伝導回路（マヨラナフェルミオン利用）と、JAXA 小惑星探査データから学習された自律的「日本列島形状最適化アルゴリズム」。",
+    "has_image": true,
+    "url": "stories/akutagawa-nihon-no-kei.html",
+    "image": "assets/images/akutagawa-nihon-no-kei.png",
+    "char_count": 5343
+  },
+  {
     "no": 140,
     "work_id": "nakamura-kokoro-no-taiki",
     "title": "心霊現象は量子もつれの誤解か：京大・超純粋物質研究センターと東大理研の対話――幽霊という名のデコヒーレンス",
