@@ -1,5 +1,17 @@
 [
   {
+    "no": 139,
+    "work_id": "hideo-kaika",
+    "title": "開化――共鳴する情報の極北",
+    "original_title": "開化",
+    "original_author": "芥川龍之介",
+    "modern_tech": "理化学研究所・東大共同研究におけるトポロジカル計算機アーキテクチャと極低温量子センサーによる非局在化状態の観測、ならびにJAXA宇宙開発事業団（旧）から継承された軌道力学最適化アルゴリズム",
+    "has_image": true,
+    "url": "stories/hideo-kaika.html",
+    "image": "assets/images/hideo-kaika.png",
+    "char_count": 4938
+  },
+  {
     "no": 138,
     "work_id": "dazai-hazakura-to-mateki",
     "title": "葉桜と魔笛――数理の調べに託した最期の独白",

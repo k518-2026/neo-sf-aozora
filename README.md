@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **138** 作品（うち挿絵付き **138** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-27 23:16 JST）
+- **収録作品数**: 全 **139** 作品（うち挿絵付き **139** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 00:17 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 139 | **[開化――共鳴する情報の極北](content/2026-11-28_hideo_kaika.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/hideo-kaika.html) | [📄原稿](content/2026-11-28_hideo_kaika.md) | [🎨挿絵](content/2026-11-28_hideo_kaika.png) | 芥川龍之介[『開化』](https://www.aozora.gr.jp/) | 理化学研究所・東大共同研究におけるトポロジカル計算機アーキテクチャと極低温量子センサーによる非局在化状態の観測、ならびにJAXA宇宙開発事業団（旧）から継承された軌道力学最適化アルゴリズム | 4,938字 |
 | 138 | **[葉桜と魔笛――数理の調べに託した最期の独白](content/2026-11-26_dazai_hazakura_to_mateki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/dazai-hazakura-to-mateki.html) | [📄原稿](content/2026-11-26_dazai_hazakura_to_mateki.md) | [🎨挿絵](content/2026-11-26_dazai_hazakura_to_mateki.png) | 太宰治[『葉桜と魔笛』](https://www.aozora.gr.jp/cards/000035/card278.html) | 産業技術総合研究所（AIST）量子・AI融合技術ビジネス開発グローバル研究拠点（G-QuAT）による超伝導単一光子検出モジュールおよび量子鍵配送（QKD）、チェスの「ナイト・ツアー（Knight's Tour）」におけるハミルトン路パリティ変調、川渡りパズルの禁忌状態回避アルゴリズムを応用した高信頼フォノン（音響）パルス暗号伝送 | 5,962字 |
 | 137 | **[悟浄出世――量子迷宮の深淵に咲く一輪の愛](content/2026-11-26_nakajima_gojo_shusse.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakajima-gojo-shusse.html) | [📄原稿](content/2026-11-26_nakajima_gojo_shusse.md) | [🎨挿絵](content/2026-11-26_nakajima_gojo_shusse.png) | 中島敦[『悟浄出世』](https://www.aozora.gr.jp/cards/000119/card622.html) | 理化学研究所（RIKEN）光量子コンピューティング研究センターおよび東京大学による大規模時間領域多重光量子コンピュータ（2次元クラスタ状態）、トレモーの迷路脱出アルゴリズム（Trémaux's maze algorithm）による合法状態空間深さ優先探索（DFS）、ディオファントス不定方程式の可解性判定と量子超越性アルゴリズム | 6,014字 |
 | 136 | **[風博士――パリティの特異点と幾何学的相転移](content/2026-11-26_sakaguchi_kaze_hakase.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/sakaguchi-kaze-hakase.html) | [📄原稿](content/2026-11-26_sakaguchi_kaze_hakase.md) | [🎨挿絵](content/2026-11-26_sakaguchi_kaze_hakase.png) | 坂口安吾[『風博士』](https://www.aozora.gr.jp/cards/001095/card42618.html) | 東京大学生産技術研究所および理化学研究所創発物性科学研究センター（CEMS）によるトポロジカル・メカニカル・メタマテリアル、デュードニーの「ハバダッシャー・パズル（Haberdasher's puzzle）」に基づく正三角形から正方形への4分割ヒンジ連鎖可逆幾何学的相転移、15パズルの置換群パリティ不変量による運動学的自由度制御、幾何学的フラストレーション流体渦励起 | 6,000字 |
