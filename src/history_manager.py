@@ -63,6 +63,25 @@ class HistoryManager:
                 break
         return candidates
 
+    def append_catalog_works(self, new_works: List[Dict[str, Any]]) -> int:
+        """Appends newly designed works to data/aozora_catalog.json without duplicating IDs."""
+        if not new_works:
+            return 0
+        existing_ids = {w.get("id") for w in self.catalog}
+        added = 0
+        for w in new_works:
+            wid = w.get("id")
+            if wid and wid not in existing_ids:
+                self.catalog.append(w)
+                existing_ids.add(wid)
+                added += 1
+        if added > 0:
+            self.catalog_path.parent.mkdir(parents=True, exist_ok=True)
+            with open(self.catalog_path, "w", encoding="utf-8") as f:
+                json.dump(self.catalog, f, ensure_ascii=False, indent=2)
+            logger.info(f"Appended {added} new work(s) to {self.catalog_path} (total: {len(self.catalog)}).")
+        return added
+
     def select_next_work(self, work_id: Optional[str] = None, force: bool = False) -> Optional[Dict[str, Any]]:
         """
         Selects the next unposted Aozora Bunko work to reboot.

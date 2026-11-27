@@ -78,7 +78,7 @@ def git_sync_and_push(generated_files: List[Path]) -> bool:
         logger.info("Syncing with remote GitHub repository (git pull --rebase origin main)...")
         subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=False)
 
-        cmd_add = ["git", "add", "README.md", "content/", "archive/", "docs/"]
+        cmd_add = ["git", "add", "README.md", "data/", "content/", "archive/", "docs/"]
         subprocess.run(cmd_add, check=True)
 
         # Check if there are staged changes
@@ -273,6 +273,15 @@ def main():
         targets = [target_work]
     else:
         targets = history_mgr.select_unstocked_works(count=args.count)
+        if len(targets) < args.count:
+            shortage = args.count - len(targets)
+            new_works = local_gen.generate_new_catalog_works(
+                existing_catalog=history_mgr.catalog,
+                count=max(shortage, 3),
+            )
+            if new_works:
+                history_mgr.append_catalog_works(new_works)
+                targets = history_mgr.select_unstocked_works(count=args.count)
 
     if not targets:
         logger.info("All catalog works are already published or stocked in content/!")

@@ -1925,3 +1925,85 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
 
         return None, en_prompt
 
+    def generate_new_catalog_works(
+        self,
+        existing_catalog: List[Dict[str, Any]],
+        count: int = 3,
+    ) -> List[Dict[str, Any]]:
+        """
+        Uses qwen3.5:9b (or active Ollama planner) to design `count` new Aozora Bunko literary classic
+        + classical math/computing puzzle motif + domestic cutting-edge research Hard-SF catalog entries
+        when all existing catalog entries in `data/aozora_catalog.json` have been stocked.
+        """
+        installed = self.get_installed_models()
+        planner_model = "qwen3.5:9b" if "qwen3.5:9b" in installed else self.resolve_model_name()
+        existing_ids = {w.get("id", "") for w in existing_catalog}
+        existing_titles = {w.get("title", "") for w in existing_catalog}
+        recent_summary = "\n".join(
+            [f"- {w.get('id')}: 『{w.get('title')}』({w.get('author')}) / {w.get('theme')}" for w in existing_catalog[-25:]]
+        )
+
+        prompt = f"""あなたは『ネオ青空文庫（青空文庫×国内最先端科学×古典数理パズル ハードSFリブート）』の企画編集長です。
+既存のカタログと重複しない、新しいハードSFリブート企画を **{count} 作品分** 作成し、**純粋なJSON配列のみ** で出力してください。
+
+【既存作品（これらと重複しない実在の青空文庫の名作・短編を選ぶこと）】
+{recent_summary}
+
+【必須ルール】
+1. 原典には実在する日本の近代文学・青空文庫収録作家（夏目漱石、芥川龍之介、太宰治、宮沢賢治、中島敦、梶井基次郎、夢野久作、坂口安吾、江戸川乱歩、泉鏡花、森鴎外、国木田独歩、堀辰雄、新美南吉、小川未明、海野十三、蘭郁二郎、久生十蘭、織田作之助、横光利一など）の未収録作品を選ぶこと。
+2. `theme` と `modern_tech` には、【古典数学・計算科学パズルモチーフ（例：オイラー閉路、ハノイの塔、ビザンチン将軍問題、ラムゼー理論、ボロノイ分割、セル・オートマトン、イジング模型、グラフ彩色、動的計画法、結び目不変量など）】と【日本の国内最先端研究機関（理化学研究所RIKEN、産業技術総合研究所AIST、JAXA、NICT、物質・材料研究機構NIMS、東京大学、京都大学、東北大学など）の最先端科学技術】を融合させること。
+3. 以下のJSONスキーマの配列（`[ ... ]`）のみを出力し、前後に一切の説明文を入れないこと：
+
+[
+  {{
+    "id": "author-work-romaji-slug",
+    "title": "原典の日本語作品名",
+    "author": "原典の著者名",
+    "url": "https://www.aozora.gr.jp/",
+    "theme": "数理モチーフ＆国内最先端科学テーマ（40文字程度）",
+    "modern_tech": "国内研究機関の具体的な最先端技術と数理アルゴリズムの詳細（100〜160文字）",
+    "summary": "原典の文学的モチーフ・登場人物の葛藤と最先端科学・数理構造が美しく共鳴する300文字程度のハードSFあらすじ。"
+  }}
+]"""
+        try:
+            logger.info(f"[Planner: {planner_model}] Auto-designing {count} new Neo-SF Aozora catalog work(s)...")
+            raw = self._call_ollama_chat(
+                messages=[
+                    {"role": "system", "content": "Output strictly a valid JSON array only. No markdown fences or commentary."},
+                    {"role": "user", "content": prompt},
+                ],
+                temperature=0.7,
+                num_predict=2600,
+                num_ctx=8192,
+                timeout=300,
+                model_override=planner_model,
+            )
+            cleaned = self._clean_llm_output(raw)
+            m = re.search(r"\[\s*\{.*\}\s*\]", cleaned, flags=re.DOTALL)
+            if m:
+                cleaned = m.group(0)
+            items = json.loads(cleaned, strict=False)
+            valid: List[Dict[str, Any]] = []
+            if isinstance(items, list):
+                for idx, it in enumerate(items, start=1):
+                    if not isinstance(it, dict) or not it.get("title") or not it.get("theme"):
+                        continue
+                    slug = re.sub(r"[^a-z0-9-]+", "-", str(it.get("id", "")).lower()).strip("-")
+                    if not slug:
+                        slug = f"neosf-work-{len(existing_catalog) + idx}"
+                    if slug in existing_ids or it["title"] in existing_titles:
+                        slug = f"{slug}-{int(time.time()) % 10000}"
+                    existing_ids.add(slug)
+                    it["id"] = slug
+                    it.setdefault("author", "青空文庫古典")
+                    it.setdefault("url", "https://www.aozora.gr.jp/")
+                    it.setdefault("modern_tech", it["theme"])
+                    it.setdefault("summary", it["theme"])
+                    valid.append(it)
+            if valid:
+                logger.info(f"Generated {len(valid)} new Neo-SF catalog work(s): {[v['id'] for v in valid]}")
+                return valid[:count]
+        except Exception as e:
+            logger.warning(f"Failed to auto-generate Neo-SF catalog works: {e}")
+        return []
+
