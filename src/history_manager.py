@@ -1,7 +1,10 @@
 import json
+import logging
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 from typing import Dict, Any, List, Optional
+
+logger = logging.getLogger(__name__)
 
 HISTORY_FILE = Path("data/history.json")
 CATALOG_FILE = Path("data/aozora_catalog.json")

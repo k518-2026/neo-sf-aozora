@@ -1968,10 +1968,11 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
 {recent_summary}
 
 【必須ルール】
-1. 原典には実在する日本の近代文学・青空文庫収録作家（夏目漱石、芥川龍之介、太宰治、宮沢賢治、中島敦、梶井基次郎、夢野久作、坂口安吾、江戸川乱歩、泉鏡花、森鴎外、国木田独歩、堀辰雄、新美南吉、小川未明、海野十三、蘭郁二郎、久生十蘭、織田作之助、横光利一など）の未収録作品を選ぶこと。
-2. `id` は `author-work-romaji` 形式の英小文字とハイフンのみ（例: `soseki-yume-juya`）。
-3. `theme` と `modern_tech` には、【古典数学・計算科学パズルモチーフ】と【日本の国内最先端研究機関（RIKEN、AIST、JAXA、NICT、NIMS、東京大学、京都大学、東北大学など）の最先端科学技術】を融合させること。
-4. `summary` は原典の文学的モチーフと最先端科学・数理構造が共鳴する250文字程度のハードSFあらすじにすること。"""
+1. 原典には**実在する青空文庫収録の名作・短編**（夏目漱石、芥川龍之介、太宰治、宮沢賢治、中島敦、梶井基次郎、夢野久作、坂口安吾、江戸川乱歩、泉鏡花、森鴎外、国木田独歩、堀辰雄、新美南吉、小川未明、海野十三、蘭郁二郎、久生十蘭、織田作之助、横光利一などの**実在する作品名**）のうち、上記リストにまだ無いものを選ぶこと。架空の作品名や「（未収録短編設定）」などの注記は絶対に入れないこと。
+2. `author` には純粋な著者名のみ（例: `夏目漱石`）を入れること。
+3. `id` は `author-work-romaji` 形式の英小文字とハイフンのみ（例: `soseki-yume-juya`）。
+4. `theme` と `modern_tech` には、【古典数学・計算科学パズルモチーフ】と【日本の国内最先端研究機関（RIKEN、AIST、JAXA、NICT、NIMS、東京大学、京都大学、東北大学など）の最先端科学技術】を融合させること。
+5. `summary` は原典の文学的モチーフと最先端科学・数理構造が共鳴する250文字程度のハードSFあらすじにすること。"""
 
             for attempt in range(1, 4):
                 try:
@@ -1997,10 +1998,11 @@ Based on the following Japanese sci-fi reboot novel (inspired by Aozora Bunko li
                             slug = f"{slug}-{int(time.time()) % 10000}"
                         existing_ids.add(slug)
                         existing_titles.add(str(it["title"]))
+                        clean_author = re.sub(r"\s*[\(（].*?[\)）]", "", str(it.get("author") or "青空文庫古典")).strip() or "青空文庫古典"
                         clean_w = {
                             "id": slug,
-                            "title": str(it["title"]).strip(),
-                            "author": str(it.get("author") or "青空文庫古典").strip(),
+                            "title": str(it["title"]).strip(" 『』"),
+                            "author": clean_author,
                             "url": "https://www.aozora.gr.jp/",
                             "theme": str(it["theme"]).strip(),
                             "modern_tech": str(it.get("modern_tech") or it["theme"]).strip(),
