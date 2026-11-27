@@ -1387,5 +1387,19 @@
       "Tohidi, A., Kaye, N. B. (2022). Firebrands. *Wildland Fire Dynamics*, 129-155.",
       "Feder, A., Nestler, E. J., Charney, D. S. (2009). Psychobiology and molecular genetics of resilience. *Nature Reviews Neuroscience*, 10(6), 446-457."
     ]
+  },
+  {
+    "work_id": "akutagawa-majutsu",
+    "original_title": "魔術",
+    "original_author": "芥川龍之介",
+    "reboot_title": "魔術――強欲のアルゴリズムを越える聖域",
+    "posted_at": "2026-11-27T11:25:01.404087+09:00",
+    "file_path": "content/2026-10-25_akutagawa_majutsu.md",
+    "status": "publish",
+    "references": [
+      "McKubre, M. C. H. (2016). Cold Fusion – CMNS – LENR; Past, Present and Projected Future Status. *Journal of Condensed Matter Nuclear Science*, 19(1).",
+      "Slater, M., Sanchez-Vives, M. V. (2016). Enhancing Our Lives with Immersive Virtual Reality. *Frontiers in Robotics and AI*, 3.",
+      "Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., et al. (2015). Human-level control through deep reinforcement learning. *Nature*, 518(7540), 529-533."
+    ]
   }
 ]
