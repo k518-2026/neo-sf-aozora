@@ -1,5 +1,17 @@
 [
   {
+    "no": 140,
+    "work_id": "nakamura-kokoro-no-taiki",
+    "title": "心霊現象は量子もつれの誤解か：京大・超純粋物質研究センターと東大理研の対話――幽霊という名のデコヒーレンス",
+    "original_title": "心霊現象は量子もつれの誤解か：京大・超純粋物質研究センターと東大理研の対話",
+    "original_author": "芥川龍之介",
+    "modern_tech": "東京大学・理化学研究所「量子もつれマクロ系」プロジェクト（Q-Macro）、京都大学超分子ナノ構造設計による人工光合成系のエネルギー収支最適化、大阪大学高輝度光科学研究センター（SPring-8）を用いたフェムト秒スケールでの電子移動経路追跡",
+    "has_image": true,
+    "url": "stories/nakamura-kokoro-no-taiki.html",
+    "image": "assets/images/nakamura-kokoro-no-taiki.png",
+    "char_count": 5631
+  },
+  {
     "no": 139,
     "work_id": "hideo-kaika",
     "title": "開化――共鳴する情報の極北",
