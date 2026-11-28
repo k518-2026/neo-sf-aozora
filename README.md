@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **147** 作品（うち挿絵付き **147** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 13:56 JST）
+- **収録作品数**: 全 **148** 作品（うち挿絵付き **148** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 14:03 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 148 | **[化け猫（再定義：量子もつれによる「非人」の存在確認とトポロジカル変相解析） - カブキモノ――位相差に溶ける境界線](content/2026-11-28_kunikida_kabukimono.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kunikida-kabukimono.html) | [📄原稿](content/2026-11-28_kunikida_kabukimono.md) | [🎨挿絵](content/2026-11-28_kunikida_kabukimono.png) | 国木田独歩[『化け猫（再定義：量子もつれによる「非人」の存在確認とトポロジカル変相解析） - カブキモノ』](https://www.aozora.gr.jp/) | AIST・超伝導量子回路型計算機におけるマヨランナフェイrmionicモードの実験検証とトポロジカル保護メモリ技術 / NIMS・理化学研究所（RIKEN）共同プロジェクトの生物蛍光タンパク質（BiFC）による非人間因子イメージング | 5,625字 |
 | 147 | **[砂時計（再定義：トポロジカル・フォトン・クロックの時間結晶） - トカイ――永遠に零れ落ちない瞬間の檻](content/2026-11-28_miyazawa_sunakakebako_no_tokai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-sunakakebako-no-tokai.html) | [📄原稿](content/2026-11-28_miyazawa_sunakakebako_no_tokai.md) | [🎨挿絵](content/2026-11-28_miyazawa_sunakakebako_no_tokai.png) | 宮沢賢治[『砂時計（再定義：トポロジカル・フォトン・クロックの時間結晶） - トカイ』](https://www.aozora.gr.jp/) | NIMS（物質・材料研究機構）超伝導量子回路と東大理研トポロジカル幾何学による時間結晶化技術、および京大北川進教授研究室発の多孔性配位高分子を用いた「記憶」を保持するナノ砂粒制御。 | 6,037字 |
 | 146 | **[清澄な仲間たち（再定義：量子コヒーレンス空間における集団意識の最適化） - キヨシ・ノ・ナカマ――幾何学的な純愛と、崩壊する個の境界](content/2026-11-28_kunikida_kiyoshi_no_nakama.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kunikida-kiyoshi-no-nakama.html) | [📄原稿](content/2026-11-28_kunikida_kiyoshi_no_nakama.md) | [🎨挿絵](content/2026-11-28_kunikida_kiyoshi_no_nakama.png) | 国木田独歩[『清澄な仲間たち（再定義：量子コヒーレンス空間における集団意識の最適化） - キヨシ・ノ・ナカマ』](https://www.aozora.gr.jp/) | {古典数学}: アーチェミディスの牛問題拡張版・非対称確率空間での最適群論パズル。
 {最先端科学}: AIST（産業技術総合研究所）・量子情報研究センターのトポロジカル超伝導体薄膜製造ライン、および NIMS（国立材料科学研究機構）によるマヨランナフェイermionic モードを用いたエラー耐性量子メモリ。 | 5,912字 |

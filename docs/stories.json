@@ -1,5 +1,17 @@
 [
   {
+    "no": 148,
+    "work_id": "kunikida-kabukimono",
+    "title": "化け猫（再定義：量子もつれによる「非人」の存在確認とトポロジカル変相解析） - カブキモノ――位相差に溶ける境界線",
+    "original_title": "化け猫（再定義：量子もつれによる「非人」の存在確認とトポロジカル変相解析） - カブキモノ",
+    "original_author": "国木田独歩",
+    "modern_tech": "AIST・超伝導量子回路型計算機におけるマヨランナフェイrmionicモードの実験検証とトポロジカル保護メモリ技術 / NIMS・理化学研究所（RIKEN）共同プロジェクトの生物蛍光タンパク質（BiFC）による非人間因子イメージング",
+    "has_image": true,
+    "url": "stories/kunikida-kabukimono.html",
+    "image": "assets/images/kunikida-kabukimono.png",
+    "char_count": 5625
+  },
+  {
     "no": 147,
     "work_id": "miyazawa-sunakakebako-no-tokai",
     "title": "砂時計（再定義：トポロジカル・フォトン・クロックの時間結晶） - トカイ――永遠に零れ落ちない瞬間の檻",
