@@ -1,5 +1,17 @@
 [
   {
+    "no": 144,
+    "work_id": "yoshida-haruko-no-ai",
+    "title": "「ハーロクの愛」 (再定義：量子もつれと非対称空間での存在確認アルゴリズム)――幽霊たちの記憶が織りなす、永遠の同期",
+    "original_title": "「ハーロクの愛」 (再定義：量子もつれと非対称空間での存在確認アルゴリズム)",
+    "original_author": "夏目漱石",
+    "modern_tech": "東大理研トポロジカル磁気スキルミオン格子とスピン軌道トルクを応用した『竹林地下茎生体量子メモリ』および、京大北川進PCP/MOF多孔性配位高分子を用いた『特定揮発性分子超高選択吸着ナノ結晶空間記憶』",
+    "has_image": true,
+    "url": "stories/yoshida-haruko-no-ai.html",
+    "image": "assets/images/yoshida-haruko-no-ai.png",
+    "char_count": 5462
+  },
+  {
     "no": 143,
     "work_id": "soseki-naniwa-no-ai",
     "title": "吾輩は猫である（再定義：ニワンの愛） - ニワンの量子もつれと非対称空間での存在確認アルゴリズム――「観測」という名の共鳴が拓く、主客未分の境界線",
