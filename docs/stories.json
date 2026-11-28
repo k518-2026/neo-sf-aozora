@@ -1,5 +1,17 @@
 [
   {
+    "no": 143,
+    "work_id": "soseki-naniwa-no-ai",
+    "title": "吾輩は猫である（再定義：ニワンの愛） - ニワンの量子もつれと非対称空間での存在確認アルゴリズム――「観測」という名の共鳴が拓く、主客未分の境界線",
+    "original_title": "吾輩は猫である（再定義：ニワンの愛） - ニワンの量子もつれと非対称空間での存在確認アルゴリズム",
+    "original_author": "夏目漱石",
+    "modern_tech": "トポロジカルデータ分析と量子誤り訂正符号を組み合わせた「意識」の定式化アルゴリズム、および次世代高輝度ディスプレイ技術との統合システム。",
+    "has_image": true,
+    "url": "stories/soseki-naniwa-no-ai.html",
+    "image": "assets/images/soseki-naniwa-no-ai.png",
+    "char_count": 5932
+  },
+  {
     "no": 142,
     "work_id": "akutagawa-nurigumo",
     "title": "地獄変』(芥川龍之介)/ JAXA/NICT・量子もつれによる「美」の再構築と光トポロジカル結晶化――極限のグロテスクを彩る虹の数式",

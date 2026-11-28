@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **142** 作品（うち挿絵付き **142** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 10:38 JST）
+- **収録作品数**: 全 **143** 作品（うち挿絵付き **143** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 10:45 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 143 | **[吾輩は猫である（再定義：ニワンの愛） - ニワンの量子もつれと非対称空間での存在確認アルゴリズム――「観測」という名の共鳴が拓く、主客未分の境界線](content/2026-11-28_soseki_naniwa_no_ai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-naniwa-no-ai.html) | [📄原稿](content/2026-11-28_soseki_naniwa_no_ai.md) | [🎨挿絵](content/2026-11-28_soseki_naniwa_no_ai.png) | 夏目漱石[『吾輩は猫である（再定義：ニワンの愛） - ニワンの量子もつれと非対称空間での存在確認アルゴリズム』](https://www.aozora.gr.jp/) | トポロジカルデータ分析と量子誤り訂正符号を組み合わせた「意識」の定式化アルゴリズム、および次世代高輝度ディスプレイ技術との統合システム。 | 5,932字 |
 | 142 | **[地獄変』(芥川龍之介)/ JAXA/NICT・量子もつれによる「美」の再構築と光トポロジカル結晶化――極限のグロテスクを彩る虹の数式](content/2026-11-28_akutagawa_nurigumo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-nurigumo.html) | [📄原稿](content/2026-11-28_akutagawa_nurigumo.md) | [🎨挿絵](content/2026-11-28_akutagawa_nurigumo.png) | 芥川龍之介[『地獄変』(芥川龍之介)/ JAXA/NICT・量子もつれによる「美」の再構築と光トポロジカル結晶化』](https://www.aozora.gr.jp/) | 東京大学理研、NIMS, JAXA の最先端研究: トポロジカル絶縁体表面状態を応用した「恐怖と美」の同時発生メカニズムシミュレーション。超伝導単一電子箱（SEED）を用いた色彩感覚の確率論的量子読み出し、およびフォトニック結晶内での光パルス軌道の幾何学相変化を利用するハードSF技術系テーマ | 5,545字 |
 | 141 | **[日本の景』(芥川龍之介) / リュイブル・コルベッティ型幾何学と超伝導量子回路による「日本」の再構築パズル――観測者が書き換える精神の領土](content/2026-11-28_akutagawa_nihon_no_kei.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-nihon-no-kei.html) | [📄原稿](content/2026-11-28_akutagawa_nihon_no_kei.md) | [🎨挿絵](content/2026-11-28_akutagawa_nihon_no_kei.png) | 芥川龍之介[『日本の景』(芥川龍之介) / リュイブル・コルベッティ型幾何学と超伝導量子回路による「日本」の再構築パズル』](https://www.aozora.gr.jp/) | 東京大学理研・量子情報研究部門のトポロジカル超伝導回路（マヨラナフェルミオン利用）と、JAXA 小惑星探査データから学習された自律的「日本列島形状最適化アルゴリズム」。 | 5,343字 |
 | 140 | **[心霊現象は量子もつれの誤解か：京大・超純粋物質研究センターと東大理研の対話――幽霊という名のデコヒーレンス](content/2026-11-28_nakamura_kokoro_no_taiki.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/nakamura-kokoro-no-taiki.html) | [📄原稿](content/2026-11-28_nakamura_kokoro_no_taiki.md) | [🎨挿絵](content/2026-11-28_nakamura_kokoro_no_taiki.png) | 芥川龍之介[『心霊現象は量子もつれの誤解か：京大・超純粋物質研究センターと東大理研の対話』](https://www.aozora.gr.jp/) | 東京大学・理化学研究所「量子もつれマクロ系」プロジェクト（Q-Macro）、京都大学超分子ナノ構造設計による人工光合成系のエネルギー収支最適化、大阪大学高輝度光科学研究センター（SPring-8）を用いたフェムト秒スケールでの電子移動経路追跡 | 5,631字 |
