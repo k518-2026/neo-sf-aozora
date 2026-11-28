@@ -1,5 +1,17 @@
 [
   {
+    "no": 142,
+    "work_id": "akutagawa-nurigumo",
+    "title": "地獄変』(芥川龍之介)/ JAXA/NICT・量子もつれによる「美」の再構築と光トポロジカル結晶化――極限のグロテスクを彩る虹の数式",
+    "original_title": "地獄変』(芥川龍之介)/ JAXA/NICT・量子もつれによる「美」の再構築と光トポロジカル結晶化",
+    "original_author": "芥川龍之介",
+    "modern_tech": "東京大学理研、NIMS, JAXA の最先端研究: トポロジカル絶縁体表面状態を応用した「恐怖と美」の同時発生メカニズムシミュレーション。超伝導単一電子箱（SEED）を用いた色彩感覚の確率論的量子読み出し、およびフォトニック結晶内での光パルス軌道の幾何学相変化を利用するハードSF技術系テーマ",
+    "has_image": true,
+    "url": "stories/akutagawa-nurigumo.html",
+    "image": "assets/images/akutagawa-nurigumo.png",
+    "char_count": 5545
+  },
+  {
     "no": 141,
     "work_id": "akutagawa-nihon-no-kei",
     "title": "日本の景』(芥川龍之介) / リュイブル・コルベッティ型幾何学と超伝導量子回路による「日本」の再構築パズル――観測者が書き換える精神の領土",
