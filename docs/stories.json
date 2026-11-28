@@ -1,5 +1,17 @@
 [
   {
+    "no": 149,
+    "work_id": "akutagawa-ronkaku",
+    "title": "「羅生門」(再定義：トポロジカル・ループと量子もつれの崩壊確率)――倫理の特異点、あるいは崩壊する自己の座標",
+    "original_title": "「羅生門」(再定義：トポロジカル・ループと量子もつれの崩壊確率)",
+    "original_author": "芥川龍之介",
+    "modern_tech": "**JAXA/RIKEN共同開発・超伝導単一電子箱（クーパー対）と量子誤り訂正符号を用いた確率論的パズル**：『倫理』という古典的なパラメータ空間内で、外部干渉（雨や悪魔の囁き）によるデコヒーレンスを補償し続ける計算アルゴリズムの実装。",
+    "has_image": true,
+    "url": "stories/akutagawa-ronkaku.html",
+    "image": "assets/images/akutagawa-ronkaku.png",
+    "char_count": 5698
+  },
+  {
     "no": 148,
     "work_id": "kunikida-kabukimono",
     "title": "化け猫（再定義：量子もつれによる「非人」の存在確認とトポロジカル変相解析） - カブキモノ――位相差に溶ける境界線",
