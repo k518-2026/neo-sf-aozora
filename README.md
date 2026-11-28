@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **146** 作品（うち挿絵付き **146** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 13:50 JST）
+- **収録作品数**: 全 **147** 作品（うち挿絵付き **147** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 13:56 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 147 | **[砂時計（再定義：トポロジカル・フォトン・クロックの時間結晶） - トカイ――永遠に零れ落ちない瞬間の檻](content/2026-11-28_miyazawa_sunakakebako_no_tokai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/miyazawa-sunakakebako-no-tokai.html) | [📄原稿](content/2026-11-28_miyazawa_sunakakebako_no_tokai.md) | [🎨挿絵](content/2026-11-28_miyazawa_sunakakebako_no_tokai.png) | 宮沢賢治[『砂時計（再定義：トポロジカル・フォトン・クロックの時間結晶） - トカイ』](https://www.aozora.gr.jp/) | NIMS（物質・材料研究機構）超伝導量子回路と東大理研トポロジカル幾何学による時間結晶化技術、および京大北川進教授研究室発の多孔性配位高分子を用いた「記憶」を保持するナノ砂粒制御。 | 6,037字 |
 | 146 | **[清澄な仲間たち（再定義：量子コヒーレンス空間における集団意識の最適化） - キヨシ・ノ・ナカマ――幾何学的な純愛と、崩壊する個の境界](content/2026-11-28_kunikida_kiyoshi_no_nakama.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/kunikida-kiyoshi-no-nakama.html) | [📄原稿](content/2026-11-28_kunikida_kiyoshi_no_nakama.md) | [🎨挿絵](content/2026-11-28_kunikida_kiyoshi_no_nakama.png) | 国木田独歩[『清澄な仲間たち（再定義：量子コヒーレンス空間における集団意識の最適化） - キヨシ・ノ・ナカマ』](https://www.aozora.gr.jp/) | {古典数学}: アーチェミディスの牛問題拡張版・非対称確率空間での最適群論パズル。
 {最先端科学}: AIST（産業技術総合研究所）・量子情報研究センターのトポロジカル超伝導体薄膜製造ライン、および NIMS（国立材料科学研究機構）によるマヨランナフェイermionic モードを用いたエラー耐性量子メモリ。 | 5,912字 |
 | 145 | **[新鼠 (Shinkushu)――最適化された都市の脈動と計算される魂](content/2026-11-28_akutagawa_shinshu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-shinshu.html) | [📄原稿](content/2026-11-28_akutagawa_shinshu.md) | [🎨挿絵](content/2026-11-28_akutagawa_shinshu.png) | 芥川龍之介[『新鼠 (Shinkushu)』](https://www.aozora.gr.jp/) | [古典数学]：群論とトポロジカルデータ分析を用いた「都市の心臓部」のパラメータ最適化問題、および非ユークリッド幾何学における自己言及的ループ構造を定義するモデル理論。/[最先端科学]：理化学研究所（RIKEN）超伝導量子コンピュータによる集団意識状態ベクトルのリアルタイム制御と、東京大学・大阪大学の共同プロジェクトである脳機インターフェース（BMI/OLED）を用いた主観的体験の客観化技術。 | 5,512字 |

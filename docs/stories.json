@@ -1,5 +1,17 @@
 [
   {
+    "no": 147,
+    "work_id": "miyazawa-sunakakebako-no-tokai",
+    "title": "砂時計（再定義：トポロジカル・フォトン・クロックの時間結晶） - トカイ――永遠に零れ落ちない瞬間の檻",
+    "original_title": "砂時計（再定義：トポロジカル・フォトン・クロックの時間結晶） - トカイ",
+    "original_author": "宮沢賢治",
+    "modern_tech": "NIMS（物質・材料研究機構）超伝導量子回路と東大理研トポロジカル幾何学による時間結晶化技術、および京大北川進教授研究室発の多孔性配位高分子を用いた「記憶」を保持するナノ砂粒制御。",
+    "has_image": true,
+    "url": "stories/miyazawa-sunakakebako-no-tokai.html",
+    "image": "assets/images/miyazawa-sunakakebako-no-tokai.png",
+    "char_count": 6037
+  },
+  {
     "no": 146,
     "work_id": "kunikida-kiyoshi-no-nakama",
     "title": "清澄な仲間たち（再定義：量子コヒーレンス空間における集団意識の最適化） - キヨシ・ノ・ナカマ――幾何学的な純愛と、崩壊する個の境界",
