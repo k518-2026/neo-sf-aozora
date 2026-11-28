@@ -1401,5 +1401,19 @@
       "Slater, M., Sanchez-Vives, M. V. (2016). Enhancing Our Lives with Immersive Virtual Reality. *Frontiers in Robotics and AI*, 3.",
       "Mnih, V., Kavukcuoglu, K., Silver, D., Rusu, A. A., Veness, J., Bellemare, M. G., et al. (2015). Human-level control through deep reinforcement learning. *Nature*, 518(7540), 529-533."
     ]
+  },
+  {
+    "work_id": "edogawa-nisen-doka",
+    "original_title": "二銭銅貨",
+    "original_author": "江戸川乱歩",
+    "reboot_title": "二銭銅貨――ナノスケールの亡霊と量子への階梯",
+    "posted_at": "2026-11-28T11:11:50.256933+09:00",
+    "file_path": "content/2026-10-25_edogawa_nisen_doka.md",
+    "status": "publish",
+    "references": [
+      "Research Collaboration (2020). Optical Physical Unclonable Functions Based on Nanostructured SiO2/PDMS Composite Films for Biochip Anti-counterfeiting. *American Chemical Society (ACS)*.",
+      "Kadowaki, T., Nishimori, H. (1998). Quantum annealing in the transverse Ising model. *Physical Review E*, 58(5), 5355-5363.",
+      "Goldwasser, S., Micali, S., Rackoff, C. (1989). The Knowledge Complexity of Interactive Proof Systems. *SIAM Journal on Computing*, 18(1), 186-208."
+    ]
   }
 ]
