@@ -6,7 +6,7 @@
 
 - **執筆・挿絵生成**: Mac mini M4 ローカルAI（Ollama `qwen2.5:14b` / `gemma4:12b` ＆ Draw Things `FLUX.2 [klein] 4B`）
 - **外部生成AI API不使用**: 外部の商用生成AI APIは一切使用せず、すべてローカル環境で執筆・画像生成を行っています。
-- **収録作品数**: 全 **144** 作品（うち挿絵付き **144** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 11:11 JST）
+- **収録作品数**: 全 **145** 作品（うち挿絵付き **145** 作品 / 原典文豪 **31** 名 / 最終更新: 2026-11-28 13:43 JST）
 
 ---
 
@@ -14,6 +14,7 @@
 
 | No. | リブート小説タイトル | Webページで読む | 原稿 (Markdown) | 挿絵 | 原典作品（青空文庫） | 導入した現代先端科学技術 | 文字数 |
 |:---:|:---|:---:|:---:|:---:|:---|:---|---:|
+| 145 | **[新鼠 (Shinkushu)――最適化された都市の脈動と計算される魂](content/2026-11-28_akutagawa_shinshu.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-shinshu.html) | [📄原稿](content/2026-11-28_akutagawa_shinshu.md) | [🎨挿絵](content/2026-11-28_akutagawa_shinshu.png) | 芥川龍之介[『新鼠 (Shinkushu)』](https://www.aozora.gr.jp/) | [古典数学]：群論とトポロジカルデータ分析を用いた「都市の心臓部」のパラメータ最適化問題、および非ユークリッド幾何学における自己言及的ループ構造を定義するモデル理論。/[最先端科学]：理化学研究所（RIKEN）超伝導量子コンピュータによる集団意識状態ベクトルのリアルタイム制御と、東京大学・大阪大学の共同プロジェクトである脳機インターフェース（BMI/OLED）を用いた主観的体験の客観化技術。 | 5,512字 |
 | 144 | **[「ハーロクの愛」 (再定義：量子もつれと非対称空間での存在確認アルゴリズム)――幽霊たちの記憶が織りなす、永遠の同期](content/2026-11-28_yoshida_haruko_no_ai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/yoshida-haruko-no-ai.html) | [📄原稿](content/2026-11-28_yoshida_haruko_no_ai.md) | [🎨挿絵](content/2026-11-28_yoshida_haruko_no_ai.png) | 夏目漱石[『「ハーロクの愛」 (再定義：量子もつれと非対称空間での存在確認アルゴリズム)』](https://www.aozora.gr.jp/) | 東大理研トポロジカル磁気スキルミオン格子とスピン軌道トルクを応用した『竹林地下茎生体量子メモリ』および、京大北川進PCP/MOF多孔性配位高分子を用いた『特定揮発性分子超高選択吸着ナノ結晶空間記憶』 | 5,462字 |
 | 143 | **[吾輩は猫である（再定義：ニワンの愛） - ニワンの量子もつれと非対称空間での存在確認アルゴリズム――「観測」という名の共鳴が拓く、主客未分の境界線](content/2026-11-28_soseki_naniwa_no_ai.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/soseki-naniwa-no-ai.html) | [📄原稿](content/2026-11-28_soseki_naniwa_no_ai.md) | [🎨挿絵](content/2026-11-28_soseki_naniwa_no_ai.png) | 夏目漱石[『吾輩は猫である（再定義：ニワンの愛） - ニワンの量子もつれと非対称空間での存在確認アルゴリズム』](https://www.aozora.gr.jp/) | トポロジカルデータ分析と量子誤り訂正符号を組み合わせた「意識」の定式化アルゴリズム、および次世代高輝度ディスプレイ技術との統合システム。 | 5,932字 |
 | 142 | **[地獄変』(芥川龍之介)/ JAXA/NICT・量子もつれによる「美」の再構築と光トポロジカル結晶化――極限のグロテスクを彩る虹の数式](content/2026-11-28_akutagawa_nurigumo.md)** | [🌐Web版](https://k518-2026.github.io/neo-sf-aozora/stories/akutagawa-nurigumo.html) | [📄原稿](content/2026-11-28_akutagawa_nurigumo.md) | [🎨挿絵](content/2026-11-28_akutagawa_nurigumo.png) | 芥川龍之介[『地獄変』(芥川龍之介)/ JAXA/NICT・量子もつれによる「美」の再構築と光トポロジカル結晶化』](https://www.aozora.gr.jp/) | 東京大学理研、NIMS, JAXA の最先端研究: トポロジカル絶縁体表面状態を応用した「恐怖と美」の同時発生メカニズムシミュレーション。超伝導単一電子箱（SEED）を用いた色彩感覚の確率論的量子読み出し、およびフォトニック結晶内での光パルス軌道の幾何学相変化を利用するハードSF技術系テーマ | 5,545字 |
