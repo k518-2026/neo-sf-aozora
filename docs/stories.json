@@ -1,5 +1,17 @@
 [
   {
+    "no": 146,
+    "work_id": "kunikida-kiyoshi-no-nakama",
+    "title": "清澄な仲間たち（再定義：量子コヒーレンス空間における集団意識の最適化） - キヨシ・ノ・ナカマ――幾何学的な純愛と、崩壊する個の境界",
+    "original_title": "清澄な仲間たち（再定義：量子コヒーレンス空間における集団意識の最適化） - キヨシ・ノ・ナカマ",
+    "original_author": "国木田独歩",
+    "modern_tech": "{古典数学}: アーチェミディスの牛問題拡張版・非対称確率空間での最適群論パズル。\n{最先端科学}: AIST（産業技術総合研究所）・量子情報研究センターのトポロジカル超伝導体薄膜製造ライン、および NIMS（国立材料科学研究機構）によるマヨランナフェイermionic モードを用いたエラー耐性量子メモリ。",
+    "has_image": true,
+    "url": "stories/kunikida-kiyoshi-no-nakama.html",
+    "image": "assets/images/kunikida-kiyoshi-no-nakama.png",
+    "char_count": 5912
+  },
+  {
     "no": 145,
     "work_id": "akutagawa-shinshu",
     "title": "新鼠 (Shinkushu)――最適化された都市の脈動と計算される魂",
